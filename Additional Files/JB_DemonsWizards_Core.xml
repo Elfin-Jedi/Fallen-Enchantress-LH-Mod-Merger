@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<WorldResources_Core>
+
+	<ResourceShardType InternalName="JB_Resource_ScenicView">
+		<DisplayName>Scenic View</DisplayName>
+		<Type>JB_NatureShard</Type>
+		<Description>Build a Nature Altar here to harness the power of Nature magic.</Description>
+		<LongDescription>The cataclysm has created here, rather than destroyed - it birthed a unique place, a wondrous display of nature's beauty.</LongDescription>
+		<BarredTerrain>River</BarredTerrain>
+		<BarredTerrain>HillsTerrain</BarredTerrain>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+        <MinPerPlayer>0.5</MinPerPlayer>
+        <Rarity>100</Rarity>
+        <NeedsToBeUnlocked>0</NeedsToBeUnlocked>
+        <HarvestType>ShardHarvest</HarvestType>
+		<IsShard>1</IsShard>
+        <Production>1</Production>
+		<Worth>5</Worth>
+		<Global>0</Global>
+		<OnSelectSFX>Click_Scenic</OnSelectSFX>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>TileYieldEssence</Attribute>
+            <Value>3.5</Value>
+            <PerTurn>1</PerTurn>
+        </GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>15</AIPriority>
+		</AIData>
+        <Medallions InternalName="">
+            <All>ScenicView.png</All>
+        </Medallions>
+        <Icon>JB_Resource_NatureShard.dds</Icon>
+        <IconColor>0,0,0</IconColor>
+        <ClothIcon>JB_Resource_NatureShard.dds</ClothIcon>
+        <TileDesign>JB_NatureShard_01</TileDesign>
+        <ModelColor>0,0,0</ModelColor>
+	</ResourceShardType>
+
+	<ResourceShardType InternalName="JB_Resource_CavernShadows">
+		<DisplayName>Cavern of Shadows</DisplayName>
+		<Type>JB_ShadowShard</Type>
+		<Description>Build a Shadow Altar here to harness the power of Shadow magic.</Description>
+		<LongDescription>Here is a cavern of infinite darknesss, where shadows exist without light.</LongDescription>
+		<BarredTerrain>River</BarredTerrain>
+		<BarredTerrain>HillsTerrain</BarredTerrain>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+        <MinPerPlayer>0.5</MinPerPlayer>
+        <Rarity>100</Rarity>
+        <NeedsToBeUnlocked>0</NeedsToBeUnlocked>
+		<HarvestType>ShardHarvest</HarvestType>
+		<IsShard>1</IsShard>
+        <Production>1</Production>
+		<Worth>5</Worth>
+		<Global>0</Global>
+		<OnSelectSFX>Click_Magic_Statue</OnSelectSFX>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>TileYieldEssence</Attribute>
+            <Value>3.5</Value>
+            <PerTurn>1</PerTurn>
+        </GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>15</AIPriority>
+		</AIData>
+        <Medallions InternalName="">
+            <All>L_Garrote_Cave_01.png</All>
+        </Medallions>
+        <Icon>JB_Resource_ShadowShard.dds</Icon>
+        <IconColor>0,0,0</IconColor>
+        <ClothIcon>JB_Resource_ShadowShard.dds</ClothIcon>
+        <TileDesign>JB_ShadowShard_01</TileDesign>
+        <ModelColor>0,0,0</ModelColor>
+	</ResourceShardType>
+	
+	<ResourceShardType InternalName="JB_Resource_LegendaryBattlefield">
+		<DisplayName>Battlefield of Legend</DisplayName>
+		<Type>JB_BattleShard</Type>
+		<Description>Build a Battle Altar here to harness the power of Battle magic.</Description>
+		<LongDescription>This is the site of an ancient and legendary battle.  Many great warriors found glory here.</LongDescription>
+		<BarredTerrain>River</BarredTerrain>
+		<BarredTerrain>HillsTerrain</BarredTerrain>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+        <MinPerPlayer>0.5</MinPerPlayer>
+        <Rarity>100</Rarity>
+        <NeedsToBeUnlocked>0</NeedsToBeUnlocked>
+		<HarvestType>ShardHarvest</HarvestType>
+		<IsShard>1</IsShard>
+        <Production>1</Production>
+		<Worth>5</Worth>
+		<Global>0</Global>
+		<OnSelectSFX>Goodie_AncientBattle_01</OnSelectSFX>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>TileYieldEssence</Attribute>
+            <Value>3.5</Value>
+            <PerTurn>1</PerTurn>
+        </GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>15</AIPriority>
+		</AIData>
+        <Medallions InternalName="">
+            <All>G_Ancient_Battlefield_01.png</All>
+        </Medallions>
+        <Icon>JB_Resource_BattleShard.dds</Icon>
+        <IconColor>0,0,0</IconColor>
+        <ClothIcon>JB_Resource_BattleShard.dds</ClothIcon>
+        <TileDesign>JB_BattleShard_01</TileDesign>
+        <ModelColor>0,0,0</ModelColor>
+	</ResourceShardType>	
+	
+	<ResourceShardType InternalName="JB_Resource_Herdstone">
+		<DisplayName>Herdstone</DisplayName>
+		<Type>JB_BeastShard</Type>
+		<Description>Build a Beast Altar here to harness the power of Beast magic.</Description>
+		<LongDescription>This location is a frequented by all manner of animals and beastial creatures.  The towering stone here can be seen for miles.</LongDescription>
+		<BarredTerrain>River</BarredTerrain>
+		<BarredTerrain>HillsTerrain</BarredTerrain>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+        <MinPerPlayer>0.5</MinPerPlayer>
+        <Rarity>100</Rarity>
+        <NeedsToBeUnlocked>0</NeedsToBeUnlocked>
+		<HarvestType>ShardHarvest</HarvestType>
+		<IsShard>1</IsShard>
+        <Production>1</Production>
+		<Worth>5</Worth>
+		<Global>0</Global>
+		<OnSelectSFX>Click_Cave_Bear</OnSelectSFX>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>TileYieldEssence</Attribute>
+            <Value>3.5</Value>
+            <PerTurn>1</PerTurn>
+        </GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>15</AIPriority>
+		</AIData>
+        <Medallions InternalName="">
+            <All>L_Giant_Rockspider_Cave_01.png</All>
+        </Medallions>
+        <Icon>JB_Resource_BeastShard.dds</Icon>
+        <IconColor>0,0,0</IconColor>
+        <ClothIcon>JB_Resource_BeastShard.dds</ClothIcon>
+        <TileDesign>JB_BeastShard_03</TileDesign>
+        <ModelColor>0,0,0</ModelColor>
+	</ResourceShardType>
+	
+	<ResourceType InternalName="JB_Resource_SacredSite">
+		<DisplayName>Sacred Site</DisplayName>
+		<Type>JB_SacredSite</Type>
+		<Description>Build a Sacred Shrine here to to increase the Faith generated by your faction.</Description>
+		<LongDescription>Ancient civilisations worshipped the Old Gods in places such as this.</LongDescription>
+		<BarredTerrain>River</BarredTerrain>
+		<BarredTerrain>HillsTerrain</BarredTerrain>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+        <MinPerPlayer>0.25</MinPerPlayer>
+        <Rarity>200</Rarity>
+        <NeedsToBeUnlocked>0</NeedsToBeUnlocked>
+        <HarvestType>Arcane</HarvestType>
+        <Production>1</Production>
+		<Worth>5</Worth>
+		<Global>0</Global>
+        <OnSelectSFX>Click_Magic_Statue</OnSelectSFX>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>TileYieldEssence</Attribute>
+            <Value>5</Value>
+            <PerTurn>1</PerTurn>
+        </GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>12</AIPriority>
+		</AIData>
+        <Medallions InternalName="">
+            <All>R_Ancient_Temple_02_Card.png</All>
+        </Medallions>
+        <Icon>JB_Resource_SacredSite.png</Icon>
+        <IconColor>0,0,0</IconColor>
+        <ClothIcon>JB_Resource_SacredSite.png</ClothIcon>
+        <TileDesign>JB_R_SacredSite_01</TileDesign>
+        <ModelColor>0,0,0</ModelColor>
+	</ResourceType>
+
+	<ResourceType InternalName="Magmariver_worldresource">
+		<DisplayName>Magma with Bedrock</DisplayName>
+		<Type>Magmatube</Type>
+		<Description>Solid bedrock makes this location ideal for a Magma forge.</Description>
+		<LongDescription></LongDescription>
+		<BarredTerrain>River</BarredTerrain>
+		<BarredTerrain>HillsTerrain</BarredTerrain>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<Rarity>0</Rarity>
+		<NeedsToBeUnlocked>0</NeedsToBeUnlocked>
+		<Production>1</Production>
+		<Worth>5</Worth>
+		<Global>0</Global>
+		<OnSelectSFX>Click_Camp_Darkling</OnSelectSFX>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>8</AIPriority>
+		</AIData>
+		<Medallions InternalName="">
+			<All>magmaresource.png</All>
+		</Medallions>
+		<Icon>magmaresource.png</Icon>
+		<IconColor>0,0,0</IconColor>
+		<ClothIcon>Resource_IronOre.png</ClothIcon>
+		<TileDesign>magmariver_resource_wild</TileDesign>
+		<ModelColor>0,0,0</ModelColor>
+	</ResourceType>
+
+    <ResourceType InternalName="Bloodriver_worldresource">
+		<DisplayName>River of Blood with Bedrock</DisplayName>
+		<Type>Bloodtube</Type>
+		<Description>Solid bedrock makes this location ideal for a Blood Forge.</Description>
+		<LongDescription></LongDescription>
+		<BarredTerrain>River</BarredTerrain>
+		<BarredTerrain>HillsTerrain</BarredTerrain>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<Rarity>0</Rarity>
+		<NeedsToBeUnlocked>0</NeedsToBeUnlocked>
+		<Production>1</Production>
+		<Worth>5</Worth>
+		<Global>0</Global>
+		<OnSelectSFX>Click_Camp_Darkling</OnSelectSFX>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>8</AIPriority>
+		</AIData>
+		<Medallions InternalName="">
+			<All>bloodresource.png</All>
+		</Medallions>
+		<Icon>bloodresource.png</Icon>
+		<IconColor>0,0,0</IconColor>
+		<ClothIcon>Resource_IronOre.png</ClothIcon>
+		<TileDesign>bloodriver_resource_wild</TileDesign>
+		<ModelColor>0,0,0</ModelColor>
+	</ResourceType>
+
+    <ResourceType InternalName="deathriver_worldresource">
+		<DisplayName>Corrupted River with Bedrock</DisplayName>
+		<Type>Deathtube</Type>
+		<Description>Solid bedrock makes this location ideal for a Death Forge.</Description>
+		<LongDescription></LongDescription>
+		<BarredTerrain>River</BarredTerrain>
+		<BarredTerrain>HillsTerrain</BarredTerrain>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<Rarity>0</Rarity>
+		<NeedsToBeUnlocked>0</NeedsToBeUnlocked>
+		<Production>1</Production>
+		<Worth>5</Worth>
+		<Global>0</Global>
+		<OnSelectSFX>Click_Camp_Darkling</OnSelectSFX>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>8</AIPriority>
+		</AIData>
+		<Medallions InternalName="">
+			<All>deathresource.png</All>
+		</Medallions>
+		<Icon>deathresource.png</Icon>
+		<IconColor>0,0,0</IconColor>
+		<ClothIcon>Resource_IronOre.png</ClothIcon>
+		<TileDesign>deathriver_resource_wild</TileDesign>
+		<ModelColor>0,0,0</ModelColor>
+	</ResourceType>
+
+    <ResourceType InternalName="poisonriver_worldresource">
+		<DisplayName>Poison River with Bedrock</DisplayName>
+		<Type>Poisontube</Type>
+		<Description>Solid bedrock makes this location ideal for a Witch Market.</Description>
+		<LongDescription></LongDescription>
+		<BarredTerrain>River</BarredTerrain>
+		<BarredTerrain>HillsTerrain</BarredTerrain>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<Rarity>0</Rarity>
+		<NeedsToBeUnlocked>0</NeedsToBeUnlocked>
+		<Production>1</Production>
+		<Worth>5</Worth>
+		<Global>0</Global>
+		<OnSelectSFX>Click_Camp_Darkling</OnSelectSFX>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>8</AIPriority>
+		</AIData>
+		<Medallions InternalName="">
+			<All>poisonresource.png</All>
+		</Medallions>
+		<Icon>poisonresource.png</Icon>
+		<IconColor>0,0,0</IconColor>
+		<ClothIcon>Resource_IronOre.png</ClothIcon>
+		<TileDesign>poisonriver_resource_wild</TileDesign>
+		<ModelColor>0,0,0</ModelColor>
+	</ResourceType>
+
+	<ResourceType InternalName="JB_Wild_SnowGiants">
+        <DisplayName>Snow Giant Lair</DisplayName>
+        <Type>JB_Wild_SnowGiants</Type>
+        <Description>Build a Camp here to recruit Snow Giants.</Description>
+        <LongDescription>Here stands a camp, home to a clan of mighty Snow Giants.</LongDescription>
+        <BarredTerrain>River</BarredTerrain>
+        <BarredTerrain>HillsTerrain</BarredTerrain>
+        <PreferredTerrain>Category:Land</PreferredTerrain>
+        <Rarity>0</Rarity>
+        <CanBeRazed>1</CanBeRazed>
+        <NeedsToBeUnlocked>0</NeedsToBeUnlocked>
+        <Production>1</Production>
+        <Worth>5</Worth>
+        <Global>0</Global>
+        <OnSelectSFX>Click_Bandit_Tent</OnSelectSFX>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>TileYieldEssence</Attribute>
+            <Value>9</Value>
+            <PerTurn>1</PerTurn>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>8</AIPriority>
+        </AIData>
+        <Medallions InternalName="">
+            <All>L_Ice_Elementals_01.png</All>
+        </Medallions>
+        <Icon>JB_Resource_SnowGiant.png</Icon>
+        <IconColor>0,0,0</IconColor>
+        <ClothIcon>JB_Resource_SnowGiant.png</ClothIcon>
+        <TileDesign>JB_L_SnowGiant_01</TileDesign>
+        <ModelColor>0,0,0</ModelColor>
+    </ResourceType>
+	<ResourceType InternalName="JB_Wild_ForestGuardians">
+        <DisplayName>Forest Grove</DisplayName>
+        <Type>JB_WildForestGuardians</Type>
+        <Description>Build a Sacred Grove here to recruit Forest Guardians.</Description>
+        <LongDescription>Here stands a serene Forest Grove, a gathering place for elusive Forest Guardians.</LongDescription>
+        <BarredTerrain>River</BarredTerrain>
+        <BarredTerrain>HillsTerrain</BarredTerrain>
+        <PreferredTerrain>Forest</PreferredTerrain>
+        <Rarity>0</Rarity>
+        <CanBeRazed>1</CanBeRazed>
+        <NeedsToBeUnlocked>0</NeedsToBeUnlocked>
+        <Production>1</Production>
+        <Worth>5</Worth>
+        <Global>0</Global>
+        <OnSelectSFX>Click_Scenic</OnSelectSFX>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>TileYieldEssence</Attribute>
+            <Value>9</Value>
+            <PerTurn>1</PerTurn>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>8</AIPriority>
+        </AIData>
+        <Medallions InternalName="">
+            <All>JB_ForestGrove_Medallion.png</All>
+        </Medallions>
+        <Icon>JB_Forest_Grove1.png</Icon>
+        <IconColor>0,0,0</IconColor>
+        <ClothIcon>JB_Resource_ForestGrove.png</ClothIcon>
+        <TileDesign>JB_Forest_Grove1</TileDesign>
+        <ModelColor>0,0,0</ModelColor>
+    </ResourceType>
+	<ResourceType InternalName="JB_Wild_Sprites">
+        <DisplayName>Mushroom Grove</DisplayName>
+        <Type>JB_WildSprites</Type>
+        <Description>Build a Camp here to recruit Sprites.</Description>
+        <LongDescription>A Mushroom Grove is locate here amongst the forest.  Build a Sprite Camp to recruit Sprites.</LongDescription>
+        <BarredTerrain>River</BarredTerrain>
+        <BarredTerrain>HillsTerrain</BarredTerrain>
+        <PreferredTerrain>Forest</PreferredTerrain>
+        <Rarity>0</Rarity>
+        <CanBeRazed>1</CanBeRazed>
+        <NeedsToBeUnlocked>0</NeedsToBeUnlocked>
+        <Production>1</Production>
+        <Worth>5</Worth>
+        <Global>0</Global>
+        <OnSelectSFX>Click_Camp_Darkling</OnSelectSFX>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>TileYieldEssence</Attribute>
+            <Value>1</Value>
+            <PerTurn>1</PerTurn>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>8</AIPriority>
+        </AIData>
+        <Medallions InternalName="">
+            <All>JB_Lair_Sprite_Medallion.png</All>
+        </Medallions>
+        <Icon>JB_Resource_WildSprites.png</Icon>
+        <IconColor>0,0,0</IconColor>
+        <ClothIcon>JB_Resource_WildSprites.png</ClothIcon>
+        <TileDesign>JB_Mushroom_Grove1</TileDesign>
+        <ModelColor>0,0,0</ModelColor>
+    </ResourceType>
+	<ResourceType InternalName="JB_Wild_Treekin">
+        <DisplayName>Treekin Grove</DisplayName>
+        <Type>JB_WildTreekin</Type>
+        <Description>Build a Camp here to recruit Treekin Giants.</Description>
+        <LongDescription>Treekin reside in this forest grove, they will assist you if you renew the site.</LongDescription>
+        <BarredTerrain>River</BarredTerrain>
+        <BarredTerrain>HillsTerrain</BarredTerrain>
+        <PreferredTerrain>Forest</PreferredTerrain>
+        <Rarity>0</Rarity>
+        <CanBeRazed>1</CanBeRazed>
+        <NeedsToBeUnlocked>0</NeedsToBeUnlocked>
+        <Production>1</Production>
+        <Worth>5</Worth>
+        <Global>0</Global>
+        <OnSelectSFX>Click_Earth_Elemental_Lair</OnSelectSFX>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>TileYieldEssence</Attribute>
+            <Value>1</Value>
+            <PerTurn>1</PerTurn>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>15</AIPriority>
+        </AIData>
+        <Medallions InternalName="">
+            <All>JB_ForestGrove_Medallion.png</All>
+        </Medallions>
+        <Icon>JB_Forest_Grove1.png</Icon>
+        <IconColor>0,0,0</IconColor>
+        <ClothIcon>JB_Resource_ForestGrove.png</ClothIcon>
+        <TileDesign>JB_Forest_Grove1</TileDesign>
+        <ModelColor>0,0,0</ModelColor>
+    </ResourceType>
+	<ResourceType InternalName="WorldResource_ArcaliteBlastSite">
+        <DisplayName>Arcalite Blast Site</DisplayName>
+        <Type>ArcaliteBlastSite</Type>
+        <Description>Build a Arcalite Outpost here to gather Arcalite.</Description>
+        <LongDescription>This is the site of a massive spell devastation that has lead to forming of a special rocky crystal known as Arcalite. The condensed area spell impacts here have left a deep enough layer of Arcanite for continuos mining.</LongDescription>
+        <BarredTerrain>River</BarredTerrain>
+        <BarredTerrain>HillsTerrain</BarredTerrain>
+        <PreferredTerrain>Category:Land</PreferredTerrain>
+        <Rarity>200</Rarity>
+        <NeedsToBeUnlocked>0</NeedsToBeUnlocked>
+        <Production>1</Production>
+        <Worth>5</Worth>
+        <Global>0</Global>
+        <OnSelectSFX>Click_Crystal_Rubble</OnSelectSFX>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>8</AIPriority>
+        </AIData>
+        <Medallions InternalName="">
+            <All>Resource_ArcaliteSite.png</All>
+        </Medallions>
+        <Icon>Resource_ArcaliteSite.png</Icon>
+        <IconColor>0,0,0</IconColor>
+        <ClothIcon>Resource_ArcaliteSite.png</ClothIcon>
+        <TileDesign>R_ArcaliteSite</TileDesign>
+        <ModelColor>0,0,0</ModelColor>
+    </ResourceType>
+
+</WorldResources_Core>
