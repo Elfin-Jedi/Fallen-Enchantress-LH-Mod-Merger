@@ -16,4 +16,4 @@ Note: Custom factions need to use Deorchynesse Secrets faction strength. There a
 
 To-do:
 
-Finish re-sorting Assassin & Mage trait trees.
+Re-sort Mage trait tree.
