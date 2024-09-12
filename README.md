@@ -1,6 +1,6 @@
 # Fallen-Enchantress-LH-Mod-Merger
 Merger of 20 mods. Including Xtradeconstruct - Legacy of Magic & Demons and Wizards.
-There are also some additions of my own, I am not creative with writing lore so they have names like Nature Magic Wonder. I also reused graphics. If anyone wants to contribute, let me know.
+There are also some additions of my own, I am not creative with writing lore so they have names like Nature Magic Wonder. I also reused graphics. If anyone wants to contribute, let me know. My Discord is tiara6704.
 
 Installation Instructions:
 
