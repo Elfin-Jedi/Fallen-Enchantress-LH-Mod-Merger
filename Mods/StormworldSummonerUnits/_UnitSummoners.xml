@@ -1,0 +1,2858 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<UnitTypes>
+	<!-- Altarian -->
+	<UnitType InternalName="Unit_Air_Summoner_Altarian">
+		<DisplayName>Air Summoner</DisplayName>
+		<Description>These skilled mages have learned the power to summon Air Elementals to do their fighting for them.</Description>
+		<Class>Mage</Class>
+		<RaceType>Race_Type_Altarians</RaceType>
+		<CanBeDesigned>1</CanBeDesigned>
+		<Gender>Male</Gender>
+		<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+		<IsSovereign>0</IsSovereign>
+		<IsStartingUnitType>1</IsStartingUnitType>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<!-- For Stormworld Compatibility Only -->
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Altarians>1</UnitStat_BG_IsRace_Altarians>
+			<UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsMale>1</UnitStat_BG_IsMale>
+			<!-- End Stormworld Compatibility -->
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>Blood_Altarian</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>AirSummons</SelectedAbilityBonusOption>
+		<Equipment>Staff_Incineration</Equipment>
+		<Equipment>RingOfEmbers</Equipment>		
+		<Equipment>K_Male_Head_02</Equipment>
+		<Equipment>Kraxis_Beard</Equipment>
+		<Equipment>Air_Monks_Robe</Equipment>
+		<Equipment>Wizard_Cloak_ID2</Equipment>
+		<Equipment>Kingdom_Leather_Gloves_Light</Equipment>
+		<Equipment>Basic_Boots_ID1</Equipment>
+		<EquipmentUpgradeDef>
+			<EquipmentSlot>Weapon</EquipmentSlot>
+			<EquipmentWeaponType>FireStaff</EquipmentWeaponType>
+			<EquipmentSlot>Defense</EquipmentSlot>
+			<SelectionCriteria>MaximizeBest</SelectionCriteria>
+			<ComparisonAttribute>UnitStat_Attack_Lightning</ComparisonAttribute>
+			<ComparisonAttribute>UnitStat_Attack_Fire</ComparisonAttribute>
+			<ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+		</EquipmentUpgradeDef>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Altarians</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Third_Book_Of_The_Magi</Attribute>
+		</Prereq>
+		<Backstory>All who wear the colors of this army, from commander to common foot-soldier, can trace their lineage back to the great kingdoms of the pre-cataclysmic era - to Coriopolis, Zad-Zabril, and even fabled Antheros. The blood of the channlers of old runs in their veins; they know and are unafraid of using this power to aid them in combat, both as shield and sword, in defense and attack. The commander who would engage this army in battle must possess a similar familiarity with the enchanter's art.</Backstory>
+		<AnimationPack>SoldierAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>1.6</ClothMapScale>
+		<ClothPoseIndex>26</ClothPoseIndex>
+		<Color_Hair>155,110,75,255</Color_Hair>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>Gfx\Eyes\Blinks\eyeblink_m1_brwn.png</EyeTexture>
+		<InfoCardBackground>BG_River</InfoCardBackground>
+		<InfoCardBackgroundFlipped>1</InfoCardBackgroundFlipped>
+		<ModelPath>Gfx\HKB\Units\K_Male_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Generic_Male</SoundPack>
+		<TaticalModelScale>1.5</TaticalModelScale>
+		<Texture_Eyes>Gfx\eyes\blinks\eyeblink_m1_brwn.png</Texture_Eyes>
+		<Texture_Skin>K_Male_Balding_Texture_01.png</Texture_Skin>
+		<UnitModelType>KingdomMale</UnitModelType>
+	</UnitType>
+	<UnitType InternalName="Unit_Earth_Summoner_Altarian">
+		<DisplayName>Earth Summoner</DisplayName>
+		<Description>These skilled mages have learned the power to summon Earth Elementals to do their fighting for them.</Description>
+		<Class>Mage</Class>
+		<RaceType>Race_Type_Altarians</RaceType>
+		<CanBeDesigned>1</CanBeDesigned>
+		<Gender>Female</Gender>
+		<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+		<IsSovereign>0</IsSovereign>
+		<IsStartingUnitType>1</IsStartingUnitType>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<!-- For Stormworld Compatibility Only -->
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Altarians>1</UnitStat_BG_IsRace_Altarians>
+			<UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsFemale>1</UnitStat_BG_IsFemale>
+			<!-- End Stormworld Compatibility -->
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>Blood_Altarian</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>EarthSummons</SelectedAbilityBonusOption>
+		<Equipment>Staff_Ice</Equipment>
+		<Equipment>RingOfTheGlacier</Equipment>
+		<Equipment>K_Female_Head_01</Equipment>
+		<Equipment>Earth_Monks_Robe</Equipment>
+		<Equipment>Wizard_Cloak_ID2</Equipment>
+		<Equipment>Kingdom_Female_Leather_Gloves_Light</Equipment>
+		<Equipment>TightBoots_Light</Equipment>
+		<EquipmentUpgradeDef>
+			<EquipmentSlot>Weapon</EquipmentSlot>
+			<EquipmentWeaponType>ColdStaff</EquipmentWeaponType>
+			<EquipmentSlot>Defense</EquipmentSlot>
+			<SelectionCriteria>MaximizeBest</SelectionCriteria>
+			<ComparisonAttribute>UnitStat_Attack_Cold</ComparisonAttribute>
+			<ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+		</EquipmentUpgradeDef>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Altarians</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Third_Book_Of_The_Magi</Attribute>
+		</Prereq>
+		<Backstory>All who wear the colors of this army, from commander to common foot-soldier, can trace their lineage back to the great kingdoms of the pre-cataclysmic era - to Coriopolis, Zad-Zabril, and even fabled Antheros. The blood of the channlers of old runs in their veins; they know and are unafraid of using this power to aid them in combat, both as shield and sword, in defense and attack. The commander who would engage this army in battle must possess a similar familiarity with the enchanter's art.</Backstory>
+		<AnimationPack>SoldierAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>1.6</ClothMapScale>
+		<ClothPoseIndex>29</ClothPoseIndex>
+		<Color_Hair>155,110,75,255</Color_Hair>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>Gfx\Eyes\Blinks\eyeblink_f1_grn.png</EyeTexture>
+		<InfoCardBackground>BG_Desert</InfoCardBackground>
+		<InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+		<ModelPath>Gfx\HKB\Units\K_Female_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Generic_Female</SoundPack>
+		<TaticalModelScale>1.5</TaticalModelScale>
+		<Texture_Eyes>Gfx\eyes\blinks\eyeblink_f1_grn.png</Texture_Eyes>
+		<Texture_Skin>K_Female_Aristocrat_Texture_01.png</Texture_Skin>
+		<UnitModelType>KingdomFemale</UnitModelType>
+	</UnitType>
+	<UnitType InternalName="Unit_Fire_Summoner_Altarian">
+		<DisplayName>Fire Summoner</DisplayName>
+		<Description>These skilled mages have learned the power to summon Fire Elementals to do their fighting for them.</Description>
+		<Class>Mage</Class>
+		<RaceType>Race_Type_Altarians</RaceType>
+		<CanBeDesigned>1</CanBeDesigned>
+		<Gender>Male</Gender>
+		<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+		<IsSovereign>0</IsSovereign>
+		<IsStartingUnitType>1</IsStartingUnitType>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<!-- For Stormworld Compatibility Only -->
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Altarians>1</UnitStat_BG_IsRace_Altarians>
+			<UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsMale>1</UnitStat_BG_IsMale>
+			<!-- End Stormworld Compatibility -->
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>Blood_Altarian</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>FireSummons</SelectedAbilityBonusOption>
+		<Equipment>Staff_Incineration</Equipment>
+		<Equipment>RingOfEmbers</Equipment>
+		<Equipment>K_Male_Head_02</Equipment>
+		<Equipment>Sovereign_Beard</Equipment>
+		<Equipment>Fire_Monks_Robe</Equipment>
+		<Equipment>Wizard_Cloak_ID2</Equipment>
+		<Equipment>Kingdom_Leather_Gloves_Light</Equipment>
+		<Equipment>Basic_Boots_ID1</Equipment>
+		<EquipmentUpgradeDef>
+			<EquipmentSlot>Weapon</EquipmentSlot>
+			<EquipmentWeaponType>FireStaff</EquipmentWeaponType>
+			<EquipmentSlot>Defense</EquipmentSlot>
+			<SelectionCriteria>MaximizeBest</SelectionCriteria>
+			<ComparisonAttribute>UnitStat_Attack_Fire</ComparisonAttribute>
+			<ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+		</EquipmentUpgradeDef>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Altarians</Attribute>
+		</Prereq>
+        <Prereq>
+			<Type>Tech</Type>
+			<Attribute>Third_Book_Of_The_Magi</Attribute>
+		</Prereq>		
+		<Backstory>All who wear the colors of this army, from commander to common foot-soldier, can trace their lineage back to the great kingdoms of the pre-cataclysmic era - to Coriopolis, Zad-Zabril, and even fabled Antheros. The blood of the channlers of old runs in their veins; they know and are unafraid of using this power to aid them in combat, both as shield and sword, in defense and attack. The commander who would engage this army in battle must possess a similar familiarity with the enchanter's art.</Backstory>
+		<AnimationPack>SoldierAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>1.6</ClothMapScale>
+		<ClothPoseIndex>26</ClothPoseIndex>
+		<Color_Hair>155,110,75,255</Color_Hair>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>Gfx\Eyes\Blinks\eyeblink_m4_brwn.png</EyeTexture>
+		<InfoCardBackground>BG24_Volcano</InfoCardBackground>
+		<InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+		<ModelPath>Gfx\HKB\Units\K_Male_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Generic_Male</SoundPack>
+		<TaticalModelScale>1.5</TaticalModelScale>
+		<Texture_Eyes>Gfx\eyes\blinks\eyeblink_m4_brwn.png</Texture_Eyes>
+		<Texture_Skin>K_Male_Balding_Texture_01.png</Texture_Skin>
+		<UnitModelType>KingdomMale</UnitModelType>
+	</UnitType>
+	<UnitType InternalName="Unit_Ice_Summoner_Altarian">
+		<DisplayName>Ice Summoner</DisplayName>
+		<Description>These skilled mages have learned the power to summon Ice Elementals to do their fighting for them.</Description>
+		<Class>Mage</Class>
+		<RaceType>Race_Type_Altarians</RaceType>
+		<CanBeDesigned>1</CanBeDesigned>
+		<Gender>Female</Gender>
+		<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+		<IsSovereign>0</IsSovereign>
+		<IsStartingUnitType>1</IsStartingUnitType>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<!-- For Stormworld Compatibility Only -->
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Altarians>1</UnitStat_BG_IsRace_Altarians>
+			<UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsFemale>1</UnitStat_BG_IsFemale>
+			<!-- End Stormworld Compatibility -->
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>Blood_Altarian</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>IceSummons</SelectedAbilityBonusOption>
+		<Equipment>Staff_Ice</Equipment>
+		<Equipment>RingOfTheGlacier</Equipment>
+		<Equipment>K_Female_Head_04</Equipment>
+		<Equipment>Water_Monks_Robe</Equipment>
+		<Equipment>Wizard_Cloak_ID2</Equipment>
+		<Equipment>Kingdom_Female_Leather_Gloves_Light</Equipment>
+		<Equipment>TightBoots_Light</Equipment>
+		<EquipmentUpgradeDef>
+			<EquipmentSlot>Weapon</EquipmentSlot>
+			<EquipmentWeaponType>ColdStaff</EquipmentWeaponType>
+			<EquipmentSlot>Defense</EquipmentSlot>
+			<SelectionCriteria>MaximizeBest</SelectionCriteria>
+			<ComparisonAttribute>UnitStat_Attack_Cold</ComparisonAttribute>
+			<ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+		</EquipmentUpgradeDef>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Altarians</Attribute>
+		</Prereq>		
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Third_Book_Of_The_Magi</Attribute>
+		</Prereq>
+		<Backstory>All who wear the colors of this army, from commander to common foot-soldier, can trace their lineage back to the great kingdoms of the pre-cataclysmic era - to Coriopolis, Zad-Zabril, and even fabled Antheros. The blood of the channlers of old runs in their veins; they know and are unafraid of using this power to aid them in combat, both as shield and sword, in defense and attack. The commander who would engage this army in battle must possess a similar familiarity with the enchanter's art.</Backstory>
+		<AnimationPack>SoldierAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>1.6</ClothMapScale>
+		<ClothPoseIndex>5</ClothPoseIndex>
+		<Color_Hair>155,110,75,255</Color_Hair>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>Gfx\Eyes\Blinks\eyeblink_f3_grn.png</EyeTexture>
+		<InfoCardBackground>BG_Artic</InfoCardBackground>
+		<InfoCardBackgroundFlipped>1</InfoCardBackgroundFlipped>
+		<ModelPath>Gfx\HKB\Units\K_Female_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Generic_Female</SoundPack>
+		<TaticalModelScale>1.5</TaticalModelScale>
+		<Texture_Eyes>Gfx\eyes\blinks\eyeblink_f3_grn.png</Texture_Eyes>
+		<Texture_Skin>K_Female_Thinbrows_Texture_01.png</Texture_Skin>
+		<UnitModelType>KingdomFemale</UnitModelType>
+	</UnitType>
+	<!-- Mancer -->
+	<UnitType InternalName="Unit_Air_Summoner_Mancer">
+		<DisplayName>Air Summoner</DisplayName>
+		<Description>These skilled mages have learned the power to summon Air Elementals to do their fighting for them.</Description>
+		<Class>Mage</Class>
+		<RaceType>Race_Type_Mancers</RaceType>
+		<CanBeDesigned>1</CanBeDesigned>
+		<Gender>Male</Gender>
+		<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+		<IsSovereign>0</IsSovereign>
+		<IsStartingUnitType>1</IsStartingUnitType>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<!-- For Stormworld Compatibility Only -->
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Mancers>1</UnitStat_BG_IsRace_Mancers>
+			<UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsMale>1</UnitStat_BG_IsMale>
+			<!-- End Stormworld Compatibility -->
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>Blood_Mancer</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>AirSummons</SelectedAbilityBonusOption>
+		<Equipment>Staff_Incineration</Equipment>
+		<Equipment>RingOfEmbers</Equipment>		
+		<Equipment>K_Male_Head_02</Equipment>
+		<Equipment>Kraxis_Beard</Equipment>
+		<Equipment>Air_Monks_Robe</Equipment>
+		<Equipment>Wizard_Cloak_ID2</Equipment>
+		<Equipment>Kingdom_Leather_Gloves_Light</Equipment>
+		<Equipment>Basic_Boots_ID1</Equipment>
+		<EquipmentUpgradeDef>
+			<EquipmentSlot>Weapon</EquipmentSlot>
+			<EquipmentWeaponType>FireStaff</EquipmentWeaponType>
+			<EquipmentSlot>Defense</EquipmentSlot>
+			<SelectionCriteria>MaximizeBest</SelectionCriteria>
+			<ComparisonAttribute>UnitStat_Attack_Lightning</ComparisonAttribute>
+			<ComparisonAttribute>UnitStat_Attack_Fire</ComparisonAttribute>
+			<ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+		</EquipmentUpgradeDef>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Mancers</Attribute>
+		</Prereq>
+        <Prereq>
+			<Type>Tech</Type>
+			<Attribute>Third_Book_Of_The_Magi</Attribute>
+		</Prereq>		
+		<Backstory>All who wear the colors of this army, from commander to common foot-soldier, can trace their lineage back to the great kingdoms of the pre-cataclysmic era - to Coriopolis, Zad-Zabril, and even fabled Antheros. The blood of the channlers of old runs in their veins; they know and are unafraid of using this power to aid them in combat, both as shield and sword, in defense and attack. The commander who would engage this army in battle must possess a similar familiarity with the enchanter's art.</Backstory>
+		<AnimationPack>SoldierAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>1.6</ClothMapScale>
+		<ClothPoseIndex>26</ClothPoseIndex>
+		<Color_Hair>210,175,125,255</Color_Hair>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>Gfx\Eyes\Blinks\eyeblink_m1_brwn.png</EyeTexture>
+		<InfoCardBackground>BG_River</InfoCardBackground>
+		<InfoCardBackgroundFlipped>1</InfoCardBackgroundFlipped>
+		<ModelPath>Gfx\HKB\Units\K_Male_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Generic_Male</SoundPack>
+		<TaticalModelScale>1.5</TaticalModelScale>
+		<Texture_Eyes>Gfx\eyes\blinks\eyeblink_m1_brwn.png</Texture_Eyes>
+		<Texture_Skin>K_Male_Balding_Texture_01.png</Texture_Skin>
+		<UnitModelType>MancerMale</UnitModelType>
+	</UnitType>
+	<UnitType InternalName="Unit_Earth_Summoner_Mancer">
+		<DisplayName>Earth Summoner</DisplayName>
+		<Description>These skilled mages have learned the power to summon Earth Elementals to do their fighting for them.</Description>
+		<Class>Mage</Class>
+		<RaceType>Race_Type_Mancers</RaceType>
+		<CanBeDesigned>1</CanBeDesigned>
+		<Gender>Female</Gender>
+		<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+		<IsSovereign>0</IsSovereign>
+		<IsStartingUnitType>1</IsStartingUnitType>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<!-- For Stormworld Compatibility Only -->
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Mancers>1</UnitStat_BG_IsRace_Mancers>
+			<UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsFemale>1</UnitStat_BG_IsFemale>
+			<!-- End Stormworld Compatibility -->
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>Blood_Mancer</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>EarthSummons</SelectedAbilityBonusOption>
+		<Equipment>Staff_Ice</Equipment>
+		<Equipment>RingOfTheGlacier</Equipment>
+		<Equipment>K_Female_Head_01</Equipment>
+		<Equipment>Earth_Monks_Robe</Equipment>
+		<Equipment>Wizard_Cloak_ID2</Equipment>
+		<Equipment>Kingdom_Female_Leather_Gloves_Light</Equipment>
+		<Equipment>TightBoots_Light</Equipment>
+		<EquipmentUpgradeDef>
+			<EquipmentSlot>Weapon</EquipmentSlot>
+			<EquipmentWeaponType>ColdStaff</EquipmentWeaponType>
+			<EquipmentSlot>Defense</EquipmentSlot>
+			<SelectionCriteria>MaximizeBest</SelectionCriteria>
+			<ComparisonAttribute>UnitStat_Attack_Cold</ComparisonAttribute>
+			<ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+		</EquipmentUpgradeDef>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Mancers</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Third_Book_Of_The_Magi</Attribute>
+		</Prereq>
+		<Backstory>All who wear the colors of this army, from commander to common foot-soldier, can trace their lineage back to the great kingdoms of the pre-cataclysmic era - to Coriopolis, Zad-Zabril, and even fabled Antheros. The blood of the channlers of old runs in their veins; they know and are unafraid of using this power to aid them in combat, both as shield and sword, in defense and attack. The commander who would engage this army in battle must possess a similar familiarity with the enchanter's art.</Backstory>
+		<AnimationPack>SoldierAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>1.6</ClothMapScale>
+		<ClothPoseIndex>29</ClothPoseIndex>
+		<Color_Hair>210,175,125,255</Color_Hair>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>Gfx\Eyes\Blinks\eyeblink_f1_grn.png</EyeTexture>
+		<InfoCardBackground>BG_Desert</InfoCardBackground>
+		<InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+		<ModelPath>Gfx\HKB\Units\K_Female_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Generic_Female</SoundPack>
+		<TaticalModelScale>1.5</TaticalModelScale>
+		<Texture_Eyes>Gfx\eyes\blinks\eyeblink_f1_grn.png</Texture_Eyes>
+		<Texture_Skin>K_Female_Aristocrat_Texture_01.png</Texture_Skin>
+		<UnitModelType>MancerFemale</UnitModelType>
+	</UnitType>
+	<UnitType InternalName="Unit_Fire_Summoner_Mancer">
+		<DisplayName>Fire Summoner</DisplayName>
+		<Description>These skilled mages have learned the power to summon Fire Elementals to do their fighting for them.</Description>
+		<Class>Mage</Class>
+		<RaceType>Race_Type_Mancers</RaceType>
+		<CanBeDesigned>1</CanBeDesigned>
+		<Gender>Male</Gender>
+		<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+		<IsSovereign>0</IsSovereign>
+		<IsStartingUnitType>1</IsStartingUnitType>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<!-- For Stormworld Compatibility Only -->
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Mancers>1</UnitStat_BG_IsRace_Mancers>
+			<UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsMale>1</UnitStat_BG_IsMale>
+			<!-- End Stormworld Compatibility -->
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>Blood_Mancer</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>FireSummons</SelectedAbilityBonusOption>
+		<Equipment>Staff_Incineration</Equipment>
+		<Equipment>RingOfEmbers</Equipment>
+		<Equipment>K_Male_Head_02</Equipment>
+		<Equipment>Sovereign_Beard</Equipment>
+		<Equipment>Fire_Monks_Robe</Equipment>
+		<Equipment>Wizard_Cloak_ID2</Equipment>
+		<Equipment>Kingdom_Leather_Gloves_Light</Equipment>
+		<Equipment>Basic_Boots_ID1</Equipment>
+		<EquipmentUpgradeDef>
+			<EquipmentSlot>Weapon</EquipmentSlot>
+			<EquipmentWeaponType>FireStaff</EquipmentWeaponType>
+			<EquipmentSlot>Defense</EquipmentSlot>
+			<SelectionCriteria>MaximizeBest</SelectionCriteria>
+			<ComparisonAttribute>UnitStat_Attack_Fire</ComparisonAttribute>
+			<ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+		</EquipmentUpgradeDef>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Mancers</Attribute>
+		</Prereq>
+        <Prereq>
+			<Type>Tech</Type>
+			<Attribute>Third_Book_Of_The_Magi</Attribute>
+		</Prereq>		
+		<Backstory>All who wear the colors of this army, from commander to common foot-soldier, can trace their lineage back to the great kingdoms of the pre-cataclysmic era - to Coriopolis, Zad-Zabril, and even fabled Antheros. The blood of the channlers of old runs in their veins; they know and are unafraid of using this power to aid them in combat, both as shield and sword, in defense and attack. The commander who would engage this army in battle must possess a similar familiarity with the enchanter's art.</Backstory>
+		<AnimationPack>SoldierAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>1.6</ClothMapScale>
+		<ClothPoseIndex>26</ClothPoseIndex>
+		<Color_Hair>210,175,125,255</Color_Hair>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>Gfx\Eyes\Blinks\eyeblink_m1_blue.png</EyeTexture>
+		<InfoCardBackground>BG24_Volcano</InfoCardBackground>
+		<InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+		<ModelPath>Gfx\HKB\Units\K_Male_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Generic_Male</SoundPack>
+		<TaticalModelScale>1.5</TaticalModelScale>
+		<Texture_Eyes>Gfx\eyes\blinks\eyeblink_m1_blue.png</Texture_Eyes>
+		<Texture_Skin>K_Male_Balding_Texture_01.png</Texture_Skin>
+		<UnitModelType>MancerMale</UnitModelType>
+	</UnitType>
+	<UnitType InternalName="Unit_Ice_Summoner_Mancer">
+		<DisplayName>Ice Summoner</DisplayName>
+		<Description>These skilled mages have learned the power to summon Ice Elementals to do their fighting for them.</Description>
+		<Class>Mage</Class>
+		<RaceType>Race_Type_Mancers</RaceType>
+		<CanBeDesigned>1</CanBeDesigned>
+		<Gender>Female</Gender>
+		<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+		<IsSovereign>0</IsSovereign>
+		<IsStartingUnitType>1</IsStartingUnitType>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<!-- For Stormworld Compatibility Only -->
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Mancers>1</UnitStat_BG_IsRace_Mancers>
+			<UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsFemale>1</UnitStat_BG_IsFemale>
+			<!-- End Stormworld Compatibility -->
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>Blood_Mancer</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>IceSummons</SelectedAbilityBonusOption>
+		<Equipment>Staff_Ice</Equipment>
+		<Equipment>RingOfTheGlacier</Equipment>
+		<Equipment>K_Female_Head_04</Equipment>
+		<Equipment>Water_Monks_Robe</Equipment>
+		<Equipment>Wizard_Cloak_ID2</Equipment>
+		<Equipment>Kingdom_Female_Leather_Gloves_Light</Equipment>
+		<Equipment>TightBoots_Light</Equipment>
+		<EquipmentUpgradeDef>
+			<EquipmentSlot>Weapon</EquipmentSlot>
+			<EquipmentWeaponType>ColdStaff</EquipmentWeaponType>
+			<EquipmentSlot>Defense</EquipmentSlot>
+			<SelectionCriteria>MaximizeBest</SelectionCriteria>
+			<ComparisonAttribute>UnitStat_Attack_Cold</ComparisonAttribute>
+			<ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+		</EquipmentUpgradeDef>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Amarians</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Third_Book_Of_The_Magi</Attribute>
+		</Prereq>
+		<Backstory>All who wear the colors of this army, from commander to common foot-soldier, can trace their lineage back to the great kingdoms of the pre-cataclysmic era - to Coriopolis, Zad-Zabril, and even fabled Antheros. The blood of the channlers of old runs in their veins; they know and are unafraid of using this power to aid them in combat, both as shield and sword, in defense and attack. The commander who would engage this army in battle must possess a similar familiarity with the enchanter's art.</Backstory>
+		<AnimationPack>SoldierAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>1.6</ClothMapScale>
+		<ClothPoseIndex>5</ClothPoseIndex>
+		<Color_Hair>210,175,125,255</Color_Hair>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>Gfx\Eyes\Blinks\eyeblink_f3_blue.png</EyeTexture>
+		<InfoCardBackground>BG_Artic</InfoCardBackground>
+		<InfoCardBackgroundFlipped>1</InfoCardBackgroundFlipped>
+		<ModelPath>Gfx\HKB\Units\K_Female_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Generic_Female</SoundPack>
+		<TaticalModelScale>1.5</TaticalModelScale>
+		<Texture_Eyes>Gfx\eyes\blinks\eyeblink_f3_blue.png</Texture_Eyes>
+		<Texture_Skin>K_Female_Thinbrows_Texture_01.png</Texture_Skin>
+		<UnitModelType>MancerFemale</UnitModelType>
+	</UnitType>
+	<!-- Ironeer -->
+	<UnitType InternalName="Unit_Air_Summoner_Ironeer">
+		<DisplayName>Air Summoner</DisplayName>
+		<Description>These skilled mages have learned the power to summon Air Elementals to do their fighting for them.</Description>
+		<Class>Mage</Class>
+		<RaceType>Race_Type_Ironeers</RaceType>
+		<CanBeDesigned>1</CanBeDesigned>
+		<Gender>Male</Gender>
+		<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+		<IsSovereign>0</IsSovereign>
+		<IsStartingUnitType>1</IsStartingUnitType>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<!-- For Stormworld Compatibility Only -->
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Ironeers>1</UnitStat_BG_IsRace_Ironeers>
+			<UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsMale>1</UnitStat_BG_IsMale>
+			<!-- End Stormworld Compatibility -->
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>Blood_Ironeer</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>AirSummons</SelectedAbilityBonusOption>
+		<Equipment>Staff_Incineration</Equipment>
+		<Equipment>RingOfEmbers</Equipment>		
+		<Equipment>K_Male_Head_02</Equipment>
+		<Equipment>Kraxis_Beard</Equipment>
+		<Equipment>Air_Monks_Robe</Equipment>
+		<Equipment>Wizard_Cloak_ID2</Equipment>
+		<Equipment>Kingdom_Leather_Gloves_Light</Equipment>
+		<Equipment>Basic_Boots_ID1</Equipment>
+		<EquipmentUpgradeDef>
+			<EquipmentSlot>Weapon</EquipmentSlot>
+			<EquipmentWeaponType>FireStaff</EquipmentWeaponType>
+			<EquipmentSlot>Defense</EquipmentSlot>
+			<SelectionCriteria>MaximizeBest</SelectionCriteria>
+			<ComparisonAttribute>UnitStat_Attack_Lightning</ComparisonAttribute>
+			<ComparisonAttribute>UnitStat_Attack_Fire</ComparisonAttribute>
+			<ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+		</EquipmentUpgradeDef>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Ironeers</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Third_Book_Of_The_Magi</Attribute>
+		</Prereq>
+		<Backstory>All who wear the colors of this army, from commander to common foot-soldier, can trace their lineage back to the great kingdoms of the pre-cataclysmic era - to Coriopolis, Zad-Zabril, and even fabled Antheros. The blood of the channlers of old runs in their veins; they know and are unafraid of using this power to aid them in combat, both as shield and sword, in defense and attack. The commander who would engage this army in battle must possess a similar familiarity with the enchanter's art.</Backstory>
+		<AnimationPack>SoldierAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>1.6</ClothMapScale>
+		<ClothPoseIndex>26</ClothPoseIndex>
+		<Color_Hair>110,60,15,255</Color_Hair>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>Gfx\Eyes\Blinks\eyeblink_m1_brwn.png</EyeTexture>
+		<InfoCardBackground>BG_River</InfoCardBackground>
+		<InfoCardBackgroundFlipped>1</InfoCardBackgroundFlipped>
+		<ModelPath>Gfx\HKB\Units\K_Male_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Generic_Male</SoundPack>
+		<TaticalModelScale>1.5</TaticalModelScale>
+		<Texture_Eyes>Gfx\eyes\blinks\eyeblink_m1_brwn.png</Texture_Eyes>
+		<Texture_Skin>K_Male_Balding_Texture_01.png</Texture_Skin>
+		<UnitModelType>IroneerMale</UnitModelType>
+	</UnitType>
+	<UnitType InternalName="Unit_Earth_Summoner_Ironeer">
+		<DisplayName>Earth Summoner</DisplayName>
+		<Description>These skilled mages have learned the power to summon Earth Elementals to do their fighting for them.</Description>
+		<Class>Mage</Class>
+		<RaceType>Race_Type_Ironeers</RaceType>
+		<CanBeDesigned>1</CanBeDesigned>
+		<Gender>Female</Gender>
+		<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+		<IsSovereign>0</IsSovereign>
+		<IsStartingUnitType>1</IsStartingUnitType>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<!-- For Stormworld Compatibility Only -->
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Ironeers>1</UnitStat_BG_IsRace_Ironeers>
+			<UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsFemale>1</UnitStat_BG_IsFemale>
+			<!-- End Stormworld Compatibility -->
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>Blood_Ironeer</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>EarthSummons</SelectedAbilityBonusOption>
+		<Equipment>Staff_Ice</Equipment>
+		<Equipment>RingOfTheGlacier</Equipment>
+		<Equipment>K_Female_Head_01</Equipment>
+		<Equipment>Earth_Monks_Robe</Equipment>
+		<Equipment>Wizard_Cloak_ID2</Equipment>
+		<Equipment>Kingdom_Female_Leather_Gloves_Light</Equipment>
+		<Equipment>TightBoots_Light</Equipment>
+		<EquipmentUpgradeDef>
+			<EquipmentSlot>Weapon</EquipmentSlot>
+			<EquipmentWeaponType>ColdStaff</EquipmentWeaponType>
+			<EquipmentSlot>Defense</EquipmentSlot>
+			<SelectionCriteria>MaximizeBest</SelectionCriteria>
+			<ComparisonAttribute>UnitStat_Attack_Cold</ComparisonAttribute>
+			<ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+		</EquipmentUpgradeDef>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Ironeers</Attribute>
+		</Prereq>		
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Third_Book_Of_The_Magi</Attribute>
+		</Prereq>
+		<Backstory>All who wear the colors of this army, from commander to common foot-soldier, can trace their lineage back to the great kingdoms of the pre-cataclysmic era - to Coriopolis, Zad-Zabril, and even fabled Antheros. The blood of the channlers of old runs in their veins; they know and are unafraid of using this power to aid them in combat, both as shield and sword, in defense and attack. The commander who would engage this army in battle must possess a similar familiarity with the enchanter's art.</Backstory>
+		<AnimationPack>SoldierAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>1.6</ClothMapScale>
+		<ClothPoseIndex>29</ClothPoseIndex>
+		<Color_Hair>110,60,15,255</Color_Hair>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>Gfx\Eyes\Blinks\eyeblink_f3_hazel.png</EyeTexture>
+		<InfoCardBackground>BG_Desert</InfoCardBackground>
+		<InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+		<ModelPath>Gfx\HKB\Units\K_Female_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Generic_Female</SoundPack>
+		<TaticalModelScale>1.5</TaticalModelScale>
+		<Texture_Eyes>Gfx\eyes\blinks\eyeblink_f3_hazel.png</Texture_Eyes>
+		<Texture_Skin>K_Female_Aristocrat_Texture_01.png</Texture_Skin>
+		<UnitModelType>IroneerFemale</UnitModelType>
+	</UnitType>
+	<UnitType InternalName="Unit_Fire_Summoner_Ironeer">
+		<DisplayName>Fire Summoner</DisplayName>
+		<Description>These skilled mages have learned the power to summon Fire Elementals to do their fighting for them.</Description>
+		<Class>Mage</Class>
+		<RaceType>Race_Type_Ironeers</RaceType>
+		<CanBeDesigned>1</CanBeDesigned>
+		<Gender>Male</Gender>
+		<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+		<IsSovereign>0</IsSovereign>
+		<IsStartingUnitType>1</IsStartingUnitType>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<!-- For Stormworld Compatibility Only -->
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Ironeers>1</UnitStat_BG_IsRace_Ironeers>
+			<UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsMale>1</UnitStat_BG_IsMale>
+			<!-- End Stormworld Compatibility -->
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>Blood_Ironeer</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>FireSummons</SelectedAbilityBonusOption>
+		<Equipment>Staff_Incineration</Equipment>
+		<Equipment>RingOfEmbers</Equipment>
+		<Equipment>K_Male_Head_02</Equipment>
+		<Equipment>Sovereign_Beard</Equipment>
+		<Equipment>Fire_Monks_Robe</Equipment>
+		<Equipment>Wizard_Cloak_ID2</Equipment>
+		<Equipment>Kingdom_Leather_Gloves_Light</Equipment>
+		<Equipment>Basic_Boots_ID1</Equipment>
+		<EquipmentUpgradeDef>
+			<EquipmentSlot>Weapon</EquipmentSlot>
+			<EquipmentWeaponType>FireStaff</EquipmentWeaponType>
+			<EquipmentSlot>Defense</EquipmentSlot>
+			<SelectionCriteria>MaximizeBest</SelectionCriteria>
+			<ComparisonAttribute>UnitStat_Attack_Fire</ComparisonAttribute>
+			<ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+		</EquipmentUpgradeDef>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Ironeers</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Third_Book_Of_The_Magi</Attribute>
+		</Prereq>
+		<Backstory>All who wear the colors of this army, from commander to common foot-soldier, can trace their lineage back to the great kingdoms of the pre-cataclysmic era - to Coriopolis, Zad-Zabril, and even fabled Antheros. The blood of the channlers of old runs in their veins; they know and are unafraid of using this power to aid them in combat, both as shield and sword, in defense and attack. The commander who would engage this army in battle must possess a similar familiarity with the enchanter's art.</Backstory>
+		<AnimationPack>SoldierAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>1.6</ClothMapScale>
+		<ClothPoseIndex>26</ClothPoseIndex>
+		<Color_Hair>110,60,15,255</Color_Hair>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>Gfx\Eyes\Blinks\eyeblink_m4_brwn.png</EyeTexture>
+		<InfoCardBackground>BG24_Volcano</InfoCardBackground>
+		<InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+		<ModelPath>Gfx\HKB\Units\K_Male_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Generic_Male</SoundPack>
+		<TaticalModelScale>1.5</TaticalModelScale>
+		<Texture_Eyes>Gfx\eyes\blinks\eyeblink_m4_brwn.png</Texture_Eyes>
+		<Texture_Skin>K_Male_Balding_Texture_01.png</Texture_Skin>
+		<UnitModelType>IroneerMale</UnitModelType>
+	</UnitType>
+	<UnitType InternalName="Unit_Ice_Summoner_Ironeer">
+		<DisplayName>Ice Summoner</DisplayName>
+		<Description>These skilled mages have learned the power to summon Ice Elementals to do their fighting for them.</Description>
+		<Class>Mage</Class>
+		<RaceType>Race_Type_Ironeers</RaceType>
+		<CanBeDesigned>1</CanBeDesigned>
+		<Gender>Female</Gender>
+		<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+		<IsSovereign>0</IsSovereign>
+		<IsStartingUnitType>1</IsStartingUnitType>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<!-- For Stormworld Compatibility Only -->
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Ironeers>1</UnitStat_BG_IsRace_Ironeers>
+			<UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsFemale>1</UnitStat_BG_IsFemale>
+			<!-- End Stormworld Compatibility -->
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>Blood_Ironeer</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>IceSummons</SelectedAbilityBonusOption>
+		<Equipment>Staff_Ice</Equipment>
+		<Equipment>RingOfTheGlacier</Equipment>
+		<Equipment>K_Female_Head_04</Equipment>
+		<Equipment>Water_Monks_Robe</Equipment>
+		<Equipment>Wizard_Cloak_ID2</Equipment>
+		<Equipment>Kingdom_Female_Leather_Gloves_Light</Equipment>
+		<Equipment>TightBoots_Light</Equipment>
+		<EquipmentUpgradeDef>
+			<EquipmentSlot>Weapon</EquipmentSlot>
+			<EquipmentWeaponType>ColdStaff</EquipmentWeaponType>
+			<EquipmentSlot>Defense</EquipmentSlot>
+			<SelectionCriteria>MaximizeBest</SelectionCriteria>
+			<ComparisonAttribute>UnitStat_Attack_Cold</ComparisonAttribute>
+			<ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+		</EquipmentUpgradeDef>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Ironeers</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Third_Book_Of_The_Magi</Attribute>
+		</Prereq>		
+		<Backstory>All who wear the colors of this army, from commander to common foot-soldier, can trace their lineage back to the great kingdoms of the pre-cataclysmic era - to Coriopolis, Zad-Zabril, and even fabled Antheros. The blood of the channlers of old runs in their veins; they know and are unafraid of using this power to aid them in combat, both as shield and sword, in defense and attack. The commander who would engage this army in battle must possess a similar familiarity with the enchanter's art.</Backstory>
+		<AnimationPack>SoldierAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>1.6</ClothMapScale>
+		<ClothPoseIndex>5</ClothPoseIndex>
+		<Color_Hair>110,60,15,255</Color_Hair>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>Gfx\Eyes\Blinks\eyeblink_f3_grn.png</EyeTexture>
+		<InfoCardBackground>BG_Artic</InfoCardBackground>
+		<InfoCardBackgroundFlipped>1</InfoCardBackgroundFlipped>
+		<ModelPath>Gfx\HKB\Units\K_Female_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Generic_Female</SoundPack>
+		<TaticalModelScale>1.5</TaticalModelScale>
+		<Texture_Eyes>Gfx\eyes\blinks\eyeblink_f3_grn.png</Texture_Eyes>
+		<Texture_Skin>K_Female_Thinbrows_Texture_01.png</Texture_Skin>
+		<UnitModelType>IroneerFemale</UnitModelType>
+	</UnitType>
+	<!-- Amarian -->
+	<UnitType InternalName="Unit_Air_Summoner_Amarian">
+		<DisplayName>Air Summoner</DisplayName>
+		<Description>These skilled mages have learned the power to summon Air Elementals to do their fighting for them.</Description>
+		<Class>Mage</Class>
+		<RaceType>Race_Type_Amarians</RaceType>
+		<CanBeDesigned>1</CanBeDesigned>
+		<Gender>Male</Gender>
+		<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+		<IsSovereign>0</IsSovereign>
+		<IsStartingUnitType>1</IsStartingUnitType>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<!-- For Stormworld Compatibility Only -->
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Amarians>1</UnitStat_BG_IsRace_Amarians>
+			<UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsMale>1</UnitStat_BG_IsMale>
+			<!-- End Stormworld Compatibility -->
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>Blood_Amarian</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>AirSummons</SelectedAbilityBonusOption>
+		<Equipment>Staff_Incineration</Equipment>
+		<Equipment>RingOfEmbers</Equipment>		
+		<Equipment>K_Male_Head_02</Equipment>
+		<Equipment>Kraxis_Beard</Equipment>
+		<Equipment>Air_Monks_Robe</Equipment>
+		<Equipment>Wizard_Cloak_ID2</Equipment>
+		<Equipment>Kingdom_Leather_Gloves_Light</Equipment>
+		<Equipment>Basic_Boots_ID1</Equipment>
+		<EquipmentUpgradeDef>
+			<EquipmentSlot>Weapon</EquipmentSlot>
+			<EquipmentWeaponType>FireStaff</EquipmentWeaponType>
+			<EquipmentSlot>Defense</EquipmentSlot>
+			<SelectionCriteria>MaximizeBest</SelectionCriteria>
+			<ComparisonAttribute>UnitStat_Attack_Lightning</ComparisonAttribute>
+			<ComparisonAttribute>UnitStat_Attack_Fire</ComparisonAttribute>
+			<ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+		</EquipmentUpgradeDef>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Amarians</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Third_Book_Of_The_Magi</Attribute>
+		</Prereq>
+		<Backstory>All who wear the colors of this army, from commander to common foot-soldier, can trace their lineage back to the great kingdoms of the pre-cataclysmic era - to Coriopolis, Zad-Zabril, and even fabled Antheros. The blood of the channlers of old runs in their veins; they know and are unafraid of using this power to aid them in combat, both as shield and sword, in defense and attack. The commander who would engage this army in battle must possess a similar familiarity with the enchanter's art.</Backstory>
+		<AnimationPack>SoldierAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>1.6</ClothMapScale>
+		<ClothPoseIndex>26</ClothPoseIndex>
+		<Color_Hair>200,195,195,255</Color_Hair>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>Gfx\Eyes\Blinks\eyeblink_m1_brwn.png</EyeTexture>
+		<InfoCardBackground>BG_River</InfoCardBackground>
+		<InfoCardBackgroundFlipped>1</InfoCardBackgroundFlipped>
+		<ModelPath>Gfx\HKB\Units\K_Male_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Generic_Male</SoundPack>
+		<TaticalModelScale>1.5</TaticalModelScale>
+		<Texture_Eyes>Gfx\eyes\blinks\eyeblink_m1_brwn.png</Texture_Eyes>
+		<Texture_Skin>K_Male_Balding_Texture_01.png</Texture_Skin>
+		<UnitModelType>AmarianMale</UnitModelType>
+	</UnitType>
+	<UnitType InternalName="Unit_Earth_Summoner_Amarian">
+		<DisplayName>Earth Summoner</DisplayName>
+		<Description>These skilled mages have learned the power to summon Earth Elementals to do their fighting for them.</Description>
+		<Class>Mage</Class>
+		<RaceType>Race_Type_Amarians</RaceType>
+		<CanBeDesigned>1</CanBeDesigned>
+		<Gender>Female</Gender>
+		<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+		<IsSovereign>0</IsSovereign>
+		<IsStartingUnitType>1</IsStartingUnitType>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<!-- For Stormworld Compatibility Only -->
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Amarians>1</UnitStat_BG_IsRace_Amarians>
+			<UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsFemale>1</UnitStat_BG_IsFemale>
+			<!-- End Stormworld Compatibility -->
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>Blood_Amarian</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>EarthSummons</SelectedAbilityBonusOption>
+		<Equipment>Staff_Ice</Equipment>
+		<Equipment>RingOfTheGlacier</Equipment>
+		<Equipment>K_Female_Head_01</Equipment>
+		<Equipment>Earth_Monks_Robe</Equipment>
+		<Equipment>Wizard_Cloak_ID2</Equipment>
+		<Equipment>Kingdom_Female_Leather_Gloves_Light</Equipment>
+		<Equipment>TightBoots_Light</Equipment>
+		<EquipmentUpgradeDef>
+			<EquipmentSlot>Weapon</EquipmentSlot>
+			<EquipmentWeaponType>ColdStaff</EquipmentWeaponType>
+			<EquipmentSlot>Defense</EquipmentSlot>
+			<SelectionCriteria>MaximizeBest</SelectionCriteria>
+			<ComparisonAttribute>UnitStat_Attack_Cold</ComparisonAttribute>
+			<ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+		</EquipmentUpgradeDef>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Amarians</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Third_Book_Of_The_Magi</Attribute>
+		</Prereq>
+		<Backstory>All who wear the colors of this army, from commander to common foot-soldier, can trace their lineage back to the great kingdoms of the pre-cataclysmic era - to Coriopolis, Zad-Zabril, and even fabled Antheros. The blood of the channlers of old runs in their veins; they know and are unafraid of using this power to aid them in combat, both as shield and sword, in defense and attack. The commander who would engage this army in battle must possess a similar familiarity with the enchanter's art.</Backstory>
+		<AnimationPack>SoldierAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>1.6</ClothMapScale>
+		<ClothPoseIndex>29</ClothPoseIndex>
+		<Color_Hair>200,195,195,255</Color_Hair>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>Gfx\Eyes\Blinks\eyeblink_f1_grn.png</EyeTexture>
+		<InfoCardBackground>BG_Desert</InfoCardBackground>
+		<InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+		<ModelPath>Gfx\HKB\Units\K_Female_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Generic_Female</SoundPack>
+		<TaticalModelScale>1.5</TaticalModelScale>
+		<Texture_Eyes>Gfx\eyes\blinks\eyeblink_f1_grn.png</Texture_Eyes>
+		<Texture_Skin>K_Female_Aristocrat_Texture_01.png</Texture_Skin>
+		<UnitModelType>AmarianFemale</UnitModelType>
+	</UnitType>
+	<UnitType InternalName="Unit_Fire_Summoner_Amarian">
+		<DisplayName>Fire Summoner</DisplayName>
+		<Description>These skilled mages have learned the power to summon Fire Elementals to do their fighting for them.</Description>
+		<Class>Mage</Class>
+		<RaceType>Race_Type_Amarians</RaceType>
+		<CanBeDesigned>1</CanBeDesigned>
+		<Gender>Male</Gender>
+		<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+		<IsSovereign>0</IsSovereign>
+		<IsStartingUnitType>1</IsStartingUnitType>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<!-- For Stormworld Compatibility Only -->
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Amarians>1</UnitStat_BG_IsRace_Amarians>
+			<UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsMale>1</UnitStat_BG_IsMale>
+			<!-- End Stormworld Compatibility -->
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>Blood_Amarian</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>FireSummons</SelectedAbilityBonusOption>
+		<Equipment>Staff_Incineration</Equipment>
+		<Equipment>RingOfEmbers</Equipment>
+		<Equipment>K_Male_Head_02</Equipment>
+		<Equipment>Sovereign_Beard</Equipment>
+		<Equipment>Fire_Monks_Robe</Equipment>
+		<Equipment>Wizard_Cloak_ID2</Equipment>
+		<Equipment>Kingdom_Leather_Gloves_Light</Equipment>
+		<Equipment>Basic_Boots_ID1</Equipment>
+		<EquipmentUpgradeDef>
+			<EquipmentSlot>Weapon</EquipmentSlot>
+			<EquipmentWeaponType>FireStaff</EquipmentWeaponType>
+			<EquipmentSlot>Defense</EquipmentSlot>
+			<SelectionCriteria>MaximizeBest</SelectionCriteria>
+			<ComparisonAttribute>UnitStat_Attack_Fire</ComparisonAttribute>
+			<ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+		</EquipmentUpgradeDef>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Amarians</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Third_Book_Of_The_Magi</Attribute>
+		</Prereq>
+		<Backstory>All who wear the colors of this army, from commander to common foot-soldier, can trace their lineage back to the great kingdoms of the pre-cataclysmic era - to Coriopolis, Zad-Zabril, and even fabled Antheros. The blood of the channlers of old runs in their veins; they know and are unafraid of using this power to aid them in combat, both as shield and sword, in defense and attack. The commander who would engage this army in battle must possess a similar familiarity with the enchanter's art.</Backstory>
+		<AnimationPack>SoldierAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>1.6</ClothMapScale>
+		<ClothPoseIndex>26</ClothPoseIndex>
+		<Color_Hair>200,195,195,255</Color_Hair>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>Gfx\Eyes\Blinks\eyeblink_m4_brwn.png</EyeTexture>
+		<InfoCardBackground>BG24_Volcano</InfoCardBackground>
+		<InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+		<ModelPath>Gfx\HKB\Units\K_Male_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Generic_Male</SoundPack>
+		<TaticalModelScale>1.5</TaticalModelScale>
+		<Texture_Eyes>Gfx\eyes\blinks\eyeblink_m4_brwn.png</Texture_Eyes>
+		<Texture_Skin>K_Male_Balding_Texture_01.png</Texture_Skin>
+		<UnitModelType>AmarianMale</UnitModelType>
+	</UnitType>
+	<UnitType InternalName="Unit_Ice_Summoner_Amarian">
+		<DisplayName>Ice Summoner</DisplayName>
+		<Description>These skilled mages have learned the power to summon Ice Elementals to do their fighting for them.</Description>
+		<Class>Mage</Class>
+		<RaceType>Race_Type_Amarians</RaceType>
+		<CanBeDesigned>1</CanBeDesigned>
+		<Gender>Female</Gender>
+		<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+		<IsSovereign>0</IsSovereign>
+		<IsStartingUnitType>1</IsStartingUnitType>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<!-- For Stormworld Compatibility Only -->
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Amarians>1</UnitStat_BG_IsRace_Amarians>
+			<UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsFemale>1</UnitStat_BG_IsFemale>
+			<!-- End Stormworld Compatibility -->
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>Blood_Amarian</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>IceSummons</SelectedAbilityBonusOption>
+		<Equipment>Staff_Ice</Equipment>
+		<Equipment>RingOfTheGlacier</Equipment>
+		<Equipment>K_Female_Head_04</Equipment>
+		<Equipment>Water_Monks_Robe</Equipment>
+		<Equipment>Wizard_Cloak_ID2</Equipment>
+		<Equipment>Kingdom_Female_Leather_Gloves_Light</Equipment>
+		<Equipment>TightBoots_Light</Equipment>
+		<EquipmentUpgradeDef>
+			<EquipmentSlot>Weapon</EquipmentSlot>
+			<EquipmentWeaponType>ColdStaff</EquipmentWeaponType>
+			<EquipmentSlot>Defense</EquipmentSlot>
+			<SelectionCriteria>MaximizeBest</SelectionCriteria>
+			<ComparisonAttribute>UnitStat_Attack_Cold</ComparisonAttribute>
+			<ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+		</EquipmentUpgradeDef>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Amarians</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Third_Book_Of_The_Magi</Attribute>
+		</Prereq>		
+		<Backstory>All who wear the colors of this army, from commander to common foot-soldier, can trace their lineage back to the great kingdoms of the pre-cataclysmic era - to Coriopolis, Zad-Zabril, and even fabled Antheros. The blood of the channlers of old runs in their veins; they know and are unafraid of using this power to aid them in combat, both as shield and sword, in defense and attack. The commander who would engage this army in battle must possess a similar familiarity with the enchanter's art.</Backstory>
+		<AnimationPack>SoldierAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>1.6</ClothMapScale>
+		<ClothPoseIndex>5</ClothPoseIndex>
+		<Color_Hair>200,195,195,255</Color_Hair>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>Gfx\Eyes\Blinks\eyeblink_f3_grn.png</EyeTexture>
+		<InfoCardBackground>BG_Artic</InfoCardBackground>
+		<InfoCardBackgroundFlipped>1</InfoCardBackgroundFlipped>
+		<ModelPath>Gfx\HKB\Units\K_Female_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Generic_Female</SoundPack>
+		<TaticalModelScale>1.5</TaticalModelScale>
+		<Texture_Eyes>Gfx\eyes\blinks\eyeblink_f3_grn.png</Texture_Eyes>
+		<Texture_Skin>K_Female_Thinbrows_Texture_01.png</Texture_Skin>
+		<UnitModelType>AmarianFemale</UnitModelType>
+	</UnitType>
+	<!-- Tarthan -->
+	<UnitType InternalName="Unit_Air_Summoner_Tarthan">
+		<DisplayName>Air Summoner</DisplayName>
+		<Description>These skilled mages have learned the power to summon Air Elementals to do their fighting for them.</Description>
+		<Class>Mage</Class>
+		<RaceType>Race_Type_Tarthans</RaceType>
+		<CanBeDesigned>1</CanBeDesigned>
+		<Gender>Male</Gender>
+		<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+		<IsSovereign>0</IsSovereign>
+		<IsStartingUnitType>1</IsStartingUnitType>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<!-- For Stormworld Compatibility Only -->
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Tarthan>1</UnitStat_BG_IsRace_Tarthan>
+			<UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsMale>1</UnitStat_BG_IsMale>
+			<!-- End Stormworld Compatibility -->
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>Blood_Tarthan</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>AirSummons</SelectedAbilityBonusOption>
+		<Equipment>Staff_Incineration</Equipment>
+		<Equipment>RingOfEmbers</Equipment>		
+		<Equipment>K_Male_Head_02</Equipment>
+		<Equipment>Kraxis_Beard</Equipment>
+		<Equipment>Air_Monks_Robe</Equipment>
+		<Equipment>Wizard_Cloak_ID2</Equipment>
+		<Equipment>Kingdom_Leather_Gloves_Light</Equipment>
+		<Equipment>Basic_Boots_ID1</Equipment>
+		<EquipmentUpgradeDef>
+			<EquipmentSlot>Weapon</EquipmentSlot>
+			<EquipmentWeaponType>FireStaff</EquipmentWeaponType>
+			<EquipmentSlot>Defense</EquipmentSlot>
+			<SelectionCriteria>MaximizeSum</SelectionCriteria>
+			<ComparisonAttribute>UnitStat_Attack_Lightning</ComparisonAttribute>
+			<ComparisonAttribute>UnitStat_Attack_Fire</ComparisonAttribute>
+			<ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+		</EquipmentUpgradeDef>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Tarthans</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Third_Book_Of_The_Magi</Attribute>
+		</Prereq>
+		<Backstory>All who wear the colors of this army, from commander to common foot-soldier, can trace their lineage back to the great kingdoms of the pre-cataclysmic era - to Coriopolis, Zad-Zabril, and even fabled Antheros. The blood of the channlers of old runs in their veins; they know and are unafraid of using this power to aid them in combat, both as shield and sword, in defense and attack. The commander who would engage this army in battle must possess a similar familiarity with the enchanter's art.</Backstory>
+		<AnimationPack>SoldierAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>1.6</ClothMapScale>
+		<ClothPoseIndex>26</ClothPoseIndex>
+		<Color_Hair>60,35,25,255</Color_Hair>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>Gfx\Eyes\Blinks\eyeblink_m1_brwn.png</EyeTexture>
+		<InfoCardBackground>BG_River</InfoCardBackground>
+		<InfoCardBackgroundFlipped>1</InfoCardBackgroundFlipped>
+		<ModelPath>Gfx\HKB\Units\K_Male_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Generic_Male</SoundPack>
+		<TaticalModelScale>1.5</TaticalModelScale>
+		<Texture_Eyes>Gfx\eyes\blinks\eyeblink_m1_brwn.png</Texture_Eyes>
+		<Texture_Skin>K_Male_Balding_Texture_01.png</Texture_Skin>
+		<UnitModelType>TarthanMale</UnitModelType>
+	</UnitType>
+	<UnitType InternalName="Unit_Earth_Summoner_Tarthan">
+		<DisplayName>Earth Summoner</DisplayName>
+		<Description>These skilled mages have learned the power to summon Earth Elementals to do their fighting for them.</Description>
+		<Class>Mage</Class>
+		<RaceType>Race_Type_Tarthans</RaceType>
+		<CanBeDesigned>1</CanBeDesigned>
+		<Gender>Female</Gender>
+		<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+		<IsSovereign>0</IsSovereign>
+		<IsStartingUnitType>1</IsStartingUnitType>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<!-- For Stormworld Compatibility Only -->
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Tarthan>1</UnitStat_BG_IsRace_Tarthan>
+			<UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsFemale>1</UnitStat_BG_IsFemale>
+			<!-- End Stormworld Compatibility -->
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>Blood_Tarthan</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>EarthSummons</SelectedAbilityBonusOption>
+		<Equipment>Staff_Ice</Equipment>
+		<Equipment>RingOfTheGlacier</Equipment>
+		<Equipment>K_Female_Head_01</Equipment>
+		<Equipment>Earth_Monks_Robe</Equipment>
+		<Equipment>Wizard_Cloak_ID2</Equipment>
+		<Equipment>Kingdom_Female_Leather_Gloves_Light</Equipment>
+		<Equipment>TightBoots_Light</Equipment>
+		<EquipmentUpgradeDef>
+			<EquipmentSlot>Weapon</EquipmentSlot>
+			<EquipmentWeaponType>ColdStaff</EquipmentWeaponType>
+			<EquipmentSlot>Defense</EquipmentSlot>
+			<SelectionCriteria>MaximizeBest</SelectionCriteria>
+			<ComparisonAttribute>UnitStat_Attack_Cold</ComparisonAttribute>
+			<ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+		</EquipmentUpgradeDef>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Tarthans</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Third_Book_Of_The_Magi</Attribute>
+		</Prereq>
+		<Backstory>All who wear the colors of this army, from commander to common foot-soldier, can trace their lineage back to the great kingdoms of the pre-cataclysmic era - to Coriopolis, Zad-Zabril, and even fabled Antheros. The blood of the channlers of old runs in their veins; they know and are unafraid of using this power to aid them in combat, both as shield and sword, in defense and attack. The commander who would engage this army in battle must possess a similar familiarity with the enchanter's art.</Backstory>
+		<AnimationPack>SoldierAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>1.6</ClothMapScale>
+		<ClothPoseIndex>29</ClothPoseIndex>
+		<Color_Hair>65,35,25,255</Color_Hair>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>Gfx\Eyes\Blinks\eyeblink_f1_grn.png</EyeTexture>
+		<InfoCardBackground>BG_Desert</InfoCardBackground>
+		<InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+		<ModelPath>Gfx\HKB\Units\K_Female_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Generic_Female</SoundPack>
+		<TaticalModelScale>1.5</TaticalModelScale>
+		<Texture_Eyes>Gfx\eyes\blinks\eyeblink_f1_grn.png</Texture_Eyes>
+		<Texture_Skin>K_Female_Aristocrat_Texture_01.png</Texture_Skin>
+		<UnitModelType>TarthanFemale</UnitModelType>
+	</UnitType>
+	<UnitType InternalName="Unit_Fire_Summoner_Tarthan">
+		<DisplayName>Fire Summoner</DisplayName>
+		<Description>These skilled mages have learned the power to summon Fire Elementals to do their fighting for them.</Description>
+		<Class>Mage</Class>
+		<RaceType>Race_Type_Tarthans</RaceType>
+		<CanBeDesigned>1</CanBeDesigned>
+		<Gender>Male</Gender>
+		<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+		<IsSovereign>0</IsSovereign>
+		<IsStartingUnitType>1</IsStartingUnitType>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<!-- For Stormworld Compatibility Only -->
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Tarthan>1</UnitStat_BG_IsRace_Tarthan>
+			<UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsMale>1</UnitStat_BG_IsMale>
+			<!-- End Stormworld Compatibility -->
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>Blood_Tarthan</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>FireSummons</SelectedAbilityBonusOption>
+		<Equipment>Staff_Incineration</Equipment>
+		<Equipment>RingOfEmbers</Equipment>
+		<Equipment>K_Male_Head_02</Equipment>
+		<Equipment>Sovereign_Beard</Equipment>
+		<Equipment>Fire_Monks_Robe</Equipment>
+		<Equipment>Wizard_Cloak_ID2</Equipment>
+		<Equipment>Kingdom_Leather_Gloves_Light</Equipment>
+		<Equipment>Basic_Boots_ID1</Equipment>
+		<EquipmentUpgradeDef>
+			<EquipmentSlot>Weapon</EquipmentSlot>
+			<EquipmentWeaponType>FireStaff</EquipmentWeaponType>
+			<EquipmentSlot>Defense</EquipmentSlot>
+			<SelectionCriteria>MaximizeBest</SelectionCriteria>
+			<ComparisonAttribute>UnitStat_Attack_Fire</ComparisonAttribute>
+			<ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+		</EquipmentUpgradeDef>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Tarthans</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Third_Book_Of_The_Magi</Attribute>
+		</Prereq>
+		<Backstory>All who wear the colors of this army, from commander to common foot-soldier, can trace their lineage back to the great kingdoms of the pre-cataclysmic era - to Coriopolis, Zad-Zabril, and even fabled Antheros. The blood of the channlers of old runs in their veins; they know and are unafraid of using this power to aid them in combat, both as shield and sword, in defense and attack. The commander who would engage this army in battle must possess a similar familiarity with the enchanter's art.</Backstory>
+		<AnimationPack>SoldierAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>1.6</ClothMapScale>
+		<ClothPoseIndex>26</ClothPoseIndex>
+		<Color_Hair>65,35,25,255</Color_Hair>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>Gfx\Eyes\Blinks\eyeblink_m4_brwn.png</EyeTexture>
+		<InfoCardBackground>BG24_Volcano</InfoCardBackground>
+		<InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+		<ModelPath>Gfx\HKB\Units\K_Male_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Generic_Male</SoundPack>
+		<TaticalModelScale>1.5</TaticalModelScale>
+		<Texture_Eyes>Gfx\eyes\blinks\eyeblink_m4_brwn.png</Texture_Eyes>
+		<Texture_Skin>K_Male_Balding_Texture_01.png</Texture_Skin>
+		<UnitModelType>TarthanMale</UnitModelType>
+	</UnitType>
+	<UnitType InternalName="Unit_Ice_Summoner_Tarthan">
+		<DisplayName>Ice Summoner</DisplayName>
+		<Description>These skilled mages have learned the power to summon Ice Elementals to do their fighting for them.</Description>
+		<Class>Mage</Class>
+		<RaceType>Race_Type_Tarthans</RaceType>
+		<CanBeDesigned>1</CanBeDesigned>
+		<Gender>Female</Gender>
+		<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+		<IsSovereign>0</IsSovereign>
+		<IsStartingUnitType>1</IsStartingUnitType>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<!-- For Stormworld Compatibility Only -->
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Tarthan>1</UnitStat_BG_IsRace_Tarthan>
+			<UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsFemale>1</UnitStat_BG_IsFemale>
+			<!-- End Stormworld Compatibility -->
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>Blood_Tarthan</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>IceSummons</SelectedAbilityBonusOption>
+		<Equipment>Staff_Ice</Equipment>
+		<Equipment>RingOfTheGlacier</Equipment>
+		<Equipment>K_Female_Head_04</Equipment>
+		<Equipment>Water_Monks_Robe</Equipment>
+		<Equipment>Wizard_Cloak_ID2</Equipment>
+		<Equipment>Kingdom_Female_Leather_Gloves_Light</Equipment>
+		<Equipment>TightBoots_Light</Equipment>
+		<EquipmentUpgradeDef>
+			<EquipmentSlot>Weapon</EquipmentSlot>
+			<EquipmentWeaponType>ColdStaff</EquipmentWeaponType>
+			<EquipmentSlot>Defense</EquipmentSlot>
+			<SelectionCriteria>MaximizeBest</SelectionCriteria>
+			<ComparisonAttribute>UnitStat_Attack_Cold</ComparisonAttribute>
+			<ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+		</EquipmentUpgradeDef>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Tarthans</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Third_Book_Of_The_Magi</Attribute>
+		</Prereq>
+		<Backstory>All who wear the colors of this army, from commander to common foot-soldier, can trace their lineage back to the great kingdoms of the pre-cataclysmic era - to Coriopolis, Zad-Zabril, and even fabled Antheros. The blood of the channlers of old runs in their veins; they know and are unafraid of using this power to aid them in combat, both as shield and sword, in defense and attack. The commander who would engage this army in battle must possess a similar familiarity with the enchanter's art.</Backstory>
+		<AnimationPack>SoldierAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>1.6</ClothMapScale>
+		<ClothPoseIndex>5</ClothPoseIndex>
+		<Color_Hair>65,35,25,255</Color_Hair>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>Gfx\Eyes\Blinks\eyeblink_f3_grn.png</EyeTexture>
+		<InfoCardBackground>BG_Artic</InfoCardBackground>
+		<InfoCardBackgroundFlipped>1</InfoCardBackgroundFlipped>
+		<ModelPath>Gfx\HKB\Units\K_Female_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Generic_Female</SoundPack>
+		<TaticalModelScale>1.5</TaticalModelScale>
+		<Texture_Eyes>Gfx\eyes\blinks\eyeblink_f3_grn.png</Texture_Eyes>
+		<Texture_Skin>K_Female_Thinbrows_Texture_01.png</Texture_Skin>
+		<UnitModelType>TarthanFemale</UnitModelType>
+	</UnitType>
+	<!-- Krax -->
+	<UnitType InternalName="Unit_Air_Summoner_Krax">
+		<DisplayName>Air Summoner</DisplayName>
+		<Description>These skilled mages have learned the power to summon Air Elementals to do their fighting for them.</Description>
+		<Class>Mage</Class>
+		<RaceType>Race_Type_Krax</RaceType>
+		<CanBeDesigned>1</CanBeDesigned>
+		<Gender>Male</Gender>
+		<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+		<IsSovereign>0</IsSovereign>
+		<IsStartingUnitType>1</IsStartingUnitType>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<!-- For Stormworld Compatibility Only -->
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Krax>1</UnitStat_BG_IsRace_Krax>
+			<UnitStat_BG_IsEmpire>1</UnitStat_BG_IsEmpire>
+			<UnitStat_BG_IsMale>1</UnitStat_BG_IsMale>
+			<!-- End Stormworld Compatibility -->
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>Blood_Krax</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>AirSummons</SelectedAbilityBonusOption>
+		<Equipment>Staff_Incineration</Equipment>
+		<Equipment>RingOfEmbers</Equipment>		
+		<Equipment>K_Male_Head_02</Equipment>
+		<Equipment>Kraxis_Beard</Equipment>
+		<Equipment>Air_Monks_Robe</Equipment>
+		<Equipment>Wizard_Cloak_ID2</Equipment>
+		<Equipment>Kingdom_Leather_Gloves_Light</Equipment>
+		<Equipment>Basic_Boots_ID1</Equipment>
+		<EquipmentUpgradeDef>
+			<EquipmentSlot>Weapon</EquipmentSlot>
+			<EquipmentWeaponType>FireStaff</EquipmentWeaponType>
+			<EquipmentSlot>Defense</EquipmentSlot>
+			<SelectionCriteria>MaximizeBest</SelectionCriteria>
+			<ComparisonAttribute>UnitStat_Attack_Lightning</ComparisonAttribute>
+			<ComparisonAttribute>UnitStat_Attack_Fire</ComparisonAttribute>
+			<ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+		</EquipmentUpgradeDef>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Krax</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Third_Book_Of_The_Magi</Attribute>
+		</Prereq>
+		<Backstory>All who wear the colors of this army, from commander to common foot-soldier, can trace their lineage back to the great kingdoms of the pre-cataclysmic era - to Coriopolis, Zad-Zabril, and even fabled Antheros. The blood of the channlers of old runs in their veins; they know and are unafraid of using this power to aid them in combat, both as shield and sword, in defense and attack. The commander who would engage this army in battle must possess a similar familiarity with the enchanter's art.</Backstory>
+		<AnimationPack>SoldierAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>1.6</ClothMapScale>
+		<ClothPoseIndex>26</ClothPoseIndex>
+		<Color_Hair>60,50,65,255</Color_Hair>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>Gfx\Eyes\Blinks\eyeblink_m1_brwn.png</EyeTexture>
+		<InfoCardBackground>BG_River</InfoCardBackground>
+		<InfoCardBackgroundFlipped>1</InfoCardBackgroundFlipped>
+		<ModelPath>Gfx\HKB\Units\K_Male_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Generic_Male</SoundPack>
+		<TaticalModelScale>1.5</TaticalModelScale>
+		<Texture_Eyes>Gfx\eyes\blinks\eyeblink_m1_brwn.png</Texture_Eyes>
+		<Texture_Skin>K_Male_Groomed_Texture_01.png</Texture_Skin>
+		<UnitModelType>EmpireMale</UnitModelType>
+	</UnitType>
+	<UnitType InternalName="Unit_Earth_Summoner_Krax">
+		<DisplayName>Earth Summoner</DisplayName>
+		<Description>These skilled mages have learned the power to summon Earth Elementals to do their fighting for them.</Description>
+		<Class>Mage</Class>
+		<RaceType>Race_Type_Krax</RaceType>
+		<CanBeDesigned>1</CanBeDesigned>
+		<Gender>Female</Gender>
+		<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+		<IsSovereign>0</IsSovereign>
+		<IsStartingUnitType>1</IsStartingUnitType>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<!-- For Stormworld Compatibility Only -->
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Krax>1</UnitStat_BG_IsRace_Krax>
+			<UnitStat_BG_IsEmpire>1</UnitStat_BG_IsEmpire>
+			<UnitStat_BG_IsFemale>1</UnitStat_BG_IsFemale>
+			<!-- End Stormworld Compatibility -->
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>Blood_Krax</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>EarthSummons</SelectedAbilityBonusOption>
+		<Equipment>Staff_Ice</Equipment>
+		<Equipment>RingOfTheGlacier</Equipment>
+		<Equipment>K_Female_Head_01</Equipment>
+		<Equipment>Earth_Monks_Robe</Equipment>
+		<Equipment>Wizard_Cloak_ID2</Equipment>
+		<Equipment>Kingdom_Female_Leather_Gloves_Light</Equipment>
+		<Equipment>TightBoots_Light</Equipment>
+		<EquipmentUpgradeDef>
+			<EquipmentSlot>Weapon</EquipmentSlot>
+			<EquipmentWeaponType>ColdStaff</EquipmentWeaponType>
+			<EquipmentSlot>Defense</EquipmentSlot>
+			<SelectionCriteria>MaximizeBest</SelectionCriteria>
+			<ComparisonAttribute>UnitStat_Attack_Cold</ComparisonAttribute>
+			<ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+		</EquipmentUpgradeDef>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Krax</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Third_Book_Of_The_Magi</Attribute>
+		</Prereq>
+		<Backstory>All who wear the colors of this army, from commander to common foot-soldier, can trace their lineage back to the great kingdoms of the pre-cataclysmic era - to Coriopolis, Zad-Zabril, and even fabled Antheros. The blood of the channlers of old runs in their veins; they know and are unafraid of using this power to aid them in combat, both as shield and sword, in defense and attack. The commander who would engage this army in battle must possess a similar familiarity with the enchanter's art.</Backstory>
+		<AnimationPack>SoldierAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>1.6</ClothMapScale>
+		<ClothPoseIndex>29</ClothPoseIndex>
+		<Color_Hair>60,50,65,255</Color_Hair>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>Gfx\Eyes\Blinks\eyeblink_f1_grn.png</EyeTexture>
+		<InfoCardBackground>BG_Desert</InfoCardBackground>
+		<InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+		<ModelPath>Gfx\HKB\Units\K_Female_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Generic_Female</SoundPack>
+		<TaticalModelScale>1.5</TaticalModelScale>
+		<Texture_Eyes>Gfx\eyes\blinks\eyeblink_f1_grn.png</Texture_Eyes>
+		<Texture_Skin>K_Female_Aristocrat_Texture_01.png</Texture_Skin>
+		<UnitModelType>EmpireFemale</UnitModelType>
+	</UnitType>
+	<UnitType InternalName="Unit_Fire_Summoner_Krax">
+		<DisplayName>Fire Summoner</DisplayName>
+		<Description>These skilled mages have learned the power to summon Fire Elementals to do their fighting for them.</Description>
+		<Class>Mage</Class>
+		<RaceType>Race_Type_Krax</RaceType>
+		<CanBeDesigned>1</CanBeDesigned>
+		<Gender>Male</Gender>
+		<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+		<IsSovereign>0</IsSovereign>
+		<IsStartingUnitType>1</IsStartingUnitType>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<!-- For Stormworld Compatibility Only -->
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Krax>1</UnitStat_BG_IsRace_Krax>
+			<UnitStat_BG_IsEmpire>1</UnitStat_BG_IsEmpire>
+			<UnitStat_BG_IsMale>1</UnitStat_BG_IsMale>
+			<!-- End Stormworld Compatibility -->
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>Blood_Krax</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>FireSummons</SelectedAbilityBonusOption>
+		<Equipment>Staff_Incineration</Equipment>
+		<Equipment>RingOfEmbers</Equipment>
+		<Equipment>K_Male_Head_02</Equipment>
+		<Equipment>Sovereign_Beard</Equipment>
+		<Equipment>Fire_Monks_Robe</Equipment>
+		<Equipment>Wizard_Cloak_ID2</Equipment>
+		<Equipment>Kingdom_Leather_Gloves_Light</Equipment>
+		<Equipment>Basic_Boots_ID1</Equipment>
+		<EquipmentUpgradeDef>
+			<EquipmentSlot>Weapon</EquipmentSlot>
+			<EquipmentWeaponType>FireStaff</EquipmentWeaponType>
+			<EquipmentSlot>Defense</EquipmentSlot>
+			<SelectionCriteria>MaximizeBest</SelectionCriteria>
+			<ComparisonAttribute>UnitStat_Attack_Fire</ComparisonAttribute>
+			<ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+		</EquipmentUpgradeDef>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Krax</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Third_Book_Of_The_Magi</Attribute>
+		</Prereq>
+		<Backstory>All who wear the colors of this army, from commander to common foot-soldier, can trace their lineage back to the great kingdoms of the pre-cataclysmic era - to Coriopolis, Zad-Zabril, and even fabled Antheros. The blood of the channlers of old runs in their veins; they know and are unafraid of using this power to aid them in combat, both as shield and sword, in defense and attack. The commander who would engage this army in battle must possess a similar familiarity with the enchanter's art.</Backstory>
+		<AnimationPack>SoldierAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>1.6</ClothMapScale>
+		<ClothPoseIndex>26</ClothPoseIndex>
+		<Color_Hair>60,50,65,255</Color_Hair>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>Gfx\Eyes\Blinks\eyeblink_m4_brwn.png</EyeTexture>
+		<InfoCardBackground>BG24_Volcano</InfoCardBackground>
+		<InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+		<ModelPath>Gfx\HKB\Units\K_Male_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Generic_Male</SoundPack>
+		<TaticalModelScale>1.5</TaticalModelScale>
+		<Texture_Eyes>Gfx\eyes\blinks\eyeblink_m4_brwn.png</Texture_Eyes>
+		<Texture_Skin>K_Male_Balding_Texture_01.png</Texture_Skin>
+		<UnitModelType>EmpireMale</UnitModelType>
+	</UnitType>
+	<UnitType InternalName="Unit_Ice_Summoner_Krax">
+		<DisplayName>Ice Summoner</DisplayName>
+		<Description>These skilled mages have learned the power to summon Ice Elementals to do their fighting for them.</Description>
+		<Class>Mage</Class>
+		<RaceType>Race_Type_Krax</RaceType>
+		<CanBeDesigned>1</CanBeDesigned>
+		<Gender>Female</Gender>
+		<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+		<IsSovereign>0</IsSovereign>
+		<IsStartingUnitType>1</IsStartingUnitType>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<!-- For Stormworld Compatibility Only -->
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Krax>1</UnitStat_BG_IsRace_Krax>
+			<UnitStat_BG_IsEmpire>1</UnitStat_BG_IsEmpire>
+			<UnitStat_BG_IsFemale>1</UnitStat_BG_IsFemale>
+			<!-- End Stormworld Compatibility -->
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>Blood_Krax</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>IceSummons</SelectedAbilityBonusOption>
+		<Equipment>Staff_Ice</Equipment>
+		<Equipment>RingOfTheGlacier</Equipment>
+		<Equipment>K_Female_Head_04</Equipment>
+		<Equipment>Water_Monks_Robe</Equipment>
+		<Equipment>Wizard_Cloak_ID2</Equipment>
+		<Equipment>Kingdom_Female_Leather_Gloves_Light</Equipment>
+		<Equipment>TightBoots_Light</Equipment>
+		<EquipmentUpgradeDef>
+			<EquipmentSlot>Weapon</EquipmentSlot>
+			<EquipmentWeaponType>ColdStaff</EquipmentWeaponType>
+			<EquipmentSlot>Defense</EquipmentSlot>
+			<SelectionCriteria>MaximizeBest</SelectionCriteria>
+			<ComparisonAttribute>UnitStat_Attack_Cold</ComparisonAttribute>
+			<ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+		</EquipmentUpgradeDef>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Krax</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Third_Book_Of_The_Magi</Attribute>
+		</Prereq>
+		<Backstory>All who wear the colors of this army, from commander to common foot-soldier, can trace their lineage back to the great kingdoms of the pre-cataclysmic era - to Coriopolis, Zad-Zabril, and even fabled Antheros. The blood of the channlers of old runs in their veins; they know and are unafraid of using this power to aid them in combat, both as shield and sword, in defense and attack. The commander who would engage this army in battle must possess a similar familiarity with the enchanter's art.</Backstory>
+		<AnimationPack>SoldierAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>1.6</ClothMapScale>
+		<ClothPoseIndex>5</ClothPoseIndex>
+		<Color_Hair>60,50,65,255</Color_Hair>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>Gfx\Eyes\Blinks\eyeblink_f3_grn.png</EyeTexture>
+		<InfoCardBackground>BG_Artic</InfoCardBackground>
+		<InfoCardBackgroundFlipped>1</InfoCardBackgroundFlipped>
+		<ModelPath>Gfx\HKB\Units\K_Female_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Generic_Female</SoundPack>
+		<TaticalModelScale>1.5</TaticalModelScale>
+		<Texture_Eyes>Gfx\eyes\blinks\eyeblink_f3_grn.png</Texture_Eyes>
+		<Texture_Skin>K_Female_Thinbrows_Texture_01.png</Texture_Skin>
+		<UnitModelType>EmpireFemale</UnitModelType>
+	</UnitType>
+	<!-- Wraiths -->
+	<UnitType InternalName="Unit_Air_Summoner_Wraith">
+		<DisplayName>Air Summoner</DisplayName>
+		<Description>These skilled mages have learned the power to summon Air Elementals to do their fighting for them.</Description>
+		<Class>Mage</Class>
+		<RaceType>Race_Type_Wraiths</RaceType>
+		<CanBeDesigned>1</CanBeDesigned>
+		<Gender>Male</Gender>
+		<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+		<IsSovereign>0</IsSovereign>
+		<IsStartingUnitType>1</IsStartingUnitType>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<!-- For Stormworld Compatibility Only -->
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Wraiths>1</UnitStat_BG_IsRace_Wraiths>
+			<UnitStat_BG_IsEmpire>1</UnitStat_BG_IsEmpire>
+			<UnitStat_BG_IsMale>1</UnitStat_BG_IsMale>
+			<!-- End Stormworld Compatibility -->
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>Blood_Wraith</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>AirSummons</SelectedAbilityBonusOption>
+		<Equipment>Staff_Incineration</Equipment>
+		<Equipment>RingOfEmbers</Equipment>
+		<Equipment>F_Head_Wraith_Mesh_02</Equipment>
+		<Equipment>Air_Monks_Robe</Equipment>
+		<Equipment>Wizard_Cloak_ID2</Equipment>
+		<Equipment>Basic_Boots_ID1</Equipment>
+		<EquipmentUpgradeDef>
+			<EquipmentSlot>Weapon</EquipmentSlot>
+			<EquipmentWeaponType>Staff</EquipmentWeaponType>
+			<EquipmentSlot>Defense</EquipmentSlot>
+			<SelectionCriteria>MaximizeBest</SelectionCriteria>
+			<ComparisonAttribute>UnitStat_Attack_Lightning</ComparisonAttribute>
+			<ComparisonAttribute>UnitStat_Attack_Fire</ComparisonAttribute>
+			<ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+		</EquipmentUpgradeDef>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Wraiths</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Third_Book_Of_The_Magi</Attribute>
+		</Prereq>
+		<Backstory>All who wear the colors of this army, from commander to common foot-soldier, can trace their lineage back to the great kingdoms of the pre-cataclysmic era - to Coriopolis, Zad-Zabril, and even fabled Antheros. The blood of the channlers of old runs in their veins; they know and are unafraid of using this power to aid them in combat, both as shield and sword, in defense and attack. The commander who would engage this army in battle must possess a similar familiarity with the enchanter's art.</Backstory>
+		<AnimationPack>SoldierAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>1.6</ClothMapScale>
+		<ClothPoseIndex>26</ClothPoseIndex>
+		<Color_Hair>50,50,65,255</Color_Hair>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>Gfx\Eyes\Blinks\eyeblink_m5_gold.png</EyeTexture>
+		<InfoCardBackground>BG_River</InfoCardBackground>
+		<InfoCardBackgroundFlipped>1</InfoCardBackgroundFlipped>
+		<ModelPath>Gfx\HKB\Units\K_Male_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Generic_Male</SoundPack>
+		<TaticalModelScale>1.5</TaticalModelScale>
+		<Texture_Eyes>Gfx\eyes\blinks\eyeblink_m5_gold.png</Texture_Eyes>
+		<Texture_Skin>K_Male_Tattoo_Texture_01.png</Texture_Skin>
+		<UnitModelType>WraithMale</UnitModelType>
+	</UnitType>
+	<UnitType InternalName="Unit_Earth_Summoner_Wraith">
+		<DisplayName>Earth Summoner</DisplayName>
+		<Description>These skilled mages have learned the power to summon Earth Elementals to do their fighting for them.</Description>
+		<Class>Mage</Class>
+		<RaceType>Race_Type_Wraiths</RaceType>
+		<CanBeDesigned>1</CanBeDesigned>
+		<Gender>Female</Gender>
+		<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+		<IsSovereign>0</IsSovereign>
+		<IsStartingUnitType>1</IsStartingUnitType>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<!-- For Stormworld Compatibility Only -->
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Wraiths>1</UnitStat_BG_IsRace_Wraiths>
+			<UnitStat_BG_IsEmpire>1</UnitStat_BG_IsEmpire>
+			<UnitStat_BG_IsFemale>1</UnitStat_BG_IsFemale>
+			<!-- End Stormworld Compatibility -->
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>Blood_Wraith</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>EarthSummons</SelectedAbilityBonusOption>
+		<Equipment>Staff_Ice</Equipment>
+		<Equipment>RingOfGlacier</Equipment>
+		<Equipment>F_Female_Head_Mesh_01</Equipment>
+		<Equipment>Earth_Monks_Robe</Equipment>
+		<Equipment>Wizard_Cloak_ID2</Equipment>
+		<Equipment>TightBoots_Light</Equipment>
+		<EquipmentUpgradeDef>
+			<EquipmentSlot>Weapon</EquipmentSlot>
+			<EquipmentWeaponType>ColdStaff</EquipmentWeaponType>
+			<EquipmentSlot>Defense</EquipmentSlot>
+			<SelectionCriteria>MaximizeBest</SelectionCriteria>
+			<ComparisonAttribute>UnitStat_Attack_Cold</ComparisonAttribute>
+			<ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+		</EquipmentUpgradeDef>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Wraiths</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Third_Book_Of_The_Magi</Attribute>
+		</Prereq>
+		<Backstory>All who wear the colors of this army, from commander to common foot-soldier, can trace their lineage back to the great kingdoms of the pre-cataclysmic era - to Coriopolis, Zad-Zabril, and even fabled Antheros. The blood of the channlers of old runs in their veins; they know and are unafraid of using this power to aid them in combat, both as shield and sword, in defense and attack. The commander who would engage this army in battle must possess a similar familiarity with the enchanter's art.</Backstory>
+		<AnimationPack>SoldierAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>1.6</ClothMapScale>
+		<ClothPoseIndex>29</ClothPoseIndex>
+		<Color_Hair>50,50,65,255</Color_Hair>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>Gfx\Eyes\Blinks\eyeblink_f4_Gold.png</EyeTexture>
+		<InfoCardBackground>BG_Desert</InfoCardBackground>
+		<InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+		<ModelPath>Gfx\HKB\Units\K_Female_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Generic_Female</SoundPack>
+		<TaticalModelScale>1.5</TaticalModelScale>
+		<Texture_Eyes>Gfx\eyes\blinks\eyeblink_f4_Gold.png</Texture_Eyes>
+		<Texture_Skin>K_Female_Tattoo_Texture_01.png</Texture_Skin>
+		<UnitModelType>WraithFemale</UnitModelType>
+	</UnitType>
+	<UnitType InternalName="Unit_Fire_Summoner_Wraith">
+		<DisplayName>Fire Summoner</DisplayName>
+		<Description>These skilled mages have learned the power to summon Fire Elementals to do their fighting for them.</Description>
+		<Class>Mage</Class>
+		<RaceType>Race_Type_Wraiths</RaceType>
+		<CanBeDesigned>1</CanBeDesigned>
+		<Gender>Male</Gender>
+		<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+		<IsSovereign>0</IsSovereign>
+		<IsStartingUnitType>1</IsStartingUnitType>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<!-- For Stormworld Compatibility Only -->
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Wraiths>1</UnitStat_BG_IsRace_Wraiths>
+			<UnitStat_BG_IsEmpire>1</UnitStat_BG_IsEmpire>
+			<UnitStat_BG_IsFemale>1</UnitStat_BG_IsFemale>
+			<!-- End Stormworld Compatibility -->
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>Blood_Wraith</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>FireSummons</SelectedAbilityBonusOption>
+		<Equipment>Staff_Incineration</Equipment>
+		<Equipment>RingOfEmbers</Equipment>
+		<Equipment>F_Head_Wraith_Mesh_08</Equipment>
+		<Equipment>Fire_Monks_Robe</Equipment>
+		<Equipment>Wizard_Cloak_ID2</Equipment>
+		<Equipment>Basic_Boots_ID1</Equipment>
+		<EquipmentUpgradeDef>
+			<EquipmentSlot>Weapon</EquipmentSlot>
+			<EquipmentWeaponType>FireStaff</EquipmentWeaponType>
+			<EquipmentSlot>Defense</EquipmentSlot>
+			<SelectionCriteria>MaximizeBest</SelectionCriteria>
+			<ComparisonAttribute>UnitStat_Attack_Fire</ComparisonAttribute>
+			<ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+		</EquipmentUpgradeDef>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Wraiths</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Third_Book_Of_The_Magi</Attribute>
+		</Prereq>
+		<Backstory>All who wear the colors of this army, from commander to common foot-soldier, can trace their lineage back to the great kingdoms of the pre-cataclysmic era - to Coriopolis, Zad-Zabril, and even fabled Antheros. The blood of the channlers of old runs in their veins; they know and are unafraid of using this power to aid them in combat, both as shield and sword, in defense and attack. The commander who would engage this army in battle must possess a similar familiarity with the enchanter's art.</Backstory>
+		<AnimationPack>SoldierAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>1.6</ClothMapScale>
+		<ClothPoseIndex>26</ClothPoseIndex>
+		<Color_Hair>50,50,65,255</Color_Hair>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>Gfx\Eyes\Blinks\eyeblink_m5_gold.png</EyeTexture>
+		<InfoCardBackground>BG24_Volcano</InfoCardBackground>
+		<InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+		<ModelPath>Gfx\HKB\Units\K_Male_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Generic_Male</SoundPack>
+		<TaticalModelScale>1.5</TaticalModelScale>
+		<Texture_Eyes>Gfx\eyes\blinks\eyeblink_m5_gold.png</Texture_Eyes>
+		<Texture_Skin>K_Male_Tattoo_Texture_02.png</Texture_Skin>
+		<UnitModelType>WraithMale</UnitModelType>
+	</UnitType>
+	<UnitType InternalName="Unit_Ice_Summoner_Wraith">
+		<DisplayName>Ice Summoner</DisplayName>
+		<Description>These skilled mages have learned the power to summon Ice Elementals to do their fighting for them.</Description>
+		<Class>Mage</Class>
+		<RaceType>Race_Type_Wraiths</RaceType>
+		<CanBeDesigned>1</CanBeDesigned>
+		<Gender>Female</Gender>
+		<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+		<IsSovereign>0</IsSovereign>
+		<IsStartingUnitType>1</IsStartingUnitType>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<!-- For Stormworld Compatibility Only -->
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Wraiths>1</UnitStat_BG_IsRace_Wraiths>
+			<UnitStat_BG_IsEmpire>1</UnitStat_BG_IsEmpire>
+			<UnitStat_BG_IsFemale>1</UnitStat_BG_IsFemale>
+			<!-- End Stormworld Compatibility -->
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>Blood_Wraith</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>IceSummons</SelectedAbilityBonusOption>
+		<Equipment>Staff_Ice</Equipment>
+		<Equipment>RingOfTheGlacier</Equipment>
+		<Equipment>F_Female_Head_Mesh_01</Equipment>
+		<Equipment>Water_Monks_Robe</Equipment>
+		<Equipment>Wizard_Cloak_ID2</Equipment>
+		<EquipmentUpgradeDef>
+			<EquipmentSlot>Weapon</EquipmentSlot>
+			<EquipmentWeaponType>ColdStaff</EquipmentWeaponType>
+			<EquipmentSlot>Defense</EquipmentSlot>
+			<SelectionCriteria>MaximizeBest</SelectionCriteria>
+			<ComparisonAttribute>UnitStat_Attack_Cold</ComparisonAttribute>
+			<ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+		</EquipmentUpgradeDef>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Wraiths</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Third_Book_Of_The_Magi</Attribute>
+		</Prereq>
+		<Backstory>All who wear the colors of this army, from commander to common foot-soldier, can trace their lineage back to the great kingdoms of the pre-cataclysmic era - to Coriopolis, Zad-Zabril, and even fabled Antheros. The blood of the channlers of old runs in their veins; they know and are unafraid of using this power to aid them in combat, both as shield and sword, in defense and attack. The commander who would engage this army in battle must possess a similar familiarity with the enchanter's art.</Backstory>
+		<AnimationPack>SoldierAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>1.6</ClothMapScale>
+		<ClothPoseIndex>5</ClothPoseIndex>
+		<Color_Hair>50,50,65,255</Color_Hair>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>Gfx\Eyes\Blinks\eyeblink_f4_Gold.png</EyeTexture>
+		<InfoCardBackground>BG_Artic</InfoCardBackground>
+		<InfoCardBackgroundFlipped>1</InfoCardBackgroundFlipped>
+		<ModelPath>Gfx\HKB\Units\K_Female_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Generic_Female</SoundPack>
+		<TaticalModelScale>1.5</TaticalModelScale>
+		<Texture_Eyes>Gfx\eyes\blinks\eyeblink_f4_Gold.png</Texture_Eyes>
+		<Texture_Skin>K_Female_Tattoo_Texture_01.png</Texture_Skin>
+		<UnitModelType>WraithFemale</UnitModelType>
+	</UnitType>
+	<!-- Trog -->
+	<UnitType InternalName="Unit_Air_Summoner_Trog">
+		<DisplayName>Air Summoner</DisplayName>
+		<Description>These skilled mages have learned the power to summon Air Elementals to do their fighting for them.</Description>
+		<Class>Mage</Class>
+		<RaceType>Race_Type_Trogs</RaceType>
+		<CanBeDesigned>1</CanBeDesigned>
+		<Gender>Male</Gender>
+		<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+		<IsSovereign>0</IsSovereign>
+		<IsStartingUnitType>1</IsStartingUnitType>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<!-- For Stormworld Compatibility Only -->
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Trogs>1</UnitStat_BG_IsRace_Trogs>
+			<UnitStat_BG_IsEmpire>1</UnitStat_BG_IsEmpire>
+			<UnitStat_BG_IsMale>1</UnitStat_BG_IsMale>
+			<!-- End Stormworld Compatibility -->
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>Blood_Trog</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>AirSummons</SelectedAbilityBonusOption>
+		<Equipment>Staff_Incineration</Equipment>
+		<Equipment>RingOfEmbers</Equipment>
+		<Equipment>F_Male_Head_01</Equipment>
+		<Equipment>Air_Monks_Robe</Equipment>
+		<Equipment>Wizard_Cloak_ID2</Equipment>
+		<Equipment>Large_Sion_Boots</Equipment>
+		<EquipmentUpgradeDef>
+			<EquipmentSlot>Weapon</EquipmentSlot>
+			<EquipmentWeaponType>FireStaff</EquipmentWeaponType>
+			<EquipmentSlot>Defense</EquipmentSlot>
+			<SelectionCriteria>MaximizeBest</SelectionCriteria>
+			<ComparisonAttribute>UnitStat_Attack_Lightning</ComparisonAttribute>
+			<ComparisonAttribute>UnitStat_Attack_Fire</ComparisonAttribute>
+			<ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+		</EquipmentUpgradeDef>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Trogs</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Third_Book_Of_The_Magi</Attribute>
+		</Prereq>
+		<Backstory>All who wear the colors of this army, from commander to common foot-soldier, can trace their lineage back to the great kingdoms of the pre-cataclysmic era - to Coriopolis, Zad-Zabril, and even fabled Antheros. The blood of the channlers of old runs in their veins; they know and are unafraid of using this power to aid them in combat, both as shield and sword, in defense and attack. The commander who would engage this army in battle must possess a similar familiarity with the enchanter's art.</Backstory>
+		<AnimationPack>SoldierAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>1.6</ClothMapScale>
+		<ClothPoseIndex>26</ClothPoseIndex>
+		<Color_Hair>190,190,190,255</Color_Hair>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>Gfx\Eyes\Blinks\eyeblink_m5_Amber.png</EyeTexture>
+		<InfoCardBackground>BG_River</InfoCardBackground>
+		<InfoCardBackgroundFlipped>1</InfoCardBackgroundFlipped>
+		<ModelPath>Gfx\HKB\Units\F_Male_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Generic_Male</SoundPack>
+		<TaticalModelScale>1.5</TaticalModelScale>
+		<Texture_Eyes>Gfx\eyes\blinks\eyeblink_m5_Amber.png</Texture_Eyes>
+		<Texture_Skin>Trog_Skin_M_02.png</Texture_Skin>
+		<UnitModelType>FallenMale</UnitModelType>
+	</UnitType>
+	<UnitType InternalName="Unit_Earth_Summoner_Trog">
+		<DisplayName>Earth Summoner</DisplayName>
+		<Description>These skilled mages have learned the power to summon Earth Elementals to do their fighting for them.</Description>
+		<Class>Mage</Class>
+		<RaceType>Race_Type_Trogs</RaceType>
+		<CanBeDesigned>1</CanBeDesigned>
+		<Gender>Female</Gender>
+		<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+		<IsSovereign>0</IsSovereign>
+		<IsStartingUnitType>1</IsStartingUnitType>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<!-- For Stormworld Compatibility Only -->
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Trogs>1</UnitStat_BG_IsRace_Trogs>
+			<UnitStat_BG_IsEmpire>1</UnitStat_BG_IsEmpire>
+			<UnitStat_BG_IsFemale>1</UnitStat_BG_IsFemale>
+			<!-- End Stormworld Compatibility -->
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>Blood_Trog</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>EarthSummons</SelectedAbilityBonusOption>
+		<Equipment>Staff_Ice</Equipment>
+		<Equipment>RingOfTheGlacier</Equipment>
+		<Equipment>F_Female_Head_Mesh_02</Equipment>
+		<Equipment>Earth_Monks_Robe</Equipment>
+		<Equipment>Wizard_Cloak_ID2</Equipment>
+		<Equipment>Kingdom_Female_Leather_Gloves_Light</Equipment>
+		<Equipment>TightBoots_Light</Equipment>
+		<EquipmentUpgradeDef>
+			<EquipmentSlot>Weapon</EquipmentSlot>
+			<EquipmentWeaponType>ColdStaff</EquipmentWeaponType>
+			<EquipmentSlot>Defense</EquipmentSlot>
+			<SelectionCriteria>MaximizeBest</SelectionCriteria>
+			<ComparisonAttribute>UnitStat_Attack_Cold</ComparisonAttribute>
+			<ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+		</EquipmentUpgradeDef>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Trogs</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Third_Book_Of_The_Magi</Attribute>
+		</Prereq>
+		<Backstory>All who wear the colors of this army, from commander to common foot-soldier, can trace their lineage back to the great kingdoms of the pre-cataclysmic era - to Coriopolis, Zad-Zabril, and even fabled Antheros. The blood of the channlers of old runs in their veins; they know and are unafraid of using this power to aid them in combat, both as shield and sword, in defense and attack. The commander who would engage this army in battle must possess a similar familiarity with the enchanter's art.</Backstory>
+		<AnimationPack>SoldierAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>1.6</ClothMapScale>
+		<ClothPoseIndex>29</ClothPoseIndex>
+		<Color_Hair>190,190,190,255</Color_Hair>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>Gfx\Eyes\Blinks\Eyeblink_f4_gold.png</EyeTexture>
+		<InfoCardBackground>BG_Desert</InfoCardBackground>
+		<InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+		<ModelPath>Gfx\HKB\Units\K_Female_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Generic_Female</SoundPack>
+		<TaticalModelScale>1.5</TaticalModelScale>
+		<Texture_Eyes>Gfx\eyes\blinks\Eyeblink_F4_Gold.png</Texture_Eyes>
+		<Texture_Skin>K_Female_Scarred_Texture_01.png</Texture_Skin>
+		<UnitModelType>FallenFemale</UnitModelType>
+	</UnitType>
+	<UnitType InternalName="Unit_Fire_Summoner_Trog">
+		<DisplayName>Fire Summoner</DisplayName>
+		<Description>These skilled mages have learned the power to summon Fire Elementals to do their fighting for them.</Description>
+		<Class>Mage</Class>
+		<RaceType>Race_Type_Trogs</RaceType>
+		<CanBeDesigned>1</CanBeDesigned>
+		<Gender>Male</Gender>
+		<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+		<IsSovereign>0</IsSovereign>
+		<IsStartingUnitType>1</IsStartingUnitType>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<!-- For Stormworld Compatibility Only -->
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Trogs>1</UnitStat_BG_IsRace_Trogs>
+			<UnitStat_BG_IsEmpire>1</UnitStat_BG_IsEmpire>
+			<UnitStat_BG_IsMale>1</UnitStat_BG_IsMale>
+			<!-- End Stormworld Compatibility -->
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>Blood_Trog</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>FireSummons</SelectedAbilityBonusOption>
+		<Equipment>Staff_Incineration</Equipment>
+		<Equipment>RingOfEmbers</Equipment>
+		<Equipment>F_Male_Head_01</Equipment>
+		<Equipment>Fire_Monks_Robe</Equipment>
+		<Equipment>Wizard_Cloak_ID2</Equipment>
+		<Equipment>Large_Sion_Boots</Equipment>
+		<EquipmentUpgradeDef>
+			<EquipmentSlot>Weapon</EquipmentSlot>
+			<EquipmentWeaponType>FireStaff</EquipmentWeaponType>
+			<EquipmentSlot>Defense</EquipmentSlot>
+			<SelectionCriteria>MaximizeBest</SelectionCriteria>
+			<ComparisonAttribute>UnitStat_Attack_Fire</ComparisonAttribute>
+			<ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+		</EquipmentUpgradeDef>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Trogs</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Third_Book_Of_The_Magi</Attribute>
+		</Prereq>
+		<Backstory>All who wear the colors of this army, from commander to common foot-soldier, can trace their lineage back to the great kingdoms of the pre-cataclysmic era - to Coriopolis, Zad-Zabril, and even fabled Antheros. The blood of the channlers of old runs in their veins; they know and are unafraid of using this power to aid them in combat, both as shield and sword, in defense and attack. The commander who would engage this army in battle must possess a similar familiarity with the enchanter's art.</Backstory>
+		<AnimationPack>SoldierAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>1.6</ClothMapScale>
+		<ClothPoseIndex>26</ClothPoseIndex>
+		<Color_Hair>190,190,190,255</Color_Hair>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>Gfx\Eyes\Blinks\eyeblink_m5_Amber.png</EyeTexture>
+		<InfoCardBackground>BG24_Volcano</InfoCardBackground>
+		<InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+		<ModelPath>Gfx\HKB\Units\F_Male_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Generic_Male</SoundPack>
+		<TaticalModelScale>1.5</TaticalModelScale>
+		<Texture_Eyes>Gfx\eyes\blinks\eyeblink_m5_Amber.png</Texture_Eyes>
+		<Texture_Skin>Trog_Skin_M_02.png</Texture_Skin>
+		<UnitModelType>FallenMale</UnitModelType>
+	</UnitType>
+	<UnitType InternalName="Unit_Ice_Summoner_Trog">
+		<DisplayName>Ice Summoner</DisplayName>
+		<Description>These skilled mages have learned the power to summon Ice Elementals to do their fighting for them.</Description>
+		<Class>Mage</Class>
+		<RaceType>Race_Type_Trogs</RaceType>
+		<CanBeDesigned>1</CanBeDesigned>
+		<Gender>Female</Gender>
+		<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+		<IsSovereign>0</IsSovereign>
+		<IsStartingUnitType>1</IsStartingUnitType>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<!-- For Stormworld Compatibility Only -->
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Trogs>1</UnitStat_BG_IsRace_Trogs>
+			<UnitStat_BG_IsEmpire>1</UnitStat_BG_IsEmpire>
+			<UnitStat_BG_IsFemale>1</UnitStat_BG_IsFemale>
+			<!-- End Stormworld Compatibility -->
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>Blood_Trog</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>IceSummons</SelectedAbilityBonusOption>
+		<Equipment>Staff_Ice</Equipment>
+		<Equipment>RingOfTheGlacier</Equipment>
+		<Equipment>F_Female_Head_Mesh_02</Equipment>
+		<Equipment>Water_Monks_Robe</Equipment>
+		<Equipment>Wizard_Cloak_ID2</Equipment>
+		<Equipment>TallBoots_ID2</Equipment>
+		<EquipmentUpgradeDef>
+			<EquipmentSlot>Weapon</EquipmentSlot>
+			<EquipmentWeaponType>ColdStaff</EquipmentWeaponType>
+			<EquipmentSlot>Defense</EquipmentSlot>
+			<SelectionCriteria>MaximizeBest</SelectionCriteria>
+			<ComparisonAttribute>UnitStat_Attack_Cold</ComparisonAttribute>
+			<ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+		</EquipmentUpgradeDef>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Trogs</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Third_Book_Of_The_Magi</Attribute>
+		</Prereq>
+		<Backstory>All who wear the colors of this army, from commander to common foot-soldier, can trace their lineage back to the great kingdoms of the pre-cataclysmic era - to Coriopolis, Zad-Zabril, and even fabled Antheros. The blood of the channlers of old runs in their veins; they know and are unafraid of using this power to aid them in combat, both as shield and sword, in defense and attack. The commander who would engage this army in battle must possess a similar familiarity with the enchanter's art.</Backstory>
+		<AnimationPack>SoldierAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>1.6</ClothMapScale>
+		<ClothPoseIndex>5</ClothPoseIndex>
+		<Color_Hair>190,190,190,255</Color_Hair>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>Gfx\Eyes\Blinks\yeblink_F4_Gold.png</EyeTexture>
+		<InfoCardBackground>BG_Artic</InfoCardBackground>
+		<InfoCardBackgroundFlipped>1</InfoCardBackgroundFlipped>
+		<ModelPath>Gfx\HKB\Units\K_Female_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Generic_Female</SoundPack>
+		<TaticalModelScale>1.5</TaticalModelScale>
+		<Texture_Eyes>Gfx\eyes\blinks\Eyeblink_F4_Gold.png</Texture_Eyes>
+		<Texture_Skin>K_Female_Scarred_Texture_01.png</Texture_Skin>
+		<UnitModelType>FallenFemale</UnitModelType>
+	</UnitType>
+	<!-- Urxen -->
+	<UnitType InternalName="Unit_Air_Summoner_Urxen">
+		<DisplayName>Air Summoner</DisplayName>
+		<Description>These skilled mages have learned the power to summon Air Elementals to do their fighting for them.</Description>
+		<Class>Mage</Class>
+		<RaceType>Race_Type_Urxen</RaceType>
+		<CanBeDesigned>1</CanBeDesigned>
+		<Gender>Male</Gender>
+		<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+		<IsSovereign>0</IsSovereign>
+		<IsStartingUnitType>1</IsStartingUnitType>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<!-- For Stormworld Compatibility Only -->
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Urxen>1</UnitStat_BG_IsRace_Urxen>
+			<UnitStat_BG_IsEmpire>1</UnitStat_BG_IsEmpire>
+			<UnitStat_BG_IsMale>1</UnitStat_BG_IsMale>
+			<!-- End Stormworld Compatibility -->
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>Blood_Urxen</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>AirSummons</SelectedAbilityBonusOption>
+		<Equipment>Staff_Incineration</Equipment>
+		<Equipment>RingOfEmbers</Equipment>
+		<Equipment>F_Male_Head_02</Equipment>
+		<Equipment>Air_Monks_Robe</Equipment>
+		<Equipment>Wizard_Cloak_ID2</Equipment>
+		<Equipment>Basic_Boots_ID1</Equipment>
+		<EquipmentUpgradeDef>
+			<EquipmentSlot>Weapon</EquipmentSlot>
+			<EquipmentWeaponType>FireStaff</EquipmentWeaponType>
+			<EquipmentSlot>Defense</EquipmentSlot>
+			<SelectionCriteria>MaximizeBest</SelectionCriteria>
+			<ComparisonAttribute>UnitStat_Attack_Lightning</ComparisonAttribute>
+			<ComparisonAttribute>UnitStat_Attack_Fire</ComparisonAttribute>
+			<ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+		</EquipmentUpgradeDef>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Urxen</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Third_Book_Of_The_Magi</Attribute>
+		</Prereq>
+		<Backstory>All who wear the colors of this army, from commander to common foot-soldier, can trace their lineage back to the great kingdoms of the pre-cataclysmic era - to Coriopolis, Zad-Zabril, and even fabled Antheros. The blood of the channlers of old runs in their veins; they know and are unafraid of using this power to aid them in combat, both as shield and sword, in defense and attack. The commander who would engage this army in battle must possess a similar familiarity with the enchanter's art.</Backstory>
+		<AnimationPack>SoldierAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>1.6</ClothMapScale>
+		<ClothPoseIndex>26</ClothPoseIndex>
+		<Color_Hair>45,45,65,255</Color_Hair>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>Gfx\Eyes\Blinks\eyeblink_m5_Black.png</EyeTexture>
+		<InfoCardBackground>BG_River</InfoCardBackground>
+		<InfoCardBackgroundFlipped>1</InfoCardBackgroundFlipped>
+		<ModelPath>Gfx\HKB\Units\F_Male_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Generic_Male</SoundPack>
+		<TaticalModelScale>1.5</TaticalModelScale>
+		<Texture_Eyes>Gfx\eyes\blinks\eyeblink_m5_Black.png</Texture_Eyes>
+		<Texture_Skin>Urxen_Skin_M_01.png</Texture_Skin>
+		<UnitModelType>UrxenMale</UnitModelType>
+	</UnitType>
+	<UnitType InternalName="Unit_Earth_Summoner_Urxen">
+		<DisplayName>Earth Summoner</DisplayName>
+		<Description>These skilled mages have learned the power to summon Earth Elementals to do their fighting for them.</Description>
+		<Class>Mage</Class>
+		<RaceType>Race_Type_Urxen</RaceType>
+		<CanBeDesigned>1</CanBeDesigned>
+		<Gender>Female</Gender>
+		<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+		<IsSovereign>0</IsSovereign>
+		<IsStartingUnitType>1</IsStartingUnitType>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<!-- For Stormworld Compatibility Only -->
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Urxen>1</UnitStat_BG_IsRace_Urxen>
+			<UnitStat_BG_IsEmpire>1</UnitStat_BG_IsEmpire>
+			<UnitStat_BG_IsFemale>1</UnitStat_BG_IsFemale>
+			<!-- End Stormworld Compatibility -->
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>Blood_Urxen</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>EarthSummons</SelectedAbilityBonusOption>
+		<Equipment>Staff_Ice</Equipment>
+		<Equipment>RingOfTheGlacier</Equipment>
+		<Equipment>F_Female_Head_Mesh_03</Equipment>
+		<Equipment>Earth_Monks_Robe</Equipment>
+		<Equipment>Wizard_Cloak_ID2</Equipment>
+		<Equipment>TightBoots_Light</Equipment>
+		<EquipmentUpgradeDef>
+			<EquipmentSlot>Weapon</EquipmentSlot>
+			<EquipmentWeaponType>ColdStaff</EquipmentWeaponType>
+			<EquipmentSlot>Defense</EquipmentSlot>
+			<SelectionCriteria>MaximizeBest</SelectionCriteria>
+			<ComparisonAttribute>UnitStat_Attack_Cold</ComparisonAttribute>
+			<ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+		</EquipmentUpgradeDef>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Urxen</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Third_Book_Of_The_Magi</Attribute>
+		</Prereq>
+		<Backstory>All who wear the colors of this army, from commander to common foot-soldier, can trace their lineage back to the great kingdoms of the pre-cataclysmic era - to Coriopolis, Zad-Zabril, and even fabled Antheros. The blood of the channlers of old runs in their veins; they know and are unafraid of using this power to aid them in combat, both as shield and sword, in defense and attack. The commander who would engage this army in battle must possess a similar familiarity with the enchanter's art.</Backstory>
+		<AnimationPack>SoldierAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>1.6</ClothMapScale>
+		<ClothPoseIndex>29</ClothPoseIndex>
+		<Color_Hair>45,45,65,255</Color_Hair>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>Gfx\Eyes\Blinks\eyeblink_f4_Blk.png</EyeTexture>
+		<InfoCardBackground>BG_Desert</InfoCardBackground>
+		<InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+		<ModelPath>Gfx\HKB\Units\K_Female_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Generic_Female</SoundPack>
+		<TaticalModelScale>1.5</TaticalModelScale>
+		<Texture_Eyes>Gfx\eyes\blinks\eyeblink_f4_Blk.png</Texture_Eyes>
+		<Texture_Skin>Urxen_Skin_F_01.png</Texture_Skin>
+		<UnitModelType>UrxenFemale</UnitModelType>
+	</UnitType>
+	<UnitType InternalName="Unit_Fire_Summoner_Urxen">
+		<DisplayName>Fire Summoner</DisplayName>
+		<Description>These skilled mages have learned the power to summon Fire Elementals to do their fighting for them.</Description>
+		<Class>Mage</Class>
+		<RaceType>Race_Type_Urxen</RaceType>
+		<CanBeDesigned>1</CanBeDesigned>
+		<Gender>Male</Gender>
+		<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+		<IsSovereign>0</IsSovereign>
+		<IsStartingUnitType>1</IsStartingUnitType>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<!-- For Stormworld Compatibility Only -->
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Urxen>1</UnitStat_BG_IsRace_Urxen>
+			<UnitStat_BG_IsEmpire>1</UnitStat_BG_IsEmpire>
+			<UnitStat_BG_IsMale>1</UnitStat_BG_IsMale>
+			<!-- End Stormworld Compatibility -->
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>Blood_Urxen</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>FireSummons</SelectedAbilityBonusOption>
+		<Equipment>Staff_Incineration</Equipment>
+		<Equipment>RingOfEmbers</Equipment>
+		<Equipment>F_Male_Head_02</Equipment>
+		<Equipment>Fire_Monks_Robe</Equipment>
+		<Equipment>Wizard_Cloak_ID2</Equipment>
+		<Equipment>Basic_Boots_ID1</Equipment>
+		<EquipmentUpgradeDef>
+			<EquipmentSlot>Weapon</EquipmentSlot>
+			<EquipmentWeaponType>FireStaff</EquipmentWeaponType>
+			<EquipmentSlot>Defense</EquipmentSlot>
+			<SelectionCriteria>MaximizeBest</SelectionCriteria>
+			<ComparisonAttribute>UnitStat_Attack_Fire</ComparisonAttribute>
+			<ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+		</EquipmentUpgradeDef>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Urxen</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Third_Book_Of_The_Magi</Attribute>
+		</Prereq>
+		<Backstory>All who wear the colors of this army, from commander to common foot-soldier, can trace their lineage back to the great kingdoms of the pre-cataclysmic era - to Coriopolis, Zad-Zabril, and even fabled Antheros. The blood of the channlers of old runs in their veins; they know and are unafraid of using this power to aid them in combat, both as shield and sword, in defense and attack. The commander who would engage this army in battle must possess a similar familiarity with the enchanter's art.</Backstory>
+		<AnimationPack>SoldierAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>1.6</ClothMapScale>
+		<ClothPoseIndex>26</ClothPoseIndex>
+		<Color_Hair>45,45,65,255</Color_Hair>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>Gfx\Eyes\Blinks\eyeblink_m5_Black.png</EyeTexture>
+		<InfoCardBackground>BG24_Volcano</InfoCardBackground>
+		<InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+		<ModelPath>Gfx\HKB\Units\F_Male_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Generic_Male</SoundPack>
+		<TaticalModelScale>1.5</TaticalModelScale>
+		<Texture_Eyes>Gfx\eyes\blinks\eyeblink_m5_Black.png</Texture_Eyes>
+		<Texture_Skin>Urxen_Skin_M_01.png</Texture_Skin>
+		<UnitModelType>UrxenMale</UnitModelType>
+	</UnitType>
+	<UnitType InternalName="Unit_Ice_Summoner_Urxen">
+		<DisplayName>Ice Summoner</DisplayName>
+		<Description>These skilled mages have learned the power to summon Ice Elementals to do their fighting for them.</Description>
+		<Class>Mage</Class>
+		<RaceType>Race_Type_Urxen</RaceType>
+		<CanBeDesigned>1</CanBeDesigned>
+		<Gender>Female</Gender>
+		<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+		<IsSovereign>0</IsSovereign>
+		<IsStartingUnitType>1</IsStartingUnitType>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<!-- For Stormworld Compatibility Only -->
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Urxen>1</UnitStat_BG_IsRace_Urxen>
+			<UnitStat_BG_IsEmpire>1</UnitStat_BG_IsEmpire>
+			<UnitStat_BG_IsFemale>1</UnitStat_BG_IsFemale>
+			<!-- End Stormworld Compatibility -->
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>Blood_Urxen</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>IceSummons</SelectedAbilityBonusOption>
+		<Equipment>Staff_Ice</Equipment>
+		<Equipment>RingOfTheGlacier</Equipment>
+		<Equipment>F_Female_Head_Mesh_03</Equipment>
+		<Equipment>Water_Monks_Robe</Equipment>
+		<Equipment>Wizard_Cloak_ID2</Equipment>
+		<Equipment>TightBoots_Light</Equipment>
+		<EquipmentUpgradeDef>
+			<EquipmentSlot>Weapon</EquipmentSlot>
+			<EquipmentWeaponType>ColdStaff</EquipmentWeaponType>
+			<EquipmentSlot>Defense</EquipmentSlot>
+			<SelectionCriteria>MaximizeBest</SelectionCriteria>
+			<ComparisonAttribute>UnitStat_Attack_Cold</ComparisonAttribute>
+			<ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+		</EquipmentUpgradeDef>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Urxen</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Third_Book_Of_The_Magi</Attribute>
+		</Prereq>
+		<Backstory>All who wear the colors of this army, from commander to common foot-soldier, can trace their lineage back to the great kingdoms of the pre-cataclysmic era - to Coriopolis, Zad-Zabril, and even fabled Antheros. The blood of the channlers of old runs in their veins; they know and are unafraid of using this power to aid them in combat, both as shield and sword, in defense and attack. The commander who would engage this army in battle must possess a similar familiarity with the enchanter's art.</Backstory>
+		<AnimationPack>SoldierAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>1.6</ClothMapScale>
+		<ClothPoseIndex>5</ClothPoseIndex>
+		<Color_Hair>45,45,65,255</Color_Hair>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>Gfx\Eyes\Blinks\eyeblink_f4_blk.png</EyeTexture>
+		<InfoCardBackground>BG_Artic</InfoCardBackground>
+		<InfoCardBackgroundFlipped>1</InfoCardBackgroundFlipped>
+		<ModelPath>Gfx\HKB\Units\K_Female_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Generic_Female</SoundPack>
+		<TaticalModelScale>1.5</TaticalModelScale>
+		<Texture_Eyes>Gfx\eyes\blinks\eyeblink_f4_blk.png</Texture_Eyes>
+		<Texture_Skin>Urxen_Skin_F_01.png</Texture_Skin>
+		<UnitModelType>UrxenFemale</UnitModelType>
+	</UnitType>
+	<!-- Quendar -->
+	<UnitType InternalName="Unit_Air_Summoner_Quendar">
+		<DisplayName>Air Summoner</DisplayName>
+		<Description>These skilled mages have learned the power to summon Air Elementals to do their fighting for them.</Description>
+		<Class>Mage</Class>
+		<RaceType>Race_Type_Quendar</RaceType>
+		<CanBeDesigned>1</CanBeDesigned>
+		<Gender>Male</Gender>
+		<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+		<IsSovereign>0</IsSovereign>
+		<IsStartingUnitType>1</IsStartingUnitType>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<!-- For Stormworld Compatibility Only -->
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Quendar>1</UnitStat_BG_IsRace_Quendar>
+			<UnitStat_BG_IsEmpire>1</UnitStat_BG_IsEmpire>
+			<UnitStat_BG_IsMale>1</UnitStat_BG_IsMale>
+			<!-- End Stormworld Compatibility -->
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>AirSummons</SelectedAbilityBonusOption>
+		<Equipment>Staff_Incineration</Equipment>
+		<Equipment>RingOfEmbers</Equipment>
+		<Equipment>F_Male_Quendar_Head_01</Equipment>
+		<Equipment>Air_Monks_Robe</Equipment>
+		<Equipment>Wizard_Cloak_ID2</Equipment>
+		<Equipment>Large_Sion_Boots_ID1</Equipment>
+		<EquipmentUpgradeDef>
+			<EquipmentSlot>Weapon</EquipmentSlot>
+			<EquipmentWeaponType>FireStaff</EquipmentWeaponType>
+			<EquipmentSlot>Defense</EquipmentSlot>
+			<SelectionCriteria>MaximizeBest</SelectionCriteria>
+			<ComparisonAttribute>UnitStat_Attack_Lightning</ComparisonAttribute>
+			<ComparisonAttribute>UnitStat_Attack_Fire</ComparisonAttribute>
+			<ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+		</EquipmentUpgradeDef>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Quendar</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Third_Book_Of_The_Magi</Attribute>
+		</Prereq>
+		<Backstory>All who wear the colors of this army, from commander to common foot-soldier, can trace their lineage back to the great kingdoms of the pre-cataclysmic era - to Coriopolis, Zad-Zabril, and even fabled Antheros. The blood of the channlers of old runs in their veins; they know and are unafraid of using this power to aid them in combat, both as shield and sword, in defense and attack. The commander who would engage this army in battle must possess a similar familiarity with the enchanter's art.</Backstory>
+		<AnimationPack>SoldierAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>1.6</ClothMapScale>
+		<ClothPoseIndex>26</ClothPoseIndex>
+		<Color_Hair>200,200,200,255</Color_Hair>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>Gfx\Eyes\Blinks\eyeblink_m1_brwn.png</EyeTexture>
+		<InfoCardBackground>BG_River</InfoCardBackground>
+		<InfoCardBackgroundFlipped>1</InfoCardBackgroundFlipped>
+		<ModelPath>Gfx\HKB\Units\F_Male_Magnar_Body_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Generic_Male</SoundPack>
+		<TaticalModelScale>1.5</TaticalModelScale>
+		<Texture_Eyes>Gfx\eyes\blinks\eyeblink_m1_brwn.png</Texture_Eyes>
+		<Texture_Skin>Magnar_Skin_M_01.dds</Texture_Skin>
+		<UnitModelType>QuendarMale</UnitModelType>
+	</UnitType>
+	<UnitType InternalName="Unit_Earth_Summoner_Quendar">
+		<DisplayName>Earth Summoner</DisplayName>
+		<Description>These skilled mages have learned the power to summon Earth Elementals to do their fighting for them.</Description>
+		<Class>Mage</Class>
+		<RaceType>Race_Type_Quendar</RaceType>
+		<CanBeDesigned>1</CanBeDesigned>
+		<Gender>Female</Gender>
+		<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+		<IsSovereign>0</IsSovereign>
+		<IsStartingUnitType>1</IsStartingUnitType>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<!-- For Stormworld Compatibility Only -->
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Quendar>1</UnitStat_BG_IsRace_Quendar>
+			<UnitStat_BG_IsEmpire>1</UnitStat_BG_IsEmpire>
+			<UnitStat_BG_IsFemale>1</UnitStat_BG_IsFemale>
+			<!-- End Stormworld Compatibility -->
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>EarthSummons</SelectedAbilityBonusOption>
+		<Equipment>Staff_Ice</Equipment>
+		<Equipment>RingOfTheGlacier</Equipment>
+		<Equipment>F_Female_Quendar_Head_01</Equipment>
+		<Equipment>Earth_Monks_Robe</Equipment>
+		<Equipment>Wizard_Cloak_ID2</Equipment>
+		<Equipment>TightBoots_Light</Equipment>
+		<EquipmentUpgradeDef>
+			<EquipmentSlot>Weapon</EquipmentSlot>
+			<EquipmentWeaponType>ColdStaff</EquipmentWeaponType>
+			<EquipmentSlot>Defense</EquipmentSlot>
+			<SelectionCriteria>MaximizeBest</SelectionCriteria>
+			<ComparisonAttribute>UnitStat_Attack_Cold</ComparisonAttribute>
+			<ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+		</EquipmentUpgradeDef>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Quendar</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Third_Book_Of_The_Magi</Attribute>
+		</Prereq>
+		<Backstory>All who wear the colors of this army, from commander to common foot-soldier, can trace their lineage back to the great kingdoms of the pre-cataclysmic era - to Coriopolis, Zad-Zabril, and even fabled Antheros. The blood of the channlers of old runs in their veins; they know and are unafraid of using this power to aid them in combat, both as shield and sword, in defense and attack. The commander who would engage this army in battle must possess a similar familiarity with the enchanter's art.</Backstory>
+		<AnimationPack>SoldierAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>1.6</ClothMapScale>
+		<ClothPoseIndex>29</ClothPoseIndex>
+		<Color_Hair>200,200,200,255</Color_Hair>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>Gfx\Eyes\Blinks\eyeblink_f1_grn.png</EyeTexture>
+		<InfoCardBackground>BG_Desert</InfoCardBackground>
+		<InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+		<ModelPath>Gfx\HKB\Units\F_Female_Magnar_Body_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Generic_Female</SoundPack>
+		<TaticalModelScale>1.5</TaticalModelScale>
+		<Texture_Eyes>Gfx\eyes\blinks\eyeblink_f1_grn.png</Texture_Eyes>
+		<Texture_Skin>Magnar_Skin_F_01.dds</Texture_Skin>
+		<UnitModelType>QuendarFemale</UnitModelType>
+	</UnitType>
+	<UnitType InternalName="Unit_Fire_Summoner_Quendar">
+		<DisplayName>Fire Summoner</DisplayName>
+		<Description>These skilled mages have learned the power to summon Fire Elementals to do their fighting for them.</Description>
+		<Class>Mage</Class>
+		<RaceType>Race_Type_Quendar</RaceType>
+		<CanBeDesigned>1</CanBeDesigned>
+		<Gender>Male</Gender>
+		<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+		<IsSovereign>0</IsSovereign>
+		<IsStartingUnitType>1</IsStartingUnitType>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<!-- For Stormworld Compatibility Only -->
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Quendar>1</UnitStat_BG_IsRace_Quendar>
+			<UnitStat_BG_IsEmpire>1</UnitStat_BG_IsEmpire>
+			<UnitStat_BG_IsMale>1</UnitStat_BG_IsMale>
+			<!-- End Stormworld Compatibility -->
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>FireSummons</SelectedAbilityBonusOption>
+		<Equipment>Staff_Incineration</Equipment>
+		<Equipment>RingOfEmbers</Equipment>
+		<Equipment>F_Male_Quendar_Head_01</Equipment>
+		<Equipment>Fire_Monks_Robe</Equipment>
+		<Equipment>Wizard_Cloak_ID2</Equipment>
+		<Equipment>Large_Sion_Boots_ID1</Equipment>
+		<EquipmentUpgradeDef>
+			<EquipmentSlot>Weapon</EquipmentSlot>
+			<EquipmentWeaponType>FireStaff</EquipmentWeaponType>
+			<EquipmentSlot>Defense</EquipmentSlot>
+			<SelectionCriteria>MaximizeBest</SelectionCriteria>
+			<ComparisonAttribute>UnitStat_Attack_Fire</ComparisonAttribute>
+			<ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+		</EquipmentUpgradeDef>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Quendar</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Third_Book_Of_The_Magi</Attribute>
+		</Prereq>
+		<Backstory>All who wear the colors of this army, from commander to common foot-soldier, can trace their lineage back to the great kingdoms of the pre-cataclysmic era - to Coriopolis, Zad-Zabril, and even fabled Antheros. The blood of the channlers of old runs in their veins; they know and are unafraid of using this power to aid them in combat, both as shield and sword, in defense and attack. The commander who would engage this army in battle must possess a similar familiarity with the enchanter's art.</Backstory>
+		<AnimationPack>SoldierAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>1.6</ClothMapScale>
+		<ClothPoseIndex>26</ClothPoseIndex>
+		<Color_Hair>200,200,200,255</Color_Hair>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>Gfx\Eyes\Blinks\eyeblink_m4_brwn.png</EyeTexture>
+		<InfoCardBackground>BG24_Volcano</InfoCardBackground>
+		<InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+		<ModelPath>Gfx\HKB\Units\F_Male_Magnar_Body_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Generic_Male</SoundPack>
+		<TaticalModelScale>1.5</TaticalModelScale>
+		<Texture_Eyes>Gfx\eyes\blinks\eyeblink_m4_brwn.png</Texture_Eyes>
+		<Texture_Skin>Magnar_Skin_M_01.png</Texture_Skin>
+		<UnitModelType>QuendarMale</UnitModelType>
+	</UnitType>
+	<UnitType InternalName="Unit_Ice_Summoner_Quendar">
+		<DisplayName>Ice Summoner</DisplayName>
+		<Description>These skilled mages have learned the power to summon Ice Elementals to do their fighting for them.</Description>
+		<Class>Mage</Class>
+		<RaceType>Race_Type_Quendar</RaceType>
+		<CanBeDesigned>1</CanBeDesigned>
+		<Gender>Female</Gender>
+		<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+		<IsSovereign>0</IsSovereign>
+		<IsStartingUnitType>1</IsStartingUnitType>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<!-- For Stormworld Compatibility Only -->
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Quendar>1</UnitStat_BG_IsRace_Quendar>
+			<UnitStat_BG_IsEmpire>1</UnitStat_BG_IsEmpire>
+			<UnitStat_BG_IsFemale>1</UnitStat_BG_IsFemale>
+			<!-- End Stormworld Compatibility -->
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>IceSummons</SelectedAbilityBonusOption>
+		<Equipment>Staff_Ice</Equipment>
+		<Equipment>RingOfTheGlacier</Equipment>
+		<Equipment>F_Female_Quendar_Head_01</Equipment>
+		<Equipment>Water_Monks_Robe</Equipment>
+		<Equipment>Wizard_Cloak_ID2</Equipment>
+		<Equipment>TightBoots_Light</Equipment>
+		<EquipmentUpgradeDef>
+			<EquipmentSlot>Weapon</EquipmentSlot>
+			<EquipmentWeaponType>ColdStaff</EquipmentWeaponType>
+			<EquipmentSlot>Defense</EquipmentSlot>
+			<SelectionCriteria>MaximizeBest</SelectionCriteria>
+			<ComparisonAttribute>UnitStat_Attack_Cold</ComparisonAttribute>
+			<ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+		</EquipmentUpgradeDef>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Quendar</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Third_Book_Of_The_Magi</Attribute>
+		</Prereq>
+		<Backstory>All who wear the colors of this army, from commander to common foot-soldier, can trace their lineage back to the great kingdoms of the pre-cataclysmic era - to Coriopolis, Zad-Zabril, and even fabled Antheros. The blood of the channlers of old runs in their veins; they know and are unafraid of using this power to aid them in combat, both as shield and sword, in defense and attack. The commander who would engage this army in battle must possess a similar familiarity with the enchanter's art.</Backstory>
+		<AnimationPack>SoldierAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>1.6</ClothMapScale>
+		<ClothPoseIndex>5</ClothPoseIndex>
+		<Color_Hair>200,200,200,255</Color_Hair>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>Gfx\Eyes\Blinks\eyeblink_f3_grn.png</EyeTexture>
+		<InfoCardBackground>BG_Artic</InfoCardBackground>
+		<InfoCardBackgroundFlipped>1</InfoCardBackgroundFlipped>
+		<ModelPath>Gfx\HKB\Units\F_Female_Magnar_Body_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Generic_Female</SoundPack>
+		<TaticalModelScale>1.5</TaticalModelScale>
+		<Texture_Eyes>Gfx\eyes\blinks\eyeblink_f3_grn.png</Texture_Eyes>
+		<Texture_Skin>Magnar_Skin_F_01.dds</Texture_Skin>
+		<UnitModelType>QuendarFemale</UnitModelType>
+	</UnitType>
+	<!-- Quest Units -->
+	<UnitType InternalName="Quest_Ice_Summoner">
+		<DisplayName>Frozen Sisters</DisplayName>
+		<Description>A mage unit that can summon Ice Elementals to battle.</Description>
+		<RaceType>Race_Type_Krax</RaceType>
+		<CanBeDesigned>0</CanBeDesigned>
+		<Gender>Female</Gender>
+		<IsSovereign>0</IsSovereign>
+		<IsStartingUnitType>0</IsStartingUnitType>
+		<GroupingType>UnitGroupingType_Party</GroupingType>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<!-- For Stormworld Compatibility Only -->
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Krax>1</UnitStat_BG_IsRace_Krax>
+			<UnitStat_BG_IsEmpire>1</UnitStat_BG_IsEmpire>
+			<UnitStat_BG_IsFemale>1</UnitStat_BG_IsFemale>
+			<!-- End Stormworld Compatibility -->
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>Blood_Krax</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>IceSummons</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Spell_Blizzard</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>FastAbility</SelectedAbilityBonusOption>
+		<Equipment>K_Female_Head_04</Equipment>
+		<Equipment>RingOfTheGlacier</Equipment>
+		<Equipment>Staff_Ice</Equipment>
+		<Equipment>Water_Monks_Robe</Equipment>
+		<Equipment>Female_Noblemans_Pants_ID2</Equipment>
+		<Equipment>Empire_Female_Leather_Gloves_Light</Equipment>
+		<Equipment>IceWargCloak</Equipment>
+		<AnimationPack>FemaleSovereignAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>1.6</ClothMapScale>
+		<ClothPoseIndex>5</ClothPoseIndex>
+		<Color_Clothing1>75,80,60,255</Color_Clothing1>
+		<Color_Clothing2>65,45,40,255</Color_Clothing2>
+		<Color_Hair>60,50,65,255</Color_Hair>
+		<Color_Metal>150,155,135,255</Color_Metal>
+		<Color_Skin>160,105,80,255</Color_Skin>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>Gfx\Eyes\Blinks\eyeblink_f3_grn.png</EyeTexture>
+		<InfoCardBackground>BG_Artic</InfoCardBackground>
+		<InfoCardBackgroundFlipped>1</InfoCardBackgroundFlipped>
+		<ModelPath>Gfx\HKB\Units\K_Female_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Generic_Female</SoundPack>
+		<TaticalModelScale>1.5</TaticalModelScale>
+		<Texture_Eyes>Gfx\eyes\blinks\eyeblink_f3_grn.png</Texture_Eyes>
+		<Texture_Skin>K_Female_Thinbrows_Texture_01.png</Texture_Skin>
+		<UnitModelType>EmpireFemale</UnitModelType>
+	</UnitType>
+	<UnitType InternalName="Quest_Fire_Summoner">
+		<DisplayName>Fire Bretheren</DisplayName>
+		<Description>These skilled mages have learned the power to summon Fire Elementals to do their fighting for them.</Description>
+		<Class>Mage</Class>
+		<RaceType>Race_Type_Krax</RaceType>
+		<CanBeDesigned>0</CanBeDesigned>
+		<Gender>Male</Gender>
+		<IsSovereign>0</IsSovereign>
+		<IsStartingUnitType>0</IsStartingUnitType>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<!-- For Stormworld Compatibility Only -->
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Krax>1</UnitStat_BG_IsRace_Krax>
+			<UnitStat_BG_IsEmpire>1</UnitStat_BG_IsEmpire>
+			<UnitStat_BG_IsMale>1</UnitStat_BG_IsMale>
+			<!-- End Stormworld Compatibility -->
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>Blood_Krax</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>FireSummons</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Spell_Flame_Dart</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>FastAbility</SelectedAbilityBonusOption>
+		<Equipment>Staff_Incineration</Equipment>
+		<Equipment>RingOfEmbers</Equipment>
+		<Equipment>K_Male_Head_02</Equipment>
+		<Equipment>Sovereign_Beard</Equipment>
+		<Equipment>Fire_Monks_Robe</Equipment>
+		<Equipment>DragonHideCloak</Equipment>
+		<Equipment>Kingdom_Leather_Gloves_Light</Equipment>
+		<Equipment>Basic_Boots_ID1</Equipment>
+		<AnimationPack>MaleSovereignAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>1.6</ClothMapScale>
+		<ClothPoseIndex>26</ClothPoseIndex>
+		<Color_Clothing1>75,80,60,255</Color_Clothing1>
+		<Color_Clothing2>65,45,40,255</Color_Clothing2>
+		<Color_Hair>60,50,65,255</Color_Hair>
+		<Color_Metal>150,155,135,255</Color_Metal>
+		<Color_Skin>160,105,80,255</Color_Skin>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>Gfx\Eyes\Blinks\eyeblink_m4_brwn.png</EyeTexture>
+		<InfoCardBackground>BG24_Volcano</InfoCardBackground>
+		<InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+		<ModelPath>Gfx\HKB\Units\K_Male_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Generic_Male</SoundPack>
+		<TaticalModelScale>1.5</TaticalModelScale>
+		<Texture_Eyes>Gfx\eyes\blinks\eyeblink_m4_brwn.png</Texture_Eyes>
+		<Texture_Skin>K_Male_Balding_Texture_01.png</Texture_Skin>
+		<UnitModelType>EmpireMale</UnitModelType>
+	</UnitType>
+		<UnitType InternalName="Quest_Air_Summoner">
+		<DisplayName>Whitebeards</DisplayName>
+		<Description>These skilled mages have learned the power to summon Air Elementals to do their fighting for them.</Description>
+		<Class>Mage</Class>
+		<RaceType>Race_Type_Krax</RaceType>
+		<CanBeDesigned>1</CanBeDesigned>
+		<Gender>Male</Gender>
+		<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+		<IsSovereign>0</IsSovereign>
+		<IsStartingUnitType>1</IsStartingUnitType>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<!-- For Stormworld Compatibility Only -->
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Krax>1</UnitStat_BG_IsRace_Krax>
+			<UnitStat_BG_IsEmpire>1</UnitStat_BG_IsEmpire>
+			<UnitStat_BG_IsMale>1</UnitStat_BG_IsMale>
+			<!-- End Stormworld Compatibility -->
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>Blood_Krax</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>AirSummons</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Spell_Lightning</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>FastAbility</SelectedAbilityBonusOption>
+		<Equipment>Staff_Ice</Equipment>
+		<Equipment>RingOfTheGlacier</Equipment>
+		<Equipment>K_Male_Head_02</Equipment>
+		<Equipment>Kraxis_Beard</Equipment>
+		<Equipment>Air_Monks_Robe</Equipment>
+		<Equipment>Wizard_Cloak_ID2</Equipment>
+		<Equipment>Kingdom_Leather_Gloves_Light</Equipment>
+		<Equipment>Basic_Boots_ID1</Equipment>
+		<AnimationPack>SoldierAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>1.6</ClothMapScale>
+		<ClothPoseIndex>26</ClothPoseIndex>
+		<Color_Hair>255,255,255,255</Color_Hair>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>Gfx\Eyes\Blinks\eyeblink_m1_brwn.png</EyeTexture>
+		<InfoCardBackground>BG_River</InfoCardBackground>
+		<InfoCardBackgroundFlipped>1</InfoCardBackgroundFlipped>
+		<ModelPath>Gfx\HKB\Units\K_Male_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Generic_Male</SoundPack>
+		<TaticalModelScale>1.5</TaticalModelScale>
+		<Texture_Eyes>Gfx\eyes\blinks\eyeblink_m1_brwn.png</Texture_Eyes>
+		<Texture_Skin>K_Male_Groomed_Texture_01.png</Texture_Skin>
+		<UnitModelType>EmpireMale</UnitModelType>
+	</UnitType>
+	<UnitType InternalName="Quest_Earth_Summoner">
+		<DisplayName>Rock Sisters</DisplayName>
+		<Description>These skilled mages have learned the power to summon Earth Elementals to do their fighting for them.</Description>
+		<Class>Mage</Class>
+		<RaceType>Race_Type_Krax</RaceType>
+		<CanBeDesigned>1</CanBeDesigned>
+		<Gender>Female</Gender>
+		<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+		<IsSovereign>0</IsSovereign>
+		<IsStartingUnitType>1</IsStartingUnitType>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<!-- For Stormworld Compatibility Only -->
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Krax>1</UnitStat_BG_IsRace_Krax>
+			<UnitStat_BG_IsEmpire>1</UnitStat_BG_IsEmpire>
+			<UnitStat_BG_IsFemale>1</UnitStat_BG_IsFemale>
+			<!-- End Stormworld Compatibility -->
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>Blood_Krax</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>EarthSummons</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Spell_Hurl_Boulder</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>FastAbility</SelectedAbilityBonusOption>
+		<Equipment>Staff_Incineration</Equipment>
+		<Equipment>RingOfEmbers</Equipment>
+		<Equipment>K_Female_Head_01</Equipment>
+		<Equipment>Earth_Monks_Robe</Equipment>
+		<Equipment>Wizard_Cloak_ID2</Equipment>
+		<Equipment>Kingdom_Female_Leather_Gloves_Light</Equipment>
+		<Equipment>TightBoots_Light</Equipment>
+		<AnimationPack>SoldierAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>1.6</ClothMapScale>
+		<ClothPoseIndex>29</ClothPoseIndex>
+		<Color_Hair>60,50,65,255</Color_Hair>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>Gfx\Eyes\Blinks\eyeblink_f1_grn.png</EyeTexture>
+		<InfoCardBackground>BG_Desert</InfoCardBackground>
+		<InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+		<ModelPath>Gfx\HKB\Units\K_Female_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Generic_Female</SoundPack>
+		<TaticalModelScale>1.5</TaticalModelScale>
+		<Texture_Eyes>Gfx\eyes\blinks\eyeblink_f1_grn.png</Texture_Eyes>
+		<Texture_Skin>K_Female_Aristocrat_Texture_01.png</Texture_Skin>
+		<UnitModelType>EmpireFemale</UnitModelType>
+	</UnitType>
+</UnitTypes>

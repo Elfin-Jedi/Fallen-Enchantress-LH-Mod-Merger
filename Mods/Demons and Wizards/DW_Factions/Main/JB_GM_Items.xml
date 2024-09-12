@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<GameItemTypes>
+
+    <!-- <GameItemType InternalName="JB_Loot_Gems_Gold">
+        <DisplayName>Gems</DisplayName>
+        <Description>These gems can be sold for quite a sum.</Description>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <ShopValue>300</ShopValue>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+        <Likelihood>0</Likelihood>
+        <RarityDisplay>Common</RarityDisplay>
+        <IsUsable>0</IsUsable>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>0</AIPriority>
+            </AIData>
+        <ArtDef>JB_Loot_GemsGold_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="JB_Loot_GemsGold_ArtDef">
+            <GameItemTypeModelPack InternalName="JB_Loot_GemsGold_Default">
+                <IconFile>JB_Loot_GemsGold_Item.png</IconFile>
+                <TintR>200</TintR>
+                <TintG>200</TintG>
+                <TintB>200</TintB>
+                <GameItemTypeModel>
+                </GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>
+    -->
+	<GameItemType InternalName="JB_Loot_Gems_Blue">
+        <DisplayName>Gems</DisplayName>
+        <Description>These gems can be sold for quite a sum.</Description>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <ShopValue>540</ShopValue>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+        <Likelihood>0</Likelihood>
+        <RarityDisplay>Common</RarityDisplay>
+        <IsUsable>0</IsUsable>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>0</AIPriority>
+            </AIData>
+        <ArtDef>JB_Loot_GemsBlue_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="JB_Loot_GemsBlue_ArtDef">
+            <GameItemTypeModelPack InternalName="JB_Loot_GemsBlue_Default">
+                <IconFile>JB_Loot_GemsBlue_Item.png</IconFile>
+                <TintR>200</TintR>
+                <TintG>200</TintG>
+                <TintB>200</TintB>
+                <GameItemTypeModel>
+                </GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>	
+    <GameItemType InternalName="JB_Loot_Gems_Red">
+        <DisplayName>Gems</DisplayName>
+        <Description>These gems can be sold for quite a sum.</Description>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <ShopValue>720</ShopValue>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+        <Likelihood>0</Likelihood>
+        <RarityDisplay>Common</RarityDisplay>
+        <IsUsable>0</IsUsable>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>0</AIPriority>
+            </AIData>
+        <ArtDef>JB_Loot_GemsRed_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="JB_Loot_GemsRed_ArtDef">
+            <GameItemTypeModelPack InternalName="JB_Loot_GemsRed_Default">
+                <IconFile>JB_Loot_GemsRed_Item.png</IconFile>
+                <TintR>200</TintR>
+                <TintG>200</TintG>
+                <TintB>200</TintB>
+                <GameItemTypeModel>
+                </GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>	
+    <GameItemType InternalName="JB_Loot_Gems_Green">
+        <DisplayName>Gems</DisplayName>
+        <Description>These gems can be sold for quite a sum.</Description>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <ShopValue>1870</ShopValue>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+        <Likelihood>0</Likelihood>
+        <RarityDisplay>Common</RarityDisplay>
+        <IsUsable>0</IsUsable>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>0</AIPriority>
+            </AIData>
+        <ArtDef>JB_Loot_GemsGreen_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="JB_Loot_GemsGreen_ArtDef">
+            <GameItemTypeModelPack InternalName="JB_Loot_GemsGreen_Default">
+                <IconFile>JB_Loot_GemsGreen_Item.png</IconFile>
+                <TintR>200</TintR>
+                <TintG>200</TintG>
+                <TintB>200</TintB>
+                <GameItemTypeModel>
+                </GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>	
+	
+	<GameItemType InternalName="JB_Javelins">
+        <DisplayName>Javelins</DisplayName>
+        <Description>A well balanced javelin for throwing at enemies.</Description>
+        <Type>Accessory</Type>
+        <CanBeEquipped>1</CanBeEquipped>
+        <AdditionalTrainingTurns>10</AdditionalTrainingTurns>
+        <ShopValue>52</ShopValue>	
+        <ProductionRequirement>
+            <Type>Resource</Type>
+            <Attribute>Metal</Attribute>
+            <Value>1</Value>
+        </ProductionRequirement>		
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>UnlockCombatAbility</Attribute>
+            <StrVal>JB_ThrowingJavelin</StrVal>
+            <Provides>Allows the unit to throw javelins at enemies within a range of 5</Provides>
+        </GameModifier>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+        <RarityDisplay>Common</RarityDisplay>
+        <IsUsable>0</IsUsable>
+		<Prereq>
+            <Type>Race</Type>
+            <Attribute>JB_Race_Type_Aygethos</Attribute>
+        </Prereq>
+        <Prereq>
+            <Type>Tech</Type>
+            <Attribute>Weaponry</Attribute>
+        </Prereq>	
+        <ArtDef>JB_ThrowingJavelins_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="JB_ThrowingJavelins_ArtDef">
+            <GameItemTypeModelPack InternalName="JB_ThrowingJavelins_Default">
+				<IconFile>JB_ThrowingJavelins_Item.png</IconFile>				
+                <GameItemTypeModel>
+                </GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>
+    <GameItemType InternalName="JB_Belt_Xaroch">
+        <DisplayName>Synergy Belt</DisplayName>
+        <Description>This magically charged belt helps with the wearers overall well being.</Description>
+        <Type>Accessory</Type>
+        <CanBeEquipped>1</CanBeEquipped>
+        <AdditionalTrainingTurns>15</AdditionalTrainingTurns>
+        <ShopValue>140</ShopValue>
+        <ProductionRequirement>
+            <Type>Resource</Type>
+            <Attribute>RefinedCrystal</Attribute>
+            <Value>2</Value>
+        </ProductionRequirement>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Boost</StrVal>
+			<Value>1</Value>
+			<Provides>+1 Attack</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Pierce</StrVal>
+			<Value>1</Value>
+			<Provides>+1 Defense</Provides>
+		</GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_HealthRegen</StrVal>
+            <Value>2</Value>
+            <Provides>+2 Healing per Season</Provides>
+        </GameModifier>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+        <Likelihood>40</Likelihood>
+        <RarityDisplay>Common</RarityDisplay>
+        <IsUsable>0</IsUsable>
+		<Prereq>
+            <Type>Race</Type>
+            <Attribute>JB_Race_Type_Gith</Attribute>
+        </Prereq>
+        <Prereq>
+            <Type>Tech</Type>
+            <Attribute>Charms</Attribute>
+        </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>45</AIPriority>
+            </AIData>
+        <ArtDef>JB_Belt_Xaroch_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="JB_Belt_Xaroch_ArtDef">
+            <GameItemTypeModelPack InternalName="JB_Belt_Xaroch_Default">
+                <IconFile>JB_Belt_Xaroch_Icon_01.png</IconFile>
+                <TintR>0</TintR>
+                <TintG>0</TintG>
+                <TintB>0</TintB>
+                <SFX>Equip_MagicRing_01</SFX>
+                <SFX>Equip_MagicRing_02</SFX>
+                <SFX>Equip_MagicRing_03</SFX>
+                <SFX>Equip_MagicRing_04</SFX>
+                <GameItemTypeModel>
+                </GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType> 
+	<GameItemType InternalName="JB_Potion_Vigour">
+		<DisplayName>Potion of Vigour</DisplayName>
+		<Description>A magical concoction that temporarily invigorates and energizes the drinker when consumed.  Drink it to gain +20% to Attack, Initiative and Dodge for 5 turns.</Description>
+		<ShopValue>115</ShopValue>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>UseSpell</Attribute>
+            <StrVal>JB_Vigour_Self</StrVal>
+            <Provides>Gives the unit +20% to Attack, Initiative and Dodge for 5 turns</Provides>
+        </GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+        <Likelihood>40</Likelihood>
+		<RarityDisplay>Common</RarityDisplay>
+		<IsUsable>0</IsUsable>
+		<UsableInBattle>1</UsableInBattle>
+		<ArtDef>Potion_Vigour_ArtDef</ArtDef>
+		<GameItemTypeArtDef InternalName="Potion_Vigour_ArtDef">
+			<GameItemTypeModelPack InternalName="Potion_Vigour_Default">
+				<IconFile>JB_PotionOfVigour.png</IconFile>
+				<MapParticle>JB_Vigour_Particle</MapParticle>
+				<TintR>131</TintR>
+				<TintG>185</TintG>
+				<TintB>17</TintB>
+				<SFX>Potion1_1</SFX>
+				<SFX>Potion1_2</SFX>
+				<GameItemTypeModel>
+				</GameItemTypeModel>
+			</GameItemTypeModelPack>
+		</GameItemTypeArtDef>
+	</GameItemType>
+	<GameItemType InternalName="JB_ThrowingAxes">
+        <DisplayName>Throwing Axes</DisplayName>
+        <Description>A well balanced axe for throwing at enemies.</Description>
+        <Type>Accessory</Type>
+        <CanBeEquipped>1</CanBeEquipped>
+        <AdditionalTrainingTurns>10</AdditionalTrainingTurns>
+        <ShopValue>45</ShopValue>
+        <ProductionRequirement>
+            <Type>Resource</Type>
+            <Attribute>Metal</Attribute>
+            <Value>2</Value>
+        </ProductionRequirement>		
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>UnlockCombatAbility</Attribute>
+            <StrVal>JB_ThrowingAxe</StrVal>
+            <Provides>Allows the unit to throw axes at enemies within a range of 4</Provides>
+        </GameModifier>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+        <RarityDisplay>Common</RarityDisplay>
+        <IsUsable>0</IsUsable>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>JB_AxeThrowers</Attribute>
+            <Target>Player</Target>
+        </Prereq>	
+        <Prereq>
+            <Type>Tech</Type>
+            <Attribute>Weaponry</Attribute>
+        </Prereq>	
+        <ArtDef>JB_ThrowingAxes_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="JB_ThrowingAxes_ArtDef">
+            <GameItemTypeModelPack InternalName="JB_ThrowingAxes_Default">
+                <IconFile>JB_ThrowingAxes_Item.png</IconFile>
+                <GameItemTypeModel>
+                </GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>	
+	
+	<ContainerAdeptsTraitsItems>
+		<GameItemType InternalName="JB_TomeoftheInferno_AdeptsFire">
+			<DisplayName>Tome of the Inferno</DisplayName>
+			<Description>From lava flow and fallen star
+	To burning heart of the Quendar
+	All light, all fear,
+	all pain holds dear
+	Is held within the magistar</Description>
+			<ShopValue>90</ShopValue>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockUnitAbility</Attribute>
+				<StrVal>Fire1</StrVal>
+				<Provides>Grants the Fire Apprentice ability</Provides>
+			</GameModifier>
+			<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+			<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+			<IsUsable>1</IsUsable>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_AdeptsFire</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Arcane_Mastery</Attribute>
+			</Prereq>
+			<ArtDef>TomeoftheInferno_ArtDef</ArtDef>
+		</GameItemType>
+		<GameItemType InternalName="JB_TomeoftheMountain_AdeptsEarth">
+			<DisplayName>Tome of the Mountain</DisplayName>
+			<Description>Mountain sons and miners born
+	Scattered when the world was torn
+	Deaf to shards,
+	with iron guards
+	Whom the Aivernach mourn</Description>
+			<ShopValue>90</ShopValue>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockUnitAbility</Attribute>
+				<StrVal>Earth1</StrVal>
+				<Provides>Grants the Earth Apprentice ability</Provides>
+			</GameModifier>
+			<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+			<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+			<IsUsable>1</IsUsable>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_AdeptsEarth</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Arcane_Mastery</Attribute>
+			</Prereq>
+			<ArtDef>TomeoftheMountain_ArtDef</ArtDef>
+		</GameItemType>
+		<GameItemType InternalName="JB_TomeoftheWaves_AdeptsAir">
+			<DisplayName>Tome of the Waves</DisplayName>
+			<Description>What has Cyndrum's pool revealed?
+	Can wounds of centuries be healed?
+	Beneath the waves
+	How many graves?
+	What darkness has the fool unsealed?</Description>
+			<ShopValue>90</ShopValue>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockUnitAbility</Attribute>
+				<StrVal>Water1</StrVal>
+				<Provides>Grants the Water Apprentice ability</Provides>
+			</GameModifier>
+			<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+			<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+			<IsUsable>1</IsUsable>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_AdeptsWater</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Arcane_Mastery</Attribute>
+			</Prereq>
+			<ArtDef>TomeoftheWaves_ArtDef</ArtDef>
+		</GameItemType>
+		<GameItemType InternalName="JB_TomeoftheWind_AdeptsAir">
+			<DisplayName>Tome of the Wind</DisplayName>
+			<Description>Sing that dawn will rise each day
+	Sing that Hope won't fall away
+	That wild men
+	Can rise again
+	And that the rebel court will stay</Description>
+			<ShopValue>90</ShopValue>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockUnitAbility</Attribute>
+				<StrVal>Air1</StrVal>
+				<Provides>Grants the Air Apprentice ability</Provides>
+			</GameModifier>
+			<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+			<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+			<IsUsable>1</IsUsable>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_AdeptsAir</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Arcane_Mastery</Attribute>
+			</Prereq>
+			<ArtDef>TomeoftheWind_ArtDef</ArtDef>
+		</GameItemType>
+		<GameItemType InternalName="JB_TomeoftheStyx_AdeptsDeath">
+			<DisplayName>Tome of the Styx</DisplayName>
+			<Description>Golgoth sings, and we are wise enough to hear.
+		Our sole hope is obeying him, wisely in fear.
+		Death is the only sovereign, slayer of even the Sun.
+		We shall gain purpose under its eternal damnation!</Description>
+			<ShopValue>90</ShopValue>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockUnitAbility</Attribute>
+				<StrVal>Death1</StrVal>
+				<Provides>Grants the Death Apprentice ability</Provides>
+			</GameModifier>
+			<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+			<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+			<IsUsable>1</IsUsable>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_AdeptsDeath</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Arcane_Mastery</Attribute>
+			</Prereq>
+			<ArtDef>ArtDef_X_TomeOfTheStyx_Consumable</ArtDef>
+		</GameItemType>
+		<GameItemType InternalName="JB_TomeoftheSun_AdeptsLife">
+			<DisplayName>Tome of the Sun</DisplayName>
+			<Description>Who can feel life's tingling ember?
+			I tell you Llanwylln shall for ever remember.
+			Where even persist cracked soil and drought,
+			green stirrings grow, and shall in the end win out.</Description>
+			<ShopValue>90</ShopValue>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockUnitAbility</Attribute>
+				<StrVal>Life1</StrVal>
+				<Provides>Grants the Life Apprentice ability</Provides>
+			</GameModifier>
+			<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+			<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+			<IsUsable>1</IsUsable>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_AdeptsLife</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Arcane_Mastery</Attribute>
+			</Prereq>
+			<ArtDef>ArtDef_X_TomeOfTheSun_Consumable</ArtDef>
+		</GameItemType>
+		<GameItemType InternalName="JB_TomeofBattle_AdeptsBattle">
+			<DisplayName>Tome of Battle</DisplayName>
+			<Description>Tome of Battle Magic.</Description>
+			<ShopValue>90</ShopValue>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockUnitAbility</Attribute>
+				<StrVal>JB_SpellbookBattle1</StrVal>
+				<Provides>Grants the Battle Apprentice ability</Provides>
+			</GameModifier>
+			<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+			<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+			<IsUsable>1</IsUsable>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_AdeptsBattle</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Arcane_Mastery</Attribute>
+			</Prereq>
+			<ArtDef>ArtDef_X_TomeOfTheInferno_Consumable</ArtDef>
+		</GameItemType>
+		<GameItemType InternalName="JB_TomeofBeasts_AdeptsBeast">
+			<DisplayName>Tome of Beasts</DisplayName>
+			<Description>Tome of Beast Magic.</Description>
+			<ShopValue>90</ShopValue>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockUnitAbility</Attribute>
+				<StrVal>JB_SpellbookBeast1</StrVal>
+				<Provides>Grants the Beast Apprentice ability</Provides>
+			</GameModifier>
+			<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+			<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+			<IsUsable>1</IsUsable>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_AdeptsBeast</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Arcane_Mastery</Attribute>
+			</Prereq>
+			<ArtDef>ArtDef_X_TomeOfTheWind_Consumable</ArtDef>
+		</GameItemType>
+		<GameItemType InternalName="JB_TomeofNature_AdeptsNature">
+			<DisplayName>Tome of Nature</DisplayName>
+			<Description>Tome of Nature Magic.</Description>
+			<ShopValue>90</ShopValue>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockUnitAbility</Attribute>
+				<StrVal>JB_SpellbookNature1</StrVal>
+				<Provides>Grants the Nature Apprentice ability</Provides>
+			</GameModifier>
+			<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+			<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+			<IsUsable>1</IsUsable>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_AdeptsNature</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Arcane_Mastery</Attribute>
+			</Prereq>
+			<ArtDef>ArtDef_X_TomeOfTheMountain_Consumable</ArtDef>
+		</GameItemType>
+		<GameItemType InternalName="JB_TomeofShadow_AdeptsShadow">
+			<DisplayName>Tome of Shadows</DisplayName>
+			<Description>Tome of Shadow Magic.</Description>
+			<ShopValue>90</ShopValue>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockUnitAbility</Attribute>
+				<StrVal>JB_SpellbookShadow1</StrVal>
+				<Provides>Grants the Shadow Apprentice ability</Provides>
+			</GameModifier>
+			<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+			<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+			<IsUsable>1</IsUsable>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_AdeptsShadow</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Arcane_Mastery</Attribute>
+			</Prereq>
+			<ArtDef>ArtDef_X_TomeOfTheStyx_Consumable</ArtDef>
+		</GameItemType>
+    </ContainerAdeptsTraitsItems>
+	
+</GameItemTypes>

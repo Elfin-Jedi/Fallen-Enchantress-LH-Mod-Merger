@@ -1,0 +1,1115 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<Quests>
+	<QuestDef InternalName="Event_X_MartyrsPath_240">
+		<DisplayName>The Martyr's Path</DisplayName>
+		<Description>Alexandros, a warrior looking for aid to reach the monster infested Idol of Cairn, is asking to speak to you. He hasn't aided or hindered our war efforts but had ignored prior calls to join the army.</Description>
+		<IsStartingPointQuest>0</IsStartingPointQuest>
+		<ShortTextAccept>Let him in</ShortTextAccept>
+		<ShortTextDeny>I don't have time for this</ShortTextDeny>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>TurnNumber</TriggerType>
+		<TriggerData>240</TriggerData>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>1</SpawnRating>
+		<TriggerChance>3000</TriggerChance>
+		<PostTriggerChance>180</PostTriggerChance>
+		<Image>DLC02_Q_Martyrs.png</Image>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<NextObjectiveID>1</NextObjectiveID>
+			<AutoFulfillSuccessConditionsOnSetup>1</AutoFulfillSuccessConditionsOnSetup>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<ChoiceText>"Long ago my family made a wager with the garrote Ash-rend." Alexandros begins. "He saved our small village, but the price was that the eldest male of each generation would return to his lair before the end of their third decade."
+			
+			"I am the seventh son to do so," Alexandros continues, "but the world has changed since the pact was made, and now ogres infest the area around Ash-rend's home. Could you clear the creatures surrounding the lair so that I can fulfill my duty?"</ChoiceText>
+			<ChoiceMedallion>DLC02_Q_Martyrs.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>Yes, we will clear the monsters around Ash-rend's lair</Description>
+				<NextObjectiveID>2</NextObjectiveID>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>You are a fool to serve forgotten oaths, you are enlisted in my army instead</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<PopupMessage>Alexandros refuses to submit and is killed by your guards when he tries to flee. He was of little use, but at least he left his sword behind.</PopupMessage>
+			<Treasure>
+				<GameModifier>
+					<ModType>GiveItem</ModType>
+					<Attribute>GreatSword</Attribute>
+					<Value>100</Value>
+				</GameModifier>
+			</Treasure>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>2</ObjectiveID>
+			<NextObjectiveID>3</NextObjectiveID>
+			<Treasure>
+				<GameModifier>
+					<ModType>Map</ModType>
+					<Attribute>CreateGoodieHut</Attribute>
+					<StrVal>Path to the Cairn Idol</StrVal>
+					<Unitclass>GH_Quest_Cave</Unitclass>
+					<Radius>9</Radius>
+				</GameModifier>
+			</Treasure>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Find the path to the Cairn Idol</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>ClearGoodieHut</Type>
+				<TextData>GH_Quest_Cave</TextData>
+				<Flag>RevealTarget</Flag>
+			</QuestConditionDef>
+			<ChoiceText>Long ago travelers offered sacrifices here in an attempt to appease fickle gods. Now Ogres and Hergon restlessly prowl around it, bickering and snorting at each other. If you want to continue to Ash-rend's lair you will need to pass through this area.</ChoiceText>
+			<ChoiceMedallion>Ogre_Medallion.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>Attack!</Description>
+				<NextObjectiveID>3</NextObjectiveID>
+				<Encounter>
+					<Liklihood>100</Liklihood>
+					<BattleIdentifier>Ogre</BattleIdentifier>
+					<WillRespawn>0</WillRespawn>
+					<WanderingRadius>0</WanderingRadius>
+					<UnitInstance>
+						<UnitType>Ogre</UnitType>
+						<Level>5</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>YoungOgre</UnitType>
+						<Level>4</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>YoungOgre</UnitType>
+						<Level>4</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>YoungOgre</UnitType>
+						<Level>4</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>Hergon_Male</UnitType>
+						<Level>6</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>Hergon_Female</UnitType>
+						<Level>3</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>Hergon_Female</UnitType>
+						<Level>3</Level>
+					</UnitInstance>
+				</Encounter>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I'll return later</Description>
+				<NextObjectiveID>2</NextObjectiveID>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>3</ObjectiveID>
+			<NextObjectiveID>4</NextObjectiveID>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Defeat the Ogres</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>BattleFinished</Type>
+				<TextData>Ogre</TextData>
+				<MoreTextData>Victory</MoreTextData>
+				<Flag>SetQuestVictory</Flag>
+			</QuestConditionDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>4</ObjectiveID>
+			<NextObjectiveID>5</NextObjectiveID>
+			<Treasure>
+				<GameModifier>
+					<ModType>Map</ModType>
+					<Attribute>CreateGoodieHut</Attribute>
+					<StrVal>Cairn Idol</StrVal>
+					<Unitclass>GH_Quest_Garrote</Unitclass>
+					<Radius>2</Radius>
+				</GameModifier>
+			</Treasure>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Find the Cairn Idol</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>ClearGoodieHut</Type>
+				<TextData>GH_Quest_Garrote</TextData>
+				<Flag>RevealTarget</Flag>
+			</QuestConditionDef>
+			<ChoiceText>The home of the garrote Ash-rend lies before you. As you wait Ash-rend comes to the entrance of his lair, looking out with ravenous, hungry eyes.
+			
+			"Thank you for your aid." Alexandros says.
+			
+			"What is next? Are you going to sacrifice yourself to this creature?" You ask.
+			
+			"Yes, it is the oath that saved that village so long ago." Alexandros answers.</ChoiceText>
+			<ChoiceMedallion>DLC02_Q_Martyrs.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_01.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>There will be no need for an oath if the Ash-rend is dead (Attack!)</Description>
+				<NextObjectiveID>5</NextObjectiveID>
+				<PopupMessage>"My son is the eldest male of his generation. I was prepared for my sacrifice, but not for his. If you mean to end these sacrifices to Ash-rend, then I will join you."</PopupMessage>
+			<Treasure>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>UnitJoinArmy</Attribute>
+					<StrVal>Champion_Alexandros_XD</StrVal>
+					<StrVal2>Alexandros</StrVal2>
+					<Value>7</Value>
+					<Unitclass>Champion</Unitclass>
+				</GameModifier>
+			</Treasure>
+				<Encounter>
+					<Liklihood>100</Liklihood>
+					<BattleIdentifier>Garrote</BattleIdentifier>
+					<UnitInstance>
+						<UnitType>Garrote</UnitType>
+						<UnitName>Ash-rend</UnitName>
+						<Level>15</Level>
+					</UnitInstance>
+				</Encounter>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Your devotion will be remembered (unlocks the Martyr's Shrine)</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+			<Treasure>
+				<GameModifier>
+					<ModType>Player</ModType>
+					<Attribute>UnlockImprovement</Attribute>
+					<StrVal>MartyrsShrine</StrVal>
+				</GameModifier>
+			</Treasure>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>5</ObjectiveID>
+			<NextObjectiveID>6</NextObjectiveID>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Defeat Ash-rend</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>BattleFinished</Type>
+				<TextData>Garrote</TextData>
+				<MoreTextData>Victory</MoreTextData>
+				<Flag>SetQuestVictory</Flag>
+			</QuestConditionDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>6</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+			<Treasure>
+				<GameModifier InternalName="Reward3">
+					<ModType>Unit</ModType>
+					<Attribute>GiveExperience</Attribute>
+					<Value>9</Value>
+				</GameModifier>
+			</Treasure>
+			<Treasure>
+				<GameModifier InternalName="Reward4">
+					<ModType>Resource</ModType>
+					<Attribute>Fame</Attribute>
+					<Value>15</Value>
+				</GameModifier>
+			</Treasure>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Event_X_SonsOfTheDepraved_130">
+		<DisplayName>Sons of the Depraved</DisplayName>
+		<Description>A group of richly appointed men wishes to speak with you. They are said to be free with their coins, and delight in making people perform degrading and cruel acts. A man, who owed them a gambling debt gave them his pet dog to repay it. They butchered the animal while he watched. A woman, who needed their protection against bandits, was forced to do even worse to pay them. Would you like to meet with them?</Description>
+		<IsStartingPointQuest>0</IsStartingPointQuest>
+		<ShortTextAccept>Yes</ShortTextAccept>
+		<ShortTextDeny>No</ShortTextDeny>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>TurnNumber</TriggerType>
+		<TriggerData>130</TriggerData>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>1</SpawnRating>
+		<TriggerChance>3000</TriggerChance>
+		<PostTriggerChance>180</PostTriggerChance>
+		<Image>DLC02_Q_Depraved.png</Image>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<NextObjectiveID>1</NextObjectiveID>
+			<AutoFulfillSuccessConditionsOnSetup>1</AutoFulfillSuccessConditionsOnSetup>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<ChoiceText>A fat man dressed in fine silks, with rings on his fingers and ears and pale, almost chalky, powder on his face comes before you and kneels low. He is followed by a retinue of servants and a catamite.
+			
+			"My lord." he says. "It is truly an honor to appear before you. I've brought a gift, a small token to your glorious rule."
+			
+			You can't help but feel sickened by his empty smile and dark vulture eyes.</ChoiceText>
+			<ChoiceMedallion>DLC02_Q_Depraved.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>Thank you for your generous gift (+50 Gildar)</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<PopupMessage>"It is only a small token of what we offer." he says with a wide smile over yellowed teeth. "Build us a Temple and all of your empire may share in our delights." (unlocked the Temple of Delights)</PopupMessage>
+			<Treasure>
+				<GameModifier>
+					<ModType>Player</ModType>
+					<Attribute>UnlockImprovement</Attribute>
+					<StrVal>TempleOfDelights</StrVal>
+				</GameModifier>
+			</Treasure>
+			<Treasure>
+				<GameModifier>
+					<ModType>Player</ModType>
+					<Attribute>Treasury</Attribute>
+					<Value>50</Value>
+				</GameModifier>
+			</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>You are a curse, leave and never enter my lands again</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>We do not tolerate cruelty, even masked behind honeyed words. Kill them but keep the gifts (+50 Gildar)</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+			<Treasure>
+				<GameModifier>
+					<ModType>Player</ModType>
+					<Attribute>Treasury</Attribute>
+					<Value>50</Value>
+				</GameModifier>
+			</Treasure>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Event_X_TheForgettingGod_80">
+		<DisplayName>The Forgetting God</DisplayName>
+		<Description>Your scouts have heard rumors of an ancient library in the wilderness. Perhaps the information stored in its tomes and manuscripts can be of use to our sages.</Description>
+		<IsStartingPointQuest>0</IsStartingPointQuest>
+		<AllowQuestRejection>0</AllowQuestRejection>
+		<ShortTextAccept>Investigate the Rumors</ShortTextAccept>
+		<ShortTextDeny>I don't have time for this</ShortTextDeny>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>TurnNumber</TriggerType>
+		<TriggerData>80</TriggerData>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>1</SpawnRating>
+		<TriggerChance>3000</TriggerChance>
+		<PostTriggerChance>180</PostTriggerChance>
+		<Image>Scroll.png</Image>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<NextObjectiveID>1</NextObjectiveID>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<Treasure>
+				<GameModifier>
+					<ModType>Map</ModType>
+					<Attribute>CreateGoodieHut</Attribute>
+					<StrVal>Ancient Library</StrVal>
+					<Unitclass>GH_Quest_DemonTomb</Unitclass>
+					<Radius>4</Radius>
+				</GameModifier>
+			</Treasure>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Find the Ancient Library</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>ClearGoodieHut</Type>
+				<TextData>GH_Quest_DemonTomb</TextData>
+				<Flag>RevealTarget</Flag>
+			</QuestConditionDef>
+			<ChoiceText>The ashes of a bonfire still smoke in front of the ancient library. There is nothing of value left inside, only a maze of empty scriptoriums, reading rooms and studies.
+			
+			Tracks lead away from the library and to a small camp where men are laughing, drinking wine and tossing the remaining books into a campfire. They stop, suddenly quiet, when they notice you and your soldiers standing at the edge of their camp.
+			
+			"Those books were worth more than a Mancer dowry." you say, angry at the waste. "Why are you destroying them?"
+			
+			"My lord," one of them sputters, dropping to his knees. "Drink and you will understand. There is no value in these memories. Thinking on the future causes worry, thinking on the past causes sadness. Even in this you are angry at me, but you do not know me. I would share my camp, my wine and my laughter with you. Do not be bothered by past things."</ChoiceText>
+			<ChoiceMedallion>DLC02_Q_Forgetting.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>Sit down, hear his stories and drink some wine</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<PopupMessage>You awake in the morning, lightheaded but more at ease than you have been in years. You remember little of the previous night except for laughter and dreamy discussion of building a place where your citizens can escape the toil of daily life. (unlocked the Temple of Forgetting)</PopupMessage>
+			<Treasure>
+				<GameModifier>
+					<ModType>Player</ModType>
+					<Attribute>UnlockImprovement</Attribute>
+					<StrVal>TempleOfForgetting</StrVal>
+				</GameModifier>
+			</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Salvage the few books that are left (+20 Research)</Description>
+				<NextObjectiveID>2</NextObjectiveID>
+			<Treasure>
+				<GameModifier>
+					<ModType>Resource</ModType>
+					<Attribute>Research</Attribute>
+					<Value>20</Value>
+				</GameModifier>
+			</Treasure>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Event_X_KeeperOfSecrets_210">
+		<DisplayName>Keeper of Secrets</DisplayName>
+		<Description>One of your soldiers asks to speak directly to you. Do you wish to receive him?</Description>
+		<IsStartingPointQuest>0</IsStartingPointQuest>
+		<ShortTextAccept>Yes</ShortTextAccept>
+		<ShortTextDeny>I don't have time for this</ShortTextDeny>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>TurnNumber</TriggerType>
+		<TriggerData>210</TriggerData>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>3</SpawnRating>
+		<TriggerChance>3000</TriggerChance>
+		<PostTriggerChance>180</PostTriggerChance>
+		<Image>Q_Brood.png</Image>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<NextObjectiveID>1</NextObjectiveID>
+			<AutoFulfillSuccessConditionsOnSetup>1</AutoFulfillSuccessConditionsOnSetup>
+			<ChoiceText>"My lord." your administrator begins nervously, "I have come to beg for your mercy. I have stolen from the empire. Only a pittance, certainly nothing that would be noticed, but it makes little difference. I have committed the crime, and I accept whatever punishment you decide."
+			
+			"What led you to tell me?" you ask.
+			
+			He wipes his brow before answering. "I would have come forth on my own. But before I could, I received a letter. It said they knew all things done in darkness, it listed exactly what I had stolen and when. And it said that I must do what they command or they will tell you what I had done."
+			
+			"What did they want you to do?"
+			
+			"To document our troop counts and movement and leave it in the remains of an old farmhouse."</ChoiceText>
+			<ChoiceMedallion>Q_Brood.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>Payback the Gildar you have stolen and your crime will be forgiven (+10 Gildar, Ends the Quest)</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+			<Treasure>
+				<GameModifier>
+					<ModType>Player</ModType>
+					<Attribute>Treasury</Attribute>
+					<Value>10</Value>
+				</GameModifier>
+			</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Imprison the man for his thievery (-1% Unrest, Ends the Quest)</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<PopupMessage>The criminals in your lands may fear you, but commoners whisper that your strict judgement will keep others from being open with you.</PopupMessage>
+				<Treasure>
+					<GameModifier>
+						<ModType>Player</ModType>
+						<Attribute>AbilityBonus</Attribute>
+						<StrVal>A_Additive_Unrest</StrVal>
+						<Value>-1</Value>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Let us wait at this old farmhouse and see who comes to pickup your note</Description>
+				<NextObjectiveID>2</NextObjectiveID>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>2</ObjectiveID>
+			<NextObjectiveID>3</NextObjectiveID>
+			<Treasure>
+				<GameModifier>
+					<ModType>Map</ModType>
+					<Attribute>CreateGoodieHut</Attribute>
+					<StrVal>Abandoned Farmhouse</StrVal>
+					<Unitclass>GH_Quest_AbandonedVillage</Unitclass>
+					<Radius>6</Radius>
+				</GameModifier>
+			</Treasure>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Find the Abandoned Farmhouse</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>ClearGoodieHut</Type>
+				<TextData>GH_Quest_AbandonedVillage</TextData>
+				<Flag>RevealTarget</Flag>
+			</QuestConditionDef>
+			<ChoiceText>They have beaten you here, and they left a present, the corpse of the administrator that had stolen from you. He has been hung from the rafters by his tongue. It can barely support the weight of his body and when you touch him it comes free with a meaty tearing sound that echoes through his hollow chest.
+			
+			There is no other note or indication. They must be nearby to have acted so quickly, but there is no indication of where.</ChoiceText>
+			
+			<ChoiceMedallion>G_Quest_Abandoned_Village_01.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>We should keep our eyes out for anything unusual</Description>
+				<NextObjectiveID>3</NextObjectiveID>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>This problem has taken care of itself (Ends the Quest)</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>3</ObjectiveID>
+			<NextObjectiveID>4</NextObjectiveID>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<Treasure>
+				<GameModifier>
+					<ModType>Map</ModType>
+					<Attribute>CreateGoodieHut</Attribute>
+					<StrVal>Mysterious Camp</StrVal>
+					<Unitclass>GH_Quest_Camp</Unitclass>
+					<Radius>6</Radius>
+				</GameModifier>
+			</Treasure>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Looks for signs of the secret order</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>ClearGoodieHut</Type>
+				<TextData>GH_Quest_Camp</TextData>
+			</QuestConditionDef>
+			<QuestConditionDef>
+				<ID>0</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Collect 50 gildar to hire the Keeper of Secrets</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>50</NumericData>
+			</QuestConditionDef>
+			<ChoiceText>A few travelers sit quietly talking around the fire. They are dressed in dark clothes and they pull masks over their faces when you get close.
+			
+			"Go back to your throne room, there is nothing for you here." One of their number says, though you can't tell which one.</ChoiceText>
+			<ChoiceMedallion>DLC02_Q_Secrets.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_01.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>I don't want to fight you, I want to hire you (-50 Gildar)</Description>
+				<RequiredConditionID>0</RequiredConditionID>
+				<NextObjectiveID>4</NextObjectiveID>
+				<PopupMessage>"Then build a temple for us in one of your cities and we will join you and allow you to buy our armor in your shop."</PopupMessage>
+				<Treasure>
+					<GameModifier>
+						<ModType>Player</ModType>
+						<Attribute>UnlockImprovement</Attribute>
+						<StrVal>TempleOfSecrets</StrVal>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>You murdered one of my men, and now justice has found you</Description>
+				<NextObjectiveID>5</NextObjectiveID>
+				<Encounter>
+					<Liklihood>100</Liklihood>
+					<BattleIdentifier>SilentGuard</BattleIdentifier>
+					<WillRespawn>0</WillRespawn>
+					<WanderingRadius>0</WanderingRadius>
+					<UnitInstance>
+						<UnitType>SilentGuardA</UnitType>
+						<UnitGroupingType>UnitGroupingType_Squad</UnitGroupingType>
+						<Level>3</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>SilentGuardA</UnitType>
+						<UnitGroupingType>UnitGroupingType_Squad</UnitGroupingType>
+						<Level>3</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>SilentGuardA</UnitType>
+						<UnitGroupingType>UnitGroupingType_Squad</UnitGroupingType>
+						<Level>3</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>SilentGuardB</UnitType>
+						<UnitGroupingType>UnitGroupingType_Group</UnitGroupingType>
+						<Level>5</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>SilentGuardB</UnitType>
+						<UnitGroupingType>UnitGroupingType_Group</UnitGroupingType>
+						<Level>5</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>SilentGuardB</UnitType>
+						<UnitGroupingType>UnitGroupingType_Group</UnitGroupingType>
+						<Level>5</Level>
+					</UnitInstance>
+				</Encounter>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Leave quietly (Ends the Quest)</Description>
+				<QuestFailure>1</QuestFailure>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>4</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>5</ObjectiveID>
+			<NextObjectiveID>6</NextObjectiveID>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Destroy the Silent Guard!</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>BattleFinished</Type>
+				<TextData>SilentGuard</TextData>
+				<MoreTextData>Victory</MoreTextData>
+			</QuestConditionDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>6</ObjectiveID>
+			<NextObjectiveID>7</NextObjectiveID>
+			<AutoFulfillSuccessConditionsOnSetup>1</AutoFulfillSuccessConditionsOnSetup>
+			<Treasure>
+				<GameModifier>
+					<ModType>GiveItem</ModType>
+					<Attribute>LeatherBoots_Assassin</Attribute>
+					<Value>100</Value>
+				</GameModifier>
+			</Treasure>
+			<Treasure>
+				<GameModifier>
+					<ModType>GiveItem</ModType>
+					<Attribute>LeatherBreastpiece_Assassin</Attribute>
+					<Value>100</Value>
+				</GameModifier>
+			</Treasure>
+			<Treasure>
+				<GameModifier>
+					<ModType>GiveItem</ModType>
+					<Attribute>LeatherGreaves_Assassin</Attribute>
+					<Value>100</Value>
+				</GameModifier>
+			</Treasure>
+			<Treasure>
+				<GameModifier>
+					<ModType>GiveItem</ModType>
+					<Attribute>LeatherHelmet_Assassin</Attribute>
+					<Value>100</Value>
+				</GameModifier>
+			</Treasure>
+			<Treasure>
+				<GameModifier>
+					<ModType>GiveItem</ModType>
+					<Attribute>LeatherVambraces_Assassin</Attribute>
+					<Value>100</Value>
+				</GameModifier>
+			</Treasure>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>7</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+			<Treasure>
+				<GameModifier InternalName="Reward3">
+					<ModType>Unit</ModType>
+					<Attribute>GiveExperience</Attribute>
+					<Value>9</Value>
+				</GameModifier>
+			</Treasure>
+			<Treasure>
+				<GameModifier InternalName="Reward4">
+					<ModType>Resource</ModType>
+					<Attribute>Fame</Attribute>
+					<Value>15</Value>
+				</GameModifier>
+			</Treasure>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Event_X_TheBloodGod_260">
+		<DisplayName>The Blood God</DisplayName>
+		<Description>A new cult has spread into your cities, and the people whisper of a god of suffering and victory. There is little known about it except rumors that its members paint themselves with blood and worship at the sites of recent battles.</Description>
+		<IsStartingPointQuest>0</IsStartingPointQuest>
+		<ShortTextAccept>Investigate the Rumors</ShortTextAccept>
+		<ShortTextDeny>I don't have time for this</ShortTextDeny>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>TurnNumber</TriggerType>
+		<TriggerData>260</TriggerData>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>3</SpawnRating>
+		<TriggerChance>3000</TriggerChance>
+		<PostTriggerChance>180</PostTriggerChance>
+		<Image>DLC02_Q_BloodGod.png</Image>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<NextObjectiveID>1</NextObjectiveID>
+			<AutoFulfillSuccessConditionsOnSetup>1</AutoFulfillSuccessConditionsOnSetup>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<ChoiceText>There are only a handful of followers in your capital, and your guards bring them to you as well as evidence from the shack they shared. There are restraints, knives and hooks for bleeding out livestock (though no livestock has been found). Those that live nearby report hearing pained screams, and that these men were on the streets inciting violence, murder and revolt.
+			
+			"Do you follow this blood god?" You ask. "Is your loyalty to him, or to your kingdom?"
+			
+			"To you and your kingdom my lord." the ragged man answers. "But we seek to be strong, and to purge the weak of our kingdom. How else can this be done without war? The tools of diplomats, merchants and sages are illusions. It is only through brutal conquest that we will rise."</ChoiceText>
+			<ChoiceMedallion>DLC02_Q_BloodGod.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>I wish to know more of your god (+2% Faction wide Unrest)</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<PopupMessage>"Build a monument to the Blood God to receive his blessing." (unlocked the Temple of the Blood God)</PopupMessage>
+			<Treasure>
+				<GameModifier>
+					<ModType>Player</ModType>
+					<Attribute>AbilityBonus</Attribute>
+					<StrVal>A_Additive_Unrest</StrVal>
+					<Value>2</Value>
+				</GameModifier>
+			</Treasure>
+			<Treasure>
+				<GameModifier>
+					<ModType>Player</ModType>
+					<Attribute>UnlockImprovement</Attribute>
+					<StrVal>TempleOfTheBloodGod</StrVal>
+				</GameModifier>
+			</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Imprison them until they tell us about the source of this cult</Description>
+				<NextObjectiveID>2</NextObjectiveID>
+				<PopupMessage>The men talk about a distant temple to their god. If you are to purge this cult from your lands, it must be done there.</PopupMessage>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Execute them as a sign to others that would break my laws (-2% Faction Wide Unrest, Ends the Quest)</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+			<Treasure>
+				<GameModifier>
+					<ModType>Player</ModType>
+					<Attribute>AbilityBonus</Attribute>
+					<StrVal>A_Additive_Unrest</StrVal>
+					<Value>-2</Value>
+				</GameModifier>
+			</Treasure>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>2</ObjectiveID>
+			<NextObjectiveID>3</NextObjectiveID>
+			<Treasure>
+				<GameModifier>
+					<ModType>Map</ModType>
+					<Attribute>CreateGoodieHut</Attribute>
+					<StrVal>Blood God Temple</StrVal>
+					<Unitclass>GH_Quest_TempleOfTheBloodGod</Unitclass>
+					<Radius>9</Radius>
+				</GameModifier>
+			</Treasure>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Find the Temple of the Blood God</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>ClearGoodieHut</Type>
+				<TextData>GH_Quest_TempleOfTheBloodGod</TextData>
+				<Flag>RevealTarget</Flag>
+			</QuestConditionDef>
+			<ChoiceText>Fountains of blood from an unknown source spill down into basins large enough to slaughter an ox in. Chanting from inside the temple is closer to war cries and the screams of battle than prayer.
+			
+			Inside there is an arena with a mass of bruised and battered zealots cheering as a defeated warrior has his skin ripped off and held up like ragged banners. A giant watches all of this from a stone throne on a dais. He shows little interest in the chaos around him. A massive sword rests beside the throne and it drips with blood that has covered the dais with a thin pool of red and black.</ChoiceText>
+			<ChoiceMedallion>DLC02_Q_TempleOfTheBloodGod.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>Attack!</Description>
+				<NextObjectiveID>3</NextObjectiveID>
+				<Encounter>
+					<Liklihood>100</Liklihood>
+					<BattleIdentifier>Asrk</BattleIdentifier>
+					<TacticalMap>T_Temple_Hall_01</TacticalMap>
+					<WillRespawn>0</WillRespawn>
+					<WanderingRadius>0</WanderingRadius>
+					<UnitInstance>
+						<UnitType>Champion_Asrk_XD</UnitType>
+						<UnitName>Asrk Battleborn</UnitName>
+						<UnitSubclassType>Champion</UnitSubclassType>
+						<Level>9</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>Butcherman_Hecatomb</UnitType>
+						<Level>5</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>Butcherman_Martyr</UnitType>
+						<UnitGroupingType>UnitGroupingType_Party</UnitGroupingType>
+						<Level>4</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>Butcherman_Martyr</UnitType>
+						<UnitGroupingType>UnitGroupingType_Party</UnitGroupingType>
+						<Level>4</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>Butcherman</UnitType>
+						<UnitGroupingType>UnitGroupingType_Group</UnitGroupingType>
+						<Level>3</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>Butcherman</UnitType>
+						<UnitGroupingType>UnitGroupingType_Group</UnitGroupingType>
+						<Level>3</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>Butcherman</UnitType>
+						<UnitGroupingType>UnitGroupingType_Group</UnitGroupingType>
+						<Level>3</Level>
+					</UnitInstance>
+				</Encounter>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I'll return later</Description>
+				<NextObjectiveID>2</NextObjectiveID>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>3</ObjectiveID>
+			<NextObjectiveID>4</NextObjectiveID>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Defeat Asrk Battleborn</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>BattleFinished</Type>
+				<TextData>Asrk</TextData>
+				<MoreTextData>Victory</MoreTextData>
+			</QuestConditionDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>4</ObjectiveID>
+			<NextObjectiveID>5</NextObjectiveID>
+			<AutoFulfillSuccessConditionsOnSetup>1</AutoFulfillSuccessConditionsOnSetup>
+			<ChoiceText>The cult is broken. Picking through the remains you find only one item of value, Asrk's sword.</ChoiceText>
+			<ChoiceMedallion>DLC02_Q_TempleOfTheBloodGod.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>Okay</Description>
+				<NextObjectiveID>5</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Longsword_Bleeding</Attribute>
+						<Value>100</Value>
+					</GameModifier>
+				</Treasure>
+				<Treasure>
+					<GameModifier InternalName="Reward3">
+						<ModType>Unit</ModType>
+						<Attribute>GiveExperience</Attribute>
+						<Value>9</Value>
+					</GameModifier>
+				</Treasure>
+				<Treasure>
+					<GameModifier InternalName="Reward4">
+						<ModType>Resource</ModType>
+						<Attribute>Fame</Attribute>
+						<Value>15</Value>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>5</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Event_X_Cnotta_160">
+		<DisplayName>Cnotta</DisplayName>
+		<Description>Orphanages are common in Umber. Places where children displaced by war, famine or disease stay in conditions that make the slave pits of Magnar look elegant. In most, the overseer finances the orphanage by selling the children for experiments, workers, or Sawol (an Umber holiday marked by contemplation, self-mutilation and sacrifice).
+		
+		But the overseer of Adytum Orphanage turned away all such requests. All children were taken in, no matter how young or marked with disease. And none ever left, either by being sold, or by growing old. It went as such for three generations of overseers until one autumn night when two new orphans were brought to the orphanage only to discover that its sprawling grounds were empty. There were no children, no pedagogues or mistress's, and no overseer.
+		
+		There was only water dripping everywhere, though it had not rained. And beneath the orphanage, in halls so dark that torches were as faint as distant stars, there were death crystals built into the walls and within them strange images and reflections. But worst of all was that which still walked through those halls, still partially bound by that which held him for centuries, the demon Cnotta. And from there he wandered out into the world.</Description>
+		<IsStartingPointQuest>0</IsStartingPointQuest>
+		<AllowQuestRejection>0</AllowQuestRejection>
+		<ShortTextAccept>I will be cautious of this creature's passing</ShortTextAccept>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>TurnNumber</TriggerType>
+		<TriggerData>160</TriggerData>
+		<SpawnRating>4</SpawnRating>
+		<TriggerChance>3000</TriggerChance>
+		<PostTriggerChance>180</PostTriggerChance>
+		<Image>DLC02_Q_Cnotta.png</Image>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<NextObjectiveID>1</NextObjectiveID>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<Treasure>
+				<GameModifier>
+					<ModType>Map</ModType>
+					<Attribute>SpawnMonster</Attribute>
+					<Value>1</Value>
+					<Unitclass>AssassinDemon_Hero</Unitclass>
+					<Radius>24</Radius>
+				</GameModifier>
+			</Treasure>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Event_X_DarkSorcerer_250">
+		<DisplayName>The Dark Sorcerer</DisplayName>
+		<Description>We have heard rumors of one that whispers to ambitious men, and trades terrible power for what small amount of virtue remains within them. In this time he has little trouble finding men eager to accept his deal. He is said to have trained the Dark Wizards and raised a tower around the channeler Kainen. He is said to be the first to have summoned demons from the death shards, and to have sold the blood ritual to Amhah.
+		
+		Rumors say he is nearby and if he can be defeated, not only with this blight be removed from this world, but his enchanted robe can be claimed to empower any chaneller that wears it.</Description>
+		<IsStartingPointQuest>0</IsStartingPointQuest>
+		<AllowQuestRejection>0</AllowQuestRejection>
+		<ShortTextAccept>I will be cautious of this creature's passing</ShortTextAccept>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>TurnNumber</TriggerType>
+		<TriggerData>250</TriggerData>
+		<SpawnRating>4</SpawnRating>
+		<TriggerChance>3000</TriggerChance>
+		<PostTriggerChance>180</PostTriggerChance>
+		<Image>DLC02_Q_DarkSorcerer.png</Image>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<NextObjectiveID>1</NextObjectiveID>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<Treasure>
+				<GameModifier>
+					<ModType>Map</ModType>
+					<Attribute>SpawnMonster</Attribute>
+					<Value>1</Value>
+					<Unitclass>DarkWizard_Hero</Unitclass>
+					<Radius>24</Radius>
+				</GameModifier>
+			</Treasure>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Event_X_Pazuzu_225">
+		<DisplayName>Pazuzu, Lord of Fevers</DisplayName>
+		<Description>Pazuzu has been defeated a hundred times. Each time the victor returns triumphant to his camp, he feasts and celebrates his victory. That lasts until the morning when he wakes up covered in sweat. And when his body is dry of sweat, blood begins to bead on his skin.
+		
+		To truly defeat Pazuzu cut off his horn, it is the source of his poison and that power will pass to the one who possesses it.</Description>
+		<IsStartingPointQuest>0</IsStartingPointQuest>
+		<AllowQuestRejection>0</AllowQuestRejection>
+		<ShortTextAccept>I will be cautious of this creature's passing</ShortTextAccept>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>TurnNumber</TriggerType>
+		<TriggerData>225</TriggerData>
+		<SpawnRating>4</SpawnRating>
+		<TriggerChance>3000</TriggerChance>
+		<PostTriggerChance>180</PostTriggerChance>
+		<Image>DLC02_Q_Pazuzu.png</Image>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<NextObjectiveID>1</NextObjectiveID>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<Treasure>
+				<GameModifier>
+					<ModType>Map</ModType>
+					<Attribute>SpawnMonster</Attribute>
+					<Value>1</Value>
+					<Unitclass>DeathDemon_Hero</Unitclass>
+					<Radius>24</Radius>
+				</GameModifier>
+			</Treasure>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Event_X_Rabisu_190">
+		<DisplayName>Rabisu, who dwells in Anguish</DisplayName>
+		<Description>In the distance animals cry and run away, abandoning nests and lairs, throwing themselves off of cliffs and into the sea. Rabisu nears. She is no longer the gentle creature that was murdered in an Amarian scrying pool. Death has transformed her into something more terrible, and she has embodied the suffering of her life.
+		
+		Beware, for she feeds off of the suffering she causes. But the one who defeats her can gain some small portion of her power. And if you are willing to bear it, for it is said that suicide accompanies it, your strength will be unmatched.</Description>
+		<IsStartingPointQuest>0</IsStartingPointQuest>
+		<AllowQuestRejection>0</AllowQuestRejection>
+		<ShortTextAccept>I will be cautious of this creature's passing</ShortTextAccept>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>TurnNumber</TriggerType>
+		<TriggerData>190</TriggerData>
+		<SpawnRating>4</SpawnRating>
+		<TriggerChance>3000</TriggerChance>
+		<PostTriggerChance>180</PostTriggerChance>
+		<Image>DLC02_Q_Rabisu.png</Image>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<NextObjectiveID>1</NextObjectiveID>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<Treasure>
+				<GameModifier>
+					<ModType>Map</ModType>
+					<Attribute>SpawnMonster</Attribute>
+					<Value>1</Value>
+					<Unitclass>Garrote_Hero</Unitclass>
+					<Radius>24</Radius>
+				</GameModifier>
+			</Treasure>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Event_X_GiantSkeleton_90">
+		<DisplayName>The Giant Skeleton</DisplayName>
+		<Description>Tym was an alchemist that was impressive in almost every area except for this height. A deficiency he planned to fix with a permanent growth potion. The potion did cause him to grow, but instead of each part of him becoming 50% larger his entire skeleton grew many times over, and the rest of him, skin, muscle and nerves stayed exactly the same size. It was a painful, but mercifully brief, transformation.
+		
+		That would have been the end of Tym's story and his bones would have been little more than a curiosity until a necromancer happened across them. Now a skeleton that towers over, well... towers, wanders the land destroying buildings like a child playing with blocks.</Description>
+		<IsStartingPointQuest>0</IsStartingPointQuest>
+		<AllowQuestRejection>0</AllowQuestRejection>
+		<ShortTextAccept>I will be cautious of this creature's passing</ShortTextAccept>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>TurnNumber</TriggerType>
+		<TriggerData>90</TriggerData>
+		<SpawnRating>4</SpawnRating>
+		<TriggerChance>3000</TriggerChance>
+		<PostTriggerChance>180</PostTriggerChance>
+		<Image>DLC02_Q_GiantSkeleton.png</Image>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<NextObjectiveID>1</NextObjectiveID>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<Treasure>
+				<GameModifier>
+					<ModType>Map</ModType>
+					<Attribute>SpawnMonster</Attribute>
+					<Value>1</Value>
+					<Unitclass>Skeleton_Hero</Unitclass>
+					<Radius>24</Radius>
+				</GameModifier>
+			</Treasure>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Event_X_PillarOfGrazna_140">
+		<DisplayName>The Pillar of Grazna</DisplayName>
+		<Description>The Pillars of Grazna were a set of powerful golems crafted by Morrigan the Mad out of the red stone of the Asrk Mountain. Unlike most golems they were not given specific areas to guard or instructions to follow. Morrigan's whims changed too frequently for that to be useful so he crafted figurines that allowed him to issue his ever changing commands. In Grazna, the movement of the Pillars was often the only indication that Morrigan had changed plans.
+		
+		There are rumors that one of the Pillars of Grazna is in the wilds. As dangerous as they are if they can be defeated and their figurine claimed, the Pillar will serve the owner.</Description>
+		<IsStartingPointQuest>0</IsStartingPointQuest>
+		<AllowQuestRejection>0</AllowQuestRejection>
+		<ShortTextAccept>I will be cautious of this creature's passing</ShortTextAccept>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>TurnNumber</TriggerType>
+		<TriggerData>140</TriggerData>
+		<SpawnRating>4</SpawnRating>
+		<TriggerChance>3000</TriggerChance>
+		<PostTriggerChance>180</PostTriggerChance>
+		<Image>DLC02_Q_Grazna.png</Image>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<NextObjectiveID>1</NextObjectiveID>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<Treasure>
+				<GameModifier>
+					<ModType>Map</ModType>
+					<Attribute>SpawnMonster</Attribute>
+					<Value>1</Value>
+					<Unitclass>StoneGolem_Hero</Unitclass>
+					<Radius>24</Radius>
+				</GameModifier>
+			</Treasure>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Event_X_Bonesplinter_60">
+		<DisplayName>Bonesplinter</DisplayName>
+		<Description>There are rumors of a powerful War Boar in the wild. According to the few that claim to have seen him he has destroyed outposts, chased Ogres from their lairs and emptied larders. They have taken to calling him Bonesplinter. Now whenever food goes missing or a building collapses Bonesplinter is blamed. But when soldiers arrive there is no sign of the beast. He may be a myth invented by fools, but we would be wise to watch out for him in case he is real.</Description>
+		<IsStartingPointQuest>0</IsStartingPointQuest>
+		<AllowQuestRejection>0</AllowQuestRejection>
+		<ShortTextAccept>I will be cautious of this creature's passing</ShortTextAccept>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>TurnNumber</TriggerType>
+		<TriggerData>60</TriggerData>
+		<SpawnRating>4</SpawnRating>
+		<TriggerChance>3000</TriggerChance>
+		<PostTriggerChance>180</PostTriggerChance>
+		<Image>DLC02_Q_Bonesplinter.png</Image>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<NextObjectiveID>1</NextObjectiveID>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<Treasure>
+				<GameModifier>
+					<ModType>Map</ModType>
+					<Attribute>SpawnMonster</Attribute>
+					<Value>1</Value>
+					<Unitclass>WarBoar_Hero</Unitclass>
+					<Radius>24</Radius>
+				</GameModifier>
+			</Treasure>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+		</QuestObjectiveDef>
+	</QuestDef>
+</Quests>

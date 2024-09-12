@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<Spells>
+	<SpellDef InternalName="Spell_X_DestinysQuest">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[S] Destiny's Quest</DisplayName>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Breons_Letters</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>125</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Destiny's clues may lead you to uncover unique opportunities.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] DESTINY'S QUEST
+		::: Destiny's clues may lead you to uncover unique opportunities.
+		
+		DOMAIN
+		::: Strategic
+		::: Self
+		
+		EFFECT
+		::: + 1 Quest Site
+		
+		FIGHTABLE
+		::: Not defendable
+		::: Not resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: Caster must be Sov
+		::: Player Only
+		
+		SOURCE
+		::: Tech
+		::: ::: Breon's Letter</Description>
+		<SpellBookSortCategory>World</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Map</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Other</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>Self</SpellTargetType>
+		<CasterMustBeSov>1</CasterMustBeSov>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>CreateQuestNearTile</Attribute>
+			<BoolVal1>1</BoolVal1>
+			<Value>-1</Value>
+		</GameModifier>
+		<Cooldown>5</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_DestinysQuest.png</IconFG>
+		<HitSoundFX>Spell_DestinyGift_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_Paragon_Particle</EffectName>
+			<LocalPosition>0,30,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+</Spells>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<UnitTypes>
+	<UnitType InternalName="Shadow_Nightsister">
+		<SoundPack>SoundPack_Generic_Female</SoundPack>
+		<CreatureType>Champion</CreatureType>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-5</Value>
+			<Provides>-5% Unrest in the city this unit is in</Provides>
+		</GameModifier>
+
+		<DisplayName>Nightsister</DisplayName>
+		<Backstory>Normally, Shadows have no memory of what their life was like when they lived as two-dimensional beings anchored to the living. The Shadow known as Nightsister is unique among the Shadows because she alone retains memories from before she was created. Her "parent" was an old magician that performed many ill deeds leading up to the Cataclysm. The entity known as Nightsister now feels she must atone for the sins of her past - even though it was not her that committed them. For this reason, Nightsister has embarked on a personal crusade against the Empires of Elemental.</Backstory>
+
+		<ModelPath>shadow_female_Body.hkb</ModelPath>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<EyeTexture>gfx\Eyes\blinks\eyeblink_m4_brwn.png</EyeTexture>
+		<AnimationPack>EF_FemaleSovereignAnimationPack</AnimationPack>
+		<ShowAsSingleUnit>false</ShowAsSingleUnit>
+		<CutSceneDataPack>ReliasCutscenePack</CutSceneDataPack>
+		<ModelScale>1.0000</ModelScale>
+		<TacticalModelScale>1.9000</TacticalModelScale>
+		<EquipmentScale>1.0000</EquipmentScale>
+		<ClothMapScale>1.6</ClothMapScale>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<MovementType>land</MovementType>
+		<BobbingFrequency>0.0000</BobbingFrequency>
+		<ClothPoseIndex>0</ClothPoseIndex>
+		<InfoCardBackground>BG13_Volcanic</InfoCardBackground>
+		<InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+		<CanBeDesigned>0</CanBeDesigned>
+		<Medallions InternalName=""/>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<!-- -->
+		<Allegiance>Kingdom</Allegiance>
+		<Unique>1</Unique>
+		<IsNPC>1</IsNPC>
+		<NPCSpawnLikelihood>100</NPCSpawnLikelihood>
+		<IsChampion>1</IsChampion>
+		<Gender>Male</Gender>
+		<SpawnRating>1</SpawnRating>
+		<Quote>The deep earth talks to me.</Quote>
+		<NPCRecruitmentText>%d Gildar. No more, no less.</NPCRecruitmentText>
+		<SelectedAbilityBonusOption>Blood_Shadows</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Earth1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Earth2</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>EnmityAbility_Nightsister</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>EnmityAbility_Nightsister2</SelectedAbilityBonusOption>
+		<!-- -->
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_HitPoints>20</UnitStat_HitPoints>
+			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsKingdom>1.0000</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsRace_Shadows>1.0000</UnitStat_BG_IsRace_Shadows>
+		</LevelMilestone>
+		<AutoCreateEquipment>Spear</AutoCreateEquipment>
+		<Color_Metal>70,100,70,255</Color_Metal>
+		<Color_Skin>50,50,50,255</Color_Skin>
+		<Color_Hair>168,123,88,255</Color_Hair>
+		<Color_Clothing1>120,25,20,255</Color_Clothing1>
+		<Color_Clothing2>78,60,55,255</Color_Clothing2>
+		<Texture_All>shadow_K_Female_Thinbrows_Texture_01.png</Texture_All>
+		<UnitModelType>ShadowFemale</UnitModelType>
+		<NPCFreeRecruit>0</NPCFreeRecruit>
+		<RaceType>Race_Type_Shadows</RaceType>
+		<WageOverride>1</WageOverride>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+	</UnitType>
+	<AbilityBonus InternalName="EnmityAbility_Nightsister">
+		<AbilityBonusOption InternalName="EnmityAbility_Nightsister">
+			<DisplayName>Nightsister's Enmity</DisplayName>
+			<Description>+10 Accuracy and +10 Spell Mastery when attacking any Empire race</Description>
+			<Icon>Ability_Enmity_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Accuracy</StrVal>
+				<StrVal2>UnitStat_BG_IsEmpire</StrVal2>
+				<Value>10</Value>
+				<Provides>+10 Accuracy vs Empire races</Provides>
+				<vsHigher>1</vsHigher>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_MagicPower</StrVal>
+				<StrVal2>UnitStat_BG_IsEmpire</StrVal2>
+				<Value>10</Value>
+				<Provides>+10 Spell Mastery vs Empire races</Provides>
+				<vsHigher>1</vsHigher>
+			</GameModifier>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<IsCombatAbility>1</IsCombatAbility>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="EnmityAbility_Nightsister2">
+		<AbilityBonusOption InternalName="EnmityAbility_Nightsister2">
+			<DisplayName>Nightsister's Earth Mastery</DisplayName>
+			<Description>Allows the unit to cast Hurl Boulder</Description>
+			<Icon>Ability_EarthAdeptI_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>HurlBoulder_Ability</StrVal>
+				<Provides>Allows the unit to cast Hurl Boulder</Provides>
+			</GameModifier>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<IsCombatAbility>1</IsCombatAbility>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+</UnitTypes>

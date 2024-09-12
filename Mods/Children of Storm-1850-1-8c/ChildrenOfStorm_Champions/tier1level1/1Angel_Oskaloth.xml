@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<UnitTypes>
+	<UnitType InternalName="Angel_Oskaloth">
+		<CreatureType>Champion</CreatureType>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-5</Value>
+			<Provides>-5% Unrest in the city this unit is in</Provides>
+		</GameModifier>
+
+
+		<DisplayName>Oskaloth</DisplayName>
+		<Backstory>Before the Cataclysm, Oskaloth was famous for his lengthy discussions with the god the Angels served. During one such discussion, Oskaloth managed to enrage the god to such a degree that Oskaloth was forced, by logic, to leave the Heavens. Specifically, the god claimed that Oskaloth's lack of experience in the world of Elemental made many of his points moot. Oskaloth, now forced into a figurative corner, responded that he would go into the world and learn all about it.
+
+Thus, before the Cataclysm, Oskaloth went into the world and walked amongst men. Sometimes he would hide his identity by cutting all the feathers from his wings and binding them to his back. As a person of great intelligence and wisdom, he was seen as a mythical entity in and of himself - a seemingly old man who walked the earths delivering justice and advice to those he saw fit.
+
+After several hundred years in the world, Oskaloth has grown tired of the company of men. Now, Oskaloth is unable to return to the Heavens because his god is banishing all of the Angels. He seeks employment and someone who can put to use his vast knowledge of the world.
+		</Backstory>
+
+		<ModelPath>K_Male_Mesh_01.hkb</ModelPath>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<EyeTexture>gfx\eyes\blinks\eyeblink_f3_hazel.png</EyeTexture>
+		<AnimationPack>EF_SoldierAnimationPack</AnimationPack>
+		<ShowAsSingleUnit>false</ShowAsSingleUnit>
+		<CutSceneDataPack>ReliasCutscenePack</CutSceneDataPack>
+		<ModelScale>1.0000</ModelScale>
+		<TacticalModelScale>1.5000</TacticalModelScale>
+		<EquipmentScale>1.0000</EquipmentScale>
+		<ClothMapScale>1.6</ClothMapScale>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<MovementType>land</MovementType>
+		<BobbingFrequency>0.0000</BobbingFrequency>
+		<ClothPoseIndex>0</ClothPoseIndex>
+		<InfoCardBackground>BG6_WaterCliff</InfoCardBackground>
+		<InfoCardBackgroundFlipped>1</InfoCardBackgroundFlipped>
+		<CanBeDesigned>0</CanBeDesigned>
+		<!-- -->
+		<Allegiance>Kingdom</Allegiance>
+		<Unique>1</Unique>
+		<IsNPC>1</IsNPC>
+		<NPCSpawnLikelihood>100</NPCSpawnLikelihood>
+		<IsChampion>1</IsChampion>
+		<Gender>Male</Gender>
+		<SpawnRating>1</SpawnRating>
+
+		<Quote>Through understanding we grow.</Quote>
+		<NPCRecruitmentText>My mind is my product. You'll pay %d gildar, I know it.</NPCRecruitmentText>
+		<SelectedAbilityBonusOption>Blood_Angel</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Life1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Water1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Oskalothsknowledge</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Loremaster1</SelectedAbilityBonusOption>
+
+		<Medallions InternalName=""/>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Angel>1</UnitStat_BG_IsRace_Angel>
+			<UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsMale>1</UnitStat_BG_IsMale>
+			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
+			<UnitStat_BG_IsCelestial>1</UnitStat_BG_IsCelestial>
+			<UnitStat_HitPoints>20</UnitStat_HitPoints>
+			<UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+		</LevelMilestone>
+		<Equipment>EF_Angel_K_Male_Head_03</Equipment>
+		<Equipment>Basic_Boots</Equipment>
+		<Equipment>Sovereign_Warrior_Shirt_Pleated_ID1</Equipment>
+		<Equipment>Bards_Cloak_ID1</Equipment>
+		<AutoCreateEquipment>Staff_War</AutoCreateEquipment>
+		<Color_Skin>220,155,105,255</Color_Skin>
+		<Color_Hair>150,105,70,255</Color_Hair>
+		<Color_Clothing1>220,220,220,255</Color_Clothing1>
+		<Color_Clothing2>100,100,100,255</Color_Clothing2>
+		<Color_Metal>255,255,255,255</Color_Metal>
+		<Texture_Skin>K_Male_Freckles_Texture_01.png</Texture_Skin>
+		<Texture_Eyes>gfx\eyes\blinks\eyeblink_f3_hazel.png</Texture_Eyes>
+		<UnitModelType>AngelMale</UnitModelType>
+		<SoundPack>SoundPack_Generic_Male</SoundPack>
+		<NPCFreeRecruit>0</NPCFreeRecruit>
+		<RaceType>Race_Type_Angel</RaceType>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<WageOverride>1</WageOverride>
+	</UnitType>
+	<AbilityBonus InternalName="Oskalothsknowledge">
+		<AbilityBonusOption InternalName="Oskalothsknowledge">
+			<DisplayName>Oskaloth's knowledge</DisplayName>
+			<Description>Oskaloth gives a Faction-wide +2% to Research from all sources.
+
+(If you "get rid" of Oskaloth, you will also lose the 2% bonus)</Description>
+			<Icon>Ability_FleshBoundTome_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Research</StrVal>
+				<Value>2</Value>
+				<Provides>Oskaloth gives a Faction-wide +2% to Research from all sources.
+
+(If you "get rid" of Oskaloth, you will also lose the 2% bonus)</Provides>
+			</GameModifier>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>0</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+</UnitTypes>

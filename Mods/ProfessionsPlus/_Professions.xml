@@ -1,0 +1,340 @@
+<Container>
+  <AbilityBonus InternalName="Champion_History">
+		<AbilityBonusType>Champion_History</AbilityBonusType>
+		<AbilityBonusOption InternalName="GladiatorProf">
+			<DisplayName>Gladiator</DisplayName>
+			<Description>Attack, movement bonus, and more combat bonuses when fighting solo.</Description>
+			<Icon>Ability_Reckless_Icon.png</Icon>
+			<Cost>1</Cost>
+			<GameModifier>
+				<ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Pierce</StrVal>
+                <Multiplier>1.25</Multiplier>
+                <Provides>+25% Attack bonus</Provides>
+			</GameModifier>
+			<GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Moves</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Movement</Provides>
+			</GameModifier>
+			<GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_CombatSpeed</StrVal>
+                <Multiplier>1.25</Multiplier>
+                <Provides>+25% Initiative when alone</Provides>
+                <WhenUnderArmySize>1</WhenUnderArmySize>
+			</GameModifier>
+			<GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Pierce</StrVal>
+                <Multiplier>1.25</Multiplier>
+				<Provides>+25% Attack when alone</Provides>
+                <WhenUnderArmySize>1</WhenUnderArmySize>
+			</GameModifier>
+			<GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Moves</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Movement when alone</Provides>
+				<WhenUnderArmySize>1</WhenUnderArmySize>
+			</GameModifier>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Type>Aggressive</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+		<AbilityBonusOption InternalName="Sorcerer">
+			<DisplayName>Sorcerer</DisplayName>
+			<Description>Bonus spell mastery, and a unique quickcast spell.</Description>
+			<Icon>Action_StudySpells.png</Icon>
+			<GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_MagicPower</StrVal>
+                <Multiplier>1.25</Multiplier>
+                <Provides>+25% Spell Mastery</Provides>
+            </GameModifier>
+			<GameModifier>
+				<Provides>Unlocks Quickcast spell</Provides>
+			</GameModifier>
+			<Cost>1</Cost>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Type>Aggressive</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+		<AbilityBonusOption InternalName="Enchanter">
+            <DisplayName>Enchanter</DisplayName>
+            <Description>All units get +25% to Spell Resist and Crystal costs are decreased by 15%.</Description>
+            <Icon>Action_Dynasty.png</Icon>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_UnitStat_MagicResist</StrVal>
+                <Value>25</Value>
+                <Provides>+25% Spell Resist for the faction</Provides>
+            </GameModifier>
+			<GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_Training_RefinedCrystal</StrVal>
+                <Value>-15</Value>
+                <Provides>-15% Crystal costs for weapons and armor</Provides>
+            </GameModifier>
+            <Cost>1</Cost>
+            <Type>Army</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+		<AbilityBonusOption InternalName="Peasant">
+            <DisplayName>Peasant</DisplayName>
+            <Description>+25% Food per Grain and increased production per population in every city.</Description>
+            <Icon>Ability_Discipline_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Additive_FoodPerGrain</StrVal>
+				<Value>25</Value>
+				<Provides>+25 Food per Grain for your Faction</Provides>
+            </GameModifier>
+			<GameModifier>
+			<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Additive_ProductionPerPopulation</StrVal>
+				<Value>0.01</Value>
+				<Provides>Increased production per population in all your cities</Provides>
+            </GameModifier>
+            <Cost>1</Cost>
+            <Type>Army</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+		<AbilityBonusOption InternalName="Warlock">
+			<DisplayName>Evoker</DisplayName>
+			<Description>Bonus spell damage, and a unique unresistable damage spell.</Description>
+			<Icon>Ability_Warlock_Icon.png</Icon>
+			<GameModifier>
+				<Provides>Unlocks Magic Missile spell</Provides>
+			</GameModifier>
+			<Cost>1</Cost>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Type>Aggressive</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+		<AbilityBonusOption InternalName="Noble">
+			<DisplayName>Noble</DisplayName>
+			<Description>Decreased unrest and increased growth in all cities.</Description>
+			<Icon>Ability_Noble_Icon.png</Icon>
+			<Cost>1</Cost>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_FactionPrestige</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Faction Prestige</Provides>
+			</GameModifier>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Type>Aggressive</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+		<AbilityBonusOption InternalName="Banker">
+			<DisplayName>Banker</DisplayName>
+			<Description>+2 Gildar per Season and 25% increased gold income from taxes.</Description>
+			<Icon>City_Hud_Scales_64.png</Icon>
+			<Cost>1</Cost>
+			<GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>ProduceResource</Attribute>
+                <StrVal>Gold</StrVal>
+                <Value>2</Value>
+                <Provides>+2 Gildar per Season</Provides>
+            </GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Additive_GoldTakeAwayPerTaxPercentage</StrVal>
+				<Value>0.25</Value>
+				<Provides>+25% gold from taxes</Provides>
+			</GameModifier>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Type>Aggressive</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+		<AbilityBonusOption InternalName="Hunter">
+            <DisplayName>Hunter</DisplayName>
+            <Description>+50% Attack and Accuracy vs Beasts and ability to trap opponents for 3 rounds.</Description>
+            <Icon>Ability_Hunter_Icon.png</Icon>
+			<GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Accuracy</StrVal>
+                <StrVal2>Beast</StrVal2>
+                <Multiplier>1.5</Multiplier>
+                <Provides>+50% Accuracy vs Beasts</Provides>
+                <vsUnitType>1</vsUnitType>
+            </GameModifier>
+            <GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>HunterTrap</StrVal>
+				<Provides>Damage and immobilize an enemy for 3 rounds</Provides>
+            </GameModifier>
+            <Cost>1</Cost>
+            <IsCombatAbility>1</IsCombatAbility>
+            <Type>Aggressive</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+		<AbilityBonusOption InternalName="Armorer">
+            <DisplayName>Blacksmith</DisplayName>
+            <Description>Units get +25% Defense and Metal costs are decreased by 15%.</Description>
+            <Icon>Ability_Armorer_Icon.png</Icon>
+			<GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_Training_Metal</StrVal>
+                <Value>-15</Value>
+                <Provides>-15% Metal costs for weapons and armor</Provides>
+            </GameModifier>
+            <Cost>1</Cost>
+            <Type>Army</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+		<AbilityBonusOption InternalName="Chieftain">
+            <DisplayName>Chieftain</DisplayName>
+            <Description>Units get +10% Attack and unit labor costs are decreased by 10%.</Description>
+            <Icon>Ability_Overpower_Icon.png</Icon>
+			<GameModifier>
+            <ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_UnitStat_Attack_Pierce</StrVal>
+				<Value>10</Value>
+				<Provides>All units get +10% to Attack</Provides>
+			</GameModifier>
+			<GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_Training_Labor</StrVal>
+                <Value>-10</Value>
+                <Provides>-10% labor costs for units</Provides>
+            </GameModifier>
+            <Cost>1</Cost>
+            <Type>Army</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+		<AbilityBonusOption InternalName="Adventurer">
+            <DisplayName>Adventurer</DisplayName>
+            <Description>+10 Fame from completing Quests and +1 Fame every 10 seasons.</Description>
+            <Icon>Ability_Adventurer_Icon.png</Icon>
+            <GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>0.10</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Fame per 10 seasons</Provides>
+			</GameModifier>
+            <Cost>1</Cost>
+            <Type>Army</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+		<AbilityBonusOption InternalName="General">
+            <DisplayName>General</DisplayName>
+            <Description>+25% to the Army's Experience and grants Martial Law spell.</Description>
+            <Icon>Ability_General_Icon.png</Icon>
+            <GameModifier>
+                <Provides>Unlocks Martial Law city buff</Provides>
+            </GameModifier>
+            <Cost>1</Cost>
+            <Type>Army</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+		<AbilityBonusOption InternalName="Scholar">
+            <DisplayName>Scholar</DisplayName>
+            <Description>+20% Research and increased research per population in ever city.</Description>
+            <Icon>Ability_Scholar_Icon.png</Icon>
+			<GameModifier>
+            <ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Additive_ResearchPerPopulation</StrVal>
+				<Value>0.01</Value>
+				<Provides>Increased research per population in all your cities</Provides>
+            </GameModifier>
+            <Cost>1</Cost>
+            <Type>Army</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+		<AbilityBonusOption InternalName="BanditLord">
+            <DisplayName>Bandit Lord</DisplayName>
+            <Description>Player starts with bandit units, ability to convert bandits, and the Pilfer ability.</Description>
+            <Icon>Ability_Thief_Icon.png</Icon>
+             <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>MeleeAppliesSpell</Attribute>
+                <StrVal>PilferEffect</StrVal>
+                <Provides>Unlocks the Pilfer ability that disorients the enemy and player gains gold for every successful melee attack,</Provides>
+            </GameModifier>
+            <Cost>1</Cost>
+            <Type>Aggressive</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+		<AbilityBonusOption InternalName="Warlord">
+            <DisplayName>Warlord</DisplayName>
+            <Description>-50% to unit Wages and -25% to unit upgrade costs.</Description>
+            <Icon>Ability_Warlord_Icon.png</Icon>
+             <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_UnitUpgrades</StrVal>
+                <Value>-25</Value>
+                <Provides>-25% Upgrade costs</Provides>
+            </GameModifier>
+            <Cost>1</Cost>
+            <Type>Army</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+		<AbilityBonusOption InternalName="Beastlord">
+            <DisplayName>Beastlord</DisplayName>
+            <Description>Can take control of enemy beasts and summon a wolven companion.</Description>
+            <Icon>Ability_Beastlord_Icon.png</Icon>
+            <GameModifier>
+                <Provides>Unlocks Call of the Wild spell</Provides>
+            </GameModifier>
+            <Cost>1</Cost>
+            <Type>Aggressive</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+  </AbilityBonus>
+</Container>

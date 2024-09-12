@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<ImprovementTypes>
+	<ImprovementType InternalName="Wonder_X_ArcaniumMachine">
+		<DisplayName>Arcanium Machine</DisplayName>
+		<Description>The dwarf Wenduki Forgemaker was reluctant at first, but she eventually succumbed to your charms (plus a hefty sum of Gildar) and agreed to build you an Arcanium Machine. On the last night, you went to her chamber and gave her a good tumble. It's good to be Sovereign!
+		
+		+1 Green Arcanium per 4 Seasons
+		+1 Grey Arcanium per 4 Seasons
+		+1 Orange Arcanium per 4 Seasons
+		+1 Purple Arcanium per 4 Seasons
+		+1 Red Arcanium per 4 Seasons
+		+1 Yellow Arcanium per 4 Seasons
+		
+		+1 Fame per Season
+		-1% Unrest
+		-2% Unrest in all your cities
+		-10 Beers per Season
+		
+		Requires Academy of Revelation Specialization
+		
+		World Wonder.</Description>
+		<AllowedPerGame>1</AllowedPerGame>
+		<RequiresCity>1</RequiresCity>
+		<BarredTerrain>River</BarredTerrain>
+		<BarredTerrain>SwampTerrain</BarredTerrain>
+		<PreferredTerrain>City</PreferredTerrain>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<PreferredTerrain>Category:Forest</PreferredTerrain>
+		<RequiresCityImprovement>1</RequiresCityImprovement>
+		<RequiredImprovement>Academy</RequiredImprovement>
+		<LaborToBuild>1053</LaborToBuild>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_ArcaneGardening</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Lizardmeninferiority</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Ascetics</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Gold</Attribute>
+			<Value>-1000</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_XL_Beer</Attribute>
+			<Value>-50</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Fame</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Fame per Season</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Resource_X_A6</Attribute>
+			<Value>0.25</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Green Arcanium per 4 Seasons</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Resource_X_A1</Attribute>
+			<Value>0.25</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Grey Arcanium per 4 Seasons</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Resource_X_A3</Attribute>
+			<Value>0.25</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Orange Arcanium per 4 Seasons</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Resource_X_A5</Attribute>
+			<Value>0.25</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Purple Arcanium per 4 Seasons</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Resource_X_A4</Attribute>
+			<Value>0.25</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Red Arcanium per 4 Seasons</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Resource_X_A2</Attribute>
+			<Value>0.25</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Yellow Arcanium per 4 Seasons</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>-1% Unrest</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_Additive_Unrest</StrVal>
+			<Value>-2</Value>
+			<Provides>-2% Unrest in all your cities</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Resource_XL_Beer</Attribute>
+			<Value>-10</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>10 Beers Maintenance per Season</Provides>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>911</AIPriority>
+			<AITag>Arcane</AITag>
+		</AIData>
+		<ArtDef>ArtDef_X_ArcaniumMachine_Wonder</ArtDef>
+	</ImprovementType>
+</ImprovementTypes>

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<ImprovementTypes>
+	<ImprovementType InternalName="Catacomb">
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_XL_Beer</Attribute>
+			<Value>-5</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>500</AIPriority>
+			<AITag>Economy</AITag>
+		</AIData>
+	</ImprovementType>
+	<ImprovementType InternalName="Imp_X_MassGrave">
+		<DisplayName>Mass Grave</DisplayName>
+		<Description>Mass Graves can be built on Wild Grain. As with many Mass Graves, it looks like it's just a pile of rocks.</Description>
+		<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+		<RequiresResource>1</RequiresResource>
+		<SupportedResourceType>Grain</SupportedResourceType>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<LaborToBuild>125</LaborToBuild>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>DLC04_UndeadFaction</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Graves</Attribute>
+			<Value>50</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+50 Graves</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Prestige</Attribute>
+			<Value>0.5</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+0.5 Growth</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>175</AIPriority>
+			<AITag>Prestige</AITag>
+		</AIData>
+		<ArtDef>ArtDef_X_MassGrave_Imp</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="Mausoleum">
+		<AIData AIPersonality="AI_General">
+			<AIPriority>600</AIPriority>
+			<AITag>Economy</AITag>
+		</AIData>
+	</ImprovementType>
+	<ImprovementType InternalName="Necropolis">
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_XL_Beer</Attribute>
+			<Value>-5</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>450</AIPriority>
+			<AITag>Economy</AITag>
+		</AIData>
+	</ImprovementType>
+	<ImprovementType InternalName="Imp_X_WellOfDarkness">
+		<DisplayName>Well of Darkness</DisplayName>
+		<Description>The Well of Darkness is a direct gateway to the Styx and it will increase growth where it is built.</Description>
+		<RequiresCity>1</RequiresCity>
+		<BarredTerrain>River</BarredTerrain>
+		<BarredTerrain>SwampTerrain</BarredTerrain>
+		<PreferredTerrain>City</PreferredTerrain>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<PreferredTerrain>Forest</PreferredTerrain>
+		<RequiresCityImprovement>1</RequiresCityImprovement>
+		<RequiredImprovement>TradeGuild</RequiredImprovement>
+		<LaborToBuild>96</LaborToBuild>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_WellOfDarkness</Attribute>
+		</Prereq>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Prestige</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Growth</Provides>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>975</AIPriority>
+			<AITag>Prestige</AITag>
+		</AIData>
+		<ArtDef>ArtDef_X_WellOfDarkness_Imp</ArtDef>
+	</ImprovementType>
+		<!--CITYHUBS-->
+	<ImprovementType InternalName="CityHub2_XM_Conclave">
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Graves</Attribute>
+			<Value>50</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+50 Graves</Provides>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="CityHub2_XM_Fortress">
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Graves</Attribute>
+			<Value>50</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+50 Graves</Provides>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="CityHub2_XM_Town">
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Graves</Attribute>
+			<Value>50</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+50 Graves</Provides>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="CityHub2_XM_Darkling">
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Graves</Attribute>
+			<Value>50</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+50 Graves</Provides>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="CityHub3_XM_Conclave">
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Graves</Attribute>
+			<Value>50</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+50 Graves</Provides>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="CityHub3_XM_Fortress">
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Graves</Attribute>
+			<Value>50</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+50 Graves</Provides>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="CityHub3_XM_Town">
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Graves</Attribute>
+			<Value>50</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+50 Graves</Provides>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="CityHub3_XM_Darkling">
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Graves</Attribute>
+			<Value>50</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+50 Graves</Provides>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="CityHub4_XM_Conclave">
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Graves</Attribute>
+			<Value>75</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+75 Graves</Provides>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="CityHub4_XM_Fortress">
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Graves</Attribute>
+			<Value>75</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+75 Graves</Provides>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="CityHub4_XM_Town">
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Graves</Attribute>
+			<Value>75</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+75 Graves</Provides>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="CityHub4_XM_Darkling">
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Graves</Attribute>
+			<Value>75</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+75 Graves</Provides>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="CityHub5_XM_Conclave">
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Graves</Attribute>
+			<Value>100</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+100 Graves</Provides>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="CityHub5_XM_Fortress">
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Graves</Attribute>
+			<Value>100</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+100 Graves</Provides>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="CityHub5_XM_Town">
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Graves</Attribute>
+			<Value>100</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+100 Graves</Provides>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="CityHub5_XM_Darkling">
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Graves</Attribute>
+			<Value>100</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+100 Graves</Provides>
+		</GameModifier>
+	</ImprovementType>
+</ImprovementTypes>

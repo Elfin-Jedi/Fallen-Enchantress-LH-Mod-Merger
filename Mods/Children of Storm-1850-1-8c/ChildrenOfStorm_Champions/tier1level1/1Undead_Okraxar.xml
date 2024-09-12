@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<UnitTypes>
+	<UnitType InternalName="Undead_Okraxar">
+		<CreatureType>Champion</CreatureType>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-5</Value>
+			<Provides>-5% Unrest in the city this unit is in</Provides>
+		</GameModifier>
+
+		<DisplayName>Okraxar</DisplayName>
+		<Backstory>Okraxar has a mighty mind and was part of the Skeleton King's court when the King was resurrected. The King chose to have Okraxar retain his independent mind because the King feared Okraxar's talents would be spoiled by the invasive dark magic used to turn him into an Undead. However, the plan backfired when Okraxar turned against the King following Okraxar's family's turning into mindless skeletons. Originally he conspired to overthrow the King but chose to flee when he realized the King's command over the mindless skeletons was complete and could not be interrupted.</Backstory>
+
+		<ModelPath>undeadmainbody.hkb</ModelPath>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<EyeTexture>gfx\Eyes\blinks\eyeblink_m4_brwn.png</EyeTexture>
+		<AnimationPack>EF_MaleSovereignAnimationPack</AnimationPack>
+		<ShowAsSingleUnit>false</ShowAsSingleUnit>
+		<CutSceneDataPack>ReliasCutscenePack</CutSceneDataPack>
+		<ModelScale>1.0000</ModelScale>
+		<TacticalModelScale>1.9000</TacticalModelScale>
+		<EquipmentScale>1.0000</EquipmentScale>
+		<ClothMapScale>1.6</ClothMapScale>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<MovementType>land</MovementType>
+		<BobbingFrequency>0.0000</BobbingFrequency>
+		<ClothPoseIndex>0</ClothPoseIndex>
+		<InfoCardBackground>BG13_Volcanic</InfoCardBackground>
+		<InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+		<CanBeDesigned>0</CanBeDesigned>
+		<Medallions InternalName="" />
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<!-- -->
+		<Allegiance>Empire</Allegiance>
+		<Unique>1</Unique>
+		<IsNPC>1</IsNPC>
+		<NPCSpawnLikelihood>100</NPCSpawnLikelihood>
+		<IsChampion>1</IsChampion>
+		<Gender>Male</Gender>
+		<SpawnRating>1</SpawnRating>
+		
+		<Quote>To me, the world simply makes sense.</Quote>
+		<NPCRecruitmentText>%d Gildar is a small price to put on what I can do for you and yours.</NPCRecruitmentText>
+		<SelectedAbilityBonusOption>Blood_CoS_Undead</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Fire1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Administrator1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>OkraxarMind</SelectedAbilityBonusOption>
+
+		<!-- -->
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<UnitStat_BG_IsHumanoid>1.0000</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsEmpire>1.0000</UnitStat_BG_IsEmpire>
+			<UnitStat_BG_IsNotAlive>1</UnitStat_BG_IsNotAlive>
+			<UnitStat_BG_IsRace_Undead>1.0000</UnitStat_BG_IsRace_Undead>
+			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
+			<UnitStat_BG_IsUndead>1</UnitStat_BG_IsUndead>
+			<UnitStat_BG_IsImmortal>1</UnitStat_BG_IsImmortal>
+			<UnitStat_CombatSpeed>22.0000</UnitStat_CombatSpeed>
+			<UnitStat_HitPoints>20.0000</UnitStat_HitPoints>
+			<UnitStat_ImmuneToFear>1</UnitStat_ImmuneToFear>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+		</LevelMilestone>
+		
+		<AutoCreateEquipment>Staff_War</AutoCreateEquipment>
+		<AutoCreateEquipment>LeatherBreastpiece</AutoCreateEquipment>
+
+		<Color_Metal>50,50,50,255</Color_Metal>
+		<Color_Skin>50,50,50,255</Color_Skin>
+		<Color_Hair>168,123,88,255</Color_Hair>
+		<Color_Clothing1>120,25,20,255</Color_Clothing1>
+		<Color_Clothing2>78,60,55,255</Color_Clothing2>
+		<Texture_Skin>Undead_skin.png</Texture_Skin>
+		<Texture_Eyes>gfx\Eyes\blinks\eyeblink_m4_brwn.png</Texture_Eyes>
+		<UnitModelType>Undead</UnitModelType>
+		<NPCFreeRecruit>0</NPCFreeRecruit>
+		<RaceType>Race_Type_Undead</RaceType>
+		<SoundPack>SoundPack_Skeleton</SoundPack>
+		<WageOverride>1</WageOverride>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+	</UnitType>
+
+
+	<AbilityBonus InternalName="OkraxarMind">
+		<AbilityBonusOption InternalName="OkraxarMind">
+			<DisplayName>Mind of Okraxar</DisplayName>
+			<Description>Okraxar gives a Faction-wide +2% to Research from all sources.
+
+(If you "get rid" of Okraxar, you will also lose the 2% bonus)</Description>
+			<Icon>Ability_FleshBoundTome_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Research</StrVal>
+				<Value>2</Value>
+				<Provides>Okraxar gives a Faction-wide +2% to Research from all sources.
+
+(If you "get rid" of Okraxar, you will also lose the 2% bonus)</Provides>
+			</GameModifier>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>0</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+
+</UnitTypes>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--Black Market Bazaar by Hellions-->
+<!--XtraDeconstruct 3.0 by Primal-->
+<AbilityBonuses>
+	<AbilityBonus InternalName="BMB_EruditeAbility">
+		<AbilityBonusOption InternalName="BMB_Erudite">
+			<DisplayName>Erudite</DisplayName>
+			<Description>EXPERIENCE BONUS
+			::: +30% XP
+			
+			RESEARCH
+			::: 10% #Faction</Description>
+			<Icon>BMB_Ability_Erudite.png</Icon> 
+			<GameModifier>
+				<Provides>EXPERIENCE BONUS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ExpBonus</StrVal>
+				<Value>30</Value>
+				<Provides>::: +30% XP</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>RESEARCH</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Research</StrVal>
+				<Value>10</Value>
+				<Provides>::: +10% #Faction</Provides>
+			</GameModifier>	
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="BMB_FamousAbility">
+		<AbilityBonusOption InternalName="BMB_Famous">
+			<DisplayName>Famous</DisplayName>
+			<Description>RESOURCES
+			::: Fame :::
+			::: +1 per Season</Description>
+			<Icon>BMB_Ability_Famous.png</Icon>
+			<GameModifier>
+				<Provides>RESOURCES</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>ProduceResource</Attribute>
+				<StrVal>Fame</StrVal>
+				<Value>1</Value>
+				<Provides>::: Fame :::
+				::: +1 per Season</Provides>
+			</GameModifier>
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+</AbilityBonuses>

@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--Necromancy Revamped by Dhuran-->
+<!--XtraDeconstruct 3.0 by Primal-->
+<GameItemTypes>
+	<GameItemType InternalName="CanopicJars">
+		<DisplayName>Canopic Jars</DisplayName>
+		<Description>Each jar contains the viscera of a ritual victim. Smashing a jar against the ground transports the user to a random location within 3 tiles and leaves a zombie in their place.</Description>
+		<Type>Accessory</Type>
+		<AdditionalTrainingTurns>12</AdditionalTrainingTurns>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<ShopValue>100</ShopValue>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Empire</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Arcane_Mastery</Attribute>
+		</Prereq>
+		<ProductionRequirement>
+			<Type>Resource</Type>
+			<Attribute>Mana</Attribute>
+			<Value>10</Value>
+		</ProductionRequirement>
+		<ProductionRequirement>
+			<Type>Resource</Type>
+			<Attribute>Population</Attribute>
+			<Value>1</Value>
+		</ProductionRequirement>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>Each jar contains the viscera of a ritual victim. Smashing a jar against the ground transports the user to a random location within 3 tiles and leaves a zombie in their place.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL ABILITY</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>RR_CanopicJars_Ability</StrVal>
+			<Provides>::: Canopic Jars :::
+			::: Random Teleport
+			::: Can raise a Zombie
+			::: Level = (User Level / 3) + 1</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Nil</RarityDisplay>
+		<HeroOnly>0</HeroOnly>
+		<IsAvailableForUnitDesign>1</IsAvailableForUnitDesign>
+		<IsUsable>0</IsUsable>
+		<UsableInBattle>0</UsableInBattle>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>1</AIPriority>
+		</AIData>
+		<ArtDef>ArtDef_NR_CanopicJars_Accessory</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="EbonyKey">
+		<DisplayName>Ebony Key</DisplayName>
+		<Description>This key has a consuming blackness, that seems even to darken the area around it. It is said that each of these relics connects to a different realm of the dead.</Description>
+		<Type>Accessory</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<ShopValue>100</ShopValue>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>This key has a consuming blackness, that seems even to darken the area around it. It is said that each of these relics connects to a different realm of the dead.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>XOTIC</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>NC_UnitStat_BonusReanimationLevel</StrVal>
+			<Value>2</Value>
+			<Provides>::: +2 Levels for Reanimates</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Nil</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<IsUsable>0</IsUsable>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Empire</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Enchantment</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_PathOfTheNecro</Attribute>
+			<Value>1</Value>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>1</AIPriority>
+		</AIData>
+		<ArtDef>ArtDef_NR_EbonyKey_Accessory</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="NC_Staff_VitaeLacuna">
+		<DisplayName>Vitae Lacuna</DisplayName>
+		<Description>This legendary staff is said to be the physical embodiment of the gateway between the land of the dead and the land of the living. It carries with it an otherworldly chill, and whoever wields it is said to have unlimited power over the undead.</Description>
+		<Type>Weapon</Type>
+		<Type>Defense</Type>
+		<WeaponType>Staff</WeaponType>
+		<WeaponUpgradeType>Staff</WeaponUpgradeType>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>475</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Pierce</StrVal>
+			<Value>6</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_Immersive_M</StrVal>
+			<Value>-1</Value>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>This legendary staff is said to be the physical embodiment of the gateway between the land of the dead and the land of the living. It carries with it an otherworldly chill, and whoever wields it is said to have unlimited power over the undead.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>CORE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Cold</StrVal>
+			<Value>8</Value>
+			<Provides>::: +8 Water\Cold ATK</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>STATS</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ChanceToCrit</StrVal>
+			<Value>-1</Value>
+			<Provides>::: -1 Critical Chance</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL ABILITY</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>NC_WallOfBone_Ability</StrVal>
+			<Provides>::: Wall of Bone :::
+			::: Raises a Skeleton</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL SPECIAL</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockRangedAction</Attribute>
+			<StrVal>BowAttack_Freezing</StrVal>
+			<Provides>::: Freezing Ranged ATK</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>XOTIC</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>NC_UnitStat_BonusReanimationLevel</StrVal>
+			<Value>4</Value>
+			<Provides>::: +4 Levels for Reanimates</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_IsWizardStaff</StrVal>
+			<Value>1</Value>
+			<Provides>::: Wizard Staff :::
+			::: +1 Initiative
+			::: Applied in Tactical if Wizard</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<Likelihood>8</Likelihood>
+		<RarityDisplay>Rare2</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Prereq>
+			<Type>UnitStat_Level</Type>
+			<Attribute>10</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_X_Immersive_2H</Attribute>
+			<Value>3</Value>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Injury_X_Maimed_Hand</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_PathOfTheNecro</Attribute>
+			<Value>1</Value>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_BLUNT</AIPrefType>
+			<AIPriority>275</AIPriority>
+		</AIData>
+		<ArtDef>ArtDef_X_VitaeLacuna_Weapon</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="NR_Phylactery">
+		<DisplayName>Lich's Phylactery</DisplayName>
+		<Description>A small talisman that contains the soul of the wearer to prevent death.</Description>
+		<Type>Accessory</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<ShopValue>250</ShopValue>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>A small talisman that contains the soul of the wearer to prevent death.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL AUTOCAST</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>BattleAutoCastSpell</Attribute>
+			<StrVal>NR_DeathWard_Tactical</StrVal>
+			<Provides>::: Lich's Contingency :::
+				::: If killed, resurrected w/ 50% HP. Once.</Provides>
+			<Value>100</Value>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Nil</RarityDisplay>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<IsUsable>0</IsUsable>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Empire</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Third_Book_Of_The_Magi</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_PathOfTheNecro</Attribute>
+			<Value>1</Value>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>7000</AIPriority>
+		</AIData>
+		<ArtDef>ArtDef_NR_Phylactery_Accessory</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="RR_Ritualist_Robe">
+		<DisplayName>Ritualist's Robe</DisplayName>
+		<Type>Torso</Type>
+		<Type>Surcoat</Type>
+		<Subtype>Clothes</Subtype>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Nil</RarityDisplay>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ArtDef>ArtDef_NR_RitualistRobe_Clothes</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="RR_Staff_Furnace">
+		<DisplayName>Staff of Hellfire</DisplayName>
+		<Description>This staff continually smolders with an internal fire.</Description>
+		<Type>Weapon</Type>
+		<Type>Defense</Type>
+		<WeaponType>Spear</WeaponType>
+		<WeaponUpgradeType>Staff</WeaponUpgradeType>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>150</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Fire</StrVal>
+			<Value>10</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_Immersive_M</StrVal>
+			<Value>-1</Value>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>This staff continually smolders with an internal fire.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>STATS</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ChanceToCrit</StrVal>
+			<Value>-1</Value>
+			<Provides>::: -1 Critical Chance</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL SPECIAL</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockRangedAction</Attribute>
+			<StrVal>BowAttack_Flaming</StrVal>
+			<Provides>::: Flaming Ranged ATK</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>XOTIC</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_IsWizardStaff</StrVal>
+			<Value>1</Value>
+			<Provides>::: Wizard Staff :::
+			::: +1 Initiative
+			::: Applied in Tactical if Wizard</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Nil</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_X_Immersive_2H</Attribute>
+			<Value>3</Value>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Injury_X_Maimed_Hand</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>FrostGiant_Frostfire</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_BLUNT</AIPrefType>
+			<AIPriority>100</AIPriority>
+		</AIData>
+		<ArtDef>ArtDef_X_RRStaffFurnace_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="SaltesUrn">
+		<DisplayName>Saltes Urn</DisplayName>
+		<Description>Containing the cremated remains of a ritual victim, the saltes ashes from this urn have the power to raise the dead.</Description>
+		<Type>Accessory</Type>
+		<AdditionalTrainingTurns>8</AdditionalTrainingTurns>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<ShopValue>50</ShopValue>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Empire</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Rituals</Attribute>
+		</Prereq>
+		<ProductionRequirement>
+			<Type>Resource</Type>
+			<Attribute>Mana</Attribute>
+			<Value>5</Value>
+		</ProductionRequirement>
+		<ProductionRequirement>
+			<Type>Resource</Type>
+			<Attribute>Population</Attribute>
+			<Value>1</Value>
+		</ProductionRequirement>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>Containing the cremated remains of a ritual victim, the saltes ashes from this urn have the power to raise the dead.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL ABILITY</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>RR_SaltesUrn_Ability</StrVal>
+			<Provides>::: Saltes Urn :::
+			::: Can raise a Skeleton
+			::: Level = (User Level / 3) + 1</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Nil</RarityDisplay>
+		<HeroOnly>0</HeroOnly>
+		<IsAvailableForUnitDesign>1</IsAvailableForUnitDesign>
+		<IsUsable>0</IsUsable>
+		<UsableInBattle>0</UsableInBattle>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>100</AIPriority>
+		</AIData>
+		<ArtDef>ArtDef_NR_SaltesUrn_Accessory</ArtDef>
+	</GameItemType>
+</GameItemTypes>

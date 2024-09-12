@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Container>
+  <QuestDef InternalName="Event_CurzensMeteor">
+    <DisplayName>Curzen's Meteor</DisplayName>
+    <Description>Curzen's Meteor is returning into orbit around the Elemental world, burning in the skies for several years until it passes on. As long as it is nearby, all those who bend fire to their will find it unusually easy to do so.
+
+For every 2 Fire Shard powers you control, you gain another 1 Fire Shard power. This effect lasts for 16 turns.</Description>
+    <IsStartingPointQuest>0</IsStartingPointQuest>
+    <AllowQuestRejection>0</AllowQuestRejection>
+    <FullscreenMovie>Movies\Minicut_K_FireShard.bik</FullscreenMovie>
+    <QuestClass>Minor</QuestClass>
+    <Repeatable>0</Repeatable>
+    <TriggerType>TotalPopulation</TriggerType>
+  <TriggerData>400</TriggerData>>
+    <TriggerOrigin>EventLocation</TriggerOrigin>
+    <SpawnRating>1</SpawnRating>
+    <TriggerChance>4</TriggerChance>
+    <Treasure>
+
+             <GameModifier>
+        <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_FireMana</StrVal>
+        <Value>50</Value>
+        <Duration>16</Duration>
+      </GameModifier>
+
+
+
+
+
+    </Treasure>
+    <QuestObjectiveDef>
+      <ObjectiveID>0</ObjectiveID>
+      <QuestEnd>1</QuestEnd>
+    </QuestObjectiveDef>
+  </QuestDef>
+</Container>

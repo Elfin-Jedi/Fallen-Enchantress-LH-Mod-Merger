@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<ImprovementTypes>
+	
+	<ImprovementType InternalName="OHF_Church">
+        <DisplayName>Church</DisplayName>
+        <Description>Churches attract new citizens to the faith, increasing Growth and Mana.</Description>
+        <RequiresCity>1</RequiresCity>
+        <BarredTerrain>River</BarredTerrain>
+        <BarredTerrain>SwampTerrain</BarredTerrain>
+        <PreferredTerrain>City</PreferredTerrain>
+        <PreferredTerrain>Category:Land</PreferredTerrain>
+        <PreferredTerrain>Forest</PreferredTerrain>
+ <!--       <UpgradesToImprovement>OHF_Cathedral</UpgradesToImprovement>  -->
+        <UpgradeTier>3</UpgradeTier>	
+        <Prereq>
+            <Type>Tech</Type>
+            <Attribute>Administration</Attribute>
+        </Prereq>	
+		<Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>KnightlyOrder</Attribute>
+            <Target>Player</Target>
+        </Prereq>
+        <LaborToBuild>250</LaborToBuild>
+        <GameModifier>
+            <ModType>ResourceMultiplier</ModType>
+            <Attribute>Food</Attribute>
+            <Value>1.25</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>+25% Food</Provides>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Mana</Attribute>
+            <Value>1</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>+1 Mana per Season</Provides>
+        </GameModifier>	
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Faith</Attribute>
+            <Value>0.5</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>+0.5 Faith per Season</Provides>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Unrest</Attribute>
+            <Value>-5</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>-5% Unrest</Provides>
+        </GameModifier>		
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Fame</Attribute>
+            <Value>2</Value>
+            <Provides>+2 Fame</Provides>
+        </GameModifier>		
+        <GameModifier>
+            <ModType>ResourceMultiplier</ModType>
+            <Attribute>Prestige</Attribute>
+            <Value>1</Value>
+            <PerTurn>1</PerTurn>
+            <IsProductionQueueEmpty>1</IsProductionQueueEmpty>
+            <Provides>+50% Growth when Producing Growth</Provides>
+            <Calculate InternalName="Calc" ValueOwner="OwnerCity">
+                <Expression><![CDATA[[Constructing_ProduceGrowth] * 0.5]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value" ValueOwner="OwnerCity">
+                <Expression><![CDATA[[Calc] + 1]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>10</AIPriority>
+            <AITag>Prestige</AITag>
+            <AIEarlyBuildUpMultiplier>15</AIEarlyBuildUpMultiplier>
+        </AIData>
+        <ArtDef>Art_OHF_Church</ArtDef>
+    </ImprovementType>
+	
+	<ImprovementType InternalName="OHF_Cathedral">
+        <DisplayName>Grand Cathedral</DisplayName>
+        <Description>"Cast your eyes onto this structure! Are your spirits not roused by such bulwark of faith? The strength of man's spirit and compassion flows trough it. Do we not provide food? Shelter? Succor? Even coins and men for the kingdom? This is the proof of the Makers benevolance!"</Description>
+        <AllowedPerFaction>1</AllowedPerFaction>
+        <RequiresCity>1</RequiresCity>
+        <BarredTerrain>River</BarredTerrain>
+        <BarredTerrain>SwampTerrain</BarredTerrain>
+        <PreferredTerrain>City</PreferredTerrain>
+        <PreferredTerrain>Category:Land</PreferredTerrain>
+        <PreferredTerrain>Forest</PreferredTerrain>
+        <RequiresCityImprovement>1</RequiresCityImprovement>
+ <!--       <RequiredImprovement>OHF_Church</RequiredImprovement>  -->
+        <UpgradeTier>4</UpgradeTier>	
+        <Prereq>
+            <Type>Tech</Type>
+            <Attribute>Higher_Education</Attribute>
+        </Prereq>	
+		<Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>KnightlyOrder</Attribute>
+            <Target>Player</Target>
+        </Prereq>
+        <LaborToBuild>1200</LaborToBuild>
+        <GameModifier>
+            <ModType>ResourceMultiplier</ModType>
+            <Attribute>Food</Attribute>
+            <Value>1.5</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>+50% Food</Provides>
+        </GameModifier>
+        <GameModifier>
+            <ModType>ResourceMultiplier</ModType>
+            <Attribute>Gold</Attribute>
+            <Value>1.25</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>+25% Gildar</Provides>	
+        </GameModifier>	
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Unrest</Attribute>
+            <Value>-10</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>-10% Unrest</Provides>
+        </GameModifier>		
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Mana</Attribute>
+            <Value>2</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>+2 Mana</Provides>	
+        </GameModifier>
+        <GameModifier>
+            <ModType>ResourceMultiplier</ModType>
+            <Attribute>Prestige</Attribute>
+            <Value>1</Value>
+            <PerTurn>1</PerTurn>
+            <IsProductionQueueEmpty>1</IsProductionQueueEmpty>
+            <Provides>+50% Growth when Producing Growth</Provides>
+            <Calculate InternalName="Calc" ValueOwner="OwnerCity">
+                <Expression><![CDATA[[Constructing_ProduceGrowth] * 0.5]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value" ValueOwner="OwnerCity">
+                <Expression><![CDATA[[Calc] + 1]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Fame</Attribute>
+            <Value>1</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>+1 Fame per Season</Provides>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Faith</Attribute>
+            <Value>1</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>+1 Faith per Season</Provides>
+        </GameModifier>		
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+            <AITag>Prestige</AITag>
+        </AIData>
+        <ArtDef>Art_OHF_Cathedral</ArtDef>
+    </ImprovementType>
+	
+
+</ImprovementTypes>
+
+<ImprovementTypeArtDefs>
+
+
+    <ImprovementTypeArtDef InternalName="Art_OHF_Cathedral">
+        <ImprovementTypeArtSubPack InternalName="Art_OHF_Cathedral_Kingdom">
+            <SupportedBuildingStyle>KingdomStyle</SupportedBuildingStyle>
+            <TileDesign>OHF_Cathedral</TileDesign>
+            <ConstructionTileDesign>K_Construction1x1_01</ConstructionTileDesign>
+            <DrawnIcon>Improvement_Cathedral.png</DrawnIcon>
+            <DrawnIconConstruction>Improvement_TempleOfEssence_C.png</DrawnIconConstruction>
+            <Thumbnail>K_Temple_Of_Influence_01_Card.png</Thumbnail>
+            <Medallions InternalName="">
+                <All>K_Temple_Of_Influence_01_Card.png</All>
+            </Medallions>
+        </ImprovementTypeArtSubPack>
+        <ImprovementTypeArtSubPack InternalName="Art_OHF_Cathedral_Empire">
+            <SupportedBuildingStyle>EmpireStyle</SupportedBuildingStyle>
+            <TileDesign>F_Cathedral_01</TileDesign>
+            <ConstructionTileDesign>F_Construction1x1_01</ConstructionTileDesign>
+            <DrawnIcon>Improvement_TempleOfEssence.png</DrawnIcon>
+            <DrawnIconConstruction>Improvement_TempleOfEssence_C.png</DrawnIconConstruction>
+            <Thumbnail>F_TempleOfEssence_01_Thumb.png</Thumbnail>
+            <Medallions InternalName="">
+                <All>F_TempleOfEssence_01_Thumb.png</All>
+            </Medallions>
+        </ImprovementTypeArtSubPack>
+    </ImprovementTypeArtDef>
+
+<!--
+    <ImprovementTypeArtDef InternalName="Art_OHF_Cathedral">
+        <ImprovementTypeArtSubPack InternalName="Art_OHF_Cathedral_Kingdom">
+            <SupportedBuildingStyle>KingdomStyle</SupportedBuildingStyle>
+            <TileDesign>K_Cathedral_01</TileDesign>
+            <ConstructionTileDesign>K_Construction1x1_01</ConstructionTileDesign>
+            <DrawnIcon>Improvement_TempleOfEssence.png</DrawnIcon>
+            <DrawnIconConstruction>Improvement_TempleOfEssence_C.png</DrawnIconConstruction>
+            <Thumbnail>K_Temple_Of_Influence_01_Card.png</Thumbnail>
+            <Medallions InternalName="">
+                <All>K_Temple_Of_Influence_01_Card.png</All>
+            </Medallions>
+        </ImprovementTypeArtSubPack>
+        <ImprovementTypeArtSubPack InternalName="Art_OHF_Cathedral_Empire">
+            <SupportedBuildingStyle>EmpireStyle</SupportedBuildingStyle>
+            <TileDesign>F_Cathedral_01</TileDesign>
+            <ConstructionTileDesign>F_Construction1x1_01</ConstructionTileDesign>
+            <DrawnIcon>Improvement_TempleOfEssence.png</DrawnIcon>
+            <DrawnIconConstruction>Improvement_TempleOfEssence_C.png</DrawnIconConstruction>
+            <Thumbnail>F_TempleOfEssence_01_Thumb.png</Thumbnail>
+            <Medallions InternalName="">
+                <All>F_TempleOfEssence_01_Thumb.png</All>
+            </Medallions>
+        </ImprovementTypeArtSubPack>
+    </ImprovementTypeArtDef>
+-->	
+
+    <ImprovementTypeArtDef InternalName="Art_OHF_Church">
+        <ImprovementTypeArtSubPack InternalName="Art_OHF_Church_Kingdom">
+            <SupportedBuildingStyle>KingdomStyle</SupportedBuildingStyle>
+            <TileDesign>K_Church_01</TileDesign>
+            <ConstructionTileDesign>K_Construction1x1_01</ConstructionTileDesign>
+            <DrawnIcon>Improvement_Church.png</DrawnIcon>
+            <DrawnIconConstruction>Improvement_TempleOfEssence_C.png</DrawnIconConstruction>
+            <Thumbnail>K_Temple_Of_Influence_01_Card.png</Thumbnail>
+            <Medallions InternalName="">
+                <All>K_Temple_Of_Influence_01_Card.png</All>
+            </Medallions>
+        </ImprovementTypeArtSubPack>
+        <ImprovementTypeArtSubPack InternalName="Art_OHF_Church_Empire">
+            <SupportedBuildingStyle>EmpireStyle</SupportedBuildingStyle>
+            <TileDesign>F_Church_01</TileDesign>
+            <ConstructionTileDesign>F_Construction1x1_01</ConstructionTileDesign>
+            <DrawnIcon>Improvement_TempleOfEssence.png</DrawnIcon>
+            <DrawnIconConstruction>Improvement_TempleOfEssence_C.png</DrawnIconConstruction>
+            <Thumbnail>F_TempleOfEssence_01_Thumb.png</Thumbnail>
+            <Medallions InternalName="">
+                <All>F_TempleOfEssence_01_Thumb.png</All>
+            </Medallions>
+        </ImprovementTypeArtSubPack>
+    </ImprovementTypeArtDef>	
+
+</ImprovementTypeArtDefs>	

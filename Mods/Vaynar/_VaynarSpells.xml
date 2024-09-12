@@ -1,0 +1,200 @@
+    <SpellDef InternalName="RapidShot">
+        <DisplayName>Rapid Shot</DisplayName>
+        <Description>Let loose two arrows at -25 to Accuracy.</Description>
+        <IconFG>Ability_RainofArrows_Icon.png</IconFG>
+        <Cooldown>5</Cooldown>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Damage</SpellSubClass>
+        <SpellTargetType>EnemyUnit</SpellTargetType>
+        <ApproachTargetTile>0</ApproachTargetTile>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <IsCastable>0</IsCastable>
+        <CanBeDodged>1</CanBeDodged>
+        <IsSpecialAbility>1</IsSpecialAbility>
+        <UseWeaponRange>1</UseWeaponRange>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Accuracy</StrVal>
+            <ApplyToCaster>1</ApplyToCaster>
+            <IsPreHitSpellModifier>1</IsPreHitSpellModifier>
+            <Value>-25</Value>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>DefendableDamage</Attribute>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>DefendableDamage</Attribute>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+        </AIData>
+        <CasterAnimationType>27</CasterAnimationType>
+        <HitSoundFX>Hit_Arrow1</HitSoundFX>
+        <HitSoundFX>Hit_Arrow2</HitSoundFX>		
+        <MissSoundFX>Miss_Swing1</MissSoundFX>
+        <SpellDefEffect>
+            <EffectName>Y_DoubleStrike_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>1</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+	
+	
+	
+	<SpellDef InternalName="Harass_Effect">
+        <DisplayName>Harass</DisplayName>
+        <Description>Target enemy unit suffers -1 to Initiative per Level.</Description>
+        <Image>T_Slow_Painting.png</Image>
+        <IconFG>T_Slow_Icon.png</IconFG>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitCurse</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Debuff</SpellSubClass>
+        <SpellTargetType>EnemyUnit</SpellTargetType>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <IsCastable>0</IsCastable>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_CombatSpeed</StrVal>
+            <DisplayName>Slowed</DisplayName>
+            <Duration>-1</Duration>
+            <Value>-1</Value>
+            <PerLevel>1</PerLevel>			
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_FreezeGroup</HitSoundFX>
+    </SpellDef>
+	
+	
+	<SpellDef InternalName="ChampionCall">
+		<DisplayName>Champions Call</DisplayName>
+		<Description>Call for mighty heroes to join your cause.</Description>
+		<Image>S_Crusade_Painting.png</Image>
+		<IconFG>S_Crusade_Icon.png</IconFG>
+		<IconBG>S_CloakofFear_Icon_BG.png</IconBG>
+		<IconColor>100,100,255</IconColor>
+		<AutoUnlock>1</AutoUnlock>
+		<CanStack>0</CanStack>
+		<Cooldown>50</Cooldown>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>Self</SpellTargetType>
+        <CasterMustBeSov>1</CasterMustBeSov>		
+        <Prereq>
+            <Type>Race</Type>
+            <Attribute>Race_Type_Vaynar</Attribute>
+        </Prereq>
+				
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>100</Amount>
+        </SpellResourceCost>
+        <SpellResourceCost>
+            <Resource>Gold</Resource>
+            <Amount>50</Amount>
+        </SpellResourceCost>
+        <SpellResourceCost>
+            <Resource>Fame</Resource>
+            <Amount>10</Amount>
+        </SpellResourceCost>			
+		
+<!--		
+        <SpellResourceCost>
+            <Resource>Faith</Resource>
+            <Amount>5</Amount>
+        </SpellResourceCost>				
+
+-->		
+         <GameModifier>
+            <ModType>Map</ModType>
+            <Attribute>CreateQuestNearTile</Attribute>
+            <BoolVal1>1</BoolVal1>
+            <Unitclass>Quest_VaynarChampions</Unitclass>
+            <Value>3</Value>
+            <Provides>Spawns a quest within 3 tiles</Provides>
+        </GameModifier>
+
+  <AIData AIPersonality="AI_General">
+    <AIPriority>500</AIPriority>
+  </AIData>
+  <HitSoundFX>Spell_Summon_Earth_Elemental_01</HitSoundFX>
+  <SpellDefEffect>
+    <EffectName>S_SummonEarthElemental_Particle</EffectName>
+    <LocalPosition>0,0,0</LocalPosition>
+    <EffectScale>0.5</EffectScale>
+    <EffectDelay>0</EffectDelay>
+    <SnapToTerrain>1</SnapToTerrain>
+  </SpellDefEffect>
+</SpellDef>	
+
+
+
+<!--
+	<SpellDef InternalName="UBERCHEAT">
+		<DisplayName>cheat spell</DisplayName>
+		<Description>Give yourself stuff.</Description>
+		<Image>S_Crusade_Painting.png</Image>
+		<IconFG>S_Crusade_Icon.png</IconFG>
+		<IconBG>S_CloakofFear_Icon_BG.png</IconBG>
+		<IconColor>100,100,255</IconColor>
+		<AutoUnlock>1</AutoUnlock>
+		<CanStack>0</CanStack>
+		<Cooldown>1</Cooldown>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>Self</SpellTargetType>
+        <CasterMustBeSov>1</CasterMustBeSov>		
+        <Prereq>
+            <Type>Race</Type>
+            <Attribute>Race_Type_Vaynar</Attribute>
+        </Prereq>
+				
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>0</Amount>
+        </SpellResourceCost>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Gold</Attribute>
+            <Value>1000</Value>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Metal</Attribute>
+            <Value>1000</Value>
+        </GameModifier>		
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>RefinedCrystal</Attribute>
+            <Value>1000</Value>
+        </GameModifier>	
+	
+
+  <AIData AIPersonality="AI_General">
+    <AIPriority>500</AIPriority>
+  </AIData>
+  <HitSoundFX>Spell_Summon_Earth_Elemental_01</HitSoundFX>
+  <SpellDefEffect>
+    <EffectName>S_SummonEarthElemental_Particle</EffectName>
+    <LocalPosition>0,0,0</LocalPosition>
+    <EffectScale>0.5</EffectScale>
+    <EffectDelay>0</EffectDelay>
+    <SnapToTerrain>1</SnapToTerrain>
+  </SpellDefEffect>
+</SpellDef>	
+-->

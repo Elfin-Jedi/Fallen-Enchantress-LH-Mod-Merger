@@ -1,0 +1,1934 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--Necromancy Revamped by Dhuran-->
+<!--XtraDeconstruct 3.0 by Primal-->
+<AbilityBonuses>
+	<AbilityBonus InternalName="PathOfTheNecroAbility">
+		<AbilityBonusType>Unit_Level_Path</AbilityBonusType>
+		<AbilityBonusOption InternalName="PathOfTheNecro">
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Ability_X_GrimoireStudier">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Ability_X_GrimoireStudier">
+			<DisplayName>Grimoire Studier</DisplayName>
+			<Description>EXPERIENCE BONUS
+			::: +15% XP</Description>
+			<Icon>Ability_Knowledge_Icon.png</Icon>
+			<PerkTreePosX>0</PerkTreePosX>
+			<PerkTreePosY>3</PerkTreePosY>
+			<GameModifier>
+				<Provides>EXPERIENCE BONUS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ExpBonus</StrVal>
+				<Value>15</Value>
+				<Provides>::: +15% XP</Provides>
+			</GameModifier>
+			<Type>Defensive</Type>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>PathOfTheNecro</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>70</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="LichAttributesAbility">
+		<AbilityBonusOption InternalName="LichAttributes">
+			<DisplayName>Lich Attributes</DisplayName>
+			<Description>IMMUNITY
+			::: To Criticals
+			
+			RESISTANCE
+			::: +200% Death\Poison
+			
+			STATS
+			::: +3 HP per Level</Description>
+			<Icon>Ability_ImmuneToPoison_Icon.png</Icon>
+			<GameModifier>
+				<Provides>IMMUNITY</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ChanceToAvoidCrit</StrVal>
+				<Value>100</Value>
+				<Provides>::: To Criticals</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>RESISTANCE</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ResistPoison</StrVal>
+				<Value>200</Value>
+				<Provides>::: +200% Death\Poison</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>STATS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_HitPoints</StrVal>
+				<Value>3</Value>
+				<PerLevel>1</PerLevel>
+				<Provides>::: +3 HP per Level</Provides>
+			</GameModifier>
+			<CombatRating>20</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Defensive</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="NC_AdeptNecromancyAbility">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+		<AbilityBonusOption InternalName="NC_AdeptNecromancy">
+			<DisplayName>Adept Reanimation</DisplayName>
+			<Description>SPELLS
+			::: Can create Wights
+			
+			SUMMONS
+			::: +1 Level for Reanimates
+			
+			XOTICS
+			::: +1 Grey Magic</Description>
+			<Icon>Ability_X_AdeptNecromancy.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>2</PerkTreePosY>
+			<GameModifier>
+				<Provides>SPELLS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>::: Can create Wights</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>SUMMONS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>NC_UnitStat_BonusReanimationLevel</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1 Level for Reanimates</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>XOTIC</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_GreyMagic</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1 Grey Magic</Provides>
+			</GameModifier>
+			<Type>Spell</Type>
+			<UpgradePathID>Reanimation</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<MinimumLevel>7</MinimumLevel>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>NC_Necromancy2</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="NC_AscendantNecromancyAbility">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+		<AbilityBonusOption InternalName="NC_AscendantNecromancy">
+			<DisplayName>Ascendant Reanimation</DisplayName>
+			<Description>Allows the unit to perform a ritual that exhumes an ancient cursed necropolis.
+			
+			STRATEGIC SPELLS
+			::: Can cast Raise Necropolis
+			
+			XOTICS
+			::: +1 Grey Magic</Description>
+			<Icon>Ability_X_AscendantReanimation.png</Icon>
+			<PerkTreePosX>4</PerkTreePosX>
+			<PerkTreePosY>2</PerkTreePosY>
+			<GameModifier>
+				<Provides>STRATEGIC SPELLS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>::: Can cast Raise Necropolis</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>XOTIC</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_GreyMagic</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1 Grey Magic</Provides>
+			</GameModifier>
+			<Type>Spell</Type>
+			<UpgradePathID>Reanimation</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<MinimumLevel>9</MinimumLevel>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>NC_MasterNecromancy</Attribute>
+			</Prereq>
+				<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="NC_BalefulReflexAbility">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+		<AbilityBonusOption InternalName="NC_BalefulReflex">
+			<DisplayName>Baleful Reflex</DisplayName>
+			<Description>TACTICAL SPELLS
+			::: Can cast Baleful Reflex
+			
+			XOTICS
+			::: +1 Grey Magic</Description>
+			<Icon>Ability_X_BalefulReflex.png</Icon>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>3</PerkTreePosY>
+			<GameModifier>
+				<Provides>TACTICAL SPELLS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>::: Can cast Baleful Reflex</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>XOTIC</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_GreyMagic</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1 Grey Magic</Provides>
+			</GameModifier>
+			<Type>Spell</Type>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>NC_Flesh1</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="NC_CompleteNecromancyAbility">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+		<AbilityBonusOption InternalName="NC_CompleteNecromancy">
+			<DisplayName>Ritual of Completion</DisplayName>
+			<Description>TACTICAL SPELLS
+			::: Can cast Ritual of Completion
+			
+			XOTICS
+			::: +1 Grey Magic</Description>
+			<Icon>Ability_X_CompleteNecromancy.png</Icon>
+			<PerkTreePosX>5</PerkTreePosX>
+			<PerkTreePosY>2</PerkTreePosY>
+			<GameModifier>
+				<Provides>TACTICAL SPELLS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Provides>::: Can cast Ritual of Completion</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>XOTIC</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_GreyMagic</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1 Grey Magic</Provides>
+			</GameModifier>
+			<Type>Spell</Type>
+			<UpgradePathID>Reanimation</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>NC_AscendantNecromancy</Attribute>
+			</Prereq>
+				<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="NC_DarkAugment1Ability">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+		<AbilityBonusOption InternalName="NC_DarkAugment1">
+			<DisplayName>Explosive Deanimation</DisplayName>
+			<Description>TACTICAL SPELLS
+			::: Can cast Explosive Deanimation
+			
+			XOTICS
+			::: +1 Grey Magic</Description>
+			<Icon>Ability_X_ExplosiveDeanimation.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>3</PerkTreePosY>
+			<GameModifier>
+				<Provides>TACTICAL SPELLS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>::: Can cast Explosive Deanimation</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>XOTIC</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_GreyMagic</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1 Grey Magic</Provides>
+			</GameModifier>
+			<Type>Spell</Type>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>NC_Necromancy2</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="NC_DarkAugment2Ability">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+		<AbilityBonusOption InternalName="NC_DarkAugment2">
+			<DisplayName>Vigor of the Dead</DisplayName>
+			<Description>TACTICAL SPELLS
+			::: Can cast Vigor of the Dead
+			
+			XOTICS
+			::: +1 Grey Magic</Description>
+			<Icon>Ability_X_DarkAugment.png</Icon>
+			<PerkTreePosX>4</PerkTreePosX>
+			<PerkTreePosY>3</PerkTreePosY>
+			<GameModifier>
+				<Provides>TACTICAL SPELLS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>::: Can cast Vigor of the Dead</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>XOTIC</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_GreyMagic</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1 Grey Magic</Provides>
+			</GameModifier>
+			<Type>Spell</Type>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>NC_MasterNecromancy</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="NC_DeathShroudAbility">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+		<AbilityBonusOption InternalName="NC_DeathShroudUnlock">
+			<DisplayName>Death Shroud</DisplayName>
+			<Description>TACTICAL SPELLS
+			::: Can cast Death Shroud
+			
+			XOTICS
+			::: +1 Grey Magic</Description>
+			<Icon>Ability_X_DeathShroud.png</Icon>
+			<PerkTreePosX>3</PerkTreePosX>
+			<PerkTreePosY>1</PerkTreePosY>
+			<GameModifier>
+				<Provides>TACTICAL SPELLS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>::: Can cast Death Shroud</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>XOTIC</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_GreyMagic</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1 Grey Magic</Provides>
+			</GameModifier>
+			<Type>Spell</Type>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>NC_HexWizard1</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="NC_Demilich">
+		<AbilityBonusOption InternalName="Demilich">
+			<DisplayName>Demilich</DisplayName>
+			<Description>Immune to Critical Attacks and Poison. Is also more effective at raising undead. A Demilich also acts as a conduit for death magic.
+			
+			IMMUNITY
+			::: To Criticals
+			
+			RESISTANCE
+			::: +200% Death\Poison
+			
+			RESOURCES
+			::: +1 Death Power
+			::: +1 Mana per Season
+			
+			SUMMONS
+			::: +4 Levels to Reanimates
+			
+			TACTICAL AUTOCAST
+			::: Fear</Description>
+			<Icon>Ability_ImmuneToPoison_Icon.png</Icon>
+			<GameModifier>
+				<Provides>IMMUNITY</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ChanceToAvoidCrit</StrVal>
+				<DisplayName>Demilich</DisplayName>
+				<Value>100</Value>
+				<Provides>::: To Criticals</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>RESISTANCE</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ResistPoison</StrVal>
+				<DisplayName>Demilich</DisplayName>
+				<Value>200</Value>
+				<Provides>::: +200% Death\Poison</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>RESOURCES</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>DeathMana</Attribute>
+				<DisplayName>Demilich</DisplayName>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>::: +1 Death Power</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Mana</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>::: +1 Mana per Season</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>SUMMONS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>NC_UnitStat_BonusReanimationLevel</StrVal>
+				<DisplayName>Demilich</DisplayName>
+				<Value>4</Value>
+				<Provides>::: +4 Levels to Reanimates</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>TACTICAL AUTOCAST</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>BattleAutoCastSpell</Attribute>
+				<StrVal>NC_Fear_Ability</StrVal>
+				<Provides>::: Fear :::</Provides>
+				<Value>100</Value>
+			</GameModifier>
+			<CombatRating>200</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Defensive</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="NC_EnervateAbility">
+		<AbilityBonusOption InternalName="Enervate">
+			<DisplayName>Enervate</DisplayName>
+			<Description>TACTICAL ABILITY
+			::: Enervate :::
+			::: -1 ATK and Initiative
+			::: -[3,8] HP
+			::: 25% Chance to lose next Action</Description>
+			<Icon>Ability_X_SeverSpirit.png</Icon>
+			<GameModifier>
+				<Provides>TACTICAL ABILITY</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>NC_Enervate</StrVal>
+				<Provides>::: Enervate :::
+				::: -1 ATK and Initiative
+				::: -[3,8] HP
+				::: 25% Chance to lose next Action</Provides>
+			</GameModifier>
+			<Cost>-1</Cost>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Aggressive</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="NC_Flesh1Ability">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="NC_Flesh1">
+			<DisplayName>Corpus Neophyte</DisplayName>
+			<Description>Continuing his studies of flesh magic, the caster becomes more resilient.
+			
+			STATS
+			::: +10 HP</Description>
+			<Icon>Ability_X_Flesh.png</Icon>
+			<PerkTreePosX>0</PerkTreePosX>
+			<PerkTreePosY>4</PerkTreePosY>
+			<GameModifier>
+				<Provides>STATS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_HitPoints</StrVal>
+				<Provides>::: +10 HP</Provides>
+				<Value>10</Value>
+			</GameModifier>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Defensive</Type>
+			<UpgradePathID>Flesh1</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>PathOfTheNecro</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>70</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="NC_Flesh2Ability">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="NC_Flesh2">
+			<DisplayName>Corpus Acolyte</DisplayName>
+			<Description>The caster begins studying magic of the flesh, carving runes in their skin and weaving dark spells.
+			
+			REGENERATION
+			::: +1 per Action</Description>
+			<Icon>Ability_Spirit_Icon.png</Icon>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>4</PerkTreePosY>
+			<GameModifier>
+				<Provides>REGENERATION</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_TacticalHealthRegen</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1 per Action</Provides>
+			</GameModifier>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Defensive</Type>
+			<UpgradePathID>Flesh</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>NC_Flesh1</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>40</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="NC_Flesh3Ability">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="NC_Flesh3">
+			<DisplayName>Corpus Wizard</DisplayName>
+			<Description>Continuing his studies of flesh magic, the caster becomes more resilient.
+			
+			CORE
+			:::+10 DEF</Description>
+			<Icon>Ability_IronSkin_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>4</PerkTreePosY>
+			<GameModifier>
+				<Provides>CORE</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Defense_Pierce</StrVal>
+				<Provides>::: +10 DEF</Provides>
+				<Value>10</Value>
+			</GameModifier>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Defensive</Type>
+			<UpgradePathID>Flesh</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>NC_Flesh2</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>80</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Ability_X_CorpusGravelord">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Ability_X_CorpusGravelord">
+			<DisplayName>Corpus Gravelord</DisplayName>
+			<PerkTreePosX>3</PerkTreePosX>
+			<PerkTreePosY>4</PerkTreePosY>
+			<Description>SPELL POTENCY
+			::: +50% Death\Poison Spell DMG</Description>
+			<Icon>Ability_X_CorpusGravelord.png</Icon>
+			<GameModifier>
+				<Provides>SPELL POTENCY</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_SpellDamage_Death</StrVal>
+				<Value>0.5</Value>
+				<Provides>::: +50% Death\Poison Spell DMG</Provides>
+			</GameModifier>
+			<Type>Offensive</Type>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>NC_Flesh3</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>10</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="NC_Flesh4Ability">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="NC_Flesh4">
+			<DisplayName>Corpus Magus</DisplayName>
+			<Description>Continuing his studies of flesh magic, the caster becomes unnaturally fast.
+			
+			CORE
+			::: +2 Initiative
+			
+			REGENERATION
+			::: +1 per Action</Description>
+			<Icon>Ability_Fast_Icon.png</Icon>
+			<PerkTreePosX>4</PerkTreePosX>
+			<PerkTreePosY>4</PerkTreePosY>
+			<GameModifier>
+				<Provides>CORE</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_CombatSpeed</StrVal>
+				<Provides>::: +2 Initiative</Provides>
+				<Value>2</Value>
+			</GameModifier>
+			<GameModifier>
+				<Provides>REGENERATION</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_TacticalHealthRegen</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1 per Action</Provides>
+			</GameModifier>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Defensive</Type>
+			<UpgradePathID>Flesh</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Ability_X_CorpusGravelord</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>70</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="NC_Flesh5Ability">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="NC_Flesh5">
+			<DisplayName>Dead Flesh</DisplayName>
+			<Description>The caster's skin becomes more like the undead, he gains resistance to cold and can reanimate at a higher.
+			
+			RESISTANCE
+			::: +50% Water\Cold
+			
+			SUMMONS
+			::: +2 Levels for Reanimates</Description>
+			<Icon>Ability_ResistCold_Icon.png</Icon>
+			<PerkTreePosX>5</PerkTreePosX>
+			<PerkTreePosY>4</PerkTreePosY>
+			<GameModifier>
+				<Provides>RESISTANCE</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ResistCold</StrVal>
+				<Provides>::: +50% Water\Cold</Provides>
+				<Value>50</Value>
+			</GameModifier>
+			<GameModifier>
+				<Provides>SUMMONS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>NC_UnitStat_BonusReanimationLevel</StrVal>
+				<Value>2</Value>
+				<Provides>::: +2 Levels for Reanimates</Provides>
+			</GameModifier>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Defensive</Type>
+			<UpgradePathID>Flesh</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>NC_Flesh4</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>80</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="NC_Flesh6Ability">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="NC_Flesh6">
+			<DisplayName>Cursed Flesh</DisplayName>
+			<Description>The caster's flesh is carved with powerful runes, granting additional defense, damage reflection and tactical regeneration.
+			
+			CORE
+			::: +6 DEF
+			
+			REGENERATION
+			::: +1 per Action
+			
+			TACTICAL EFFECT
+			::: Reflection :::
+			::: 10% DMG absorbed = DMG to attacker</Description>
+			<Icon>Ability_DamageReflection_Icon.png</Icon>
+			<PerkTreePosX>6</PerkTreePosX>
+			<PerkTreePosY>4</PerkTreePosY>
+			<GameModifier>
+				<Provides>CORE</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Defense_Pierce</StrVal>
+				<Provides>::: +6 DEF</Provides>
+				<Value>6</Value>
+			</GameModifier>
+			<GameModifier>
+				<Provides>REGENERATION</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_TacticalHealthRegen</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1 per Action</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>TACTICAL EFFECT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_DamageReflect</StrVal>
+				<Provides>::: Reflection :::
+				::: 10% DMG absorbed = DMG to attacker</Provides>
+				<Value>0.1</Value>
+			</GameModifier>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Defensive</Type>
+			<UpgradePathID>Flesh</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>NC_Flesh5</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>80</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="NC_HexWizard1Ability">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+		<AbilityBonusOption InternalName="NC_HexWizard1">
+			<DisplayName>Profane Ritual</DisplayName>
+			<Description>Allows the unit to perform a defensive ritual on their cities that can be used to steal the souls of would-be attackers.
+			
+			STRATEGIC SPELLS
+			::: Can cast Profane Rituals
+			
+			XOTICS
+			::: +1 Grey Magic</Description>
+			<Icon>Ability_Warlock_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>1</PerkTreePosY>
+			<GameModifier>
+				<Provides>STRATEGIC SPELLS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>::: Can cast Profane Ritual</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>XOTIC</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_GreyMagic</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1 Grey Magic</Provides>
+			</GameModifier>
+			<Type>Spell</Type>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>NC_Spirit2</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>40</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="NC_HexWizard2Ability">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+		<AbilityBonusOption InternalName="NC_HexWizard2">
+			<DisplayName>Awaken</DisplayName>
+			<Description>Allows the unit to attempt to kill enemy units in battle and raise them as undead.
+			
+			TACTICAL SPELLS
+			::: Can cast Awaken
+			
+			XOTICS
+			::: +1 Grey Magic</Description>
+			<Icon>Ability_X_BalefulReflex.png</Icon>
+			<PerkTreePosX>4</PerkTreePosX>
+			<PerkTreePosY>1</PerkTreePosY>
+			<GameModifier>
+				<Provides>TACTICAL SPELLS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>::: Can cast Awaken</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>XOTIC</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_GreyMagic</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1 Grey Magic</Provides>
+			</GameModifier>
+			<Type>Spell</Type>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>NC_Spirit3</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>30</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="NC_HexWizard3Ability">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+		<AbilityBonusOption InternalName="NC_HexWizard3">
+			<DisplayName>Soulstorm</DisplayName>
+			<Description>Allows the unit to create a supernatural storm that scatters armies and attracts the spirits of the dead.
+			
+			STRATEGIC SPELLS
+			::: Can cast Soulstorm
+			
+			XOTICS
+			::: +1 Grey Magic</Description>
+			<Icon>Ability_X_Soulstorm.png</Icon>
+			<PerkTreePosX>5</PerkTreePosX>
+			<PerkTreePosY>1</PerkTreePosY>
+			<GameModifier>
+				<Provides>STRATEGIC SPELLS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>::: Can cast Soulstorm</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>XOTIC</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_GreyMagic</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1 Grey Magic</Provides>
+			</GameModifier>
+			<Type>Spell</Type>
+			<UpgradePathID>Hex</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>NC_Spirit4</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>30</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="NC_HexWizard4Ability">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+		<AbilityBonusOption InternalName="NC_HexWizard4">
+			<DisplayName>Soul Ripper</DisplayName>
+			<Description>TACTICAL SPELLS
+			::: Can cast Sever Spirit
+			
+			XOTICS
+			::: +1 Grey Magic</Description>
+			<Icon>Ability_X_NRSoulRipper.png</Icon>
+			<PerkTreePosX>6</PerkTreePosX>
+			<PerkTreePosY>1</PerkTreePosY>
+			<GameModifier>
+				<Provides>TACTICAL SPELLS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>::: Can cast Sever Spirit</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>XOTIC</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_GreyMagic</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1 Grey Magic</Provides>
+			</GameModifier>
+			<Type>Spell</Type>
+			<UpgradePathID>Hex</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>NC_Spirit5</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>20</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="NC_Lichdom">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="NC_Lichdom">
+			<DisplayName>Forbidden Knowledge</DisplayName>
+			<Description>A breakthrough in the quest for Lichdom.
+			
+			RESOURCES
+			::: +1 Forbidden Knowledge</Description>
+			<Icon>Ability_FleshBoundTome_Icon.png</Icon>
+			<PerkTreePosX>0</PerkTreePosX>
+			<PerkTreePosY>1</PerkTreePosY>
+			<GameModifier>
+				<Provides>RESOURCES</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>NCForbiddenKnowledge</Attribute>
+				<Value>1</Value>
+				<Provides>::: +1 Forbidden Knowledge</Provides>
+			</GameModifier>
+			<MinimumLevel>15</MinimumLevel>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Defensive</Type>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>PathOfTheNecro</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="NC_MasterNecromancyAbility">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+		<AbilityBonusOption InternalName="NC_MasterNecromancy">
+			<DisplayName>Master Reanimation</DisplayName>
+			<Description>TACTICAL SPELLS
+			::: Can cast Raise Undead Phalanx
+			
+			XOTICS
+			::: +1 Grey Magic</Description>
+			<Icon>Ability_X_MasterNecromancy.png</Icon>
+			<PerkTreePosX>3</PerkTreePosX>
+			<PerkTreePosY>2</PerkTreePosY>
+			<GameModifier>
+				<Provides>TACTICAL SPELLS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Provides>::: Can cast Raise Undead Phalanx</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>XOTIC</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_GreyMagic</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1 Grey Magic</Provides>
+			</GameModifier>
+			<Type>Spell</Type>
+			<UpgradePathID>Reanimation</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>NC_AdeptNecromancy</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="NC_Necromancy1Ability">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+		<AbilityBonusOption InternalName="NC_Necromancy1">
+			<DisplayName>Basic Reanimation</DisplayName>
+			<Description>SUMMONS
+			::: +1 Level for Reanimates
+			
+			TACTICAL SPELLS
+			::: Can cast Raise Skeleton
+			::: Can cast Raise Zombie
+			
+			XOTICS
+			::: +1 Grey Magic</Description>
+			<Icon>Ability_Necromancy_Icon.png</Icon>
+			<PerkTreePosX>0</PerkTreePosX>
+			<PerkTreePosY>2</PerkTreePosY>
+			<GameModifier>
+				<Provides>SUMMONS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>NC_UnitStat_BonusReanimationLevel</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1 Level for Reanimates</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>TACTICAL SPELLS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>::: Can cast Raise Skeleton
+				::: Can cast Raise Zombie</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>XOTIC</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_GreyMagic</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1 Grey Magic</Provides>
+			</GameModifier>
+			<Type>Spell</Type>
+			<UpgradePathID>Reanimation</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>PathOfTheNecro</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="NC_Necromancy2Ability">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+		<AbilityBonusOption InternalName="NC_Necromancy2">
+			<DisplayName>Greater Reanimation</DisplayName>
+			<Description>TACTICAL SPELLS
+			::: Can cast Horrific Wail
+			::: Can cast Raise Skeletal Horde
+			::: Can cast Raise Zombie Horder
+			
+			XOTICS
+			::: +1 Grey Magic</Description>
+			<Icon>Ability_GreaterNecromancy_Icon.png</Icon>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>2</PerkTreePosY>
+			<GameModifier>
+				<Provides>TACTICAL SPELLS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>::: Can cast Horrific Wail 
+				::: Can cast Raise Skeletal Horde
+				::: Can cast Raise Zombie Horde</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>XOTIC</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_GreyMagic</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1 Grey Magic</Provides>
+			</GameModifier>
+			<Type>Spell</Type>
+			<UpgradePathID>Reanimation</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>NC_Necromancy1</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>60</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="NC_SanguineWizard1Ability">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+		<AbilityBonusOption InternalName="NC_SanguineWizard1">
+			<DisplayName>Sanguine Curse</DisplayName>
+			<Description>TACTICAL SPELLS
+			::: Can cast Sanguine Curse
+			
+			XOTICS
+			::: +1 Grey Magic</Description>
+			<Icon>Ability_X_Dot1.png</Icon>
+			<PerkTreePosX>3</PerkTreePosX>
+			<PerkTreePosY>3</PerkTreePosY>
+			<GameModifier>
+				<Provides>TACTICAL SPELLS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>::: Can cast Sanguine Curse</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>XOTIC</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_GreyMagic</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1 Grey Magic</Provides>
+			</GameModifier>
+			<Type>Spell</Type>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>NC_Flesh3</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>30</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="NC_SeverSpiritAbility">
+		<AbilityBonusOption InternalName="SeverSpirit">
+			<DisplayName>Sever Spirit</DisplayName>
+			<Description>TACTICAL ABILITY
+			::: Sever Spirit :::
+			::: ((1 + Death Shards) x 12) DMG
+			::: If target is killed, a Disembodied Spirit appears.</Description>
+			<Icon>Ability_X_SeverSpirit.png</Icon>
+			<GameModifier>
+				<Provides>TACTICAL ABILITY</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>NC_SeverSpirit</StrVal>
+				<Provides>::: Sever Spirit :::
+				::: ((1 + Death Shards) x 12) DMG
+				::: If target is killed, a Disembodied Spirit appears</Provides>
+			</GameModifier>
+			<Cost>-1</Cost>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Aggressive</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="NC_Spirit1Ability">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="NC_Spirit1">
+			<DisplayName>Spirit Neophyte</DisplayName>
+			<Description>The caster begins delving into the magic of the spirit world, allowing them to communicate with spirits by using the Iniquitous Bargain skill in combat.
+			
+			TACTICAL ABILITY
+			::: Iniquitous Bargain :::
+			::: -20% HP
+			::: +40% HP in Mana</Description>
+			<Icon>Ability_X_NRSpirit1.png</Icon>
+			<PerkTreePosX>0</PerkTreePosX>
+			<PerkTreePosY>0</PerkTreePosY>
+			<GameModifier>
+				<Provides>TACTICAL ABILITY</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>NC_Spirit_Neophyte_Regen</StrVal>
+				<Provides>::: Iniquitous Bargain :::
+				::: -20% HP
+				::: +40% HP in Mana</Provides>
+			</GameModifier>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Spell</Type>
+			<UpgradePathID>Spirit</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>PathOfTheNecro</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="NC_Spirit2Ability">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="NC_Spirit2">
+			<DisplayName>Spirit Acolyte</DisplayName>
+			<Description>Continuing their studies into spirit magic, the caster gains innate Spell Resistance.
+			
+			RESISTANCE
+			::: +15 Magic</Description>
+			<Icon>Ability_ProdigyII_Icon.png</Icon>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>0</PerkTreePosY>
+			<GameModifier>
+				<Provides>RESISTANCE</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_MagicResist</StrVal>
+				<Value>15</Value>
+				<Provides>::: +15 Magic</Provides>
+			</GameModifier>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Spell</Type>
+			<UpgradePathID>Spirit</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>NC_Spirit1</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>50</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="NC_Spirit23Ability">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="NC_Spirit23">
+			<DisplayName>Spirit Protection</DisplayName>
+			<Description>Continuing their studies into spirit magic, the caster gains Water\Cold Resistance.
+			
+			RESISTANCE
+			::: +50% Water\Cold</Description>
+			<Icon>Ability_ProdigyIII_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>0</PerkTreePosY>
+			<GameModifier>
+				<Provides>RESISTANCE</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ResistCold</StrVal>
+				<Value>50</Value>
+				<Provides>::: +50% Water\Cold</Provides>
+			</GameModifier>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Spell</Type>
+			<UpgradePathID>Spirit</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>NC_Spirit2</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>50</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="NC_Spirit3Ability">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="NC_Spirit3">
+			<DisplayName>Spirit Sage</DisplayName>
+			<Description>Continuing their studies into spirit magic, the caster gains power over the spirits of the dead within their proximity, who will act as scouts granting additional Sight Range as well as additional Levels for Reanimates.</Description>
+			<Icon>Ability_ProdigyIV_Icon.png</Icon>
+			<PerkTreePosX>3</PerkTreePosX>
+			<PerkTreePosY>0</PerkTreePosY>
+			<GameModifier>
+				<Provides>STATS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Sight</StrVal>
+				<Value>2</Value>
+				<Provides>::: +2 Sight</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>SUMMONS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>NC_UnitStat_BonusReanimationLevel</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1 Level for Reanimates</Provides>
+			</GameModifier>
+			<Type>Defensive</Type>
+			<UpgradePathID>Spirit</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>NC_Spirit23</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>40</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="NC_Spirit4Ability">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="NC_Spirit4">
+			<DisplayName>Spirit Font</DisplayName>
+			<Description>Continuing their studies into spirit magic, the caster gains further Resistance against Magic.
+			
+			RESISTANCE
+			::: +15 Magic</Description>
+			<Icon>Ability_X_NRSpirit5.png</Icon>
+			<PerkTreePosX>4</PerkTreePosX>
+			<PerkTreePosY>0</PerkTreePosY>
+			<GameModifier>
+				<Provides>RESISTANCE</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_MagicResist</StrVal>
+				<Value>15</Value>
+				<Provides>::: +15 Magic</Provides>
+			</GameModifier>
+			<Type>Defensive</Type>
+			<UpgradePathID>Spirit</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>NC_Spirit3</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>50</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="NC_Spirit5Ability">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="NC_Spirit5">
+			<DisplayName>Ancestral Master</DisplayName>
+			<Description>STATS
+			::: +5 Magic Power
+			
+			SUMMONS
+			::: +2 Levels for Reanimates</Description>
+			<Icon>Ability_X_NRSpirit6.png</Icon>
+			<PerkTreePosX>5</PerkTreePosX>
+			<PerkTreePosY>0</PerkTreePosY>
+			<GameModifier>
+				<Provides>STATS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_MagicPower</StrVal>
+				<Value>5</Value>
+				<Provides>::: +5 Magic Power</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>SUMMONS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>NC_UnitStat_BonusReanimationLevel</StrVal>
+				<Value>2</Value>
+				<Provides>::: +2 Levels for reanimates</Provides>
+			</GameModifier>
+			<Type>Offensive</Type>
+			<UpgradePathID>Spirit</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>NC_Spirit4</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>30</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Ability_X_Spirit6_NC">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Ability_X_Spirit6_NC">
+			<DisplayName>Legendary Gravelord</DisplayName>
+			<PerkTreePosX>6</PerkTreePosX>
+			<PerkTreePosY>0</PerkTreePosY>
+			<Description>At the pinnacle of spirit magic, the caster's abilities become more hostile, allowing increased Magic Power and Resistance and more powerful Reanimates.
+			
+			RESISTANCE
+			::: +12 Magic
+			
+			STATS
+			::: +12 Magic Power
+			
+			SUMMONS
+			::: +1 Level for Reanimates</Description>
+			<Icon>Ability_X_NRSpirit7.png</Icon>
+			<MinimumLevel>12</MinimumLevel>
+			<GameModifier>
+				<Provides>RESISTANCE</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_MagicResist</StrVal>
+				<Value>12</Value>
+				<Provides>::: +12 Magic</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>STATS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_MagicPower</StrVal>
+				<Value>12</Value>
+				<Provides>::: +12 Magic Power</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>SUMMONS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>NC_UnitStat_BonusReanimationLevel</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1 Level for reanimates</Provides>
+			</GameModifier>
+			<Type>Offensive</Type>
+			<UpgradePathID>Spirit</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>NC_Spirit5</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>80</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Ability_X_Spirit7_NC">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Ability_X_Spirit7_NC">
+			<DisplayName>Inner Darkness</DisplayName>
+			<PerkTreePosX>7</PerkTreePosX>
+			<PerkTreePosY>0</PerkTreePosY>
+			<Description>RESOURCES
+			::: +1 Death Power</Description>
+			<Icon>Talent_X_Diabolist.png</Icon>
+			<MinimumLevel>18</MinimumLevel>
+			<GameModifier>
+				<Provides>RESOURCES</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>ProduceResource</Attribute>
+				<StrVal>DeathMana</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1 Death Power</Provides>
+			</GameModifier>
+			<Type>Offensive</Type>
+			<UpgradePathID>Spirit</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Ability_X_Spirit6_NC</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>90</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="NC_Summon2Ability">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="NC_Summon2">
+			<DisplayName>Reanimation Technique</DisplayName>
+			<Description>SUMMONS
+			::: +1 Level for Reanimates</Description>
+			<Icon>Profession_X_Undeadlord.png</Icon>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>1</PerkTreePosY>
+			<GameModifier>
+				<Provides>SUMMONS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>NC_UnitStat_BonusReanimationLevel</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1 Level for Reanimates</Provides>
+			</GameModifier>
+			<Type>Spell</Type>
+			<UpgradePathID>Reanimation</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>NC_Necromancy1</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>10</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="ReanimationRitualsAbility">
+		<AbilityBonusType>Player</AbilityBonusType>
+		<AbilityBonusOption InternalName="ReanimationRituals">
+			<DisplayName>Reanimation Rituals</DisplayName>
+			<Description>IMPROVEMENTS
+			::: Trait specific Shard Altars #N
+			::: Trait specific Shard Shrines #N
+			::: Trait specific Shard Temples #N
+			::: ::: +Giant Spider Souls
+			
+			XOTIC
+			::: Can train Skeletons
+			::: Can train Spectres
+			::: Can train Liches
+			
+			::: Can train Brood Riders if Wraith
+			::: ::: Custom Tech Tree required
+			::: ::: Leader Pack DLC required
+			
+			!WARNING!
+			::: Do not combine w/ Binders
+			::: Do not combine w/ Gravetouched
+			::: Do not combine w/ Mediums</Description>
+			<Icon>Player_X_ReanimationRituals.png</Icon>
+			<GameModifier>
+				<Provides>IMPROVEMENTS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>::: Trait specific Shard Altars #N
+				::: Trait specific Shard Shrines #N
+				::: Trait specific Shard Temples #N
+				::: ::: +Giant Spider Souls</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>XOTIC</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>::: Can train Skeletons
+				::: Can train Spectres
+				::: Can train Liches
+				
+				::: Can train Brood Riders if Wraith
+				::: ::: Custom Tech Tree required
+				::: ::: Leader Pack DLC required</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>!WARNING!</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>::: Do not combine w/ Binding
+				::: Do not combine w/ Gravetouched
+				::: Do not combine w/ Mediums</Provides>
+			</GameModifier>
+			<Cost>1</Cost>
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="RR_SpectreAttackAbilities">
+		<AbilityBonusOption InternalName="SpectreAttackAbilities">
+			<DisplayName>Chill of Death</DisplayName>
+			<Description>The Spectre's semi-corporeal nature, and natural chill of death give it unique combat abilities.
+			
+			TACTICAL ABILITY
+			::: Flight of Terror :::
+			::: (6 + Level) Self Heal
+			::: (6 + Level) DMG
+			::: Fear Enemies for 2 Actions
+			::: Resistable
+			
+			::: Grave Chill (Water\Cold) :::
+			::: (6 + Level) DMG to ALL within 1 Tile.
+			::: -3 to Initiative for 3 Actions
+			::: Resistable</Description>
+			<Icon>Ability_X_ChillOfDeath.png</Icon>
+			<GameModifier>
+				<Provides>TACTICAL ABILITY</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>RR_SpectreLineAttack_Effect</StrVal>
+				<Provides>::: Flight of Terror :::
+				::: (6 + Level) Self Heal
+				::: (6 + Level) DMG
+				::: Fear Enemies for 2 Actions
+				::: Resistable</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>RR_SpectreBurstAttack_Effect</StrVal>
+				<Provides>::: Grave Chill (Water\Cold) :::
+				::: (6 + Level) DMG to ALL within 1 Tile.
+				::: -3 to Initiative for 3 Actions
+				::: Resistable</Provides>
+			</GameModifier>
+			<Cost>-1</Cost>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Aggressive</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>10</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="RR_SpectreBurstAttackAbility">
+		<AbilityBonusOption InternalName="SpectreBurstAttack">
+			<DisplayName>Burst Attack</DisplayName>
+			<Description>TACTICAL ABILITY
+			::: Grave Chill (Water\Cold) :::
+			::: (6 + Level) DMG to ALL within 1 Tile.
+			::: -3 to Initiative for 3 Actions
+			::: Resistable</Description>
+			<Icon>Ability_X_BurstAttack.png</Icon>
+			<GameModifier>
+				<Provides>TACTICAL ABILITY</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>RR_SpectreBurstAttack_Effect</StrVal>
+				<Provides>::: Grave Chill (Water\Cold) :::
+				::: (6 + Level) DMG to ALL within 1 Tile.
+				::: -3 to Initiative for 3 Actions
+				::: Resistable</Provides>
+			</GameModifier>
+			<Cost>-1</Cost>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Aggressive</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="RR_SpectreLineAttackAbility">
+		<AbilityBonusOption InternalName="SpectreLineAttack">
+			<DisplayName>Line Attack</DisplayName>
+			<Description>TACTICAL ABILITY
+			::: Flight of Terror :::
+			::: (6 + Level) Self Heal
+			::: (6 + Level) DMG
+			::: Fear Enemies for 2 Actions
+			::: Resistable</Description>
+			<Icon>Ability_X_DemonicAlly.png</Icon>
+			<GameModifier>
+				<Provides>TACTICAL ABILITY</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>RR_SpectreLineAttack_Effect</StrVal>
+				<Provides>::: Flight of Terror :::
+				::: (6 + Level) Self Heal
+				::: (6 + Level) DMG
+				::: Fear Enemies for 2 Actions
+				::: Resistable</Provides>
+			</GameModifier>
+			<Cost>-1</Cost>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Aggressive</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="RR_Spell_CounterspellAbility">
+		<AbilityBonusType>Unit_Design</AbilityBonusType>
+		<AbilityBonusOption InternalName="RR_Spell_Counterspell">
+			<DisplayName>Counterspell</DisplayName>
+			<Description>TACTICAL ABILITY
+			::: Counterspell :::
+			::: Disrupt an enemy Caster
+			::: Resistable</Description>
+			<Icon>Ability_X_Counterspell.png</Icon>
+			<GameModifier>
+				<Provides>TACTICAL ABILITY</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>Counterspell_Ability</StrVal>
+				<Provides>::: Counterspell :::
+				::: Disrupt an enemy Caster
+				::: Resistable</Provides>
+			</GameModifier>
+			<Type>Lichdom</Type>
+			<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+			<SupportedUnitModelType>RR_Lich</SupportedUnitModelType>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="RR_Spell_DespairAbility">
+		<AbilityBonusType>Unit_Design</AbilityBonusType>
+		<AbilityBonusOption InternalName="RR_Spell_Despair">
+			<DisplayName>Despair</DisplayName>
+			<Description>TACTICAL ABILITY
+			::: Despair :::
+			::: (3 x Level x Targets) Self Heal
+			::: (3 x Level) DMG to ALL
+			::: Resistable</Description>
+			<Icon>Ability_X_Despair.png</Icon>
+			<GameModifier>
+				<Provides>TACTICAL ABILITY</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>Despair</StrVal>
+				<Provides>::: Despair :::
+				::: (3 x Level x Targets) Self Heal
+				::: (3 x Level) DMG to ALL
+				::: Resistable</Provides>
+			</GameModifier>
+			<Type>Lichdom</Type>
+			<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+			<SupportedUnitModelType>RR_Lich</SupportedUnitModelType>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="RR_Spell_ImprisonAbility">
+		<AbilityBonusType>Unit_Design</AbilityBonusType>
+		<AbilityBonusOption InternalName="RR_Spell_Imprison">
+			<DisplayName>Imprison</DisplayName>
+			<Description>TACTICAL ABILITY
+			::: Imprison :::
+			::: 5 DMG per Action
+			::: 0 Dodge
+			::: 0 Move
+			::: Resistable
+			::: Lasts 5 Actions</Description>
+			<Icon>Ability_X_Imprison.png</Icon>
+			<GameModifier>
+				<Provides>TACTICAL ABILITY</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>Imprison</StrVal>
+				<Provides>::: Imprison :::
+				::: 5 DMG per Action
+				::: 0 Dodge
+				::: 0 Move
+				::: Resistable
+				::: Lasts 5 Actions</Provides>
+			</GameModifier>
+			<Type>Lichdom</Type>
+			<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+			<SupportedUnitModelType>RR_Lich</SupportedUnitModelType>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="RR_Spell_TouchOfEntropyAbility">
+		<AbilityBonusType>Unit_Design</AbilityBonusType>
+		<AbilityBonusOption InternalName="RR_Spell_TouchOfEntropy">
+			<DisplayName>Touch of Entropy</DisplayName>
+			<Description>TACTICAL ABILITY
+			::: Touch of Entropy :::
+			::: ((4 + Death Shards) x6) DMG
+			::: If target is killed, a Lurk rises
+			::: Resistable</Description>
+			<Icon>Ability_X_TouchOfEntropy.png</Icon>
+			<GameModifier>
+				<Provides>TACTICAL ABILITY</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>TouchOfEntropy_Ability</StrVal>
+				<Provides>::: Touch of Entropy :::
+				::: ((4 + Death Shards) x6) DMG
+				::: If target is killed, a Lurk rises
+				::: Resistable</Provides>
+			</GameModifier>
+			<Type>Lichdom</Type>
+			<AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+			<SupportedUnitModelType>RR_Lich</SupportedUnitModelType>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="SemiCorporealAbility">
+		<AbilityBonusOption InternalName="SemiCorporeal">
+			<DisplayName>Semi-Corporeal</DisplayName>
+			<Description>Half damage from Physical attacks.
+			
+			RESISTANCE
+			::: +50% Pierce</Description>
+			<Icon>Ability_Ghost_Icon.png</Icon>
+			<GameModifier>
+				<Provides>ABSTRACT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>Half damage from Physical attacks.</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>RESISTANCE</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ResistPierce</StrVal>
+				<Value>50</Value>
+				<Provides>::: +50% Pierce</Provides>
+			</GameModifier>
+			<Type>Defensive</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="UndeadImmunitiesAbility">
+		<AbilityBonusOption InternalName="UndeadImmunities">
+			<DisplayName>Undead Immunities</DisplayName>
+			<Description>IMMUNITY
+			::: To Criticals
+			
+			RESISTANCE
+			::: +200% Death\Poison</Description>
+			<Icon>Ability_ImmuneToCriticals_Icon.png</Icon>
+			<GameModifier>
+				<Provides>IMMUNITY</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ChanceToAvoidCrit</StrVal>
+				<Value>100</Value>
+				<Provides>::: To Criticals</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>RESISTANCE</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ResistPoison</StrVal>
+				<Value>200</Value>
+				<Provides>::: +200% Death\Poison</Provides>
+			</GameModifier>
+			<CombatRating>20</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Defensive</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+</AbilityBonuses>

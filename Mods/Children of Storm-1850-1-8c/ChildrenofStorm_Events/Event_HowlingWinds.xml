@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<Container>
+  <QuestDef InternalName="Event_HowlingWinds">
+    <DisplayName>Howling Winds</DisplayName>
+    <Description>From far up north comes the deadly Northern Winds. Every year they rise in winter times and then calm down in time for spring. Something has disturbed their normal cycle, and now it seems that they only rise and rise until all of Elemental is howling in the wind. 
+
+For every 2 Air Shard powers that you control, you gain another 1 Air Shard power. This effect lasts for 16 turns.</Description>
+    <IsStartingPointQuest>0</IsStartingPointQuest>
+    <IsStartingPointQuest>0</IsStartingPointQuest>
+    <AllowQuestRejection>0</AllowQuestRejection>
+   <ShortTextAccept>We will listen to the wind more carefully.</ShortTextAccept>
+    <QuestClass>Minor</QuestClass>
+    <Repeatable>0</Repeatable>
+   <TriggerType>TurnNumber</TriggerType>
+    <TriggerData>125</TriggerData>
+    <TriggerChance>5</TriggerChance>
+    <PostTriggerChance>5</PostTriggerChance>
+
+    <TriggerOrigin>EventLocation</TriggerOrigin>
+    <Image>BG40_AirShrine.png</Image>
+    <Treasure>
+
+
+             <GameModifier>
+        <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_AirMana</StrVal>
+        <Value>50</Value>
+        <Duration>16</Duration>
+      </GameModifier>
+ 
+
+
+
+    </Treasure>
+    <QuestObjectiveDef>
+      <ObjectiveID>0</ObjectiveID>
+      <QuestEnd>1</QuestEnd>
+    </QuestObjectiveDef>
+  </QuestDef>
+</Container>

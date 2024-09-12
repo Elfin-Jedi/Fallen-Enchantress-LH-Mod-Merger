@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<UnitTypes>
+	<UnitType InternalName="LivingStone_Rukre">
+		<CreatureType>Champion</CreatureType>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-5</Value>
+			<Provides>-5% Unrest in the city this unit is in</Provides>
+		</GameModifier>
+
+		<DisplayName>Rukre</DisplayName>
+		<Backstory>Rukre is the only Living Stone member that is not recognized by the others of the race as being a Living Stone. During the creation of the Living Stone, Rukre was separated from the others by an underground river and carried far away. He was found by a group of Crag Spawn who raised him as their own, he even took on the appearance of a Crag Spawn. Thus Rukre has inherited the violent nature of his caretakers, whom he used to join on their raids on underground mines. Rukre managed to be the only survivor after one raid went badly and all the true Crag Spawn following him were killed. He wandered the wastelands the following years and, on occasion, even tried to re-integrate himself into other Crag Spawn groups but now that he had grown up it was more than obvious he wasn't one of them. In his travels, he came across the many darker sides of living with a violent nature, primarily the suffering of children and he came to abandon it as a way of life.
+
+Nevertheless, Rukre has never been formally accepted as a Living Stone by the others of his race and the reason is this: the Living Stone see Rukre as what they could have been if things had happened differently during the Creation. The Living Stone are perhaps too eager to cast a favorable light on their own reality in the world of Elemental. The truth is, were it not for happenstance during the Creation, they could all be beasts. This is not something the Living Stone wish to accept, rather it would be so much simpler to not recognize poor Rukre. Furthermore, there's the fact of his likeness in appearance to the Crag Spawn. Those things open up a train of thoughts the Living Stone would rather leave alone.
+		</Backstory>
+
+		<ModelPath>M_Demon_Elemental_Mesh_01.hkb</ModelPath>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<EyeTexture>gfx\Eyes\blinks\eyeblink_m4_brwn.png</EyeTexture>
+		<AnimationPack>EF_BanditAnimationPack</AnimationPack>
+		<ShowAsSingleUnit>false</ShowAsSingleUnit>
+		<CutSceneDataPack>ReliasCutscenePack</CutSceneDataPack>
+		<ModelScale>1.0000</ModelScale>
+		<TacticalModelScale>1.9000</TacticalModelScale>
+		<EquipmentScale>1.0000</EquipmentScale>
+		<ClothMapScale>1.6</ClothMapScale>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<MovementType>land</MovementType>
+		<BobbingFrequency>0.0000</BobbingFrequency>
+		<ClothPoseIndex>0</ClothPoseIndex>
+		<InfoCardBackground>BG13_Volcanic</InfoCardBackground>
+		<InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+		<CanBeDesigned>0</CanBeDesigned>
+		<Medallions InternalName="" />
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<!-- -->
+		<Allegiance>Kingdom</Allegiance>
+		<Unique>1</Unique>
+		<IsNPC>1</IsNPC>
+		<NPCSpawnLikelihood>100</NPCSpawnLikelihood>
+		<IsChampion>1</IsChampion>
+		<Gender>Male</Gender>
+		<SoundPack>SoundPack_Generic_Male</SoundPack>
+		<SpawnRating>1</SpawnRating>
+
+		<Quote>Violence at a point.</Quote>
+		<NPCRecruitmentText>For %d gildar, I will serve you as long as your cause is just.</NPCRecruitmentText>
+		<SelectedAbilityBonusOption>Blood_LivingStone</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Water1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>ImmuneToPoisonAbility_Rukre</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ironskin</SelectedAbilityBonusOption>
+		<!-- -->
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_HitPoints>20</UnitStat_HitPoints>
+			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_LivingStone>1</UnitStat_BG_IsRace_LivingStone>
+			<UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsMale>1</UnitStat_BG_IsMale>
+			<UnitStat_BG_IsNotAlive>1</UnitStat_BG_IsNotAlive>
+		</LevelMilestone>
+		<AutoCreateEquipment>Warhammer</AutoCreateEquipment>
+
+		<Color_Metal>70,100,70,255</Color_Metal>
+		<Color_Skin>50,50,50,255</Color_Skin>
+		<Color_Hair>168,123,88,255</Color_Hair>
+		<Color_Clothing1>120,25,20,255</Color_Clothing1>
+		<Color_Clothing2>78,60,55,255</Color_Clothing2>
+		<Texture_Skin>M_Demon_Elemental_Texture_02.png</Texture_Skin>
+		<Texture_Eyes>gfx\Eyes\blinks\eyeblink_m4_brwn.png</Texture_Eyes>
+		<UnitModelType>LivingStone</UnitModelType>
+		<NPCFreeRecruit>0</NPCFreeRecruit>
+		<RaceType>Race_Type_LivingStone</RaceType>
+		<WageOverride>1</WageOverride>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+	</UnitType>
+	<AbilityBonus InternalName="ImmuneToPoisonAbility_Rukre">
+		<AbilityBonusOption InternalName="ImmuneToPoisonAbility_Rukre">
+			<DisplayName>Immune to Poison</DisplayName>
+			<Description>+100 Poison resistance</Description>
+			<Icon>Ability_ImmuneToPoison_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ResistPoison</StrVal>
+				<Value>100</Value>
+			</GameModifier>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<IsCombatAbility>1</IsCombatAbility>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+</UnitTypes>

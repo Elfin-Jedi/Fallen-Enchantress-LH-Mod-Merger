@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<Spells>
+	<SpellDef InternalName="Spell_X_TirelessPage_F0">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Tireless Page</DisplayName>
+		<SpellResourceCost>
+			<Resource>Gold</Resource>
+			<Amount>1</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>0</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<PerTurn>1</PerTurn>
+			<Amount>100</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Enables the target to cast Flying Page.
+		
+		See Tooltip. See WARNINGS.
+		
+		
+		
+		---------------------------------------------------
+		!WARNING!
+		
+		Do not cast on a stack
+		
+		Dispel enchantment when done
+		(-100 Mana per Season)
+		---------------------------------------------------
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] TIRELESS PAGE
+		::: Enables the target to cast Flying Page.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: Champion
+		
+		EFFECT
+		::: Unlocks Flying Page I
+		::: Unlocks Flying Page II
+		::: Unlocks Flying Page III
+		::: Unlocks Flying Page IV
+		
+		::: Those Spells will allow one of your Champion to act as Courier.
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Dispelled (Enchantment)
+		
+		OTHERS
+		::: 100 Mana Maintenance (Don't forget to Dispel!)
+		::: Caster must be Sov
+		::: Player Only
+		
+		SOURCE
+		::: All</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>FriendlyChampion</SpellTargetType>
+		<CasterMustBeSov>1</CasterMustBeSov>
+		<UniqueSpellUnlock>Spell_X_TirelessPage_F1</UniqueSpellUnlock>
+		<UniqueSpellUnlock>Spell_X_TirelessPage_F2</UniqueSpellUnlock>
+		<UniqueSpellUnlock>Spell_X_TirelessPage_F3</UniqueSpellUnlock>
+		<UniqueSpellUnlock>Spell_X_TirelessPage_F4</UniqueSpellUnlock>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_TirelessPage_F1</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_TirelessPage_F2</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_TirelessPage_F3</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_TirelessPage_F4</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DisperseStack</Attribute>
+			<Radius>1</Radius>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>Immobilize</Attribute>
+			<Duration>1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_MaxArmySize</StrVal>
+			<Value>-4</Value>
+			<Duration>3</Duration>
+		</GameModifier>
+		<Cooldown>12</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_TirelessPage_F0.png</IconFG>
+		<HitSoundFX>Spell_TirelessMarch_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_ErosionImpact_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.5</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_TirelessPage_F1">
+		<AutoUnlock>1</AutoUnlock>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>DoesNotExist</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Gold</Resource>
+			<Amount>1</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<DisplayName>[S] Flying Page I</DisplayName>
+		<Description>Teleports the caster to any visible friendly or neutral tile.
+		
+		See Tooltip.
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] FLYING PAGE I
+		::: Teleports the caster to any visible friendly or neutral tile.
+		
+		DOMAIN
+		::: Strategic
+		::: Neutral+
+		::: Friendly or Empty Tile
+		::: City Terrain, Forest, Land
+		
+		EFFECT
+		::: Teleport the Caster
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHERS
+		::: Player Only
+		
+		SOURCE
+		::: Spell
+		::: ::: Tireless Page</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Movement</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Movement</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>NeutralGround</SpellTargetType>
+		<SpellTargetTileOccupied>FriendlyOrEmpty</SpellTargetTileOccupied>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>TransportUnit</Attribute>
+		</GameModifier>
+		<Cooldown>12</Cooldown>
+		<ValidTerrainCategory>City</ValidTerrainCategory>
+		<ValidTerrainCategory>Forest</ValidTerrainCategory>
+		<ValidTerrainCategory>Land</ValidTerrainCategory>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_TirelessPage_F1.png</IconFG>
+		<HitSoundFX>Spell_CloudWalk_01</HitSoundFX>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_TirelessPage_F2">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Flying Page II</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>DoesNotExist</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Gold</Resource>
+			<Amount>1</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Teleports the caster to any visible friendly or neutral tile.
+		
+		See Tooltip.
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] FLYING PAGE II
+		::: Teleports the caster to any visible friendly or neutral tile.
+		
+		DOMAIN
+		::: Strategic
+		::: Neutral+
+		::: Friendly or Empty Tile
+		::: City Terrain, Forest, Land
+		
+		EFFECT
+		::: Teleport the Caster
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHERS
+		::: Player Only
+		
+		SOURCE
+		::: Spell
+		::: ::: Tireless Page</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Movement</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Movement</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>NeutralGround</SpellTargetType>
+		<SpellTargetTileOccupied>FriendlyOrEmpty</SpellTargetTileOccupied>
+		 <GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>TransportUnit</Attribute>
+		</GameModifier>
+		<Cooldown>12</Cooldown>
+		<ValidTerrainCategory>City</ValidTerrainCategory>
+		<ValidTerrainCategory>Forest</ValidTerrainCategory>
+		<ValidTerrainCategory>Land</ValidTerrainCategory>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_TirelessPage_F2.png</IconFG>
+		<HitSoundFX>Spell_CloudWalk_01</HitSoundFX>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_TirelessPage_F3">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Flying Page III</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>DoesNotExist</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Gold</Resource>
+			<Amount>1</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Teleports the caster to any visible friendly or neutral tile.
+		
+		See Tooltip.
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] FLYING PAGE III
+		::: Teleports the caster to any visible friendly or neutral tile.
+		
+		DOMAIN
+		::: Strategic
+		::: Neutral+
+		::: Friendly or Empty Tile
+		::: City Terrain, Forest, Land
+		
+		EFFECT
+		::: Teleport the Caster
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHERS
+		::: Player Only
+		
+		SOURCE
+		::: Spell
+		::: ::: Tireless Page</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Movement</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Movement</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>NeutralGround</SpellTargetType>
+		<SpellTargetTileOccupied>FriendlyOrEmpty</SpellTargetTileOccupied>
+		 <GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>TransportUnit</Attribute>
+		</GameModifier>
+		<Cooldown>12</Cooldown>
+		<ValidTerrainCategory>City</ValidTerrainCategory>
+		<ValidTerrainCategory>Forest</ValidTerrainCategory>
+		<ValidTerrainCategory>Land</ValidTerrainCategory>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_TirelessPage_F3.png</IconFG>
+		<HitSoundFX>Spell_CloudWalk_01</HitSoundFX>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_TirelessPage_F4">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Flying Page IV</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>DoesNotExist</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Gold</Resource>
+			<Amount>1</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Teleports the caster to the Capital.
+		
+		See Tooltip.
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] FLYING PAGE IV
+		::: Teleports the caster to the Capital.
+		
+		DOMAIN
+		::: Strategic
+		::: Self
+		
+		EFFECT
+		::: Teleport the Caster to the Capital
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHERS
+		::: Player Only
+		
+		SOURCE
+		::: Spell
+		::: ::: Tireless Page</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Movement</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Movement</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>Self</SpellTargetType>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>TransportUnit</Attribute>
+			<StrVal>CapitalCity</StrVal>
+		</GameModifier>
+		<Cooldown>12</Cooldown>
+		<ValidTerrainCategory>City</ValidTerrainCategory>
+		<ValidTerrainCategory>Forest</ValidTerrainCategory>
+		<ValidTerrainCategory>Land</ValidTerrainCategory>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_TirelessPage_F4.png</IconFG>
+		<HitSoundFX>Spell_CloudWalk_01</HitSoundFX>
+	</SpellDef>
+</Spells>

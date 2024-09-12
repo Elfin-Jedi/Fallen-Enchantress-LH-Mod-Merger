@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<Techs>
+	<TechDef InternalName="Tech_X_Refined_Accuracy">
+		<DisplayName>Refined Accuracy</DisplayName>
+		<Description>Learning these skills will increase the efficiency of your armies, boosting their Accuracy by 5%; this training can be researched continuously, and is based on protocols laid out by Themisto, Strategor of Hallas.</Description>
+		<AdviceText>By refining our training techniques we can continue to improve the accuracy values of all of our units.</AdviceText>
+		<Image>Tech_Advanced_Archery.png</Image>
+		<Color>182,7,3</Color>
+		<HotColor>255,48,0</HotColor>
+		<Cost>340</Cost>
+		<Rarity>100</Rarity>
+		<Category>Warfare</Category>
+		<Infinite>1</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_UnitStat_Accuracy</StrVal>
+			<Value>5</Value>
+			<Icon>Stat_Accuracy_Icon.png</Icon>
+			<Provides>Accuracy ::: +5%</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Icon>Spellbook_Icon.png</Icon>
+			<Provides>Tech ::: Can be researched multiple times</Provides>
+		</GameModifier>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>NoRangedWeapons</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Advanced_Archery</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>3</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>1</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_Refined_Crystal">
+		<DisplayName>Refined Magical Forging</DisplayName>
+		<Description>Concentrated study of Magical Forging will reduce crystal cost when training troops.</Description>
+		<AdviceText>Refined Magical Forging can be researched continuously. It will reduce our training costs (Crystal) by 3% each time.</AdviceText>
+		<Image>Crystals.png</Image>
+		<Color>76,79,196</Color>
+		<HotColor>182,182,244</HotColor>
+		<Cost>408</Cost>
+		<Rarity>100</Rarity>
+		<Category>Magic</Category>
+		<Infinite>1</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_Training_RefinedCrystal</StrVal>
+			<Value>-3</Value>
+			<Icon>Icon_Crystal.png</Icon>
+			<Provides>Training Costs ::: -3% Crystal</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Icon>Spellbook_Icon.png</Icon>
+			<Provides>Tech ::: Can be researched multiple times</Provides>
+		</GameModifier>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Magical_Forging</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>3</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>1</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_Refined_Fame">
+		<DisplayName>Refined Reputation</DisplayName>
+		<Description>Become the most notable channeler ever. +40 Fame.</Description>
+		<AdviceText>Refined Reputation can be researched continuously. It will increase our, err... your Fame by 40 every time it is researched.</AdviceText>
+		<Image>Q_Arena.png</Image>
+		<Color>60,138,25</Color>
+		<HotColor>146,255,49</HotColor>
+		<Cost>181</Cost>
+		<Rarity>100</Rarity>
+		<Category>Civilization</Category>
+		<Infinite>1</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Fame</Attribute>
+			<Value>40</Value>
+			<Icon>Fame_Icon.png</Icon>
+			<Provides>Fame ::: +40</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Icon>Spellbook_Icon.png</Icon>
+			<Provides>Tech ::: Can be researched multiple times</Provides>
+		</GameModifier>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Dance_with_Dragons</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>3</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>1</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_Refined_Horses">
+		<DisplayName>Refined Mounted Warfare</DisplayName>
+		<Description>Concentrated study of Mounted Warfare will reduce horse mortality on the battlefield. Essentially, this translates into less new horses being needed when training troops.</Description>
+		<AdviceText>Refined Mounted Warfare can be researched continuously. It will reduce our training costs (Horses) by 3% each time.</AdviceText>
+		<Image>Medallions_Armored_Calvary.png</Image>
+		<Color>182,7,3</Color>
+		<HotColor>255,48,0</HotColor>
+		<Cost>226</Cost>
+		<Rarity>100</Rarity>
+		<Category>Warfare</Category>
+		<Infinite>1</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_Training_Horses</StrVal>
+			<Value>-3</Value>
+			<Icon>Horse_Resource_Icon.png</Icon>
+			<Provides>Training Costs ::: -3% Horses</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Icon>Spellbook_Icon.png</Icon>
+			<Provides>Tech ::: Can be researched multiple times</Provides>
+		</GameModifier>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Mounted_Warfare</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Player_X_Handlers</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Gourmets</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_FactionNoMounts</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>DrotaEmpireTactical4</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>CentaurEmpireTactical4</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Player_X_Centaurs</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>3</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>1</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_Refined_KingOfTheWastes">
+		<DisplayName>Refined Affinity</DisplayName>
+		<Description>Here, contained in journals kept by Connar the Iron Heart, first of the Free Riders, are a specific set of skills and techniques for dealing with the creatures of the Wildlands. Learn them, and the creatures you recruit will gain 1 level.</Description>
+		<AdviceText>With this knowledge we are able to recruit much more powerful Wild creatures to our cause.</AdviceText>
+		<Image>AllyDragon.png</Image>
+		<Color>161,59,184</Color>
+		<HotColor>240,154,243</HotColor>
+		<Cost>226</Cost>
+		<Rarity>100</Rarity>
+		<Category>Civilization</Category>
+		<Infinite>1</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AllRecruitedMonstersGainLevel</Attribute>
+			<Value>1</Value>
+			<Icon>UnitLevel.png</Icon>
+			<Provides>Recruited - Wild Creatures ::: +1 Level</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_RecruitedMonsterBonusLevels</StrVal>
+			<Value>1</Value>
+			<Icon>UnitLevel.png</Icon>
+			<Provides>Recruitment - Wild Creatures ::: +1 Level</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Icon>Spellbook_Icon.png</Icon>
+			<Provides>Tech ::: Can be researched multiple times</Provides>
+		</GameModifier>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Dance_with_Dragons</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>3</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>1</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_Refined_Metal">
+		<DisplayName>Refined Heavy Armor</DisplayName>
+		<Description>Concentrated study of Heavy Armor will reduce metal cost when training troops.</Description>
+		<AdviceText>Refined Heavy Armor can be researched continuously. It will reduce our training costs (Metal) by 3% each time.</AdviceText>
+		<Image>Tech_Masterwork_Armor.png</Image>
+		<Color>182,7,3</Color>
+		<HotColor>255,48,0</HotColor>
+		<Cost>340</Cost>
+		<Rarity>100</Rarity>
+		<Category>Warfare</Category>
+		<Infinite>1</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_Training_Metal</StrVal>
+			<Value>-3</Value>
+			<Icon>Icon_Metal.png</Icon>
+			<Provides>Training Costs ::: -3% Metal</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Icon>Spellbook_Icon.png</Icon>
+			<Provides>Tech ::: Can be researched multiple times</Provides>
+		</GameModifier>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>NoArmor</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Heavy_Armor</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>3</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>2</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_Refined_Prestige">
+		<DisplayName>Refined Prestige</DisplayName>
+		<Description>Spreading word on how majestic your civilization is will attract more population to your splendid cities.</Description>
+		<AdviceText>Refined Prestige can be researched continuously. It will increase our prestige by 1 every time (Prestige is a shared growth value).</AdviceText>
+		<Image>Civilization.png</Image>
+		<Color>60,138,25</Color>
+		<HotColor>146,255,49</HotColor>
+		<Cost>226</Cost>
+		<Rarity>100</Rarity>
+		<Category>Civilization</Category>
+		<Infinite>1</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_FactionPrestige</StrVal>
+			<Value>1</Value>
+			<Icon>Prestige_Icon.png</Icon>
+			<Provides>Prestige (Shared Growth) ::: +1</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Icon>Spellbook_Icon.png</Icon>
+			<Provides>Tech ::: Can be researched multiple times</Provides>
+		</GameModifier>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Craftsmanship</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Entertainment</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Literacy</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>3</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>1</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_Refined_Training">
+		<DisplayName>Refined Training</DisplayName>
+		<Description>Concentrated study of Training will reduce the labor costs when training troops.</Description>
+		<AdviceText>Refined Training can be researched continuously. It will reduce our labor costs by 2% each time.</AdviceText>
+		<Image>Barracks_Medallion.png</Image>
+		<Color>182,7,3</Color>
+		<HotColor>255,48,0</HotColor>
+		<Cost>226</Cost>
+		<Rarity>100</Rarity>
+		<Category>Warfare</Category>
+		<Infinite>1</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_Training_Labor</StrVal>
+			<Value>-2</Value>
+			<Icon>S_Timestop_Icon.png</Icon>
+			<Provides>Training Costs ::: -2% Labor</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Icon>Spellbook_Icon.png</Icon>
+			<Provides>Tech ::: Can be researched multiple times</Provides>
+		</GameModifier>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Weapons_Of_War</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>3</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>1</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_Refined_Wargs">
+		<DisplayName>Refined Warg Riding</DisplayName>
+		<Description>Concentrated study of Warg Riding will reduce warg mortality on the battlefield. Essentially, this translates into less new wargs being needed when training troops.</Description>
+		<AdviceText>Refined Warg Riding can be researched continuously. It will reduce our training costs (Wargs) by 3% each time.</AdviceText>
+		<Image>M_Warg_ShadowWarg_Card.png</Image>
+		<Color>182,7,3</Color>
+		<HotColor>255,48,0</HotColor>
+		<Cost>226</Cost>
+		<Rarity>100</Rarity>
+		<Category>Warfare</Category>
+		<Infinite>1</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_Training_Wargs</StrVal>
+			<Value>-3</Value>
+			<Icon>Icon_Wargs.png</Icon>
+			<Provides>Training Costs ::: -3% Wargs</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Icon>Spellbook_Icon.png</Icon>
+			<Provides>Tech ::: Can be researched multiple times</Provides>
+		</GameModifier>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Warg_Riding</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Player_X_Examiners</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Gourmets</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_FactionNoMounts</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>DrotaEmpireTactical4</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>CentaurEmpireTactical4</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Player_X_Centaurs</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>3</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>1</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+</Techs>

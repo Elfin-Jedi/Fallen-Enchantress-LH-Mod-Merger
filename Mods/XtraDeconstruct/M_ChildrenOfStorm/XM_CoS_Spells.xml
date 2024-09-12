@@ -1,0 +1,1961 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--Children of Storm by Heavenfall-->
+<!--XtraDeconstruct 3.0 by Primal-->
+<Spells>
+	<!--STRATEGIC/TACTICAL-->
+	<SpellDef InternalName="AnimaTsaAnimana">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Summon Obsidian Golem</DisplayName>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_Level</Attribute>
+			<Value>8</Value>
+		</Prereq>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>AnimaTsaAnimana</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>40</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<PerTurn>1</PerTurn>
+			<Amount>1</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Summons a level 2 Obsidian Golem from volcanic ashes.</Description>
+		<SpellBookSortCategory>Summon</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Summon</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Summon</SpellSubClass>
+		<SpellTargetType>Self</SpellTargetType>
+		<Range>0</Range>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Obsidian Golem</StrVal>
+			<UnitClass>ObsidianGolem_BG_Summon</UnitClass>
+			<Duration>-1</Duration>
+			<Value>2</Value>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_FleshBoundTome_Icon.png</IconFG>
+		<IconBG>Ability_FleshBoundTome_Icon.png</IconBG>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>100</AIPriority>
+		</AIData>
+		<HitSoundFX>Spell_Heal_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_Heal_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>.75</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="artifact_firebreathingcollar">
+		<DisplayName>[T] Breathe Fire</DisplayName>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Fire</AttackStat>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[Unit_GetTroopCount] * 4]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[14 + [Calc2]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_Reliquary_IsCursed] * [Calc2]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc4" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc3] /2 ]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc5" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc2] - [Calc4]]]></Expression>
+				</Calculate>
+			<Calculate InternalName="Value" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc5]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_FireBreath_Icon.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="CentaurCharge">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Charge</DisplayName>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>TransportUnit</Attribute>
+			<ApplyToCaster>1</ApplyToCaster>
+			<ApplyToSpellRadiusCenterOnly>1</ApplyToSpellRadiusCenterOnly>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Pierce</AttackStat>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_CombinedAttack]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="Reliquary_ChainLightning">
+		<DisplayName>[T] Chain Lightning (Reliquary)</DisplayName>
+		<Description>Creates a lightning storm which does up 18 Air\Lighting damage to all enemy units within the area of effect.</Description>
+		<IconColor>245,236,46</IconColor>
+		<CastTime>1</CastTime>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<AllowFriendlyFireInRadius>0</AllowFriendlyFireInRadius>
+		<IsResistable>1</IsResistable>
+		<IsSpecialAbility>1</IsSpecialAbility>
+		<Radius>1</Radius>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>38</Amount>
+		</SpellResourceCost>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Lightning</AttackStat>
+			<Value>18</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Lightning</AttackStat>
+			<IsForSpellResist>1</IsForSpellResist>
+			<MinValue>1</MinValue>
+			<MaxValue>10</MaxValue>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>40</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_X_ChainLightning_Ritualist.png</IconFG>
+		<HitSoundFX>Spell_Storm_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_Storm_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0.25</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+			<PlayOnAllTargets>1</PlayOnAllTargets>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="ControlMachine">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Control Machine</DisplayName>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CharmTarget</Attribute>
+			<Value>100</Value>
+		</GameModifier>
+		<IconFG>Spell_X_ControlConstruct.png</IconFG>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="DeathWard_Reliquary">
+		<DisplayName>[T] Phoenix Protection</DisplayName>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DeathWard</Attribute>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="Elf_Compaion_Summon">
+		<DisplayName>[T] Friend to Animals</DisplayName>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Caster summons a pack of wolves, a bear, a naja or a panther (level = caster level). One use per battle.</Description>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Summon</SpellSubClass>
+		<SpellTargetType>EmptyTile</SpellTargetType>
+		<AppliesRandomModifier>1</AppliesRandomModifier>
+		<IsSpecialAbility>1</IsSpecialAbility>
+		<Range>1</Range>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Wolf Pack</StrVal>
+			<UnitClass>Wolf_Group_BG_Summon</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Bear</StrVal>
+			<UnitClass>Bear_BG_Summon</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Stalker</StrVal>
+			<UnitClass>Stalker_BG_Summon</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Naja</StrVal>
+			<UnitClass>Naja_BG_Summon</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>99</Cooldown>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>S_CharmMonster_Icon.png</IconFG>
+		<IconBG>S_CharmMonster_Icon_BG.png</IconBG>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>70</AIPriority>
+		</AIData>
+		<HitSoundFX>Spell_Summon_Earth_Elemental_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_SummonEarthElemental_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.5</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="EF_CorruptionLight">
+		<DisplayName>[S] Transcendance</DisplayName>
+		<Description>Transforms a shard in your empire into a Life shard.</Description>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>ChangeShardType</Attribute>
+			<StrVal>LifeShard</StrVal>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="Elf_FocusedMind">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Preparation</DisplayName>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ArmorPierce</StrVal>
+			<DisplayName>Prepared</DisplayName>
+			<Duration>2</Duration>
+			<Effect>E_Berserk_Particle</Effect>
+			<Value>20</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Accuracy</StrVal>
+			<Duration>2</Duration>
+			<Value>10</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_MagicPower</StrVal>
+			<Duration>2</Duration>
+			<Value>10</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_TacticalSpellManaCost_Multiplier</StrVal>
+			<Duration>2</Duration>
+			<Value>-0.2</Value>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_X_Berserk.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="EF_LivingMetal">
+		<DisplayName>[T] Living Metal</DisplayName>
+		<Description>Each time this unit is struck in melee combat, it gains +25% to all its physical defenses until it ends its next round. This bonus stacks.</Description>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Pierce</StrVal>
+			<ApplyToCaster>1</ApplyToCaster>
+			<Effect>Y_Defend_Particle</Effect>
+			<Duration>1</Duration>
+			<Multiplier>1.25</Multiplier>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="EF_NewFaith">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] New Faith</DisplayName>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Dodge</StrVal>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Duration>-1</Duration>
+			<Effect>EF_Angel_NewFaith</Effect>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumAirShards]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Pierce</StrVal>
+			<ApplyToCaster>1</ApplyToCaster>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumEarthShards] * 0.5]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumFireShards]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_MagicPower</StrVal>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumWaterShards]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_MagicResist</StrVal>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumLifeShards]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="Ef_UnstoppableGlacier">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Unstoppable Glacier</DisplayName>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SetUnitStat</Attribute>
+			<StrVal>UnitStat_Combatspeed</StrVal>
+			<Duration>-1</Duration>
+			<Value>34</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SetUnitStat</Attribute>
+			<StrVal>UnitStat_Moves</StrVal>
+			<Duration>-1</Duration>
+			<Value>2</Value>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="FE_SeverSoul">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Sever Soul</DisplayName>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>donothingunitstat</StrVal>
+			<Value>0</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_TacticalSpellManaCost_Multiplier</StrVal>
+			<Calculate InternalName="Calc1" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetTroopCount]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc4">
+				<Expression><![CDATA[[Calc1]*4]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc4]]]></Expression>
+			</Calculate>
+			<Duration>-1</Duration>
+			<Effect>Y_Defend_Particle</Effect>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="FindAnimalSpirit">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Find Animal Spirit</DisplayName>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Bear</StrVal>
+			<UnitClass>Bear_BG_Summon</UnitClass>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Stalker</StrVal>
+			<UnitClass>Stalker_BG_Summon</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Naja</StrVal>
+			<UnitClass>Naja_BG_Summon</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Shadow Warg</StrVal>
+			<UnitClass>ShadowWarg_BG_Summon</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="FindAnimalSpiritAyman">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Find Spirit Totem</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>AnimalSpirit_Ayman</Attribute>
+		</Prereq>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Ayman goes for a walk-about for a turn (during which you cannot move the champion). At the end an avatar of Ayman's spirit totem is summoned (level=caster level).</Description>
+		<SpellBookSortCategory>Summon</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Summon</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Summon</SpellSubClass>
+		<SpellTargetType>Self</SpellTargetType>
+		<CastTime>1</CastTime>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Spirit Totem</StrVal>
+			<UnitClass>Ayman_Totem_BG_Summon</UnitClass>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression>
+					<![CDATA[[Unit_GetLevel]]]>
+				</Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression>
+					<![CDATA[[Calc]]]>
+				</Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>10</Cooldown>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>S_CharmMonster_Icon.png</IconFG>
+		<IconBG>S_CharmMonster_Icon_BG.png</IconBG>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>179</AIPriority>
+		</AIData>
+		<HitSoundFX>Spell_NaturesCall_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_SummonEarthElemental_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.5</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="FireBreath_Dstaurmim">
+		<DisplayName>[T] Fire Breath</DisplayName>
+		<Description>Target units in a 1 tile radius are enveloped in fire taking the Caster's ATK in Fire DMG.</Description>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<IsCastable>0</IsCastable>
+		<IsSpecialAbility>1</IsSpecialAbility>
+		<Radius>1</Radius>
+		<Range>15</Range>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Fire</AttackStat>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_CombinedAttack]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>5</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>700</AIPriority>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+					<Expression><![CDATA[[UnitStat_ResistFire]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc] < 85]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		<Icon>Ability_FireBreath_Icon.png</Icon>
+		<SpellCastHitSoundFX>Spells_DragonFire_01</SpellCastHitSoundFX>
+		<SpellCastEffectName>Goetia_Breath_Death</SpellCastEffectName>
+		<SpellCastEffectScale>2.0</SpellCastEffectScale>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="FlyCarpet">
+		<DisplayName>[S] Fly Carpet</DisplayName>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>TransportUnit</Attribute>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="HazazEscape">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Smoke Bomb</DisplayName>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_Hazaz</Attribute>
+			<Value>1</Value>
+		</Prereq>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>HazazEscape</Attribute>
+		</Prereq>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>All friendly units escape battle.</Description>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Movement</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>AllFriendlyUnits</SpellTargetType>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Hazaz</StrVal>
+			<Value>-1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>TacticalUnit</ModType>
+			<Attribute>EscapeFromBattle</Attribute>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>T_Escape_Icon.png</IconFG>
+		<IconBG>T_Escape_Icon_BG.png</IconBG>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<HitSoundFX>Spell_Teleport_03</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_Escape_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>.75</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+			<PlayOnAllTargets>1</PlayOnAllTargets>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Hypnotize">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Hypnotize</DisplayName>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<GameModifier>
+			<ModType>TacticalUnit</ModType>
+			<Attribute>ChanceToLoseNextTurn</Attribute>
+			<Duration>1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[Unit_GetLevel] * -5]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel] * 5]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] + [Calc2]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[50 + [Calc3]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="Oran_Revive">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Restoration Through Sacrifice</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Oran_Sacrifice</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>30</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Attempt to revive a small section of the land by expending personal life force, at the permanent cost of -5 hit points (and 30 mana.)</Description>
+		<SpellBookSortCategory>World</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Map</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Terraform</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>NeutralGround</SpellTargetType>
+		<CasterMustBeSov>1</CasterMustBeSov>
+		<Radius>0</Radius>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>PlaceEnvironment</Attribute>
+			<TerrainType>GrasslandEnvironment</TerrainType>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_HitPoints</StrVal>
+			<ApplyToCaster>1</ApplyToCaster>
+			<Value>-5</Value>
+		</GameModifier>
+		<ValidTerrainCategory>Forest</ValidTerrainCategory>
+		<ValidTerrainCategory>Land</ValidTerrainCategory>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+		</AIData>
+		<HitSoundFX>Spell_DestinyGift_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>Revive_Land</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>.5</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>S_Regeneration_Icon.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="Reliquary_BellOfAtonement">
+		<DisplayName>[T] Jugdment Calling</DisplayName>
+		<GameModifier>
+			<ModType>TacticalUnit</ModType>
+			<Attribute>ChanceToLoseNextTurn</Attribute>
+			<DisplayName>Judged</DisplayName>
+			<Duration>1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[Unit_GetLevel] * 5]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_BG_IsHumanoid] * [Calc]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Hexed" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_Reliquary_IsCursed] * [100]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="IsDemon" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_BG_IsDemon] * [20]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Combine" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[Hexed] + [IsDemon]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]+[Combine]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="Reliquary_Ambrosia">
+		<DisplayName>[S] Ambrosia</DisplayName>
+		<Description>.</Description>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SetUnitStat</Attribute>
+			<StrVal>UnitStat_BG_IsImmortal</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SetUnitStat</Attribute>
+			<StrVal>UnitStat_BG_IsGod</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="Relinquary_Blinkshield">
+		<DisplayName>[T] Blink Shield</DisplayName>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CloakOfFear</Attribute>
+			<Duration>7</Duration>
+			<Effect>E_CloakOfFear_Particle</Effect>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="Relinquary_CallScrapGolems">
+		<DisplayName>[T] Gnomeking's Helm: Ryzor</DisplayName>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Scrap Golem</StrVal>
+			<UnitClass>ScrapGolem_BG_Summon</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="Reliquary_ConfusingFlower">
+		<DisplayName>[T] Confusing Flower</DisplayName>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>donothingunitstat</StrVal>
+			<Value>0</Value>
+			<Duration>0</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>donothingunitstat</StrVal>
+			<Value>0</Value>
+			<Duration>0</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>donothingunitstat</StrVal>
+			<Value>0</Value>
+			<Duration>0</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockUnitAbility</Attribute>
+			<StrVal>Reliquary_Reaped</StrVal>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="Reliquary_GuidingStone">
+		<DisplayName>[T] Guiding Stone</DisplayName>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SetUnitStat</Attribute>
+			<StrVal>UnitStat_Dodge</StrVal>
+			<Duration>2</Duration>
+			<Value>0</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SetUnitStat</Attribute>
+			<StrVal>UnitStat_DodgeAgainstRanged</StrVal>
+			<Duration>2</Duration>
+			<Value>0</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SetUnitStat</Attribute>
+			<StrVal>UnitStat_TacticalSpellManaCost_Multiplier</StrVal>
+			<Duration>2</Duration>
+			<Value>0.5</Value>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="Reliquary_Harden">
+		<DisplayName>[T] Harden</DisplayName>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Blunt</StrVal>
+			<ApplyToCaster>1</ApplyToCaster>
+			<Duration>1</Duration>
+			<Value>5</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Cutting</StrVal>
+			<ApplyToCaster>1</ApplyToCaster>
+			<Duration>1</Duration>
+			<Value>5</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Pierce</StrVal>
+			<ApplyToCaster>1</ApplyToCaster>
+			<Duration>1</Duration>
+			<Value>5</Value>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="Reliquary_Hourglass">
+		<DisplayName>[T] Toll of Days</DisplayName>
+		<Description>All enemy units lose 10% of their current HP. Immortal users are immune to the damage.</Description>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconColor>174,255,59</IconColor>
+		<IsSpecialAbility>1</IsSpecialAbility>
+		<CastTime>1</CastTime>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>AllEnemyUnits</SpellTargetType>
+		<Cooldown>10</Cooldown>
+		<Radius>20</Radius>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[Unit_GetHPCurrent] / 10]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_BG_IsImmortal] * [Calc]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[Calc] - [Calc2]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc3] * -1]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>1000</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_X_TollOfDays2.png</IconFG>
+		<HitSoundFX>Spell_Heal_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_Heal_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>.75</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Reliquary_InfiniteHealingPotion">
+		<DisplayName>[T] Infinite Healing Potion</DisplayName>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_Level] + 11]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_HitPoints</StrVal>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BG_IsImmortal] - 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="Relinquary_Shieldblind">
+		<DisplayName>[T] Shieldblind</DisplayName>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>donothingunitstat</StrVal>
+			<Value>1</Value>
+			<Duration>5</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Accuracy</StrVal>
+			<DisplayName>Blinded</DisplayName>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_Accuracy] * -0.25]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+			<Duration>2</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Dodge</StrVal>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_Dodge] * -0.25]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+			<Duration>2</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Dodge</StrVal>
+			<ApplyToCaster>1</ApplyToCaster>
+			<Value>-22</Value>
+			<Duration>2</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Dodge</StrVal>
+			<ApplyToCaster>1</ApplyToCaster>
+			<IsForSpellResist>1</IsForSpellResist>
+			<Value>-22</Value>
+			<Duration>2</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Blunt</StrVal>
+			<ApplyToCaster>1</ApplyToCaster>
+			<Value>-2</Value>
+			<Duration>2</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Blunt</StrVal>
+			<ApplyToCaster>1</ApplyToCaster>
+			<IsForSpellResist>1</IsForSpellResist>
+			<Value>-2</Value>
+			<Duration>2</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Cutting</StrVal>
+			<ApplyToCaster>1</ApplyToCaster>
+			<Value>-2</Value>
+			<Duration>2</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Cutting</StrVal>
+			<ApplyToCaster>1</ApplyToCaster>
+			<IsForSpellResist>1</IsForSpellResist>
+			<Value>-2</Value>
+			<Duration>2</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Pierce</StrVal>
+			<ApplyToCaster>1</ApplyToCaster>
+			<Value>-2</Value>
+			<Duration>2</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Pierce</StrVal>
+			<ApplyToCaster>1</ApplyToCaster>
+			<IsForSpellResist>1</IsForSpellResist>
+			<Value>-2</Value>
+			<Duration>2</Duration>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="Reliquary_Shockwave">
+		<DisplayName>[T] Free Shockwave</DisplayName>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Reliquary_Earthshaker</StrVal>
+			<Duration>-1</Duration>
+			<Value>-5</Value>
+			<ApplyToCaster>1</ApplyToCaster>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Blunt</AttackStat>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumEarthShards] * 4]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc] + 12]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="Relinquary_Skystrike">
+		<DisplayName>[S] Skystrike</DisplayName>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Pierce</AttackStat>
+			<Value>48</Value>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="Reliquary_Silverhorn">
+		<DisplayName>[S] Silverhorn</DisplayName>
+		<GameModifier InternalName="Reward2">
+			<ModType>Unit</ModType>
+			<Attribute>UnitJoinArmy</Attribute>
+			<StrVal>Champion_Arando</StrVal>
+			<UnitClass>Champion</UnitClass>
+			<Value>5</Value>
+		</GameModifier>
+		<GameModifier InternalName="Reward2">
+			<ModType>Unit</ModType>
+			<Attribute>UnitJoinArmy</Attribute>
+			<StrVal>Champion_Bragni</StrVal>
+			<UnitClass>Champion</UnitClass>
+			<Value>5</Value>
+		</GameModifier>
+		<GameModifier InternalName="Reward2">
+			<ModType>Unit</ModType>
+			<Attribute>UnitJoinArmy</Attribute>
+			<StrVal>Champion_Cinryk</StrVal>
+			<UnitClass>Champion</UnitClass>
+			<Value>5</Value>
+		</GameModifier>
+		<GameModifier InternalName="Reward2">
+			<ModType>Unit</ModType>
+			<Attribute>UnitJoinArmy</Attribute>
+			<StrVal>Champion_Diruna</StrVal>
+			<UnitClass>Champion</UnitClass>
+			<Value>5</Value>
+		</GameModifier>
+		<GameModifier InternalName="Reward2">
+			<ModType>Unit</ModType>
+			<Attribute>UnitJoinArmy</Attribute>
+			<StrVal>Champion_Drakmir</StrVal>
+			<UnitClass>Champion</UnitClass>
+			<Value>5</Value>
+		</GameModifier>
+		<GameModifier InternalName="Reward2">
+			<ModType>Unit</ModType>
+			<Attribute>UnitJoinArmy</Attribute>
+			<StrVal>Champion_Gaylyn</StrVal>
+			<UnitClass>Champion</UnitClass>
+			<Value>5</Value>
+		</GameModifier>
+		<GameModifier InternalName="Reward2">
+			<ModType>Unit</ModType>
+			<Attribute>UnitJoinArmy</Attribute>
+			<StrVal>Champion_Irwan</StrVal>
+			<UnitClass>Champion</UnitClass>
+			<Value>5</Value>
+		</GameModifier>
+		<GameModifier InternalName="Reward2">
+			<ModType>Unit</ModType>
+			<Attribute>UnitJoinArmy</Attribute>
+			<StrVal>Champion_Kiergann</StrVal>
+			<UnitClass>Champion</UnitClass>
+			<Value>5</Value>
+		</GameModifier>
+		<GameModifier InternalName="Reward2">
+			<ModType>Unit</ModType>
+			<Attribute>UnitJoinArmy</Attribute>
+			<StrVal>Champion_Karnius</StrVal>
+			<UnitClass>Champion</UnitClass>
+			<Value>5</Value>
+		</GameModifier>
+		<GameModifier InternalName="Reward2">
+			<ModType>Unit</ModType>
+			<Attribute>UnitJoinArmy</Attribute>
+			<StrVal>Champion_Klavarra</StrVal>
+			<UnitClass>Champion</UnitClass>
+		</GameModifier>
+		<GameModifier InternalName="Reward2">
+			<ModType>Unit</ModType>
+			<Attribute>UnitJoinArmy</Attribute>
+			<StrVal>Champion_Mazi</StrVal>
+			<UnitClass>Champion</UnitClass>
+			<Value>5</Value>
+		</GameModifier>
+		<GameModifier InternalName="Reward2">
+			<ModType>Unit</ModType>
+			<Attribute>UnitJoinArmy</Attribute>
+			<StrVal>Champion_Myrella</StrVal>
+			<UnitClass>Champion</UnitClass>
+			<Value>5</Value>
+		</GameModifier>
+		<GameModifier InternalName="Reward2">
+			<ModType>Unit</ModType>
+			<Attribute>UnitJoinArmy</Attribute>
+			<StrVal>Champion_Naddi</StrVal>
+			<UnitClass>Champion</UnitClass>
+			<Value>5</Value>
+		</GameModifier>
+		<GameModifier InternalName="Reward2">
+			<ModType>Unit</ModType>
+			<Attribute>UnitJoinArmy</Attribute>
+			<StrVal>Champion_Norak</StrVal>
+			<UnitClass>Champion</UnitClass>
+			<Value>5</Value>
+		</GameModifier>
+		<GameModifier InternalName="Reward2">
+			<ModType>Unit</ModType>
+			<Attribute>UnitJoinArmy</Attribute>
+			<StrVal>Champion_Phonis</StrVal>
+			<UnitClass>Champion</UnitClass>
+			<Value>5</Value>
+		</GameModifier>
+		<GameModifier InternalName="Reward2">
+			<ModType>Unit</ModType>
+			<Attribute>UnitJoinArmy</Attribute>
+			<StrVal>Champion_Rosmynn</StrVal>
+			<UnitClass>Champion</UnitClass>
+			<Value>5</Value>
+		</GameModifier>
+		<GameModifier InternalName="Reward2">
+			<ModType>Unit</ModType>
+			<Attribute>UnitJoinArmy</Attribute>
+			<StrVal>Champion_Ruka</StrVal>
+			<UnitClass>Champion</UnitClass>
+			<Value>5</Value>
+		</GameModifier>
+		<GameModifier InternalName="Reward2">
+			<ModType>Unit</ModType>
+			<Attribute>UnitJoinArmy</Attribute>
+			<StrVal>Champion_Sothia</StrVal>
+			<UnitClass>Champion</UnitClass>
+			<Value>5</Value>
+		</GameModifier>
+		<GameModifier InternalName="Reward2">
+			<ModType>Unit</ModType>
+			<Attribute>UnitJoinArmy</Attribute>
+			<StrVal>Champion_Sulowa</StrVal>
+			<UnitClass>Champion</UnitClass>
+			<Value>5</Value>
+		</GameModifier>
+		<GameModifier InternalName="Reward2">
+			<ModType>Unit</ModType>
+			<Attribute>UnitJoinArmy</Attribute>
+			<StrVal>Champion_Vallisa</StrVal>
+			<UnitClass>Champion</UnitClass>
+			<Value>5</Value>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="Reliquary_Soothsayersdeck">
+		<DisplayName>[T] Soothsayer's Cards</DisplayName>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Wolf Pack</StrVal>
+			<UnitClass>Wolf_Group_BG_Summon</UnitClass>
+			<Duration>-1</Duration>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Bear</StrVal>
+			<UnitClass>Bear_BG_Summon</UnitClass>
+			<Duration>-1</Duration>
+			<Value>3</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Stalker</StrVal>
+			<UnitClass>Stalker_BG_Summon</UnitClass>
+			<Duration>-1</Duration>
+			<Value>2</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Naja</StrVal>
+			<UnitClass>Naja_BG_Summon</UnitClass>
+			<Duration>-1</Duration>
+			<Value>3</Value>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="Reliquary_SoulContract">
+		<DisplayName>[S] Soul Contract</DisplayName>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Lower Death Demon</StrVal>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel] /2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+			<UnitClass>LowerDeathDemon_BG_Summon</UnitClass>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="Reliquary_UrnOfIce">
+		<DisplayName>[T] Urn of Ice</DisplayName>
+		<GameModifier>
+			<ModType>TacticalUnit</ModType>
+			<Attribute>ChanceToLoseNextTurn</Attribute>
+			<DisplayName>Stunned</DisplayName>
+			<Duration>1</Duration>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ResistPierce</StrVal>
+			<Value>60</Value>
+			<Duration>1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ResistCold</StrVal>
+			<Value>60</Value>
+			<Duration>1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ResistLightning</StrVal>
+			<Value>60</Value>
+			<Duration>1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ResistPoison</StrVal>
+			<Value>60</Value>
+			<Duration>1</Duration>
+		</GameModifier>
+		<GameModifier InternalName="WorldPropModifier">
+			<ModType>Map</ModType>
+			<Attribute>CreateWorldProp</Attribute>
+			<StrVal>HF_Icefortress</StrVal>
+		</GameModifier>
+		<GameModifier>
+			<ModType>TacticalUnit</ModType>
+			<Attribute>TargetKnockedProne</Attribute>
+			<Duration>2</Duration>
+			<DisplayName>Knocked Prone</DisplayName>
+			<ApplyToCaster>1</ApplyToCaster>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="Sacrifice_Lizardmen">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[S] Blood Sacrifice</DisplayName>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>Sacrifice</Attribute>
+			<StrVal>Mana</StrVal>
+			<Calculate InternalName="Calc" ValueOwner="TargetCity">
+				<Expression><![CDATA[[CityPopulation] / 2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ResourceMultiplier</ModType>
+			<Attribute>Prestige</Attribute>
+			<Value>0.5</Value>
+			<PerTurn>1</PerTurn>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="SnowballVolley">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Snowball Volley</DisplayName>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>20</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Balls of magical ice strike all enemy units for double the caster's level + 1 per water shard in cold damage.</Description>
+		<FormattedDescription>Balls of magical ice strike all enemy units for %d Water\Cold DMG.</FormattedDescription>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>AllEnemyUnits</SpellTargetType>
+		<IsResistable>1</IsResistable>
+		 <GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Cold</AttackStat>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[UnitOwner_GetNumWaterShards]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel] * 2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc] + [Calc2]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc] + [Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Cold</AttackStat>
+			<IsForSpellResist>1</IsForSpellResist>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumWaterShards] * 0.5]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[Unit_GetLevel]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc] + [Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>3</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>250</AIPriority>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+					<Expression><![CDATA[[UnitStat_ResistCold]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc] < 75]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>T_ManaBlast_Icon.png</IconFG>
+		<HitSoundFX>Spell_IceArrow_Hit_01</HitSoundFX>
+		<HitSoundFX>Spell_IceArrow_Hit_02</HitSoundFX>
+		<SpellCastSoundFX>Spell_BowAttack_FreezingCast_01</SpellCastSoundFX>
+		<SpellCastEffectName>A_IceStaff_Projectile_Particle</SpellCastEffectName>
+		<SpellCastEffectScale>0.5</SpellCastEffectScale>
+		<SpellCastProjectile>1</SpellCastProjectile>
+		<SpellCastProjectileSpeed>800</SpellCastProjectileSpeed>
+		<SpellDefEffect>
+			<EffectName>A_HailstoneStaff_Impact_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.9</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="ResurrectionWolfmen">
+		<IsCastable>0</IsCastable>
+		<DisplayName>[T] Resurrection</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<Description>Unit will resurrect at 100% hitpoints and continue fighting if it falls in combat</Description>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>Self</SpellTargetType>
+		<AppliesRandomModifier>1</AppliesRandomModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DeathWard</Attribute>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>donothingunitstat</StrVal>
+			<Value>0</Value>
+			<Duration>0</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>donothingunitstat</StrVal>
+			<Value>0</Value>
+			<Duration>0</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>donothingunitstat</StrVal>
+			<Value>0</Value>
+			<Duration>0</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>donothingunitstat</StrVal>
+			<Value>0</Value>
+			<Duration>0</Duration>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_DeathWard.png</IconFG>
+		<IgnoreCastAnim>1</IgnoreCastAnim>
+		<HitSoundFX>Spell_Beserk_01</HitSoundFX>
+	</SpellDef>
+	<SpellDef InternalName="SpitFire_Darkwasp">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Spit Poison</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<Description>Target unit is enveloped in poison taking the caster's attack strength in Death\Poison DMG.</Description>
+		<FormattedDescription>Target unit is enveloped in poison taking %d Death\Poison DMG.</FormattedDescription>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<IsCastable>0</IsCastable>
+		<IsSpecialAbility>1</IsSpecialAbility>
+		<Range>3</Range>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Poison</AttackStat>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_CombinedAttack]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] * [Unit_GetTroopCount]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>5</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>400</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_FireBreath_Icon.png</IconFG>
+		<SpellCastSoundFX>Spells_DragonFire_01</SpellCastSoundFX>
+		<SpellCastEffectName>Stormworld_SpitPoison</SpellCastEffectName>
+		<SpellCastEffectScale>2.0</SpellCastEffectScale>
+	</SpellDef>
+	<SpellDef InternalName="TurningMinds">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[S] Possess Minds</DisplayName>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>TransferCityControl</Attribute>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="TurnUndead">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Eternal Resurrection</DisplayName>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>HealInjuries</Attribute>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SetUnitStat</Attribute>
+			<StrVal>UnitStat_ExpBonus</StrVal>
+			<Value>-50</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SetUnitStat</Attribute>
+			<StrVal>UnitStat_BG_IsImmortal</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SetUnitStat</Attribute>
+			<StrVal>UnitStat_BG_IsUndead</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SetUnitStat</Attribute>
+			<StrVal>UnitStat_BG_IsRace_Undead</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockUnitAbility</Attribute>
+			<StrVal>TurnedUndead</StrVal>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="WalkingdeadUndead">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Walking Dead</DisplayName>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<GameModifier>
+			<ModType>TacticalUnit</ModType>
+			<Attribute>ChanceToLoseNextTurn</Attribute>
+			<Duration>1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[Unit_GetTroopCount] * 5]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetTroopCount] * 5]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[Calc] - [Calc2]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Oversized" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_Reliquary_IsOversized] * [100]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Oversized1" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_Reliquary_IsSovereign] * [100]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Oversized2" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_Reliquary_IsChampion] * [100]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Oversized3" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_ImmuneToFear] * [100]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc4" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[Calc3] - [Oversized]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc5" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[Calc4] - [Oversized1]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc6" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[Calc5] - [Oversized2]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc7" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[Calc6] - [Oversized3]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[Calc7] - [Oversized4]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+			<!--HIDDEN-->
+	<SpellDef InternalName="Ascended_Jiblin">
+		<DisplayName>[T] Ascension</DisplayName>
+		<CanStack>1</CanStack>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<Description>-10% Mana cost for spells. Stacks.</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>Self</SpellTargetType>
+		<IsCastable>0</IsCastable>
+		<IsSpecialAbility>1</IsSpecialAbility>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_TacticalSpellManaCost_Multiplier</StrVal>
+			<Value>-0.1</Value>
+			<Duration>-1</Duration>
+			<Provides>-10% mana cost for tactical spells</Provides>
+		</GameModifier>
+		<Cooldown>3</Cooldown>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_X_FeedTheFire.png</IconFG>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<HitSoundFX>Spell_BurningBlade_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_BurningBlade_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.75</EffectScale>
+			<EffectDelay>0.25</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="DeathKnightTerror">
+		<DisplayName>[T] Terror of Death</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<Description>All Humanoids attacked by a Death Knight in melee suffer a 25% chance to lose their next turn. This does not affect targets that are Not Alive</Description>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<IsCastable>0</IsCastable>
+		<AppliesRandomModifier>1</AppliesRandomModifier>
+		<Radius>0</Radius>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>donothingunitstat</StrVal>
+			<Value>0</Value>
+			<Duration>0</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>donothingunitstat</StrVal>
+			<Value>0</Value>
+			<Duration>0</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>donothingunitstat</StrVal>
+			<Value>0</Value>
+			<Duration>0</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>TacticalUnit</ModType>
+			<Attribute>ChanceToLoseNextTurn</Attribute>
+			<Duration>1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_BG_IsHumanoid] * 100]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_BG_IsNotAlive] * -100]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]+[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_Armorer_Icon.png</IconFG>
+		<IconBG>Ability_Armorer_Icon.png</IconBG>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+		</AIData>
+		<HitSoundFX>Spell_Fireball_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_Soulburning_Particle</EffectName>
+			<LocalPosition>0, 0 ,0</LocalPosition>
+			<EffectScale>0.50</EffectScale>
+			<EffectDelay>0.25</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="DivineTouch">
+		<DisplayName>[T] Divine Touch</DisplayName>
+		<Description>Target suffers an Arcane attack equal to 2(+1 per level) multiplied by troopcount of Angel unit. Any unit that counts as Demon or Undead suffers double damage (triple damage if both are applicable). If resisted deals no damage.</Description>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Divine</AttackStat>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel] + 2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetTroopCount]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3">
+				<Expression><![CDATA[[Calc] * [Calc2]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc4" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_BG_IsDemon] + [UnitStat_BG_IsUndead] ]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc5" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[Calc4] +1 ]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[Calc3] * [Calc5] ]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc] * [Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>250</AIPriority>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+					<Expression><![CDATA[[UnitStat_MagicResist]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc] < 97]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="Endless_Buff">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Endless</DisplayName>
+		<Description>The caster gains a random new apprentice magic school (fire/water/earth/air). If the caster already has the randomly selected magic school, there is no effect. Can be repeated until the caster has all 4 schools.</Description>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockUnitAbility</Attribute>
+			<StrVal>Fire1</StrVal>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockUnitAbility</Attribute>
+			<StrVal>Air1</StrVal>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockUnitAbility</Attribute>
+			<StrVal>Earth1</StrVal>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockUnitAbility</Attribute>
+			<StrVal>Water1</StrVal>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="MantleOfLightning_Effect">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Mantle of Lightning</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<Description>4 Air\Lightning DMG to the attacker.</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<IsCastable>0</IsCastable>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Lightning</AttackStat>
+			<Value>4</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+		</AIData>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>S_MantleofFire_Icon.png</IconFG>
+		<HitSoundFX>Spell_MantleOfFire_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_MantleofFire_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.35</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Reliquary_Dragonpride">
+		<AppliesRandomModifier>1</AppliesRandomModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>artifactmount_tier5_nr1</Attribute>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>artifactmount_tier5_nr2</Attribute>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>artifactmount_tier5_nr3</Attribute>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>artifactmount_tier5_nr4</Attribute>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>artifactmount_tier5_nr5</Attribute>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>artifactmount_tier5_nr6</Attribute>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>artifactmount_tier5_nr7</Attribute>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>artifactmount_tier5_nr8</Attribute>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>artifactmount_tier5_nr9</Attribute>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>artifactmount_tier5_nr10</Attribute>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>artifactmount_tier5_nr11</Attribute>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>artifactmount_tier5_nr12</Attribute>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>artifactmount_tier5_nr12</Attribute>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>artifactmount_tier5_nr13</Attribute>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>artifactmount_tier5_nr14</Attribute>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>187</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="Skadi_FreezingAura">
+		<DisplayName>[T] Freezing Aura</DisplayName>
+		<Description>Skadi's freezing aura does 3 cold damage to anyone who strikes her.</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<IsCastable>0</IsCastable>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Cold</AttackStat>
+			<Value>3</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_ResistCold_Icon.png</IconFG>
+		<HitSoundFX>Spell_DarkEnchant_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_Blizzard_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.35</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="SummonWolfBrother">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Broodling</DisplayName>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<Description>Calls a Fire shrill at start of combat</Description>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Summon</SpellSubClass>
+		<SpellTargetType>Self</SpellTargetType>
+		<IsCastable>0</IsCastable>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Broodling</StrVal>
+			<UnitClass>FireShrill_Brood</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>S_SummonFireElemental_Icon.png</IconFG>
+		<IconBG>S_SummonFireElemental_Icon_BG.png</IconBG>
+		<IgnoreCastAnim>1</IgnoreCastAnim>
+		<SoundFX>Spell_Summon_Fire_Elemental_01</SoundFX>
+		<SpellDefEffect>
+			<EffectName>S_SummonFireElemental_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.5</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+</Spells>

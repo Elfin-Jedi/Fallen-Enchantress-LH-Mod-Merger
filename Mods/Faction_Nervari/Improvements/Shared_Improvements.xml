@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ImprovementTypes>
+  <DataChecksum NoParse="1">
+    <Ignore>DispName</Ignore>
+    <Translate>DispName,Description</Translate>
+  </DataChecksum>
+  <!-- **************************************************** -->
+  <!-- ************* Mod Improvement: Shared ************** -->
+  <!-- **************************************************** -->
+
+  <!-- **************************************************** -->
+  <!-- Swamp Fertilizer Pit -->
+  <!-- Inspiration: "Docks"; requires a swamp tile adjacent directly to the city walls -->
+  <!-- **************************************************** -->
+  <ImprovementType InternalName="Swamp_Fertilizer_Pit">
+    <DisplayName>Swamp Fertilizer Pit</DisplayName>
+    <Description>Swamp Fertilizer Pits increases the amount of Food in cities that they are built in.</Description>
+    <RequiresCity>1</RequiresCity>
+    <BarredTerrain>River</BarredTerrain>
+    <BarredTerrain>Forest</BarredTerrain>
+    <PreferredTerrain>SwampTerrain</PreferredTerrain>
+    <EncloseInCityWalls>0</EncloseInCityWalls>
+    <LaborToBuild>128</LaborToBuild>
+    <Prereq>
+      <Type>Tech</Type>
+      <Attribute>Agriculture</Attribute>
+    </Prereq>
+    <GameModifier>
+      <ModType>Resource</ModType>
+      <Attribute>FoodPerGrain</Attribute>
+      <Value>5</Value>
+      <PerTurn>1</PerTurn>
+      <Provides>+5 Food per Grain</Provides>
+    </GameModifier>
+    <AIData AIPersonality="AI_General">
+      <AIPriority>10</AIPriority>
+      <AITag>Economy</AITag>
+    </AIData>
+    <ArtDef>Art_Fertilizer_Pit</ArtDef>
+    <ImprovementTypeArtDef InternalName="Art_Fertilizer_Pit">
+      <ImprovementTypeArtSubPack InternalName="Art_Fertilizer_Pit_Kingdom">
+        <SupportedBuildingStyle>KingdomStyle</SupportedBuildingStyle>
+        <TileDesign>K_Swamp_Fertilizer_Pit_01</TileDesign>
+        <ConstructionTileDesign>A_Swamp_Fertilizer_Pit_Build_01</ConstructionTileDesign>
+        <DrawnIcon>Improvement_Swamp_Fertilizer_Pit.png</DrawnIcon>
+        <DrawnIconConstruction>Improvement_Swamp_Fertilizer_Pit_C.png</DrawnIconConstruction>
+        <Thumbnail>K_Swamp_Fertilizer_Pit_Thumb_01.png</Thumbnail>
+        <Medallions InternalName="">
+          <All>K_Swamp_Fertilizer_Pit_Thumb_01.png</All>
+        </Medallions>
+      </ImprovementTypeArtSubPack>
+      <ImprovementTypeArtSubPack InternalName="Art_Fertilizer_Pit_Empire">
+        <SupportedBuildingStyle>KingdomStyle</SupportedBuildingStyle>
+        <TileDesign>F_Swamp_Fertilizer_Pit_01</TileDesign>
+        <ConstructionTileDesign>A_Swamp_Fertilizer_Pit_Build_01</ConstructionTileDesign>
+        <DrawnIcon>Improvement_Swamp_Fertilizer_Pit.png</DrawnIcon>
+        <DrawnIconConstruction>Improvement_Swamp_Fertilizer_Pit_C.png</DrawnIconConstruction>
+        <Thumbnail>F_Swamp_Fertilizer_Pit_Thumb_01.png</Thumbnail>
+        <Medallions InternalName="">
+          <All>F_Swamp_Fertilizer_Pit_Thumb_01.png</All>
+        </Medallions>
+      </ImprovementTypeArtSubPack>
+    </ImprovementTypeArtDef>
+  </ImprovementType>
+  <!-- **************************************************** -->
+  <!-- Swamp Garden -->
+  <!-- NB: requires a swamp tile adjacent directly to the city walls -->
+  <!-- **************************************************** -->
+  <ImprovementType InternalName="Swamp_Garden">
+    <DisplayName>Swamp Garden</DisplayName>
+    <Description>Swamp Garden adds +1 to poison attack for all your units trained in this city.</Description>
+    <RequiresCity>1</RequiresCity>
+    <BarredTerrain>River</BarredTerrain>
+    <BarredTerrain>Forest</BarredTerrain>
+    <PreferredTerrain>SwampTerrain</PreferredTerrain>
+    <EncloseInCityWalls>0</EncloseInCityWalls>
+    <LaborToBuild>128</LaborToBuild>
+    <GameModifier>
+      <ModType>CityTrainingBonus</ModType>
+      <Attribute>TrainingBonus_ApplyUnitModifier_Add</Attribute>
+      <StrVal>UnitStat_Attack_Poison</StrVal>
+      <Value>1</Value>
+      <Provides>+1 Poison Attack to trained troops in city</Provides>
+      <!--
+      <UpgradeComparisonID>1</UpgradeComparisonID>
+      <UpgradeComparisonText>Trained Unit Poison Attack</UpgradeComparisonText>
+       -->
+    </GameModifier>
+    <AIData AIPersonlaity="AI_General">
+      <AIPriority>5</AIPriority>
+      <AITag>CommandPost</AITag>
+    </AIData>
+    <ArtDef>Art_Swamp_Garden</ArtDef>
+    <ImprovementTypeArtDef InternalName="Art_Swamp_Garden">
+      <ImprovementTypeArtSubPack InternalName="Art_Swamp_Garden_Kingdom">
+        <SupportedBuildingStyle>KingdomStyle</SupportedBuildingStyle>
+        <TileDesign>K_Swamp_Garden_01</TileDesign>
+        <ConstructionTileDesign>A_Swamp_Garden_Build_01</ConstructionTileDesign>
+        <DrawnIcon>Improvement_Swamp_Garden.png</DrawnIcon>
+        <DrawnIconConstruction>Improvement_Swamp_Garden_C.png</DrawnIconConstruction>
+        <Thumbnail>K_Swamp_Garden_Thumb_01.png</Thumbnail>
+        <Medallions InternalName="">
+          <All>K_Swamp_Garden_Thumb_01.png</All>
+        </Medallions>
+      </ImprovementTypeArtSubPack>
+      <ImprovementTypeArtSubPack InternalName="Art_Swamp_Garden_Empire">
+        <SupportedBuildingStyle>EmpireStyle</SupportedBuildingStyle>
+        <TileDesign>F_Swamp_Garden_01</TileDesign>
+        <ConstructionTileDesign>A_Swamp_Garden_Build_01</ConstructionTileDesign>
+        <DrawnIcon>Improvement_Swamp_Garden.png</DrawnIcon>
+        <DrawnIconConstruction>Improvement_Swamp_Garden_C.png</DrawnIconConstruction>
+        <Thumbnail>F_Swamp_Garden_Thumb_01.png</Thumbnail>
+        <Medallions InternalName="">
+          <All>F_Swamp_Garden_Thumb_01.png</All>
+        </Medallions>
+      </ImprovementTypeArtSubPack>
+    </ImprovementTypeArtDef>
+  </ImprovementType>
+  <!-- **************************************************** -->
+  <!-- Fighting Pits -->
+  <!-- **************************************************** -->
+  <ImprovementType InternalName="Fighting_Pits">
+    <DisplayName>Fighting Pits</DisplayName>
+    <Description>Fighting Pits reflect a brutal ideology, according to which a citizen should fight hard to prove his usefulness to society. The trials unite, and the warriors trained here will be truly exceptional. Grants trained units the Gladiator ability (+2 Initiative, +5% Physical Resistance and +20% Armor Piercing) and provides XP for stationed units and champions.</Description>
+    <RequiresCity>1</RequiresCity>
+    <BarredTerrain>River</BarredTerrain>
+    <BarredTerrain>SwampTerrain</BarredTerrain>
+    <PreferredTerrain>City</PreferredTerrain>
+    <PreferredTerrain>Category:Land</PreferredTerrain>
+    <PreferredTerrain>Forest</PreferredTerrain>
+    <EncloseInCityWalls>1</EncloseInCityWalls>
+    <LaborToBuild>150</LaborToBuild>
+    <Prereq>
+      <Type>AbilityBonusOption</Type>
+      <Attribute>Warrior_Training</Attribute>
+      <Target>Player</Target>
+    </Prereq>
+    <GameModifier>
+      <ModType>ResourceMultiplier</ModType>
+      <Attribute>Prestige</Attribute>
+      <Value>0.75</Value>
+      <Provides>-25% Growth in this city</Provides>
+    </GameModifier>
+    <GameModifier>
+      <ModType>StationedUnitStatBonus</ModType>
+      <StrVal>UnitStat_Experience</StrVal>
+      <StrVal2>OnlyTrainedUnits</StrVal2>
+      <Value>1</Value>
+      <BonusValue>100</BonusValue>
+      <Provides>+1 XP per season for stationed Trained Units</Provides>
+    </GameModifier>
+    <GameModifier>
+      <ModType>StationedUnitStatBonus</ModType>
+      <StrVal>UnitStat_Experience</StrVal>
+      <StrVal2>OnlyChampions</StrVal2>
+      <Value>5</Value>
+      <Operator>25</Operator>
+      <Provides>+5 XP per season for stationed Champions</Provides>
+    </GameModifier>
+    <GameModifier>
+      <ModType>CityTrainingBonus</ModType>
+      <Attribute>TrainingBonus_ApplyAbilityBonus</Attribute>
+      <StrVal>Gladiator_Fighter</StrVal>
+      <Provides>Grants trained units the Gladiator ability (+2 Initiative, +5% Physical Resistance and +20% Armor Piercing)</Provides>
+    </GameModifier>
+    <AIData AIPersonality="AI_General">
+      <AIPriority>200</AIPriority>
+      <AITag>CommandPost</AITag>
+      <AIAtWarMultiplier>2</AIAtWarMultiplier>
+    </AIData>
+    <ArtDef>Fighting_Pits_ArtDef</ArtDef>
+    <ImprovementTypeArtDef InternalName="Fighting_Pits_ArtDef">
+      <ImprovementTypeArtSubPack InternalName="Art_Fighting_Pits_Kingdom">
+        <SupportedBuildingStyle>KingdomStyle</SupportedBuildingStyle>
+        <TileDesign>K_Fighting_Pit_01</TileDesign>
+        <ConstructionTileDesign>K_Construction1x1_01</ConstructionTileDesign>
+        <DrawnIcon>Improvement_SacrificialAltar.png</DrawnIcon>
+        <DrawnIconConstruction>Improvement_SacrificialAltar_C.png</DrawnIconConstruction>
+        <Thumbnail>F_Sacrificial_Alter_Thumb_01.png</Thumbnail>
+        <Medallions InternalName="">
+          <All>F_Sacrificial_Alter_Thumb_01.png</All>
+        </Medallions>
+      </ImprovementTypeArtSubPack>
+      <ImprovementTypeArtSubPack InternalName="Art_Fighting_Pits_Empire">
+        <SupportedBuildingStyle>EmpireStyle</SupportedBuildingStyle>
+        <TileDesign>F_Fighting_Pit_01</TileDesign>
+        <ConstructionTileDesign>F_Construction1x1_01</ConstructionTileDesign>
+        <DrawnIcon>Improvement_SacrificialAltar.png</DrawnIcon>
+        <DrawnIconConstruction>Improvement_SacrificialAltar_C.png</DrawnIconConstruction>
+        <Thumbnail>F_Sacrificial_Alter_Thumb_01.png</Thumbnail>
+        <Medallions InternalName="">
+          <All>F_Sacrificial_Alter_Thumb_01.png</All>
+        </Medallions>
+      </ImprovementTypeArtSubPack>
+    </ImprovementTypeArtDef>
+  </ImprovementType>
+  <!-- **************************************************** -->
+  <!-- Martial Library -->
+  <!-- **************************************************** -->
+  <ImprovementType InternalName="Martial_Library">
+    <DisplayName>Martial Library</DisplayName>
+    <Description>Martial Libraries reduce training costs by 15%, provide +5% research and grants trained units +1 starting level and +5 Defense.</Description>
+    <RequiresCity>1</RequiresCity>
+    <BarredTerrain>River</BarredTerrain>
+    <BarredTerrain>SwampTerrain</BarredTerrain>
+    <PreferredTerrain>City</PreferredTerrain>
+    <PreferredTerrain>Category:Land</PreferredTerrain>
+    <PreferredTerrain>Forest</PreferredTerrain>
+    <RequiresCityImprovement>1</RequiresCityImprovement>
+    <RequiredImprovement>Conclave</RequiredImprovement>
+    <EncloseInCityWalls>1</EncloseInCityWalls>
+    <LaborToBuild>200</LaborToBuild>
+    <Prereq>
+      <Type>AbilityBonusOption</Type>
+      <Attribute>Warrior_Training</Attribute>
+      <Target>Player</Target>
+    </Prereq>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>TrainingDiscount</Attribute>
+      <Value>0.15</Value>
+      <Provides>-15% Unit Training cost</Provides>
+    </GameModifier>
+    <GameModifier>
+      <ModType>ResourceMultiplier</ModType>
+      <Attribute>Research</Attribute>
+      <Value>1.05</Value>
+      <PerTurn>1</PerTurn>
+      <Provides>+5% Research</Provides>
+    </GameModifier>
+    <GameModifier>
+      <ModType>CityTrainingBonus</ModType>
+      <Attribute>TrainingBonus_LevelUpUnit</Attribute>
+      <Value>1</Value>
+      <Provides>+1 Level for Trained Units</Provides>
+    </GameModifier>
+    <GameModifier>
+      <ModType>CityTrainingBonus</ModType>
+      <Attribute>TrainingBonus_ApplyUnitModifier_Add</Attribute>
+      <StrVal>UnitStat_Defense_Pierce</StrVal>
+      <Value>5</Value>
+    </GameModifier>
+    <AIData AIPersonality="AI_General">
+      <AIPriority>100</AIPriority>
+      <AITag>CommandPost</AITag>
+    </AIData>
+    <ArtDef>Art_MartialLibrary</ArtDef>
+    <ImprovementTypeArtDef InternalName="Art_MartialLibrary">
+      <ImprovementTypeArtSubPack InternalName="Art_MartialLibrary_Kingdom">
+        <SupportedBuildingStyle>KingdomStyle</SupportedBuildingStyle>
+        <TileDesign>K_Barracks_01</TileDesign>
+        <ConstructionTileDesign>K_Construction1x1_01</ConstructionTileDesign>
+        <DrawnIcon>Improvement_Marital_Library.png</DrawnIcon>
+        <DrawnIconConstruction>Improvement_Marital_Library_C.png</DrawnIconConstruction>
+        <Thumbnail>K_Barracks_01_Thumb.png</Thumbnail>
+        <Medallions InternalName="">
+          <All>K_Barracks_01_Thumb.png</All>
+        </Medallions>
+      </ImprovementTypeArtSubPack>
+      <ImprovementTypeArtSubPack InternalName="Art_MartialLibrary_Empire">
+        <SupportedBuildingStyle>EmpireStyle</SupportedBuildingStyle>
+        <TileDesign>F_Garrison_01</TileDesign>
+        <ConstructionTileDesign>F_Construction1x1_01</ConstructionTileDesign>
+        <DrawnIcon>Improvement_Marital_Library.png</DrawnIcon>
+        <DrawnIconConstruction>Improvement_Marital_Library_C.png</DrawnIconConstruction>
+        <Thumbnail>F_Garrison_01_Thumb.png</Thumbnail>
+        <Medallions InternalName="">
+          <All>F_Garrison_01_Thumb.png</All>
+        </Medallions>
+      </ImprovementTypeArtSubPack>
+    </ImprovementTypeArtDef>
+  </ImprovementType>
+</ImprovementTypes>

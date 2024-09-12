@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<Spells>
+	<SpellDef InternalName="Elegy">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Elegy</DisplayName>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_PrimitiveRoads</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>RoadBuilding</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_XM_CanCastR</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Blood_X_Krax_T</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>30</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>3 DMG per level to all adjacent enemies.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] ELEGY
+		::: 3 DMG per level to all adjacent enemies.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy (Adjacent)
+		
+		EFFECT
+		::: (Caster's Level x3) DMG
+		
+		FIGHTABLE
+		::: Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: 3x3 Area
+		::: Death Multiplier
+		::: Time Bonus (Sov)
+		
+		SOURCE
+		::: Faction Strength
+		::: ::: Gravetouched</Description>
+		<FormattedDescription>%d DMG to all adjacent enemies.</FormattedDescription>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<AllowFriendlyFireInRadius>0</AllowFriendlyFireInRadius>
+		<IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+		<CanBeDodged>1</CanBeDodged>
+		<Radius>1</Radius>
+		<Range>0</Range>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Pierce</AttackStat>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel] * 3]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] * [UnitStat_SpellDamage_Death]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock1" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_X_IsCultLeader] * [UnitStat_X_Clock]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock1] * 0.01]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock2] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock4">
+				<Expression><![CDATA[[Calc_X_Clock3] * [Calc2]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>633</AIPriority>
+			<AIMinSpellTargets>3</AIMinSpellTargets>
+		</AIData>
+		<IconFG>Spell_X_Elegy.png</IconFG>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<HitSoundFX>Spell_HorrificWailImpact_01</HitSoundFX>
+		<SpellCastSoundFX>Spell_HorrificWailTravel_01</SpellCastSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_HorrificWail_Impact_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>1</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+			<PlayOnAllTargets>1</PlayOnAllTargets>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Feed">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Feed</DisplayName>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_PrimitiveRoads</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>RoadBuilding</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_XM_CanCastR</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Blood_X_Krax_T</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>4</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>3 DMG to an adjacent ally and heals the caster 12.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] FEED
+		::: 3 DMG to an adjacent ally and heals the caster 12.
+		
+		DOMAIN
+		::: Tactical
+		::: Ally
+		::: Unit
+		
+		EFFECT
+		::: 3 DMG
+		::: + 12 HP (Heal)
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: Death Multiplier
+		::: Multipliers apply to both DMG and Heal
+		::: Time Bonus (Sov)
+		
+		SOURCE
+		::: Faction Strength
+		::: ::: Gravetouched</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Heal</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Heal</SpellSubClass>
+		<SpellTargetType>FriendlyUnit</SpellTargetType>
+		<Range>1</Range>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_SpellDamage_Death] * -3]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock1" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_X_IsCultLeader] * [UnitStat_X_Clock]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock1] * 0.01]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock2] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock4">
+				<Expression><![CDATA[[Calc_X_Clock3] * [Calc]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<ApplyToCaster>1</ApplyToCaster>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_SpellDamage_Death] * 12]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock1" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_X_IsCultLeader] * [UnitStat_X_Clock]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock1] * 0.01]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock2] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock4">
+				<Expression><![CDATA[[Calc_X_Clock3] * [Calc]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>555</AIPriority>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[Unit_GetCurrentDamage]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[Unit_GetHPCurrent]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc3">
+					<Expression><![CDATA[[Calc] / [Calc2]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc3] > 1]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		<IconFG>Spell_X_Feed.png</IconFG>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<HitSoundFX>Spell_DrainLife_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_DrainLife_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.50</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>0</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Terror_Ability">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Terror</DisplayName>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Target loses its next action, unless it resists.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] TERROR
+		::: Target loses its next action, unless it resists.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Unit
+		
+		EFFECT
+		::: - 1 Action
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: 1 Action
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Race
+		::: ::: Dead</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitCurse</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Debuff</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<IsResistable>1</IsResistable>
+		<IsSpecialAbility>1</IsSpecialAbility>
+		<Range>1</Range>
+		<GameModifier>
+			<ModType>TacticalUnit</ModType>
+			<Attribute>ChanceToLoseNextTurn</Attribute>
+			<DisplayName>Afraid</DisplayName>
+			<Duration>2</Duration>
+			<Effect>E_Afraid_Particle</Effect>
+			<PerTurn>1</PerTurn>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_ImmuneToFear] * -100]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + 100]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>5</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>325</AIPriority>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[UnitStat_MagicPower]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="CalcB" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[Unit_GetLevel]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="CalcC">
+					<Expression><![CDATA[[Calc] + [CalcB]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc2" ValueOwner="TargetUnit">
+					<Expression><![CDATA[[UnitStat_MagicResist]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc2B" ValueOwner="TargetUnit">
+					<Expression><![CDATA[[Unit_GetLevel]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc2C">
+					<Expression><![CDATA[[Calc2] + [Calc2B]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc3">
+					<Expression><![CDATA[[CalcC] - [Calc2C]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc4" ValueOwner="TargetUnit">
+					<Expression><![CDATA[[Calc3] * [UnitStat_ImmuneToFear]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc4] > 50]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		<IconFG>Ability_X_Terror.png</IconFG>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<HitSoundFX>Spell_FearWave_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_Fear_Impact_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>1</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+			<PlayOnAllTargets>1</PlayOnAllTargets>
+		</SpellDefEffect>
+		<SpellDefEffect>
+			<EffectName>T_FearWave_Particle</EffectName>
+			<LocalPosition>0,20,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+		<SpellDefEffect>
+			<EffectName>T_FearWave_Particle</EffectName>
+			<LocalPosition>0,20,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+</Spells>

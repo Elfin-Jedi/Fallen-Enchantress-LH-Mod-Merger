@@ -1,0 +1,1125 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<UnitTypes>
+
+	<!-- Block the default Champions that need abilities changed -->
+    <UnitType InternalName="Champion_Gallowman">
+        <Allegiance>Blocked</Allegiance>
+        <SpawnRating>0</SpawnRating>
+        <NPCSpawnLikelihood>0</NPCSpawnLikelihood>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Blocked</Attribute>
+            <Target>Player</Target>
+        </Prereq>
+    </UnitType>
+    <UnitType InternalName="Champion_Phonis">
+        <Allegiance>Blocked</Allegiance>
+        <SpawnRating>0</SpawnRating>
+        <NPCSpawnLikelihood>0</NPCSpawnLikelihood>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Blocked</Attribute>
+            <Target>Player</Target>
+        </Prereq>
+    </UnitType>
+    <UnitType InternalName="Champion_Bibiyana">
+        <Allegiance>Blocked</Allegiance>
+        <SpawnRating>0</SpawnRating>
+        <NPCSpawnLikelihood>0</NPCSpawnLikelihood>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Blocked</Attribute>
+            <Target>Player</Target>
+        </Prereq>
+    </UnitType>
+    <UnitType InternalName="Champion_Fairgenn">
+        <Allegiance>Blocked</Allegiance>
+        <SpawnRating>0</SpawnRating>
+        <NPCSpawnLikelihood>0</NPCSpawnLikelihood>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Blocked</Attribute>
+            <Target>Player</Target>
+        </Prereq>
+    </UnitType>
+    <UnitType InternalName="Champion_Ritressa">
+        <Allegiance>Blocked</Allegiance>
+        <SpawnRating>0</SpawnRating>
+        <NPCSpawnLikelihood>0</NPCSpawnLikelihood>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Blocked</Attribute>
+            <Target>Player</Target>
+        </Prereq>
+    </UnitType>
+    <UnitType InternalName="Champion_Hyru">
+        <Allegiance>Blocked</Allegiance>
+        <SpawnRating>0</SpawnRating>
+        <NPCSpawnLikelihood>0</NPCSpawnLikelihood>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Blocked</Attribute>
+            <Target>Player</Target>
+        </Prereq>
+    </UnitType>
+    <UnitType InternalName="Champion_Magush">
+        <Allegiance>Blocked</Allegiance>
+        <SpawnRating>0</SpawnRating>
+        <NPCSpawnLikelihood>0</NPCSpawnLikelihood>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Blocked</Attribute>
+            <Target>Player</Target>
+        </Prereq>
+    </UnitType>
+    <UnitType InternalName="Champion_Gwenneth">
+        <Allegiance>Blocked</Allegiance>
+        <SpawnRating>0</SpawnRating>
+        <NPCSpawnLikelihood>0</NPCSpawnLikelihood>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Blocked</Attribute>
+            <Target>Player</Target>
+        </Prereq>
+    </UnitType>
+    <UnitType InternalName="Champion_Mayriam">
+        <Allegiance>Blocked</Allegiance>
+        <SpawnRating>0</SpawnRating>
+        <NPCSpawnLikelihood>0</NPCSpawnLikelihood>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Blocked</Attribute>
+            <Target>Player</Target>
+        </Prereq>
+    </UnitType>
+	
+	<!-- Redefine some of these Champions with abilities from the new paths -->
+	<UnitType InternalName="JB_Champion_Gallowman">
+        <DisplayName>Gallowman</DisplayName>
+        <UnitDisplayName>Gallowman</UnitDisplayName>
+        <Class>Adventurer</Class>
+        <Allegiance>Empire</Allegiance>
+        <CreatureType>Undead</CreatureType>
+        <Unique>1</Unique>
+        <CanBeDesigned>0</CanBeDesigned>
+        <Gender>Male</Gender>
+        <WageOverride>1</WageOverride>
+        <IsNPC>1</IsNPC>
+        <IsChampion>1</IsChampion>
+        <IsSovereign>0</IsSovereign>
+        <SpawnRating>7</SpawnRating>
+        <NPCSpawnLikelihood>100</NPCSpawnLikelihood>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Unrest</Attribute>
+            <Value>-5</Value>
+            <Provides>-5% Unrest in the city this unit is in</Provides>
+        </GameModifier>
+        <LevelMilestone InternalName="L1">
+            <Level>1</Level>
+            <UnitStat_Accuracy>80</UnitStat_Accuracy>
+            <UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
+            <UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+            <UnitStat_HitPoints>20</UnitStat_HitPoints>
+			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
+			<UnitStat_BG_IsUndead>1</UnitStat_BG_IsUndead>
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsEmpire>1</UnitStat_BG_IsEmpire>
+			<UnitStat_BG_IsMale>1</UnitStat_BG_IsMale>
+        </LevelMilestone>
+        <SelectedAbilityBonusOption>JB_PathOfTheSummoner</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>ImmuneToPoison</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>ImmuneToCriticals</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Death1</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Death2</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Death3</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>JB_Summoner_Summon1</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>JB_Summoner_SummonGroup1</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>JB_Summoner_Hordes1</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Spell_ConsumeSpirit</SelectedAbilityBonusOption>
+        <AutoCreateEquipment>Staff_Furnace</AutoCreateEquipment>
+        <AutoCreateEquipment>RingOfCalling</AutoCreateEquipment>
+        <Equipment>Ritualist_Robe</Equipment>
+        <Quote>'Ars longa, vita brevis.'</Quote>
+        <NPCRecruitmentText>I can be of service. If you wish to hire me for %d gildar.</NPCRecruitmentText>
+        <Backstory>It was the night of haunted dreams, when Shirayn's scream echoed across the world of Elemental, when the boundary between life and death was torn.  A thousand strange things happened that night.  In the abattoir of Khaffara blood pooled and ran up the slaughter tables and back into the corpses.  Violent whines and thrashing could be heard from a smokehouse in Farcross.  In Tarth crows simply fell dead from the sky.
+
+But the most gruesome of these, second only to the pained rebirth of Shirayn herself, was what formed bellow the ancient gallows of Hagudst.  For centuries this place had been used for the execution of murderers, traitors and the possessed.  Long ago, in an age when a young oracle was locked in a temple, a death cult had been condemned and put to death at the gallows, and their leader swore that death would not stop them, that they would rise again.  A noose put an end to their rants, and their corpses were thrown on the bones of the gallows past victims and forgotten.
+
+Their corpses fell to ruin as new corpses buried them, as centuries passed and a cataclysm shook the world, as new empires grew.  Until the night of haunted dreams, when the restless spirits of the bone pile finally heard their screams echoed in the world.  But these voices no longer had form, there was no single spirit, but an orchestra of suffering and anger.  And though a single body rose from the decayed bones and dirt, centuries of spirits went with it.
+
+This Gallowman began walking the dark fields of Elemental, and he was drawn to places of death and pain.  The world is full of such places.  And though beasts usually avoided him men rarely showed such wisdom.  When self-appointed bandit king or foolish hero stopped him Gallowman would reach out to the dead in the area and release the cacophony of spirits he carried with him, allowing them to seek out new forms, to be reborn out of the earth and slaughter the living.  And their screaming voices would be dragged back and added to the Gallowman's collection.</Backstory>
+        <Medallions InternalName="">
+            <All>LichChamp_Medallion.png</All>
+        </Medallions>
+        <AnimationPack>OldManAnimationPack</AnimationPack>
+        <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+        <ClothMapScale>1.5</ClothMapScale>
+        <ClothPoseIndex>0</ClothPoseIndex>
+        <Color_Skin>40,45,50,55</Color_Skin>
+        <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+        <EyeTexture>gfx\Eyes\blinks\Eyeblink_F4_Blk.png</EyeTexture>
+        <InfoCardBackground>BG_Chasm</InfoCardBackground>
+        <ModelPath>M_Skeleton_Mesh_01.hkb</ModelPath>
+        <ModelScale>1</ModelScale>
+        <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+        <SoundPack>SoundPack_Skeleton</SoundPack>
+        <TacticalModelScale>1.5</TacticalModelScale>
+        <Texture_Skin>M_Skeleton_Texture_01.png</Texture_Skin>
+        <UnitModelType>EmpireMale</UnitModelType>
+        <EffectAttachment>
+            <Attachment>Lf_Eye_LCF</Attachment>
+            <EffectName>A_LichEyes_Particle</EffectName>
+            <EffectPosition>0,0,0</EffectPosition>
+            <EffectRotation>0,0,0</EffectRotation>
+            <EffectScale>0.1</EffectScale>
+        </EffectAttachment>
+        <EffectAttachment>
+            <Attachment>Rt_Eye_LCF</Attachment>
+            <EffectName>A_LichEyes_Particle</EffectName>
+            <EffectPosition>0,0,0</EffectPosition>
+            <EffectRotation>0,0,0</EffectRotation>
+            <EffectScale>0.1</EffectScale>
+        </EffectAttachment>
+    </UnitType>
+	<UnitType InternalName="JB_Champion_Phonis">
+        <DisplayName>Phonis</DisplayName>
+        <UnitDisplayName>Phonis</UnitDisplayName>
+        <Class>Adventurer</Class>
+        <Allegiance>Empire</Allegiance>
+        <CreatureType>Champion</CreatureType>
+        <RaceType>Race_Type_Quendar</RaceType>
+        <Unique>1</Unique>
+        <CanBeDesigned>0</CanBeDesigned>
+        <Gender>Female</Gender>
+        <WageOverride>1</WageOverride>
+        <IsNPC>1</IsNPC>
+        <IsChampion>1</IsChampion>
+        <IsSovereign>0</IsSovereign>
+        <SpawnRating>5</SpawnRating>
+        <NPCSpawnLikelihood>100</NPCSpawnLikelihood>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Unrest</Attribute>
+            <Value>-5</Value>
+            <Provides>-5% Unrest in the city this unit is in</Provides>
+        </GameModifier>
+        <LevelMilestone InternalName="L1">
+            <Level>1</Level>
+            <UnitStat_Accuracy>80</UnitStat_Accuracy>
+            <UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_HitPoints>20</UnitStat_HitPoints>
+			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Quendar>1</UnitStat_BG_IsRace_Quendar>
+			<UnitStat_BG_IsEmpire>1</UnitStat_BG_IsEmpire>
+			<UnitStat_BG_IsFemale>1</UnitStat_BG_IsFemale>
+        </LevelMilestone>
+        <SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>PathOfTheMage</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>JB_Evoker</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Fire1</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Fire2</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Water1</SelectedAbilityBonusOption>
+        <AutoCreateEquipment>Staff_Banishing</AutoCreateEquipment>
+        <AutoCreateEquipment>RingOfAsh</AutoCreateEquipment>
+        <Equipment>F_Female_Quendar_Head_01</Equipment>
+        <Equipment>F_Female_Quendar_Horns_01</Equipment>
+        <Equipment>Patchwork_Cloak_ID2</Equipment>
+        <Quote>'In my land, we deal harshly with those who would cheat us.'</Quote>
+        <NPCRecruitmentText>I can be of service. If you wish to hire me for %d gildar.</NPCRecruitmentText>
+        <Backstory>My people are Quendar - we were born and bred to serve the greatest of the Titans, Curgen of the Dred'nir, and from him and those who followed him we learned... well. I will tell you a story. There was a merchant once, a Krax named Sarrad, of the clan of the same name, who thought himself clever, who thought to cheat me of money that was rightfully mine, and the reason you have never heard of this Sarrad or his clan is because they do not exist anymore. None of them. Not the merchant, nor his brothers, nor his wives, or daughters, or sons. And that is what I and my people learned from Curgen, whose name is undying. </Backstory>
+        <AnimationPack>FemaleSovereignAnimationPack</AnimationPack>
+        <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+        <ClothMapScale>1.6</ClothMapScale>
+        <ClothPoseIndex>11</ClothPoseIndex>
+        <Color_Clothing1>80,15,15,255</Color_Clothing1>
+        <Color_Clothing2>40,35,35,255</Color_Clothing2>
+        <Color_Hair>213,213,213,255</Color_Hair>
+        <Color_Metal>60,50,50,255</Color_Metal>
+        <Color_Skin>208,116,88,255</Color_Skin>
+        <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+        <EyeTexture>gfx\eyes\blinks\Eyeblink_F6_red.png</EyeTexture>
+        <InfoCardBackground>BG_Lava</InfoCardBackground>
+        <ModelPath>F_Female_Magnar_Body_Mesh_01.hkb</ModelPath>
+        <ModelScale>1</ModelScale>
+        <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+        <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+        <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+        <SoundPack>SoundPack_Generic_Female</SoundPack>
+        <TacticalModelScale>1.5</TacticalModelScale>
+        <Texture_Eyes>gfx\eyes\blinks\Eyeblink_F6_red.png</Texture_Eyes>
+        <Texture_Skin>Magnar_Skin_F_01.dds</Texture_Skin>
+        <UnitModelType>QuendarFemale</UnitModelType>
+    </UnitType>	
+	<UnitType InternalName="JB_Champion_Bibiyana">
+        <DisplayName>Bibiyana</DisplayName>
+        <UnitDisplayName>Bibiyana</UnitDisplayName>
+        <Class>Adventurer</Class>
+        <Allegiance>Empire</Allegiance>
+        <CreatureType>Champion</CreatureType>
+        <RaceType>Race_Type_Quendar</RaceType>
+        <Unique>1</Unique>
+        <CanBeDesigned>0</CanBeDesigned>
+        <Gender>Female</Gender>
+        <WageOverride>1</WageOverride>
+        <IsNPC>1</IsNPC>
+        <IsChampion>1</IsChampion>
+        <IsSovereign>0</IsSovereign>
+        <SpawnRating>7</SpawnRating>
+        <NPCSpawnLikelihood>100</NPCSpawnLikelihood>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Unrest</Attribute>
+            <Value>-5</Value>
+            <Provides>-5% Unrest in the city this unit is in</Provides>
+        </GameModifier>
+        <LevelMilestone InternalName="L1">
+            <Level>1</Level>
+            <UnitStat_Accuracy>80</UnitStat_Accuracy>
+            <UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
+            <UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+            <UnitStat_HitPoints>20</UnitStat_HitPoints>
+			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Quendar>1</UnitStat_BG_IsRace_Quendar>
+			<UnitStat_BG_IsEmpire>1</UnitStat_BG_IsEmpire>
+			<UnitStat_BG_IsFemale>1</UnitStat_BG_IsFemale>
+        </LevelMilestone>
+        <SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>PathOfTheMage</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Death1</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Death2</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Fire1</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Fire2</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>JB_Mage_Prodigy</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Spell_DemonicAlly</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Frail</SelectedAbilityBonusOption>
+        <AutoCreateEquipment>Staff_Banishing</AutoCreateEquipment>
+        <AutoCreateEquipment>AmuletofWarding</AutoCreateEquipment>
+        <AutoCreateEquipment>DarkCandle</AutoCreateEquipment>
+        <AutoCreateEquipment>ScarStone</AutoCreateEquipment>
+        <Equipment>F_Female_Quendar_Head_01</Equipment>
+        <Equipment>DarkWizardFemaleRobeID2</Equipment>
+        <Equipment>Hooded_Cloak_ID2</Equipment>
+        <Equipment>Female_Female_Peasant_Pants_ID2</Equipment>
+        <Equipment>SnakeSkinBoots_ID2</Equipment>
+        <Quote>'It is a wasting disease, if you are curious. It should have killed me years ago.'</Quote>
+        <NPCRecruitmentText>I can be of service. If you wish to hire me for %d gildar.</NPCRecruitmentText>
+        <Backstory>It is a wasting disease, if you are curious. It should have killed me years ago. It has scarred me. Parts of my body... there is little more than bone, and a thin layer of flesh. It is not a pretty sight, I would not inflict it upon others, and so I wear these robes. They help to hide my staff as well. I am not without power; I have mastered death, in a sense, and so I know how to summon it. Not as a channeler, of course - but I have knowledge of the body, a man's weak points, areas where the veins are close to the surface, where a small cut can inflict great damage, where the bones are fragile, where a certain amount of pressure can kill. These are the skills I can offer - if you are interested.</Backstory>
+        <AnimationPack>FemaleSovereignAnimationPack</AnimationPack>
+        <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+        <ClothMapScale>1.6</ClothMapScale>
+        <ClothPoseIndex>1</ClothPoseIndex>
+        <Color_Clothing1>155,28,28,255</Color_Clothing1>
+        <Color_Clothing2>48,31,82,255</Color_Clothing2>
+        <Color_Hair>218,218,218,255</Color_Hair>
+        <Color_Metal>60,50,50,255</Color_Metal>
+        <Color_Skin>208,116,88,255</Color_Skin>
+        <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+        <EyeTexture>gfx\eyes\blinks\Eyeblink_F6_white.png</EyeTexture>
+        <InfoCardBackground>BG_Lava</InfoCardBackground>
+        <ModelPath>F_Female_Magnar_Body_Mesh_01.hkb</ModelPath>
+        <ModelScale>1</ModelScale>
+        <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+        <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+        <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+        <SoundPack>SoundPack_Generic_Female</SoundPack>
+        <TacticalModelScale>1.5</TacticalModelScale>
+        <Texture_Eyes>gfx\eyes\blinks\Eyeblink_F6_white.png</Texture_Eyes>
+        <Texture_Skin>Magnar_Skin_F_01.dds</Texture_Skin>
+        <UnitModelType>QuendarFemale</UnitModelType>
+    </UnitType>
+    <UnitType InternalName="JB_Champion_Fairgenn">
+        <DisplayName>Fairgenn</DisplayName>
+        <UnitDisplayName>Fairgenn</UnitDisplayName>
+        <Class>Adventurer</Class>
+        <Allegiance>Kingdom</Allegiance>
+        <CreatureType>Champion</CreatureType>
+        <RaceType>Race_Type_Amarians</RaceType>
+        <Unique>1</Unique>
+        <CanBeDesigned>0</CanBeDesigned>
+        <Gender>Male</Gender>
+        <WageOverride>1</WageOverride>
+        <IsNPC>1</IsNPC>
+        <IsChampion>1</IsChampion>
+        <IsSovereign>0</IsSovereign>
+        <SpawnRating>7</SpawnRating>
+        <NPCSpawnLikelihood>100</NPCSpawnLikelihood>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Unrest</Attribute>
+            <Value>-5</Value>
+            <Provides>-5% Unrest in the city this unit is in</Provides>
+        </GameModifier>
+        <LevelMilestone InternalName="L1">
+            <Level>1</Level>
+            <UnitStat_Accuracy>80</UnitStat_Accuracy>
+            <UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
+            <UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+            <UnitStat_HitPoints>20</UnitStat_HitPoints>
+			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Amarians>1</UnitStat_BG_IsRace_Amarians>
+			<UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsMale>1</UnitStat_BG_IsMale>
+        </LevelMilestone>
+        <SelectedAbilityBonusOption>Blood_Amarian</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>JB_PathOfTheSummoner</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Air1</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Water1</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>JB_Summoner_Summon1</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>JB_Summoner_Summon2</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>JB_Summoner_Warlords</SelectedAbilityBonusOption>
+        <AutoCreateEquipment>Shortsword_Guardian</AutoCreateEquipment>
+        <AutoCreateEquipment>LeatherBreastpiece</AutoCreateEquipment>
+        <AutoCreateEquipment>LeatherBoots</AutoCreateEquipment>
+        <AutoCreateEquipment>LeatherVambraces</AutoCreateEquipment>
+        <AutoCreateEquipment>LeatherGreaves</AutoCreateEquipment>
+        <AutoCreateEquipment>RingOfCalling</AutoCreateEquipment>
+        <Equipment>K_Male_Head_03</Equipment>
+        <Equipment>Noble_Cloak_ID1</Equipment>
+        <Equipment>Kraxis_Beard</Equipment>
+        <Equipment>Sovereign_Short_Hair_04</Equipment>
+        <Quote>"Sometimes lost is exactly where you need to be."</Quote>
+        <NPCRecruitmentText>I can be of service. If you wish to hire me for %d gildar.</NPCRecruitmentText>
+        <Backstory>I call her Ithuane, friend - my sword. After the girl in the song? You know it, of course. No? Well you know the story, I am sure. A sad story, a tragedy, the tale of a love that could never be. Ithuane and Pariden. Mortal, and Titan. Is it true? Who knows? But the song... I could sing it for you. I'm a fair singer, not as good as my father was, but then that's all he did. He sang for Procipinee, you know. More than once. Much as she liked his singing, you would think she would have gone after the bastards who killed him with a little more alacrity. I took care of them, though. With my Ithuane, right here. That's what I focus my energies on. The sword. My girl. Something useful. Something practical. In this world now... that's all that matters.</Backstory>
+        <AnimationPack>MaleSovereignAnimationPack</AnimationPack>
+        <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+        <ClothMapScale>1.6</ClothMapScale>
+        <ClothPoseIndex>0</ClothPoseIndex>
+        <Color_Clothing1>100,100,100,255</Color_Clothing1>
+        <Color_Clothing2>200,200,200,255</Color_Clothing2>
+        <Color_Hair>197,192,192,255</Color_Hair>
+        <Color_Metal>160,175,190,255</Color_Metal>
+        <Color_Skin>180,125,110,255</Color_Skin>
+        <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+        <EyeTexture>gfx\eyes\blinks\eyeblink_m4_grn.png</EyeTexture>
+        <InfoCardBackground>BG_River</InfoCardBackground>
+        <ModelPath>Gfx\HKB\Units\K_Male_Mesh_01.hkb</ModelPath>
+        <ModelScale>1</ModelScale>
+        <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+        <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+        <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+        <SoundPack>SoundPack_Generic_Male</SoundPack>
+        <TacticalModelScale>1.5</TacticalModelScale>
+        <Texture_Eyes>gfx\eyes\blinks\eyeblink_m4_grn.png</Texture_Eyes>
+        <Texture_Skin>K_Male_Warrior_Texture_01.png</Texture_Skin>
+        <UnitModelType>AmarianMale</UnitModelType>
+    </UnitType>
+    <UnitType InternalName="JB_Champion_Ritressa">
+        <DisplayName>Ritressa</DisplayName>
+        <UnitDisplayName>Ritressa</UnitDisplayName>
+        <Class>Adventurer</Class>
+        <Allegiance>Kingdom</Allegiance>
+        <CreatureType>Champion</CreatureType>
+        <RaceType>Race_Type_Mancers</RaceType>
+        <Unique>1</Unique>
+        <CanBeDesigned>0</CanBeDesigned>
+        <Gender>Female</Gender>
+        <WageOverride>1</WageOverride>
+        <IsNPC>1</IsNPC>
+        <IsChampion>1</IsChampion>
+        <IsSovereign>0</IsSovereign>
+        <SpawnRating>7</SpawnRating>
+        <NPCSpawnLikelihood>100</NPCSpawnLikelihood>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Unrest</Attribute>
+            <Value>-5</Value>
+            <Provides>-5% Unrest in the city this unit is in</Provides>
+        </GameModifier>
+        <LevelMilestone InternalName="L1">
+            <Level>1</Level>
+            <UnitStat_Accuracy>80</UnitStat_Accuracy>
+            <UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
+            <UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+            <UnitStat_HitPoints>20</UnitStat_HitPoints>
+			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Mancers>1</UnitStat_BG_IsRace_Mancers>
+			<UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsFemale>1</UnitStat_BG_IsFemale>
+        </LevelMilestone>
+        <SelectedAbilityBonusOption>Blood_Mancer</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>PathOfTheMage</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Water1</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Water2</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>JB_Mage_Prodigy</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>JB_Mage_Prodigy2</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>JB_Mage_StrategicMancy</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Frostborn</SelectedAbilityBonusOption>
+        <AutoCreateEquipment>Staff_Freezing</AutoCreateEquipment>
+        <AutoCreateEquipment>Robe_Mage</AutoCreateEquipment>
+        <AutoCreateEquipment>RingOfTheGlacier</AutoCreateEquipment>
+        <AutoCreateEquipment>Scroll_Blizzard</AutoCreateEquipment>
+        <Equipment>K_Female_Head_03</Equipment>
+        <Equipment>SoldiersCloak</Equipment>
+        <Equipment>Noble_Ladies_Hair_Back</Equipment>
+        <Quote>'It was I that killed my love, not fate. The blame is mine alone.'</Quote>
+        <NPCRecruitmentText>I can be of service. If you wish to hire me for %d gildar.</NPCRecruitmentText>
+        <Backstory>Ah yes, the accent... I am from Montenera, you are right, though I left there when I was very young. There was a man who came to our village, his name was Paoluto... he had heard tell of a kouros, a great library, where the wise men of Atalandra had hidden their greatest treasures... well... I was a young girl, Paoluto was a handsome man, and so... I left with him. We traveled east, and then north, into the wastes, and there we found this kouros, and there... Paoluto died. The great treasures of the past... they have great and powerful guardians. Dangerous guardians. You would do well to keep this in mind, friend, and if you see fit to hire me... I shall surely remind you.</Backstory>
+        <AnimationPack>FemaleSovereignAnimationPack</AnimationPack>
+        <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+        <ClothMapScale>1.6</ClothMapScale>
+        <ClothPoseIndex>4</ClothPoseIndex>
+        <Color_Clothing1>170,175,200,255</Color_Clothing1>
+        <Color_Clothing2>60,35,60,255</Color_Clothing2>
+        <Color_Hair>159,181,207,255</Color_Hair>
+        <Color_Metal>171,175,200,255</Color_Metal>
+        <Color_Skin>204,135,90,255</Color_Skin>
+        <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+        <EyeTexture>gfx\eyes\blinks\eyeblink_f3_blue.png</EyeTexture>
+        <InfoCardBackground>BG_KingdomBarren</InfoCardBackground>
+        <ModelPath>Gfx\HKB\Units\K_Female_Mesh_01.hkb</ModelPath>
+        <ModelScale>1</ModelScale>
+        <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+        <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+        <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+        <SoundPack>SoundPack_Generic_Female</SoundPack>
+        <TacticalModelScale>1.5</TacticalModelScale>
+        <Texture_Eyes>gfx\eyes\blinks\eyeblink_f3_blue.png</Texture_Eyes>
+        <Texture_Skin>K_Female_Dark_Texture_01.png</Texture_Skin>
+        <UnitModelType>MancerFemale</UnitModelType>
+    </UnitType>
+    <UnitType InternalName="JB_Champion_Hyru">
+        <DisplayName>Hyru the Caller</DisplayName>
+        <UnitDisplayName>Hyru the Caller</UnitDisplayName>
+        <Class>Adventurer</Class>
+        <Allegiance>Empire</Allegiance>
+        <CreatureType>Champion</CreatureType>
+        <RaceType>Race_Type_Wraiths</RaceType>
+        <Unique>1</Unique>
+        <CanBeDesigned>0</CanBeDesigned>
+        <Gender>Male</Gender>
+        <WageOverride>1</WageOverride>
+        <IsNPC>1</IsNPC>
+        <IsChampion>1</IsChampion>
+        <IsSovereign>0</IsSovereign>
+        <SpawnRating>9</SpawnRating>
+        <NPCSpawnLikelihood>100</NPCSpawnLikelihood>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Unrest</Attribute>
+            <Value>-5</Value>
+            <Provides>-5% Unrest in the city this unit is in</Provides>
+        </GameModifier>
+        <LevelMilestone InternalName="L1">
+            <Level>1</Level>
+            <UnitStat_Accuracy>80</UnitStat_Accuracy>
+            <UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
+            <UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+            <UnitStat_HitPoints>20</UnitStat_HitPoints>
+			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Wraiths>1</UnitStat_BG_IsRace_Wraiths>
+			<UnitStat_BG_IsEmpire>1</UnitStat_BG_IsEmpire>
+			<UnitStat_BG_IsMale>1</UnitStat_BG_IsMale>
+        </LevelMilestone>
+        <SelectedAbilityBonusOption>Blood_Wraith</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>JB_PathOfTheSummoner</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Death1</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Fire1</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>JB_Summoner_Summon1</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>JB_Summoner_Summon2</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>JB_Summoner_Warlords</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>JB_Summoner_SummonGroup1</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>JB_Summoner_Summon3</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Spell_DemonicAlly</SelectedAbilityBonusOption>
+        <AutoCreateEquipment>Staff_Banishing</AutoCreateEquipment>
+        <AutoCreateEquipment>BandOfInsight</AutoCreateEquipment>
+        <AutoCreateEquipment>Potion_Healing</AutoCreateEquipment>
+        <AutoCreateEquipment>CloakOfShadows</AutoCreateEquipment>
+        <Equipment>Sion_Head</Equipment>
+        <Equipment>DarkWizardRobeID2</Equipment>
+        <Equipment>Noblemans_Pants</Equipment>
+        <Equipment>Basic_Boots</Equipment>
+        <Equipment>Magnar_Hair</Equipment>
+        <Equipment>Empire_Leather_Gloves_2_Light</Equipment>
+        <Quote>'I am the wise, for I know that I know nothing...'</Quote>
+        <NPCRecruitmentText>I can be of service. If you wish to hire me for %d gildar.</NPCRecruitmentText>
+        <Backstory>You have a great destiny before you, friend. I sense it. A word of caution, though...  greatness can be a curse, as well as a blessing. If you will allow me, I will tell you a story. A story of my village in the time before the Oracle came back to us, before the transformation. I was a farmer then, we were all farmers, to coax food from the land required all to work, but when I was not farming, I was a teacher.  My village? No. You would not have heard of it... Sigedd-Belzen, it was called. It no longer exists. Only a few of us remain to remember... Yosku, Czillka... and Meerduul, of course.  It is his story I wish to tell you... Meerduul, he was student, I was teacher... we were so close, I have no children of my own, I never married, he was like a son to me. Such brilliance... I have studied the past, I know the great alchemic magics of the old kingdoms, but Meerduul... he did not need to study. To him, these things were second nature. He had greatness within him, you see. Now, what happened - this was a few seasons before the transformation, just before the adventurer from the West, Relias, they called him, came to our land... it was a time of great famine. Great drought. and the villagers of Sigedd-Belzen came to me, for I was loremaster, and asked if there was not a way to use sorcery to restore life to the fields. And I said no.
+And Meerduul said perhaps.
+In the Book of Ereog it is written how Az-Adoras, the dark prince, brought death to the lands of Hallas. The grain withered in the field, the fruit withered on the vine, the beasts choked on their own bile. Meerduul knew that the death the dark prince had brought was in fact life energy that had been transformed - perverted to a darker use, and he thought... he believed it was his destiny to restore life to the lands of Sigedd-Belzen. We all told him, you see, that he was meant for greatness, and he believed us. And so he went into the fields, and gathered around him the mana - the energy - he needed to perform this spell of life. And he cast that energy into the earth itself, and tried to draw from it life. And he did. We were so happy, the fields bloomed once more, the grasses grew, there were crops... but only for a short time. A single day. Because the next dawn, when we woke... life had fled the land entirely. Meerduul's spell had drawn the last breath from the fields, and now they were naught but sand, and stone. 
+But that was not the worst thing, my friend. The worst thing was when he wanted to try again. 
+The worst thing was when we had to fight him... to drive him from his home, and his people, for he would not listen to reason. And now he is lost to me, my son, my heir as loremaster. Lost as all of Sigedd-Belzen is lost. 
+That is the story I wished to tell you, about the dangers of greatness.</Backstory>
+        <AnimationPack>MaleSovereignAnimationPack</AnimationPack>
+        <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+        <ClothMapScale>1.6</ClothMapScale>
+        <ClothPoseIndex>15</ClothPoseIndex>
+        <Color_Clothing1>90,130,170,255</Color_Clothing1>
+        <Color_Clothing2>50,50,60</Color_Clothing2>
+        <Color_Hair>42,42,57,255</Color_Hair>
+        <Color_Metal>50,55,70,255</Color_Metal>
+        <Color_Skin>168,178,193,255</Color_Skin>
+        <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+        <EyeTexture>gfx\eyes\blinks\eyeblink_m5_gold.png</EyeTexture>
+        <InfoCardBackground>BG_Chasm</InfoCardBackground>
+        <ModelPath>Gfx\HKB\Units\K_Male_Mesh_01.hkb</ModelPath>
+        <ModelScale>1</ModelScale>
+        <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+        <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+        <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+        <SoundPack>SoundPack_Generic_Male</SoundPack>
+        <TacticalModelScale>1.5</TacticalModelScale>
+        <Texture_Eyes>gfx\eyes\blinks\eyeblink_m5_gold.png</Texture_Eyes>
+        <Texture_Skin>K_Male_Tattoo_Texture_02.png</Texture_Skin>
+        <UnitModelType>WraithMale</UnitModelType>
+    </UnitType>   
+    <UnitType InternalName="JB_Champion_Magush">
+        <DisplayName>Magush the Adept</DisplayName>
+        <UnitDisplayName>Magush the Adept</UnitDisplayName>
+        <Class>Adventurer</Class>
+        <Allegiance>Empire</Allegiance>
+        <CreatureType>Champion</CreatureType>
+        <RaceType>Race_Type_Wraiths</RaceType>
+        <Unique>1</Unique>
+        <CanBeDesigned>0</CanBeDesigned>
+        <Gender>Male</Gender>
+        <WageOverride>1</WageOverride>
+        <IsNPC>1</IsNPC>
+        <IsChampion>1</IsChampion>
+        <IsSovereign>0</IsSovereign>
+        <SpawnRating>9</SpawnRating>
+        <NPCSpawnLikelihood>100</NPCSpawnLikelihood>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Unrest</Attribute>
+            <Value>-5</Value>
+            <Provides>-5% Unrest in the city this unit is in</Provides>
+        </GameModifier>
+        <LevelMilestone InternalName="L1">
+            <Level>1</Level>
+            <UnitStat_Accuracy>80</UnitStat_Accuracy>
+            <UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
+            <UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+            <UnitStat_HitPoints>20</UnitStat_HitPoints>
+			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Wraiths>1</UnitStat_BG_IsRace_Wraiths>
+			<UnitStat_BG_IsEmpire>1</UnitStat_BG_IsEmpire>
+			<UnitStat_BG_IsMale>1</UnitStat_BG_IsMale>
+        </LevelMilestone>
+        <SelectedAbilityBonusOption>Blood_Wraith</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>PathOfTheMage</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Fire1</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Fire2</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Water1</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Water2</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>JB_Mage_Prodigy</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>JB_Mage_Prodigy2</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>JB_Mage_Prodigy3</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>JB_Mage_Savant</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Vulnerable</SelectedAbilityBonusOption>
+        <AutoCreateEquipment>Staff_Spell</AutoCreateEquipment>
+        <AutoCreateEquipment>Scroll_Despair</AutoCreateEquipment>
+        <AutoCreateEquipment>Scroll_Recall</AutoCreateEquipment>
+        <Equipment>F_Head_Wraith_Mesh_07</Equipment>
+        <Equipment>Wraith_Robe</Equipment>
+        <Equipment>Noblemans_Pants_ID2</Equipment>
+        <Equipment>Basic_Boots_ID1</Equipment>
+        <Equipment>F_LongThick_Hair_Mesh_01</Equipment>
+        <Quote>'To burn, to blow, to burrow and flow.'</Quote>
+        <NPCRecruitmentText>I can be of service. If you wish to hire me for %d gildar.</NPCRecruitmentText>
+        <Backstory>It is the Anthuanii of which I speak - the ancient ones. They live in the great shards - in the dark of night, in the still of the dreamtime, they whisper their desires.  I heard them only after the Transformation, after the return of the Oracle. I fled from my home to quiet their voices, but they followed me across the wastes. Take me into your service, and I will help you learn their secrets, help you learn to master their magicks. </Backstory>
+        <AnimationPack>MaleSovereignAnimationPack</AnimationPack>
+        <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+        <ClothMapScale>1.6</ClothMapScale>
+        <ClothPoseIndex>10</ClothPoseIndex>
+        <Color_Clothing1>59,49,82,255</Color_Clothing1>
+        <Color_Clothing2>87,130,171,255</Color_Clothing2>
+        <Color_Hair>55,55,70,255</Color_Hair>
+        <Color_Metal>50,55,70,255</Color_Metal>
+        <Color_Skin>170,180,195,255</Color_Skin>
+        <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+        <EyeTexture>gfx\eyes\blinks\eyeblink_m5_gold.png</EyeTexture>
+        <InfoCardBackground>BG_Chasm</InfoCardBackground>
+        <ModelPath>Gfx\HKB\Units\K_Male_Mesh_01.hkb</ModelPath>
+        <ModelScale>1</ModelScale>
+        <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+        <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+        <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+        <SoundPack>SoundPack_Generic_Male</SoundPack>
+        <TacticalModelScale>1.5</TacticalModelScale>
+        <Texture_Eyes>gfx\eyes\blinks\eyeblink_m5_gold.png</Texture_Eyes>
+        <Texture_Skin>K_Male_Evil_Texture_01.png</Texture_Skin>
+        <UnitModelType>WraithMale</UnitModelType>
+        <EffectAttachment>
+            <Attachment>hand_left_Lcf</Attachment>
+            <EffectName>A_Cindercorpse_Chest_Particle</EffectName>
+            <EffectPosition>0,0,0</EffectPosition>
+            <EffectRotation>0,0,0</EffectRotation>
+            <EffectScale>0.2</EffectScale>
+        </EffectAttachment>
+        <EffectAttachment>
+            <Attachment>hand_right_Lcf</Attachment>
+            <EffectName>A_Cindercorpse_Chest_Particle</EffectName>
+            <EffectPosition>0,0,0</EffectPosition>
+            <EffectRotation>0,0,0</EffectRotation>
+            <EffectScale>0.2</EffectScale>
+        </EffectAttachment>
+    </UnitType>
+    <UnitType InternalName="JB_Champion_Gwenneth">
+        <DisplayName>Gwenneth</DisplayName>
+        <UnitDisplayName>Gwenneth</UnitDisplayName>
+        <Class>Adventurer</Class>
+        <Allegiance>Kingdom</Allegiance>
+        <CreatureType>Champion</CreatureType>
+        <RaceType>Race_Type_Amarians</RaceType>
+        <Unique>1</Unique>
+        <CanBeDesigned>0</CanBeDesigned>
+        <Gender>Female</Gender>
+        <WageOverride>1</WageOverride>
+        <IsNPC>1</IsNPC>
+        <IsChampion>1</IsChampion>
+        <IsSovereign>0</IsSovereign>
+        <SpawnRating>9</SpawnRating>
+        <NPCSpawnLikelihood>100</NPCSpawnLikelihood>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Unrest</Attribute>
+            <Value>-5</Value>
+            <Provides>-5% Unrest in the city this unit is in</Provides>
+        </GameModifier>
+        <LevelMilestone InternalName="L1">
+            <Level>1</Level>
+            <UnitStat_Accuracy>80</UnitStat_Accuracy>
+            <UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
+            <UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+            <UnitStat_HitPoints>20</UnitStat_HitPoints>
+			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Amarians>1</UnitStat_BG_IsRace_Amarians>
+			<UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsFemale>1</UnitStat_BG_IsFemale>
+        </LevelMilestone>
+        <SelectedAbilityBonusOption>Blood_Amarian</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>PathOfTheMage</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Earth1</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Earth2</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Life1</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Life2</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>JB_Mage_Prodigy</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>JB_Mage_Prodigy2</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>JB_Mage_Abjuration</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Beastlord</SelectedAbilityBonusOption>
+        <AutoCreateEquipment>Staff_Winters</AutoCreateEquipment>
+        <AutoCreateEquipment>BandOfInsight</AutoCreateEquipment>
+        <AutoCreateEquipment>Potion_Healing</AutoCreateEquipment>
+        <AutoCreateEquipment>Scroll_SummonAirElemental</AutoCreateEquipment>
+        <Equipment>K_Female_Head_01</Equipment>
+        <Equipment>Kraxis_Dress2_Light</Equipment>
+        <Equipment>Wizard_Cloak_ID2</Equipment>
+        <Equipment>TightBoots_Light</Equipment>
+        <Equipment>K_Female_Short_Hair_01</Equipment>
+        <Quote>'Magic is a tool favored by the ambitious usurpers and villains of our world.'</Quote>
+        <NPCRecruitmentText>I can be of service. If you wish to hire me for %d gildar.</NPCRecruitmentText>
+        <Backstory>Magic is a thing to be feared, friend. It is a primal power whose behavior none can truly understand. I can help predict what a certain spell has tended to achieve in the past, but there are always complicating factors.</Backstory>
+        <AnimationPack>FemaleSovereignAnimationPack</AnimationPack>
+        <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+        <ClothMapScale>1.6</ClothMapScale>
+        <ClothPoseIndex>4</ClothPoseIndex>
+        <Color_Clothing1>51,102,153,255</Color_Clothing1>
+        <Color_Clothing2>115,82,53,255</Color_Clothing2>
+        <Color_Hair>159,181,207,255</Color_Hair>
+        <Color_Metal>160,175,190,255</Color_Metal>
+        <Color_Skin>170,115,100,255</Color_Skin>
+        <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+        <EyeTexture>gfx\eyes\blinks\eyeblink_f2_grn.png</EyeTexture>
+        <InfoCardBackground>BG_River</InfoCardBackground>
+        <ModelPath>Gfx\HKB\Units\K_Female_Mesh_01.hkb</ModelPath>
+        <ModelScale>1</ModelScale>
+        <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+        <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+        <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+        <SoundPack>SoundPack_Generic_Female</SoundPack>
+        <TacticalModelScale>1.5</TacticalModelScale>
+        <Texture_Eyes>gfx\eyes\blinks\eyeblink_f2_grn.png</Texture_Eyes>
+        <Texture_Skin>K_Female_Thinbrows_Texture_01.png</Texture_Skin>
+        <UnitModelType>AmarianFemale</UnitModelType>
+    </UnitType>
+    <UnitType InternalName="JB_Champion_Mayriam">
+        <DisplayName>Mayriam</DisplayName>
+        <UnitDisplayName>Mayriam</UnitDisplayName>
+        <Class>Adventurer</Class>
+        <Allegiance>Kingdom</Allegiance>
+        <CreatureType>Champion</CreatureType>
+        <RaceType>Race_Type_Altarians</RaceType>
+        <Unique>1</Unique>
+        <CanBeDesigned>0</CanBeDesigned>
+        <Gender>Female</Gender>
+        <WageOverride>1</WageOverride>
+        <IsNPC>1</IsNPC>
+        <IsChampion>1</IsChampion>
+        <IsSovereign>0</IsSovereign>
+        <SpawnRating>9</SpawnRating>
+        <NPCSpawnLikelihood>100</NPCSpawnLikelihood>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Unrest</Attribute>
+            <Value>-5</Value>
+            <Provides>-5% Unrest in the city this unit is in</Provides>
+        </GameModifier>
+        <LevelMilestone InternalName="L1">
+            <Level>1</Level>
+            <UnitStat_Accuracy>80</UnitStat_Accuracy>
+            <UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
+            <UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+            <UnitStat_HitPoints>20</UnitStat_HitPoints>
+			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Altarians>1</UnitStat_BG_IsRace_Altarians>
+			<UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsFemale>1</UnitStat_BG_IsFemale>
+        </LevelMilestone>
+        <SelectedAbilityBonusOption>Blood_Altarian</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>JB_PathOfTheSummoner</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Water1</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Water2</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>JB_Summoner_Summon1</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>JB_Summoner_Summon2</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>JB_Summoner_Warlords</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>JB_Summoner_Summon3</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>JB_Summoner_Summon4</SelectedAbilityBonusOption>
+        <AutoCreateEquipment>Shortsword_Altar</AutoCreateEquipment>
+        <AutoCreateEquipment>LeatherBreastpiece_Altar</AutoCreateEquipment>
+        <AutoCreateEquipment>Potion_Healing</AutoCreateEquipment>
+        <AutoCreateEquipment>AmuletOfHaste</AutoCreateEquipment>
+        <AutoCreateEquipment>Scroll_Blizzard</AutoCreateEquipment>
+        <Equipment>K_Female_Head_01</Equipment>
+        <Equipment>Kingdom_Female_Leather_Gloves_Dark</Equipment>
+        <Equipment>Female_Basic_Pants_ID2</Equipment>
+        <Equipment>Muchant_Cloak_ID2</Equipment>
+        <Equipment>TightBoots_Dark</Equipment>
+        <Equipment>K_Female_Slim_Hair</Equipment>
+        <Quote>'The magic I seek may prove my undoing.'</Quote>
+        <NPCRecruitmentText>I can be of service. If you wish to hire me for %d gildar.</NPCRecruitmentText>
+        <Backstory>We stand on the verge of catastrophe, my friend. The grayskins seek to extend their dominion over the entirety of this world, and we - all the tribes of man, all the countries, all the races, - must band together to stop them. We must pool the knowledge we have in this fight, yes, even that which the scholars of ages past called the black arts. For surely our foes will use those weapons themselves. </Backstory>
+        <AnimationPack>FemaleSovereignAnimationPack</AnimationPack>
+        <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+        <ClothMapScale>1.6</ClothMapScale>
+        <ClothPoseIndex>6</ClothPoseIndex>
+        <Color_Clothing1>120,25,20,255</Color_Clothing1>
+        <Color_Clothing2>78,60,55,255</Color_Clothing2>
+        <Color_Hair>164,109,55,255</Color_Hair>
+        <Color_Metal>145,145,145,255</Color_Metal>
+        <Color_Skin>212,147,97,255</Color_Skin>
+        <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+        <EyeTexture>gfx\eyes\blinks\eyeblink_f3_brwn.png</EyeTexture>
+        <InfoCardBackground>BG_KingdomRugged</InfoCardBackground>
+        <ModelPath>Gfx\HKB\Units\K_Female_Mesh_01.hkb</ModelPath>
+        <ModelScale>1</ModelScale>
+        <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+        <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+        <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+        <SoundPack>SoundPack_Generic_Female</SoundPack>
+        <TacticalModelScale>1.5</TacticalModelScale>
+        <Texture_Eyes>gfx\eyes\blinks\eyeblink_f3_brwn.png</Texture_Eyes>
+        <Texture_Skin>K_Female_Thickbrows_Texture_01.png</Texture_Skin>
+        <UnitModelType>KingdomFemale</UnitModelType>
+    </UnitType>
+
+	<!-- Add some new Champions -->
+	<UnitType InternalName="JB_Champion_Cromas">
+        <DisplayName>Cromas</DisplayName>
+        <UnitDisplayName>Cromas</UnitDisplayName>
+        <Class>Adventurer</Class>
+        <Allegiance>Empire</Allegiance>
+        <CreatureType>Champion</CreatureType>
+        <RaceType>Race_Type_Quendar</RaceType>
+        <Unique>1</Unique>
+        <CanBeDesigned>0</CanBeDesigned>
+        <Gender>Male</Gender>
+        <WageOverride>1</WageOverride>
+        <IsNPC>1</IsNPC>
+        <IsChampion>1</IsChampion>
+        <IsSovereign>0</IsSovereign>
+        <SpawnRating>3</SpawnRating>
+        <NPCSpawnLikelihood>100</NPCSpawnLikelihood>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Unrest</Attribute>
+            <Value>-5</Value>
+            <Provides>-5% Unrest in the city this unit is in</Provides>
+        </GameModifier>
+        <LevelMilestone InternalName="L1">
+            <Level>1</Level>
+            <UnitStat_Accuracy>80</UnitStat_Accuracy>
+            <UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
+            <UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+            <UnitStat_HitPoints>20</UnitStat_HitPoints>
+			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Quendar>1</UnitStat_BG_IsRace_Quendar>
+			<UnitStat_BG_IsEmpire>1</UnitStat_BG_IsEmpire>
+			<UnitStat_BG_IsMale>1</UnitStat_BG_IsMale>
+        </LevelMilestone>
+        <SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>JB_PathOfTheSummoner</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Fire1</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>JB_Summoner_Summon1</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Endurance1_Warrior</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Brute_Level</SelectedAbilityBonusOption>
+        <AutoCreateEquipment>Mace</AutoCreateEquipment>
+		<Equipment>F_Male_Quendar_Head_01</Equipment>
+		<Equipment>LeatherVambraces_Soldiers</Equipment>
+		<Equipment>LeatherBoots_Soldiers</Equipment>
+		<Equipment>Fallen_Sleeveless_Shirt_ID2</Equipment>
+		<Equipment>Fallen_Warrior_Vest_ID1</Equipment>
+		<Equipment>Fallen_Basic_Pants</Equipment>
+		<Equipment>F_Male_Quendar_Horns_04</Equipment>
+        <Quote>'Fire and fist, such simple things.'</Quote>
+        <NPCRecruitmentText>I can be of service. If you wish to hire me for %d gildar.</NPCRecruitmentText>
+        <Backstory>What is it with wizards anyway?  Poncing around with robes and beards giving us all a bad name... trust me, those days are over.  There's no place for those types anymore.  Strong mind and strong body, that's the way to get results nowdays!</Backstory>
+        <AnimationPack>SoldierAnimationPack</AnimationPack>
+        <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+        <ClothMapScale>1.6</ClothMapScale>
+        <ClothPoseIndex>5</ClothPoseIndex>
+		<Color_Hair>200,200,200,255</Color_Hair>
+		<Color_Skin>119,102,67,255</Color_Skin>
+		<Color_Clothing1>84,11,0,255</Color_Clothing1>
+		<Color_Clothing2>150,150,150,255</Color_Clothing2>
+		<Color_Metal>128,128,128,255</Color_Metal>
+        <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+        <EyeTexture>gfx\eyes\blinks\eyeblink_m7_Orange.png</EyeTexture>
+        <InfoCardBackground>BG14_Volcanic2</InfoCardBackground>
+        <ModelPath>Gfx\HKB\Units\F_Male_Mesh_01.hkb</ModelPath>
+        <ModelScale>1</ModelScale>
+        <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+        <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+        <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+        <SoundPack>SoundPack_Generic_Male</SoundPack>
+        <TacticalModelScale>1.5</TacticalModelScale>
+        <Texture_Eyes>gfx\eyes\blinks\eyeblink_m1_gold.png</Texture_Eyes>
+        <Texture_Skin>Magnar_Skin_M_01.png</Texture_Skin>
+        <UnitModelType>QuendarMale</UnitModelType>
+    </UnitType>
+	<UnitType InternalName="JB_Champion_Gurst">
+        <DisplayName>Gurst Hurbog</DisplayName>
+        <UnitDisplayName>Gurst Hurbog</UnitDisplayName>
+        <Class>Adventurer</Class>
+        <Allegiance>Empire</Allegiance>
+        <CreatureType>Champion</CreatureType>
+        <RaceType>Race_Type_Urxen</RaceType>
+        <Unique>1</Unique>
+        <CanBeDesigned>0</CanBeDesigned>
+        <Gender>Male</Gender>
+        <WageOverride>1</WageOverride>
+        <IsNPC>1</IsNPC>
+        <IsChampion>1</IsChampion>
+        <IsSovereign>0</IsSovereign>
+        <SpawnRating>5</SpawnRating>
+        <NPCSpawnLikelihood>100</NPCSpawnLikelihood>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Unrest</Attribute>
+            <Value>-5</Value>
+            <Provides>-5% Unrest in the city this unit is in</Provides>
+        </GameModifier>
+        <LevelMilestone InternalName="L1">
+            <Level>1</Level>
+            <UnitStat_Accuracy>80</UnitStat_Accuracy>
+            <UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
+            <UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+            <UnitStat_HitPoints>20</UnitStat_HitPoints>
+			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Urxen>1</UnitStat_BG_IsRace_Urxen>
+			<UnitStat_BG_IsEmpire>1</UnitStat_BG_IsEmpire>
+			<UnitStat_BG_IsMale>1</UnitStat_BG_IsMale>
+        </LevelMilestone>
+        <SelectedAbilityBonusOption>Blood_Urxen</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>JB_PathOfTheSummoner</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Earth1</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>JB_Summoner_SummonCapacity1</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>JB_Summoner_SummonManaDiscount1</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>JB_Summoner_OuterPlanes</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Scout</SelectedAbilityBonusOption>
+        <AutoCreateEquipment>Spear</AutoCreateEquipment>
+		<Equipment>F_Male_Head_03</Equipment>
+		<Equipment>Fallen_Leather_Pants</Equipment>
+		<Equipment>Fallen_Sleeveless_Leather_Shirt_ID1</Equipment>
+		<Equipment>LeatherVambraces</Equipment>
+		<Equipment>Bards_Cloak_ID1</Equipment>
+		<Equipment>F_Braid_Hair_Mesh_01</Equipment>
+        <Quote>'When I call, they come.'</Quote>
+        <NPCRecruitmentText>I can be of service. If you wish to hire me for %d gildar.</NPCRecruitmentText>
+        <Backstory>I am Gurst - just a traveller.  Though yes, I have a few tricks up my sleeve.  I am, as they say - a Summoner.  I hear the creatures on the other side.  I hear them, and they hear me.</Backstory>
+        <AnimationPack>MaleSovereignAnimationPack</AnimationPack>
+        <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+        <ClothMapScale>1.6</ClothMapScale>
+        <ClothPoseIndex>6</ClothPoseIndex>
+		<Color_Hair>135,116,109,255</Color_Hair>
+		<Color_Skin>109,98,77,255</Color_Skin>
+		<Color_Clothing1>70,98,65,255</Color_Clothing1>
+		<Color_Clothing2>255,204,153,255</Color_Clothing2>
+		<Color_Metal>150,150,150,255</Color_Metal>
+        <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+        <EyeTexture>gfx\eyes\blinks\eyeblink_m1_gold.png</EyeTexture>
+        <InfoCardBackground>BG11_Tree</InfoCardBackground>
+        <ModelPath>Gfx\HKB\Units\F_Male_Mesh_01.hkb</ModelPath>
+        <ModelScale>1</ModelScale>
+        <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+        <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+        <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+        <SoundPack>SoundPack_Generic_Male</SoundPack>
+        <TacticalModelScale>1.5</TacticalModelScale>
+        <Texture_Eyes>gfx\eyes\blinks\eyeblink_m1_gold.png</Texture_Eyes>
+        <Texture_Skin>Urxen_Skin_M_01.png</Texture_Skin>
+        <UnitModelType>UrxenMale</UnitModelType>
+    </UnitType>
+   	<UnitType InternalName="JB_Champion_Briganat">
+        <DisplayName>Briganat</DisplayName>
+        <UnitDisplayName>Briganat</UnitDisplayName>
+        <Class>Adventurer</Class>
+        <Allegiance>Kingdom</Allegiance>
+        <CreatureType>Champion</CreatureType>
+        <RaceType>Race_Type_Altarians</RaceType>
+        <Unique>1</Unique>
+        <CanBeDesigned>0</CanBeDesigned>
+        <Gender>Female</Gender>
+        <WageOverride>1</WageOverride>
+        <IsNPC>1</IsNPC>
+        <IsChampion>1</IsChampion>
+        <IsSovereign>0</IsSovereign>
+        <SpawnRating>3</SpawnRating>
+        <NPCSpawnLikelihood>100</NPCSpawnLikelihood>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Unrest</Attribute>
+            <Value>-5</Value>
+            <Provides>-5% Unrest in the city this unit is in</Provides>
+        </GameModifier>
+        <LevelMilestone InternalName="L1">
+            <Level>1</Level>
+            <UnitStat_Accuracy>80</UnitStat_Accuracy>
+            <UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
+            <UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+            <UnitStat_HitPoints>20</UnitStat_HitPoints>
+			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Altarians>1</UnitStat_BG_IsRace_Altarians>
+			<UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsFemale>1</UnitStat_BG_IsFemale>
+        </LevelMilestone>
+        <SelectedAbilityBonusOption>Blood_Altarian</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>JB_PathOfTheSummoner</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Earth1</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Life1</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Potential1_Level</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>JB_Mage_Prodigy</SelectedAbilityBonusOption>
+        <AutoCreateEquipment>Shortsword_Altar</AutoCreateEquipment>
+        <AutoCreateEquipment>TildaHerbs</AutoCreateEquipment>
+        <AutoCreateEquipment>TurtleCharm</AutoCreateEquipment>
+		<Equipment>K_Female_Head_05</Equipment>
+		<Equipment>Cloak_Scaled</Equipment>
+		<Equipment>LeatherBoots_Soldiers</Equipment>
+		<Equipment>Sovereign_Short_Hair_02</Equipment>
+		<Equipment>Sovereign_Female_Warrior_Shirt</Equipment>
+		<Equipment>Female_Basic_Pants_ID1</Equipment>
+        <Quote>'The difficult road is the road worth travelling'</Quote>
+        <NPCRecruitmentText>I can be of service. If you wish to hire me for %d gildar.</NPCRecruitmentText>
+        <Backstory>It is not too late, there is still strength among us.  The road ahead is long and treacherous my friend, but we shall see our task completed yet.  The foul things that walk the earth shall be returned to the depths of hell from whence they came.</Backstory>
+        <AnimationPack>FemaleSovereignAnimationPack</AnimationPack>
+        <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+        <ClothMapScale>1.6</ClothMapScale>
+        <ClothPoseIndex>15</ClothPoseIndex>
+		<Color_Hair>138,95,54,255</Color_Hair>
+		<Color_Skin>222,154,114,255</Color_Skin>
+		<Color_Clothing1>107,81,15,255</Color_Clothing1>
+		<Color_Clothing2>78,60,55,255</Color_Clothing2>
+		<Color_Metal>145,145,145,255</Color_Metal>
+        <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+        <EyeTexture>gfx\eyes\blinks\eyeblink_f3_blue.png</EyeTexture>
+        <InfoCardBackground>BG12_Day</InfoCardBackground>
+        <ModelPath>Gfx\HKB\Units\K_Female_Mesh_01.hkb</ModelPath>
+        <ModelScale>1</ModelScale>
+        <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+        <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+        <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+        <SoundPack>SoundPack_Generic_Female</SoundPack>
+        <TacticalModelScale>1.5</TacticalModelScale>
+        <Texture_Eyes>gfx\eyes\blinks\eyeblink_f3_blue.png</Texture_Eyes>
+        <Texture_Skin>K_Female_Thinbrows_Texture_01.png</Texture_Skin>
+        <UnitModelType>KingdomFemale</UnitModelType>
+    </UnitType>
+	<UnitType InternalName="JB_Champion_Perik">
+        <DisplayName>Perik Purlwinter</DisplayName>
+        <UnitDisplayName>Perik Purlwinter</UnitDisplayName>
+        <Class>Adventurer</Class>
+        <Allegiance>Kingdom</Allegiance>
+        <CreatureType>Champion</CreatureType>
+        <RaceType>Race_Type_Mancers</RaceType>
+        <Unique>1</Unique>
+        <CanBeDesigned>0</CanBeDesigned>
+        <Gender>Male</Gender>
+        <WageOverride>1</WageOverride>
+        <IsNPC>1</IsNPC>
+        <IsChampion>1</IsChampion>
+        <IsSovereign>0</IsSovereign>
+        <SpawnRating>5</SpawnRating>
+        <NPCSpawnLikelihood>100</NPCSpawnLikelihood>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Unrest</Attribute>
+            <Value>-5</Value>
+            <Provides>-5% Unrest in the city this unit is in</Provides>
+        </GameModifier>
+        <LevelMilestone InternalName="L1">
+            <Level>1</Level>
+            <UnitStat_Accuracy>80</UnitStat_Accuracy>
+            <UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
+            <UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+            <UnitStat_HitPoints>20</UnitStat_HitPoints>
+			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Mancers>1</UnitStat_BG_IsRace_Mancers>
+			<UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsMale>1</UnitStat_BG_IsMale>
+        </LevelMilestone>
+        <SelectedAbilityBonusOption>Blood_Mancer</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>JB_PathOfTheSummoner</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Air1</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Water1</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>JB_Summoner_Summon1</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>JB_Summoner_SummonRange</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>JB_Summoner_SummonGroup1</SelectedAbilityBonusOption>
+        <AutoCreateEquipment>Staff_Ice</AutoCreateEquipment>
+        <AutoCreateEquipment>AmuletOfHaste</AutoCreateEquipment>
+		<Equipment>K_Male_Head_05</Equipment>
+		<Equipment>Sovereign_Mullet_Hair</Equipment>
+		<Equipment>Noblemans_Pants_ID1</Equipment>
+		<Equipment>Sovereign_Nobleman_Shirt_ID1</Equipment>
+        <Quote>'I say, who's up for an adventure with the most handsome sorcerer in town?'</Quote>
+        <NPCRecruitmentText>I can be of service. If you wish to hire me for %d gildar.</NPCRecruitmentText>
+        <Backstory>You have, no doubt heard of me - for I am Perik of the North Shore, Perik the Profound!  My enchantments are dazzling and my charisma outstanding.  I'm looking for action, adventure, and companions who can appreciate my charm.</Backstory>
+        <AnimationPack>MaleSovereignAnimationPack</AnimationPack>
+        <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+        <ClothMapScale>1.6</ClothMapScale>
+        <ClothPoseIndex>7</ClothPoseIndex>
+		<Color_Hair>210,191,128,255</Color_Hair>
+		<Color_Skin>208,175,142,255</Color_Skin>
+		<Color_Clothing1>42,168,243,255</Color_Clothing1>
+		<Color_Clothing2>215,215,215,255</Color_Clothing2>
+		<Color_Metal>190,190,190,255</Color_Metal>
+        <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+        <EyeTexture>gfx\eyes\blinks\eyeblink_m3_brwn.png</EyeTexture>
+        <InfoCardBackground>BG_BarrenFertile</InfoCardBackground>
+        <ModelPath>Gfx\HKB\Units\K_Male_Mesh_01.hkb</ModelPath>
+        <ModelScale>1</ModelScale>
+        <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+        <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+        <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+        <SoundPack>SoundPack_Generic_Male</SoundPack>
+        <TacticalModelScale>1.5</TacticalModelScale>
+        <Texture_Eyes>gfx\eyes\blinks\eyeblink_m3_brwn.png</Texture_Eyes>
+        <Texture_Skin>K_Male_Default_Texture_01.png</Texture_Skin>
+        <UnitModelType>MancerMale</UnitModelType>
+    </UnitType>
+    
+
+
+
+</UnitTypes>

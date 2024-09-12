@@ -1,0 +1,992 @@
+<?xml version="1.0"?>
+<!-- Modified library borrowed from Children of Storm, thanks Heavenfall -->
+<!-- Only using ExpandedTraits_FLAG_DefendingCity though for now so other stuff commented out -->
+<ContainerUnitStats>
+  <UnitStatType InternalName="ExpandedTraits_FLAG_DefendingCity">
+    <DisplayName>Counts as Defending a City</DisplayName>
+    <DisplayNameShort>fdasasdf</DisplayNameShort>
+    <Description>fdasasdf</Description>
+    <Icon>JB_Stat_DefendingCity_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <BaseSovereignAttribute>0</BaseSovereignAttribute>
+    <UnitStatGrouping>AbilityStat</UnitStatGrouping>
+  </UnitStatType>
+  <UnitStatType InternalName="ExpandedTraits_FLAG_DefendingCityWithLumberMill">
+    <DisplayName>City has Lumber Mill</DisplayName>
+    <DisplayNameShort>fdasasdf</DisplayNameShort>
+    <Description>fdasasdf</Description>
+    <Icon>JB_Stat_DefendingCity_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <BaseSovereignAttribute>0</BaseSovereignAttribute>
+    <UnitStatGrouping>AbilityStat</UnitStatGrouping>
+  </UnitStatType>
+  <UnitStatType InternalName="ExpandedTraits_FLAG_DefendingACityWithAirShard">
+    <DisplayName>City has Air shard</DisplayName>
+    <DisplayNameShort>fdasasdf</DisplayNameShort>
+    <Description>fdasasdf</Description>
+    <Icon>JB_Stat_DefendingCity_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <BaseSovereignAttribute>0</BaseSovereignAttribute>
+    <UnitStatGrouping>AbilityStat</UnitStatGrouping>
+  </UnitStatType>
+  <UnitStatType InternalName="ExpandedTraits_FLAG_DefendingACityWithFireShard">
+    <DisplayName>City has Fire shard</DisplayName>
+    <DisplayNameShort>fdasasdf</DisplayNameShort>
+    <Description>fdasasdf</Description>
+    <Icon>JB_Stat_DefendingCity_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <BaseSovereignAttribute>0</BaseSovereignAttribute>
+    <UnitStatGrouping>AbilityStat</UnitStatGrouping>
+  </UnitStatType>
+  <UnitStatType InternalName="ExpandedTraits_FLAG_DefendingACityWithWaterShard">
+    <DisplayName>City has Water shard</DisplayName>
+    <DisplayNameShort>fdasasdf</DisplayNameShort>
+    <Description>fdasasdf</Description>
+    <Icon>JB_Stat_DefendingCity_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <BaseSovereignAttribute>0</BaseSovereignAttribute>
+    <UnitStatGrouping>AbilityStat</UnitStatGrouping>
+  </UnitStatType>
+  <UnitStatType InternalName="ExpandedTraits_FLAG_DefendingACityWithEarthShard">
+    <DisplayName>City has Earth shard</DisplayName>
+    <DisplayNameShort>fdasasdf</DisplayNameShort>
+    <Description>fdasasdf</Description>
+    <Icon>JB_Stat_DefendingCity_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <BaseSovereignAttribute>0</BaseSovereignAttribute>
+    <UnitStatGrouping>AbilityStat</UnitStatGrouping>
+  </UnitStatType>
+  <UnitStatType InternalName="ExpandedTraits_FLAG_DefendingACityWithLifeShard">
+    <DisplayName>City has Life shard</DisplayName>
+    <DisplayNameShort>fdasasdf</DisplayNameShort>
+    <Description>fdasasdf</Description>
+    <Icon>JB_Stat_DefendingCity_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <BaseSovereignAttribute>0</BaseSovereignAttribute>
+    <UnitStatGrouping>AbilityStat</UnitStatGrouping>
+  </UnitStatType>
+  <UnitStatType InternalName="ExpandedTraits_FLAG_DefendingACityWithLifeShard">
+    <DisplayName>City has Death shard</DisplayName>
+    <DisplayNameShort>fdasasdf</DisplayNameShort>
+    <Description>fdasasdf</Description>
+    <Icon>JB_Stat_DefendingCity_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <BaseSovereignAttribute>0</BaseSovereignAttribute>
+    <UnitStatGrouping>AbilityStat</UnitStatGrouping>
+  </UnitStatType>
+  <UnitStatType InternalName="ExpandedTraits_FLAG_DefendingACityWithAnyShard">
+    <DisplayName>City has Any shard</DisplayName>
+    <DisplayNameShort>fdasasdf</DisplayNameShort>
+    <Description>fdasasdf</Description>
+    <Icon>JB_Stat_DefendingCity_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <BaseSovereignAttribute>0</BaseSovereignAttribute>
+    <UnitStatGrouping>AbilityStat</UnitStatGrouping>
+  </UnitStatType>
+</ContainerUnitStats>  
+<!-- Apply the UnitStats to appropriate Improvements -->
+<ContainerImprovements>
+<!-- Not using these
+  <ImprovementType InternalName="LoggingCamp">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingCityWithLumberMill</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="LumberYard">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingCityWithLumberMill</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="TimberMill">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingCityWithLumberMill</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  -->
+  <ImprovementType InternalName="Cityhub1">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingCity</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="Cityhub2_Town">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingCity</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+        <GameModifier>
+            <ModType>CityTrainingBonus</ModType>
+            <Attribute>TrainingBonus_ApplyAbilityBonus</Attribute>
+            <StrVal>JB_TownWatch</StrVal>
+            <Provides>+2 Initiative and +5 Defense when defending a city</Provides>
+        </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="Cityhub3_Town">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingCity</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+        <GameModifier>
+            <ModType>CityTrainingBonus</ModType>
+            <Attribute>TrainingBonus_ApplyAbilityBonus</Attribute>
+            <StrVal>JB_TownWatch</StrVal>
+            <Provides>+2 Initiative and +5 Defense when defending a city</Provides>
+        </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="Cityhub4_Town">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingCity</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+        <GameModifier>
+            <ModType>CityTrainingBonus</ModType>
+            <Attribute>TrainingBonus_ApplyAbilityBonus</Attribute>
+            <StrVal>JB_TownWatch</StrVal>
+            <Provides>+2 Initiative and +5 Defense when defending a city</Provides>
+        </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="Cityhub5_Town">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingCity</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+        <GameModifier>
+            <ModType>CityTrainingBonus</ModType>
+            <Attribute>TrainingBonus_ApplyAbilityBonus</Attribute>
+            <StrVal>JB_TownWatch</StrVal>
+            <Provides>+2 Initiative and +5 Defense when defending a city</Provides>
+        </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="Cityhub2_Fortress">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingCity</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="Cityhub3_Fortress">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingCity</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="Cityhub4_Fortress">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingCity</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="Cityhub5_Fortress">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingCity</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="Cityhub2_Conclave">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingCity</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+        <GameModifier>
+            <ModType>CityTrainingBonus</ModType>
+            <Attribute>TrainingBonus_ApplyAbilityBonus</Attribute>
+            <StrVal>JB_Astute</StrVal>
+            <Provides>+5 Spell Mastery and +10 Spell Resistance</Provides>
+        </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="Cityhub3_Conclave">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingCity</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+        <GameModifier>
+            <ModType>CityTrainingBonus</ModType>
+            <Attribute>TrainingBonus_ApplyAbilityBonus</Attribute>
+            <StrVal>JB_Astute</StrVal>
+            <Provides>+5 Spell Mastery and +10 Spell Resistance</Provides>
+        </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="Cityhub4_Conclave">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingCity</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+        <GameModifier>
+            <ModType>CityTrainingBonus</ModType>
+            <Attribute>TrainingBonus_ApplyAbilityBonus</Attribute>
+            <StrVal>JB_Astute</StrVal>
+            <Provides>+5 Spell Mastery and +10 Spell Resistance</Provides>
+        </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="Cityhub5_Conclave">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingCity</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+        <GameModifier>
+            <ModType>CityTrainingBonus</ModType>
+            <Attribute>TrainingBonus_ApplyAbilityBonus</Attribute>
+            <StrVal>JB_Astute</StrVal>
+            <Provides>+5 Spell Mastery and +10 Spell Resistance</Provides>
+        </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="DarklingCityhub1">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingCity</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="DarklingCityhub2">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingCity</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="DarklingCityhub3">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingCity</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="DarklingCityhub4">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingCity</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="DarklingCityhub5">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingCity</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <!-- Not using these
+  <ImprovementType InternalName="AirAltar">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAirShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="AirShrine">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAirShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="AirTemple">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAirShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="EarthAltar">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithEarthShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="EarthShrine">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithEarthShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="EarthTemple">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithEarthShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="FireAltar">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithFireShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="FireShrine">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithFireShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="FireTemple">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithFireShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="WaterAltar">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithWaterShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="WaterShrine">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithWaterShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="WaterTemple">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithWaterShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="DeathAltar">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithDeathShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="DeathShrine">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithDeathShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="DeathTemple">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithDeathShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="AirAltar_Resoln">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAirShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="AirShrine_Resoln">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAirShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="AirTemple_Resoln">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAirShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="EarthAltar_Resoln">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithEarthShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="EarthShrine_Resoln">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithEarthShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="EarthTemple_Resoln">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithEarthShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="FireAltar_Resoln">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithFireShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="FireShrine_Resoln">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithFireShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="FireTemple_Resoln">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithFireShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="WaterAltar_Resoln">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithWaterShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="WaterShrine_Resoln">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithWaterShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="WaterTemple_Resoln">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithWaterShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="DeathAltar_Resoln">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithDeathShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="DeathShrine_Resoln">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithDeathShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="DeathTemple_Resoln">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithDeathShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="LifeAltar">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithLifeShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="LifeShrine">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithLifeShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="LifeTemple">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithLifeShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+   <ImprovementType InternalName="Monument_HowlingChasm">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAirShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="Monument_PillarOfMascrinthus">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithEarthShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="Monument_PitOfSarpah">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithFireShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="PyreOfAnniellum">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithFireShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="Monument_Puraudrah">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithWaterShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="TowerOfMagic1">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithWaterShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAirShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="TowerOfMagic2">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithEarthShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithWaterShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="TowerOfMagic3">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAirShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithFireShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="TowerOfMagic4">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithEarthShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithFireShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="Underforge">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithEarthShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="EreogsTower">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAirShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="HedigahBathhouse">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithWaterShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="Monument_IruTAlavar">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithLifeShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  <ImprovementType InternalName="Monument_FloodedGraveyard">
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithDeathShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+      <Value>1</Value>
+    </GameModifier>
+  </ImprovementType>
+  -->
+</ContainerImprovements>  
+

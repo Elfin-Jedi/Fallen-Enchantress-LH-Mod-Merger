@@ -1,0 +1,373 @@
+<?xml version="1.0"?>
+<Container>
+  <AbilityBonus InternalName="DefensiveAbility_Centaur">
+    <AbilityBonusOption InternalName="Defensive_Centaur">
+      <IMPINC>Strength</IMPINC>
+      <DisplayName>One-handed Spears</DisplayName>
+      <Description>Faction gets one-handed spears that have the same strength as normal two-handed spears</Description>
+      <Icon>Ability_Defensive_Icon.png</Icon>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <GameModifier>
+        <Provides>Faction gets one-handed spears that have the same strength as normal two-handed spears</Provides>
+      </GameModifier>
+      <Type>Army</Type>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Champion_History">
+    <AbilityBonusOption InternalName="AnimalSpirit_Sov">
+      <DisplayName>Animal Spirit</DisplayName>
+      <Description>Can go on walkabout for 2 turns to summon an Animal Spirit (level=caster level)</Description>
+      <Icon>Ability_BrutalNature_Icon.png</Icon>
+      <Cost>1</Cost>
+      <GameModifier>
+        <Provides>Unlocks Spell Summon Animal Spirit - Can go on walkabout for 2 turns to summon an Animal Spirit (level=caster level)</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Type>Aggressive</Type>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="VinisFamiliar">
+    <AbilityBonusOption InternalName="VinisFamiliar">
+      <DisplayName>Vini's Familiar</DisplayName>
+      <Description>Unit produces 1 Air Shard power</Description>
+      <Icon>Ability_Acrobat_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>ProduceResource</Attribute>
+        <StrVal>AirMana</StrVal>
+        <Provides>Unit produces 1 Air Shard power</Provides>
+        <Value>1</Value>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <!--  <AbilityBonus InternalName="CentaurEmpireTactical">
+    <AbilityBonusOption InternalName="CentaurEmpireTactical">
+      <DisplayName>Centaur Stats</DisplayName>
+      <Description>Core Unit Stats
+		    Initiative: 20
+		    Constitution: 9
+		    Dexterity: 12
+		    Intelligence: 9
+		    Strength: 10
+		    Centaurs count as Monsters, not Humanoids
+		    All Centaur units are Male (females stay home)
+
+		    Centaurs take 30% more Piercing damage from Spears, unless the Centaur is also wielding a Spear
+
+		    From horse base:
+		    +1 Move
+		    +20 Carrying Capacity
+		    Cannot be knocked prone
+	    </Description>
+      <Icon>UnitstatIcon.png</Icon>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>-->
+  <!--<AbilityBonus InternalName="Plainsrunners">
+    <AbilityBonusOption InternalName="Plainsrunners">
+      <DisplayName>Plainsrunners</DisplayName>
+      <Description>All units expend only 0.7 Moves when crossing Plains terrain. This means that any unit with 2 movement may pass 3 Plains tiles in one turn. If the tiles are roads, it may pass 7 tiles.</Description>
+      <Icon>Ability_MasterScouts_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>MovementCostOverRide</Attribute>
+        <StrVal>Land</StrVal>
+        <Value>7</Value>
+        <PerTurn>1</PerTurn>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>MovementCostOverRide</Attribute>
+        <StrVal>Fertile_Land</StrVal>
+        <Value>7</Value>
+        <PerTurn>1</PerTurn>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>MovementCostOverRide</Attribute>
+        <StrVal>Rugged_Land</StrVal>
+        <Value>7</Value>
+        <PerTurn>1</PerTurn>
+      </GameModifier>
+      <Cost>1</Cost>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>-->
+  <AbilityBonus InternalName="CentaurEmpireTactical2">
+    <AbilityBonusOption InternalName="CentaurEmpireTactical2">
+      <DisplayName>Outriders</DisplayName>
+      <Description>All cities have their Zone of Control increased by 1.
+
+Centaur Pioneers build special outposts that have 1 greater Sight around it than normal outposts. This clears Fog of War around the ring of tiles outside the Zone of Control emitted by the Outpost.</Description>
+      <Icon>Ability_Fast_Icon.png</Icon>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_Influence</StrVal>
+        <Provides>All cities have their Zone of Control increased by 1.
+
+Centaur Pioneers build special outposts that have 1 greater Sight around it than normal outposts. This clears Fog of War around the ring of tiles outside the Zone of Control emitted by the Outpost.</Provides>
+        <Value>1</Value>
+      </GameModifier>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <ImprovementType InternalName="Outpost_Centaur">
+    <Sight>1</Sight>
+    <DisplayName>Outpost</DisplayName>
+    <Description>Spreads the players influence and increases the player's visibility.</Description>
+    <BarredTerrain>River</BarredTerrain>
+    <BarredTerrain>SwampTerrain</BarredTerrain>
+    <PreferredTerrain>City</PreferredTerrain>
+    <PreferredTerrain>Category:Land</PreferredTerrain>
+    <PreferredTerrain>Category:Forest</PreferredTerrain>
+    <ZOCMinRadius>2</ZOCMinRadius>
+    <ZOCMaxRadius>2</ZOCMaxRadius>
+    <ZOCRadiusTurnsBeforeUpdate>1</ZOCRadiusTurnsBeforeUpdate>
+    <HideInBuildList>1</HideInBuildList>
+    <LaborToBuild>-1</LaborToBuild>
+    <AIData AIPersonality="AI_General">
+      <AIPriority>5</AIPriority>
+      <AITag>CommandPost</AITag>
+    </AIData>
+    <ArtDef>Art_Outpost_Base</ArtDef>
+  </ImprovementType>
+  <AbilityBonus InternalName="CentaurEmpireTactical3">
+    <AbilityBonusOption InternalName="CentaurEmpireTactical3">
+      <DisplayName>Hallowed Sky</DisplayName>
+      <Description>All improvements that produce Air shard power will produce 1 extra mana</Description>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_Additive_ManaPerAirMana</StrVal>
+        <Provides>All improvements that produce Air shard power will produce 1 extra mana</Provides>
+        <Value>1</Value>
+      </GameModifier>
+      <Icon>Icon_Air.png</Icon>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="CentaurHallowedSky">
+    <AbilityBonusOption InternalName="CentaurHallowedSky">
+      <DisplayName>Skymaster</DisplayName>
+      <Description>This unit produces 1 Air Shard power</Description>
+      <Icon>Icon_Air.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>ProduceResource</Attribute>
+        <StrVal>AirMana</StrVal>
+        <Provides>This unit produces 1 Air Shard power</Provides>
+        <Value>1</Value>
+      </GameModifier>
+      <RarityDisplay>Rare</RarityDisplay>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="CentaurHallowedSky2">
+    <AbilityBonusOption InternalName="CentaurHallowedSky2">
+      <DisplayName>Frontrunner</DisplayName>
+      <Description>Faction starts with 3 Frontrunner Tokens that can be used to quickly train one Pioneer unit. 
+
+In addition, faction produces another 0.01 Frontrunner Tokens per Grain per turn.</Description>
+      <Icon>Action_BuildRoad.png</Icon>
+      <GameModifier>
+        <ModType>Resource</ModType>
+        <Attribute>Frontrunner</Attribute>
+        <Value>3.0</Value>
+        <Provides>Faction starts with 3 Frontrunner Tokens that can be used to quickly train one Pioneer unit. 
+
+In addition, faction produces another 0.01 Frontrunner Tokens per Grain per turn.</Provides>
+      </GameModifier>
+
+
+            <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_Additive_FrontrunnerPerGrain</StrVal>
+		<Provides>.</Provides>
+        <Value>0.01</Value>
+</GameModifier>
+
+      <RarityDisplay>Rare</RarityDisplay>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="CentaurEmpireTactical4">
+    <AbilityBonusOption InternalName="CentaurEmpireTactical4">
+      <Cost>-1</Cost>
+      <DisplayName>Ancestry</DisplayName>
+      <Description>Centaurs do not ride mounts, as they have no need to. Instead, Wild horses are left to roam the lands, and Wild Wargs are killed off or hunted until they have but a token presence.
+
+Centaurs may not build Stables or Kennels to gain horses or wargs. 
+
+Centaurs may still research Mounted warfare and Warg Riding in order to equip hired champions.
+      </Description>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_Horses</StrVal>
+        <Provides>Centaurs do not ride mounts, as they have no need to. Instead, Wild horses are left to roam the lands, and Wild Wargs are killed off or hunted until they have but a token presence.
+
+Centaurs may not build Stables or Kennels to gain horses or wargs. 
+
+Centaurs may still research Mounted warfare and Warg Riding in order to equip hired champions.</Provides>
+        <Value>-100</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_Wargs</StrVal>
+        <Provides>.</Provides>
+        <Value>-100</Value>
+      </GameModifier>
+      <Icon>Ability_Inefficient_Icon.png</Icon>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="CentaEmpireTactical2">
+    <AbilityBonusOption InternalName="CentaEmpireTactical2">
+      <DisplayName>Designing units</DisplayName>
+      <Description>The Centaurs are designed with a permanent base, which acts like a "mount". Note that when designing new Sovereigns or Units, you must yourself select the Centaur base from the Equipment tab.
+
+Also note that Centaurs wear ALL armor like other classes - including leg armor and boots (they simply have no graphics). The stats count, so do not forget to equip them.</Description>
+      <Icon>ability_warning.png</Icon>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <GameModifier>
+        <Provides>The Centaurs are designed with a permanent base, which acts like a "mount". Note that when designing new Sovereigns or Units, you must yourself select the Centaur base from the Equipment tab.
+
+Also note that Centaurs wear ALL armor like other classes - including leg armor and boots (they simply have no graphics). The stats count, so do not forget to equip them.</Provides>
+      </GameModifier>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Centaur_Twitchy">
+    <AbilityBonusType>Unit_Design</AbilityBonusType>
+    <AbilityBonusOption InternalName="Centaur_Twitchy">
+      <Type>Faction Trait</Type>
+      <IsCombatAbility>1</IsCombatAbility>
+      <Prereq>
+        <Type>Race</Type>
+        <Attribute>Race_Type_Centaur</Attribute>
+      </Prereq>
+      <DisplayName>Twitchy</DisplayName>
+      <Description>If this unit's Initiative is higher than any attacker, this unit gains +10 dodge</Description>
+      <Icon>Ability_CrushingBlow_Icon.png</Icon>
+      <AdditionalTrainingTurns>8</AdditionalTrainingTurns>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Dodge</StrVal>
+        <StrVal2>UnitStat_CombatSpeed</StrVal2>
+        <Value>10</Value>
+        <vsLower>1</vsLower>
+        <Provides>If this unit's Initiative is higher than any attacker, this unit gains +10 dodge</Provides>
+      </GameModifier>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Centaur_SetUsFree">
+    <AbilityBonusType>Unit_Design</AbilityBonusType>
+    <AbilityBonusOption InternalName="Centaur_SetUsFree">
+      <Type>Faction Trait</Type>
+      <IsCombatAbility>1</IsCombatAbility>
+      <Prereq>
+        <Type>Race</Type>
+        <Attribute>Race_Type_Centaur</Attribute>
+      </Prereq>
+      <DisplayName>Set Us Free</DisplayName>
+      <Description>When attacking any Mounted unit, this unit's Accuracy is increased by 20</Description>
+      <Icon>Ability_Assassin_Icon.png</Icon>
+      <AdditionalTrainingTurns>8</AdditionalTrainingTurns>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Accuracy</StrVal>
+        <StrVal2>UnitStat_BG_IsUsingMount</StrVal2>
+        <Provides>When attacking any Mounted unit, this unit's Accuracy is increased by 20</Provides>
+        <Value>20</Value>
+        <vsHigher>1</vsHigher>
+      </GameModifier>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Centaur_Misogynist">
+    <AbilityBonusType>Unit_Design</AbilityBonusType>
+    <AbilityBonusOption InternalName="Centaur_Misogynist">
+      <Type>Faction Trait</Type>
+      <IsCombatAbility>1</IsCombatAbility>
+      <Prereq>
+        <Type>Race</Type>
+        <Attribute>Race_Type_Centaur</Attribute>
+      </Prereq>
+      <DisplayName>Misogynist</DisplayName>
+      <Description>Unit deals 25% more physical damage against Female units</Description>
+      <Icon>Ability_Strength_Icon.png</Icon>
+      <AdditionalTrainingTurns>8</AdditionalTrainingTurns>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Attack_Pierce</StrVal>
+        <StrVal2>UnitStat_BG_IsFemale</StrVal2>
+        <Multiplier>1.25</Multiplier>
+        <Provides>+25% Attack vs Females</Provides>
+        <vsHigher>1</vsHigher>
+      </GameModifier>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <!--  <AbilityBonus InternalName="Centaur_Flankers">
+    <AbilityBonusType>Unit_Design</AbilityBonusType>
+    <AbilityBonusOption InternalName="Centaur_Flankers">
+      <Type>Faction Trait</Type>
+      <IsCombatAbility>1</IsCombatAbility>
+      <Prereq>
+        <Type>Race</Type>
+        <Attribute>Race_Type_Centaur</Attribute>
+      </Prereq>
+      <DisplayName>Outrider</DisplayName>
+      <Description>+1 Moves, -15 Carrying Capacity</Description>
+      <Icon>Ability_Finesse_Icon.png</Icon>
+      <AdditionalTrainingTurns>8</AdditionalTrainingTurns>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Moves</StrVal>
+        <Value>1</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_WeightCapacity</StrVal>
+        <Value>-15</Value>
+      </GameModifier>
+    </AbilityBonusOption>
+  </AbilityBonus>-->
+</Container>

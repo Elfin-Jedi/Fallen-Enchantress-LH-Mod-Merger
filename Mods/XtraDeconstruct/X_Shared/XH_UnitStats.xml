@@ -1,0 +1,3145 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<PlayerAbilityTypes>
+	<!--CORE-->
+	<UnitStatType InternalName="UnitStat_Attack_Blunt">
+		<IsPhysicalStat>0</IsPhysicalStat>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_Attack_Cutting">
+		<IsPhysicalStat>0</IsPhysicalStat>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_Attack_Cold">
+		<DisplayName>Water\Cold Attack</DisplayName>
+		<DisplayNameShort>XLAW</DisplayNameShort>
+		<Description>The water\cold damage that this unit can deal.</Description>
+		<Icon>US_XL_A_FW.png</Icon>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_Attack_Fire">
+		<DisplayNameShort>XLAF</DisplayNameShort>
+		<Icon>US_XL_A_FF.png</Icon>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_Attack_Lightning">
+		<DisplayName>Air\Ltng Attack</DisplayName>
+		<DisplayNameShort>XLAA</DisplayNameShort>
+		<Description>The air\lightning damage that this unit can deal.</Description>
+		<Icon>US_XL_A_FA.png</Icon>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_Attack_Poison">
+		<DisplayName>Dth\Poison Attack</DisplayName>
+		<DisplayNameShort>XLAD</DisplayNameShort>
+		<Description>The death\poison damage that this unit can deal.</Description>
+		<Icon>US_XL_A_FD.png</Icon>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_Defense_Cold">
+		<DisplayName>Water\Cold Defense</DisplayName>
+		<DisplayNameShort>XLDW</DisplayNameShort>
+		<Description>Ability to absorb water\cold attacks.</Description>
+		<Icon>US_XL_D_FW.png</Icon>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_Defense_Fire">
+		<DisplayNameShort>XLDF</DisplayNameShort>
+		<Icon>US_XL_D_FF.png</Icon>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_Defense_Lightning">
+		<DisplayName>Air\Ltng Defense</DisplayName>
+		<DisplayNameShort>XLDA</DisplayNameShort>
+		<Description>Ability to absorb air\lightning attacks.</Description>
+		<Icon>US_XL_D_FA.png</Icon>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_Defense_Poison">
+		<DisplayName>Dth\Poison Defense</DisplayName>
+		<DisplayNameShort>XLDD</DisplayNameShort>
+		<Description>Ability to absorb death\poison attacks.</Description>
+		<Icon>US_XL_D_FD.png</Icon>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_IsPlagued">
+		<Icon>UnitStat_X_DNE.png</Icon>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_Rally_Bonus">
+		<Description>Additional Battle Wisdom given by the Rally Skill.</Description>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_ResistCold">
+		<DisplayName>R% Wtr\Cld</DisplayName>
+		<DisplayNameShort>XLRW</DisplayNameShort>
+		<Description>Reduces water\cold damage by this percent.</Description>
+		<Icon>US_XL_D_FW.png</Icon>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_ResistFire">
+		<DisplayName>R% Fire</DisplayName>
+		<DisplayNameShort>XLRF</DisplayNameShort>
+		<Icon>US_XL_D_FF.png</Icon>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_ResistLightning">
+		<DisplayName>R% Air\Ltng</DisplayName>
+		<DisplayNameShort>XLRA</DisplayNameShort>
+		<Description>Reduces air\lightning damage by this percent.</Description>
+		<Icon>US_XL_D_FA.png</Icon>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_ResistPoison">
+		<DisplayName>R% Dth\Psn</DisplayName>
+		<DisplayNameShort>XLRD</DisplayNameShort>
+		<Description>Reduces death\poison damage by this percent.</Description>
+		<Icon>US_XL_D_FD.png</Icon>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_SpellDamage_Fire">
+		<DisplayName>B% Fire DMG</DisplayName>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_Stamina">
+		<DisplayName>Battle Wisdom</DisplayName>
+		<DisplayNameShort>BW</DisplayNameShort>
+		<Description>Battle Wisdom for Special Abilities.</Description>
+		<Icon>US_X_MagicPower.png</Icon>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_Stamina_Growth">
+		<DisplayName>+ BW Growth</DisplayName>
+		<Description>Battle Wisdom gained each Action.</Description>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_Stamina_Starting">
+		<DisplayName># Starting BW</DisplayName>
+		<Description>Battle Wisdom this Unit starts the battle with.</Description>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_StaminaFromKills">
+		<DisplayName>Battle Wisdom From Kills</DisplayName>
+		<DisplayNameShort>BWFK</DisplayNameShort>
+		<Description>Amount of Battle Wisdom this unit recovers when killing an enemy unit.</Description>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_Tactical_Auto_Stamina_Boost">
+		<DisplayName>Battle Wisdom Bonus from Defending</DisplayName>
+		<DisplayNameShort>BWD</DisplayNameShort>
+		<Description>Additive bonus to a unit's Battle Wisdom, when that unit skips his attack during a turn in a tactical battle.</Description>
+		<Hidden>1</Hidden>
+		<DefaultValue>1.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_Stamina_Temp">
+		<DisplayName>Temporary Battle Wisdom</DisplayName>
+		<DisplayNameShort>BWT</DisplayNameShort>
+		<Description>Temporary Battle Wisdom for Special Abilities.</Description>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<!--LIBRARY AND MODS-->
+	<UnitStatType InternalName="UnitStat_BG_GreyMagic">
+		<DisplayName>Grey Magic</DisplayName>
+		<DisplayNameShort>BGGM</DisplayNameShort>
+		<Description>Grey Magic.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_HasInjuries">
+		<DisplayName>Has Injuries</DisplayName>
+		<DisplayNameShort>BGHI</DisplayNameShort>
+		<Description>Has Injuries.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_IsBeast">
+		<DisplayName>Is Beast</DisplayName>
+		<DisplayNameShort>BGIB</DisplayNameShort>
+		<Description>Is Beast.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_IsChampion">
+		<DisplayName>Champion</DisplayName>
+		<DisplayNameShort>BGIC</DisplayNameShort>
+		<Description>Is Champion.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_IsConstruct">
+		<DisplayName>Is Construct</DisplayName>
+		<DisplayNameShort>BGIU</DisplayNameShort>
+		<Description>Is Construct.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_IsDemon">
+		<DisplayName>Is Demon</DisplayName>
+		<DisplayNameShort>BGIN</DisplayNameShort>
+		<Description>Is Demon.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_IsDragon">
+		<DisplayName>Is Dragon</DisplayName>
+		<DisplayNameShort>BGID</DisplayNameShort>
+		<Description>Is Dragon</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_IsElemental">
+		<DisplayName>Is Elemental</DisplayName>
+		<DisplayNameShort>BGIL</DisplayNameShort>
+		<Description>Is Elemental</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_IsEmpire">
+		<DisplayName>Is Empire</DisplayName>
+		<DisplayNameShort>BGIE</DisplayNameShort>
+		<Description>Is Empire.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_IsFemale">
+		<DisplayName>Is Female</DisplayName>
+		<DisplayNameShort>BGIFEM</DisplayNameShort>
+		<Description>Is Female</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_IsFlying">
+		<DisplayName>Is Flying</DisplayName>
+		<DisplayNameShort>BGIF</DisplayNameShort>
+		<Description>Is Flying.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_IsGod">
+		<DisplayName>Is God</DisplayName>
+		<DisplayNameShort>BGIG</DisplayNameShort>
+		<Description>Is God.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_IsHumanoid">
+		<DisplayName>Is Humanoid</DisplayName>
+		<DisplayNameShort>BGIH</DisplayNameShort>
+		<Description>Is Humanoid.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_IsImmortal">
+		<DisplayName>Is Immortal</DisplayName>
+		<DisplayNameShort>BGII</DisplayNameShort>
+		<Description>Is Immortal.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_IsKingdom">
+		<DisplayName>Is Kingdom</DisplayName>
+		<DisplayNameShort>BGIK</DisplayNameShort>
+		<Description>Is Kingdom.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_IsMale">
+		<DisplayName>Is Male</DisplayName>
+		<DisplayNameShort>BGIMAL</DisplayNameShort>
+		<Description>Is Male.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_IsMilitia">
+		<DisplayName>Is Militia</DisplayName>
+		<DisplayNameShort>BGIA</DisplayNameShort>
+		<Description>Is Militia.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_IsMonster">
+		<DisplayName>Is Monster</DisplayName>
+		<DisplayNameShort>BGIO</DisplayNameShort>
+		<Description>Is Monster.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_IsNotAlive">
+		<DisplayName>Is not alive</DisplayName>
+		<DisplayNameShort>BGINA</DisplayNameShort>
+		<Description>Is not alive.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_IsOversized">
+		<DisplayName>Is Oversized</DisplayName>
+		<DisplayNameShort>BGIZ</DisplayNameShort>
+		<Description>Is Oversized.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_IsSovereign">
+		<DisplayName>Sovereign</DisplayName>
+		<DisplayNameShort>BGIS</DisplayNameShort>
+		<Description>Is Sovereign.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_IsSummoned">
+		<DisplayName>Is Summoned</DisplayName>
+		<DisplayNameShort>BGISD</DisplayNameShort>
+		<Description>Is Summoned.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_IsTwisted">
+		<DisplayName>Is Twisted</DisplayName>
+		<DisplayNameShort>BGIT</DisplayNameShort>
+		<Description>Is Twisted.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_IsUndead">
+		<DisplayName>Is Undead</DisplayName>
+		<DisplayNameShort>BGIUDD</DisplayNameShort>
+		<Description>Is Undead.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_IsUsingMount">
+		<DisplayName>Is Using a Mount</DisplayName>
+		<DisplayNameShort>BGUM</DisplayNameShort>
+		<Description>Is Using a Mount.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_CannotBeCharmed">
+		<DisplayName>Adamant</DisplayName>
+		<DisplayNameShort>USCBC</DisplayNameShort>
+		<Description>Cannot be bribed, charmed, or tamed.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="ExpandedTraits_FLAG_DefendingCity">
+		<DisplayName>Counts as Defending a City</DisplayName>
+		<DisplayNameShort>CETFDC</DisplayNameShort>
+		<Description>Expanded Traits.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<Hidden>1</Hidden>
+		<UnitStatGrouping>AbilityStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="ExpandedTraits_FLAG_DefendingACityWithAirShard">
+		<DisplayName>City has Air shard</DisplayName>
+		<DisplayNameShort>CETFAS</DisplayNameShort>
+		<Description>Expanded Traits.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<Hidden>1</Hidden>
+		<UnitStatGrouping>AbilityStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="ExpandedTraits_FLAG_DefendingACityWithAnyShard">
+		<DisplayName>City has Any shard</DisplayName>
+		<DisplayNameShort>CETFYS</DisplayNameShort>
+		<Description>Expanded Traits.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<Hidden>1</Hidden>
+		<UnitStatGrouping>AbilityStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="ExpandedTraits_FLAG_DefendingACityWithDeathShard">
+		<DisplayName>City has Death shard</DisplayName>
+		<DisplayNameShort>CETFDS</DisplayNameShort>
+		<Description>Expanded Traits.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<Hidden>1</Hidden>
+		<UnitStatGrouping>AbilityStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="ExpandedTraits_FLAG_DefendingACityWithEarthShard">
+		<DisplayName>City has Earth shard</DisplayName>
+		<DisplayNameShort>CETFES</DisplayNameShort>
+		<Description>Expanded Traits.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<Hidden>1</Hidden>
+		<UnitStatGrouping>AbilityStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="ExpandedTraits_FLAG_DefendingACityWithFireShard">
+		<DisplayName>City has Fire shard</DisplayName>
+		<DisplayNameShort>CETFFS</DisplayNameShort>
+		<Description>Expanded Traits.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<Hidden>1</Hidden>
+		<UnitStatGrouping>AbilityStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="ExpandedTraits_FLAG_DefendingACityWithLifeShard">
+		<DisplayName>City has Life shard</DisplayName>
+		<DisplayNameShort>CETFLS</DisplayNameShort>
+		<Description>Expanded Traits.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<Hidden>1</Hidden>
+		<UnitStatGrouping>AbilityStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="ExpandedTraits_FLAG_DefendingCityWithLumberMill">
+		<DisplayName>City has Lumber Mill</DisplayName>
+		<DisplayNameShort>CETFLM</DisplayNameShort>
+		<Description>Expanded Traits.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<Hidden>1</Hidden>
+		<UnitStatGrouping>AbilityStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="ExpandedTraits_FLAG_DefendingACityWithWaterShard">
+		<DisplayName>City has Water shard</DisplayName>
+		<DisplayNameShort>CETFWS</DisplayNameShort>
+		<Description>Expanded Traits.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<Hidden>1</Hidden>
+		<UnitStatGrouping>AbilityStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_ImmuneToFear">
+		<DisplayName>Immune to Fear</DisplayName>
+		<DisplayNameShort>USIF</DisplayNameShort>
+		<Description>Immune to Fear.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_IsRace_Altarians">
+		<DisplayName>Is Race Altarians</DisplayName>
+		<DisplayNameShort>BGIRA</DisplayNameShort>
+		<Description>Is Race Altarians</Description>
+		<Icon>RoundCrest_Altar.png</Icon>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_IsRace_Amarians">
+		<DisplayName>Is Race Amarians</DisplayName>
+		<DisplayNameShort>BGIRS</DisplayNameShort>
+		<Description>Is Race Amarians</Description>
+		<Icon>RoundCrest_Pariden.png</Icon>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_IsRace_DLCUndead">
+		<DisplayName>Is Race The Dead</DisplayName>
+		<DisplayNameShort>BGIRTD</DisplayNameShort>
+		<Description>Is Race The Dead</Description>
+		<Icon>Crest_X_DLC04_R.png</Icon>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_IsRace_Ironeers">
+		<DisplayName>Is Race Ironeers</DisplayName>
+		<DisplayNameShort>BGIRI</DisplayNameShort>
+		<Description>Is Race Ironeers</Description>
+		<Icon>RoundCrest_Gilden.png</Icon>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_IsRace_Mancers">
+		<DisplayName>Is Race Mancers</DisplayName>
+		<DisplayNameShort>BGIRM</DisplayNameShort>
+		<Description>Is Race Mancers</Description>
+		<Icon>RoundCrest_Capitar.png</Icon>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_IsRace_Tarthans">
+		<DisplayName>Is Race Tarthans</DisplayName>
+		<DisplayNameShort>BGIRT</DisplayNameShort>
+		<Description>Is Race Tarthans</Description>
+		<Icon>RoundCrest_Tarth.png</Icon>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_IsRace_Krax">
+		<DisplayName>Is Race Krax</DisplayName>
+		<DisplayNameShort>BGIRK</DisplayNameShort>
+		<Description>Is Race Krax</Description>
+		<Icon>RoundCrest_Kraxis.png</Icon>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_IsRace_Quendar">
+		<DisplayName>Is Race Quendar</DisplayName>
+		<DisplayNameShort>BGIRQ</DisplayNameShort>
+		<Description>Is Race Quendar</Description>
+		<Icon>RoundCrest_Magnar.png</Icon>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_IsRace_Trogs">
+		<DisplayName>Is Race Trogs</DisplayName>
+		<DisplayNameShort>BGIRG</DisplayNameShort>
+		<Description>Is Race Trogs</Description>
+		<Icon>RoundCrest_Yithril.png</Icon>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_IsRace_Urxen">
+		<DisplayName>Is Race Urxen</DisplayName>
+		<DisplayNameShort>BGIRU</DisplayNameShort>
+		<Description>Is Race Urxen</Description>
+		<Icon>RoundCrest_Umber.png</Icon>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_IsRace_Wraiths">
+		<DisplayName>Is Race Wraiths</DisplayName>
+		<DisplayNameShort>BGIRW</DisplayNameShort>
+		<Description>Is Race Wraiths</Description>
+		<Icon>RoundCrest_Resoln.png</Icon>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_Spellbooks">
+		<DisplayName>Is Spellbook</DisplayName>
+		<DisplayNameShort>BGISK</DisplayNameShort>
+		<Description>Is Spellbook</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<!--X-->
+	<UnitStatType InternalName="UnitStat_Attack_Chaos">
+		<DisplayName>Chaos Attack</DisplayName>
+		<DisplayNameShort>XLAC</DisplayNameShort>
+		<Description>The chaos damage that this unit can deal.</Description>
+		<Icon>US_XL_A_FC.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+		<IsAttackStat>1</IsAttackStat>
+		<CorrespondingDefenseStat>UnitStat_Defense_Chaos</CorrespondingDefenseStat>
+		<CorrespondingResistStat>UnitStat_ResistChaos</CorrespondingResistStat>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_Attack_Disease">
+		<DisplayName>Disease Attack</DisplayName>
+		<DisplayNameShort>XDADE</DisplayNameShort>
+		<Description>The disease damage that this unit can deal.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+		<IsAttackStat>1</IsAttackStat>
+		<CorrespondingDefenseStat>UnitStat_Defense_Disease</CorrespondingDefenseStat>
+		<CorrespondingResistStat>UnitStat_ResistDisease</CorrespondingResistStat>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_Attack_Earth">
+		<DisplayName>Earth Attack</DisplayName>
+		<DisplayNameShort>XLAE</DisplayNameShort>
+		<Description>The earth damage that this unit can deal.</Description>
+		<Icon>US_XL_A_FE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+		<IsAttackStat>1</IsAttackStat>
+		<CorrespondingDefenseStat>UnitStat_Defense_Earth</CorrespondingDefenseStat>
+		<CorrespondingResistStat>UnitStat_ResistEarth</CorrespondingResistStat>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_Attack_Holy">
+		<DisplayName>Holy Attack</DisplayName>
+		<DisplayNameShort>XDAH</DisplayNameShort>
+		<Description>The Holy Damage that this Unit can deal.</Description>
+		<Icon>UnitStat_X_Holy.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+		<IsAttackStat>1</IsAttackStat>
+		<CorrespondingDefenseStat>UnitStat_Defense_Pierce</CorrespondingDefenseStat>
+		<CorrespondingResistStat>UnitStat_ResistHoly</CorrespondingResistStat>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_Attack_Life">
+		<DisplayName>Life Attack</DisplayName>
+		<DisplayNameShort>XLAL</DisplayNameShort>
+		<Description>The life damage that this unit can deal.</Description>
+		<Icon>US_XL_A_FL.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+		<IsAttackStat>1</IsAttackStat>
+		<CorrespondingDefenseStat>UnitStat_Defense_Life</CorrespondingDefenseStat>
+		<CorrespondingResistStat>UnitStat_ResistLife</CorrespondingResistStat>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_Attack_Order">
+		<DisplayName>Order Attack</DisplayName>
+		<DisplayNameShort>XLAO</DisplayNameShort>
+		<Description>The order damage that this unit can deal.</Description>
+		<Icon>US_XL_A_FO.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+		<IsAttackStat>1</IsAttackStat>
+		<CorrespondingDefenseStat>UnitStat_Defense_Order</CorrespondingDefenseStat>
+		<CorrespondingResistStat>UnitStat_ResistOrder</CorrespondingResistStat>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_Defense_Chaos">
+		<DisplayName>Chaos Defense</DisplayName>
+		<DisplayNameShort>XLDC</DisplayNameShort>
+		<Description>Ability to absorb chaos attacks.</Description>
+		<Icon>US_XL_D_FC.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+		<IsDefenseStat>1</IsDefenseStat>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_Defense_Disease">
+		<DisplayName>Disease Defense</DisplayName>
+		<DisplayNameShort>XDDD</DisplayNameShort>
+		<Description>Ability to absorb disease attacks.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+		<IsDefenseStat>1</IsDefenseStat>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_Defense_Earth">
+		<DisplayName>Earth Defense</DisplayName>
+		<DisplayNameShort>XLDE</DisplayNameShort>
+		<Description>Ability to absorb earth attacks.</Description>
+		<Icon>US_XL_D_FE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+		<IsDefenseStat>1</IsDefenseStat>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_Defense_Holy">
+		<DisplayName>Holy Defense</DisplayName>
+		<DisplayNameShort>XDDH</DisplayNameShort>
+		<Description>The Holy Damage that this Unit can absorb.</Description>
+		<Icon>UnitStat_X_Holy.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+		<IsDefenseStat>1</IsDefenseStat>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_Defense_Life">
+		<DisplayName>Life Defense</DisplayName>
+		<DisplayNameShort>XLDL</DisplayNameShort>
+		<Description>Ability to absorb life attacks.</Description>
+		<Icon>US_XL_D_FL.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+		<IsDefenseStat>1</IsDefenseStat>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_Defense_Order">
+		<DisplayName>Order Defense</DisplayName>
+		<DisplayNameShort>XLDO</DisplayNameShort>
+		<Description>Ability to absorb order attacks.</Description>
+		<Icon>US_XL_D_FO.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+		<IsDefenseStat>1</IsDefenseStat>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_PathOfTheBard">
+		<DisplayName>Bard</DisplayName>
+		<Description>This unit is a Bard.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_PathOfTheNinja">
+		<DisplayName>Ninja</DisplayName>
+		<Description>This unit is a Ninja.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_PathOfTheRanger">
+		<DisplayName>Ranger</DisplayName>
+		<Description>This unit is a Ranger.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_PathOfTheShaman">
+		<DisplayName>Shaman</DisplayName>
+		<Description>This unit is a Shaman.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_ResistChaos">
+		<DisplayName>R% Chaos</DisplayName>
+		<DisplayNameShort>XLRC</DisplayNameShort>
+		<Description>Reduces chaos damage by this percent.</Description>
+		<Icon>US_XL_D_FC.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden><!--0-->
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_ResistDisease">
+		<DisplayName>R% Disease</DisplayName>
+		<DisplayNameShort>XDRD</DisplayNameShort>
+		<Description>Reduces disease damage by this percent.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_ResistEarth">
+		<DisplayName>R% Earth</DisplayName>
+		<DisplayNameShort>XLRE</DisplayNameShort>
+		<Description>Reduces earth damage by this percent.</Description>
+		<Icon>US_XL_D_FE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>0</Hidden>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_ResistHoly">
+		<DisplayName>Holy Resist</DisplayName>
+		<DisplayNameShort>XDRH</DisplayNameShort>
+		<Description>Reduces Holy Damage by this percent.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>100.0</DefaultValue>
+		<Hidden>1</Hidden>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_ResistLife">
+		<DisplayName>R% Life</DisplayName>
+		<DisplayNameShort>XLRL</DisplayNameShort>
+		<Description>Reduces life damage by this percent.</Description>
+		<Icon>US_XL_D_FL.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden><!--0-->
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_ResistOrder">
+		<DisplayName>R% Order</DisplayName>
+		<DisplayNameShort>XLRO</DisplayNameShort>
+		<Description>Reduces order damage by this percent.</Description>
+		<Icon>US_XL_D_FO.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden><!--0-->
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_SpellDamage_Air">
+		<DisplayName>B% Air DMG</DisplayName>
+		<Description>Percentage bonus to the amount of air damage done by spells.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<Hidden>1</Hidden>
+		<DefaultValue>1.0</DefaultValue>
+		<DisplayPercentage>1</DisplayPercentage>
+ 		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_SpellDamage_Chaos">
+		<DisplayName>B% Chaos DMG</DisplayName>
+		<Description>Percentage bonus to the amount of chaos damage done by spells.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<Hidden>1</Hidden>
+		<DefaultValue>1.0</DefaultValue>
+		<DisplayPercentage>1</DisplayPercentage>
+ 		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_SpellDamage_Death">
+		<DisplayName>B% Death DMG</DisplayName>
+		<Description>Percentage bonus to the amount of death damage done by spells.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<Hidden>1</Hidden>
+		<DefaultValue>1.0</DefaultValue>
+		<DisplayPercentage>1</DisplayPercentage>
+ 		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_SpellDamage_Earth">
+		<DisplayName>B% Earth DMG</DisplayName>
+		<Description>Percentage bonus to the amount of earth damage done by spells.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<Hidden>1</Hidden>
+		<DefaultValue>1.0</DefaultValue>
+		<DisplayPercentage>1</DisplayPercentage>
+ 		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_SpellDamage_Life">
+		<DisplayName>B% Life DMG</DisplayName>
+		<Description>Percentage bonus to the amount of life damage done by spells.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<Hidden>1</Hidden>
+		<DefaultValue>1.0</DefaultValue>
+		<DisplayPercentage>1</DisplayPercentage>
+ 		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_SpellDamage_Order">
+		<DisplayName>B% Order DMG</DisplayName>
+		<Description>Percentage bonus to the amount of order damage done by spells.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<Hidden>1</Hidden>
+		<DefaultValue>1.0</DefaultValue>
+		<DisplayPercentage>1</DisplayPercentage>
+ 		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_SpellDamage_Water">
+		<DisplayName>B% Water DMG</DisplayName>
+		<Description>Percentage bonus to the amount of water damage done by spells.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<Hidden>1</Hidden>
+		<DefaultValue>1.0</DefaultValue>
+		<DisplayPercentage>1</DisplayPercentage>
+ 		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_SpellDamage_Battle">
+		<DisplayName>B% Battle DMG</DisplayName>
+		<Description>Percentage bonus to the amount of battle damage done by spells.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<Hidden>1</Hidden>
+		<DefaultValue>1.0</DefaultValue>
+		<DisplayPercentage>1</DisplayPercentage>
+ 		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_SpellDamage_Beast">
+		<DisplayName>B% Beast DMG</DisplayName>
+		<Description>Percentage bonus to the amount of beast damage done by spells.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<Hidden>1</Hidden>
+		<DefaultValue>1.0</DefaultValue>
+		<DisplayPercentage>1</DisplayPercentage>
+ 		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_SpellDamage_Nature">
+		<DisplayName>B% Nature DMG</DisplayName>
+		<Description>Percentage bonus to the amount of nature damage done by spells.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<Hidden>1</Hidden>
+		<DefaultValue>1.0</DefaultValue>
+		<DisplayPercentage>1</DisplayPercentage>
+ 		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_SpellDamage_Shadow">
+		<DisplayName>B% Shadow DMG</DisplayName>
+		<Description>Percentage bonus to the amount of shadow damage done by spells.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<Hidden>1</Hidden>
+		<DefaultValue>1.0</DefaultValue>
+		<DisplayPercentage>1</DisplayPercentage>
+ 		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Airwalk">
+		<DisplayName>Airwalk</DisplayName>
+		<DisplayNameShort>XDAW</DisplayNameShort>
+		<Description>Airwalk.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Amulet">
+		<DisplayName>unit capable of wearing more than 1 amulet.</DisplayName>
+		<DisplayNameShort>XDAT</DisplayNameShort>
+		<Description>Can only wear one amulet.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>1.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<!--<UnitStatType InternalName="UnitStat_X_AncientArt">
+		<DisplayName>.</DisplayName>
+		<DisplayNameShort>XDAAT</DisplayNameShort>
+		<Description>.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>-->
+	<UnitStatType InternalName="UnitStat_X_Apprentice_Air">
+		<DisplayName>Air Apprentice</DisplayName>
+		<DisplayNameShort>XDAAP</DisplayNameShort>
+		<Description>Is an Air Apprentice.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Apprentice_Death">
+		<DisplayName>Death Apprentice</DisplayName>
+		<DisplayNameShort>XDDAP</DisplayNameShort>
+		<Description>Is a Death Apprentice.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Apprentice_Earth">
+		<DisplayName>Earth Apprentice</DisplayName>
+		<DisplayNameShort>XDEAP</DisplayNameShort>
+		<Description>Is an Earth Apprentice.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Apprentice_Fire">
+		<DisplayName>Fire Apprentice</DisplayName>
+		<DisplayNameShort>XDFAP</DisplayNameShort>
+		<Description>Is an Fire Apprentice.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Apprentice_Life">
+		<DisplayName>Life Apprentice</DisplayName>
+		<DisplayNameShort>XDLAP</DisplayNameShort>
+		<Description>Is a Life Apprentice.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Apprentice_Water">
+		<DisplayName>Water Apprentice</DisplayName>
+		<DisplayNameShort>XDWAP</DisplayNameShort>
+		<Description>Is a Water Apprentice.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Apprentice_Battle">
+		<DisplayName>Battle Apprentice</DisplayName>
+		<DisplayNameShort>XDBTAP</DisplayNameShort>
+		<Description>Is a Battle Apprentice.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Apprentice_Beast">
+		<DisplayName>Beast Apprentice</DisplayName>
+		<DisplayNameShort>XDBEAP</DisplayNameShort>
+		<Description>Is a Beast Apprentice.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Apprentice_Nature">
+		<DisplayName>Nature Apprentice</DisplayName>
+		<DisplayNameShort>XDNAP</DisplayNameShort>
+		<Description>Is a Nature Apprentice.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Apprentice_Shadow">
+		<DisplayName>Shadow Apprentice</DisplayName>
+		<DisplayNameShort>XDSAP</DisplayNameShort>
+		<Description>Is a Shadow Apprentice.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Archmage_Air">
+		<DisplayName>Air Archmage</DisplayName>
+		<DisplayNameShort>XDAAM</DisplayNameShort>
+		<Description>Is an Air Archmage.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Archmage_Death">
+		<DisplayName>Death Archmage</DisplayName>
+		<DisplayNameShort>XDDAM</DisplayNameShort>
+		<Description>Is a Death Archmage.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Archmage_Earth">
+		<DisplayName>Earth Archmage</DisplayName>
+		<DisplayNameShort>XDEAM</DisplayNameShort>
+		<Description>Is an Earth Archmage.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Archmage_Fire">
+		<DisplayName>Fire Archmage</DisplayName>
+		<DisplayNameShort>XDFAM</DisplayNameShort>
+		<Description>Is an Fire Archmage.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Archmage_Life">
+		<DisplayName>Life Archmage</DisplayName>
+		<DisplayNameShort>XDLAM</DisplayNameShort>
+		<Description>Is a Life Archmage.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Archmage_Water">
+		<DisplayName>Water Archmage</DisplayName>
+		<DisplayNameShort>XDWAM</DisplayNameShort>
+		<Description>Is a Water Archmage.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Archmage_Battle">
+		<DisplayName>Battle Archmage</DisplayName>
+		<DisplayNameShort>XDBTAM</DisplayNameShort>
+		<Description>Is a Battle Archmage.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Archmage_Beast">
+		<DisplayName>Beast Archmage</DisplayName>
+		<DisplayNameShort>XDBEAM</DisplayNameShort>
+		<Description>Is a Beast Archmage.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Archmage_Nature">
+		<DisplayName>Nature Archmage</DisplayName>
+		<DisplayNameShort>XDNAM</DisplayNameShort>
+		<Description>Is a Nature Archmage.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Archmage_Shadow">
+		<DisplayName>Shadow Archmage</DisplayName>
+		<DisplayNameShort>XDSAM</DisplayNameShort>
+		<Description>Is a Shadow Archmage.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Ascension_A">
+		<DisplayName>Ascension</DisplayName>
+		<DisplayNameShort>XDAA</DisplayNameShort>
+		<Description>Ascension.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>2.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Ascension_C">
+		<DisplayName>Ascension</DisplayName>
+		<DisplayNameShort>XDAC</DisplayNameShort>
+		<Description>Ascension.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>2.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Ascension_D">
+		<DisplayName>Ascension</DisplayName>
+		<DisplayNameShort>XDAD</DisplayNameShort>
+		<Description>Ascension.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>2.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Ascension_E">
+		<DisplayName>Ascension</DisplayName>
+		<DisplayNameShort>XDAE</DisplayNameShort>
+		<Description>Ascension.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>2.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Ascension_F">
+		<DisplayName>Ascension</DisplayName>
+		<DisplayNameShort>XDAF</DisplayNameShort>
+		<Description>Ascension.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>2.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Ascension_L">
+		<DisplayName>Ascension</DisplayName>
+		<DisplayNameShort>XDAF</DisplayNameShort>
+		<Description>Ascension.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>2.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Augmentor">
+		<DisplayName>Augmentor</DisplayName>
+		<DisplayNameShort>XDAR</DisplayNameShort>
+		<Description>Augmentor.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Belt">
+		<DisplayName>unit capable of wearing more than 1 belt.</DisplayName>
+		<DisplayNameShort>XDBT</DisplayNameShort>
+		<Description>Can only wear one belt.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>1.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_BMB">
+		<DisplayName>Black Market Bazaar</DisplayName>
+		<DisplayNameShort>XDBMB</DisplayNameShort>
+		<Description>Black Market Bazaar.</Description>
+		<Icon>UnitStat_X_BMB.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Booner">
+		<DisplayName>Champion</DisplayName>
+		<DisplayNameShort>XDBO</DisplayNameShort>
+		<Description>Champion.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>1.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_BorrowGildar">
+		<DisplayName>Borrow Gildar</DisplayName>
+		<DisplayNameShort>XDBG</DisplayNameShort>
+		<Description>Can borrow Gildar.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>1.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_BoxOfMiniaturization">
+		<DisplayName>Ereog's Box</DisplayName>
+		<DisplayNameShort>XDEB</DisplayNameShort>
+		<Description>Ereog's Box.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_CanAscend">
+		<DisplayName>Ascender</DisplayName>
+		<DisplayNameShort>XDCA</DisplayNameShort>
+		<Description>Can Ascend.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>1.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_CanCorrupt_A">
+		<DisplayName>Can Corrupt #A</DisplayName>
+		<DisplayNameShort>XDCCA</DisplayNameShort>
+		<Description>Can Corrupt.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_CanCorrupt_D">
+		<DisplayName>Can Corrupt #D</DisplayName>
+		<DisplayNameShort>XDCCD</DisplayNameShort>
+		<Description>Can Corrupt.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_CanCorrupt_E">
+		<DisplayName>Can Corrupt #E</DisplayName>
+		<DisplayNameShort>XDCCE</DisplayNameShort>
+		<Description>Can Corrupt.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_CanCorrupt_F">
+		<DisplayName>Can Corrupt #F</DisplayName>
+		<DisplayNameShort>XDCCF</DisplayNameShort>
+		<Description>Can Corrupt.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_CanCorrupt_L">
+		<DisplayName>Can Corrupt #L</DisplayName>
+		<DisplayNameShort>XDCCL</DisplayNameShort>
+		<Description>Can Corrupt.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_CanCorrupt_W">
+		<DisplayName>Can Corrupt #W</DisplayName>
+		<DisplayNameShort>XDCCD</DisplayNameShort>
+		<Description>Can Corrupt.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_CanSurge">
+		<DisplayName>Surger</DisplayName>
+		<DisplayNameShort>XDCS</DisplayNameShort>
+		<Description>Can Surge.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>1.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_CB">
+		<DisplayName>Champion Bonanza</DisplayName>
+		<DisplayNameShort>XDCB</DisplayNameShort>
+		<Description>Champion Bonanza.</Description>
+		<Icon>UnitStat_X_CB.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_ChainArmor">
+		<DisplayName>Chain Armor</DisplayName>
+		<DisplayNameShort>XDCAR</DisplayNameShort>
+		<Description>Chain Armor.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_ChainArmor_Boots">
+		<DisplayName>Chain Armor</DisplayName>
+		<DisplayNameShort>XDCAB</DisplayNameShort>
+		<Description>Chain Armor.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_ChainArmor_Coif">
+		<DisplayName>Chain Armor</DisplayName>
+		<DisplayNameShort>XDCAH</DisplayNameShort>
+		<Description>Chain Armor.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_ChainArmor_Leggings">
+		<DisplayName>Chain Armor</DisplayName>
+		<DisplayNameShort>XDCAL</DisplayNameShort>
+		<Description>Chain Armor.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_ChainArmor_Shirt">
+		<DisplayName>Chain Armor</DisplayName>
+		<DisplayNameShort>XDCAS</DisplayNameShort>
+		<Description>Chain Armor.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_ChainArmor_Sleeves">
+		<DisplayName>Chain Armor</DisplayName>
+		<DisplayNameShort>XDCAV</DisplayNameShort>
+		<Description>Chain Armor.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_CircusEternity">
+		<DisplayName>Circus Eternity</DisplayName>
+		<DisplayNameShort>XDCY</DisplayNameShort>
+		<Description>Circus Eternity.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Clock">
+		<DisplayName>Clock</DisplayName>
+		<DisplayNameShort>XDCOK</DisplayNameShort>
+		<Description>Clock (+1 per year).</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>1.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_CoS">
+		<DisplayName>Children of Storm</DisplayName>
+		<DisplayNameShort>XDCOS</DisplayNameShort>
+		<Description>Children of Storm.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Crafting_Alchemist">
+		<DisplayName>Can Mix</DisplayName>
+		<DisplayNameShort>XDCX</DisplayNameShort>
+		<Description>Can Mix.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Crafting_Armor_Chain">
+		<DisplayName>Can Forge Chain Armor</DisplayName>
+		<DisplayNameShort>XDCAC</DisplayNameShort>
+		<Description>Can Forge Chain Armor.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Crafting_Armor_Plate">
+		<DisplayName>Can Forge Plate Armor</DisplayName>
+		<DisplayNameShort>XDCAP</DisplayNameShort>
+		<Description>Can Forge Plate Armor.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Crafting_Armor_Plate_B">
+		<DisplayName>Can Forge Plate Sabatons</DisplayName>
+		<DisplayNameShort>XDCAPB</DisplayNameShort>
+		<Description>Can Forge Plate Sabatons.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Crafting_Armor_Plate_C">
+		<DisplayName>Can Forge Plate Cuirass</DisplayName>
+		<DisplayNameShort>XDCAPC</DisplayNameShort>
+		<Description>Can Forge Plate Cuirass.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Crafting_Armor_Plate_G">
+		<DisplayName>Can Forge Plate Greaves</DisplayName>
+		<DisplayNameShort>XDCAPG</DisplayNameShort>
+		<Description>Can Forge Plate Greaves.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Crafting_Armor_Plate_H">
+		<DisplayName>Can Forge Plate Helm</DisplayName>
+		<DisplayNameShort>XDCAPH</DisplayNameShort>
+		<Description>Can Forge Plate Helm.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Crafting_Armor_Plate_V">
+		<DisplayName>Can Forge Plate Vambraces</DisplayName>
+		<DisplayNameShort>XDCAPV</DisplayNameShort>
+		<Description>Can Forge Plate Vambraces.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Crafting_Collar">
+		<DisplayName>Can make a Collar</DisplayName>
+		<DisplayNameShort>XDCR</DisplayNameShort>
+		<Description>Can make a Collar.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Crafting_Collar_Beast">
+		<DisplayName>Studded Collar</DisplayName>
+		<DisplayNameShort>XDCRB</DisplayNameShort>
+		<Description>Can make a Studded Collar.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Crafting_Collar_Construct">
+		<DisplayName>Iron Collar</DisplayName>
+		<DisplayNameShort>XDCRC</DisplayNameShort>
+		<Description>Can make an Iron Collar.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Crafting_Collar_Dragon">
+		<DisplayName>Scale Collar</DisplayName>
+		<DisplayNameShort>XDCRD</DisplayNameShort>
+		<Description>Can make a Scale Collar.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Crafting_Collar_Elemental">
+		<DisplayName>Primordial Collar</DisplayName>
+		<DisplayNameShort>XDCRE</DisplayNameShort>
+		<Description>Can make a Primordial Collar.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Crafting_Collar_Twisted">
+		<DisplayName>Amethyst Collar</DisplayName>
+		<DisplayNameShort>XDCRT</DisplayNameShort>
+		<Description>Can make an Amethyst Collar.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Crafting_Collar_Undead">
+		<DisplayName>Bone Collar</DisplayName>
+		<DisplayNameShort>XDCRU</DisplayNameShort>
+		<Description>Can make a Bone Collar.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Crafting_Cone">
+		<DisplayName>Can Enchant Cone</DisplayName>
+		<DisplayNameShort>XDCEO</DisplayNameShort>
+		<Description>Can Enchant Cone.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Crafting_Cube">
+		<DisplayName>Can Enchant Cube</DisplayName>
+		<DisplayNameShort>XDCEU</DisplayNameShort>
+		<Description>Can Enchant Cube.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Crafting_Enchanting">
+		<DisplayName>Can Enchant</DisplayName>
+		<DisplayNameShort>XDCE</DisplayNameShort>
+		<Description>Enchanting skill value, also known as Enchanting Power.</Description>
+		<Icon>US_X_Enchanting.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<!--<Hidden>0</Hidden>-->
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Crafting_Potions_1">
+		<DisplayName>Forged Flask</DisplayName>
+		<DisplayNameShort>XDCP1</DisplayNameShort>
+		<Description>Forged Flask.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Crafting_Pyramid">
+		<DisplayName>Can Enchant Pyramid</DisplayName>
+		<DisplayNameShort>XDCEY</DisplayNameShort>
+		<Description>Can Enchant Pyramid.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Crafting_Sphere">
+		<DisplayName>Can Enchant Sphere</DisplayName>
+		<DisplayNameShort>XDCEE</DisplayNameShort>
+		<Description>Can Enchant Sphere.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Crafting_Tinkering">
+		<DisplayName>Can Forge</DisplayName>
+		<DisplayNameShort>XDCT</DisplayNameShort>
+		<Description>Forging skill value, aslo known as Forging Power.</Description>
+		<Icon>US_X_Forging.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<!--<Hidden>0</Hidden>-->
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Crafting_Weapon_Dagger">
+		<DisplayName>Forged Dagger</DisplayName>
+		<DisplayNameShort>XDCWD</DisplayNameShort>
+		<Description>Forged Dagger.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Crafting_Weapon_ShortSword">
+		<DisplayName>Forged Short Sword</DisplayName>
+		<DisplayNameShort>XDCWSS</DisplayNameShort>
+		<Description>Forged Short Sword.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_CriersBellOfGloriousness">
+		<DisplayName>Crier's Bell of Gloriousness</DisplayName>
+		<DisplayNameShort>XDCBG</DisplayNameShort>
+		<Description>Is holding a Crier's Bell of Gloriousness.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Defense_Temp">
+		<DisplayName>Temporary Defense Value</DisplayName>
+		<DisplayNameShort>XDDT</DisplayNameShort>
+		<Description>Temporary Defense Value for Transfer.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Disciple_Air">
+		<DisplayName>Air Disciple</DisplayName>
+		<DisplayNameShort>XDADI</DisplayNameShort>
+		<Description>Is an Air Disciple.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Disciple_Death">
+		<DisplayName>Death Disciple</DisplayName>
+		<DisplayNameShort>XDDDI</DisplayNameShort>
+		<Description>Is a Death Disciple.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Disciple_Earth">
+		<DisplayName>Earth Disciple</DisplayName>
+		<DisplayNameShort>XDEDI</DisplayNameShort>
+		<Description>Is an Earth Disciple.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Disciple_Fire">
+		<DisplayName>Fire Disciple</DisplayName>
+		<DisplayNameShort>XDFDI</DisplayNameShort>
+		<Description>Is an Fire Disciple.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Disciple_Life">
+		<DisplayName>Life Disciple</DisplayName>
+		<DisplayNameShort>XDLDI</DisplayNameShort>
+		<Description>Is a Life Disciple.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Disciple_Water">
+		<DisplayName>Water Disciple</DisplayName>
+		<DisplayNameShort>XDWDI</DisplayNameShort>
+		<Description>Is a Water Disciple.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Disciple_Battle">
+		<DisplayName>Battle Disciple</DisplayName>
+		<DisplayNameShort>XDBTDI</DisplayNameShort>
+		<Description>Is a Battle Disciple.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Disciple_Beast">
+		<DisplayName>Beast Disciple</DisplayName>
+		<DisplayNameShort>XDBEDI</DisplayNameShort>
+		<Description>Is a Beast Disciple.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Disciple_Nature">
+		<DisplayName>Nature Disciple</DisplayName>
+		<DisplayNameShort>XDNDI</DisplayNameShort>
+		<Description>Is a Nature Disciple.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Disciple_Shadow">
+		<DisplayName>Shadow Disciple</DisplayName>
+		<DisplayNameShort>XDSDI</DisplayNameShort>
+		<Description>Is a Shadow Disciple.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_DNE">
+		<DisplayName>Does Not Exist</DisplayName>
+		<DisplayNameShort>XDDNE</DisplayNameShort>
+		<Description>Does Not Exist.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Eeriness">
+		<DisplayName>Eeriness</DisplayName>
+		<DisplayNameShort>XDEE</DisplayNameShort>
+		<Description>Eeriness.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_ElementiumOre">
+		<DisplayName>Elementium Ore</DisplayName>
+		<DisplayNameShort>XDEO</DisplayNameShort>
+		<Description>Elementium Ore.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_ExpansionSatellite">
+		<DisplayName>Expansion Satellite</DisplayName>
+		<DisplayNameShort>XDES</DisplayNameShort>
+		<Description>Expansion Satellite.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>1.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_ForeverAlone">
+		<DisplayName>Forever Alone</DisplayName>
+		<DisplayNameShort>XDFA</DisplayNameShort>
+		<Description>Forever Alone.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_FreshHorse">
+		<DisplayName>Fresh Horse</DisplayName>
+		<DisplayNameShort>XDFH</DisplayNameShort>
+		<Description>Fresh Horse.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_FreshWarg">
+		<DisplayName>Fresh Warg</DisplayName>
+		<DisplayNameShort>XDFW</DisplayNameShort>
+		<Description>Fresh Warg.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_GHGH">
+		<DisplayName>Go Home</DisplayName>
+		<DisplayNameShort>XDGHGH</DisplayNameShort>
+		<Description>Go Hard or Go Home. All champions can teleport to the Capital. Once.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>1.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_GildenLionPants">
+		<DisplayName>Gilden Lion Pants</DisplayName>
+		<DisplayNameShort>XDGLP</DisplayNameShort>
+		<Description>Gilden Lion Pants.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Gladiator">
+		<DisplayName>Gladiator</DisplayName>
+		<DisplayNameShort>XDG</DisplayNameShort>
+		<Description>Used for Gladiator Duels.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Gladiator_Talent">
+		<DisplayName>Gladiator #Talent</DisplayName>
+		<DisplayNameShort>XDGT</DisplayNameShort>
+		<Description>Used for Gladiator Duels.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_GladiatorialChallenge">
+		<DisplayName>Gladiatorial Challenge</DisplayName>
+		<DisplayNameShort>XDGC</DisplayNameShort>
+		<Description>Used for Gladiatorial Challenges.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_GoldenBoar">
+		<DisplayName>Golden Boar</DisplayName>
+		<DisplayNameShort>XDGB</DisplayNameShort>
+		<Description>Can cast 'Prosperity'.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Handbook">
+		<DisplayName>Mage Handbook</DisplayName>
+		<DisplayNameShort>XDMH</DisplayNameShort>
+		<Description>Can cast Mage Handbook.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>2.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_HeavenFall">
+		<DisplayName>Heaven Fall</DisplayName>
+		<DisplayNameShort>XDHF</DisplayNameShort>
+		<Description>Can cast Heaven Fall.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>20.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Idol_ArgilEarth">
+		<DisplayName>Gaian Idol</DisplayName>
+		<DisplayNameShort>XDIAE</DisplayNameShort>
+		<Description>Gaian Idol.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Idol_MagmaFire">
+		<DisplayName>Pyromancer</DisplayName>
+		<DisplayNameShort>XDIMF</DisplayNameShort>
+		<Description>Pyromancer.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Idol_RainWater">
+		<DisplayName>Rainmaker</DisplayName>
+		<DisplayNameShort>XDIRW</DisplayNameShort>
+		<Description>Rainmaker.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Idol_WindAir">
+		<DisplayName>Wind Whisperer</DisplayName>
+		<DisplayNameShort>XDIAW</DisplayNameShort>
+		<Description>Wind Whisperer.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Immersive_2H">
+		<DisplayName>Unequip Mount</DisplayName>
+		<DisplayNameShort>XDIE2H</DisplayNameShort>
+		<Description>Immersive (2H Weapons).</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>3.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Immersive_M">
+		<DisplayName>Unequip 2H Weapon</DisplayName>
+		<DisplayNameShort>XDIEM</DisplayNameShort>
+		<Description>Immersive (Mounts).</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>3.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_ImmuneToEnthralment">
+		<DisplayName>Immune to Enthralment</DisplayName>
+		<DisplayNameShort>XDITE</DisplayNameShort>
+		<Description>Immune to Enthralment.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Indoctrination">
+		<DisplayName>Indoctrination</DisplayName>
+		<DisplayNameShort>XDIN</DisplayNameShort>
+		<Description>Can indoctrinate.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>1.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Injury">
+		<DisplayName>Injury</DisplayName>
+		<DisplayNameShort>XDI</DisplayNameShort>
+		<Description>Curable if acquired (+1 Injury).</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_IsAfoot">
+		<DisplayName>Is Afoot</DisplayName>
+		<DisplayNameShort>XDIAT</DisplayNameShort>
+		<Description>This Unit is afoot.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>1.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_IsAssassin">
+		<DisplayName>Is Assassin</DisplayName>
+		<DisplayNameShort>XDIASS</DisplayNameShort>
+		<Description>This Champion or Sovereign is an Assassin.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_IsAssassinDagger">
+		<DisplayName>Is Assassin Dagger</DisplayName>
+		<DisplayNameShort>XDIAD</DisplayNameShort>
+		<Description>Bonus to Initiative, Critical Chance, and Critical Damage if used by an Assassin.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_IsBalrog">
+		<DisplayName>Balrog</DisplayName>
+		<DisplayNameShort>XDIB</DisplayNameShort>
+		<Description>This Unit is a Balrog.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_IsBard">
+		<DisplayName>Is Bard</DisplayName>
+		<DisplayNameShort>XDIBAD</DisplayNameShort>
+		<Description>This Champion or Sovereign is a Bard.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_IsCommander">
+		<DisplayName>Is Commander</DisplayName>
+		<DisplayNameShort>XDICOM</DisplayNameShort>
+		<Description>This Champion or Sovereign is a Commander.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_IsCommanderHammer">
+		<DisplayName>Is Commander Hammer</DisplayName>
+		<DisplayNameShort>XDICH</DisplayNameShort>
+		<Description>Bonus to Initiative and Counterattack if used by a Commander.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_IsCultLeader">
+		<DisplayName>Is Cult Leader</DisplayName>
+		<DisplayNameShort>XDICL</DisplayNameShort>
+		<Description>Is Cult Leader? (1/0).</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_IsDefender">
+		<DisplayName>Is Defender</DisplayName>
+		<DisplayNameShort>XDIDEF</DisplayNameShort>
+		<Description>This Champion or Sovereign is a Defender.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_IsDefenderGreatHammer">
+		<DisplayName>Is Defender 2H Hammer</DisplayName>
+		<DisplayNameShort>XDIDGH</DisplayNameShort>
+		<Description>Bonus to Initiative and Crushing Blow if used by a Defender.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_IsDefenderShield">
+		<DisplayName>Is Defender Shield</DisplayName>
+		<DisplayNameShort>XDIDS</DisplayNameShort>
+		<Description>Bonus to Initiative and Defense if used by a Defender.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_IsFlying">
+		<DisplayName>Is Flying</DisplayName>
+		<DisplayNameShort>XDIY</DisplayNameShort>
+		<Description>Is Flying.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_IsFighter">
+		<DisplayName>Is Fighter</DisplayName>
+		<DisplayNameShort>XDIF</DisplayNameShort>
+		<Description>This Champion or Sovereign is either a Defender, a Paladin, or a Warrior.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_IsGovernor">
+		<DisplayName>Is Governor</DisplayName>
+		<DisplayNameShort>XDIG</DisplayNameShort>
+		<Description>This Champion or Sovereign is a Commander</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_IsGravelord">
+		<DisplayName>Is Gravelord</DisplayName>
+		<DisplayNameShort>XDIGRA</DisplayNameShort>
+		<Description>This Champion or Sovereign is a Gravelord.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_IsHenchman">
+		<DisplayName>Is Henchman</DisplayName>
+		<DisplayNameShort>XDIH</DisplayNameShort>
+		<Description>Is a Henchman.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_IsJuggernaut">
+		<DisplayName>Juggernaut</DisplayName>
+		<DisplayNameShort>XDIJ</DisplayNameShort>
+		<Description>This Unit is a Juggernaut.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_IsMage">
+		<DisplayName>Is Mage</DisplayName>
+		<DisplayNameShort>XDIMAG</DisplayNameShort>
+		<Description>This Champion or Sovereign is a Mage.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_IsMarksman">
+		<DisplayName>Is Marksman</DisplayName>
+		<DisplayNameShort>XDIA</DisplayNameShort>
+		<Description>This Champion or Sovereign is either an Assassin, a Ninja, or a Ranger.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_IsMarksmanBow">
+		<DisplayName>Is Marksman Bow</DisplayName>
+		<DisplayNameShort>XDIMB</DisplayNameShort>
+		<Description>Bonus to Initiative if used by a Marksman.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_IsNinja">
+		<DisplayName>Is Ninja</DisplayName>
+		<DisplayNameShort>XDININ</DisplayNameShort>
+		<Description>This Champion or Sovereign is a Ninja.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_IsNinjaSword">
+		<DisplayName>Is Ninja Sword</DisplayName>
+		<DisplayNameShort>XDINS</DisplayNameShort>
+		<Description>Bonus to Initiative and Damage if used by a Ninja.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_IsPaladin">
+		<DisplayName>Is Paladin</DisplayName>
+		<DisplayNameShort>XDIPAL</DisplayNameShort>
+		<Description>This Champion or Sovereign is a Paladin.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_IsPaladin2HSword">
+		<DisplayName>Is Paladin 2H Sword</DisplayName>
+		<DisplayNameShort>XDIP2</DisplayNameShort>
+		<Description>Bonus to Initiative and Splash if used by a Paladin.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_IsPlagued">
+		<DisplayName>Is Plagued #X</DisplayName>
+		<DisplayNameShort>XDIP</DisplayNameShort>
+		<Description>If the plague is available to be cured.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>1.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_IsRanger">
+		<DisplayName>Is Ranger</DisplayName>
+		<DisplayNameShort>XDIRAN</DisplayNameShort>
+		<Description>This Champion or Sovereign is a Ranger.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_IsShaman">
+		<DisplayName>Is Shaman</DisplayName>
+		<DisplayNameShort>XDISHM</DisplayNameShort>
+		<Description>This Champion or Sovereign is a Shaman.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_IsShamanSpear">
+		<DisplayName>Is Shaman</DisplayName>
+		<DisplayNameShort>XDISHM</DisplayNameShort>
+		<Description>Bonus if used by a Shaman.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_IsSkeleton">
+		<DisplayName>Is Skeleton</DisplayName>
+		<DisplayNameShort>XDISK</DisplayNameShort>
+		<Description>Is Skeleton.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_IsSorcerer">
+		<DisplayName>Is Sorcerer</DisplayName>
+		<DisplayNameShort>XDISOR</DisplayNameShort>
+		<Description>This Champion or Sovereign is a Sorcerer.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_IsStationed">
+		<DisplayName>Is Stationed</DisplayName>
+		<DisplayNameShort>XDISD</DisplayNameShort>
+		<Description>This Unit is Stationed.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_IsSummoner">
+		<DisplayName>Is Summoner</DisplayName>
+		<DisplayNameShort>XDISUM</DisplayNameShort>
+		<Description>This Champion or Sovereign is a Summoner.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_IsThief">
+		<DisplayName>Is Thief</DisplayName>
+		<DisplayNameShort>XDIT</DisplayNameShort>
+		<Description>This Champion or Sovereign is an Assassin.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_IsTriggerman">
+		<DisplayName>Is Triggerman</DisplayName>
+		<DisplayNameShort>XDITM</DisplayNameShort>
+		<Description>This Champion or Sovereign is a Triggerman.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_IsTriggermanXbow">
+		<DisplayName>Is Triggerman Crossbow</DisplayName>
+		<DisplayNameShort>XDITX</DisplayNameShort>
+		<Description>Bonus to Initiative if used by a Triggerman.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_IsWarrior">
+		<DisplayName>Is Warrior</DisplayName>
+		<DisplayNameShort>XDIWAR</DisplayNameShort>
+		<Description>This Champion or Sovereign is a Warrior.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_IsWarriorAxe">
+		<DisplayName>Is Warrior Axe</DisplayName>
+		<DisplayNameShort>XDIWA</DisplayNameShort>
+		<Description>Bonus to Initiative and Cleave Damage if used by a Warrior.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_IsWizard">
+		<DisplayName>Is Wizard</DisplayName>
+		<DisplayNameShort>XDIW</DisplayNameShort>
+		<Description>This Champion or Sovereign is either a Mage, a Gravelord, or a Summoner.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_IsWizardStaff">
+		<DisplayName>Is Wizard Staff</DisplayName>
+		<DisplayNameShort>XDIWS</DisplayNameShort>
+		<Description>Bonus to Initiative if used by a Wizard.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_IsXbow">
+		<DisplayName>Is Crossbow</DisplayName>
+		<DisplayNameShort>XDIX</DisplayNameShort>
+		<Description>Is this unit wielding a Crossbow?</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Landwalk">
+		<DisplayName>Landwalk</DisplayName>
+		<DisplayNameShort>XDLW</DisplayNameShort>
+		<Description>Landwalk.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_LendGildar">
+		<DisplayName>Lend Gildar</DisplayName>
+		<DisplayNameShort>XDLG</DisplayNameShort>
+		<Description>Lend Gildar.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>1.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Loner">
+		<DisplayName>Loner</DisplayName>
+		<DisplayNameShort>XDLR</DisplayNameShort>
+		<Description>Can cast 'Escape' if not alone.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Mage_Air">
+		<DisplayName>Air Mage</DisplayName>
+		<DisplayNameShort>XDAMA</DisplayNameShort>
+		<Description>Is an Air Mage.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Mage_Death">
+		<DisplayName>Death Mage</DisplayName>
+		<DisplayNameShort>XDDMA</DisplayNameShort>
+		<Description>Is a Death Mage.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Mage_Earth">
+		<DisplayName>Earth Mage</DisplayName>
+		<DisplayNameShort>XDEMA</DisplayNameShort>
+		<Description>Is an Earth Mage.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Mage_Fire">
+		<DisplayName>Fire Mage</DisplayName>
+		<DisplayNameShort>XDFMA</DisplayNameShort>
+		<Description>Is an Fire Mage.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Mage_Life">
+		<DisplayName>Life Mage</DisplayName>
+		<DisplayNameShort>XDLMA</DisplayNameShort>
+		<Description>Is a Life Mage.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Mage_Water">
+		<DisplayName>Water Mage</DisplayName>
+		<DisplayNameShort>XDWMA</DisplayNameShort>
+		<Description>Is a Water Mage.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Mage_Battle">
+		<DisplayName>Battle Mage</DisplayName>
+		<DisplayNameShort>XDBTMA</DisplayNameShort>
+		<Description>Is a Battle Mage.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Mage_Beast">
+		<DisplayName>Beast Mage</DisplayName>
+		<DisplayNameShort>XDBEMA</DisplayNameShort>
+		<Description>Is a Beast Mage.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Mage_Nature">
+		<DisplayName>Nature Mage</DisplayName>
+		<DisplayNameShort>XDNMA</DisplayNameShort>
+		<Description>Is a Nature Mage.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Mage_Shadow">
+		<DisplayName>Shadow Mage</DisplayName>
+		<DisplayNameShort>XDSMA</DisplayNameShort>
+		<Description>Is a Shadow Mage.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_MagicPower_Temp">
+		<DisplayName>Temporary Magic Power</DisplayName>
+		<DisplayNameShort>XDMPT</DisplayNameShort>
+		<Description>Temporary Magic Power for Transfer.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Master_Air">
+		<DisplayName>Air Master</DisplayName>
+		<DisplayNameShort>XDAMR</DisplayNameShort>
+		<Description>Is an Air Master.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Master_Death">
+		<DisplayName>Death Master</DisplayName>
+		<DisplayNameShort>XDDMR</DisplayNameShort>
+		<Description>Is a Death Master.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Master_Earth">
+		<DisplayName>Earth Master</DisplayName>
+		<DisplayNameShort>XDEMR</DisplayNameShort>
+		<Description>Is an Earth Master.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Master_Fire">
+		<DisplayName>Fire Master</DisplayName>
+		<DisplayNameShort>XDFMR</DisplayNameShort>
+		<Description>Is an Fire Master.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Master_Life">
+		<DisplayName>Life Master</DisplayName>
+		<DisplayNameShort>XDLMR</DisplayNameShort>
+		<Description>Is a Life Master.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Master_Water">
+		<DisplayName>Water Master</DisplayName>
+		<DisplayNameShort>XDWMR</DisplayNameShort>
+		<Description>Is a Water Master.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Master_Battle">
+		<DisplayName>Battle Master</DisplayName>
+		<DisplayNameShort>XDBTMR</DisplayNameShort>
+		<Description>Is a Battle Master.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Master_Beast">
+		<DisplayName>Beast Master</DisplayName>
+		<DisplayNameShort>XDBEMR</DisplayNameShort>
+		<Description>Is a Water Master.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Master_Nature">
+		<DisplayName>Nature Master</DisplayName>
+		<DisplayNameShort>XDNMR</DisplayNameShort>
+		<Description>Is a Nature Master.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Master_Shadow">
+		<DisplayName>Shadow Master</DisplayName>
+		<DisplayNameShort>XDSMR</DisplayNameShort>
+		<Description>Is a Shadow Master.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_MidasFlux_Charge">
+		<DisplayName>Midas Flux #Charge</DisplayName>
+		<DisplayNameShort>XDMFC</DisplayNameShort>
+		<Description>+5 Midas Flux per 3 spells cast.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_MidasFlux_Temporary">
+		<DisplayName>Midas Flux #Convert</DisplayName>
+		<DisplayNameShort>XDMFT</DisplayNameShort>
+		<Description>+5 Midas Flux per 3 spells cast.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Nomads">
+		<DisplayName>Nomads</DisplayName>
+		<DisplayNameShort>XDNO</DisplayNameShort>
+		<Description>Base for Nomads bonuses.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<Hidden>1</Hidden>
+		<DefaultValue>1.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_NR">
+		<DisplayName>Necromancy Revamped</DisplayName>
+		<DisplayNameShort>XDNR</DisplayNameShort>
+		<Description>Necromancy Revamped.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_NoMoreRoads">
+		<DisplayName>No More Roads</DisplayName>
+		<DisplayNameShort>XDNMR</DisplayNameShort>
+		<Description>Can cast 'Obliterate Roads'.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_NonMonsterModel">
+		<DisplayName>Chain/Plate capable Model</DisplayName>
+		<DisplayNameShort>XDMM</DisplayNameShort>
+		<Description>Non-Monster Model.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>1.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_NonOphidian">
+		<DisplayName>non-Ophidian</DisplayName>
+		<DisplayNameShort>XDNN</DisplayNameShort>
+		<Description>Non-Ophidian Unit.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>1.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_NonSovereign">
+		<DisplayName>Champion (Non Sovereign)</DisplayName>
+		<DisplayNameShort>XDNS</DisplayNameShort>
+		<Description>Non Sovereign.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>1.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_OnTheOriginOfSpecies">
+		<DisplayName>On the Origin of Species</DisplayName>
+		<DisplayNameShort>XDOS</DisplayNameShort>
+		<Description>Can cast 'Zoologist' in Tactical.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Outrider">
+		<DisplayName>Outrider</DisplayName>
+		<DisplayNameShort>XDOR</DisplayNameShort>
+		<Description>Can cast 'Escape' if alone.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_PathSelected">
+		<DisplayName>Path Selection</DisplayName>
+		<DisplayNameShort>XDPS</DisplayNameShort>
+		<Description>Path Selected?</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>13.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Planeswalking1">
+		<DisplayName>planeswalker already...</DisplayName>
+		<DisplayNameShort>XDPWA</DisplayNameShort>
+		<Description>Planewalker.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>1.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_PlateArmor">
+		<DisplayName>Plate Armor</DisplayName>
+		<DisplayNameShort>XDPAR</DisplayNameShort>
+		<Description>Plate Armor.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_PlateArmor_Cuirass">
+		<DisplayName>Plate Armor</DisplayName>
+		<DisplayNameShort>XDPAC</DisplayNameShort>
+		<Description>Plate Armor.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_PlateArmor_Greaves">
+		<DisplayName>Plate Armor</DisplayName>
+		<DisplayNameShort>XDPAG</DisplayNameShort>
+		<Description>Plate Armor.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_PlateArmor_Helm">
+		<DisplayName>Plate Armor</DisplayName>
+		<DisplayNameShort>XDPAH</DisplayNameShort>
+		<Description>Plate Armor.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_PlateArmor_Sabatons">
+		<DisplayName>Plate Armor</DisplayName>
+		<DisplayNameShort>XDPAS</DisplayNameShort>
+		<Description>Plate Armor.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_PlateArmor_Vambraces">
+		<DisplayName>Plate Armor</DisplayName>
+		<DisplayNameShort>XDPAV</DisplayNameShort>
+		<Description>Plate Armor.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Power_Air">
+		<DisplayName>Power #Air</DisplayName>
+		<DisplayNameShort>XDPA</DisplayNameShort>
+		<Description>Power #Air.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>1.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Power_Earth">
+		<DisplayName>Power #Earth</DisplayName>
+		<DisplayNameShort>XDPE</DisplayNameShort>
+		<Description>Power #Earth.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>1.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Power_Fire">
+		<DisplayName>Power #Fire</DisplayName>
+		<DisplayNameShort>XDPF</DisplayNameShort>
+		<Description>Power #Fire.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>1.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Power_Water">
+		<DisplayName>Power #Water</DisplayName>
+		<DisplayNameShort>XDPW.</DisplayNameShort>
+		<Description>Power #Water</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>1.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_PP">
+		<DisplayName>Path of the Paladin</DisplayName>
+		<DisplayNameShort>XDPOP</DisplayNameShort>
+		<Description>Path of the Paladin.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_PR">
+		<DisplayName>Path of the Ranger</DisplayName>
+		<DisplayNameShort>XDPOR</DisplayNameShort>
+		<Description>Path of the Ranger.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_PrimitiveRoads">
+		<DisplayName>Primitive Roads</DisplayName>
+		<DisplayNameShort>XDPR</DisplayNameShort>
+		<Description>Can cast 'Primitive Roads'.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_PS">
+		<DisplayName>Path of the Sorcerer</DisplayName>
+		<DisplayNameShort>XDPOS</DisplayNameShort>
+		<Description>Path of the Sorcerer.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_PurifyingFlame">
+		<DisplayName>Purifying Flame</DisplayName>
+		<DisplayNameShort>XDPF</DisplayNameShort>
+		<Description>Can cast 'Purifying Flame' on the 1st Action.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_RainOfArrows">
+		<DisplayName>Rain of Arrows</DisplayName>
+		<DisplayNameShort>XDROA</DisplayNameShort>
+		<Description>Rain of Arrows (Strategic).</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_RangedAccuracy">
+		<DisplayName>Ranged Accuracy</DisplayName>
+		<DisplayNameShort>XDRAY</DisplayNameShort>
+		<Description>Ranged Accuracy.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_RangedArmorPierce">
+		<DisplayName>Ranged Armor Pierce</DisplayName>
+		<DisplayNameShort>XDRAP</DisplayNameShort>
+		<Description>Ranged Armor Pierce.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_RangedCritChance">
+		<DisplayName>Ranged Critical Chance</DisplayName>
+		<DisplayNameShort>XDRCC</DisplayNameShort>
+		<Description>Ranged Critical Chance.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_RangedCritDmg">
+		<DisplayName>Ranged Critical Damage Multiplier</DisplayName>
+		<DisplayNameShort>XDRCM</DisplayNameShort>
+		<Description>Ranged Critical Damage Multiplier.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_RangedDodge">
+		<DisplayName>Ranged Dodge</DisplayName>
+		<DisplayNameShort>XDRDE</DisplayNameShort>
+		<Description>Ranged Dodge.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_RangedInitiative">
+		<DisplayName>Ranged Initiative</DisplayName>
+		<DisplayNameShort>XDRIE</DisplayNameShort>
+		<Description>Ranged Initiative.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_RangedPierceResistance">
+		<DisplayName>Ranged Pierce Resistance</DisplayName>
+		<DisplayNameShort>XDRPR</DisplayNameShort>
+		<Description>Ranged Pierce Resistance.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_RangedStaminaStarting">
+		<DisplayName>Ranged Starting Battle Wisdom</DisplayName>
+		<DisplayNameShort>XDRSS</DisplayNameShort>
+		<Description>Ranged Starting Battle Wisdom.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_RecallLoan">
+		<DisplayName>Recall Loan</DisplayName>
+		<DisplayNameShort>XDRN</DisplayNameShort>
+		<Description>Has recalled loan.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>1.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Reincarnation">
+		<DisplayName>Reincarnation</DisplayName>
+		<DisplayNameShort>XDR1</DisplayNameShort>
+		<Description>Can cast Reincarnation.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Reincarnation_Starting">
+		<DisplayName>Reincarnation</DisplayName>
+		<DisplayNameShort>XDR2</DisplayNameShort>
+		<Description>Reincarnation can be cast 3 times.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>3.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_RepayLoan">
+		<DisplayName>Repay Loan</DisplayName>
+		<DisplayNameShort>XDRL</DisplayNameShort>
+		<Description>Has repaid loan.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>1.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_RiderRace">
+		<DisplayName>unit capable of using Mounts</DisplayName>
+		<DisplayNameShort>XDRR</DisplayNameShort>
+		<Description>Rider Race/Faction.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>1.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Ring">
+		<DisplayName>unit capable of wearing more than 2 rings.</DisplayName>
+		<DisplayNameShort>XDRG</DisplayNameShort>
+		<Description>Can only wear two rings.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>2.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_SacredCity">
+		<DisplayName>Sacred City</DisplayName>
+		<DisplayNameShort>XDSC</DisplayNameShort>
+		<Description>Sacred City.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>1.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Seppuku">
+		<DisplayName>Seppuku</DisplayName>
+		<DisplayNameShort>XDSU</DisplayNameShort>
+		<Description>Can Seppuku.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_SeppukuBlocker">
+		<DisplayName>Seppuku Blocker</DisplayName>
+		<DisplayNameShort>XDSUB</DisplayNameShort>
+		<Description>Seppuku Blocker.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>1.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Songs_Bonus">
+		<DisplayName>Song Effects Bonus</DisplayName>
+		<DisplayNameShort>XDSS</DisplayNameShort>
+		<Description>Song Effects Bonus.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>1.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_SorcererKingEye">
+		<DisplayName>Sorcerer King Eye</DisplayName>
+		<DisplayNameShort>XDSKE</DisplayNameShort>
+		<Description>Sorcerer King Eye.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_SpellRank_45">
+		<DisplayName>Spell Rank</DisplayName>
+		<DisplayNameShort>XDSR45</DisplayNameShort>
+		<Description>Is a Master or an Archmage.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_SpellRank_Air">
+		<DisplayName>Air Spell Rank</DisplayName>
+		<DisplayNameShort>XDSRA</DisplayNameShort>
+		<Description>Air Spell Rank.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_SpellRank_Death">
+		<DisplayName>Death Spell Rank</DisplayName>
+		<DisplayNameShort>XDSRD</DisplayNameShort>
+		<Description>Death Spell Rank.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_SpellRank_Earth">
+		<DisplayName>Earth Spell Rank</DisplayName>
+		<DisplayNameShort>XDSRE</DisplayNameShort>
+		<Description>Earth Spell Rank.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_SpellRank_Fire">
+		<DisplayName>Fire Spell Rank</DisplayName>
+		<DisplayNameShort>XDSRF</DisplayNameShort>
+		<Description>Fire Spell Rank.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_SpellRank_Life">
+		<DisplayName>Life Spell Rank</DisplayName>
+		<DisplayNameShort>XDSRL</DisplayNameShort>
+		<Description>Life Spell Rank.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_SpellRank_Water">
+		<DisplayName>Water Spell Rank</DisplayName>
+		<DisplayNameShort>XDSRW</DisplayNameShort>
+		<Description>Water Spell Rank.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_SpellRank_Battle">
+		<DisplayName>Battle Spell Rank</DisplayName>
+		<DisplayNameShort>XDSRBT</DisplayNameShort>
+		<Description>Battle Spell Rank.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_SpellRank_Beast">
+		<DisplayName>Beast Spell Rank</DisplayName>
+		<DisplayNameShort>XDSRBE</DisplayNameShort>
+		<Description>Beast Spell Rank.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_SpellRank_Nature">
+		<DisplayName>Nature Spell Rank</DisplayName>
+		<DisplayNameShort>XDSRN</DisplayNameShort>
+		<Description>Nature Spell Rank.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_SpellRank_Shadow">
+		<DisplayName>Shadow Spell Rank</DisplayName>
+		<DisplayNameShort>XDSRS</DisplayNameShort>
+		<Description>Shadow Spell Rank.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Swinger">
+		<DisplayName>swinger already...</DisplayName>
+		<DisplayNameShort>XDSR</DisplayNameShort>
+		<Description>Trogs Swinger.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>1.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Temp_Cold">
+		<DisplayName>Temporary Value (Water\Cold)</DisplayName>
+		<DisplayNameShort>XDTC</DisplayNameShort>
+		<Description>Temporary Value (Water\Cold).</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Temp_Earth">
+		<DisplayName>Temporary Value (Earth)</DisplayName>
+		<DisplayNameShort>XDTE</DisplayNameShort>
+		<Description>Temporary Value (Earth).</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Temp_Fire">
+		<DisplayName>Temporary Value (Fire)</DisplayName>
+		<DisplayNameShort>XDTF</DisplayNameShort>
+		<Description>Temporary Value (Fire).</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Temp_Lightning">
+		<DisplayName>Temporary Value (Air\Lightning)</DisplayName>
+		<DisplayNameShort>XDTL</DisplayNameShort>
+		<Description>Temporary Value (Air\Lightning).</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_TinkerNot">
+		<DisplayName>champion.</DisplayName>
+		<DisplayNameShort>XDTN</DisplayNameShort>
+		<Description>Cannot be a tinker.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>1.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Totem">
+		<DisplayName>Totem</DisplayName>
+		<DisplayNameShort>XDTT</DisplayNameShort>
+		<Description>Can find a Totem Spirit.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Transmute">
+		<DisplayName>Transmute</DisplayName>
+		<DisplayNameShort>XDT</DisplayNameShort>
+		<Description>Can Transmute.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_TrollMelee">
+		<DisplayName>Troll Warrior</DisplayName>
+		<DisplayNameShort>XDTW</DisplayNameShort>
+		<Description>This Unit is a Troll Warrior or similar.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_UnitDesignTrait">
+		<DisplayName>Unit Design Trait</DisplayName>
+		<DisplayNameShort>XDUDT</DisplayNameShort>
+		<Description>Can add a Unit Design Trait.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>1.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Waterwalk">
+		<DisplayName>Waterwalk</DisplayName>
+		<DisplayNameShort>XDWW</DisplayNameShort>
+		<Description>Waterwalk.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_WaterwalkTrue">
+		<DisplayName>Waterwalk #True</DisplayName>
+		<DisplayNameShort>XDWWT</DisplayNameShort>
+		<Description>Waterwalk (True).</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_WebbedArrow">
+		<DisplayName>Webbed Arrow</DisplayName>
+		<DisplayNameShort>XDWA</DisplayNameShort>
+		<Description>Can cast Webbed Arrow (Strategic).</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_Power_XL_C">
+		<DisplayName>Chaos Power</DisplayName>
+		<DisplayNameShort>XLPC</DisplayNameShort>
+		<Description>Chaos Power.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>1.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_Power_XL_O">
+		<DisplayName>Order Power</DisplayName>
+		<DisplayNameShort>XLPO</DisplayNameShort>
+		<Description>Order Power.</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>1.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_XL_USSA">
+		<DisplayName>Shard #Air</DisplayName>
+		<DisplayNameShort>XLUSSA</DisplayNameShort>
+		<Description>Can cast Shard #Air</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_XL_USSD">
+		<DisplayName>Shard #Death</DisplayName>
+		<DisplayNameShort>XLUSSD</DisplayNameShort>
+		<Description>Can cast Shard #Death</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_XL_USSE">
+		<DisplayName>Shard #Earth</DisplayName>
+		<DisplayNameShort>XLUSSE</DisplayNameShort>
+		<Description>Can cast Shard #Earth</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_XL_USSF">
+		<DisplayName>Shard #Fire</DisplayName>
+		<DisplayNameShort>XLUSSF</DisplayNameShort>
+		<Description>Can cast Shard #Fire</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_XL_USSL">
+		<DisplayName>Shard #Life</DisplayName>
+		<DisplayNameShort>XLUSSL</DisplayNameShort>
+		<Description>Can cast Shard #Life</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_XL_USSW">
+		<DisplayName>Shard #Water</DisplayName>
+		<DisplayNameShort>XLUSSW</DisplayNameShort>
+		<Description>Can cast Shard #Water</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_XL_USSBA">
+		<DisplayName>Shard #Battle</DisplayName>
+		<DisplayNameShort>XLUSSBA</DisplayNameShort>
+		<Description>Can cast Shard #Battle</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_XL_USSBE">
+		<DisplayName>Shard #Beast</DisplayName>
+		<DisplayNameShort>XLUSSBE</DisplayNameShort>
+		<Description>Can cast Shard #Beast</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_XL_USSN">
+		<DisplayName>Shard #Nature</DisplayName>
+		<DisplayNameShort>XLUSSN</DisplayNameShort>
+		<Description>Can cast Shard #Nature</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_XL_USSS">
+		<DisplayName>Shard #Shadow</DisplayName>
+		<DisplayNameShort>XLUSSS</DisplayNameShort>
+		<Description>Can cast Shard #Shadow</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>1</Hidden>
+	</UnitStatType>
+	<!--XL-->
+	<UnitStatType InternalName="UnitStat_BG_IsRace_X_Darkling">
+		<DisplayName>Faction Darklings</DisplayName>
+		<DisplayNameShort>XLIRDG</DisplayNameShort>
+		<Description>Faction Identifier</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<Hidden>1</Hidden>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_IsRace_X_Denizens">
+		<DisplayName>Faction Denizens</DisplayName>
+		<DisplayNameShort>XLIRDZ</DisplayNameShort>
+		<Description>Faction Identifier</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<Hidden>1</Hidden>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_IsRace_X_Wilding">
+		<DisplayName>Faction Wildings</DisplayName>
+		<DisplayNameShort>XLIRWG</DisplayNameShort>
+		<Description>Faction Identifier</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<Hidden>1</Hidden>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_IsRace_XL_FA">
+		<DisplayName>Faction Air</DisplayName>
+		<DisplayNameShort>XLIRA</DisplayNameShort>
+		<Description>Faction Identifier</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<Hidden>1</Hidden>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_IsRace_XL_FC">
+		<DisplayName>Faction Chaos</DisplayName>
+		<DisplayNameShort>XLIRC</DisplayNameShort>
+		<Description>Faction Identifier</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<Hidden>1</Hidden>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_IsRace_XL_FD">
+		<DisplayName>Faction Death</DisplayName>
+		<DisplayNameShort>XLIRD</DisplayNameShort>
+		<Description>Faction Identifier</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<Hidden>1</Hidden>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_IsRace_XL_FE">
+		<DisplayName>Faction Earth</DisplayName>
+		<DisplayNameShort>XLIRE</DisplayNameShort>
+		<Description>Faction Identifier</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<Hidden>1</Hidden>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_IsRace_XL_FF">
+		<DisplayName>Faction Fire</DisplayName>
+		<DisplayNameShort>XLIRF</DisplayNameShort>
+		<Description>Faction Identifier</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<Hidden>1</Hidden>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_IsRace_XL_FL">
+		<DisplayName>Faction Life</DisplayName>
+		<DisplayNameShort>XLIRL</DisplayNameShort>
+		<Description>Faction Identifier</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<Hidden>1</Hidden>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_IsRace_XL_FO">
+		<DisplayName>Faction Order</DisplayName>
+		<DisplayNameShort>XLIRO</DisplayNameShort>
+		<Description>Faction Identifier</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<Hidden>1</Hidden>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BG_IsRace_XL_FW">
+		<DisplayName>Faction Water</DisplayName>
+		<DisplayNameShort>XLIRW</DisplayNameShort>
+		<Description>Faction Identifier</Description>
+		<Icon>UnitStat_X_DNE.png</Icon>
+		<Hidden>1</Hidden>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+	</UnitStatType>
+	<!--LAST-->
+	<UnitStatType InternalName="UnitStat_Charge">
+		<DisplayName>Charges</DisplayName>
+		<Description>Charges Earned for Special Abilities</Description>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_Attack_Ranged">
+		<DisplayName>B# Ranged ATK</DisplayName>
+		<DisplayNameShort>R.ATK</DisplayNameShort>
+		<Description>The additional ranged damage that this Ranger can deal.</Description>
+		<Icon>Stat_Radius_Icon.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>0</Hidden>
+		<IsPhysicalStat>0</IsPhysicalStat>
+		<IsAttackStat>0</IsAttackStat>
+		<CorrespondingDefenseStat>UnitStat_Defense_Pierce</CorrespondingDefenseStat>
+		<CorrespondingResistStat>UnitStat_ResistPierce</CorrespondingResistStat>
+ 		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+	</UnitStatType>
+</PlayerAbilityTypes>

@@ -1,0 +1,1466 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<AbilityBonuses>
+	<AbilityBonus InternalName="Ability_X_Movement_Army">
+		<AbilityBonusType>Unit_Design</AbilityBonusType>
+		<AbilityBonusOption InternalName="Ability_X_Movement_Army">
+			<DisplayName>Quick March</DisplayName>
+			<Description>MOVEMENT
+			::: +1 Tile per Army (+0.14 Movement)</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustArmyStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>0.14</Value>
+				<Provides>::: +1 Tile per Army (+0.14 Movement)</Provides>
+			</GameModifier>
+			<AdditionalTrainingTurns>4</AdditionalTrainingTurns>
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_X_Movement1_Altarian">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_X_Movement1_Altarian">
+			<DisplayName>Legionary</DisplayName>
+			<MinimumLevel>5</MinimumLevel>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_Altarian</Attribute>
+			</Prereq>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_A</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_X_Movement1_Amarian">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_X_Movement1_Amarian">
+			<DisplayName>Legionary</DisplayName>
+			<MinimumLevel>5</MinimumLevel>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_Amarian</Attribute>
+			</Prereq>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_P</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_X_Movement1_Darklings">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_X_Movement1_Darklings">
+			<DisplayName>Legionary</DisplayName>
+			<MinimumLevel>5</MinimumLevel>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_X_Darklings</Attribute>
+			</Prereq>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_Darklings</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_X_Movement1_Denizens">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_X_Movement1_Denizens">
+			<DisplayName>Legionary</DisplayName>
+			<MinimumLevel>5</MinimumLevel>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_X_Denizens</Attribute>
+			</Prereq>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_Denizens</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_X_Movement1_Ironeer">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_X_Movement1_Ironeer">
+			<DisplayName>Legionary</DisplayName>
+			<MinimumLevel>5</MinimumLevel>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_Ironeer</Attribute>
+			</Prereq>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_I</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_X_Movement1_Krax">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_X_Movement1_Krax">
+			<DisplayName>Legionary</DisplayName>
+			<MinimumLevel>5</MinimumLevel>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_Krax</Attribute>
+			</Prereq>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_K</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_X_Movement1_Mancer">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_X_Movement1_Mancer">
+			<DisplayName>Legionary</DisplayName>
+			<MinimumLevel>5</MinimumLevel>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_Mancer</Attribute>
+			</Prereq>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_M</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_X_Movement1_Quendar">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_X_Movement1_Quendar">
+			<DisplayName>Legionary</DisplayName>
+			<MinimumLevel>5</MinimumLevel>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_Quendar</Attribute>
+			</Prereq>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_Q</UpgradePathID>
+			<Type>X_Blood</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_X_Movement1_Tarth">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_X_Movement1_Tarth">
+			<DisplayName>Legionary</DisplayName>
+			<MinimumLevel>5</MinimumLevel>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_Tarth</Attribute>
+			</Prereq>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_T</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_X_Movement1_Trog">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_X_Movement1_Trog">
+			<DisplayName>Legionary</DisplayName>
+			<MinimumLevel>5</MinimumLevel>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_Trog</Attribute>
+			</Prereq>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_Y</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_X_Movement1_Undead">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_X_Movement1_Undead">
+			<DisplayName>Legionary</DisplayName>
+			<MinimumLevel>5</MinimumLevel>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_Undead</Attribute>
+			</Prereq>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_D</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_X_Movement1_Urxen">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_X_Movement1_Urxen">
+			<DisplayName>Legionary</DisplayName>
+			<MinimumLevel>5</MinimumLevel>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_Urxen</Attribute>
+			</Prereq>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_U</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_X_Movement1_Wildings">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_X_Movement1_Wildings">
+			<DisplayName>Legionary</DisplayName>
+			<MinimumLevel>5</MinimumLevel>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_X_Wildings</Attribute>
+			</Prereq>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_Wildings</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_X_Movement1_Wraith">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_X_Movement1_Wraith">
+			<DisplayName>Legionary</DisplayName>
+			<MinimumLevel>5</MinimumLevel>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_Wraith</Attribute>
+			</Prereq>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_W</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_X_Movement1_Zions">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_X_Movement1_Zions">
+			<DisplayName>Legionary</DisplayName>
+			<MinimumLevel>5</MinimumLevel>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Ability_X_Sions</Attribute>
+			</Prereq>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_Z</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_XL_Movement1_FA">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_XL_Movement1_FA">
+			<DisplayName>Legionary</DisplayName>
+			<MinimumLevel>5</MinimumLevel>
+			<Description>MOVEMENT
+			::: +1
+			
+			STATS
+			::: +1 Dodge per Level</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>STATS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Dodge</StrVal>
+				<Value>1</Value>
+				<PerLevel>1</PerLevel>
+				<Provides>::: +1 Dodge per Level</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_XL_FA</Attribute>
+			</Prereq>
+			<UpgradePathID>Blood_Move_FA</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Type>XL_Blood</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_XL_Movement1_FA_Champions">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_XL_Movement1_FA_Champions">
+			<DisplayName>Legionary</DisplayName>
+			<MinimumLevel>5</MinimumLevel>
+			<Description>MOVEMENT
+			::: +1
+			
+			STATS
+			::: +1 Dodge per Level</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>STATS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Dodge</StrVal>
+				<Value>1</Value>
+				<PerLevel>1</PerLevel>
+				<Provides>::: +1 Dodge per Level</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_XL_FA_Champions</Attribute>
+			</Prereq>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Type>XL_Blood</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_XL_Movement1_FE">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_XL_Movement1_FE">
+			<DisplayName>Legionary</DisplayName>
+			<MinimumLevel>5</MinimumLevel>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_XL_FE</Attribute>
+			</Prereq>
+			<UpgradePathID>Blood_Move_FE</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Type>XL_Blood</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_XL_Movement1_FE_Champions">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_XL_Movement1_FE_Champions">
+			<DisplayName>Legionary</DisplayName>
+			<MinimumLevel>5</MinimumLevel>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_XL_FE_Champions</Attribute>
+			</Prereq>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Type>XL_Blood</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_XL_Movement1_FF">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_XL_Movement1_FF">
+			<DisplayName>Legionary</DisplayName>
+			<MinimumLevel>5</MinimumLevel>
+			<Description>MOVEMENT
+			::: +1
+			
+			STATS
+			::: +1 Dodge per Level</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>STATS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Dodge</StrVal>
+				<Value>1</Value>
+				<PerLevel>1</PerLevel>
+				<Provides>::: +1 Dodge per Level</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_XL_FF</Attribute>
+			</Prereq>
+			<UpgradePathID>Blood_Move_FF</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Type>XL_Blood</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_XL_Movement1_FF_Champions">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_XL_Movement1_FF_Champions">
+			<DisplayName>Legionary</DisplayName>
+			<MinimumLevel>5</MinimumLevel>
+			<Description>MOVEMENT
+			::: +1
+			
+			STATS
+			::: +1 Dodge per Level</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>STATS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Dodge</StrVal>
+				<Value>1</Value>
+				<PerLevel>1</PerLevel>
+				<Provides>::: +1 Dodge per Level</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_XL_FF_Champions</Attribute>
+			</Prereq>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Type>XL_Blood</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_X_Movement2_Altarian">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_X_Movement2_Altarian">
+			<DisplayName>Quick March</DisplayName>
+			<Description>MOVEMENT
+			::: +1 Tile per Army (+0.14 Movement)</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustArmyStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>0.14</Value>
+				<Provides>::: +1 Tile per Army (+0.14 Movement)</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_X_Movement1_Altarian</Attribute>
+			</Prereq>
+			<MinimumLevel>10</MinimumLevel>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_A</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>30</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_X_Movement2_Amarian">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_X_Movement2_Amarian">
+			<DisplayName>Quick March</DisplayName>
+			<Description>MOVEMENT
+			::: +1 Tile per Army (+0.14 Movement)</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustArmyStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>0.14</Value>
+				<Provides>::: +1 Tile per Army (+0.14 Movement)</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_X_Movement1_Amarian</Attribute>
+			</Prereq>
+			<MinimumLevel>10</MinimumLevel>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_P</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>30</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_X_Movement2_Darklings">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_X_Movement2_Darklings">
+			<DisplayName>Quick March</DisplayName>
+			<Description>MOVEMENT
+			::: +1 Tile per Army (+0.14 Movement)</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustArmyStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>0.14</Value>
+				<Provides>::: +1 Tile per Army (+0.14 Movement)</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_X_Movement1_Darklings</Attribute>
+			</Prereq>
+			<MinimumLevel>10</MinimumLevel>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_Darklings</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>30</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_X_Movement2_Denizens">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_X_Movement2_Denizens">
+			<DisplayName>Quick March</DisplayName>
+			<Description>MOVEMENT
+			::: +1 Tile per Army (+0.14 Movement)</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustArmyStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>0.14</Value>
+				<Provides>::: +1 Tile per Army (+0.14 Movement)</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_X_Movement1_Denizens</Attribute>
+			</Prereq>
+			<MinimumLevel>10</MinimumLevel>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_Denizens</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>30</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_X_Movement2_Ironeer">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_X_Movement2_Ironeer">
+			<DisplayName>Quick March</DisplayName>
+			<Description>MOVEMENT
+			::: +1 Tile per Army (+0.14 Movement)</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustArmyStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>0.14</Value>
+				<Provides>::: +1 Tile per Army (+0.14 Movement)</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_X_Movement1_Ironeer</Attribute>
+			</Prereq>
+			<MinimumLevel>10</MinimumLevel>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_I</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>30</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_X_Movement2_Krax">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_X_Movement2_Krax">
+			<DisplayName>Quick March</DisplayName>
+			<Description>MOVEMENT
+			::: +1 Tile per Army (+0.14 Movement)</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustArmyStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>0.14</Value>
+				<Provides>::: +1 Tile per Army (+0.14 Movement)</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_X_Movement1_Krax</Attribute>
+			</Prereq>
+			<MinimumLevel>10</MinimumLevel>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_K</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>30</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_X_Movement2_Mancer">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_X_Movement2_Mancer">
+			<DisplayName>Quick March</DisplayName>
+			<Description>MOVEMENT
+			::: +1 Tile per Army (+0.14 Movement)</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustArmyStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>0.14</Value>
+				<Provides>::: +1 Tile per Army (+0.14 Movement)</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_X_Movement1_Mancer</Attribute>
+			</Prereq>
+			<MinimumLevel>10</MinimumLevel>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_M</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>30</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_X_Movement2_Quendar">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_X_Movement2_Quendar">
+			<DisplayName>Quick March</DisplayName>
+			<Description>MOVEMENT
+			::: +1 Tile per Army (+0.14 Movement)</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustArmyStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>0.14</Value>
+				<Provides>::: +1 Tile per Army (+0.14 Movement)</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_X_Movement1_Quendar</Attribute>
+			</Prereq>
+			<MinimumLevel>10</MinimumLevel>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_Q</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>30</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_X_Movement2_Tarth">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_X_Movement2_Tarth">
+			<DisplayName>Quick March</DisplayName>
+			<Description>MOVEMENT
+			::: +1 Tile per Army (+0.14 Movement)</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustArmyStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>0.14</Value>
+				<Provides>::: +1 Tile per Army (+0.14 Movement)</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_X_Movement1_Tarth</Attribute>
+			</Prereq>
+			<MinimumLevel>10</MinimumLevel>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_T</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>30</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_X_Movement2_Trog">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_X_Movement2_Trog">
+			<DisplayName>Quick March</DisplayName>
+			<Description>MOVEMENT
+			::: +1 Tile per Army (+0.14 Movement)</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustArmyStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>0.14</Value>
+				<Provides>::: +1 Tile per Army (+0.14 Movement)</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_X_Movement1_Trog</Attribute>
+			</Prereq>
+			<MinimumLevel>10</MinimumLevel>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_Y</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>30</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_X_Movement2_Undead">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_X_Movement2_Undead">
+			<DisplayName>Quick March</DisplayName>
+			<Description>MOVEMENT
+			::: +1 Tile per Army (+0.14 Movement)</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustArmyStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>0.14</Value>
+				<Provides>::: +1 Tile per Army (+0.14 Movement)</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_X_Movement1_Undead</Attribute>
+			</Prereq>
+			<MinimumLevel>10</MinimumLevel>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_D</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>30</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_X_Movement2_Urxen">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_X_Movement2_Urxen">
+			<DisplayName>Quick March</DisplayName>
+			<Description>MOVEMENT
+			::: +1 Tile per Army (+0.14 Movement)</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustArmyStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>0.14</Value>
+				<Provides>::: +1 Tile per Army (+0.14 Movement)</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_X_Movement1_Urxen</Attribute>
+			</Prereq>
+			<MinimumLevel>10</MinimumLevel>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_U</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>30</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_X_Movement2_Wildings">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_X_Movement2_Wildings">
+			<DisplayName>Quick March</DisplayName>
+			<Description>MOVEMENT
+			::: +1 Tile per Army (+0.14 Movement)</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustArmyStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>0.14</Value>
+				<Provides>::: +1 Tile per Army (+0.14 Movement)</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_X_Movement1_Wildings</Attribute>
+			</Prereq>
+			<MinimumLevel>10</MinimumLevel>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_Wildings</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>30</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_X_Movement2_Wraith">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_X_Movement2_Wraith">
+			<DisplayName>Quick March</DisplayName>
+			<Description>MOVEMENT
+			::: +1 Tile per Army (+0.14 Movement)</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustArmyStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>0.14</Value>
+				<Provides>::: +1 Tile per Army (+0.14 Movement)</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_X_Movement1_Wraith</Attribute>
+			</Prereq>
+			<MinimumLevel>10</MinimumLevel>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_W</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>30</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_X_Movement2_Zions">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_X_Movement2_Zions">
+			<DisplayName>Quick March</DisplayName>
+			<Description>MOVEMENT
+			::: +1 Tile per Army (+0.14 Movement)</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustArmyStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>0.14</Value>
+				<Provides>::: +1 Tile per Army (+0.14 Movement)</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_X_Movement1_Zions</Attribute>
+			</Prereq>
+			<MinimumLevel>10</MinimumLevel>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_Z</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>30</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_XL_Movement2_FA">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_XL_Movement2_FA">
+			<DisplayName>Quick March</DisplayName>
+			<Description>MOVEMENT
+			::: +1 Tile per Army (+0.14 Movement)</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustArmyStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>0.14</Value>
+				<Provides>::: +1 Tile per Army (+0.14 Movement)</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_XL_Movement1_FA</Attribute>
+			</Prereq>
+			<MinimumLevel>10</MinimumLevel>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_FA</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>30</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_XL_Movement2_FA_Champions">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_XL_Movement2_FA_Champions">
+			<DisplayName>Quick March</DisplayName>
+			<Description>MOVEMENT
+			::: +1 Tile per Army (+0.14 Movement)</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustArmyStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>0.14</Value>
+				<Provides>::: +1 Tile per Army (+0.14 Movement)</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_XL_Movement1_FA_Champions</Attribute>
+			</Prereq>
+			<MinimumLevel>10</MinimumLevel>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_XL_FA_Champions</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>30</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_XL_Movement2_FE">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_XL_Movement2_FE">
+			<DisplayName>Quick March</DisplayName>
+			<Description>MOVEMENT
+			::: +1 Tile per Army (+0.14 Movement)</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustArmyStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>0.14</Value>
+				<Provides>::: +1 Tile per Army (+0.14 Movement)</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_XL_Movement1_FE</Attribute>
+			</Prereq>
+			<MinimumLevel>10</MinimumLevel>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_FE</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>30</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_XL_Movement2_FE_Champions">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_XL_Movement2_FE_Champions">
+			<DisplayName>Quick March</DisplayName>
+			<Description>MOVEMENT
+			::: +1 Tile per Army (+0.14 Movement)</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustArmyStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>0.14</Value>
+				<Provides>::: +1 Tile per Army (+0.14 Movement)</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_XL_Movement1_FE_Champions</Attribute>
+			</Prereq>
+			<MinimumLevel>10</MinimumLevel>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_XL_FE_Champions</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>30</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_XL_Movement2_FF">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_XL_Movement2_FF">
+			<DisplayName>Quick March</DisplayName>
+			<Description>MOVEMENT
+			::: +1 Tile per Army (+0.14 Movement)</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustArmyStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>0.14</Value>
+				<Provides>::: +1 Tile per Army (+0.14 Movement)</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_XL_Movement1_FF</Attribute>
+			</Prereq>
+			<MinimumLevel>10</MinimumLevel>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_FF</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>30</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_XL_Movement2_FF_Champions">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_XL_Movement2_FF_Champions">
+			<DisplayName>Quick March</DisplayName>
+			<Description>MOVEMENT
+			::: +1 Tile per Army (+0.14 Movement)</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustArmyStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>0.14</Value>
+				<Provides>::: +1 Tile per Army (+0.14 Movement)</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_XL_Movement1_FF_Champions</Attribute>
+			</Prereq>
+			<MinimumLevel>10</MinimumLevel>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_XL_FF_Champions</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>30</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+</AbilityBonuses>

@@ -1,0 +1,142 @@
+<QuestDef InternalName="Quest_Angrylargeman">
+        <DisplayName>Angry Large Man</DisplayName>
+        <Description>You enter the inn to the loud yelling of an obviously drunk man.
+		
+		"You idiot!  I have no idea why I fed you all these years.  Now we have nothing! Nothing!"
+		
+		The recipient of his vitrol is a large, young man with his head down and a scowl on his face.  His posture indicates his acceptance of guilt, but his eyes have a glint of fiery anger in them.  His father continues his tirade;
+		
+		"Now what do you suggest we do you clumsy oaf?  We have no home and no prospects and the only person I have to help me is my idiot son."
+		
+		You approach the pair and for the sake of your ear drums you ask the father to lower his voice.
+		
+		"Lower my voice?! If you want to shut me up,  how about getting my home back from the bandits currently occupying it."
+		</Description>
+        <IsStartingPointQuest>1</IsStartingPointQuest>
+        <ShortTextAccept>I will do it.</ShortTextAccept>
+        <ShortTextDeny>I don't help drunks.</ShortTextDeny>
+		<SuccessText>Brashear has joined your party</SuccessText>
+        <RewardText>??</RewardText>
+        <RewardImage>Gold_Large1.png</RewardImage>
+        <SuccessText>You enter the inn and the sound of the father's yelling instantly assaults your ears.
+		
+		"You good for nothing moron.  Just the sight of you is enough to make me puke."  With that he winds up and slaps his son straight across the face.
+		
+		Before you have time to even blink, the young man grabs his father by the front of his tunic and slams him into the wall.  "ENOUGH!" he roars.  He follows up with another couple slams before his father crumples, dazed but conscious, on the floor.
+		
+		The fear in his eyes is palpable as you quickly maneuver in between the father and son to stop anymore violence.  This proves to be unneccesary as the sight of his father causes the expression on the son's face to dull from anger to self reproach.  You use this momentary pause in the violence and screaming to inform them that the Bandits have vacated their house.
+		
+		The father looks up to you and meakly exclaims "Truly?"  He brushes himself off and pulls himself up back to his feet.  "I can go back home?"
+		
+		You nod to him and the father follows up with "Oh thank you! Finally someone who is helpful around here.  I will be on my way then, and by "I", that means only me."  At this he turns to his son, "You are no longer my son and I don't ever want to see your ugly mug again."
+		
+		With that final final barb he turns his back and walks out.  You see the young man with his face in his hands.  As you turn to him his head raises and you see his eyes misting with tears.
+		
+		"Now what do I do?" he asks with puppy dog eyes. "Again, I've ruined everything..."
+		
+		You see an opportunity here and ask the lad "Well. How would you like an opportunity to use that strength for some good?"
+		
+		Seeing this as an agreement to his self reproach his face quickly clouds with the anger that you saw before.  But in a flash it is gone and he asks "What did you have in mind?"
+		</SuccessText>
+        <QuestClass>Minor</QuestClass>
+        <Repeatable>0</Repeatable>
+        <TriggerType>QuestLocation</TriggerType>
+        <TriggerOrigin>EventLocation</TriggerOrigin>
+        <SpawnRating>1</SpawnRating>
+        <Image>Q_ImpoverishedLord.png</Image>
+        <PrefQuestLoc>QuestLoc_Inn2</PrefQuestLoc>
+		<Treasure>
+			<GameModifier InternalName="Reward2">
+				<ModType>Unit</ModType>
+				<Attribute>UnitJoinArmy</Attribute>
+				<Value>1</Value>
+				<StrVal>Champion_Brashear</StrVal>
+				<UnitClass>Champion</UnitClass>
+			</GameModifier>
+		</Treasure>
+        <QuestObjectiveDef>
+            <ObjectiveID>0</ObjectiveID>
+            <NextObjectiveID>1</NextObjectiveID>
+            <Description>Defeat the Bandits in the house</Description>
+            <Treasure>
+                <GameModifier>
+					<ModType>Map</ModType>
+					<Attribute>CreateGoodieHut</Attribute>
+					<StrVal>House</StrVal>
+					<UnitClass>GH_Quest_RuinedHouse</UnitClass>
+					<Radius>3</Radius>
+				</GameModifier>
+            </Treasure>
+            <QuestConditionDef>
+                <Objective>
+                    <Icon>Mana_32.png</Icon>
+                    <Text>Defeat the Bandits.</Text>
+                    <IsOptional>0</IsOptional>
+                </Objective>
+                <Class>Success</Class>
+                <Type>ClearGoodieHut</Type>
+                <TextData>GH_Quest_RuinedHouse</TextData>
+                <Flag>RevealTarget</Flag>
+            </QuestConditionDef>
+			<ChoiceText>You walk towards the house and plant yourself outside the front door.  "Ok scum, come on out and lets get this over with.  This house doesn't belong to you and I am here to take it back."</ChoiceText>
+			<ChoiceMedallion>B_Highwayman_Card_01.png</ChoiceMedallion>
+            <ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+        <Description>Attack!</Description>
+        <NextObjectiveID>1</NextObjectiveID>
+		<Encounter>
+                    <Liklihood>100</Liklihood>
+                    <BattleIdentifier>BanditHome</BattleIdentifier>
+                    <WillRespawn>0</WillRespawn>
+                    <WanderingRadius>0</WanderingRadius>
+                    <UnitInstance>
+                        <UnitType>BanditCaptain</UnitType>
+                        <Level>1</Level>
+                    </UnitInstance>
+                    <UnitInstance>
+                        <UnitType>BanditArcher</UnitType>
+                        <Level>1</Level>
+                    </UnitInstance>
+					<UnitInstance>
+                        <UnitType>Bandit</UnitType>
+						<UnitGroupingType>UnitGroupingType_Party</UnitGroupingType>
+                        <Level>1</Level>
+                    </UnitInstance>
+                </Encounter>
+		</QuestChoiceDef>
+		<QuestChoiceDef>
+                <Description>I will leave, for now.</Description>
+                <NextObjectiveID>0</NextObjectiveID>
+		</QuestChoiceDef>
+        </QuestObjectiveDef>
+        <QuestObjectiveDef>
+            <ObjectiveID>1</ObjectiveID>
+            <NextObjectiveID>2</NextObjectiveID>
+            <PopupObjectiveMsg>0</PopupObjectiveMsg>
+            <QuestConditionDef>
+                <Objective>
+                    <Icon>Mana_32.png</Icon>
+                    <Text>Fight the Bandits</Text>
+                    <IsOptional>0</IsOptional>
+                </Objective>
+                <Class>Success</Class>
+                <Type>BattleFinished</Type>
+                <TextData>BanditHome</TextData>
+                <MoreTextData>Victory</MoreTextData>
+            </QuestConditionDef>
+        </QuestObjectiveDef>
+        <QuestObjectiveDef>
+            <ObjectiveID>2</ObjectiveID>
+            <QuestEnd>1</QuestEnd>
+            <Description>Return to the Inn</Description>
+            <QuestConditionDef>
+                <Objective>
+                    <Icon>Mana_32.png</Icon>
+                    <Text>Return to the Inn</Text>
+                    <IsOptional>0</IsOptional>
+                </Objective>
+                <Class>Success</Class>
+                <Type>UnitEntersQuestLocation</Type>
+            </QuestConditionDef>
+        </QuestObjectiveDef>
+    </QuestDef>

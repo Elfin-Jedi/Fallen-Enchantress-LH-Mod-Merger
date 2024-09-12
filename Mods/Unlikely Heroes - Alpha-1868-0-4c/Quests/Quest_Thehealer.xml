@@ -1,0 +1,82 @@
+<QuestDef InternalName="Quest_Thehealer">
+        <DisplayName>The Healer</DisplayName>
+        <Description>You enter the camp to the sight of a long line waiting in front of an open tent.  The people on the line are a rag tag bunch, many wrapped in bandages and makeshift slings.  You question an older lady on the rear of the line who has her arm around a young boy. The boy seems to have recently suffered an injury to his head.
+		
+		In response to your query she explains that people have come far and wide at the rumor of a great healer who has been working day and night, helping all who ask without requesting any payment in exchange.  The idea of this in such a violent world forces you to get closer to the tent to gain more information.
+		
+		As you approach the tent you see, not a great mystic healer, but a women who looks to be on her death bed.  But yet, as the next injured person approaches, she straightens her posture, and her eyes lose their glaze, quickly gaining an edge of focus.  She has the patient lie down and methodically waves her hands over the wound, slowly probing without ever touching.  When she is done she digs into her carrying bag and removes a small piece of crystal.  She places the crystal into a small indentation notched into her staff, takes a deep breath, and proceeds to quitely chant to herself.  After about half a minute, her chant quickly escalates both in volume and intensity, a flash of light pops from where the crystal was placed in the staff, and all energy seems to drain from the caster.  She plops down on her chair and you notice two things.  First the indentation of the staff is completely empty and second that the wound has been completely mended on the patient.  After the patient expresses their thanks and leaves, you approach the drained woman.
+		
+		"Wow, that was amazing.  How would you like to do that for my army?"
+		
+		She wearily looks up to you and replies "While I know how much help the world at large needs, there are people here that need my help immediately and I can not leave them."
+		
+		"But this line looks only to be growing larger, and you don't seem to have to have the strength to continue this much longer.  If you come with me we can help fight the cause of these injuries at its source.  Why continue to heal injuries when we can do great work to make sure there are less of them?"
+		
+		"While that may be true I will not leave this many people in need."
+		
+		With a deep sigh you ask "Well, is there anyway I can help with these people and get you to join me?"
+		
+		"Actually, there might be a way.  My power comes from the crystal of the land, however it is becoming increasingly hard to find some and I fear my stash is all be exhausted.  If you could give me 10 crystals I can use that power to heal everyone on this line without using my own life force.  When that duty is done I will promise to travel with you and put my powers at your command."</Description>
+        <IsStartingPointQuest>0</IsStartingPointQuest>
+        <ShortTextAccept>I am interested in your services.</ShortTextAccept>
+        <ShortTextDeny>Nevermind, you can do better work here.</ShortTextDeny>
+		<SuccessText>Rachel has joined your party</SuccessText>
+        <RewardText>Rachel</RewardText>
+        <RewardImage>Gold_Large1.png</RewardImage>
+        <QuestClass>Minor</QuestClass>
+        <Repeatable>0</Repeatable>
+        <TriggerType>QuestLocation</TriggerType>
+        <TriggerOrigin>EventLocation</TriggerOrigin>
+        <SpawnRating>1</SpawnRating>
+        <Image>Q_ArcticCloak.png</Image>
+        <PrefQuestLoc>QuestLoc_Camp</PrefQuestLoc>
+        <Treasure>
+			<GameModifier InternalName="Reward2">
+				<ModType>Unit</ModType>
+				<Attribute>UnitJoinArmy</Attribute>
+				<Value>1</Value>
+				<StrVal>Champion_Rachel</StrVal>
+				<UnitClass>Champion</UnitClass>
+			</GameModifier>
+        </Treasure>
+        <QuestObjectiveDef>
+            <ObjectiveID>0</ObjectiveID>
+            <AutoFulfillSuccessConditionsOnSetup>1</AutoFulfillSuccessConditionsOnSetup>
+            <QuestConditionDef>
+                <ID>0</ID>
+                <Objective>
+                    <Icon>Mana_32.png</Icon>
+                    <Text>Return to the camp and talk with Rachel</Text>
+                    <IsOptional>0</IsOptional>
+                </Objective>
+                <Class>Success</Class>
+                <Type>UnitEntersQuestLocation</Type>
+            </QuestConditionDef>
+            <QuestConditionDef>
+                <ID>0</ID>
+                <Objective>
+                    <Icon>Mana_32.png</Icon>
+                    <Text>Give 10 Crystals</Text>
+                    <IsOptional>0</IsOptional>
+                </Objective>
+                <Class>ChoiceUnlock</Class>
+                <Type>CheckForResource</Type>
+                <TextData>RefinedCrystal</TextData>
+                <NumericData>10</NumericData>
+            </QuestConditionDef>
+            <ChoiceText>She looks at you hopefully...</ChoiceText>
+            <ChoiceMedallion>Q_ArcticCloak.png</ChoiceMedallion>
+            <ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+            <QuestChoiceDef>
+                <Description>Here are the Crystals (-10 Crystals)</Description>
+                <RequiredConditionID>0</RequiredConditionID>
+                <NextObjectiveID>-1</NextObjectiveID>
+            </QuestChoiceDef>
+			<QuestChoiceDef>
+                <Description>Sorry, I don't have that many crystals right now.</Description>
+                <NextObjectiveID>0</NextObjectiveID>
+                <PopupMessage>"Please come back if you can find some."</PopupMessage>
+            </QuestChoiceDef>
+        </QuestObjectiveDef>
+        </QuestObjectiveDef>
+    </QuestDef>

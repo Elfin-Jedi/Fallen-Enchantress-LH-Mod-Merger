@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<UnitTypes>
+	<UnitType InternalName="LivingStone_Tichon">
+		<CreatureType>Champion</CreatureType>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-5</Value>
+			<Provides>-5% Unrest in the city this unit is in</Provides>
+		</GameModifier>
+
+		<DisplayName>Tichon</DisplayName>
+		<Backstory>Among the Living Stone, Tichon is one of the most restless and aggressive; he explains that he feels more of the fire than the stone in him.  Perhaps this is what has led him to leave his nascent community to seek adventure in the untamed lands, but whatever the reason, Tichon has certainly been one of the most visible of his kind due to his wide travels and adventures.</Backstory>
+
+		<ModelPath>M_Demon_Elemental_Mesh_01.hkb</ModelPath>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<EyeTexture>gfx\Eyes\blinks\eyeblink_m5_Black.png</EyeTexture>
+		<AnimationPack>EF_BruteAnimationPack</AnimationPack>
+
+		<ShowAsSingleUnit>false</ShowAsSingleUnit>
+		<CutSceneDataPack>MagnarCutscenePack</CutSceneDataPack>
+		<ModelScale>1.0000</ModelScale>
+		<TacticalModelScale>1.5000</TacticalModelScale>
+		<EquipmentScale>1.0000</EquipmentScale>
+		<ClothMapScale>1.6</ClothMapScale>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<MovementType>land</MovementType>
+		<BobbingFrequency>0.0000</BobbingFrequency>
+
+		<ClothPoseIndex>12</ClothPoseIndex>
+		<InfoCardBackground>BG41_Fireshrine</InfoCardBackground>
+		<InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+
+		<CanBeDesigned>0</CanBeDesigned>
+		<Allegiance>Kingdom</Allegiance>
+		<Unique>1</Unique>
+		<IsNPC>1</IsNPC>
+		<NPCSpawnLikelihood>100</NPCSpawnLikelihood>
+		<IsChampion>1</IsChampion>
+		<Gender>Male</Gender>
+		<SoundPack>SoundPack_Generic_Male</SoundPack>
+		<SpawnRating>7</SpawnRating>
+
+		<Quote>Once I traveled to the crater of a volcano to watch the lave boil.  It was magnificent!</Quote>
+		<NPCRecruitmentText>%d gildar will light my fire.</NPCRecruitmentText>
+		<SelectedAbilityBonusOption>Blood_LivingStone</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>PathOfTheWarrior</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Tichon_Innerfire</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>FireBornAbility</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>ArmorProficiency1_Warrior</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Impulsive</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Fire1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Fire2</SelectedAbilityBonusOption>
+		
+		<Medallions InternalName=""/>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_HitPoints>20</UnitStat_HitPoints>
+			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_LivingStone>1</UnitStat_BG_IsRace_LivingStone>
+			<UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
+			<UnitStat_BG_IsMale>1</UnitStat_BG_IsMale>
+			<UnitStat_BG_IsNotAlive>1</UnitStat_BG_IsNotAlive>
+		</LevelMilestone>
+
+		<Equipment>Muchant_Cloak_ID2</Equipment>
+		<AutoCreateEquipment>Axe_Ignys</AutoCreateEquipment>
+		<AutoCreateEquipment>ChainBreastpiece</AutoCreateEquipment>
+		<AutoCreateEquipment>ChainGreaves</AutoCreateEquipment>
+		<AutoCreateEquipment>ChainBoots</AutoCreateEquipment>
+		
+		<Color_Skin>107,15,15,255</Color_Skin>
+		<Color_Hair>0,0,0,255</Color_Hair>
+		<Color_Clothing1>255,255,0,255</Color_Clothing1>
+		<Color_Clothing2>51,102,153,255</Color_Clothing2>
+		<Color_Metal>138,61,13,255</Color_Metal>
+		<Texture_Skin>M_Demon_Elemental_Texture_02.png</Texture_Skin>
+
+		<UnitModelType>LivingStone</UnitModelType>
+		<NPCFreeRecruit>0</NPCFreeRecruit>
+		<RaceType>Race_Type_LivingStone</RaceType>
+		<WageOverride>1</WageOverride>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+	</UnitType>
+
+	<AbilityBonus InternalName="Tichon_Innerfire">
+		<AbilityBonusOption InternalName="Tichon_Innerfire">
+			<DisplayName>Incendiary Essence</DisplayName>
+			<Description>Tichon's inner fire provides him bonuses to fire damage and the controlling kingdom additional fire shard power.</Description>
+			<Icon>T_FeedTheFire_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>FireMana</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Fire Power</Provides>
+			</GameModifier>
+			<GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Fire</StrVal>
+                <Value>1</Value>
+                <PerLevel>1</PerLevel>
+                <Provides>+1 Fire Attack per Level</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_SpellDamage_Fire</StrVal>
+                <Value>0.1</Value>
+                <Provides>+10% Spell Damage with Fire spells</Provides>
+            </GameModifier>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<IsCombatAbility>1</IsCombatAbility>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+
+</UnitTypes>

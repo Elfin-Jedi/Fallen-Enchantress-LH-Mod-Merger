@@ -1,0 +1,228 @@
+<?xml version="1.0"?>
+<Container>
+  <AbilityBonus InternalName="Champion_History">
+    <AbilityBonusOption InternalName="AncientPotential">
+      <DisplayName>Endless</DisplayName>
+      <Description>Hover over trait to the right for description.</Description>
+      <Icon>Ability_Brilliant_Icon.png</Icon>
+      <Cost>1</Cost>
+      <GameModifier>
+        <Provides>Unlocks Endless spell: Casttime 4, 30 mana cost. The caster gains a random new apprentice magic school (fire/water/earth/air). If the caster already has the randomly selected magic school, there is no effect. Can be repeated until the caster has all 4 schools.</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Type>Aggressive</Type>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Dragontongue">
+    <AbilityBonusOption InternalName="Dragontongue">
+      <DisplayName>Dragonkind</DisplayName>
+      <Description>When the Lizardmen hid in caves beneath the earth, one of their kind brought back dragon eggs after meeting a dragon. The eggs have been stored since then...
+
+Faction may, after researching Dance with Dragons tech, build one Dragonkind temple that calls forth Fell Dragons without the need of a Dragon Cave world resource..</Description>
+      <Icon>DragonEgg5.png</Icon>
+      <GameModifier>
+        <Provides>When the Lizardmen hid in caves beneath the earth, one of their kind brought back dragon eggs after meeting a dragon. The eggs have been stored since then...
+
+Faction may, after researching Dance with Dragons tech, build one Dragonkind temple that calls forth Fell Dragons without the need of a Dragon Cave world resource.</Provides>
+      </GameModifier>
+      <Cost>1</Cost>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <ImprovementType InternalName="FellDragonForLizardmen">
+    <Prereq>
+      <Type>AbilityBonusOption</Type>
+      <Attribute>Dragontongue</Attribute>
+      <Target>Player</Target>
+    </Prereq>
+    <AllowedPerGame>1</AllowedPerGame>
+    <DisplayName>Dragonkind Temple</DisplayName>
+    <Description>The special eggs given by the Dragonkind trait allows Lizardmen to build this camp without a Dragon Cave world resource.</Description>
+    <SpecialBuildingType>FellDragonRecruiting</SpecialBuildingType>
+    <IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+    <RequiresCity>0</RequiresCity>
+    <SupportedResourceType>WildDragons</SupportedResourceType>
+    <PreferredTerrain>Category:Land</PreferredTerrain>
+    <Prereq>
+      <Type>Tech</Type>
+      <Attribute>Dance_with_Dragons</Attribute>
+    </Prereq>
+    <GameModifier>
+      <ModType>ConstructionResourceCost</ModType>
+      <Attribute>Gold</Attribute>
+      <Value>-250</Value>
+    </GameModifier>
+    <LaborToBuild>703</LaborToBuild>
+    <GameModifier>
+      <ModType>Player</ModType>
+      <Attribute>LimitedUnitCap</Attribute>
+      <StrVal>FellDragon</StrVal>
+      <Value>1</Value>
+      <Provides>Recruit 1 Fell Dragon</Provides>
+    </GameModifier>
+    <AIData AIPersonality="AI_General">
+      <AIPriority>5</AIPriority>
+      <AITag>CommandPost</AITag>
+    </AIData>
+    <ArtDef>Camp_FellDragon_ArtDef</ArtDef>
+    <ImprovementTypeArtDef InternalName="Camp_FellDragon_ArtDef">
+      <ImprovementTypeArtSubPack InternalName="Camp_FellDragon_Default">
+        <TileDesign>K_Dragons_01</TileDesign>
+        <ConstructionTileDesign>K_Dragons_Build_01</ConstructionTileDesign>
+        <DrawnIcon>Improvement_Dragon.png</DrawnIcon>
+        <DrawnIconConstruction>Improvement_Dragon_C.png</DrawnIconConstruction>
+        <Thumbnail>K_Dragons_01_Card.png</Thumbnail>
+        <Medallions InternalName="">
+          <All>K_Dragons_01_Card.png</All>
+        </Medallions>
+      </ImprovementTypeArtSubPack>
+    </ImprovementTypeArtDef>
+  </ImprovementType>
+  <AbilityBonus InternalName="TrainJuggernautsAbility_Liz">
+    <AbilityBonusOption InternalName="TrainJuggernauts_Liz">
+      <DisplayName>Train Juggernauts</DisplayName>
+      <Description>This faction can train Juggernauts with the Weaponsmithing technology.  Juggernauts are powerful attackers and inflict splash damage on surrounding allies and enemies.</Description>
+      <Icon>Ability_TrainJuggernaut_Icon.png</Icon>
+      <Type>Army</Type>
+      <GameModifier>
+        <Provides>This faction can train Juggernauts with the Weaponsmithing technology.  Juggernauts are powerful attackers and inflict splash damage on surrounding allies and enemies.</Provides>
+      </GameModifier>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="BloodcurseLizardmen">
+    <AbilityBonusOption InternalName="BloodcurseLizardmen">
+      <IMPINC>Strength</IMPINC>
+      <DisplayName>Blood Magic</DisplayName>
+      <Description>Faction starts with the Blood Sacrifice spell unlocked</Description>
+      <Icon>S_BloodCurse_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>UnlockSpell</Attribute>
+        <StrVal>Sacrifice_Lizardmen</StrVal>
+        <Provides>Faction starts with the Blood Sacrifice spell unlocked</Provides>
+      </GameModifier>
+      <Cost>1</Cost>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Lizardmeninferiority">
+    <AbilityBonusOption InternalName="Lizardmeninferiority">
+      <IMPINC>Weakness</IMPINC>
+      <DisplayName>Alien Architecture</DisplayName>
+      <Description>Faction may not build any of the World Wonders: 
+Ereog's Tower
+Great Mill
+Hosten's Library
+Iron Works
+Merchantcross Bazaar
+Treasury Vault
+
+In addition, any captured World Wonder will be razed to the ground as it is considered blasphemous to their religion. They see it as the epitome of hubris to build such wonders (like the Tower of Babel myth).
+</Description>
+      <Icon>Ability_CrushingBlow_Icon.png</Icon>
+      <GameModifier>
+        <Provides>Faction may not build any of the World Wonders: 
+Ereog's Tower
+Great Mill
+Hosten's Library
+Iron Works
+Merchantcross Bazaar
+Treasury Vault
+
+In addition, any captured World Wonder will be razed to the ground as it is considered blasphemous to their religion. They see it as the epitome of hubris to build such wonders (like the Tower of Babel myth).</Provides>
+      </GameModifier>
+      <Cost>-1</Cost>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <ImprovementType InternalName="EreogsTower">
+    <Prereq>
+      <Type>RestrictedAbilityBonusOption</Type>
+      <Attribute>Lizardmeninferiority</Attribute>
+      <Target>Player</Target>
+    </Prereq>
+  </ImprovementType>
+  <ImprovementType InternalName="GreatMill">
+    <Prereq>
+      <Type>RestrictedAbilityBonusOption</Type>
+      <Attribute>Lizardmeninferiority</Attribute>
+      <Target>Player</Target>
+    </Prereq>
+  </ImprovementType>
+  <ImprovementType InternalName="HostensLibrary">
+    <Prereq>
+      <Type>RestrictedAbilityBonusOption</Type>
+      <Attribute>Lizardmeninferiority</Attribute>
+      <Target>Player</Target>
+    </Prereq>
+  </ImprovementType>
+  <ImprovementType InternalName="IronWorks">
+    <Prereq>
+      <Type>RestrictedAbilityBonusOption</Type>
+      <Attribute>Lizardmeninferiority</Attribute>
+      <Target>Player</Target>
+    </Prereq>
+  </ImprovementType>
+  <ImprovementType InternalName="MerchantcrossBazaar">
+    <Prereq>
+      <Type>RestrictedAbilityBonusOption</Type>
+      <Attribute>Lizardmeninferiority</Attribute>
+      <Target>Player</Target>
+    </Prereq>
+  </ImprovementType>
+  <ImprovementType InternalName="TreasuryVault">
+    <Prereq>
+      <Type>RestrictedAbilityBonusOption</Type>
+      <Attribute>Lizardmeninferiority</Attribute>
+      <Target>Player</Target>
+    </Prereq>
+  </ImprovementType>
+  <AbilityBonus InternalName="JuggernautAbility_Liz">
+    <AbilityBonusOption InternalName="Juggernaut_Liz">
+      <DisplayName>Juggernaut Lizard</DisplayName>
+      <Description>Cannot be knocked Prone, +150% Attack and 25% Splash damage</Description>
+      <Icon>Ability_Juggernaut_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Attack_Pierce</StrVal>
+        <Multiplier>2.5</Multiplier>
+        <Provides>+150% Attack</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ChanceToAvoidProne</StrVal>
+        <Value>100</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_SplashDamage</StrVal>
+        <Value>0.25</Value>
+      </GameModifier>
+      <AdditionalTrainingTurns>60</AdditionalTrainingTurns>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <IsCombatAbility>1</IsCombatAbility>
+      <Type>Aggressive</Type>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+</Container>

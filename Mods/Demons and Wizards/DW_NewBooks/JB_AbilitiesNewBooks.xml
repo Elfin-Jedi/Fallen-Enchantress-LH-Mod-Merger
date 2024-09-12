@@ -1,0 +1,1751 @@
+<?xml version="1.0"?>
+<AbilityBonuses>
+
+	<AbilityBonus InternalName="JB_SpellbookShadow1Ability">
+		<AbilityBonusType>Champion_Spellbook</AbilityBonusType>
+		<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+		<SpellbookType>Shadow</SpellbookType>
+		<AbilityBonusOption InternalName="JB_SpellbookShadow1">
+			<DisplayName>Shadow Apprentice</DisplayName>
+			<Description>Shadow mages specialize in subtle enchantments and manipulation</Description>
+			<Icon>JB_Ability_SpellBookShadow1_Icon.png</Icon>
+			<PerkTreePosX>3</PerkTreePosX>
+			<PerkTreePosY>9</PerkTreePosY>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_Apprentice_Shadow</StrVal>
+				<Value>1</Value>
+				<Provides>ABSTRACT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_SpellRank_Shadow</StrVal>
+				<Value>1</Value>
+				<Provides>SPELL POTENCY</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_SpellDamage_Shadow</StrVal>
+				<Value>0.04</Value>
+				<Provides>::: +4% Shadow</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Provides>Unlocks the following spells</Provides>
+			</GameModifier>  
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>ProduceResource</Attribute>
+				<StrVal>JB_Summons</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Summon Pool</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_GreyMagic</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Grey magic</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_Spellbooks</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1 Spellbook</Provides>
+			</GameModifier>
+			<Cost>2</Cost>	
+			<SpellbookRank>1</SpellbookRank>
+			<Type>Spell</Type>
+			<UpgradePathID>JB_SpellbookShadow</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+            <Prereq>
+                <Type>Allegiance</Type>
+                <Attribute>Empire</Attribute>
+            </Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>		
+	<AbilityBonus InternalName="JB_SpellbookShadow2Ability">
+		<AbilityBonusType>Champion_Spellbook</AbilityBonusType>
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+		<SpellbookType>Shadow</SpellbookType>
+		<AbilityBonusOption InternalName="JB_SpellbookShadow2">
+			<DisplayName>Shadow Disciple</DisplayName>
+			<Description>Shadow mages specialize in subtle enchantments and manipulation</Description>
+			<Icon>JB_Ability_SpellBookShadow2_Icon.png</Icon>
+			<PerkTreePosX>4</PerkTreePosX>
+			<PerkTreePosY>9</PerkTreePosY>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_Disciple_Shadow</StrVal>
+				<Value>1</Value>
+				<Provides>ABSTRACT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_SpellRank_Shadow</StrVal>
+				<Value>1</Value>
+				<Provides>SPELL POTENCY</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_SpellDamage_Shadow</StrVal>
+				<Value>0.04</Value>
+				<Provides>::: +4% Shadow</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Provides>Unlocks the following spells</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>ProduceResource</Attribute>
+				<StrVal>JB_Summons</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Summon Pool</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_GreyMagic</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Grey magic</Provides>
+			</GameModifier>
+			<Cost>1</Cost>
+			<SpellbookRank>2</SpellbookRank>
+			<Type>Spell</Type>
+			<UpgradePathID>JB_SpellbookShadow</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>JB_SpellbookShadow1</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>		
+	<AbilityBonus InternalName="JB_SpellbookShadow3Ability">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+		<SpellbookType>Shadow</SpellbookType>
+		<AbilityBonusOption InternalName="JB_SpellbookShadow3">
+			<DisplayName>Shadow Mage</DisplayName>
+			<Description>Shadow mages specialize in subtle enchantments and manipulation</Description>
+			<Icon>JB_Ability_SpellBookShadow3_Icon.png</Icon>
+			<PerkTreePosX>5</PerkTreePosX>
+			<PerkTreePosY>9</PerkTreePosY>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_Mage_Shadow</StrVal>
+				<Value>1</Value>
+				<Provides>ABSTRACT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_SpellRank_Shadow</StrVal>
+				<Value>1</Value>
+				<Provides>SPELL POTENCY</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_SpellDamage_Shadow</StrVal>
+				<Value>0.04</Value>
+				<Provides>::: +4% Shadow</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Provides>Unlocks the following spells</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>ProduceResource</Attribute>
+				<StrVal>JB_Summons</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Summon Pool</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_GreyMagic</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Grey magic</Provides>
+			</GameModifier>
+			<MinimumLevel>5</MinimumLevel>
+			<Type>Spell</Type>
+			<UpgradePathID>JB_SpellbookShadow</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>JB_SpellbookShadow2</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>			
+	<AbilityBonus InternalName="JB_SpellbookShadow4Ability">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+		<SpellbookType>Shadow</SpellbookType>
+		<AbilityBonusOption InternalName="JB_SpellbookShadow4">
+			<DisplayName>Shadow Master</DisplayName>
+			<Description>Shadow mages specialize in subtle enchantments and manipulation</Description>
+			<Icon>JB_Ability_SpellBookShadow4_Icon.png</Icon>
+			<PerkTreePosX>6</PerkTreePosX>
+			<PerkTreePosY>9</PerkTreePosY>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_SpellRank_45</StrVal>
+				<Value>1</Value>
+				<Provides>ABSTRACT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_SpellRank_Shadow</StrVal>
+				<Value>1</Value>
+				<Provides>SPELL POTENCY</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_SpellDamage_Shadow</StrVal>
+				<Value>0.04</Value>
+				<Provides>::: +4% Shadow</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_Master_Shadow</StrVal>
+				<Value>1</Value>
+				<Provides>SPELLS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Provides>Unlocks the following spells</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>ProduceResource</Attribute>
+				<StrVal>JB_Summons</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Summon Pool</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_GreyMagic</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Grey magic</Provides>
+			</GameModifier>
+			<MinimumLevel>7</MinimumLevel>
+			<Type>Spell</Type>
+			<UpgradePathID>JB_SpellbookShadow</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>JB_SpellbookShadow3</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>			
+	<AbilityBonus InternalName="JB_SpellbookShadow5Ability">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+		<SpellbookType>Shadow</SpellbookType>
+		<AbilityBonusOption InternalName="JB_SpellbookShadow5">
+			<DisplayName>Shadow Archmage</DisplayName>
+			<Description>Shadow mages specialize in subtle enchantments and manipulation</Description>
+			<Icon>JB_Ability_SpellBookShadow5_Icon.png</Icon>
+			<PerkTreePosX>7</PerkTreePosX>
+			<PerkTreePosY>9</PerkTreePosY>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_SpellRank_45</StrVal>
+				<Value>1</Value>
+				<Provides>ABSTRACT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_SpellRank_Shadow</StrVal>
+				<Value>1</Value>
+				<Provides>SPELL POTENCY</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_SpellDamage_Shadow</StrVal>
+				<Value>0.04</Value>
+				<Provides>::: +4% Life</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_Archmage_Shadow</StrVal>
+				<Value>1</Value>
+				<Provides>SPELLS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Provides>Unlocks the following spells</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>ProduceResource</Attribute>
+				<StrVal>JB_Summons</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Summon Pool</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_GreyMagic</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Grey magic</Provides>
+			</GameModifier>
+			<MinimumLevel>9</MinimumLevel>
+			<Type>Spell</Type>
+			<UpgradePathID>JB_SpellbookShadow</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>JB_SpellbookShadow4</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>				
+	<AbilityBonus InternalName="JB_SpellbookNature1Ability">
+		<AbilityBonusType>Champion_Spellbook</AbilityBonusType>
+		<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+		<SpellbookType>Nature</SpellbookType>
+		<AbilityBonusOption InternalName="JB_SpellbookNature1">
+			<DisplayName>Nature Apprentice</DisplayName>
+			<Description>Nature mages specialize in manipulating the weather and plants</Description>
+			<Icon>JB_Ability_SpellBookNature1_Icon.png</Icon>
+			<PerkTreePosX>3</PerkTreePosX>
+			<PerkTreePosY>8</PerkTreePosY>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_Apprentice_Nature</StrVal>
+				<Value>1</Value>
+				<Provides>ABSTRACT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_SpellRank_Nature</StrVal>
+				<Value>1</Value>
+				<Provides>SPELL POTENCY</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_SpellDamage_Nature</StrVal>
+				<Value>0.04</Value>
+				<Provides>::: +4% Nature</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Provides>Unlocks the following spells</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>ProduceResource</Attribute>
+				<StrVal>JB_Summons</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Summon Pool</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_GreyMagic</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Grey magic</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_Spellbooks</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Spellbook</Provides>
+			</GameModifier>
+			<Cost>2</Cost>	
+			<SpellbookRank>1</SpellbookRank>
+			<Type>Spell</Type>
+			<UpgradePathID>JB_SpellbookNature</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+            <Prereq>
+                <Type>Allegiance</Type>
+                <Attribute>Kingdom</Attribute>
+            </Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>		
+	<AbilityBonus InternalName="JB_SpellbookNature2Ability">
+		<AbilityBonusType>Champion_Spellbook</AbilityBonusType>
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+		<SpellbookType>Nature</SpellbookType>
+		<AbilityBonusOption InternalName="JB_SpellbookNature2">
+			<DisplayName>Nature Disciple</DisplayName>
+			<Description>Nature mages specialize in manipulating the weather and plants</Description>
+			<Icon>JB_Ability_SpellBookNature2_Icon.png</Icon>
+			<PerkTreePosX>4</PerkTreePosX>
+			<PerkTreePosY>8</PerkTreePosY>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_Disciple_Nature</StrVal>
+				<Value>1</Value>
+				<Provides>ABSTRACT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_SpellRank_Nature</StrVal>
+				<Value>1</Value>
+				<Provides>SPELL POTENCY</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_SpellDamage_Nature</StrVal>
+				<Value>0.04</Value>
+				<Provides>::: +4% Nature</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Provides>Unlocks the following spells</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>ProduceResource</Attribute>
+				<StrVal>JB_Summons</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Summon Pool</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_GreyMagic</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Grey magic</Provides>
+			</GameModifier>
+			<Cost>1</Cost>
+			<SpellbookRank>2</SpellbookRank>
+			<Type>Spell</Type>
+			<UpgradePathID>JB_SpellbookNature</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>JB_SpellbookNature1</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>		
+	<AbilityBonus InternalName="JB_SpellbookNature3Ability">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+		<SpellbookType>Nature</SpellbookType>
+		<AbilityBonusOption InternalName="JB_SpellbookNature3">
+			<DisplayName>Nature Mage</DisplayName>
+			<Description>Nature mages specialize in manipulating the weather and plants</Description>
+			<Icon>JB_Ability_SpellBookNature3_Icon.png</Icon>
+			<PerkTreePosX>5</PerkTreePosX>
+			<PerkTreePosY>8</PerkTreePosY>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_Mage_Nature</StrVal>
+				<Value>1</Value>
+				<Provides>ABSTRACT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_SpellRank_Nature</StrVal>
+				<Value>1</Value>
+				<Provides>SPELL POTENCY</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_SpellDamage_Nature</StrVal>
+				<Value>0.04</Value>
+				<Provides>::: +4% Nature</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Provides>Unlocks the following spells</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>ProduceResource</Attribute>
+				<StrVal>JB_Summons</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Summon Pool</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_GreyMagic</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Grey magic</Provides>
+			</GameModifier>
+			<MinimumLevel>5</MinimumLevel>
+			<Type>Spell</Type>
+			<UpgradePathID>JB_SpellbookNature</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>JB_SpellbookNature2</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>			
+	<AbilityBonus InternalName="JB_SpellbookNature4Ability">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+		<SpellbookType>Nature</SpellbookType>
+		<AbilityBonusOption InternalName="JB_SpellbookNature4">
+			<DisplayName>Nature Master</DisplayName>
+			<Description>Nature mages specialize in manipulating the weather and plants</Description>
+			<Icon>JB_Ability_SpellBookNature4_Icon.png</Icon>
+			<PerkTreePosX>6</PerkTreePosX>
+			<PerkTreePosY>8</PerkTreePosY>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_SpellRank_45</StrVal>
+				<Value>1</Value>
+				<Provides>ABSTRACT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_SpellRank_Nature</StrVal>
+				<Value>1</Value>
+				<Provides>SPELL POTENCY</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_SpellDamage_Nature</StrVal>
+				<Value>0.04</Value>
+				<Provides>::: +4% Death</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_Master_Nature</StrVal>
+				<Value>1</Value>
+				<Provides>SPELLS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Provides>Unlocks the following spells</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>ProduceResource</Attribute>
+				<StrVal>JB_Summons</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Summon Pool</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_GreyMagic</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Grey magic</Provides>
+			</GameModifier>
+			<MinimumLevel>7</MinimumLevel>
+			<Type>Spell</Type>
+			<UpgradePathID>JB_SpellbookNature</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>JB_SpellbookNature3</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>			
+	<AbilityBonus InternalName="JB_SpellbookNature5Ability">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+		<SpellbookType>Nature</SpellbookType>
+		<AbilityBonusOption InternalName="JB_SpellbookNature5">
+			<DisplayName>Nature Archmage</DisplayName>
+			<Description>Nature mages specialize in manipulating the weather and plants</Description>
+			<Icon>JB_Ability_SpellBookNature5_Icon.png</Icon>
+			<PerkTreePosX>7</PerkTreePosX>
+			<PerkTreePosY>8</PerkTreePosY>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_SpellRank_45</StrVal>
+				<Value>1</Value>
+				<Provides>ABSTRACT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_SpellRank_Nature</StrVal>
+				<Value>1</Value>
+				<Provides>SPELL POTENCY</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_SpellDamage_Nature</StrVal>
+				<Value>0.04</Value>
+				<Provides>::: +4% Nature</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_Archmage_Nature</StrVal>
+				<Value>1</Value>
+				<Provides>SPELLS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Provides>Unlocks the following spells</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>ProduceResource</Attribute>
+				<StrVal>JB_Summons</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Summon Pool</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_GreyMagic</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Grey magic</Provides>
+			</GameModifier>
+			<MinimumLevel>9</MinimumLevel>
+			<Type>Spell</Type>
+			<UpgradePathID>JB_SpellbookNature</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>JB_SpellbookNature4</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>				
+	<AbilityBonus InternalName="JB_SpellbookBeast1Ability">
+		<AbilityBonusType>Champion_Spellbook</AbilityBonusType>
+		<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+		<SpellbookType>Beast</SpellbookType>
+		<AbilityBonusOption InternalName="JB_SpellbookBeast1">
+			<DisplayName>Beast Apprentice</DisplayName>
+			<Description>Beast mages specialize in enchantments and controlling animals</Description>
+			<Icon>JB_Ability_SpellBookBeasts1_Icon.png</Icon>
+			<PerkTreePosX>3</PerkTreePosX>
+			<PerkTreePosY>7</PerkTreePosY>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_Apprentice_Beast</StrVal>
+				<Value>1</Value>
+				<Provides>ABSTRACT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_SpellRank_Beast</StrVal>
+				<Value>1</Value>
+				<Provides>SPELL POTENCY</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_SpellDamage_Beast</StrVal>
+				<Value>0.04</Value>
+				<Provides>::: +4% Beast</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Provides>Unlocks the following spells</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>ProduceResource</Attribute>
+				<StrVal>JB_Summons</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Summon Pool</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_GreyMagic</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Grey magic</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_Spellbooks</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Spellbook</Provides>
+			</GameModifier>
+			<Cost>2</Cost>	
+			<SpellbookRank>1</SpellbookRank>
+			<Type>Spell</Type>
+			<UpgradePathID>JB_SpellbookBeast</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>		
+	<AbilityBonus InternalName="JB_SpellbookBeast2Ability">
+		<AbilityBonusType>Champion_Spellbook</AbilityBonusType>
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+		<SpellbookType>Beast</SpellbookType>
+		<AbilityBonusOption InternalName="JB_SpellbookBeast2">
+			<DisplayName>Beast Disciple</DisplayName>
+			<Description>Beast mages specialize in enchantments and controlling animals</Description>
+			<Icon>JB_Ability_SpellBookBeasts2_Icon.png</Icon>
+			<PerkTreePosX>4</PerkTreePosX>
+			<PerkTreePosY>7</PerkTreePosY>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_Disciple_Beast</StrVal>
+				<Value>1</Value>
+				<Provides>ABSTRACT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_SpellRank_Beast</StrVal>
+				<Value>1</Value>
+				<Provides>SPELL POTENCY</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_SpellDamage_Beast</StrVal>
+				<Value>0.04</Value>
+				<Provides>::: +4% Beast</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Provides>Unlocks the following spells</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>ProduceResource</Attribute>
+				<StrVal>JB_Summons</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Summon Pool</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_GreyMagic</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Grey magic</Provides>
+			</GameModifier>
+			<Cost>1</Cost>
+			<SpellbookRank>2</SpellbookRank>
+			<Type>Spell</Type>
+			<UpgradePathID>JB_SpellbookBeast</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>JB_SpellbookBeast1</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>		
+	<AbilityBonus InternalName="JB_SpellbookBeast3Ability">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+		<SpellbookType>Beast</SpellbookType>
+		<AbilityBonusOption InternalName="JB_SpellbookBeast3">
+			<DisplayName>Beast Mage</DisplayName>
+			<Description>Beast mages specialize in enchantments and controlling animals</Description>
+			<Icon>JB_Ability_SpellBookBeasts3_Icon.png</Icon>
+			<PerkTreePosX>5</PerkTreePosX>
+			<PerkTreePosY>7</PerkTreePosY>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_Mage_Beast</StrVal>
+				<Value>1</Value>
+				<Provides>ABSTRACT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_SpellRank_Beast</StrVal>
+				<Value>1</Value>
+				<Provides>SPELL POTENCY</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_SpellDamage_Beast</StrVal>
+				<Value>0.04</Value>
+				<Provides>::: +4% Beast</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Provides>Unlocks the following spells</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>ProduceResource</Attribute>
+				<StrVal>JB_Summons</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Summon Pool</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_GreyMagic</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Grey magic</Provides>
+			</GameModifier>
+			<MinimumLevel>5</MinimumLevel>
+			<Type>Spell</Type>
+			<UpgradePathID>JB_SpellbookBeast</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>JB_SpellbookBeast2</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>			
+	<AbilityBonus InternalName="JB_SpellbookBeast4Ability">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+		<SpellbookType>Beast</SpellbookType>
+		<AbilityBonusOption InternalName="JB_SpellbookBeast4">
+			<DisplayName>Beast Master</DisplayName>
+			<Description>Beast mages specialize in enchantments and controlling animals</Description>
+			<Icon>JB_Ability_SpellBookBeasts4_Icon.png</Icon>
+			<PerkTreePosX>6</PerkTreePosX>
+			<PerkTreePosY>7</PerkTreePosY>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_SpellRank_45</StrVal>
+				<Value>1</Value>
+				<Provides>ABSTRACT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_SpellRank_Beast</StrVal>
+				<Value>1</Value>
+				<Provides>SPELL POTENCY</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_SpellDamage_Beast</StrVal>
+				<Value>0.04</Value>
+				<Provides>::: +4% Beast</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_Master_Beast</StrVal>
+				<Value>1</Value>
+				<Provides>SPELLS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Provides>Unlocks the following spells</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>ProduceResource</Attribute>
+				<StrVal>JB_Summons</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Summon Pool</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_GreyMagic</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Grey magic</Provides>
+			</GameModifier>
+			<MinimumLevel>7</MinimumLevel>
+			<Type>Spell</Type>
+			<UpgradePathID>JB_SpellbookBeast</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>JB_SpellbookBeast3</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>			
+	<AbilityBonus InternalName="JB_SpellbookBeast5Ability">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+		<SpellbookType>Beast</SpellbookType>
+		<AbilityBonusOption InternalName="JB_SpellbookBeast5">
+			<DisplayName>Beast Archmage</DisplayName>
+			<Description>Beast mages specialize in enchantments and controlling animals</Description>
+			<Icon>JB_Ability_SpellBookBeasts5_Icon.png</Icon>
+			<PerkTreePosX>7</PerkTreePosX>
+			<PerkTreePosY>7</PerkTreePosY>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_SpellRank_45</StrVal>
+				<Value>1</Value>
+				<Provides>ABSTRACT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_SpellRank_Beast</StrVal>
+				<Value>1</Value>
+				<Provides>SPELL POTENCY</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_SpellDamage_Beast</StrVal>
+				<Value>0.04</Value>
+				<Provides>::: +4% Beast</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_Archmage_Beast</StrVal>
+				<Value>1</Value>
+				<Provides>SPELLS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Provides>Unlocks the following spells</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>ProduceResource</Attribute>
+				<StrVal>JB_Summons</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Summon Pool</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_GreyMagic</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Grey magic</Provides>
+			</GameModifier>
+			<MinimumLevel>9</MinimumLevel>
+			<Type>Spell</Type>
+			<UpgradePathID>JB_SpellbookBeast</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>JB_SpellbookBeast4</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>				
+	<AbilityBonus InternalName="JB_SpellbookBattle1Ability">
+		<AbilityBonusType>Champion_Spellbook</AbilityBonusType>
+		<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+		<SpellbookType>Battle</SpellbookType>
+		<AbilityBonusOption InternalName="JB_SpellbookBattle1">
+			<DisplayName>Battle Apprentice</DisplayName>
+			<Description>Battle mages specialize in direct offensive and defensive spells</Description>
+			<Icon>JB_Ability_SpellBookBattle1_Icon.png</Icon>
+			<PerkTreePosX>3</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_Apprentice_Battle</StrVal>
+				<Value>1</Value>
+				<Provides>ABSTRACT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_SpellRank_Battle</StrVal>
+				<Value>1</Value>
+				<Provides>SPELL POTENCY</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_SpellDamage_Battle</StrVal>
+				<Value>0.04</Value>
+				<Provides>::: +4% Battle</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Provides>Unlocks the following spells</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>ProduceResource</Attribute>
+				<StrVal>JB_Summons</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Summon Pool</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_GreyMagic</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Grey magic</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_Spellbooks</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Spellbook</Provides>
+			</GameModifier>
+			<Cost>2</Cost>	
+			<SpellbookRank>1</SpellbookRank>
+			<Type>Spell</Type>
+			<UpgradePathID>JB_SpellbookBattle</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>		
+	<AbilityBonus InternalName="JB_SpellbookBattle2Ability">
+		<AbilityBonusType>Champion_Spellbook</AbilityBonusType>
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+		<SpellbookType>Battle</SpellbookType>
+		<AbilityBonusOption InternalName="JB_SpellbookBattle2">
+			<DisplayName>Battle Disciple</DisplayName>
+			<Description>Battle mages specialize in direct offensive and defensive spells</Description>
+			<Icon>JB_Ability_SpellBookBattle2_Icon.png</Icon>
+			<PerkTreePosX>4</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_Disciple_Battle</StrVal>
+				<Value>1</Value>
+				<Provides>ABSTRACT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_SpellRank_Battle</StrVal>
+				<Value>1</Value>
+				<Provides>SPELL POTENCY</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_SpellDamage_Battle</StrVal>
+				<Value>0.04</Value>
+				<Provides>::: +4% Battle</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Provides>Unlocks the following spells</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>ProduceResource</Attribute>
+				<StrVal>JB_Summons</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Summon Pool</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_GreyMagic</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Grey magic</Provides>
+			</GameModifier>
+			<Cost>1</Cost>
+			<SpellbookRank>2</SpellbookRank>
+			<Type>Spell</Type>
+			<UpgradePathID>JB_SpellbookBattle</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>JB_SpellbookBattle1</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>		
+	<AbilityBonus InternalName="JB_SpellbookBattle3Ability">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+		<SpellbookType>Battle</SpellbookType>
+		<AbilityBonusOption InternalName="JB_SpellbookBattle3">
+			<DisplayName>Battle Mage</DisplayName>
+			<Description>Battle mages specialize in direct offensive and defensive spells</Description>
+			<Icon>JB_Ability_SpellBookBattle3_Icon.png</Icon>
+			<PerkTreePosX>5</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_Mage_Battle</StrVal>
+				<Value>1</Value>
+				<Provides>ABSTRACT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_SpellRank_Battle</StrVal>
+				<Value>1</Value>
+				<Provides>SPELL POTENCY</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_SpellDamage_Battle</StrVal>
+				<Value>0.04</Value>
+				<Provides>::: +4% Battle</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Provides>Unlocks the following spells</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>ProduceResource</Attribute>
+				<StrVal>JB_Summons</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Summon Pool</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_GreyMagic</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Grey magic</Provides>
+			</GameModifier>
+			<MinimumLevel>5</MinimumLevel>
+			<Type>Spell</Type>
+			<UpgradePathID>JB_SpellbookBattle</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>JB_SpellbookBattle2</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>			
+	<AbilityBonus InternalName="JB_SpellbookBattle4Ability">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+		<SpellbookType>Battle</SpellbookType>
+		<AbilityBonusOption InternalName="JB_SpellbookBattle4">
+			<DisplayName>Battle Master</DisplayName>
+			<Description>Battle mages specialize in direct offensive and defensive spells</Description>
+			<Icon>JB_Ability_SpellBookBattle4_Icon.png</Icon>
+			<PerkTreePosX>6</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_SpellRank_45</StrVal>
+				<Value>1</Value>
+				<Provides>ABSTRACT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_SpellRank_Battle</StrVal>
+				<Value>1</Value>
+				<Provides>SPELL POTENCY</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_SpellDamage_Battle</StrVal>
+				<Value>0.04</Value>
+				<Provides>::: +4% Battle</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_Master_Battle</StrVal>
+				<Value>1</Value>
+				<Provides>SPELLS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Provides>Unlocks the following spells</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>ProduceResource</Attribute>
+				<StrVal>JB_Summons</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Summon Pool</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_GreyMagic</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Grey magic</Provides>
+			</GameModifier>
+			<MinimumLevel>7</MinimumLevel>
+			<Type>Spell</Type>
+			<UpgradePathID>JB_SpellbookBattle</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>JB_SpellbookBattle3</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>			
+	<AbilityBonus InternalName="JB_SpellbookBattle5Ability">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+		<SpellbookType>Battle</SpellbookType>
+		<AbilityBonusOption InternalName="JB_SpellbookBattle5">
+			<DisplayName>Battle Archmage</DisplayName>
+			<Description>Battle mages specialize in direct offensive and defensive spells</Description>
+			<Icon>JB_Ability_SpellBookBattle5_Icon.png</Icon>
+			<PerkTreePosX>7</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_SpellRank_45</StrVal>
+				<Value>1</Value>
+				<Provides>ABSTRACT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_SpellRank_Battle</StrVal>
+				<Value>1</Value>
+				<Provides>SPELL POTENCY</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_SpellDamage_Battle</StrVal>
+				<Value>0.04</Value>
+				<Provides>::: +4% Battle</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_Archmage_Battle</StrVal>
+				<Value>1</Value>
+				<Provides>SPELLS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Provides>Unlocks the following spells</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>ProduceResource</Attribute>
+				<StrVal>JB_Summons</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Summon Pool</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_GreyMagic</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Grey magic</Provides>
+			</GameModifier>
+			<MinimumLevel>9</MinimumLevel>
+			<Type>Spell</Type>
+			<UpgradePathID>JB_SpellbookBattle</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>JB_SpellbookBattle4</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>				
+
+	<AbilityBonus InternalName="JB_ShardBondNatureAbility">
+		<AbilityBonusOption InternalName="JB_ShardBondNature">
+			<DisplayName>Shard Bond: Nature</DisplayName>
+			<Description>Shard Bond: Nature</Description>
+			<Icon>JB_Ability_NatureMancer2_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_Res_NatureMagic</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Nature Power</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_UnitStat_JB_NaturePower</StrVal>
+				<Value>100</Value>
+			</GameModifier>
+			<Type>Defensive</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>	
+	<AbilityBonus InternalName="JB_ShardBondShadowAbility">
+		<AbilityBonusOption InternalName="JB_ShardBondShadow">
+			<DisplayName>Shard Bond: Shadow</DisplayName>
+			<Description>Shard Bond: Shadow</Description>
+			<Icon>JB_Ability_ShadowMancer2_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_Res_ShadowMagic</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Shadow Power</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_UnitStat_JB_ShadowPower</StrVal>
+				<Value>100</Value>
+			</GameModifier>
+			<Type>Defensive</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>	
+	<AbilityBonus InternalName="JB_ShardBondBattleAbility">
+		<AbilityBonusOption InternalName="JB_ShardBondBattle">
+			<DisplayName>Shard Bond: Battle</DisplayName>
+			<Description>Shard Bond: Battle</Description>
+			<Icon>JB_Ability_BattleMancer2_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_Res_BattleMagic</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Battle Power</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_UnitStat_JB_BattlePower</StrVal>
+				<Value>100</Value>
+			</GameModifier>
+			<Type>Defensive</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>	
+	<AbilityBonus InternalName="JB_ShardBondBeastAbility">
+		<AbilityBonusOption InternalName="JB_ShardBondBeast">
+			<DisplayName>Shard Bond: Beast</DisplayName>
+			<Description>Shard Bond: Beast</Description>
+			<Icon>JB_Ability_BeastMancer2_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_Res_BeastMagic</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Beast Power</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_UnitStat_JB_BeastPower</StrVal>
+				<Value>100</Value>
+			</GameModifier>
+			<Type>Defensive</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>	
+				
+				
+    <AbilityBonus InternalName="JB_NatureAdept1Ability">
+        <AbilityBonusType>Unit_Design</AbilityBonusType>
+        <AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+        <AbilityBonusOption InternalName="JB_NatureAdept1">
+            <DisplayName>Nature Adept</DisplayName>
+            <Description>Nature mages specialize in manipulating the weather and plants</Description>
+            <Icon>JB_Ability_NatureAdept1_Icon.png</Icon>
+            <PerkTreePosX>3</PerkTreePosX>
+            <PerkTreePosY>8</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Provides>Unlocks the following spell</Provides>
+            </GameModifier>
+            <AdditionalTrainingTurns>20</AdditionalTrainingTurns>
+            <Type>Spell</Type>
+            <UpgradePathID>JB_NatureAdept</UpgradePathID>
+            <Prereq>
+                <Type>Allegiance</Type>
+                <Attribute>Kingdom</Attribute>
+            </Prereq>
+			<SupportedUnitModelType>HenchmanFemale</SupportedUnitModelType>
+            <SupportedUnitModelType>HenchmanMale</SupportedUnitModelType>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	<AbilityBonus InternalName="JB_NatureAdept2Ability">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+        <AbilityBonusOption InternalName="JB_NatureAdept2">
+            <DisplayName>Nature Adept II</DisplayName>
+            <Description>Nature mages specialize in manipulating the weather and plants</Description>
+            <Icon>JB_Ability_NatureAdept2_Icon.png</Icon>
+            <PerkTreePosX>4</PerkTreePosX>
+            <PerkTreePosY>8</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Provides>Unlocks the following spell</Provides>
+            </GameModifier>
+            <Type>Spell</Type>
+            <UpgradePathID>JB_NatureAdept</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>JB_NatureAdept1</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	<AbilityBonus InternalName="JB_NatureAdept3Ability">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+        <AbilityBonusOption InternalName="JB_NatureAdept3">
+            <DisplayName>Nature Adept III</DisplayName>
+            <Description>Nature mages specialize in manipulating the weather and plants</Description>
+            <Icon>JB_Ability_NatureAdept3_Icon.png</Icon>
+            <PerkTreePosX>5</PerkTreePosX>
+            <PerkTreePosY>8</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Provides>Unlocks the following spell</Provides>
+            </GameModifier>
+            <Type>Spell</Type>
+            <UpgradePathID>JB_NatureAdept</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>JB_NatureAdept2</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="JB_ShadowAdept1Ability">
+        <AbilityBonusType>Unit_Design</AbilityBonusType>
+        <AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+        <AbilityBonusOption InternalName="JB_ShadowAdept1">
+            <DisplayName>Shadow Adept</DisplayName>
+			<Description>Shadow mages specialize in subtle enchantments and manipulation</Description>
+            <Icon>JB_Ability_ShadowAdept1_Icon.png</Icon>
+            <PerkTreePosX>3</PerkTreePosX>
+            <PerkTreePosY>9</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Provides>Unlocks the following spell</Provides>
+            </GameModifier>
+            <AdditionalTrainingTurns>20</AdditionalTrainingTurns>
+            <Type>Spell</Type>
+            <UpgradePathID>JB_ShadowAdept</UpgradePathID>
+            <Prereq>
+                <Type>Allegiance</Type>
+                <Attribute>Empire</Attribute>
+            </Prereq>
+			<SupportedUnitModelType>HenchmanFemale</SupportedUnitModelType>
+            <SupportedUnitModelType>HenchmanMale</SupportedUnitModelType>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	<AbilityBonus InternalName="JB_ShadowAdept2Ability">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+        <AbilityBonusOption InternalName="JB_ShadowAdept2">
+            <DisplayName>Shadow Adept II</DisplayName>
+			<Description>Shadow mages specialize in subtle enchantments and manipulation</Description>
+            <Icon>JB_Ability_ShadowAdept2_Icon.png</Icon>
+            <PerkTreePosX>4</PerkTreePosX>
+            <PerkTreePosY>9</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Provides>Unlocks the following spell</Provides>
+            </GameModifier>
+            <Type>Spell</Type>
+            <UpgradePathID>JB_ShadowAdept</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>JB_ShadowAdept1</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	<AbilityBonus InternalName="JB_ShadowAdept3Ability">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+        <AbilityBonusOption InternalName="JB_ShadowAdept3">
+            <DisplayName>Shadow Adept III</DisplayName>
+			<Description>Shadow mages specialize in subtle enchantments and manipulation</Description>
+            <Icon>JB_Ability_ShadowAdept3_Icon.png</Icon>
+            <PerkTreePosX>5</PerkTreePosX>
+            <PerkTreePosY>9</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Provides>Unlocks the following spell</Provides>
+            </GameModifier>
+            <Type>Spell</Type>
+            <UpgradePathID>JB_ShadowAdept</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>JB_ShadowAdept2</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="JB_BattleAdept1Ability">
+        <AbilityBonusType>Unit_Design</AbilityBonusType>
+        <AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+        <AbilityBonusOption InternalName="JB_BattleAdept1">
+            <DisplayName>Battle Adept</DisplayName>
+			<Description>Battle mages specialize in direct offensive and defensive spells</Description>
+            <Icon>JB_Ability_BattleAdept1_Icon.png</Icon>
+            <PerkTreePosX>3</PerkTreePosX>
+            <PerkTreePosY>6</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Provides>Unlocks the following spell</Provides>
+            </GameModifier>
+            <AdditionalTrainingTurns>20</AdditionalTrainingTurns>
+            <Type>Spell</Type>
+            <UpgradePathID>JB_BattleAdept</UpgradePathID>
+			<SupportedUnitModelType>HenchmanFemale</SupportedUnitModelType>
+            <SupportedUnitModelType>HenchmanMale</SupportedUnitModelType>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	<AbilityBonus InternalName="JB_BattleAdept2Ability">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+        <AbilityBonusOption InternalName="JB_BattleAdept2">
+            <DisplayName>Battle Adept II</DisplayName>
+			<Description>Battle mages specialize in direct offensive and defensive spells</Description>
+            <Icon>JB_Ability_BattleAdept2_Icon.png</Icon>
+            <PerkTreePosX>4</PerkTreePosX>
+            <PerkTreePosY>6</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Provides>Unlocks the following spell</Provides>
+            </GameModifier>
+            <Type>Spell</Type>
+            <UpgradePathID>JB_BattleAdept</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>JB_BattleAdept1</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	<AbilityBonus InternalName="JB_BattleAdept3Ability">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+        <AbilityBonusOption InternalName="JB_BattleAdept3">
+            <DisplayName>Battle Adept III</DisplayName>
+			<Description>Battle mages specialize in direct offensive and defensive spells</Description>
+            <Icon>JB_Ability_BattleAdept3_Icon.png</Icon>
+            <PerkTreePosX>5</PerkTreePosX>
+            <PerkTreePosY>6</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Provides>Unlocks the following spell</Provides>
+            </GameModifier>
+            <Type>Spell</Type>
+            <UpgradePathID>JB_BattleAdept</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>JB_BattleAdept2</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="JB_BeastAdept1Ability">
+        <AbilityBonusType>Unit_Design</AbilityBonusType>
+        <AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+        <AbilityBonusOption InternalName="JB_BeastAdept1">
+            <DisplayName>Beast Adept</DisplayName>
+			<Description>Beast mages specialize in enchantments and controlling animals</Description>
+            <Icon>JB_Ability_BeastAdept1_Icon.png</Icon>
+            <PerkTreePosX>3</PerkTreePosX>
+            <PerkTreePosY>7</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Provides>Unlocks the following spell</Provides>
+            </GameModifier>
+            <AdditionalTrainingTurns>20</AdditionalTrainingTurns>
+            <Type>Spell</Type>
+            <UpgradePathID>JB_BeastAdept</UpgradePathID>
+			<SupportedUnitModelType>HenchmanFemale</SupportedUnitModelType>
+            <SupportedUnitModelType>HenchmanMale</SupportedUnitModelType>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	<AbilityBonus InternalName="JB_BeastAdept2Ability">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+        <AbilityBonusOption InternalName="JB_BeastAdept2">
+            <DisplayName>Beast Adept II</DisplayName>
+			<Description>Beast mages specialize in enchantments and controlling animals</Description>
+            <Icon>JB_Ability_BeastAdept2_Icon.png</Icon>
+            <PerkTreePosX>4</PerkTreePosX>
+            <PerkTreePosY>7</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Provides>Unlocks the following spell</Provides>
+            </GameModifier>
+            <Type>Spell</Type>
+            <UpgradePathID>JB_BeastAdept</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>JB_BeastAdept1</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	<AbilityBonus InternalName="JB_BeastAdept3Ability">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+        <AbilityBonusOption InternalName="JB_BeastAdept3">
+            <DisplayName>Beast Adept III</DisplayName>
+			<Description>Beast mages specialize in enchantments and controlling animals</Description>
+            <Icon>JB_Ability_BeastAdept3_Icon.png</Icon>
+            <PerkTreePosX>5</PerkTreePosX>
+            <PerkTreePosY>7</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Provides>Unlocks the following spell</Provides>
+            </GameModifier>
+            <Type>Spell</Type>
+            <UpgradePathID>JB_BeastAdept</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>JB_BeastAdept2</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>		
+		
+	
+	
+	
+</AbilityBonuses>

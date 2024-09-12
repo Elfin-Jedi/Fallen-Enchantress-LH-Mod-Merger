@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Created with the Elemental Editor -->
+<!-- CoreImprovements.xml -->
+<!-- -->
+<ImprovementTypes>
+    <ImprovementType InternalName="MysticalPillarPool">
+        <DisplayName>Mystical Pillar Pool</DisplayName>
+        <Description>Mystical Pillar Pools are extensions of your typical Arcalite towers and provide additional essence and an aura of magical resistance to your units.</Description>
+        <RequiresCity>1</RequiresCity>
+        <PreferredTerrain>Category:Land</PreferredTerrain>
+        <RequiresCityImprovement>1</RequiresCityImprovement>
+        <RequiredImprovement>ArcaliteTower</RequiredImprovement>
+        <GameModifier>
+            <ModType>ConstructionResourceCost</ModType>
+            <Attribute>Arcalite</Attribute>
+            <Value>-90</Value>
+        </GameModifier
+        <LaborToBuild>200</LaborToBuild>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>TileYieldEssence</Attribute>
+            <Value>1</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>+1 Essence</Provides>
+        </GameModifier>
+         <GameModifier>
+            <ModType>Player</ModType>
+            <Attribute>AbilityBonus</Attribute>
+            <StrVal>A_UnitStat_MagicResist</StrVal>
+            <Value>3</Value>
+            <Provides>+3% Magic Resist for factions units</Provides>
+       	</GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+            <AITag>Mining</AITag>
+        </AIData>
+        <ArtDef>Art_MysticalPillarPool</ArtDef>
+    </ImprovementType>
+    <ImprovementType InternalName="MajesticWaterPool">
+        <DisplayName>Majestic Arcshrine</DisplayName>
+        <Description>Majestic Arcshrines are pool shrines consturcted with a good supply of Arcalite.</Description>
+        <AllowedPerFaction>1</AllowedPerFaction>
+        <RequiresCity>1</RequiresCity>
+        <PreferredTerrain>Category:Land</PreferredTerrain>
+        <GameModifier>
+            <ModType>ConstructionResourceCost</ModType>
+            <Attribute>Arcalite</Attribute>
+            <Value>-20</Value>
+        </GameModifier>
+        <LaborToBuild>90</LaborToBuild>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>TileYieldEssence</Attribute>
+            <Value>1</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>+1 Essence</Provides>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+            <AITag>Mining</AITag>
+        </AIData>
+        <ArtDef>Art_MajesticWaterPool</ArtDef>
+    </ImprovementType>
+    <ImprovementType InternalName="ArcaliteOutpost">
+        <DisplayName>Arcalite Outpost</DisplayName>
+        <Description>Arcalite Outposts can be built on Arcalite Deposits. They provide you with Arcalite every Season.</Description>
+        <IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+        <RequiresCity>1</RequiresCity>
+        <RequiresResource>1</RequiresResource>
+        <SupportedResourceType>ArcaliteBlastSite</SupportedResourceType>
+        <PreferredTerrain>Category:Land</PreferredTerrain>
+        <LaborToBuild>250</LaborToBuild>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Arcalite</Attribute>
+            <Value>0.5</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>+0.5 Arcalite per Season</Provides>
+            <UpgradeComparisonID>1</UpgradeComparisonID>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+            <AITag>Mining</AITag>
+        </AIData>
+        <ArtDef>Art_ArcaliteOutpost</ArtDef>
+    </ImprovementType>
+    <ImprovementType InternalName="ArcaliteFoundation">
+        <DisplayName>Arcalite Foundation</DisplayName>
+        <Description>The Arcalite Foundation is the initial stage for building a arcalite tower and provides some minor benefits.</Description>
+        <RequiresCity>1</RequiresCity>
+        <BarredTerrain>River</BarredTerrain>
+        <BarredTerrain>SwampTerrain</BarredTerrain>
+        <PreferredTerrain>City</PreferredTerrain>
+        <PreferredTerrain>Category:Land</PreferredTerrain>
+        <PreferredTerrain>Forest</PreferredTerrain>
+        <UpgradesToImprovement>ArcaliteSmallTower</UpgradesToImprovement>
+        <UpgradeTier>1</UpgradeTier>
+        <GameModifier>
+            <ModType>ConstructionResourceCost</ModType>
+            <Attribute>Arcalite</Attribute>
+            <Value>-25</Value>
+        </GameModifier>
+        <LaborToBuild>50</LaborToBuild>
+        <GameModifier>
+            <ModType>StationedUnitStatBonus</ModType>
+            <StrVal>UnitStat_Experience</StrVal>
+            <StrVal2>OnlyChampions</StrVal2>
+            <Value>1</Value>
+            <Operator>10</Operator>
+            <Provides>Stationed champions have a 10% chance of getting 1xp/season</Provides>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Fame</Attribute>
+            <Value>0.1</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>You receive 0.1 fame every season.</Provides>
+        </GameModifier>
+        <GameModifier>
+            <ModType>CityTrainingBonus</ModType>
+            <Attribute>TrainingBonus_ApplyUnitModifier_Add</Attribute>
+            <StrVal>UnitStat_Dodge</StrVal>
+            <Value>2</Value>
+            <Provides>+2 Dodge for Trained Units</Provides>
+            <UpgradeComparisonID>1</UpgradeComparisonID>
+            <UpgradeComparisonText>Trained Unit Dodge</UpgradeComparisonText>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+            <AITag>CommandPost</AITag>
+        </AIData>
+        <ArtDef>Art_ArcaliteFoundation</ArtDef>
+    </ImprovementType>
+    <ImprovementType InternalName="ArcaliteSmallTower">
+        <DisplayName>Arcalite Small Tower</DisplayName>
+        <Description>The Arcalite Small Tower is a beacon of influence, hope and magic your people will idolise this tower.</Description>
+        <RequiresCity>1</RequiresCity>
+        <BarredTerrain>River</BarredTerrain>
+        <BarredTerrain>SwampTerrain</BarredTerrain>
+        <PreferredTerrain>City</PreferredTerrain>
+        <PreferredTerrain>Category:Land</PreferredTerrain>
+        <PreferredTerrain>Forest</PreferredTerrain>
+        <UpgradesToImprovement>ArcaliteTower</UpgradesToImprovement>
+        <UpgradeTier>2</UpgradeTier>
+        <GameModifier>
+            <ModType>ConstructionResourceCost</ModType>
+            <Attribute>Arcalite</Attribute>
+            <Value>-50</Value>
+        </GameModifier>
+        <LaborToBuild>75</LaborToBuild>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Mana</Attribute>
+            <Value>1</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>+1 Mana</Provides>
+            <UpgradeComparisonID>1</UpgradeComparisonID>
+        </GameModifier>
+        <GameModifier>
+            <ModType>StationedUnitStatBonus</ModType>
+            <StrVal>UnitStat_Experience</StrVal>
+            <StrVal2>OnlyChampions</StrVal2>
+            <Value>1</Value>
+            <Operator>15</Operator>
+            <Provides>Stationed champions have a 15% chance of getting 1xp/season</Provides>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Fame</Attribute>
+            <Value>0.2</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>You receive 0.2 fame every season.</Provides>
+        </GameModifier>
+        <GameModifier>
+            <ModType>CityTrainingBonus</ModType>
+            <Attribute>TrainingBonus_ApplyUnitModifier_Add</Attribute>
+            <StrVal>UnitStat_Dodge</StrVal>
+            <Value>3</Value>
+            <Provides>+3 Dodge for Trained Units</Provides>
+            <UpgradeComparisonID>1</UpgradeComparisonID>
+            <UpgradeComparisonText>Trained Unit Dodge</UpgradeComparisonText>
+        </GameModifier>
+        <GameModifier>
+            <ModType>CityTrainingBonus</ModType>
+            <Attribute>TrainingBonus_ApplyUnitModifier_Add</Attribute>
+            <StrVal>UnitStat_MagicResist</StrVal>
+            <Value>2</Value>
+            <Provides>+2 Magic Resist for Trained Units</Provides>
+            <UpgradeComparisonID>1</UpgradeComparisonID>
+            <UpgradeComparisonText>Trained Unit Magic Resist</UpgradeComparisonText>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+            <AITag>CommandPost</AITag>
+        </AIData>
+        <ArtDef>Art_ArcaliteSmallTower</ArtDef>
+    </ImprovementType>
+    <ImprovementType InternalName="ArcaliteTower">
+        <DisplayName>Arcalite Tower</DisplayName>
+        <Description>The Arcalite Tower is a substantial improvement, it emits a strange energy that affects your population.</Description>
+        <RequiresCity>1</RequiresCity>
+        <BarredTerrain>River</BarredTerrain>
+        <BarredTerrain>SwampTerrain</BarredTerrain>
+        <PreferredTerrain>City</PreferredTerrain>
+        <PreferredTerrain>Category:Land</PreferredTerrain>
+        <PreferredTerrain>Forest</PreferredTerrain>
+        <UpgradesToImprovement>ArcaliteLargeTower</UpgradesToImprovement>
+        <UpgradeTier>3</UpgradeTier>
+        <GameModifier>
+            <ModType>ConstructionResourceCost</ModType>
+            <Attribute>Arcalite</Attribute>
+            <Value>-100</Value>
+        </GameModifier>
+        <LaborToBuild>120</LaborToBuild>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Mana</Attribute>
+            <Value>2</Value>
+            <PerTurn>2</PerTurn>
+            <Provides>+2 Mana</Provides>
+            <UpgradeComparisonID>1</UpgradeComparisonID>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Gold</Attribute>
+            <Value>1</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>+1 Gold</Provides>
+            <UpgradeComparisonID>1</UpgradeComparisonID>
+        </GameModifier>
+        <GameModifier>
+            <ModType>StationedUnitStatBonus</ModType>
+            <StrVal>UnitStat_Experience</StrVal>
+            <StrVal2>OnlyChampions</StrVal2>
+            <Value>1</Value>
+            <Operator>20</Operator>
+            <Provides>Stationed champions have a 20% chance of getting 1xp/season</Provides>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Fame</Attribute>
+            <Value>0.3</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>You receive 0.3 fame every season.</Provides>
+        </GameModifier>
+        <GameModifier>
+            <ModType>CityTrainingBonus</ModType>
+            <Attribute>TrainingBonus_ApplyUnitModifier_Add</Attribute>
+            <StrVal>UnitStat_Attack_Boost</StrVal>
+            <Value>1</Value>
+            <Provides>+1 Attack to Trained Units</Provides>
+            <UpgradeComparisonID>1</UpgradeComparisonID>
+            <UpgradeComparisonText>Trained Unit Attack</UpgradeComparisonText>
+        </GameModifier>
+        <GameModifier>
+            <ModType>CityTrainingBonus</ModType>
+            <Attribute>TrainingBonus_ApplyUnitModifier_Add</Attribute>
+            <StrVal>UnitStat_Defense_Pierce</StrVal>
+            <Value>1</Value>
+            <Provides>+1 Defense for Trained Units</Provides>
+            <UpgradeComparisonID>1</UpgradeComparisonID>
+            <UpgradeComparisonText>Trained Unit Defense</UpgradeComparisonText>
+        </GameModifier>
+        <GameModifier>
+            <ModType>CityTrainingBonus</ModType>
+            <Attribute>TrainingBonus_ApplyUnitModifier_Add</Attribute>
+            <StrVal>UnitStat_Dodge</StrVal>
+            <Value>4</Value>
+            <Provides>+4 Dodge for Trained Units</Provides>
+            <UpgradeComparisonID>1</UpgradeComparisonID>
+            <UpgradeComparisonText>Trained Unit Dodge</UpgradeComparisonText>
+        </GameModifier>
+        <GameModifier>
+            <ModType>CityTrainingBonus</ModType>
+            <Attribute>TrainingBonus_ApplyUnitModifier_Add</Attribute>
+            <StrVal>UnitStat_MagicResist</StrVal>
+            <Value>3</Value>
+            <Provides>+3 Magic Resist for Trained Units</Provides>
+            <UpgradeComparisonID>1</UpgradeComparisonID>
+            <UpgradeComparisonText>Trained Unit Magic Resist</UpgradeComparisonText>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+            <AITag>CommandPost</AITag>
+        </AIData>
+        <ArtDef>Art_ArcaliteTower</ArtDef>
+    </ImprovementType>
+    <ImprovementType InternalName="ArcaliteLargeTower">
+        <DisplayName>Arcalite Large Tower</DisplayName>
+        <Description>The Large Arcalite Tower is a impressive structure indeed, any city would be lucky to have one.</Description>
+        <RequiresCity>1</RequiresCity>
+        <BarredTerrain>River</BarredTerrain>
+        <BarredTerrain>SwampTerrain</BarredTerrain>
+        <PreferredTerrain>City</PreferredTerrain>
+        <PreferredTerrain>Category:Land</PreferredTerrain>
+        <PreferredTerrain>Forest</PreferredTerrain>
+        <UpgradeTier>4</UpgradeTier>
+        <GameModifier>
+            <ModType>ConstructionResourceCost</ModType>
+            <Attribute>Arcalite</Attribute>
+            <Value>-200</Value>
+        </GameModifier>
+        <LaborToBuild>160</LaborToBuild>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Mana</Attribute>
+            <Value>3</Value>
+            <PerTurn>3</PerTurn>
+            <Provides>+3 Mana</Provides>
+            <UpgradeComparisonID>1</UpgradeComparisonID>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Gold</Attribute>
+            <Value>2</Value>
+            <PerTurn>2</PerTurn>
+            <Provides>+2 Gold</Provides>
+            <UpgradeComparisonID>1</UpgradeComparisonID>
+        </GameModifier>
+        <GameModifier>
+            <ModType>StationedUnitStatBonus</ModType>
+            <StrVal>UnitStat_Experience</StrVal>
+            <StrVal2>OnlyChampions</StrVal2>
+            <Value>1</Value>
+            <Operator>25</Operator>
+            <Provides>Stationed champions have a 25% chance of getting 1xp/season</Provides>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Fame</Attribute>
+            <Value>0.4</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>You receive 0.4 fame every season.</Provides>
+        </GameModifier>
+        <GameModifier>
+            <ModType>CityTrainingBonus</ModType>
+            <Attribute>TrainingBonus_ApplyUnitModifier_Add</Attribute>
+            <StrVal>UnitStat_Attack_Boost</StrVal>
+            <Value>3</Value>
+            <Provides>+3 Attack to Trained Units</Provides>
+            <UpgradeComparisonID>1</UpgradeComparisonID>
+            <UpgradeComparisonText>Trained Unit Attack</UpgradeComparisonText>
+        </GameModifier>
+        <GameModifier>
+            <ModType>CityTrainingBonus</ModType>
+            <Attribute>TrainingBonus_ApplyUnitModifier_Add</Attribute>
+            <StrVal>UnitStat_Defense_Pierce</StrVal>
+            <Value>3</Value>
+            <Provides>+3 Defense for Trained Units</Provides>
+            <UpgradeComparisonID>1</UpgradeComparisonID>
+            <UpgradeComparisonText>Trained Unit Defense</UpgradeComparisonText>
+        </GameModifier>
+        <GameModifier>
+            <ModType>CityTrainingBonus</ModType>
+            <Attribute>TrainingBonus_ApplyUnitModifier_Add</Attribute>
+            <StrVal>UnitStat_Dodge</StrVal>
+            <Value>5</Value>
+            <Provides>+5 Dodge for Trained Units</Provides>
+            <UpgradeComparisonID>1</UpgradeComparisonID>
+            <UpgradeComparisonText>Trained Unit Dodge</UpgradeComparisonText>
+        </GameModifier>
+        <GameModifier>
+            <ModType>CityTrainingBonus</ModType>
+            <Attribute>TrainingBonus_ApplyUnitModifier_Add</Attribute>
+            <StrVal>UnitStat_MagicResist</StrVal>
+            <Value>5</Value>
+            <Provides>+5 Magic Resist for Trained Units</Provides>
+            <UpgradeComparisonID>1</UpgradeComparisonID>
+            <UpgradeComparisonText>Trained Unit Magic Resist</UpgradeComparisonText>
+        </GameModifier>
+         <GameModifier>
+            <ModType>Player</ModType>
+            <Attribute>AbilityBonus</Attribute>
+            <StrVal>A_UnitStat_HitPoints</StrVal>
+            <Value>5</Value>
+            <Provides>+5% Hit Points for factions units</Provides>
+       	</GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+            <AITag>CommandPost</AITag>
+        </AIData>
+        <ArtDef>Art_ArcaliteLargeTower</ArtDef>
+    </ImprovementType>
+</ImprovementTypes>

@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<UnitTypes>
+	<UnitType InternalName="Tluzoo">
+		<CreatureType>Champion</CreatureType>
+		<DisplayName>Tluzoo</DisplayName>
+		<Backstory>One of a few Demonshrill that appeared after the Cataclysm. Possibly a result of some strange merger between demon, fallen and shrill.</Backstory>
+
+		<ModelPath>centaur_malemainbody.hkb</ModelPath>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<EyeTexture>gfx\Eyes\blinks\eyeblink_m5_Black.png</EyeTexture>
+		<AnimationPack>EF_MaleSovereignAnimationPack</AnimationPack>
+		<ShowAsSingleUnit>false</ShowAsSingleUnit>
+		<CutSceneDataPack>DrotaCutScenePack</CutSceneDataPack>
+		<ModelScale>1.0000</ModelScale>
+		<TacticalModelScale>1.5000</TacticalModelScale>
+		<EquipmentScale>1.0000</EquipmentScale>
+		<ClothMapScale>1.6000</ClothMapScale>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<MovementType>land</MovementType>
+		<BobbingFrequency>0.0000</BobbingFrequency>
+		<ClothPoseIndex>1</ClothPoseIndex>
+		<InfoCardBackground>BG_Desert</InfoCardBackground>
+		<InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+		<CanBeDesigned>0</CanBeDesigned>
+		<Medallions InternalName=""/>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<Allegiance>Empire</Allegiance>
+		<Unique>1</Unique>
+		<IsNPC>1</IsNPC>
+		<NPCSpawnLikelihood>100</NPCSpawnLikelihood>
+		<IsChampion>1</IsChampion>
+		<Gender>Male</Gender>
+		<SpawnRating>3</SpawnRating>
+		<LevelMilestone InternalName="">
+			<Level>1</Level>
+			<UnitStat_Accuracy>80.0000</UnitStat_Accuracy>
+			<UnitStat_BG_IsEmpire>1.0000</UnitStat_BG_IsEmpire>
+			<UnitStat_BG_IsMale>1.0000</UnitStat_BG_IsMale>
+			<UnitStat_BG_IsMonster>1.0000</UnitStat_BG_IsMonster>
+			<UnitStat_BG_IsDemon>1.0000</UnitStat_BG_IsDemon>
+			<UnitStat_BG_IsTwisted>1</UnitStat_BG_IsTwisted>
+			<UnitStat_BG_IsChampion>1.0000</UnitStat_BG_IsChampion>
+			<UnitStat_CombatSpeed>22.0000</UnitStat_CombatSpeed>
+			<UnitStat_HitPoints>20.0000</UnitStat_HitPoints>
+			<UnitStat_Moves>3.0000</UnitStat_Moves>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+		</LevelMilestone>
+		<Equipment>Centaur_F_Male_Head_05</Equipment>
+		<Equipment>F_CornRows_Hair_Mesh_01</Equipment>
+		<Equipment>Scorpion_mount2</Equipment>
+		<Quote>I was forged in Hell's fire.</Quote>
+		<NPCRecruitmentText>%d gildar buys my blade, friend. And your safety.</NPCRecruitmentText>
+		<Color_Skin>100,10,10</Color_Skin>
+		<Color_Hair>0,0,0</Color_Hair>
+		<Color_Clothing1>120,25,20,255</Color_Clothing1>
+		<Color_Clothing2>78,60,55,255</Color_Clothing2>
+		<Color_Metal>80,20,20</Color_Metal>
+		<Texture_Skin>Trog_Skin_M_03.png</Texture_Skin>
+		<Gender>Male</Gender>
+		<UnitModelType>Centaur</UnitModelType>
+		<SelectedAbilityBonusOption>Blood_Demonshrill</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Fire1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Precision_Level</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>PathOfTheAssassin</SelectedAbilityBonusOption>
+		<AutoCreateEquipment>Dagger_Shadow</AutoCreateEquipment>
+		<AutoCreateEquipment>LeatherBreastpiece</AutoCreateEquipment>
+		<SelectedAbilityBonusOption>Blood_Demonshrill2</SelectedAbilityBonusOption>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-5.0000</Value>
+			<PerTurn>0</PerTurn>
+		</GameModifier>
+		<NPCFreeRecruit>0</NPCFreeRecruit>
+		<RaceType>Race_Type_Special</RaceType>
+		<WageOverride>0.0000</WageOverride>
+		<TileRadius>0</TileRadius>
+		<GetPerksOnLevelUp>0</GetPerksOnLevelUp>
+		<DividesBattleExp>1</DividesBattleExp>
+		<CanSqueeze>0</CanSqueeze>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<AllowGrouping>true</AllowGrouping>
+		<SoundPack>SoundPack_Generic_Male</SoundPack>
+		<IsChampion>1</IsChampion>
+	</UnitType>
+
+	<AbilityBonus InternalName="Blood_Demonshrill2">
+		<AbilityBonusOption InternalName="Blood_Demonshrill2">
+			<DisplayName>Broodmaster</DisplayName>
+			<Description>At the start of each combat, this unit summons a Fire Shrill (level = caster level) that acts as its own. If it dies a new one is spawned in next combat. If Tluzoo falls in battle the Broodling vanishes.</Description>
+			<Icon>FireShrill.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>BattleAutoCastSpell</Attribute>
+				<StrVal>SummonWolfBrother</StrVal>
+				<Provides>At the start of each combat, this unit summons a Fire Shrill (level = caster level) that acts as its own. If it dies a new one is spawned in next combat. If Tluzoo falls in battle the Broodling vanishes.</Provides>
+				<Value>100</Value>
+			</GameModifier>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<SpellDef InternalName="SummonWolfBrother">
+		<IgnoreCastAnim>1</IgnoreCastAnim>
+		<IsCastable>0</IsCastable>
+		<DisplayName>Broodling</DisplayName>
+		<Description>Calls Fire shrill at start of combat</Description>
+		<Image>S_SummonFireElemental_Painting.png</Image>
+		<IconFG>S_SummonFireElemental_Icon.png</IconFG>
+		<IconBG>S_SummonFireElemental_Icon_BG.png</IconBG>
+		<IconColor>167,249,131</IconColor>
+		<AutoUnlock>1</AutoUnlock>
+		<CanStack>0</CanStack>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Summon</SpellSubClass>
+		<SpellTargetType>Self</SpellTargetType>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Broodling</StrVal>
+			<UnitClass>FireShrill_Brood</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression>
+					<![CDATA[[Unit_GetLevel]]]>
+				</Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression>
+					<![CDATA[[Calc]]]>
+				</Expression>
+			</Calculate>
+		</GameModifier>
+		<SoundFX>Spell_Summon_Fire_Elemental_01</SoundFX>
+		<SpellDefEffect>
+			<EffectName>S_SummonFireElemental_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.5</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<UnitType InternalName="FireShrill_Brood">
+		<DisplayName>Broodling</DisplayName>
+		<CreatureType>Elemental</CreatureType>
+		<CanBeDesigned>0</CanBeDesigned>
+		<IsSovereign>0</IsSovereign>
+		<HasWages>0</HasWages>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_Attack_Pierce>4</UnitStat_Attack_Pierce>
+			<UnitStat_Attack_Fire>3</UnitStat_Attack_Fire>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_CombatSpeed>24</UnitStat_CombatSpeed>
+			<UnitStat_Defense_Blunt>1</UnitStat_Defense_Blunt>
+			<UnitStat_Defense_Cutting>1</UnitStat_Defense_Cutting>
+			<UnitStat_Defense_Pierce>1</UnitStat_Defense_Pierce>
+			<UnitStat_Intelligence>1</UnitStat_Intelligence>
+			<UnitStat_WeightCapacity>100</UnitStat_WeightCapacity>
+			<UnitStat_AIControlChance>100</UnitStat_AIControlChance>
+			<UnitStat_BG_IsMonster>1</UnitStat_BG_IsMonster>
+			<UnitStat_BG_IsElemental>1</UnitStat_BG_IsElemental>
+		</LevelMilestone>
+		<LevelMilestone InternalName="L2">
+			<Level>2</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_Attack_Pierce>4</UnitStat_Attack_Pierce>
+			<UnitStat_Attack_Fire>4</UnitStat_Attack_Fire>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_CombatSpeed>24</UnitStat_CombatSpeed>
+			<UnitStat_Defense_Blunt>1</UnitStat_Defense_Blunt>
+			<UnitStat_Defense_Cutting>1</UnitStat_Defense_Cutting>
+			<UnitStat_Defense_Pierce>1</UnitStat_Defense_Pierce>
+			<UnitStat_Intelligence>1</UnitStat_Intelligence>
+			<UnitStat_WeightCapacity>100</UnitStat_WeightCapacity>
+		</LevelMilestone>
+		<LevelMilestone InternalName="L3">
+			<Level>3</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_Attack_Pierce>4</UnitStat_Attack_Pierce>
+			<UnitStat_Attack_Fire>5</UnitStat_Attack_Fire>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_CombatSpeed>24</UnitStat_CombatSpeed>
+			<UnitStat_Defense_Blunt>1</UnitStat_Defense_Blunt>
+			<UnitStat_Defense_Cutting>1</UnitStat_Defense_Cutting>
+			<UnitStat_Defense_Pierce>1</UnitStat_Defense_Pierce>
+			<UnitStat_Intelligence>1</UnitStat_Intelligence>
+			<UnitStat_WeightCapacity>100</UnitStat_WeightCapacity>
+		</LevelMilestone>
+		<LevelMilestone InternalName="L4">
+			<Level>4</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_Attack_Pierce>4</UnitStat_Attack_Pierce>
+			<UnitStat_Attack_Fire>6</UnitStat_Attack_Fire>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_CombatSpeed>24</UnitStat_CombatSpeed>
+			<UnitStat_Defense_Blunt>1</UnitStat_Defense_Blunt>
+			<UnitStat_Defense_Cutting>1</UnitStat_Defense_Cutting>
+			<UnitStat_Defense_Pierce>1</UnitStat_Defense_Pierce>
+			<UnitStat_Intelligence>1</UnitStat_Intelligence>
+			<UnitStat_WeightCapacity>100</UnitStat_WeightCapacity>
+		</LevelMilestone>
+		<LevelMilestone InternalName="L5">
+			<Level>5</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_Attack_Pierce>4</UnitStat_Attack_Pierce>
+			<UnitStat_Attack_Fire>7</UnitStat_Attack_Fire>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_CombatSpeed>24</UnitStat_CombatSpeed>
+			<UnitStat_Defense_Blunt>1</UnitStat_Defense_Blunt>
+			<UnitStat_Defense_Cutting>1</UnitStat_Defense_Cutting>
+			<UnitStat_Defense_Pierce>1</UnitStat_Defense_Pierce>
+			<UnitStat_Intelligence>1</UnitStat_Intelligence>
+			<UnitStat_WeightCapacity>100</UnitStat_WeightCapacity>
+		</LevelMilestone>
+		<LevelMilestone InternalName="L6">
+			<Level>6</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_Attack_Pierce>4</UnitStat_Attack_Pierce>
+			<UnitStat_Attack_Fire>8</UnitStat_Attack_Fire>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_CombatSpeed>24</UnitStat_CombatSpeed>
+			<UnitStat_Defense_Blunt>1</UnitStat_Defense_Blunt>
+			<UnitStat_Defense_Cutting>1</UnitStat_Defense_Cutting>
+			<UnitStat_Defense_Pierce>1</UnitStat_Defense_Pierce>
+			<UnitStat_Intelligence>1</UnitStat_Intelligence>
+			<UnitStat_WeightCapacity>100</UnitStat_WeightCapacity>
+		</LevelMilestone>
+		<LevelMilestone InternalName="L7">
+			<Level>7</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_Attack_Pierce>4</UnitStat_Attack_Pierce>
+			<UnitStat_Attack_Fire>9</UnitStat_Attack_Fire>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_CombatSpeed>24</UnitStat_CombatSpeed>
+			<UnitStat_Defense_Blunt>1</UnitStat_Defense_Blunt>
+			<UnitStat_Defense_Cutting>1</UnitStat_Defense_Cutting>
+			<UnitStat_Defense_Pierce>1</UnitStat_Defense_Pierce>
+			<UnitStat_Intelligence>1</UnitStat_Intelligence>
+			<UnitStat_WeightCapacity>100</UnitStat_WeightCapacity>
+		</LevelMilestone>
+		<LevelMilestone InternalName="L8">
+			<Level>8</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_Attack_Pierce>4</UnitStat_Attack_Pierce>
+			<UnitStat_Attack_Fire>10</UnitStat_Attack_Fire>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_CombatSpeed>24</UnitStat_CombatSpeed>
+			<UnitStat_Defense_Blunt>1</UnitStat_Defense_Blunt>
+			<UnitStat_Defense_Cutting>1</UnitStat_Defense_Cutting>
+			<UnitStat_Defense_Pierce>1</UnitStat_Defense_Pierce>
+			<UnitStat_Intelligence>1</UnitStat_Intelligence>
+			<UnitStat_WeightCapacity>100</UnitStat_WeightCapacity>
+		</LevelMilestone>
+		<LevelMilestone InternalName="L9">
+			<Level>9</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_Attack_Pierce>4</UnitStat_Attack_Pierce>
+			<UnitStat_Attack_Fire>11</UnitStat_Attack_Fire>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_CombatSpeed>24</UnitStat_CombatSpeed>
+			<UnitStat_Defense_Blunt>1</UnitStat_Defense_Blunt>
+			<UnitStat_Defense_Cutting>1</UnitStat_Defense_Cutting>
+			<UnitStat_Defense_Pierce>1</UnitStat_Defense_Pierce>
+			<UnitStat_Intelligence>1</UnitStat_Intelligence>
+			<UnitStat_WeightCapacity>100</UnitStat_WeightCapacity>
+		</LevelMilestone>
+		<LevelMilestone InternalName="L10">
+			<Level>10</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_Attack_Pierce>4</UnitStat_Attack_Pierce>
+			<UnitStat_Attack_Fire>12</UnitStat_Attack_Fire>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_CombatSpeed>24</UnitStat_CombatSpeed>
+			<UnitStat_Defense_Blunt>1</UnitStat_Defense_Blunt>
+			<UnitStat_Defense_Cutting>1</UnitStat_Defense_Cutting>
+			<UnitStat_Defense_Pierce>1</UnitStat_Defense_Pierce>
+			<UnitStat_Intelligence>1</UnitStat_Intelligence>
+			<UnitStat_WeightCapacity>100</UnitStat_WeightCapacity>
+		</LevelMilestone>
+		<LevelMilestone InternalName="L11">
+			<Level>11</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_Attack_Pierce>4</UnitStat_Attack_Pierce>
+			<UnitStat_Attack_Fire>13</UnitStat_Attack_Fire>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_CombatSpeed>24</UnitStat_CombatSpeed>
+			<UnitStat_Defense_Blunt>1</UnitStat_Defense_Blunt>
+			<UnitStat_Defense_Cutting>1</UnitStat_Defense_Cutting>
+			<UnitStat_Defense_Pierce>1</UnitStat_Defense_Pierce>
+			<UnitStat_Intelligence>1</UnitStat_Intelligence>
+			<UnitStat_WeightCapacity>100</UnitStat_WeightCapacity>
+		</LevelMilestone>
+		<LevelMilestone InternalName="L12">
+			<Level>12</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_Attack_Pierce>4</UnitStat_Attack_Pierce>
+			<UnitStat_Attack_Fire>14</UnitStat_Attack_Fire>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_CombatSpeed>24</UnitStat_CombatSpeed>
+			<UnitStat_Defense_Blunt>1</UnitStat_Defense_Blunt>
+			<UnitStat_Defense_Cutting>1</UnitStat_Defense_Cutting>
+			<UnitStat_Defense_Pierce>1</UnitStat_Defense_Pierce>
+			<UnitStat_Intelligence>1</UnitStat_Intelligence>
+			<UnitStat_WeightCapacity>100</UnitStat_WeightCapacity>
+		</LevelMilestone>
+		<LevelMilestone InternalName="L13">
+			<Level>13</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_Attack_Pierce>4</UnitStat_Attack_Pierce>
+			<UnitStat_Attack_Fire>15</UnitStat_Attack_Fire>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_CombatSpeed>24</UnitStat_CombatSpeed>
+			<UnitStat_Defense_Blunt>1</UnitStat_Defense_Blunt>
+			<UnitStat_Defense_Cutting>1</UnitStat_Defense_Cutting>
+			<UnitStat_Defense_Pierce>1</UnitStat_Defense_Pierce>
+			<UnitStat_Intelligence>1</UnitStat_Intelligence>
+			<UnitStat_WeightCapacity>100</UnitStat_WeightCapacity>
+		</LevelMilestone>
+		<LevelMilestone InternalName="L14">
+			<Level>14</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_Attack_Pierce>4</UnitStat_Attack_Pierce>
+			<UnitStat_Attack_Fire>16</UnitStat_Attack_Fire>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_CombatSpeed>24</UnitStat_CombatSpeed>
+			<UnitStat_Defense_Blunt>1</UnitStat_Defense_Blunt>
+			<UnitStat_Defense_Cutting>1</UnitStat_Defense_Cutting>
+			<UnitStat_Defense_Pierce>1</UnitStat_Defense_Pierce>
+			<UnitStat_Intelligence>1</UnitStat_Intelligence>
+			<UnitStat_WeightCapacity>100</UnitStat_WeightCapacity>
+		</LevelMilestone>
+		<LevelMilestone InternalName="L15">
+			<Level>15</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_Attack_Pierce>4</UnitStat_Attack_Pierce>
+			<UnitStat_Attack_Fire>17</UnitStat_Attack_Fire>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_CombatSpeed>24</UnitStat_CombatSpeed>
+			<UnitStat_Defense_Blunt>1</UnitStat_Defense_Blunt>
+			<UnitStat_Defense_Cutting>1</UnitStat_Defense_Cutting>
+			<UnitStat_Defense_Pierce>1</UnitStat_Defense_Pierce>
+			<UnitStat_Intelligence>1</UnitStat_Intelligence>
+			<UnitStat_WeightCapacity>100</UnitStat_WeightCapacity>
+		</LevelMilestone>
+		<LevelMilestone InternalName="L16">
+			<Level>16</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_Attack_Pierce>4</UnitStat_Attack_Pierce>
+			<UnitStat_Attack_Fire>18</UnitStat_Attack_Fire>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_CombatSpeed>24</UnitStat_CombatSpeed>
+			<UnitStat_Defense_Blunt>1</UnitStat_Defense_Blunt>
+			<UnitStat_Defense_Cutting>1</UnitStat_Defense_Cutting>
+			<UnitStat_Defense_Pierce>1</UnitStat_Defense_Pierce>
+			<UnitStat_Intelligence>1</UnitStat_Intelligence>
+			<UnitStat_WeightCapacity>100</UnitStat_WeightCapacity>
+		</LevelMilestone>
+		<LevelMilestone InternalName="L17">
+			<Level>17</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_Attack_Pierce>4</UnitStat_Attack_Pierce>
+			<UnitStat_Attack_Fire>19</UnitStat_Attack_Fire>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_CombatSpeed>24</UnitStat_CombatSpeed>
+			<UnitStat_Defense_Blunt>1</UnitStat_Defense_Blunt>
+			<UnitStat_Defense_Cutting>1</UnitStat_Defense_Cutting>
+			<UnitStat_Defense_Pierce>1</UnitStat_Defense_Pierce>
+			<UnitStat_Intelligence>1</UnitStat_Intelligence>
+			<UnitStat_WeightCapacity>100</UnitStat_WeightCapacity>
+		</LevelMilestone>
+		<LevelMilestone InternalName="L18">
+			<Level>18</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_Attack_Pierce>4</UnitStat_Attack_Pierce>
+			<UnitStat_Attack_Fire>20</UnitStat_Attack_Fire>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_CombatSpeed>24</UnitStat_CombatSpeed>
+			<UnitStat_Defense_Blunt>1</UnitStat_Defense_Blunt>
+			<UnitStat_Defense_Cutting>1</UnitStat_Defense_Cutting>
+			<UnitStat_Defense_Pierce>1</UnitStat_Defense_Pierce>
+			<UnitStat_Intelligence>1</UnitStat_Intelligence>
+			<UnitStat_WeightCapacity>100</UnitStat_WeightCapacity>
+		</LevelMilestone>
+		<LevelMilestone InternalName="L19">
+			<Level>19</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_Attack_Pierce>4</UnitStat_Attack_Pierce>
+			<UnitStat_Attack_Fire>21</UnitStat_Attack_Fire>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_CombatSpeed>24</UnitStat_CombatSpeed>
+			<UnitStat_Defense_Blunt>1</UnitStat_Defense_Blunt>
+			<UnitStat_Defense_Cutting>1</UnitStat_Defense_Cutting>
+			<UnitStat_Defense_Pierce>1</UnitStat_Defense_Pierce>
+			<UnitStat_Intelligence>1</UnitStat_Intelligence>
+			<UnitStat_WeightCapacity>100</UnitStat_WeightCapacity>
+		</LevelMilestone>
+		<LevelMilestone InternalName="L20">
+			<Level>20</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_Attack_Pierce>4</UnitStat_Attack_Pierce>
+			<UnitStat_Attack_Fire>22</UnitStat_Attack_Fire>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_CombatSpeed>24</UnitStat_CombatSpeed>
+			<UnitStat_Defense_Blunt>1</UnitStat_Defense_Blunt>
+			<UnitStat_Defense_Cutting>1</UnitStat_Defense_Cutting>
+			<UnitStat_Defense_Pierce>1</UnitStat_Defense_Pierce>
+			<UnitStat_Intelligence>1</UnitStat_Intelligence>
+			<UnitStat_WeightCapacity>100</UnitStat_WeightCapacity>
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>ImmuneToPoison</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>ImmuneToFire</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>VulnerableToCold</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>UnitStat_BG_IsSummonedAbility</SelectedAbilityBonusOption>
+		<Medallions InternalName="">
+			<All>FireShrill.png</All>
+		</Medallions>
+		<AlwaysInTileCenter>0</AlwaysInTileCenter>
+		<AnimationPack>ShrillAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>0.8</ClothMapScale>
+		<Color_Skin>65,0,0,255</Color_Skin>
+		<CutSceneDataPack>ShrillUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>gfx/eyes/male_brown_eye.png</EyeTexture>
+		<InfoCardBackground>BG4_Dark</InfoCardBackground>
+		<MaxScaleMainMap>1.8</MaxScaleMainMap>
+		<MaxScaleTacticalMap>0.6</MaxScaleTacticalMap>
+		<ModelPath>gfx/hkb/Monsters/M_Spider_Demon_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<SkeletonPath>Gfx\HKB\Monsters\M_Spider_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Spiderling</SoundPack>
+		<TacticalModelScale>0.6</TacticalModelScale>
+		<Texture_Skin>M_Spider_Texture_02.png</Texture_Skin>
+	</UnitType>
+
+</UnitTypes>

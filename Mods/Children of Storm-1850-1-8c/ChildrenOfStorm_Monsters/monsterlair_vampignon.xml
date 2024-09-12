@@ -1,0 +1,284 @@
+<?xml version="1.0"?>
+<Container>
+  <UnitType InternalName="Vampignon">
+    <DisplayName>Vampignon</DisplayName>
+    <CreatureType>Beast</CreatureType>
+    <CanBeDesigned>0</CanBeDesigned>
+    <IsSovereign>0</IsSovereign>
+    <AllowGrouping>0</AllowGrouping>
+    <HasWages>0</HasWages>
+    <SpawnRating>2</SpawnRating>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <UnitStat_Accuracy>75</UnitStat_Accuracy>
+      <UnitStat_CombatSpeed>16</UnitStat_CombatSpeed>
+      <UnitStat_Attack_Pierce>2</UnitStat_Attack_Pierce>
+      <UnitStat_Attack_Poison>2</UnitStat_Attack_Poison>
+      <UnitStat_HitPoints>2</UnitStat_HitPoints>
+      <UnitStat_BG_IsMonster>1</UnitStat_BG_IsMonster>
+      <UnitStat_BG_IsBeast>1</UnitStat_BG_IsBeast>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>ImmuneToPoison</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>VulnerableToFire</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Cannotbeknockedprone</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Regeneration1_Vampignon</SelectedAbilityBonusOption>
+    <Treasure>
+      <Liklihood>30</Liklihood>
+      <GameModifier>
+        <ModType>GiveItem</ModType>
+        <StrVal>Common</StrVal>
+      </GameModifier>
+    </Treasure>
+
+         <Treasure>
+      <Liklihood>70</Liklihood>
+       </Treasure>
+    <Backstory>Vampignon are half-beasts and half-fungi that exist in a state of permanent symbiosis. Roughly half the weight of the creature consists of fungi spread throughout its body. The fungi provides a poisonous defense against hostiles, and the "beast" part provides a mobile platform for the fungi and it is also responsible for consuming food.</Backstory>
+    <Medallions InternalName="">
+      <All>vampignon_medallion.png</All>
+    </Medallions>
+    <AlwaysInTileCenter>1</AlwaysInTileCenter>
+    <AnimationPack>4HydraAnimationPack</AnimationPack>
+    <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+    <ClothMapScale>0.615</ClothMapScale>
+    <Color_Skin>34,34,34,255</Color_Skin>
+    <CutSceneDataPack>SandCrawlerUnitCutscenePack</CutSceneDataPack>
+    <EyeTexture>gfx/eyes/male_brown_eye.png</EyeTexture>
+    <InfoCardBackground>BG_KingdomFertile</InfoCardBackground>
+    <ModelPath>vampignon_mesh.hkb</ModelPath>
+    <ModelScale>1</ModelScale>
+    <TacticalModelScale>1.5</TacticalModelScale>
+    <ClothMapScale>1.1000</ClothMapScale>
+    <SkeletonPath>vampignon_skeleton.hkb</SkeletonPath>
+    <SoundPack>SoundPack_Dragon1</SoundPack>
+    <Texture_All>vampignon_skin.dds</Texture_All>
+  </UnitType>
+  <AbilityBonus InternalName="Regeneration1Ability">
+    <AbilityBonusOption InternalName="Regeneration1_Vampignon">
+      <DisplayName>Strategic Regeneration</DisplayName>
+      <Description>Unit heals 2 points per round</Description>
+      <Icon>Ability_RegenerationI_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_HealthRegen</StrVal>
+        <Value>100</Value>
+        <Provides>Unit heals to 100% Hit Points every strategic turn</Provides>
+      </GameModifier>
+      <CombatRating>0</CombatRating>
+      <HideWhenUpgraded>1</HideWhenUpgraded>
+      <Type>Defensive</Type>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <GoodieHutType InternalName="Lair_Vampignon">
+    <Name>Vampignon Lair</Name>
+    <Description>Vampignon rarely stay in one place for long, but on occassion their camps can be found in forest areas.</Description>
+    <Rarity>40</Rarity>
+    <IsStartingPointObject>1</IsStartingPointObject>
+    <MinDistanceFromStartingPoints>3</MinDistanceFromStartingPoints>
+    <BarredTerrain>River</BarredTerrain>
+    <PreferredTerrain>Category:Land</PreferredTerrain>
+    <SpawnRating>0</SpawnRating>
+    <TileDesign>P_ThickSwampland1</TileDesign>
+    <DrawnIcon>Lair_Warg.png</DrawnIcon>
+    <OnSelectSFX>Click_Forest_Wolf</OnSelectSFX>
+    <Medallions InternalName="">
+      <All>vampignon_medallion.png</All>
+    </Medallions>
+    <Treasure>
+      <Liklihood>100</Liklihood>
+      <GameModifier>
+        <ModType>GiveItem</ModType>
+        <StrVal>Common</StrVal>
+      </GameModifier>
+    </Treasure>
+    <Encounter>
+      <Liklihood>100</Liklihood>
+      <WillRespawn>0</WillRespawn>
+      <WanderingRadius>0</WanderingRadius>
+      <UnitInstance>
+        <UnitType>Vampignon</UnitType>
+        <Level>2</Level>
+        <UnitGroupingType>UnitGroupingType_Party</UnitGroupingType>
+      </UnitInstance>
+      <UnitInstance>
+        <UnitType>Vampignon</UnitType>
+        <Level>1</Level>
+        <UnitGroupingType>UnitGroupingType_Party</UnitGroupingType>
+      </UnitInstance>
+    </Encounter>
+    <Encounter>
+      <Liklihood>-1</Liklihood>
+      <WillRespawn>1</WillRespawn>
+      <RespawnChance>5</RespawnChance>
+      <RespawnDelay>35</RespawnDelay>
+      <WanderingRadius>5</WanderingRadius>
+      <UnitInstance>
+        <UnitType>Vampignon</UnitType>
+        <Level>1</Level>
+        <UnitGroupingType>UnitGroupingType_Party</UnitGroupingType>
+      </UnitInstance>
+      <UnitInstance>
+        <UnitType>Vampignon</UnitType>
+        <Level>1</Level>
+        <UnitGroupingType>UnitGroupingType_Party</UnitGroupingType>
+      </UnitInstance>
+    </Encounter>
+  </GoodieHutType>
+  <AnimationPack InternalName="4HydraAnimationPack">
+    <DisplayName>Hydra Animation Pack</DisplayName>
+    <IsAvailableForSovereignCustomization>False</IsAvailableForSovereignCustomization>
+    <AnimationSubPack>4D_Hydra_Idle_Animations</AnimationSubPack>
+    <AnimationSubPack>4D_Hydra_HeroPoseFront_Animations</AnimationSubPack>
+    <AnimationSubPack>4D_Hydra_Run_Animations</AnimationSubPack>
+    <AnimationSubPack>4D_Hydra_BattleRun_Animations</AnimationSubPack>
+    <AnimationSubPack>4D_Hydra_BattleIdle_Animations</AnimationSubPack>
+    <AnimationSubPack>4D_Hydra_Attack_Animations</AnimationSubPack>
+    <AnimationSubPack>4D_Hydra_AttackKill_Animations</AnimationSubPack>
+    <AnimationSubPack>4D_Hydra_Dodge_Animations</AnimationSubPack>
+    <AnimationSubPack>4D_Hydra_Block_Animations</AnimationSubPack>
+    <AnimationSubPack>4D_Hydra_OnHit_Animations</AnimationSubPack>
+    <AnimationSubPack>4D_Hydra_Death_Animations</AnimationSubPack>
+    <AnimationSubPack>4D_Hydra_ClothPose_Animations</AnimationSubPack>
+  </AnimationPack>
+  <AnimationSubPack InternalName="4D_Hydra_Idle_Animations">
+    <Type>Idle</Type>
+    <AnimationInSubPack>
+      <Animation>4D_Hydra_Idle_01</Animation>
+      <likelihood>66</likelihood>
+    </AnimationInSubPack>
+    <AnimationInSubPack>
+      <Animation>4D_Hydra_Idle_02</Animation>
+      <likelihood>66</likelihood>
+    </AnimationInSubPack>
+    <AnimationInSubPack>
+      <Animation>4D_Hydra_Idle_03</Animation>
+      <likelihood>66</likelihood>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="4D_Hydra_HeroPoseFront_Animations">
+    <Type>HeroPoseFront</Type>
+    <AnimationInSubPack>
+      <Animation>4D_Hydra_Idle_01</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="4D_Hydra_Run_Animations">
+    <Type>Run</Type>
+    <AnimationInSubPack>
+      <Animation>4D_Hydra_Run_01</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="4D_Hydra_BattleRun_Animations">
+    <Type>BattleRun</Type>
+    <AnimationInSubPack>
+      <Animation>4D_Hydra_BattleRun_01</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="4D_Hydra_BattleIdle_Animations">
+    <Type>BattleIdle</Type>
+     <AnimationInSubPack>
+      <Animation>4D_Hydra_Idle_01</Animation>
+      <likelihood>66</likelihood>
+    </AnimationInSubPack>
+    <AnimationInSubPack>
+      <Animation>4D_Hydra_Idle_02</Animation>
+      <likelihood>66</likelihood>
+    </AnimationInSubPack>
+    <AnimationInSubPack>
+      <Animation>4D_Hydra_Idle_03</Animation>
+      <likelihood>66</likelihood>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="4D_Hydra_Attack_Animations">
+    <Type>Attack</Type>
+    <AnimationInSubPack>
+      <Animation>4D_Hydra_Attack_01</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="4D_Hydra_AttackKill_Animations">
+    <Type>AttackKill</Type>
+    <AnimationInSubPack>
+      <Animation>4D_Hydra_Attack_01</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="4D_Hydra_Dodge_Animations">
+    <Type>Dodge</Type>
+    <AnimationInSubPack>
+      <Animation>4D_Hydra_Dodge_01</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="4D_Hydra_Block_Animations">
+    <Type>Block</Type>
+    <AnimationInSubPack>
+      <Animation>4D_Hydra_Onhit_01</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="4D_Hydra_OnHit_Animations">
+    <Type>OnHit</Type>
+    <AnimationInSubPack>
+      <Animation>4D_Hydra_Onhit_01</Animation>
+      <likelihood>25</likelihood>
+    </AnimationInSubPack>
+    <AnimationInSubPack>
+      <Animation>4D_Hydra_Onhit_02</Animation>
+      <likelihood>25</likelihood>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="4D_Hydra_Death_Animations">
+    <Type>Death</Type>
+    <AnimationInSubPack>
+      <Animation>4D_Hydra_Death_01</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="4D_Hydra_ClothPose_Animations">
+    <Type>ClothPose</Type>
+    <AnimationInSubPack>
+      <Animation>4D_Hydra_ClothPose_01</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <Animation InternalName="4D_Hydra_ClothPose_01">
+    <FileName>vampignon_animation_clothpose01.hkb</FileName>
+    <CropFrames>0</CropFrames>
+  </Animation>
+  <Animation InternalName="4D_Hydra_Idle_01">
+    <FileName>vampignon_animation_idle01.hkb</FileName>
+    <CropFrames>0</CropFrames>
+  </Animation>
+  <Animation InternalName="4D_Hydra_Idle_02">
+    <FileName>vampignon_animation_idle02.hkb</FileName>
+    <CropFrames>0</CropFrames>
+  </Animation>
+  <Animation InternalName="4D_Hydra_Idle_03">
+    <FileName>vampignon_animation_idle03.hkb</FileName>
+    <CropFrames>0</CropFrames>
+  </Animation>
+  <Animation InternalName="4D_Hydra_Run_01">
+    <FileName>vampignon_animation_run01.hkb</FileName>
+    <DeltaZ>225</DeltaZ>
+    <PlaybackSpeedModifier>1.5</PlaybackSpeedModifier>
+  </Animation>
+  <Animation InternalName="4D_Hydra_BattleRun_01">
+    <FileName>vampignon_animation_run01.hkb</FileName>
+    <DeltaZ>225</DeltaZ>
+    <PlaybackSpeedModifier>1.5</PlaybackSpeedModifier>
+  </Animation>
+  <Animation InternalName="4D_Hydra_Attack_01">
+    <FileName>vampignon_animation_attack01.hkb</FileName>
+    <CropFrames>2</CropFrames>
+  </Animation>
+  <Animation InternalName="4D_Hydra_Onhit_01">
+    <FileName>vampignon_animation_attacked01.hkb</FileName>
+  </Animation>
+  <Animation InternalName="4D_Hydra_Onhit_02">
+    <FileName>vampignon_animation_attacked02.hkb</FileName>
+  </Animation>
+  <Animation InternalName="4D_Hydra_Dodge_01">
+    <FileName>vampignon_animation_dodge01.hkb</FileName>
+  </Animation>
+  <Animation InternalName="4D_Hydra_Death_01">
+    <FileName>vampignon_animation_death01.hkb</FileName>
+  </Animation>
+</Container>

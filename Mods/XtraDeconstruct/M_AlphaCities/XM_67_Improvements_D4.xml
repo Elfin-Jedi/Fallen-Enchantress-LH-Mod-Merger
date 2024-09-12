@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--City Levels 6 and 7 by D. Elliot Lamb a.k.a davrovana-->
+<!--XtraDeconstruct 3.0 by Primal-->
+<ImprovementTypes>
+	<ImprovementType InternalName="CityHub6_XM_Conclave">
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Graves</Attribute>
+			<Value>125</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+125 Graves</Provides>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="CityHub6_XM_Fortress">
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Graves</Attribute>
+			<Value>125</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+125 Graves</Provides>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="CityHub6_XM_Town">
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Graves</Attribute>
+			<Value>125</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+125 Graves</Provides>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="CityHub6_XM_Darkling">
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Graves</Attribute>
+			<Value>125</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+125 Graves</Provides>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="CityHub7_XM_Conclave">
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Graves</Attribute>
+			<Value>150</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+150 Graves</Provides>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="CityHub7_XM_Fortress">
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Graves</Attribute>
+			<Value>150</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+150 Graves</Provides>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="CityHub7_XM_Town">
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Graves</Attribute>
+			<Value>150</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+150 Graves</Provides>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="CityHub7_XM_Darkling">
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Graves</Attribute>
+			<Value>150</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+150 Graves</Provides>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="Necropolis">
+		<Description>A large memorial to the dead.</Description>
+		<UpgradesToImprovement>Necropolis2</UpgradesToImprovement>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>DLC04_UndeadFaction</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<HideInHiergamenon>1</HideInHiergamenon>
+	</ImprovementType>
+	<ImprovementType InternalName="Necropolis2">
+		<DisplayName>Halls Of The Dead</DisplayName>
+		<Description>An upgraded necropolis.</Description>
+		<RequiresCity>1</RequiresCity>
+		<BarredTerrain>River</BarredTerrain>
+		<BarredTerrain>SwampTerrain</BarredTerrain>
+		<PreferredTerrain>City</PreferredTerrain>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<PreferredTerrain>Forest</PreferredTerrain>
+		<UpgradesToImprovement>Necropolis3</UpgradesToImprovement>
+		<UpgradeTier>4</UpgradeTier>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>DLC04_UndeadFaction</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Guilds</Attribute>
+		</Prereq>
+		<LaborToBuild>1600</LaborToBuild>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Graves</Attribute>
+			<Value>1300</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1300 Graves</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+			<UpgradeComparisonText>Graves</UpgradeComparisonText>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>-1% Unrest</Provides>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>300</AIPriority>
+			<AITag>Economy</AITag>
+		</AIData>
+		<ArtDef>DLC04_Necropolis_ArtDef</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="Necropolis3">
+		<DisplayName>Undercity Of The Dead</DisplayName>
+		<Description>The ultimate upgrade to the ultimate memorial to the dead.</Description>
+		<RequiresCity>1</RequiresCity>
+		<BarredTerrain>River</BarredTerrain>
+		<BarredTerrain>SwampTerrain</BarredTerrain>
+		<PreferredTerrain>City</PreferredTerrain>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<PreferredTerrain>Forest</PreferredTerrain>
+		<UpgradeTier>5</UpgradeTier>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>DLC04_UndeadFaction</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Guilds</Attribute>
+		</Prereq>
+		<LaborToBuild>3600</LaborToBuild>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Graves</Attribute>
+			<Value>3000</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+3000 Graves</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+			<UpgradeComparisonText>Graves</UpgradeComparisonText>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>-1% Unrest</Provides>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>115</AIPriority>
+			<AITag>Economy</AITag>
+		</AIData>
+		<ArtDef>DLC04_Necropolis_ArtDef</ArtDef>
+	</ImprovementType>
+</ImprovementTypes>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<UnitTypes>
+	<UnitType InternalName="Angel_Oran">
+		<CreatureType>Champion</CreatureType>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-5</Value>
+			<Provides>-5% Unrest in the city this unit is in</Provides>
+		</GameModifier>
+
+		<DisplayName>Oran</DisplayName>
+		<Backstory>Oran is driven by a deep and compelling need to reclaim and repair the world torn asunder by the Cataclysm.  To Oran, the theosophical questions facing his people are secondary to the need to actively work to cleanse the taint of the Titans' damage to the world, and to restore it to its former beauty and vigor.  Oran desire is so overwhelming that he would gladly sacrifice his own well being to bring it about.</Backstory>
+
+		<ModelPath>Gfx\HKB\Units\K_Male_Mesh_01.hkb</ModelPath>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<EyeTexture>gfx\eyes\blinks\eyeblink_m2_ltblue.png</EyeTexture>
+		<AnimationPack>EF_SoldierAnimationPack</AnimationPack>
+		
+		<ShowAsSingleUnit>false</ShowAsSingleUnit>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<ModelScale>1.0000</ModelScale>
+		<TacticalModelScale>1.5000</TacticalModelScale>
+		<EquipmentScale>1.0000</EquipmentScale>
+		<ClothMapScale>1.6</ClothMapScale>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<MovementType>land</MovementType>
+		<BobbingFrequency>0.0000</BobbingFrequency>
+		
+		<ClothPoseIndex>5</ClothPoseIndex>
+		<InfoCardBackground>BG37_Field</InfoCardBackground>
+		<InfoCardBackgroundFlipped>1</InfoCardBackgroundFlipped>
+		
+		<CanBeDesigned>0</CanBeDesigned>
+		<Allegiance>Kingdom</Allegiance>
+		<Unique>1</Unique>
+		<IsNPC>1</IsNPC>
+		<NPCSpawnLikelihood>100</NPCSpawnLikelihood>
+		<IsChampion>1</IsChampion>
+		<SpawnRating>7</SpawnRating>
+		<Quote>I weep for that which has been lost, but rejoice in that which has been restored.  Let us further the healing process.</Quote>
+		<NPCRecruitmentText>%d gildar would show me that you are sincere.</NPCRecruitmentText>
+
+		<Medallions InternalName=""/>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Angel>1</UnitStat_BG_IsRace_Angel>
+			<UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsMale>1</UnitStat_BG_IsMale>
+			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
+			<UnitStat_BG_IsCelestial>1</UnitStat_BG_IsCelestial>
+			<UnitStat_HitPoints>20</UnitStat_HitPoints>
+			<UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_Reliquary_CanLiftCurse>1.0000</UnitStat_Reliquary_CanLiftCurse>
+		</LevelMilestone>
+		
+		<Equipment>EF_Angel_K_Male_Head_01</Equipment>
+		<Equipment>Wizard_Beard</Equipment>
+		<Equipment>F_LongThick_Hair_Mesh_01</Equipment>
+		<Equipment>Sovereign_Warrior_Shirt_Crappy_ID1</Equipment>
+		<Equipment>Peasant_Pants_ID1</Equipment>
+		<Equipment>Basic_Boots_Leather</Equipment>
+		
+		<AutoCreateEquipment>Staff_Monks</AutoCreateEquipment>
+		<AutoCreateEquipment>AmuletofWarding</AutoCreateEquipment>
+		<AutoCreateEquipment>FirstAidKit</AutoCreateEquipment>
+		<AutoCreateEquipment>Potion_Healing</AutoCreateEquipment>
+		<AutoCreateEquipment>Scroll_Wellspring</AutoCreateEquipment>
+		
+		<Color_Skin>229,165,99,255</Color_Skin>
+		<Color_Hair>255,255,207,255</Color_Hair>
+		<Color_Clothing1>200,200,200,255</Color_Clothing1>
+		<Color_Clothing2>255,255,255,255</Color_Clothing2>
+		<Color_Metal>255,255,255,255</Color_Metal>
+		<Texture_Skin>K_Male_beard_Texture_01.png</Texture_Skin>
+		<Texture_Eyes>gfx\eyes\blinks\eyeblink_m2_ltblue.png</Texture_Eyes>
+		
+		<Gender>Male</Gender>
+		<UnitModelType>AngelMale</UnitModelType>
+		<SoundPack>SoundPack_Generic_Male</SoundPack>
+		
+		<SelectedAbilityBonusOption>Blood_Angel</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>PathOfTheMage</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Oran_Sacrifice</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Life1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Life2</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Earth1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Compassion</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Medic</SelectedAbilityBonusOption>
+		
+		<NPCFreeRecruit>0</NPCFreeRecruit>
+		<RaceType>Race_Type_Angel</RaceType>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<WageOverride>1</WageOverride>
+	</UnitType>
+	
+	<AbilityBonus InternalName="Oran_SacrificeAbility">
+		<AbilityBonusOption InternalName="Oran_Sacrifice">
+			<DisplayName>Restoration Through Sacrifice</DisplayName>
+			<Description>Oran's strength of purpose is so strong that he can focus his own celestial life energy to heal the land, at great personal cost.</Description>
+			<Icon>S_Regeneration_Icon.png</Icon>
+			<GameModifier>
+				<Provides>Attempt to revive a small section of the land by expending personal life force, at the permanent cost of -5 hit points (and 30 mana.)</Provides>
+			</GameModifier>
+			<IsCombatAbility>1</IsCombatAbility>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+
+	<SpellDef InternalName="Oran_Revive">
+		<DisplayName>Restoration Through Sacrifice</DisplayName>
+		<Description>Attempt to revive a small section of the land by expending personal life force, at the permanent cost of -5 hit points (and 30 mana.)</Description>
+		<Image>ReviveLand_Painting.png</Image>
+		<IconFG>S_Regeneration_Icon.png</IconFG>
+		<IconColor>230,230,230</IconColor>
+		<SpellBookSortCategory>World</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Map</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Terraform</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>NeutralGround</SpellTargetType>
+		<CasterMustBeSov>1</CasterMustBeSov>
+		<Radius>0</Radius>
+		<AutoUnlock>1</AutoUnlock>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Oran_Sacrifice</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>30</Amount>
+		</SpellResourceCost>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>PlaceEnvironment</Attribute>
+			<TerrainType>GrasslandEnvironment</TerrainType>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_HitPoints</StrVal>
+			<ApplyToCaster>1</ApplyToCaster>
+			<Value>-5</Value>
+		</GameModifier>
+		<ValidTerrainCategory>Forest</ValidTerrainCategory>
+		<ValidTerrainCategory>Land</ValidTerrainCategory>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+		</AIData>
+		<HitSoundFX>Spell_DestinyGift_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>Revive_Land</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>.5</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	
+</UnitTypes>

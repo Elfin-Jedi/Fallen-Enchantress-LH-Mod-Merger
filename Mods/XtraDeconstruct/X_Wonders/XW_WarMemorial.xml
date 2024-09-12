@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<ImprovementTypes>
+	<ImprovementType InternalName="Imp_X_WarMemorial">
+		<DisplayName>War Memorial</DisplayName>
+		<Description>A magnificent monument to the dead.
+		
+		+1 Fame per Season
+		+100 Fame
+		+2 Death Power
+		+3 Growth
+		+33% Graves per City
+		-1% Unrest
+		-2% Unrest in all your cities
+		</Description>
+		<AllowedPerGame>1</AllowedPerGame>
+		<RequiresCity>1</RequiresCity>
+		<BarredTerrain>River</BarredTerrain>
+		<BarredTerrain>SwampTerrain</BarredTerrain>
+		<PreferredTerrain>City</PreferredTerrain>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<PreferredTerrain>Forest</PreferredTerrain>
+		<RequiresCityImprovement>1</RequiresCityImprovement>
+		<RequiredImprovement>Fortress</RequiredImprovement>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_UnderworldHordes</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Lizardmeninferiority</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Ascetics</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<LaborToBuild>1998</LaborToBuild>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_XL_Beer</Attribute>
+			<Value>-50</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Fame</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Fame per Season</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>DeathMana</Attribute>
+			<Value>2</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+2 Death power</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Prestige</Attribute>
+			<Value>3</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+3 Growth</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Fame</Attribute>
+			<Value>100</Value>
+			<Provides>+100 Fame</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_Graves</StrVal>
+			<Value>33</Value>
+			<Provides>+33% Graves per City</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>-1% Unrest</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_Additive_Unrest</StrVal>
+			<Value>-2</Value>
+			<Provides>-2% Unrest in all your cities</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithDeathShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>933</AIPriority>
+			<AITag>Shards</AITag>
+		</AIData>
+		<ArtDef>ArtDef_X_WarMemorial_Wonder</ArtDef>
+	</ImprovementType>
+</ImprovementTypes>

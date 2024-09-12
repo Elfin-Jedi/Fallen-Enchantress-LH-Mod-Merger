@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<UnitTypes>
+	<UnitType InternalName="Undead_Cormath">
+		<CreatureType>Champion</CreatureType>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-5</Value>
+			<Provides>-5% Unrest in the city this unit is in</Provides>
+		</GameModifier>
+
+		<DisplayName>Cormath</DisplayName>
+		<Backstory>Cormath was one of the five magicians who sacrificed themselves in order to resurrect the Fifth Patriach, who became the Skeleton King.  His body was discarded after the unholy ritual, but after a number of years his spirit re-inhabited the now skeletal remains, perhaps called back by the various necromantic magics being practiced on a frequent basis in the kingdom.  Unlike the vast majority of the undead, who are created in special binding rituals, Cormath has retained his mental faculties and self-will.  Horrified to find his new condition, and even more aghast upon learning the results of his sacrifice, Cormath fled the lands of the Skeleton King.  He was to find little shelter in the lands of the living where most assumed, with understandable caution, that he was a vengeful spirit.  With no particular need for food or shelter, though, he has been roaming the wastes, seeking a means to repair the curse that he unwittingly helped unleash upon the land; he feels that perhaps if he does so, then his spirit may at last rest in peace.</Backstory>
+
+		<ModelPath>undeadmainbody.hkb</ModelPath>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<EyeTexture>gfx\Eyes\blinks\eyeblink_m5_Black.png</EyeTexture>
+		<AnimationPack>EF_MaleSovereignAnimationPack</AnimationPack>
+		
+		<ShowAsSingleUnit>false</ShowAsSingleUnit>		
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		
+		<ModelScale>1.0000</ModelScale>
+		<TacticalModelScale>1.9000</TacticalModelScale>
+		<EquipmentScale>1.0000</EquipmentScale>
+		<ClothMapScale>1.6</ClothMapScale>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<MovementType>land</MovementType>
+		<BobbingFrequency>0.0000</BobbingFrequency>
+		
+		<ClothPoseIndex>5</ClothPoseIndex>
+		<InfoCardBackground>BG42_Watershrine</InfoCardBackground>
+		<InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+		
+		<CanBeDesigned>0</CanBeDesigned>
+		<Medallions InternalName=""/>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		
+		<Allegiance>Kingdom</Allegiance>
+		<Unique>1</Unique>
+		<IsNPC>1</IsNPC>
+		<NPCSpawnLikelihood>100</NPCSpawnLikelihood>
+		<IsChampion>1</IsChampion>
+		<Gender>Male</Gender>
+		<SpawnRating>5</SpawnRating>
+
+		<Quote>Please, look past my outward appearance and let me help restore that which has been defiled.</Quote>
+		<NPCRecruitmentText>%d Gildar will pay for expenses.</NPCRecruitmentText>
+		<SelectedAbilityBonusOption>Blood_CoS_Undead</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>PathOfTheMage</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Athropy</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Air1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Water1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Fire1</SelectedAbilityBonusOption>
+
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<UnitStat_BG_IsHumanoid>1.0000</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsKingdom>1.0000</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsNotAlive>1</UnitStat_BG_IsNotAlive>
+			<UnitStat_BG_IsRace_Undead>1.0000</UnitStat_BG_IsRace_Undead>
+			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
+			<UnitStat_BG_IsUndead>1</UnitStat_BG_IsUndead>
+			<UnitStat_BG_IsImmortal>1</UnitStat_BG_IsImmortal>
+			<UnitStat_CombatSpeed>22.0000</UnitStat_CombatSpeed>
+			<UnitStat_HitPoints>20.0000</UnitStat_HitPoints>
+			<UnitStat_ImmuneToFear>1</UnitStat_ImmuneToFear>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+		</LevelMilestone>
+		
+		<Equipment>Sovereign_Robe_ID1</Equipment>
+		<Equipment>Muchant_Cloak_ID1</Equipment>
+		
+		<AutoCreateEquipment>Staff_Casters</AutoCreateEquipment>
+		<AutoCreateEquipment>EmeraldSkullcap</AutoCreateEquipment>
+		
+		<Color_Skin>255,255,255,255</Color_Skin>
+		<Color_Hair>0,0,0,255</Color_Hair>
+		<Color_Clothing1>255,0,0,255</Color_Clothing1>
+		<Color_Clothing2>255,255,0,255</Color_Clothing2>
+		<Color_Metal>0,0,255,255</Color_Metal>
+		<Texture_Skin>Undead_skin.png</Texture_Skin>
+		
+		<UnitModelType>Undead</UnitModelType>
+		<NPCFreeRecruit>0</NPCFreeRecruit>
+		<RaceType>Race_Type_Undead</RaceType>
+		<WageOverride>1</WageOverride>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SoundPack>SoundPack_Skeleton</SoundPack>
+	</UnitType>
+</UnitTypes>

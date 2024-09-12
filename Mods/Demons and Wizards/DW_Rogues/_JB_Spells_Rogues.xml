@@ -1,0 +1,358 @@
+<?xml version="1.0"?>
+<AbilityBonuses>
+
+	<SpellDef InternalName="JB_SetMark_Ability">
+        <DisplayName>Mark Unit</DisplayName>
+        <Description>Set a Assassin's Death Mark on target unit for duration of combat</Description>
+        <Image>T_Graveseal_Painting.png</Image>
+        <IconFG>JB_Ability_Mark_Icon.png</IconFG>
+        <CanStack>0</CanStack>
+        <Cooldown>99</Cooldown>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitCurse</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Debuff</SpellSubClass>
+        <SpellTargetType>EnemyUnit</SpellTargetType>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <IsCastable>0</IsCastable>
+        <IsSpecialAbility>1</IsSpecialAbility>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockUnitAbility</Attribute>
+			<StrVal>JB_AssassinsMark</StrVal>
+			<Duration>-1</Duration>
+			<Provides>Marked for Death</Provides>
+		</GameModifier>	
+        <AIData AIPersonality="AI_General">
+            <AIPriority>30</AIPriority>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+					<Expression><![CDATA[[Unit_GetHPCurrent]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc] > 15]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+        </AIData>
+        <CasterAnimationType>31</CasterAnimationType>	
+        <HitSoundFX>Spell_DarkEnchant_04</HitSoundFX>	
+        <SpellDefEffect>
+            <EffectName>Y_TrueStrike_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>1</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+	<!--
+    <SpellDef InternalName="JB_Assassinate">
+        <DisplayName>Assassinate</DisplayName>
+        <Description>Target unit (randomly) loses either 0, 1, 2 or 3 times caster level hit points.</Description>
+        <Image>T_Graveseal_Painting.png</Image>
+        <IconFG>JB_Assassinate_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <CanStack>0</CanStack>
+        <Cooldown>10</Cooldown>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+        <SpellType>Strategic</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Damage</SpellSubClass>
+        <SpellTargetType>EnemyUnit</SpellTargetType>
+        <HideInHiergamenon>0</HideInHiergamenon>
+        <AppliesRandomModifier>1</AppliesRandomModifier>
+        <Range>4</Range>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>donothingunitstat</StrVal>
+			<Value>0</Value>
+			<Duration>0</Duration>
+		</GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>CurHealth</Attribute>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Unit_GetLevel] * -1]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Calc2">
+                <Expression><![CDATA[[Calc] + 0]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Calc3" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Calc2] * [UnitStat_JB_BonusAssassinate]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc3]]]></Expression>
+            </Calculate>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>CurHealth</Attribute>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Unit_GetLevel] * -2]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Calc2">
+                <Expression><![CDATA[[Calc] + 0]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Calc3" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Calc2] * [UnitStat_JB_BonusAssassinate]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc3]]]></Expression>
+            </Calculate>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>CurHealth</Attribute>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Unit_GetLevel] * -3]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Calc2">
+                <Expression><![CDATA[[Calc] + 0]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Calc3" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Calc2] * [UnitStat_JB_BonusAssassinate]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc3]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>JB_Spell_Assassinate1</Attribute>
+        </Prereq>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>25</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_TrueStrike_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>JB_S_Assassinate_Particle</EffectName>
+            <LocalPosition>0,50,0</LocalPosition>
+            <EffectScale>1</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>		
+	-->
+    <SpellDef InternalName="JB_Trap_Ability">
+        <DisplayName>Trap</DisplayName>
+        <Description>At the start of combat a random enemy unit suffers damage equal to the caster level and is immobilized for 2 turns.</Description>
+        <Image>T_Barbs_Painting.png</Image>
+        <IconFG>JB_Trap_Icon.png</IconFG>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitCurse</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Debuff</SpellSubClass>
+        <SpellTargetType>RandomEnemyUnit</SpellTargetType>
+        <HideInHiergamenon>0</HideInHiergamenon>
+        <IsResistable>1</IsResistable>
+        <IsCastable>0</IsCastable>
+        <IsSpecialAbility>1</IsSpecialAbility>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SetUnitStat</Attribute>
+            <StrVal>UnitStat_Moves</StrVal>
+            <DisplayName>Trapped</DisplayName>
+            <Duration>2</Duration>
+            <Effect>E_TangledWeb_Particle</Effect>
+            <PerTurn>1</PerTurn>
+            <Value>0</Value>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SetUnitStat</Attribute>
+            <StrVal>UnitStat_Dodge</StrVal>
+            <Duration>2</Duration>
+            <PerTurn>1</PerTurn>
+            <Value>0</Value>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>CurHealth</Attribute>
+            <IsForFormattedDescription>1</IsForFormattedDescription>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Unit_GetLevel] * -1]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>		
+        <AIData AIPersonality="AI_General">
+            <AIPriority>15</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_TangledWeb_02</HitSoundFX>
+        <HitSoundFX>Ability_Impale</HitSoundFX>		
+        <SpellDefEffect>
+            <EffectName>Y_TrueStrike_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>1</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>		
+    <SpellDef InternalName="JB_Spotter_Effect">
+        <DisplayName>Spotter</DisplayName>
+        <Description>All friendly units are +1 Initiative for the first turn of combat.</Description>
+        <Image>JB_Ability_Spotter_Icon.png</Image>
+        <IconFG>JB_Ability_Spotter_Icon.png</IconFG>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>AllFriendlyUnits</SpellTargetType>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <IgnoreCastAnim>1</IgnoreCastAnim>
+        <IsCastable>0</IsCastable>
+        <IsSpecialAbility>1</IsSpecialAbility>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_CombatSpeed</StrVal>
+            <Duration>1</Duration>
+			<Value>1</Value>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+        </AIData>
+    </SpellDef>
+	<SpellDef InternalName="JB_Reconnaissance_Ability">
+        <DisplayName>Reconnaissance</DisplayName>
+        <Description>Briefly reveals the map in a 7 tile radius from the caster.</Description>
+        <Image>B1_C4_TarthanBowmen.png</Image>
+        <IconFG>JB_Ability_Reconnaissance_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <CanStack>0</CanStack>
+        <Cooldown>10</Cooldown>
+        <SpellBookSortCategory>World</SpellBookSortCategory>
+        <SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+        <SpellType>Strategic</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>Self</SpellTargetType>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <Radius>1</Radius>
+        <GameModifier>
+            <ModType>Map</ModType>
+            <Attribute>Reveal</Attribute>
+            <Duration>1</Duration>
+            <Value>6</Value>
+        </GameModifier>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>JB_Reconnaissance</Attribute>
+        </Prereq>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_Wither_01</HitSoundFX>
+    </SpellDef>	 		
+	<SpellDef InternalName="JB_CallBear_Ranger_Ability">
+        <DisplayName>Call Bear</DisplayName>
+		<Description>Call a Bear (level equal to the caster) into tactical combat.</Description>
+		<FormattedDescription>Call a level %d Bear into tactical combat.</FormattedDescription>
+        <Image>Bear_Medallion.png</Image>
+        <IconFG>JB_SummonBear_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <CanStack>0</CanStack>
+        <Cooldown>5</Cooldown>
+        <CastTime>0</CastTime>
+        <SpellBookSortCategory>Summon</SpellBookSortCategory>
+        <SpellBookSortSubCategory>Summon</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Summon</SpellSubClass>
+        <SpellTargetType>EmptyTile</SpellTargetType>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <IsSpecialAbility>1</IsSpecialAbility>
+        <Range>3</Range>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>JB_SummonAllyKingdom_Ranger</Attribute>
+        </Prereq>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SummonUnit</Attribute>
+            <StrVal>Bear</StrVal>
+            <UnitClass>Bear</UnitClass>
+            <IsForFormattedDescription>1</IsForFormattedDescription>
+            <Duration>-1</Duration>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Unit_GetLevel] + 0]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Unit_GetLevel] + 0]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>1000</AIPriority>
+        </AIData>
+		<HitSoundFX>Click_Cave_Bear</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>JB_S_SummonNature_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.5</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+    </SpellDef>
+	<SpellDef InternalName="JB_CallDireBoar_Ranger_Ability">
+        <DisplayName>Call Dire Boar</DisplayName>
+		<Description>Call a Dire Boar (level equal to the caster) into tactical combat.</Description>
+		<FormattedDescription>Call a level %d Dire Boar into tactical combat.</FormattedDescription>
+        <Image>JB_DireBoar_Card.png</Image>
+        <IconFG>JB_SummonWildBoar_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <CanStack>0</CanStack>
+        <Cooldown>5</Cooldown>
+        <CastTime>0</CastTime>
+        <SpellBookSortCategory>Summon</SpellBookSortCategory>
+        <SpellBookSortSubCategory>Summon</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Summon</SpellSubClass>
+        <SpellTargetType>EmptyTile</SpellTargetType>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <IsSpecialAbility>1</IsSpecialAbility>
+        <Range>3</Range>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>JB_SummonAllyEmpire_Ranger</Attribute>
+        </Prereq>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SummonUnit</Attribute>
+            <StrVal>Dire Boar</StrVal>
+            <UnitClass>JB_DireBoar</UnitClass>
+            <IsForFormattedDescription>1</IsForFormattedDescription>
+            <Duration>-1</Duration>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Unit_GetLevel] + 0]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Unit_GetLevel] + 0]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>1000</AIPriority>
+        </AIData>
+		<HitSoundFX>Warg_Hit2</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>JB_S_SummonBeast_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.5</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+    </SpellDef>
+
+	
+</AbilityBonuses>

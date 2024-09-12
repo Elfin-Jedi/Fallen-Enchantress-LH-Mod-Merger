@@ -1,0 +1,1670 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<AbilityBonuses>
+
+	<ContainerPathSummoner>
+	    <AbilityBonus InternalName="JB_PathOfTheSummonerAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusType>Unit_Level_Path</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_PathOfTheSummoner">
+				<DisplayName>Summoner</DisplayName>
+				<Description>Others may summon, but none with the proficiency of a true summoner.</Description>
+				<Icon>JB_Ability_PathSummoner_Icon.png</Icon>
+				<TraitTreePicture>trait_tree_unit_summoner.png</TraitTreePicture>
+				<BackgroundColor>96,75,126</BackgroundColor>
+				<HighlightColor>140,78,224</HighlightColor>
+				<GameModifier>
+					<Provides>+25% reduction in mana cost for tactical summons</Provides>
+				</GameModifier>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_JB_SummmonManaRefund</StrVal>
+					<Value>0.25</Value>
+					<Provides>+25% reduction in mana cost for strategic summons (refunded post casting)</Provides>
+				</GameModifier>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>ProduceResource</Attribute>
+					<StrVal>JB_Summons</StrVal>
+					<Value>3</Value>
+					<Provides>+3 Summon Pool</Provides>
+				</GameModifier>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_PathOfTheMage</StrVal>
+					<Value>1</Value>
+					<Provides>Unlocks traits that improve summoning</Provides>
+				</GameModifier>
+				<RequiredLevel>2</RequiredLevel>
+				<Type>Spell</Type>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="JB_Summoner_KnowledgeAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Summoner_Knowledge">
+				<DisplayName>Knowledge</DisplayName>
+				<Description>+25% Experience</Description>
+				<Icon>Ability_Knowledge_Icon.png</Icon>
+				<PerkTreePosX>0</PerkTreePosX>
+				<PerkTreePosY>0</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_ExpBonus</StrVal>
+					<Value>25</Value>
+					<Provides>+25% Experience</Provides>
+				</GameModifier>
+				<Type>Defensive</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_PathOfTheSummoner</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>		
+		<AbilityBonus InternalName="JB_Summoner_SummonGroup1Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Summoner_SummonGroup1">
+				<DisplayName>Group Summoning I</DisplayName>
+				<Description>Can summon Party size tier 1 units.</Description>
+				<Icon>JB_Ability_GroupSummons1_Icon.png</Icon>
+				<PerkTreePosX>1</PerkTreePosX>
+				<PerkTreePosY>4</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Provides>Unlocks the following spell</Provides>
+				</GameModifier>	  
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_BG_GreyMagic</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Grey magic</Provides>
+				</GameModifier>
+				<Type>Spell</Type>
+				<UpgradePathID>JB_SummonGroup</UpgradePathID>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Summoner_Summon1</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>			
+		<AbilityBonus InternalName="JB_Summoner_SummonGroup2Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Summoner_SummonGroup2">
+				<DisplayName>Group Summoning II</DisplayName>
+				<Description>Can summon Group size tier 1 units, and Party size tier 2 units.</Description>
+				<Icon>JB_Ability_GroupSummons2_Icon.png</Icon>
+				<PerkTreePosX>3</PerkTreePosX>
+				<PerkTreePosY>4</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Provides>Unlocks the following spell</Provides>
+				</GameModifier>	  
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_BG_GreyMagic</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Grey magic</Provides>
+				</GameModifier>
+				<MinimumLevel>8</MinimumLevel>
+				<Type>Spell</Type>
+				<UpgradePathID>JB_SummonGroup</UpgradePathID>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Summoner_Hordes1</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>			
+		<AbilityBonus InternalName="JB_Summoner_SummonGroup3Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Summoner_SummonGroup3">
+				<DisplayName>Group Summoning III</DisplayName>
+				<Description>Can summon Squad size tier 1 units, Group size tier 2 units, and Party size tier 3 units.</Description>
+				<Icon>JB_Ability_GroupSummons3_Icon.png</Icon>
+				<PerkTreePosX>4</PerkTreePosX>
+				<PerkTreePosY>4</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Provides>Unlocks the following spell</Provides>
+				</GameModifier>	  
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_BG_GreyMagic</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Grey magic</Provides>
+				</GameModifier>
+				<MinimumLevel>10</MinimumLevel>
+				<Type>Spell</Type>
+				<UpgradePathID>JB_SummonGroup</UpgradePathID>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Summoner_SummonGroup2</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>				
+		<AbilityBonus InternalName="JB_Summoner_SummonTime1Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Summoner_SummonTime1">
+				<DisplayName>Summoning Savant I</DisplayName>
+				<Description>Reduces cooldown for summoning spells by 1 turn.</Description>
+				<Icon>JB_Ability_SummoningSavant1_Icon.png</Icon>
+				<PerkTreePosX>2</PerkTreePosX>
+				<PerkTreePosY>2</PerkTreePosY>
+				<GameModifier>
+					<Provides>Reduces cooldown for summoning spells by 1 turn</Provides>
+				</GameModifier>		
+				<Type>Spell</Type>
+				<UpgradePathID>JB_SummonTime</UpgradePathID>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Summoner_SummonManaDiscount1</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="JB_Summoner_SummonTime2Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Summoner_SummonTime2">
+				<DisplayName>Summoning Savant II</DisplayName>
+				<Description>Reduces cooldown for summoning spells by 1 turn.</Description>
+				<Icon>JB_Ability_SummoningSavant2_Icon.png</Icon>
+				<PerkTreePosX>3</PerkTreePosX>
+				<PerkTreePosY>2</PerkTreePosY>
+				<GameModifier>
+					<Provides>Reduces cooldown for summoning spells by 1 turn</Provides>
+				</GameModifier>	
+				<Type>Spell</Type>
+				<UpgradePathID>JB_SummonTime</UpgradePathID>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Summoner_SummonTime1</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="JB_Summoner_Summon1Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Summoner_Summon1">
+				<DisplayName>Summon I</DisplayName>
+				<Description>+1 level for Summons</Description>
+				<Icon>Ability_SummonI_Icon.png</Icon>
+				<PerkTreePosX>0</PerkTreePosX>
+				<PerkTreePosY>3</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_BonusSummonLevel</StrVal>
+					<Value>1</Value>
+					<Provides>+1 level for Summons</Provides>
+				</GameModifier>
+				<Type>Spell</Type>
+				<UpgradePathID>JB_Summoner_Summon</UpgradePathID>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_PathOfTheSummoner</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="JB_Summoner_Summon2Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Summoner_Summon2">
+				<DisplayName>Summon II</DisplayName>
+				<Description>+1 levels for Summons</Description>
+				<Icon>Ability_SummonII_Icon.png</Icon>
+				<PerkTreePosX>1</PerkTreePosX>
+				<PerkTreePosY>3</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_BonusSummonLevel</StrVal>
+					<Value>1</Value>
+					<Provides>+1 levels for Summons</Provides>
+				</GameModifier>
+				<Type>Spell</Type>
+				<UpgradePathID>JB_Summoner_Summon</UpgradePathID>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Summoner_Summon1</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="JB_Summoner_Summon3Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Summoner_Summon3">
+				<DisplayName>Summon III</DisplayName>
+				<Description>+1 levels for Summons</Description>
+				<Icon>Ability_SummonIII_Icon.png</Icon>
+				<PerkTreePosX>3</PerkTreePosX>
+				<PerkTreePosY>3</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_BonusSummonLevel</StrVal>
+					<Value>1</Value>
+					<Provides>+1 levels for Summons</Provides>
+				</GameModifier>
+				<Type>Spell</Type>
+				<UpgradePathID>JB_Summoner_Summon</UpgradePathID>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Summoner_Warlords</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="JB_Summoner_Summon4Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Summoner_Summon4">
+				<DisplayName>Summon IV</DisplayName>
+				<Description>+1 levels for Summons</Description>
+				<Icon>JB_Ability_SummonIV_Icon.png</Icon>
+				<PerkTreePosX>4</PerkTreePosX>
+				<PerkTreePosY>3</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_BonusSummonLevel</StrVal>
+					<Value>1</Value>
+					<Provides>+1 levels for Summons</Provides>
+				</GameModifier>
+				<Type>Spell</Type>
+				<UpgradePathID>JB_Summoner_Summon</UpgradePathID>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Summoner_Summon3</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="JB_Summoner_Summon5Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Summoner_Summon5">
+				<DisplayName>Summon V</DisplayName>
+				<Description>+1 levels for Summons</Description>
+				<Icon>JB_Ability_SummonV_Icon.png</Icon>
+				<PerkTreePosX>6</PerkTreePosX>
+				<PerkTreePosY>3</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_BonusSummonLevel</StrVal>
+					<Value>1</Value>
+					<Provides>+1 levels for Summons</Provides>
+				</GameModifier>
+				<Type>Spell</Type>
+				<UpgradePathID>JB_Summoner_Summon</UpgradePathID>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Summoner_SummonDrake</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="JB_Summoner_SummonRangeAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Summoner_SummonRange">
+				<DisplayName>Projection</DisplayName>
+				<Description>Unlimited Summons range on the tactical map</Description>
+				<Icon>JB_Ability_Projection_Icon.png</Icon>
+				<PerkTreePosX>1</PerkTreePosX>
+				<PerkTreePosY>2</PerkTreePosY>
+				<GameModifier>
+					<Provides>Unlimited Summons range on the tactical map</Provides>
+				</GameModifier>
+				<Type>Spell</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Summoner_Summon1</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>		
+		<AbilityBonus InternalName="JB_Summoner_SummonCapacity1Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Summoner_SummonCapacity1">
+				<DisplayName>Channeling I</DisplayName>
+				<Description>+5 Summon Pool</Description>
+				<Icon>JB_Ability_Channeling1_Icon.png</Icon>
+				<PerkTreePosX>0</PerkTreePosX>
+				<PerkTreePosY>1</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>ProduceResource</Attribute>
+					<StrVal>JB_Summons</StrVal>
+					<Value>5</Value>
+					<Provides>+5 Summon Pool</Provides>
+				</GameModifier>			
+				<Type>Spell</Type>
+				<UpgradePathID>JB_SummonCapacity</UpgradePathID>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_PathOfTheSummoner</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>		
+		<AbilityBonus InternalName="JB_Summoner_SummonCapacity2Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Summoner_SummonCapacity2">
+				<DisplayName>Channeling II</DisplayName>
+				<Description>+10 Summon Pool</Description>
+				<Icon>JB_Ability_Channeling2_Icon.png</Icon>
+				<PerkTreePosX>2</PerkTreePosX>
+				<PerkTreePosY>1</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>ProduceResource</Attribute>
+					<StrVal>JB_Summons</StrVal>
+					<Value>10</Value>
+					<Provides>+10 Summon Pool</Provides>
+				</GameModifier>
+				<Type>Spell</Type>
+				<UpgradePathID>JB_SummonCapacity</UpgradePathID>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Summoner_SummonManaDiscount1</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>		
+		<AbilityBonus InternalName="JB_Summoner_SummonCapacity3Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Summoner_SummonCapacity3">
+				<DisplayName>Channeling III</DisplayName>
+				<Description>+15 Summon Pool</Description>
+				<Icon>JB_Ability_Channeling3_Icon.png</Icon>
+				<PerkTreePosX>4</PerkTreePosX>
+				<PerkTreePosY>1</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>ProduceResource</Attribute>
+					<StrVal>JB_Summons</StrVal>
+					<Value>15</Value>
+					<Provides>+15 Summon Pool</Provides>
+				</GameModifier>	
+				<Type>Spell</Type>
+				<UpgradePathID>JB_SummonCapacity</UpgradePathID>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Summoner_SummonManaDiscount2</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>					    	
+		<AbilityBonus InternalName="JB_Summoner_SummonCapacity4Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Summoner_SummonCapacity4">
+				<DisplayName>Channeling IV</DisplayName>
+				<Description>+15 Summon Pool</Description>
+				<Icon>JB_Ability_Channeling4_Icon.png</Icon>
+				<PerkTreePosX>5</PerkTreePosX>
+				<PerkTreePosY>1</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>ProduceResource</Attribute>
+					<StrVal>JB_Summons</StrVal>
+					<Value>15</Value>
+					<Provides>+15 Summon Pool</Provides>
+				</GameModifier>	
+				<Type>Spell</Type>
+				<UpgradePathID>JB_SummonCapacity</UpgradePathID>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Summoner_SummonCapacity3</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>					    	
+		<AbilityBonus InternalName="JB_Summoner_SummonManaDiscount1Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Summoner_SummonManaDiscount1">
+				<DisplayName>Conjurer I</DisplayName>
+				<Description>10% reduction in mana cost for tactical summons, +10% reduction in mana cost for strategic summons (refunded post casting)</Description>
+				<Icon>JB_Ability_Conjurer1_Icon.png</Icon>
+				<PerkTreePosX>1</PerkTreePosX>
+				<PerkTreePosY>1</PerkTreePosY>
+				<GameModifier>
+					<Provides>10% reduction in mana cost for tactical summons</Provides>
+				</GameModifier>		
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_JB_SummmonManaRefund</StrVal>
+					<Value>0.10</Value>
+					<Provides>+10% reduction in mana cost for strategic summons (refunded post casting)</Provides>
+				</GameModifier>					
+				<Type>Spell</Type>
+				<UpgradePathID>JB_SummonManaDiscount</UpgradePathID>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Summoner_SummonCapacity1</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>			 
+		<AbilityBonus InternalName="JB_Summoner_SummonManaDiscount2Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Summoner_SummonManaDiscount2">
+				<DisplayName>Conjurer II</DisplayName>
+				<Description>15% reduction in mana cost for tactical summons, +15% reduction in mana cost for strategic summons (refunded post casting)</Description>
+				<Icon>JB_Ability_Conjurer2_Icon.png</Icon>
+				<PerkTreePosX>3</PerkTreePosX>
+				<PerkTreePosY>1</PerkTreePosY>
+				<GameModifier>
+					<Provides>15% reduction in mana cost for tactical summons</Provides>
+				</GameModifier>	
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_JB_SummmonManaRefund</StrVal>
+					<Value>0.15</Value>
+					<Provides>+15% reduction in mana cost for strategic summons (refunded post casting)</Provides>
+				</GameModifier>					
+				<Type>Spell</Type>
+				<UpgradePathID>JB_SummonManaDiscount</UpgradePathID>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Summoner_SummonCapacity2</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>		
+		<AbilityBonus InternalName="JB_Summoner_Hordes1Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Summoner_Hordes1">
+				<DisplayName>Hordes</DisplayName>
+				<Description>Allows the unit to summon hordes in battle</Description>
+				<Icon>Ability_GreaterNecromancy_Icon.png</Icon>
+				<PerkTreePosX>2</PerkTreePosX>
+				<PerkTreePosY>4</PerkTreePosY>
+				<GameModifier>
+					<Provides>Allows the unit to cast Summon Horde spells in battle</Provides>
+				</GameModifier>  
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_BG_GreyMagic</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Grey magic</Provides>
+				</GameModifier>
+				<MinimumLevel>6</MinimumLevel>
+				<Type>Spell</Type>
+				<UpgradePathID>JB_Summoner_Hordes</UpgradePathID>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Summoner_SummonGroup1</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="JB_Summoner_AttackBoost1Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Summoner_AttackBoost1">
+				<DisplayName>Summoner's Boon</DisplayName>
+				<Description>Summoned units get a 20% boost to attack.</Description>
+				<Icon>JB_Ability_SummonersBoon_Icon.png</Icon>
+				<PerkTreePosX>4</PerkTreePosX>
+				<PerkTreePosY>0</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Provides>Unlocks the following spell</Provides>
+				</GameModifier>	
+				<Type>Spell</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Summoner_SummonManaDiscount2</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="JB_Summoner_SentinalWardAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Summoner_SentinalWard">
+				<DisplayName>Sentinel Ward</DisplayName>
+				<Description>Target city auto summons 3 level 1 (plus summoning bonuses) Armored Sentinels when attacked.</Description>
+				<Icon>JB_Ability_SentinelWard_Icon.png</Icon>
+				<PerkTreePosX>3</PerkTreePosX>
+				<PerkTreePosY>0</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Provides>Unlocks the following spell</Provides>
+				</GameModifier>	  
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_BG_GreyMagic</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Grey magic</Provides>
+				</GameModifier>
+				<Type>Spell</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Summoner_SummonCapacity2</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>			
+		<AbilityBonus InternalName="JB_Summoner_SummonDrakeAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Summoner_SummonDrake">
+				<DisplayName>Summon Drake</DisplayName>
+				<Description>Unlocks the Summon Drake spell</Description>
+				<Icon>JB_Ability_SummonDrake_Icon.png</Icon>
+				<PerkTreePosX>5</PerkTreePosX>
+				<PerkTreePosY>3</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Provides>Unlocks the following spell</Provides>
+				</GameModifier>	  
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_BG_GreyMagic</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Grey magic</Provides>
+				</GameModifier>
+				<MinimumLevel>12</MinimumLevel>
+				<Type>Spell</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Summoner_Summon4</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="JB_Summoner_SummonShrillBonusLevelAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Summoner_SummonShrillBonusLevel">
+				<DisplayName>Shrill Master</DisplayName>
+				<Description>+3 levels for Summoned Shrills</Description>
+				<Icon>JB_Ability_ShrillSummons_Icon.png</Icon>
+				<PerkTreePosX>5</PerkTreePosX>
+				<PerkTreePosY>4</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_JB_SummmonShrillLevelBonus</StrVal>
+					<Value>3</Value>
+					<Provides>+3 level for Summoned Shrills</Provides>
+				</GameModifier>	  
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_BG_GreyMagic</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Grey magic</Provides>
+				</GameModifier>
+				<Type>Spell</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Summoner_Summon4</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>				
+		<AbilityBonus InternalName="JB_Summoner_SummonShrillLordAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Summoner_SummonShrillLord">
+				<DisplayName>Summon Shrill Lord</DisplayName>
+				<Description>Unlocks the Summon Shrill Lord spell</Description>
+				<Icon>JB_Ability_SummonShrillLord_Icon2.png</Icon>
+				<PerkTreePosX>6</PerkTreePosX>
+				<PerkTreePosY>4</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Provides>Unlocks the following spell</Provides>
+				</GameModifier>	  
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_BG_GreyMagic</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Grey magic</Provides>
+				</GameModifier>
+				<MinimumLevel>14</MinimumLevel>
+				<Type>Spell</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Summoner_SummonShrillBonusLevel</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>				
+		<AbilityBonus InternalName="JB_Summoner_SummonDragonAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Summoner_SummonDragon">
+				<DisplayName>Summon Dragon</DisplayName>
+				<Description>Unlocks the Summon Dragon spell</Description>
+				<Icon>JB_Ability_SummonDragon_Icon.png</Icon>
+				<PerkTreePosX>7</PerkTreePosX>
+				<PerkTreePosY>3</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Provides>Unlocks the following spell</Provides>
+				</GameModifier>	  
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_BG_GreyMagic</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Grey magic</Provides>
+				</GameModifier>
+				<MinimumLevel>16</MinimumLevel>
+				<Type>Spell</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Summoner_Summon5</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>			
+		<AbilityBonus InternalName="JB_Summoner_DemonMastery1Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Summoner_DemonMastery1">
+				<DisplayName>Demon Mastery I</DisplayName>
+				<Description>Allows the unit to summon Demons</Description>
+				<Icon>JB_Ability_DemonMastery1_Icon.png</Icon>
+				<PerkTreePosX>4</PerkTreePosX>
+				<PerkTreePosY>2</PerkTreePosY>
+				<GameModifier>
+					<Provides>Unlocks the following spells</Provides>
+				</GameModifier>	  
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_BG_GreyMagic</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Grey magic</Provides>
+				</GameModifier>  
+				<MinimumLevel>8</MinimumLevel>
+				<Type>Spell</Type>
+				<Prereq>
+					<Type>Allegiance</Type>
+					<Attribute>Empire</Attribute>
+				</Prereq>				
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Summoner_Summon3</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>			
+		<AbilityBonus InternalName="JB_Summoner_DemonMastery2Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Summoner_DemonMastery2">
+				<DisplayName>Demon Mastery II</DisplayName>
+				<Description>Allows the unit to summon greater Demons</Description>
+				<Icon>JB_Ability_DemonMastery2_Icon.png</Icon>
+				<PerkTreePosX>5</PerkTreePosX>
+				<PerkTreePosY>2</PerkTreePosY>
+				<GameModifier>
+					<Provides>Unlocks the following spells</Provides>
+				</GameModifier>	  
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_BG_GreyMagic</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Grey magic</Provides>
+				</GameModifier>
+				<MinimumLevel>10</MinimumLevel>
+				<Type>Spell</Type>
+				<Prereq>
+					<Type>Allegiance</Type>
+					<Attribute>Empire</Attribute>
+				</Prereq>	
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Summoner_DemonMastery1</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>		
+		<!--		
+		<AbilityBonus InternalName="JB_Summoner_SummonAngelBonusLevelAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Summoner_SummonAngelBonusLevel">
+				<DisplayName>Angel Summoner</DisplayName>
+				<Description>+1 level for Summoned Angels</Description>
+				<Icon>JB_Ability_AngelSummons_Icon.png</Icon>
+				<PerkTreePosX>6</PerkTreePosX>
+				<PerkTreePosY>2</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_JB_SummmonAngelLevelBonus</StrVal>
+					<Value>1</Value>
+					<Provides>+1 level for Summoned Angels</Provides>
+				</GameModifier>	
+				<Type>Spell</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Summoner_SummonAngel2</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		-->		
+		<AbilityBonus InternalName="JB_Summoner_DemonMastery3Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Summoner_DemonMastery3">
+				<DisplayName>Demon Mastery III</DisplayName>
+				<Description>Allows the unit to summon powerful Demons</Description>
+				<Icon>JB_Ability_DemonMastery3_Icon.png</Icon>
+				<PerkTreePosX>6</PerkTreePosX>
+				<PerkTreePosY>2</PerkTreePosY>
+				<GameModifier>
+					<Provides>Unlocks the following spells</Provides>
+				</GameModifier>	  
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_BG_GreyMagic</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Grey magic</Provides>
+				</GameModifier>
+				<MinimumLevel>12</MinimumLevel>
+				<Type>Spell</Type>
+				<Prereq>
+					<Type>Allegiance</Type>
+					<Attribute>Empire</Attribute>
+				</Prereq>	
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Summoner_DemonMastery2</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="JB_Summoner_CelestialMastery1Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Summoner_CelestialMastery1">
+				<DisplayName>Celestial Mastery I</DisplayName>
+				<Description>Allows the unit to summon Celestials</Description>
+				<Icon>JB_Ability_CelestialMastery1_Icon.png</Icon>
+				<PerkTreePosX>4</PerkTreePosX>
+				<PerkTreePosY>2</PerkTreePosY>
+				<GameModifier>
+					<Provides>Unlocks the following spells</Provides>
+				</GameModifier>	  
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_BG_GreyMagic</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Grey magic</Provides>
+				</GameModifier>  
+				<MinimumLevel>8</MinimumLevel>
+				<Type>Spell</Type>
+				<Prereq>
+					<Type>Allegiance</Type>
+					<Attribute>Kingdom</Attribute>
+				</Prereq>				
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Summoner_Summon3</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>			
+		<AbilityBonus InternalName="JB_Summoner_CelestialMastery2Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Summoner_CelestialMastery2">
+				<DisplayName>Celestial Mastery II</DisplayName>
+				<Description>Allows the unit to summon greater Celestials</Description>
+				<Icon>JB_Ability_CelestialMastery2_Icon.png</Icon>
+				<PerkTreePosX>5</PerkTreePosX>
+				<PerkTreePosY>2</PerkTreePosY>
+				<GameModifier>
+					<Provides>Unlocks the following spells</Provides>
+				</GameModifier>	  
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_BG_GreyMagic</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Grey magic</Provides>
+				</GameModifier>
+				<MinimumLevel>10</MinimumLevel>
+				<Type>Spell</Type>
+				<Prereq>
+					<Type>Allegiance</Type>
+					<Attribute>Kingdom</Attribute>
+				</Prereq>	
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Summoner_CelestialMastery1</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="JB_Summoner_CelestialMastery3Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Summoner_CelestialMastery3">
+				<DisplayName>Celestial Mastery III</DisplayName>
+				<Description>Allows the unit to summon powerful Celestials</Description>
+				<Icon>JB_Ability_CelestialMastery3_Icon.png</Icon>
+				<PerkTreePosX>6</PerkTreePosX>
+				<PerkTreePosY>2</PerkTreePosY>
+				<GameModifier>
+					<Provides>Unlocks the following spells</Provides>
+				</GameModifier>	  
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_BG_GreyMagic</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Grey magic</Provides>
+				</GameModifier>
+				<MinimumLevel>12</MinimumLevel>
+				<Type>Spell</Type>
+				<Prereq>
+					<Type>Allegiance</Type>
+					<Attribute>Kingdom</Attribute>
+				</Prereq>	
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Summoner_CelestialMastery2</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>			
+
+		<AbilityBonus InternalName="JB_Summoner_OuterPlanesAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Summoner_OuterPlanes">
+				<DisplayName>From the Outer Planes</DisplayName>
+				<Description>Allows the unit to summon rare creatures from the Outer Planes</Description>
+				<Icon>JB_Ability_OuterPlanes_Icon.png</Icon>
+				<PerkTreePosX>2</PerkTreePosX>
+				<PerkTreePosY>0</PerkTreePosY>
+				<GameModifier>
+					<Provides>Unlocks the following spells</Provides>
+				</GameModifier>  
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_BG_GreyMagic</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Grey magic</Provides>
+				</GameModifier>
+				<Type>Spell</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Summoner_SummonManaDiscount1</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>		
+		<AbilityBonus InternalName="JB_Summoner_WarlordsAbility">  <!-- Now Summon Servant -->
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Summoner_Warlords">
+				<DisplayName>Summon Servant</DisplayName>
+				<Description>Unlocks the following spells</Description>
+				<Icon>Ability_SummonLightbringer_Icon.png</Icon>
+				<PerkTreePosX>2</PerkTreePosX>
+				<PerkTreePosY>3</PerkTreePosY>
+				<GameModifier>
+					<Provides>Unlocks the following spells</Provides>
+				</GameModifier>	  
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_BG_GreyMagic</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Grey magic</Provides>
+				</GameModifier>
+				<MinimumLevel>5</MinimumLevel>
+				<Type>Spell</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Summoner_Summon2</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>			
+		<AbilityBonus InternalName="JB_Summoner_SummonMasteryAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Summoner_SummonMastery">
+				<DisplayName>Summon Mastery</DisplayName>
+				<Description>Summon Delin, the Pyre of Man into battle for 5 actions</Description>
+				<Icon>Ability_SummonMastery_Icon.png</Icon>
+				<PerkTreePosX>7</PerkTreePosX>
+				<PerkTreePosY>4</PerkTreePosY>
+				<GameModifier>
+					<Provides>Unlocks the following spell</Provides>
+				</GameModifier>  
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_BG_GreyMagic</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Grey magic</Provides>
+				</GameModifier>
+				<MinimumLevel>15</MinimumLevel>
+				<Type>Spell</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Summoner_Summon5</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>		
+	</ContainerPathSummoner>
+
+	<!-- Used to add +1 Summon Pool for each Champion History but not doing this anymore,
+	         just +3 for Summoner and thats it
+	<AbilityBonus InternalName="Champion_History">
+        <AbilityBonusType>Champion_History</AbilityBonusType>
+        <AbilityBonusOption InternalName="Adventurer">
+            <DisplayName>Adventurer</DisplayName>
+            <Description>+10 Fame from completing Quests</Description>
+            <Icon>Ability_Adventurer_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>ProduceResource</Attribute>
+				<StrVal>JB_Summons</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Summon Pool</Provides>
+			</GameModifier>
+            <Cost>1</Cost>
+            <Type>Army</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+        <AbilityBonusOption InternalName="Armorer">
+            <DisplayName>Armorer</DisplayName>
+            <Description>All units get +25% to Defense</Description>
+            <Icon>Ability_Armorer_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>ProduceResource</Attribute>
+				<StrVal>JB_Summons</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Summon Pool</Provides>
+			</GameModifier>
+            <Cost>1</Cost>
+            <Type>Army</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+        <AbilityBonusOption InternalName="BanditLord">
+            <DisplayName>Bandit Lord</DisplayName>
+            <Description>Player starts with two Bandit units and has the ability to convert bandits</Description>
+            <Icon>Ability_Thief_Icon.png</Icon>
+            <GameModifier>
+                <Provides>Unlocks the Recruit Bandit spell</Provides>
+            </GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>ProduceResource</Attribute>
+				<StrVal>JB_Summons</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Summon Pool</Provides>
+			</GameModifier>
+            <Cost>1</Cost>
+            <Type>Aggressive</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+        <AbilityBonusOption InternalName="Beastlord">
+            <DisplayName>Beastlord</DisplayName>
+            <Description>Can take control of enemy beasts</Description>
+            <Icon>Ability_Beastlord_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>ProduceResource</Attribute>
+				<StrVal>JB_Summons</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Summon Pool</Provides>
+			</GameModifier>
+            <Cost>1</Cost>
+            <Type>Aggressive</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+        <AbilityBonusOption InternalName="Diplomat">
+            <DisplayName>Diplomat</DisplayName>
+            <Description>+30% value of trades and the Silver Tongue ability</Description>
+            <Icon>Ability_Diplomatic_Icon.png</Icon>
+            <GameModifier>
+                <Provides>Unlocks the Silver Tongue ability which allows the unit to convert trained units</Provides>
+            </GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>ProduceResource</Attribute>
+				<StrVal>JB_Summons</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Summon Pool</Provides>
+			</GameModifier>
+            <Cost>1</Cost>
+            <Type>Army</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+        <AbilityBonusOption InternalName="General">
+            <DisplayName>General</DisplayName>
+            <Description>+25% to the Army's Experience</Description>
+            <Icon>Ability_General_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>ProduceResource</Attribute>
+				<StrVal>JB_Summons</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Summon Pool</Provides>
+			</GameModifier>
+            <Cost>1</Cost>
+            <Type>Army</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+        <AbilityBonusOption InternalName="Hunter">
+            <DisplayName>Hunter</DisplayName>
+            <Description>+50% Attack vs Beasts</Description>
+            <Icon>Ability_Hunter_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>ProduceResource</Attribute>
+				<StrVal>JB_Summons</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Summon Pool</Provides>
+			</GameModifier>
+            <Cost>1</Cost>
+            <IsCombatAbility>1</IsCombatAbility>
+            <Type>Aggressive</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+        <AbilityBonusOption InternalName="Noble">
+            <DisplayName>Noble</DisplayName>
+            <Description>-10 Unrest in all cities</Description>
+            <Icon>Ability_Noble_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>ProduceResource</Attribute>
+				<StrVal>JB_Summons</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Summon Pool</Provides>
+			</GameModifier>
+            <Cost>1</Cost>
+            <Type>Army</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+        <AbilityBonusOption InternalName="Scholar">
+            <DisplayName>Scholar</DisplayName>
+            <Description> +20% Research</Description>
+            <Icon>Ability_Scholar_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>ProduceResource</Attribute>
+				<StrVal>JB_Summons</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Summon Pool</Provides>
+			</GameModifier>
+            <Cost>1</Cost>
+            <Type>Army</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+        <AbilityBonusOption InternalName="Summoner">
+            <DisplayName>Summoner</DisplayName>
+            <Description>+2 level for Summons, unlocks the Summon Shadow Warg spell</Description>
+            <Icon>Ability_Summoner_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>ProduceResource</Attribute>
+				<StrVal>JB_Summons</StrVal>
+				<Value>3</Value>
+				<Provides>+3 Summon Pool</Provides>
+			</GameModifier>
+            <Cost>1</Cost>
+            <Type>Spell</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+        <AbilityBonusOption InternalName="Warlock">
+            <DisplayName>Warlock</DisplayName>
+            <Description>This unit's spells do 25% more damage</Description>
+            <Icon>Ability_Warlock_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>ProduceResource</Attribute>
+				<StrVal>JB_Summons</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Summon Pool</Provides>
+			</GameModifier>
+            <Cost>1</Cost>
+            <Type>Spell</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+        <AbilityBonusOption InternalName="Warlord">
+            <DisplayName>Warlord</DisplayName>
+            <Description>-50% to unit Wages</Description>
+            <Icon>Ability_Warlord_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>ProduceResource</Attribute>
+				<StrVal>JB_Summons</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Summon Pool</Provides>
+			</GameModifier>
+            <Cost>1</Cost>
+            <Type>Army</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	-->
+	<AbilityBonus InternalName="Champion_History">
+	<AbilityBonusType>Champion_History</AbilityBonusType>
+		<AbilityBonusOption InternalName="Summoner">
+            <DisplayName>Summoner</DisplayName>
+            <Description>+2 level for Summons, +3 Summon Pool</Description>
+            <Icon>Ability_Summoner_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>ProduceResource</Attribute>
+				<StrVal>JB_Summons</StrVal>
+				<Value>3</Value>
+				<Provides>+3 Summon Pool</Provides>
+			</GameModifier>
+            <Cost>1</Cost>
+            <HideWhenUpgraded>0</HideWhenUpgraded>
+            <Type>Spell</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>   
+		
+	<!-- Add +1 Summon Pool to each of the Magic ranks -->
+	<ContainerMagicRanks>
+	
+		<AbilityBonus InternalName="Air1Ability">
+			<AbilityBonusOption InternalName="Air1">      
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>ProduceResource</Attribute>
+					<StrVal>JB_Summons</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Summon Pool</Provides>
+				</GameModifier>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="Earth1Ability">
+			<AbilityBonusOption InternalName="Earth1">    
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>ProduceResource</Attribute>
+					<StrVal>JB_Summons</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Summon Pool</Provides>
+				</GameModifier>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="Fire1Ability">
+			<AbilityBonusOption InternalName="Fire1">      
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>ProduceResource</Attribute>
+					<StrVal>JB_Summons</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Summon Pool</Provides>
+				</GameModifier>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="Water1Ability">
+			<AbilityBonusOption InternalName="Water1"> 
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>ProduceResource</Attribute>
+					<StrVal>JB_Summons</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Summon Pool</Provides>
+				</GameModifier>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="Life1Ability">
+			<AbilityBonusOption InternalName="Life1">  
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>ProduceResource</Attribute>
+					<StrVal>JB_Summons</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Summon Pool</Provides>
+				</GameModifier>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="Death1Ability">
+			<AbilityBonusOption InternalName="Death1">  
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>ProduceResource</Attribute>
+					<StrVal>JB_Summons</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Summon Pool</Provides>
+				</GameModifier>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		
+		<AbilityBonus InternalName="Air2Ability">
+			<AbilityBonusOption InternalName="Air2">      
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>ProduceResource</Attribute>
+					<StrVal>JB_Summons</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Summon Pool</Provides>
+				</GameModifier>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="Earth2Ability">
+			<AbilityBonusOption InternalName="Earth2">    
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>ProduceResource</Attribute>
+					<StrVal>JB_Summons</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Summon Pool</Provides>
+				</GameModifier>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="Fire2Ability">
+			<AbilityBonusOption InternalName="Fire2">      
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>ProduceResource</Attribute>
+					<StrVal>JB_Summons</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Summon Pool</Provides>
+				</GameModifier>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="Water2Ability">
+			<AbilityBonusOption InternalName="Water2"> 
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>ProduceResource</Attribute>
+					<StrVal>JB_Summons</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Summon Pool</Provides>
+				</GameModifier>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="Life2Ability">
+			<AbilityBonusOption InternalName="Life2">  
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>ProduceResource</Attribute>
+					<StrVal>JB_Summons</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Summon Pool</Provides>
+				</GameModifier>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="Death2Ability">
+			<AbilityBonusOption InternalName="Death2">  
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>ProduceResource</Attribute>
+					<StrVal>JB_Summons</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Summon Pool</Provides>
+				</GameModifier>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		
+		<AbilityBonus InternalName="Air3Ability">
+			<AbilityBonusOption InternalName="Air3">      
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>ProduceResource</Attribute>
+					<StrVal>JB_Summons</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Summon Pool</Provides>
+				</GameModifier>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="Earth3Ability">
+			<AbilityBonusOption InternalName="Earth3">    
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>ProduceResource</Attribute>
+					<StrVal>JB_Summons</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Summon Pool</Provides>
+				</GameModifier>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="Fire3Ability">
+			<AbilityBonusOption InternalName="Fire3">      
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>ProduceResource</Attribute>
+					<StrVal>JB_Summons</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Summon Pool</Provides>
+				</GameModifier>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="Water3Ability">
+			<AbilityBonusOption InternalName="Water3"> 
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>ProduceResource</Attribute>
+					<StrVal>JB_Summons</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Summon Pool</Provides>
+				</GameModifier>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="Life3Ability">
+			<AbilityBonusOption InternalName="Life3">  
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>ProduceResource</Attribute>
+					<StrVal>JB_Summons</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Summon Pool</Provides>
+				</GameModifier>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="Death3Ability">
+			<AbilityBonusOption InternalName="Death3">  
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>ProduceResource</Attribute>
+					<StrVal>JB_Summons</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Summon Pool</Provides>
+				</GameModifier>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		
+		<AbilityBonus InternalName="Air4Ability">
+			<AbilityBonusOption InternalName="Air4">      
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>ProduceResource</Attribute>
+					<StrVal>JB_Summons</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Summon Pool</Provides>
+				</GameModifier>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="Earth4Ability">
+			<AbilityBonusOption InternalName="Earth4">    
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>ProduceResource</Attribute>
+					<StrVal>JB_Summons</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Summon Pool</Provides>
+				</GameModifier>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="Fire4Ability">
+			<AbilityBonusOption InternalName="Fire4">      
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>ProduceResource</Attribute>
+					<StrVal>JB_Summons</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Summon Pool</Provides>
+				</GameModifier>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="Water4Ability">
+			<AbilityBonusOption InternalName="Water4"> 
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>ProduceResource</Attribute>
+					<StrVal>JB_Summons</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Summon Pool</Provides>
+				</GameModifier>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="Life4Ability">
+			<AbilityBonusOption InternalName="Life4">  
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>ProduceResource</Attribute>
+					<StrVal>JB_Summons</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Summon Pool</Provides>
+				</GameModifier>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="Death4Ability">
+			<AbilityBonusOption InternalName="Death4">  
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>ProduceResource</Attribute>
+					<StrVal>JB_Summons</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Summon Pool</Provides>
+				</GameModifier>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		
+		<AbilityBonus InternalName="Air5Ability">
+			<AbilityBonusOption InternalName="Air5">      
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>ProduceResource</Attribute>
+					<StrVal>JB_Summons</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Summon Pool</Provides>
+				</GameModifier>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="Earth5Ability">
+			<AbilityBonusOption InternalName="Earth5">    
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>ProduceResource</Attribute>
+					<StrVal>JB_Summons</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Summon Pool</Provides>
+				</GameModifier>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="Fire5Ability">
+			<AbilityBonusOption InternalName="Fire5">      
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>ProduceResource</Attribute>
+					<StrVal>JB_Summons</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Summon Pool</Provides>
+				</GameModifier>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="Water5Ability">
+			<AbilityBonusOption InternalName="Water5"> 
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>ProduceResource</Attribute>
+					<StrVal>JB_Summons</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Summon Pool</Provides>
+				</GameModifier>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="Life5Ability">
+			<AbilityBonusOption InternalName="Life5">  
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>ProduceResource</Attribute>
+					<StrVal>JB_Summons</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Summon Pool</Provides>
+				</GameModifier>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="Death5Ability">
+			<AbilityBonusOption InternalName="Death5">  
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>ProduceResource</Attribute>
+					<StrVal>JB_Summons</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Summon Pool</Provides>
+				</GameModifier>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		
+	</ContainerMagicRanks>
+	
+</AbilityBonuses>
+		

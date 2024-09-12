@@ -1,0 +1,360 @@
+<Quests>  
+  <QuestDef InternalName="Quest_VaynarChampions">
+        <DisplayName>Chapions Call</DisplayName>
+        <Description>A group of champions approaches you. They are seeking a worthy sovereign to follow. Can you convince them to join your cause?</Description>
+        <IsStartingPointQuest>0</IsStartingPointQuest>
+        <ShortTextAccept>I am in need of mighty companions.</ShortTextAccept>
+        <ShortTextDeny>I have no time for this</ShortTextDeny>
+        <SuccessText>The Champion thanks you and joins your ranks.</SuccessText>
+        <QuestClass>Minor</QuestClass>
+        <Repeatable>1</Repeatable>
+        <TriggerType>TurnNumber</TriggerType>
+        <TriggerData>50</TriggerData>
+        <SpawnRating>1</SpawnRating>	
+        <TriggerChance>1</TriggerChance>
+        <PostTriggerChance>1</PostTriggerChance>
+        <Image>Tech_Alliances.png</Image>
+        <PrefQuestLoc>QuestLoc_Inn_Vaynar</PrefQuestLoc>
+		
+    <QuestObjectiveDef>
+            <ObjectiveID>0</ObjectiveID>
+            <NextObjectiveID>1</NextObjectiveID>
+			
+            <ChoiceText>You look upon the champions. All are promising, but for now you can only take one. You will have to choose.</ChoiceText>
+            <ChoiceMedallion>Medallions_Advanced_Foot_Solders.png</ChoiceMedallion>
+            <ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+            <QuestChoiceDef>
+                <Description>Avernus, the mighty mage shall fight by my side!</Description>
+                <NextObjectiveID>-1</NextObjectiveID>
+                <QuestFailure>1</QuestFailure>
+				
+				<PopupMessage>Avernus bows and joins your army.</PopupMessage>		
+				<Treasure>
+					<GameModifier InternalName="Reward1">
+						<ModType>Unit</ModType>
+						<Attribute>UnitJoinArmy</Attribute>
+						<StrVal>Champion_Vaynar_Avernus</StrVal>
+						<StrVal2>Avernus</StrVal2>
+						<Value>3</Value>
+						<UnitClass>Champion</UnitClass>
+					</GameModifier>
+				</Treasure>
+				
+            </QuestChoiceDef>
+            <QuestChoiceDef>
+                <Description>Sir Lotion, the noble Paladin shall fight by my side!</Description>
+                <NextObjectiveID>-1</NextObjectiveID>
+                <QuestFailure>1</QuestFailure>
+
+				<PopupMessage>Lotion bows and joins your army.</PopupMessage>				
+				<Treasure>
+					<GameModifier InternalName="Reward2">
+						<ModType>Unit</ModType>
+						<Attribute>UnitJoinArmy</Attribute>
+						<StrVal>Champion_Vaynar_Lotion</StrVal>
+						<StrVal2>Sir Lotion</StrVal2>
+						<Value>3</Value>
+						<UnitClass>Champion</UnitClass>
+					</GameModifier>
+				</Treasure>			
+            </QuestChoiceDef>
+			
+            <QuestChoiceDef>
+                <Description>Thalia, the gifted sorceress shall fight by my side!</Description>
+                <NextObjectiveID>-1</NextObjectiveID>
+                <QuestFailure>1</QuestFailure>
+
+				<PopupMessage>Thalia bows and joins your army.</PopupMessage>				
+				<Treasure>
+					<GameModifier InternalName="Reward3">
+						<ModType>Unit</ModType>
+						<Attribute>UnitJoinArmy</Attribute>
+						<StrVal>Champion_Vaynar_Thalia</StrVal>
+						<StrVal2>Thalia</StrVal2>
+						<Value>2</Value>
+						<UnitClass>Champion</UnitClass>
+					</GameModifier>
+				</Treasure>				
+            </QuestChoiceDef>
+			
+            <QuestChoiceDef>
+                <Description>Lydia, the veteran Sentinel shall fight by my side!</Description>
+                <NextObjectiveID>-1</NextObjectiveID>
+                <QuestFailure>1</QuestFailure>
+
+				<PopupMessage>Lydia bows and joins your army.</PopupMessage>					
+				<Treasure>
+					<GameModifier InternalName="Reward4">
+						<ModType>Unit</ModType>
+						<Attribute>UnitJoinArmy</Attribute>
+						<StrVal>Champion_Vaynar_Lydia</StrVal>
+						<StrVal2>Lydia</StrVal2>
+						<Value>1</Value>
+						<UnitClass>Champion</UnitClass>
+					</GameModifier>
+				</Treasure>				
+            </QuestChoiceDef>
+						
+            <QuestChoiceDef>
+                <Description>Alas, I cannot take anyone with me now.</Description>
+                <NextObjectiveID>-1</NextObjectiveID>
+		<QuestFailure>1</QuestFailure>
+            </QuestChoiceDef>			
+	</QuestObjectiveDef>		
+    </QuestDef>
+
+
+<!--
+   <QuestDef InternalName="Quest_HeavensFury">
+        <DisplayName>Ancient temple</DisplayName>
+        <Description> This ancient temple reeks with death and darkness. Yet you sense something. A spark of light deep inside.</Description>
+        <IsStartingPointQuest>0</IsStartingPointQuest>
+        <ShortTextAccept>Enter the temple</ShortTextAccept>
+        <ShortTextDeny>Ignore the temple</ShortTextDeny>
+        <RewardText>Heavens fury</RewardText>
+        <RewardImage>OHF_Heavens_Fury.png</RewardImage>
+        <QuestClass>Minor</QuestClass>
+        <Repeatable>0</Repeatable>
+        <TriggerType>QuestLocation</TriggerType>
+        <TriggerOrigin>EventLocation</TriggerOrigin>
+        <SpawnRating>3</SpawnRating>
+        <Image>G_Graveyard_01.png</Image>
+        <PrefQuestLoc>QuestLoc_Graveyard_Vaynar</PrefQuestLoc>
+		
+
+            <ChoiceText>No sooner that you enter the temple you sense the darkness closing in all around you. You hear indecipherable moaning, the shambling of bones and worse.</ChoiceText>
+            <ChoiceMedallion>LichChamp_Medallion.png</ChoiceMedallion>
+            <ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			
+            <QuestChoiceDef>
+                <Description>Defend yourself!</Description>
+                <NextObjectiveID>1</NextObjectiveID>
+              <Encounter>
+                    <Liklihood>100</Liklihood>
+                    <BattleIdentifier>Lich</BattleIdentifier>
+                    <TacticalMap>T_Temple_Cave_02</TacticalMap>
+                    <WillRespawn>0</WillRespawn>
+                    <WanderingRadius>0</WanderingRadius>
+                    <UnitInstance>
+                        <UnitType>Lich</UnitType>
+                        <UnitName>Ancient Lich</UnitName>
+                        <Level>20</Level>
+                    </UnitInstance>
+                    <UnitInstance>
+                        <UnitType>Giant_Skeleton</UnitType>
+                        <UnitName>Undead Ogre</UnitName>						
+                        <Level>15</Level>
+                    </UnitInstance>
+                    <UnitInstance>
+                        <UnitType>SkeletonB</UnitType>
+                        <UnitGroupingType>UnitGroupingType_Group</UnitGroupingType>
+                        <Level>1</Level>
+                    </UnitInstance>
+                    <UnitInstance>
+                        <UnitType>SkeletonC</UnitType>
+                        <UnitGroupingType>UnitGroupingType_Party</UnitGroupingType>
+                        <Level>5</Level>
+                    </UnitInstance>
+                    <UnitInstance>
+                        <UnitType>SkeletonA</UnitType>
+                        <UnitGroupingType>UnitGroupingType_Party</UnitGroupingType>
+                        <Level>5</Level>
+                    </UnitInstance>
+                    <UnitInstance>
+                        <UnitType>DeathDemon</UnitType>
+                        <UnitName>Galadoth</UnitName>
+                        <Level>10</Level>
+                    </UnitInstance>					
+                </Encounter>					
+        </QuestChoiceDef>
+			
+			
+        </QuestObjectiveDef>
+        <QuestObjectiveDef>
+            <ObjectiveID>1</ObjectiveID>
+            <QuestEnd>1</QuestEnd>
+            <PopupObjectiveMsg>0</PopupObjectiveMsg>
+            <QuestConditionDef>
+                <Objective>
+                    <Icon>Mana_32.png</Icon>
+                    <Text>Survive</Text>
+                    <IsOptional>0</IsOptional>
+                </Objective>
+                <Class>Success</Class>
+                <Type>BattleFinished</Type>
+                <TextData>Undead</TextData>
+                <MoreTextData>Victory</MoreTextData>
+                <CompletionText>After slaying the heinous creatures, you find a doorway that leads into a small room. There is an altar, and on it lies a beautifull blade in pristine condition. Despite the corruption of the entire temple, this room seems untouched, as if the undead feared entering. You take the blade.</CompletionText>
+            </QuestConditionDef>
+            <Treasure>
+                <GameModifier InternalName="Reward1">
+                    <ModType>GiveItem</ModType>
+                    <Attribute>OHF_Heavens_Fury</Attribute>
+                </GameModifier>
+            </Treasure>
+			<Treasure>
+				<GameModifier InternalName="Reward2">
+					<ModType>Resource</ModType>
+					<Attribute>Fame</Attribute>
+					<Value>10</Value>
+				</GameModifier>
+			</Treasure>					
+        </QuestObjectiveDef>
+    </QuestDef>	
+-->
+
+  <QuestDef InternalName="Quest_HeavensFury2">
+        <DisplayName>Ancient temple</DisplayName>
+        <Description> This ancient temple reeks with death and darkness. Yet you sense something. A spark of light deep inside.</Description>
+        <IsStartingPointQuest>0</IsStartingPointQuest>
+        <AllowQuestRejection>0</AllowQuestRejection>
+        <ShortTextAccept>Enter the temple</ShortTextAccept>
+        <RewardText>Heavens Fury</RewardText>
+        <RewardImage>OHF_Heavens_Fury.png</RewardImage>
+        <SuccessText>After slaying the heinous creatures, you find a doorway that leads into a small room. There is an altar, and on it lies a beautifull blade in pristine condition. Despite the corruption of the entire temple, this room seems untouched, as if the undead feared entering. You take the blade.</SuccessText>
+        <QuestClass>Minor</QuestClass>
+        <Repeatable>0</Repeatable>
+        <TriggerType>QuestLocation</TriggerType>
+        <TriggerOrigin>EventLocation</TriggerOrigin>
+        <SpawnRating>3</SpawnRating>
+        <Image>G_Graveyard_01.png</Image>
+        <PrefQuestLoc>QuestLoc_Graveyard_Vaynar</PrefQuestLoc>		
+		
+		
+        <Treasure>
+            <GameModifier InternalName="Reward1">
+                <ModType>GiveItem</ModType>
+                <Attribute>OHF_Heavens_Fury</Attribute>
+            </GameModifier>
+        </Treasure>
+        <Treasure>
+            <GameModifier InternalName="Reward3">
+                <ModType>Unit</ModType>
+                <Attribute>GiveExperience</Attribute>
+                <Value>20</Value>
+            </GameModifier>
+        </Treasure>
+        <Treasure>
+            <GameModifier InternalName="Reward4">
+                <ModType>Resource</ModType>
+                <Attribute>Fame</Attribute>
+                <Value>10</Value>
+            </GameModifier>
+        </Treasure>
+		
+        <QuestObjectiveDef>
+            <ObjectiveID>0</ObjectiveID>
+            <NextObjectiveID>1</NextObjectiveID>
+            <PopupObjectiveMsg>0</PopupObjectiveMsg>
+		
+            <ChoiceText>No sooner that you enter the temple you sense the darkness closing in all around you. You hear indecipherable moaning, the shambling of bones and worse.</ChoiceText>
+            <ChoiceMedallion>LichChamp_Medallion.png</ChoiceMedallion>
+            <ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			
+            <QuestChoiceDef>
+                <Description>Fight!</Description>
+                <NextObjectiveID>1</NextObjectiveID>
+                <Encounter>
+                   <Liklihood>100</Liklihood>
+                    <BattleIdentifier>Lich</BattleIdentifier>
+                    <TacticalMap>T_Temple_Cave_02</TacticalMap>
+                    <WillRespawn>0</WillRespawn>
+                    <WanderingRadius>0</WanderingRadius>
+                    <UnitInstance>
+                        <UnitType>Lich</UnitType>
+                        <UnitName>Ancient Lich</UnitName>
+                        <Level>20</Level>
+                    </UnitInstance>
+                    <UnitInstance>
+                        <UnitType>Giant_Skeleton</UnitType>
+                        <UnitName>Undead Ogre</UnitName>						
+                        <Level>15</Level>
+                    </UnitInstance>
+                    <UnitInstance>
+                        <UnitType>DeathDemon</UnitType>
+                        <UnitName>Galadoth</UnitName>
+                        <Level>10</Level>
+                    </UnitInstance>							
+                    <UnitInstance>
+                        <UnitType>SkeletonB</UnitType>
+                        <UnitGroupingType>UnitGroupingType_Group</UnitGroupingType>
+                        <Level>5</Level>
+                    </UnitInstance>
+                    <UnitInstance>
+                        <UnitType>SkeletonC</UnitType>
+                        <UnitGroupingType>UnitGroupingType_Party</UnitGroupingType>
+                        <Level>5</Level>
+                    </UnitInstance>
+                    <UnitInstance>
+                        <UnitType>SkeletonA</UnitType>
+                        <UnitGroupingType>UnitGroupingType_Party</UnitGroupingType>
+                        <Level>5</Level>
+                    </UnitInstance>			
+                </Encounter>					
+            </QuestChoiceDef>
+			
+            <QuestChoiceDef>
+                <Description>Run!</Description>
+                <NextObjectiveID>0</NextObjectiveID>
+            </QuestChoiceDef>
+        </QuestObjectiveDef>
+		
+		
+        <QuestObjectiveDef>
+            <ObjectiveID>1</ObjectiveID>
+            <NextObjectiveID>2</NextObjectiveID>
+            <QuestConditionDef>
+                <Objective>
+                    <Icon>Mana_32.png</Icon>
+                    <Text>Defeat the Undead</Text>
+                    <IsOptional>0</IsOptional>
+                </Objective>
+                <Class>Success</Class>
+                <Type>BattleFinished</Type>
+                <TextData>Undead</TextData>
+                <MoreTextData>Victory</MoreTextData>
+            </QuestConditionDef>
+        </QuestObjectiveDef>
+        <QuestObjectiveDef>
+            <ObjectiveID>2</ObjectiveID>
+            <QuestEnd>1</QuestEnd>
+        </QuestObjectiveDef>
+    </QuestDef>
+
+	
+</Quests> 
+
+
+
+
+
+
+
+
+
+
+<!--
+            <QuestConditionDef>
+                <ID>0</ID>
+                <Objective>
+                    <Icon>Mana_32.png</Icon>
+                    <Text>Expend 10 Faith to recruit hero</Text>
+                    <IsOptional>0</IsOptional>
+                </Objective>
+                <Class>ChoiceUnlock</Class>
+                <Type>CheckForResource</Type>
+                <TextData>Faith</TextData>
+                <NumericData>10</NumericData>
+            </QuestConditionDef>
+			
+			
+				<ChoiceMedallion>Rank_Breon.png</ChoiceMedallion>
+				<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>					
+				<ChoiceMedallion>Sorceress.png</ChoiceMedallion>
+				<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+				<ChoiceMedallion>Sovereign_Parriden.png</ChoiceMedallion>
+				<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>	
+				<ChoiceMedallion>Sovereign_Altar.png</ChoiceMedallion>
+				<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>	
+			
+--> 

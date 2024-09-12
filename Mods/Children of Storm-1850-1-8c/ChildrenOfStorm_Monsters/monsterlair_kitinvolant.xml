@@ -1,0 +1,416 @@
+<?xml version="1.0"?>
+<Container>
+  <UnitType InternalName="KitinVolant">
+    <DisplayName>Darkwasp</DisplayName>
+    <CreatureType>Beast</CreatureType>
+    <CanBeDesigned>0</CanBeDesigned>
+    <IsSovereign>0</IsSovereign>
+    <SpawnRating>4</SpawnRating>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <UnitStat_Accuracy>75</UnitStat_Accuracy>
+      <UnitStat_Attack_Pierce>8</UnitStat_Attack_Pierce>
+      <UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+      <UnitStat_CombatSpeed>28</UnitStat_CombatSpeed>
+      <UnitStat_Intelligence>1</UnitStat_Intelligence>
+      <UnitStat_Moves>3</UnitStat_Moves>
+      <UnitStat_WeightCapacity>100</UnitStat_WeightCapacity>
+      <UnitStat_BG_IsMonster>1</UnitStat_BG_IsMonster>
+      <UnitStat_BG_IsBeast>1</UnitStat_BG_IsBeast>
+      <UnitStat_Defense_Blunt>6</UnitStat_Defense_Blunt>
+      <UnitStat_Defense_Cutting>6</UnitStat_Defense_Cutting>
+      <UnitStat_Defense_Pierce>6</UnitStat_Defense_Pierce>
+    </LevelMilestone>
+    <LevelMilestone InternalName="L20">
+      <Level>20</Level>
+      <UnitStat_Accuracy>75</UnitStat_Accuracy>
+      <UnitStat_Attack_Pierce>30</UnitStat_Attack_Pierce>
+      <UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+      <UnitStat_CombatSpeed>28</UnitStat_CombatSpeed>
+      <UnitStat_Intelligence>1</UnitStat_Intelligence>
+      <UnitStat_Moves>3</UnitStat_Moves>
+      <UnitStat_WeightCapacity>100</UnitStat_WeightCapacity>
+      <UnitStat_Defense_Blunt>17</UnitStat_Defense_Blunt>
+      <UnitStat_Defense_Cutting>17</UnitStat_Defense_Cutting>
+      <UnitStat_Defense_Pierce>17</UnitStat_Defense_Pierce>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Endurance1</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Cannotbeknockedprone</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Impulsive</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>SpitFireAbility_Darkwasp</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>UnitStat_BG_IsFlyingAbility</SelectedAbilityBonusOption>
+    <Treasure>
+      <Liklihood>30</Liklihood>
+      <GameModifier>
+        <ModType>GiveItem</ModType>
+        <StrVal>Common</StrVal>
+      </GameModifier>
+    </Treasure>
+
+         <Treasure>
+      <Liklihood>70</Liklihood>
+       </Treasure>
+
+    <Backstory>Darkwasps are huge insects that inhabit the various swamps found around the world. They live in small packs but are fiercely territorial to any other of their own species. They are unable to mate within their own pack and during certain seasons the packs will scatter for months on end only to rejoin later on. During this time, the male and female Darkwasp never meet, instead the female lays the eggs and then abandons her temporary nest, allowing the smaller male to move into her territory and discover the nest. Hormones are used to warn the wasps when they are approaching the nest of one of their own pack, causing them to leave it alone.</Backstory>
+    <Medallions InternalName="">
+      <All>kitinvolant_medallion.png</All>
+    </Medallions>
+    <AlwaysInTileCenter>1</AlwaysInTileCenter>
+    <AnimationPack>3HydraAnimationPack</AnimationPack>
+    <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+    <ClothMapScale>0.615</ClothMapScale>
+    <Color_Skin>34,34,34,255</Color_Skin>
+    <CutSceneDataPack>BoneOgreUnitCutscenePack</CutSceneDataPack>
+    <EyeTexture>gfx/eyes/male_brown_eye.png</EyeTexture>
+    <InfoCardBackground>BG_EmpireForest</InfoCardBackground>
+    <ModelPath>kitinvolant_mesh.hkb</ModelPath>
+    <ModelScale>1</ModelScale>
+    <TacticalModelScale>1.5</TacticalModelScale>
+    <ClothMapScale>1.1000</ClothMapScale>
+    <ShowAsSingleUnit>1</ShowAsSingleUnit>
+    <SkeletonPath>kitinvolant_skeleton.hkb</SkeletonPath>
+    <SoundPack>SoundPack_Dragon1</SoundPack>
+    <Texture_All>kitinvolant_skin.dds</Texture_All>
+  </UnitType>
+  <AbilityBonus InternalName="SpitFireAbility_Darkwasp">
+    <AbilityBonusOption InternalName="SpitFireAbility_Darkwasp">
+      <DisplayName>Spit Poison</DisplayName>
+      <Description>Target unit takes the caster's attack strength in poison damage</Description>
+      <Icon>Ability_FireBreath_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>UnlockCombatAbility</Attribute>
+        <StrVal>SpitFire_Darkwasp</StrVal>
+        <Provides>Ranged attack that does the caster's Attack in Poison damage</Provides>
+      </GameModifier>
+      <CombatRating>30</CombatRating>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <IsCombatAbility>1</IsCombatAbility>
+      <Type>Ability</Type>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <SpellDef InternalName="SpitFire_Darkwasp">
+    <DisplayName>Spit Poison</DisplayName>
+    <Description>Target unit is enveloped in poison taking the caster's attack strength in poison damage.</Description>
+    <FormattedDescription>Target unit is enveloped in poison taking %d poison damage.</FormattedDescription>
+    <IconFG>Ability_FireBreath_Icon.png</IconFG>
+    <IconColor>32,45,243</IconColor>
+    <Cooldown>5</Cooldown>
+    <SpellBookSortCategory>Unit</SpellBookSortCategory>
+    <SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+    <SpellType>Tactical</SpellType>
+    <SpellClass>Offensive</SpellClass>
+    <SpellSubClass>Damage</SpellSubClass>
+    <SpellTargetType>EnemyUnit</SpellTargetType>
+    <HideInHiergamenon>1</HideInHiergamenon>
+    <IsCastable>0</IsCastable>
+    <IsSpecialAbility>1</IsSpecialAbility>
+    <Range>3</Range>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>DefendableDamage</Attribute>
+      <AttackStat>UnitStat_Attack_Poison</AttackStat>
+      <IsForFormattedDescription>1</IsForFormattedDescription>
+      <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+        <Expression><![CDATA[[UnitStat_CombinedAttack]]]></Expression>
+      </Calculate>
+      <Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+        <Expression><![CDATA[[Calc] * [Unit_GetTroopCount] ]]></Expression>
+      </Calculate>
+      <Calculate InternalName="Value">
+        <Expression><![CDATA[[Calc2]]]></Expression>
+      </Calculate>
+      <Calculate InternalName="ValueForFormattedDescription">
+        <Expression><![CDATA[[Calc2]]]></Expression>
+      </Calculate>
+    </GameModifier>
+    <AIData AIPersonality="AI_General">
+      <AIPriority>400</AIPriority>
+    </AIData>
+    <SpellCastSoundFX>Spells_DragonFire_01</SpellCastSoundFX>
+    <SpellCastEffectName>Stormworld_SpitPoison</SpellCastEffectName>
+    <SpellCastEffectScale>2.0</SpellCastEffectScale>
+  </SpellDef>
+  <GoodieHutType InternalName="Lair_Kitin">
+    <Name>Darkwasp Nest</Name>
+    <Description>A Darkwasp Nest.</Description>
+    <Rarity>40</Rarity>
+    <MinDistanceFromStartingPoints>8</MinDistanceFromStartingPoints>
+    <BarredTerrain>River</BarredTerrain>
+    <PreferredTerrain>Category:Forest</PreferredTerrain>
+    <PreferredTerrain>SwampTerrain</PreferredTerrain>
+    <ReleaseGuardiansOnInfluenceHit>1</ReleaseGuardiansOnInfluenceHit>
+    <SpawnRating>0</SpawnRating>
+    <TileDesign>R_Beehive_Imperium_01</TileDesign>
+    <DrawnIcon>Lair_Warg.png</DrawnIcon>
+    <OnSelectSFX>Click_Forest_Wolf</OnSelectSFX>
+    <Medallions InternalName="">
+      <All>kitinvolant_medallion.png</All>
+    </Medallions>
+    <Treasure>
+      <Liklihood>100</Liklihood>
+      <GameModifier>
+        <ModType>GiveItem</ModType>
+        <StrVal>Common</StrVal>
+      </GameModifier>
+    </Treasure>
+    <Encounter>
+      <Liklihood>100</Liklihood>
+      <WillRespawn>0</WillRespawn>
+      <WanderingRadius>0</WanderingRadius>
+      <UnitInstance>
+        <UnitType>KitinVolant</UnitType>
+        <!--<UnitGroupingType>UnitGroupingType_Party</UnitGroupingType>-->
+        <Level>6</Level>
+      </UnitInstance>
+      <UnitInstance>
+        <UnitType>KitinVolant</UnitType>
+        <Level>4</Level>
+      </UnitInstance>
+      <UnitInstance>
+        <UnitType>KitinVolant</UnitType>
+        <Level>5</Level>
+      </UnitInstance>
+    </Encounter>
+    <Encounter>
+      <Liklihood>-1</Liklihood>
+      <WillRespawn>1</WillRespawn>
+      <RespawnChance>5</RespawnChance>
+      <RespawnDelay>35</RespawnDelay>
+      <WanderingRadius>5</WanderingRadius>
+      <UnitInstance>
+        <UnitType>KitinVolant</UnitType>
+        <Level>4</Level>
+      </UnitInstance>
+      <UnitInstance>
+        <UnitType>KitinVolant</UnitType>
+        <Level>3</Level>
+      </UnitInstance>
+      <UnitInstance>
+        <UnitType>KitinVolant</UnitType>
+        <Level>2</Level>
+      </UnitInstance>
+    </Encounter>
+  </GoodieHutType>
+  <AnimationPack InternalName="3HydraAnimationPack">
+    <DisplayName>Hydra Animation Pack</DisplayName>
+    <IsAvailableForSovereignCustomization>False</IsAvailableForSovereignCustomization>
+    <AnimationSubPack>3D_Hydra_Idle_Animations</AnimationSubPack>
+    <AnimationSubPack>3D_Hydra_HeroPoseFront_Animations</AnimationSubPack>
+    <AnimationSubPack>3D_Hydra_Run_Animations</AnimationSubPack>
+    <AnimationSubPack>3D_Hydra_BattleRun_Animations</AnimationSubPack>
+    <AnimationSubPack>3D_Hydra_BattleIdle_Animations</AnimationSubPack>
+    <AnimationSubPack>3D_Hydra_Attack_Animations</AnimationSubPack>
+    <AnimationSubPack>3D_Hydra_AttackKill_Animations</AnimationSubPack>
+    <AnimationSubPack>3D_Hydra_Dodge_Animations</AnimationSubPack>
+    <AnimationSubPack>3D_Hydra_Block_Animations</AnimationSubPack>
+    <AnimationSubPack>3D_Hydra_OnHit_Animations</AnimationSubPack>
+    <AnimationSubPack>3D_Hydra_Death_Animations</AnimationSubPack>
+    <AnimationSubPack>3D_Hydra_ClothPose_Animations</AnimationSubPack>
+    <AnimationSubPack>3D_Hydra_CastRangedSpell</AnimationSubPack>
+
+
+    <AnimationSubPack>3D_Hydra_KnockedProne_Animations</AnimationSubPack>
+    <AnimationSubPack>3D_Hydra_ProneIdle_Animations</AnimationSubPack>
+    <AnimationSubPack>3D_Hydra_Prone_OnHit_Animations</AnimationSubPack>
+    <AnimationSubPack>3D_Hydra_Prone_Killed_Animations</AnimationSubPack>
+    <AnimationSubPack>3D_Hydra_Prone_Recover_Animations</AnimationSubPack>
+
+  </AnimationPack>
+
+
+
+
+    <AnimationSubPack InternalName="3D_Hydra_KnockedProne_Animations">
+    <Type>KnockedProne</Type>
+    <AnimationInSubPack>
+      <Animation>3D_Hydra_KnockedProne</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="3D_Hydra_ProneIdle_Animations">
+    <Type>ProneIdle</Type>
+    <AnimationInSubPack>
+      <Animation>3D_Hydra_ProneIdle</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="3D_Hydra_Prone_OnHit_Animations">
+    <Type>OnHitProne</Type>
+    <AnimationInSubPack>
+      <Animation>3D_Hydra_Onhit_01</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="3D_Hydra_Prone_Killed_Animations">
+    <Type>ProneDeath</Type>
+    <AnimationInSubPack>
+      <Animation>3D_Hydra_Death_01</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="3D_Hydra_Prone_Recover_Animations">
+    <Type>Recover</Type>
+    <AnimationInSubPack>
+      <Animation>3D_Hydra_Prone_Recover</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <Animation InternalName="3D_Hydra_KnockedProne">
+    <FileName>kitinvolant_animation_proneenter01.hkb</FileName>
+    <CropFrames>0</CropFrames>
+  </Animation>
+  <Animation InternalName="3D_Hydra_ProneIdle">
+    <FileName>kitinvolant_animation_proneloop01.hkb</FileName>
+    <CropFrames>0</CropFrames>
+  </Animation>
+  <Animation InternalName="3D_Hydra_Prone_Recover">
+    <FileName>kitinvolant_animation_pronerecover01.hkb</FileName>
+    <CropFrames>0</CropFrames>
+  </Animation>
+
+
+  <AnimationSubPack InternalName="3D_Hydra_CastRangedSpell">
+    <Type>CastRangedSpell</Type>
+    <AnimationInSubPack>
+      <Animation>kitinvolant_animation_castingspell01</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="3D_Hydra_Idle_Animations">
+    <Type>Idle</Type>
+    <AnimationInSubPack>
+      <Animation>3D_Hydra_Idle_01</Animation>
+      <likelihood>66</likelihood>
+    </AnimationInSubPack>
+    <AnimationInSubPack>
+      <Animation>3D_Hydra_Idle_02</Animation>
+      <likelihood>33</likelihood>
+    </AnimationInSubPack>
+    <AnimationInSubPack>
+      <Animation>3D_Hydra_Idle_03</Animation>
+      <likelihood>33</likelihood>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="3D_Hydra_HeroPoseFront_Animations">
+    <Type>HeroPoseFront</Type>
+    <AnimationInSubPack>
+      <Animation>3D_Hydra_Idle_01</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="3D_Hydra_Run_Animations">
+    <Type>Run</Type>
+    <AnimationInSubPack>
+      <Animation>3D_Hydra_Run_01</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="3D_Hydra_BattleRun_Animations">
+    <Type>BattleRun</Type>
+    <AnimationInSubPack>
+      <Animation>3D_Hydra_BattleRun_01</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="3D_Hydra_BattleIdle_Animations">
+    <Type>BattleIdle</Type>
+    <AnimationInSubPack>
+      <Animation>3D_Hydra_Idle_01</Animation>
+      <likelihood>33</likelihood>
+    </AnimationInSubPack>
+    <AnimationInSubPack>
+      <Animation>3D_Hydra_Idle_02</Animation>
+      <likelihood>33</likelihood>
+    </AnimationInSubPack>
+    <AnimationInSubPack>
+      <Animation>3D_Hydra_Idle_03</Animation>
+      <likelihood>33</likelihood>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="3D_Hydra_Attack_Animations">
+    <Type>Attack</Type>
+    <AnimationInSubPack>
+      <Animation>3D_Hydra_Attack_01</Animation>
+    </AnimationInSubPack>
+    <AnimationInSubPack>
+      <Animation>3D_Hydra_Attack_02</Animation>
+      <likelihood>25</likelihood>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="3D_Hydra_AttackKill_Animations">
+    <Type>AttackKill</Type>
+    <AnimationInSubPack>
+      <Animation>3D_Hydra_Attack_01</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="3D_Hydra_Dodge_Animations">
+    <Type>Dodge</Type>
+    <AnimationInSubPack>
+      <Animation>3D_Hydra_Dodge_01</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="3D_Hydra_Block_Animations">
+    <Type>Block</Type>
+    <AnimationInSubPack>
+      <Animation>3D_Hydra_Onhit_01</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="3D_Hydra_OnHit_Animations">
+    <Type>OnHit</Type>
+    <AnimationInSubPack>
+      <Animation>3D_Hydra_Onhit_01</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="3D_Hydra_Death_Animations">
+    <Type>Death</Type>
+    <AnimationInSubPack>
+      <Animation>3D_Hydra_Death_01</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="3D_Hydra_ClothPose_Animations">
+    <Type>ClothPose</Type>
+    <AnimationInSubPack>
+      <Animation>3D_Hydra_ClothPose</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <Animation InternalName="3D_Hydra_ClothPose">
+    <FileName>kitinvolant_animation_clothpose.hkb</FileName>
+    <CropFrames>0</CropFrames>
+  </Animation>
+  <Animation InternalName="3D_Hydra_Idle_01">
+    <FileName>kitinvolant_animation_idle01.hkb</FileName>
+    <CropFrames>0</CropFrames>
+  </Animation>
+  <Animation InternalName="3D_Hydra_Idle_02">
+    <FileName>kitinvolant_animation_idle02.hkb</FileName>
+    <CropFrames>0</CropFrames>
+  </Animation>
+  <Animation InternalName="3D_Hydra_Idle_03">
+    <FileName>kitinvolant_animation_idle03.hkb</FileName>
+    <CropFrames>0</CropFrames>
+  </Animation>
+  <Animation InternalName="3D_Hydra_Run_01">
+    <FileName>kitinvolant_animation_run01.hkb</FileName>
+    <DeltaZ>225</DeltaZ>
+    <PlaybackSpeedModifier>1.5</PlaybackSpeedModifier>
+  </Animation>
+  <Animation InternalName="3D_Hydra_BattleRun_01">
+    <FileName>kitinvolant_animation_run01.hkb</FileName>
+    <DeltaZ>225</DeltaZ>
+    <PlaybackSpeedModifier>1.5</PlaybackSpeedModifier>
+  </Animation>
+  <Animation InternalName="3D_Hydra_Attack_01">
+    <FileName>kitinvolant_animation_attacking01.hkb</FileName>
+    <CropFrames>2</CropFrames>
+  </Animation>
+  <Animation InternalName="3D_Hydra_Attack_02">
+    <FileName>kitinvolant_animation_attacking02.hkb</FileName>
+  </Animation>
+  <Animation InternalName="3D_Hydra_Onhit_01">
+    <FileName>kitinvolant_animation_attacked01.hkb</FileName>
+  </Animation>
+  <Animation InternalName="3D_Hydra_Dodge_01">
+    <FileName>kitinvolant_animation_attacked02.hkb</FileName>
+  </Animation>
+  <Animation InternalName="3D_Hydra_Death_01">
+    <FileName>kitinvolant_animation_death01.hkb</FileName>
+  </Animation>
+  <Animation InternalName="kitinvolant_animation_castingspell01">
+    <FileName>kitinvolant_animation_castingspell01.hkb</FileName>
+  </Animation>
+</Container>

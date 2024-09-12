@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<AbilityBonuses>
+  <DataChecksum NoParse="1">
+    <Ignore>DispName</Ignore>
+    <Translate>DisplayName,Description</Translate>
+  </DataChecksum>
+  <!-- **************************************************** -->
+  <!-- ********** Mod Abilities: Nervari Faction ********** -->
+  <!-- **************************************************** -->
+  
+  <!-- **************************************************** -->
+  <!-- Higher Standards -->
+  <!-- **************************************************** -->
+  <AbilityBonus InternalName="Higher_Standards_Ability">
+    <AbilityBonusType>Player</AbilityBonusType>
+    <AbilityBonusOption InternalName="Higher_Standards">
+      <DisplayName>Higher Standards</DisplayName>
+      <Description>Faction can cast the Repatriation spell. They also receive a +20% bonus to gold production, get more food and production in their cities, but suffer -50% Growth penalty.</Description>
+      <Icon>Ability_Higher_Standards_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>UnlockSpell</Attribute>
+        <StrVal>Nervari_Repatriation</StrVal>
+        <Provides>Unlocks Repatriation, a spell that grants +2 Growth in the enchanted city at the cost of 10% Unrest.</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_Gold</StrVal>
+        <Value>15</Value>
+        <Provides>The faction gets +20% Gildar income</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_Additive_ProductionPerMaterials</StrVal>
+        <Value>1</Value>
+        <Provides>The faction gets +1 Production per Material in all cities</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_Additive_FoodPerGrain</StrVal>
+        <Value>10</Value>
+        <Provides>The faction gets +10 Food per Grain in all cities</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_Prestige</StrVal>
+        <Value>-50</Value>
+        <Provides>The faction suffers -50% Growth in all cities</Provides>
+      </GameModifier>
+      <Cost>1</Cost>
+      <Type>Army</Type>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <!-- **************************************************** -->
+  <!-- Warrior Training -->
+  <!-- Inspiration: "WarriorCasteAbility" -->
+  <!-- **************************************************** -->
+  <AbilityBonus InternalName="Warrior_Training_Ability">
+    <AbilityBonusType>Player</AbilityBonusType>
+    <AbilityBonusOption InternalName="Warrior_Training">
+      <DisplayName>Warrior Training</DisplayName>
+      <Description>This faction can construct the Training Pits and the Martial Library improvements. Trained units can get Elite perk.</Description>
+      <Icon>Ability_WarMachine_Icon.png</Icon>
+      <GameModifier>
+        <Provides>Unlocks the Martial Library, an improvement that provides +5% research, reduces training costs by 15% and grants trained units +1 starting level and +5 Defense</Provides>
+      </GameModifier>
+      <GameModifier>
+        <Provides>Unlocks the Training Pits, an improvement that grants trained units the Gladiator ability (+2 Initiative, +5% Physical Resistance and +20% Armor Piercing), provides XP for stationed units and champions, but reduces Growth by 25%</Provides>
+      </GameModifier>
+      <GameModifier>
+        <Provides>Allows to train Elite units</Provides>
+      </GameModifier>
+      <Cost>1</Cost>
+      <Type>Army</Type>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <!-- **************************************************** -->
+  <!-- Veteran (Block, replaced with Veteran_Fighter) -->
+  <!-- **************************************************** -->
+  <AbilityBonus InternalName="VeteranAbility">
+    <AbilityBonusOption InternalName="Veteran">
+      <Prereq>
+        <Type>Allegiance</Type>
+        <Attribute>Blocked</Attribute>
+      </Prereq>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>0</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <!-- **************************************************** -->
+  <!-- Veteran Fighter (Veteran Replacment) -->
+  <!-- **************************************************** -->
+  <AbilityBonus InternalName="Veteran_Fighter_Ability">
+    <AbilityBonusType>Unit_Design</AbilityBonusType>
+    <AbilityBonusOption InternalName="Veteran_Fighter">
+      <DisplayName>Veteran Fighter</DisplayName>
+      <Description>An experienced fighter who grew up in harsh conditions and was hardened by dozens of battles.</Description>
+      <Icon>Ability_Fighter_Veteran_Icon.png</Icon>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Warrior_Training</Attribute>
+        <Target>Player</Target>
+      </Prereq>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>FreeLevel</Attribute>
+        <Provides>+1 Level</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_CombatSpeed</StrVal>
+        <Value>2</Value>
+        <Provides>+2 Initiative</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Dodge</StrVal>
+        <Value>5</Value>
+        <Provides>+5 Dodge</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Accuracy</StrVal>
+        <Value>5</Value>
+        <Provides>+5 Accuracy</Provides>
+      </GameModifier>
+      <AdditionalTrainingTurns>20</AdditionalTrainingTurns>
+      <CombatRating>25</CombatRating>
+      <IsCombatAbility>1</IsCombatAbility>
+      <Type>Aggressive</Type>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <!-- **************************************************** -->
+  <!-- Elite Fighter -->
+  <!-- **************************************************** -->
+  <AbilityBonus InternalName="Elite_Fighter_Ability">
+    <AbilityBonusType>Unit_Design</AbilityBonusType>
+    <AbilityBonusOption InternalName="Elite_Fighter">
+      <DisplayName>Elite Fighter</DisplayName>
+      <Description>An experienced fighter who grew up in harsh conditions and was hardened by hundreds of battles.</Description>
+      <Icon>Ability_Fighter_Elite_Icon.png</Icon>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Attribute>Warrior_Training</Attribute>
+        <Target>Player</Target>
+      </Prereq>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>FreeLevel</Attribute>
+        <Provides>+1 Level</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_CombatSpeed</StrVal>
+        <Value>2</Value>
+        <Provides>+2 Initiative</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Dodge</StrVal>
+        <Value>10</Value>
+        <Provides>+10 Dodge</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Accuracy</StrVal>
+        <Value>10</Value>
+        <Provides>+10 Accuracy</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_HitPoints</StrVal>
+        <Multiplier>1.10</Multiplier>
+        <Provides>+10% Hit Points</Provides>
+      </GameModifier>
+      <AdditionalTrainingTurns>30</AdditionalTrainingTurns>
+      <CombatRating>50</CombatRating>
+      <IsCombatAbility>1</IsCombatAbility>
+      <Type>Aggressive</Type>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <!-- **************************************************** -->
+  <!-- Gladiator -->
+  <!-- **************************************************** -->
+  <AbilityBonus InternalName="Gladiator_Fighter_Ability">
+    <AbilityBonusOption InternalName="Gladiator_Fighter">
+      <DisplayName>Gladiator</DisplayName>
+      <Description>An experienced fighter who grew up in harsh conditions and was hardened by dozens of arena battles.</Description>
+      <Icon>Ability_Fighter_Gladiator_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_CombatSpeed</StrVal>
+        <Value>2</Value>
+        <Provides>+2 Initiative</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistPierce</StrVal>
+        <Value>5</Value>
+        <Provides>+5% Physical Resistance</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ArmorPierce</StrVal>
+        <Value>20</Value>
+        <Provides>Ignores 20% of the victim's Defense</Provides>
+      </GameModifier>
+      <Type>Aggressive</Type>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+</AbilityBonuses>

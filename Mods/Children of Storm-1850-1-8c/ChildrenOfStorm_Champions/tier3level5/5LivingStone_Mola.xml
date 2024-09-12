@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<UnitTypes>
+	<UnitType InternalName="LivingStone_Mola">
+		<CreatureType>Champion</CreatureType>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-5</Value>
+			<Provides>-5% Unrest in the city this unit is in</Provides>
+		</GameModifier>
+
+		<DisplayName>Mola</DisplayName>
+		<Backstory>As they were building their new society, the Living Stone had to learn new ways of doing things that most other races take for granted, including how to work together in a common society, how an economy should work, who decides what gets done, by whom, and when, etc.  Mola was instrumental in pushing her people to decide upon and implement these policies.  This relentless pushing has earned her the nickname 'the millstone' for the way she can relentlessly grind down objections to getting things done.  Perhaps she's been a bit too relentless, as she's now seeking to employ her administrative skills at large.</Backstory>
+
+		<ModelPath>M_Demon_Elemental_Mesh_01.hkb</ModelPath>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<EyeTexture>gfx\Eyes\blinks\Eyeblink_F4_Blk.png</EyeTexture>
+		<AnimationPack>EF_NoblemanAnimationPack</AnimationPack>
+
+		<ShowAsSingleUnit>false</ShowAsSingleUnit>
+		<CutSceneDataPack>ReliasCutscenePack</CutSceneDataPack>
+		<ModelScale>1.0000</ModelScale>
+		<TacticalModelScale>1.5000</TacticalModelScale>
+		<EquipmentScale>1.0000</EquipmentScale>
+		<ClothMapScale>1.6</ClothMapScale>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<MovementType>land</MovementType>
+		<BobbingFrequency>0.0000</BobbingFrequency>
+
+		<ClothPoseIndex>11</ClothPoseIndex>
+		<InfoCardBackground>BG40_Airshrine</InfoCardBackground>
+		<InfoCardBackgroundFlipped>1</InfoCardBackgroundFlipped>
+
+		<CanBeDesigned>0</CanBeDesigned>
+		<Allegiance>Kingdom</Allegiance>
+		<Unique>1</Unique>
+		<IsNPC>1</IsNPC>
+		<NPCSpawnLikelihood>100</NPCSpawnLikelihood>
+		<IsChampion>1</IsChampion>
+		<SoundPack>SoundPack_Generic_Female</SoundPack>
+		<Gender>Female</Gender>
+		<SpawnRating>5</SpawnRating>
+
+		<Quote>Don't bother voicing your objections; I've already got responses to all of them here.</Quote>
+		<NPCRecruitmentText>For %d gildar, I'll make sure things get done around here.</NPCRecruitmentText>
+		<SelectedAbilityBonusOption>Blood_LivingStone</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>PathOfTheGovernor</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Mola_Prod</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Earth1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Administrator1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Administrator2</SelectedAbilityBonusOption>
+
+		<Medallions InternalName=""/>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_HitPoints>20</UnitStat_HitPoints>
+			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_LivingStone>1</UnitStat_BG_IsRace_LivingStone>
+			<UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsFemale>1</UnitStat_BG_IsFemale>
+			<UnitStat_BG_IsNotAlive>1</UnitStat_BG_IsNotAlive>
+		</LevelMilestone>
+
+		<AutoCreateEquipment>Warhammer</AutoCreateEquipment>
+		<AutoCreateEquipment>BandOfInsight</AutoCreateEquipment>
+		<AutoCreateEquipment>BandOfTheStalwart</AutoCreateEquipment>
+
+		<Color_Skin>99,63,30,255</Color_Skin>
+		<Color_Hair>50,50,50,255</Color_Hair>
+		<Color_Clothing1>235,97,97,255</Color_Clothing1>
+		<Color_Clothing2>138,61,13,255</Color_Clothing2>
+		<Color_Metal>0,0,0,255</Color_Metal>
+		<Texture_Skin>expanded_M_Demon_Elemental_Texture_01.png</Texture_Skin>
+
+		<UnitModelType>LivingStone</UnitModelType>
+		<NPCFreeRecruit>0</NPCFreeRecruit>
+		<RaceType>Race_Type_LivingStone</RaceType>
+		<WageOverride>1</WageOverride>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+	</UnitType>
+
+	<AbilityBonus InternalName="Mola_Prod">
+			<AbilityBonusOption InternalName="Mola_Prod">
+			<DisplayName>Mola's Drive</DisplayName>
+			<Description>Mola is a master at pushing others to get things done. As a result, production in the city she's stationed in will increase.</Description>			
+			<GameModifier>
+				<ModType>ResourceMultiplier</ModType>
+				<Attribute>Production</Attribute>
+				<Duration>-1</Duration>
+				<PerTurn>1</PerTurn>
+				<Value>1.1</Value>
+				<Provides>+10% Production in the city this unit is stationed in.</Provides>
+			</GameModifier>
+			<Icon>Action_KingdomReport.png</Icon>
+			<CombatRating>-5</CombatRating>
+		</AbilityBonusOption>
+	</AbilityBonus>
+</UnitTypes>

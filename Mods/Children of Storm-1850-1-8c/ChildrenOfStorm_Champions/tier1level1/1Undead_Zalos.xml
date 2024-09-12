@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<UnitTypes>
+	<UnitType InternalName="Undead_Zalos">
+		<CreatureType>Champion</CreatureType>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-5</Value>
+			<Provides>-5% Unrest in the city this unit is in</Provides>
+		</GameModifier>
+
+		<DisplayName>Zalos</DisplayName>
+		<Backstory>Zalos was a powerful Air wizard that fell under the thumb of the Skeleton King when "it" rose to power. Zalos was able to escape capture by the King's minions for a long time using his magical skills. Eventually, he agreed to be turned on the condition that he would be free to pursue his own fortune. The King broke the promise and after the turning imprisoned Zalos for one hundred years to "teach him some manners". Zalos escaped.</Backstory>
+
+		<ModelPath>undeadmainbody.hkb</ModelPath>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<EyeTexture>gfx\Eyes\blinks\eyeblink_m4_brwn.png</EyeTexture>
+		<AnimationPack>EF_MaleSovereignAnimationPack</AnimationPack>
+		<ShowAsSingleUnit>false</ShowAsSingleUnit>
+		<CutSceneDataPack>ReliasCutscenePack</CutSceneDataPack>
+		<ModelScale>1.0000</ModelScale>
+		<TacticalModelScale>1.9000</TacticalModelScale>
+		<EquipmentScale>1.0000</EquipmentScale>
+		<ClothMapScale>1.6</ClothMapScale>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<MovementType>land</MovementType>
+		<BobbingFrequency>0.0000</BobbingFrequency>
+		<ClothPoseIndex>0</ClothPoseIndex>
+		<InfoCardBackground>BG13_Volcanic</InfoCardBackground>
+		<InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+		<CanBeDesigned>0</CanBeDesigned>
+		<Medallions InternalName=""/>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<!-- -->
+		<Allegiance>Empire</Allegiance>
+		<Unique>1</Unique>
+		<IsNPC>1</IsNPC>
+		<NPCSpawnLikelihood>100</NPCSpawnLikelihood>
+		<IsChampion>1</IsChampion>
+		<Gender>Male</Gender>
+		<SpawnRating>1</SpawnRating>
+
+		<Quote>Move like the wind, strike like the thunder.</Quote>
+		<NPCRecruitmentText>%d Gildar. No more, no less.</NPCRecruitmentText>
+		<SelectedAbilityBonusOption>Blood_CoS_Undead</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Air2</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Air1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Quick</SelectedAbilityBonusOption>
+		<!-- -->
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<UnitStat_BG_IsHumanoid>1.0000</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsEmpire>1.0000</UnitStat_BG_IsEmpire>
+			<UnitStat_BG_IsNotAlive>1</UnitStat_BG_IsNotAlive>
+			<UnitStat_BG_IsRace_Undead>1.0000</UnitStat_BG_IsRace_Undead>
+			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
+			<UnitStat_BG_IsUndead>1</UnitStat_BG_IsUndead>
+			<UnitStat_BG_IsImmortal>1</UnitStat_BG_IsImmortal>
+			<UnitStat_CombatSpeed>22.0000</UnitStat_CombatSpeed>
+			<UnitStat_HitPoints>20.0000</UnitStat_HitPoints>
+			<UnitStat_ImmuneToFear>1</UnitStat_ImmuneToFear>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+		</LevelMilestone>
+		<AutoCreateEquipment>Staff_Incineration</AutoCreateEquipment>
+		<Equipment>Plaguebeastmount_Zalos</Equipment>
+		<Equipment>Amarian_Robe_Hood</Equipment>
+		<SelectedAbilityBonusOption>Plaguebeastmount</SelectedAbilityBonusOption>
+		<Color_Metal>70,100,70,255</Color_Metal>
+		<Color_Skin>50,50,50,255</Color_Skin>
+		<Color_Hair>168,123,88,255</Color_Hair>
+		<Color_Clothing1>120,25,20,255</Color_Clothing1>
+		<Color_Clothing2>78,60,55,255</Color_Clothing2>
+		<Texture_Skin>Undead_skin.png</Texture_Skin>
+		<Texture_Eyes>gfx\Eyes\blinks\eyeblink_m4_brwn.png</Texture_Eyes>
+		<UnitModelType>Undead</UnitModelType>
+		<SoundPack>SoundPack_Skeleton</SoundPack>
+		<NPCFreeRecruit>0</NPCFreeRecruit>
+		<RaceType>Race_Type_Undead</RaceType>
+		<WageOverride>1</WageOverride>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+	</UnitType>
+	<AbilityBonus InternalName="Plaguebeastmount">
+		<AbilityBonusOption InternalName="Plaguebeastmount">
+			<DisplayName>Plaguebeast Trait</DisplayName>
+			<Description>This mount is Soulbound to its original owner. It cannot be traded or sold. The mount is always equipped, unless anything else is equipped for the slot. 
+
+If a replacement mount is equipped, then unequipped, this mount returns.</Description>
+			<GameModifier>
+				<Provides>This mount is Soulbound to its original owner. It cannot be traded or sold. The mount is always equipped, unless anything else is equipped for the slot. 
+
+If a replacement mount is equipped, then unequipped, this mount returns.</Provides>
+			</GameModifier>
+			<Icon>plaguebeasttoken.png</Icon>
+			<CombatRating>-25</CombatRating>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<GameItemType InternalName="Plaguebeastmount_Zalos">
+		<DisplayName>Zalos' Plaguebeast</DisplayName>
+		<Description>Far too poisonous for anyone else to ride, the Undead ride these beasts in battle. These mounts may not be purchased for or used for any non-Undead Champion.</Description>
+		<Type>Mount</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Poison</StrVal>
+			<Value>4</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ChanceToAvoidProne</StrVal>
+			<Value>100</Value>
+		</GameModifier>
+
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Moves</StrVal>
+			<Value>2</Value>
+		</GameModifier>
+		<GameModifier>
+			<Value>0</Value>
+			<Provides>Item is Soulbound (see Trait)</Provides>
+		</GameModifier>
+		<GameModifier InternalName="_IsMounted">
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_BG_IsUsingMount</StrVal>
+			<Value>1</Value>
+			<Provides>Unit counts as Mounted</Provides>
+		</GameModifier>
+		<CutSceneDataPack>WargMountCutScenePack</CutSceneDataPack>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_MOUNT</AIPrefType>
+		</AIData>
+		<ArtDef>Plaguebeastmount</ArtDef>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+	</GameItemType>
+</UnitTypes>

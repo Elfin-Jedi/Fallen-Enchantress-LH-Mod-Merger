@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<ImprovementTypes>
+	<ImprovementType InternalName="Imp_X_EssentialEssence">
+		<DisplayName>Essential Essence</DisplayName>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_ThinkingMachine</Attribute>
+		</Prereq>
+		<Description>Sets Essence at 3.
+		Subsequent essence modifying improvements can increase this number.</Description>
+		<RequiresCity>1</RequiresCity>
+		<PreferredTerrain>River</PreferredTerrain>
+		<PreferredTerrain>River</PreferredTerrain>
+		<PreferredTerrain>City</PreferredTerrain>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<LaborToBuild>1</LaborToBuild>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>TileYieldEssence</Attribute>
+			<PerTurn>1</PerTurn>
+			<Provides><![CDATA[Sets Essence at 3]]></Provides>
+			<Calculate InternalName="Calc" ValueOwner="OwnerCity">
+				<Expression><![CDATA[3 - [TileYieldEssence]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>-1% Unrest</Provides>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>933</AIPriority>
+			<AITag>Study</AITag>
+		</AIData>
+		<ArtDef>ArtDef_X_EssentialEssence_Imp</ArtDef>
+	</ImprovementType>
+</ImprovementTypes>

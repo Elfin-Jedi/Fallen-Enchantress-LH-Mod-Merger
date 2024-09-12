@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+<Container>
+  <UnitType InternalName="Champion_Ozov"><CreatureType>Champion</CreatureType>
+    <GameModifier>
+      <ModType>Resource</ModType>
+      <Attribute>Unrest</Attribute>
+      <Value>-5</Value>
+      <Provides>-5% Unrest in the city this unit is in</Provides>
+    </GameModifier>
+    <ClothMapScale>1.6</ClothMapScale>
+    <DisplayName>Champion</DisplayName>
+    <UnitDisplayName>Ovoz</UnitDisplayName>
+    <Class>Adventurer</Class>
+    <Allegiance>Empire</Allegiance>
+    <Unique>1</Unique>
+    <CanBeDesigned>0</CanBeDesigned>
+    <Gender>Male</Gender>
+    <WageOverride>1</WageOverride>
+    <IsNPC>1</IsNPC>
+    <IsChampion>1</IsChampion>
+    <IsSovereign>0</IsSovereign>
+    <SpawnRating>1</SpawnRating>
+    <NPCSpawnLikelihood>100</NPCSpawnLikelihood>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <UnitStat_Accuracy>80</UnitStat_Accuracy>
+      <UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
+      <UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+      <UnitStat_HitPoints>20</UnitStat_HitPoints>
+      <UnitStat_BG_IsRace_Lizardmen>1.0000</UnitStat_BG_IsRace_Lizardmen>
+      <UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
+      <UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+      <UnitStat_BG_IsEmpire>1</UnitStat_BG_IsEmpire>
+      <UnitStat_BG_IsMale>1</UnitStat_BG_IsMale>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Blood_Lizardmen</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Death1</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>OvozBloodMagic</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>HallowedRite</SelectedAbilityBonusOption>
+    <AutoCreateEquipment>Warhammer</AutoCreateEquipment>
+    <Equipment>Lizardmanhead</Equipment>
+    <Equipment>F_Male_Quendar_Horns_02</Equipment>
+ 
+    <Quote>Sacrificial priest was my duty and honour.</Quote>
+    <NPCRecruitmentText>I promise you honest service, for the right price. %d gildar.
+</NPCRecruitmentText>
+    <Backstory>Ovoz is a practitioner of Blood Magic. Normally such devotion would give him high social status within the Lizardmen society but Ovoz also is an atheist with conviction. While his brethren prefer to deliver whatever dark powers they unlock unto their gods, Ovoz wants it all for himself. Although he was not explicitly repudiated from Lizardmen culture, he felt that they were holding him back and decided to leave of his own volition.</Backstory>
+    <AnimationPack>SoldierAnimationPack</AnimationPack>
+    <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+    <ClothPoseIndex>19</ClothPoseIndex>
+    <Color_Skin>77,77,0,255</Color_Skin>
+    <Color_Hair>218,218,218,255</Color_Hair>
+    <Color_Clothing1>84,84,0,255</Color_Clothing1>
+    <Color_Clothing2>40,35,35,255</Color_Clothing2>
+    <Color_Metal>107,41,41,255</Color_Metal>
+    <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+    <EyeTexture>gfx\eyes\blinks\eyeblink_m7_Red.png</EyeTexture>
+    <InfoCardBackground>BG2_Abstract</InfoCardBackground>
+    <ModelPath>F_Male_Magnar_Body_Mesh_01.hkb</ModelPath>
+    <ModelScale>1</ModelScale>
+    <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+    <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+    <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+    <SoundPack>SoundPack_Generic_Male</SoundPack>
+    <TacticalModelScale>1.5</TacticalModelScale>
+    <Texture_Eyes>gfx\eyes\blinks\eyeblink_m7_Red.png</Texture_Eyes>
+    <Texture_Skin>Magnar_Skin_M_01.dds</Texture_Skin>
+    <UnitModelType>QuendarMale</UnitModelType>
+  </UnitType>
+  <AbilityBonus InternalName="OvozBloodMagic">
+	  <AbilityBonusOption InternalName="OvozBloodMagic">
+		              <PerkTreePosX>3</PerkTreePosX>
+			      <PerkTreePosY>5</PerkTreePosY>
+			      <GameModifier><Provides>This trait appears in the General trait tree</Provides></GameModifier>
+
+      <DisplayName>Ovoz' Blood Magic</DisplayName>
+      <Description>After level 5, Ovoz can learn True Blood Magic. That trait gives +1 Death Shard power (produces no Mana), +10 Unrest in any stationed city</Description>
+      <Icon>Ability_AfraidofDying_Icon.png</Icon>
+	  <GameModifier><Provides>After level 5, Ovoz can learn True Blood Magic.  That trait gives +1 Death Shard power (produces no Mana), +10 Unrest in any stationed city</Provides></GameModifier>
+    </AbilityBonusOption>
+	
+  </AbilityBonus>
+  <AbilityBonus InternalName="OvozBloodMagic2">
+	  <AbilityBonusType>Unit_Level</AbilityBonusType>
+	  <AbilityBonusOption InternalName="OvozBloodMagic2">
+
+		  <PerkTreePosX>4</PerkTreePosX>
+		  <PerkTreePosY>5</PerkTreePosY>
+
+      <DisplayName>True Blood Magic</DisplayName>
+      <Description>+1 Death Shard power (produces no Mana), +10 Unrest in any stationed city</Description>
+
+
+               <GameModifier>
+                <ModType>Resource</ModType>
+                <Attribute>Unrest</Attribute>
+                <Value>10</Value>
+                <Provides>+10 Unrest in the city this unit is in</Provides>
+	</GameModifier>
+
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>ProduceResource</Attribute>
+        <StrVal>DeathMana</StrVal>
+	<Value>1</Value>
+	<Provides>+1 Death Shard power</Provides>
+      </GameModifier>
+      <MinimumLevel>6</MinimumLevel>
+      <Likelihood>300</Likelihood>
+                  <AIData AIPersonality="AI_General">
+                <AIPriority>500</AIPriority>
+	</AIData>
+
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>OvozBloodMagic</Attribute>
+      </Prereq>
+      <Icon>Ability_AfraidofDying_Icon.png</Icon>
+    </AbilityBonusOption>
+  </AbilityBonus>
+</Container>
+<!--
+
+   <GameItemType InternalName="triceratops">
+    <DisplayName>Centaur Base</DisplayName>
+    <Description>The Horse part of the Centaur body. Do not replace it with another mount.</Description>
+    <Type>Mount</Type>
+    <CanBeEquipped>1</CanBeEquipped>
+    <ShopValue>-1</ShopValue>
+    <Prereq>
+      <Type>Race</Type>
+      <Attribute>Race_Type_Centaur</Attribute>
+    </Prereq>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_DrotaBase</StrVal>
+      <Provides>This base is required for all Centaurs. Do not remove it.</Provides>
+      <Value>1</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_ChanceToAvoidProne</StrVal>
+      <Value>100</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_WeightCapacity</StrVal>
+      <Value>20</Value>
+    </GameModifier>
+    <CutSceneDataPack>CentaurCutScenePack</CutSceneDataPack>
+    <IsAvailableForSovereignCustomization>1</IsAvailableForSovereignCustomization>
+    <AIData AIPersonality="AI_General">
+      <AIPrefType>AIPrefType_MOUNT</AIPrefType>
+    </AIData>
+    <ArtDef>triceratops</ArtDef>
+    <GameItemTypeArtDef InternalName="triceratops">
+      <GameItemTypeModelPack InternalName="triceratops">
+       
+        <IconFile>ability_warning.png</IconFile>
+        <TintR>0</TintR>
+        <TintG>0</TintG>
+        <TintB>0</TintB>
+        <EquipSFX>Equip_WoodenItem_01</EquipSFX>
+        <EquipSFX>Equip_WoodenItem_02</EquipSFX>
+        <EquipSFX>Equip_WoodenItem_03</EquipSFX>
+        <EquipSFX>Equip_WoodenItem_04</EquipSFX>
+        <MountedAnimationPack>MountedDrotaWargAnimationPack</MountedAnimationPack>
+        <GameItemTypeModel>
+          <ModelFile>triceratops.hkb</ModelFile>
+          <Scale>0.65</Scale>
+          <SkeletonFile>triceratops_skele.hkb</SkeletonFile>
+          <Texture_Skin>Triceratops_skin.png</Texture_Skin>
+          <AnimationPack>CentaurMountedHorseAnimationPack</AnimationPack>
+          <Attachment>lcf_mount</Attachment>
+          <Color_Skin>55,35,15</Color_Skin>
+          <ShadowImage>/gfx/decals/Shadow_Horse_01.png</ShadowImage>
+        </GameItemTypeModel>
+ 
+      </GameItemTypeModelPack>
+    </GameItemTypeArtDef>
+  </GameItemType>-->

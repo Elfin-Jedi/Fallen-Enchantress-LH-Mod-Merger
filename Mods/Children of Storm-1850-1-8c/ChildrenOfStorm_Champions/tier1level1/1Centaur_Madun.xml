@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<UnitTypes>
+	<UnitType InternalName="Centaur_Madun">
+		<CreatureType>Champion</CreatureType>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-5</Value>
+			<Provides>-5% Unrest in the city this unit is in</Provides>
+		</GameModifier>
+
+		<DisplayName>Madun</DisplayName>
+		<Backstory>Madun was banished from his Clan for having an inappropriate but non-sexual relationship with an under-age Centaur girl. Madun wandered the wastelands left behind by the Cataclysm until the girl came of age. Centaur tradition dictates that would be when he would be allowed to return to the Clan. He chose not to return to the Clan because he had grown to love the freedom of deciding only for himself what to do. When the War of Magic erupted, Madun searched for his Clan to rejoin them but learned that they had been eradicated by a raiding party of Chaos Legion demons. He now seeks to join forces with someone who promises the destruction of the entire Chaos Legion.</Backstory>
+		<HasEssence>true</HasEssence>
+		<ModelPath>centaur_malemainbody.hkb</ModelPath>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<EyeTexture>gfx\eyes\blinks\eyeblink_f3_hazel.png</EyeTexture>
+		<AnimationPack>EF_MaleSovereignAnimationPack</AnimationPack>
+		<ShowAsSingleUnit>false</ShowAsSingleUnit>
+		<CutSceneDataPack>KulanCutscenePack</CutSceneDataPack>
+		<ModelScale>1.0000</ModelScale>
+		<TacticalModelScale>1.5000</TacticalModelScale>
+		<EquipmentScale>1.0000</EquipmentScale>
+		<ClothMapScale>1.6</ClothMapScale>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<MovementType>land</MovementType>
+		<BobbingFrequency>0.0000</BobbingFrequency>
+		<ClothPoseIndex>3</ClothPoseIndex>
+		<InfoCardBackground>BG17_BurningCastle</InfoCardBackground>
+		<InfoCardBackgroundFlipped>1</InfoCardBackgroundFlipped>
+		<CanBeDesigned>0</CanBeDesigned>
+		<!-- -->
+		<Allegiance>Kingdom</Allegiance>
+		<Unique>1</Unique>
+		<IsNPC>1</IsNPC>
+		<NPCSpawnLikelihood>100</NPCSpawnLikelihood>
+		<IsChampion>1</IsChampion>
+		<Gender>Male</Gender>
+		<SoundPack>SoundPack_Generic_Male</SoundPack>
+		<SpawnRating>1</SpawnRating>
+
+		<Quote>You seen any demons around?</Quote>
+		<NPCRecruitmentText>%d gildar would show me that you are sincere.</NPCRecruitmentText>
+		<SelectedAbilityBonusOption>Blood_Centaur</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>MadunsHate</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Fire1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Precision_Level</SelectedAbilityBonusOption>
+		<!-- -->
+		<Medallions InternalName=""/>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_BG_IsKingdom>1.0000</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsMale>1.0000</UnitStat_BG_IsMale>
+			<UnitStat_BG_IsMonster>1.0000</UnitStat_BG_IsMonster>
+			<UnitStat_BG_IsRace_Centaur>1.0000</UnitStat_BG_IsRace_Centaur>
+			<UnitStat_CombatSpeed>22.0000</UnitStat_CombatSpeed>
+			<UnitStat_HitPoints>20.0000</UnitStat_HitPoints>
+			<UnitStat_Moves>3.0000</UnitStat_Moves>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+		</LevelMilestone>
+		<Equipment>Centaur_F_Male_Head_02</Equipment>
+		<Equipment>centaur_base_mount2</Equipment>
+		<AutoCreateEquipment>Axe</AutoCreateEquipment>
+		<Color_Skin>75,55,40,255</Color_Skin>
+		<Color_Hair>158,113,78,255</Color_Hair>
+		<Color_Clothing1>120,25,20,255</Color_Clothing1>
+		<Color_Clothing2>78,60,55,255</Color_Clothing2>
+		<Color_Metal>255,255,255,255</Color_Metal>
+		<Texture_Skin>Trog_Skin_M_03.png</Texture_Skin>
+		<Texture_Eyes>gfx\eyes\blinks\eyeblink_f3_hazel.png</Texture_Eyes>
+		<UnitModelType>Centaur</UnitModelType>
+		<NPCFreeRecruit>0</NPCFreeRecruit>
+		<RaceType>Race_Type_Centaur</RaceType>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<WageOverride>1</WageOverride>
+	</UnitType>
+	
+	<AbilityBonus InternalName="MadunsHate">
+		<AbilityBonusOption InternalName="MadunsHate">
+			<DisplayName>Madun's Hate</DisplayName>
+			<Description>This Unit gains +25 Accuracy, +25 Spell Mastery and gains +10 Resistance to physical attacks when fighting those of the race Chaos Legion</Description>
+			<Icon>Ability_Blindness.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Accuracy</StrVal>
+				<StrVal2>UnitStat_BG_IsRace_DeathLegion</StrVal2>
+				<Value>25</Value>
+				<Provides>+25 Accuracy vs race: Death Legion</Provides>
+				<vsHigher>1</vsHigher>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_MagicPower</StrVal>
+				<StrVal2>UnitStat_BG_IsRace_DeathLegion</StrVal2>
+				<Value>25</Value>
+				<Provides>+25 Spell Mastery vs race: Death Legion</Provides>
+				<vsHigher>1</vsHigher>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ResistPierce</StrVal>
+				<StrVal2>UnitStat_BG_IsRace_DeathLegion</StrVal2>
+				<Provides>+10 physical resistance against enemies from Race: Death Legion</Provides>
+				<Value>10</Value>
+				<vsHigher>1</vsHigher>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+</UnitTypes>

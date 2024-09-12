@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<ImprovementTypes>
+	<ImprovementType InternalName="Wonder_X_UnearthedRevealer">
+		<DisplayName>Unearthed Revealer</DisplayName>
+		<Description>The peons who unearthed this cyclopean cluster of Crystal called it a crystal ball, as even them were able to see 'things' in it. You, on the other hand, can see much more than 'things'; specifically, you can see all of Elemental.
+		
+		+1 Fame per Season
+		+100 Fame
+		Can cast Ineluctable Vision (Free)
+		-1% Unrest
+		-2% Unrest in all your cities
+		
+		World Wonder.</Description>
+		<AllowedPerGame>1</AllowedPerGame>
+		<RequiresCity>1</RequiresCity>
+		<BarredTerrain>River</BarredTerrain>
+		<BarredTerrain>SwampTerrain</BarredTerrain>
+		<PreferredTerrain>City</PreferredTerrain>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<PreferredTerrain>Forest</PreferredTerrain>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Third_Book_Of_The_Magi</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Lizardmeninferiority</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Ascetics</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<LaborToBuild>1053</LaborToBuild>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_XL_Beer</Attribute>
+			<Value>-50</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Fame</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Fame per Season</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Fame</Attribute>
+			<Value>100</Value>
+			<Provides>+100 Fame</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_IneluctableVision</StrVal>
+			<Provides>Strategic Spell: Unlocks Ineluctable Vision (Free)</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>-1% Unrest</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_Additive_Unrest</StrVal>
+			<Value>-2</Value>
+			<Provides>-2% Unrest in all your cities</Provides>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>400</AIPriority>
+			<AITag>Arcane</AITag>
+		</AIData>
+		<ArtDef>ArtDef_X_UnearthedRevealer_Wonder</ArtDef>
+	</ImprovementType>
+</ImprovementTypes>

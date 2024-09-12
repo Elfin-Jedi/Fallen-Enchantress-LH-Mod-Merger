@@ -1,0 +1,256 @@
+<?xml version="1.0"?>
+<Container>
+ 
+  <AbilityBonus InternalName="Undead">
+    <AbilityBonusOption InternalName="Undead">
+      <DisplayName>Slavers</DisplayName>
+      <Description>When men or fallen are defeated in combat they are transferred as population to your nearest city.</Description>
+      <Icon>Ability_SlaveLords_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_EnslaveDefeated</StrVal>
+        <Provides>When men or fallen are defeated in combat they are transferred as population to your nearest city.</Provides>
+        <Value>1</Value>
+      </GameModifier>
+      <Cost>1</Cost>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="CallthedeadX">
+    <AbilityBonusOption InternalName="CallthedeadX">
+      <DisplayName>Magically powered</DisplayName>
+      <Description>Each member in a Skeleton unit costs 1 mana to train.</Description>
+      <Cost>-1</Cost>
+      <GameModifier>
+        <Provides>Each member in a Skeleton unit costs 1 mana to train.</Provides>
+      </GameModifier>
+      <Icon>Stat_ManaOnCast_Icon.png</Icon>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="DominionOfTheDead2">
+    <AbilityBonusOption InternalName="DominionOfTheDead2">
+      <DisplayName>Dominion over Death</DisplayName>
+      <Description>Sovereign reduces wages by 5% per its level. At high levels, this flips all wages into Gildar production instead.</Description>
+      <Icon>Ability_Persuasive_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <Value>5</Value>
+        <StrVal>A_ArmyMaintenance</StrVal>
+        <PerLevel>1</PerLevel>
+        <Provides>Sovereign reduces wages by 5% per its level. At high levels, this flips all wages into Gildar production instead.</Provides>
+      </GameModifier>
+      <RarityDisplay>Rare</RarityDisplay>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="DominionOfTheDead4">
+    <AbilityBonusOption InternalName="DominionOfTheDead4">
+		  <IMPINC>Strength</IMPINC>
+      <DisplayName>Eternal Resurrection</DisplayName>
+      <Description>Faction has access to the Eternal Resurrection spell, which can be used to begin turning champions with 1 or more Injuries into mindless undead soldiers. The spell has various effects, such as removing all Injuries, reducing XP gained by 50%, preventing new spell-traits from being learned and more.</Description>
+      <Icon>Ability_GreaterCurse_Icon.png</Icon>
+      <GameModifier>
+        <Provides>Faction has access to the Eternal Resurrection spell, which can be used to begin turning champions with 1 or more Injuries into mindless undead soldiers. The spell has various effects, such as removing all Injuries, reducing XP gained by 50%, preventing new spell-traits from being learned and more.</Provides>
+      </GameModifier>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="TurnedUndead">
+    <AbilityBonusOption InternalName="TurnedUndead">
+      <DisplayName>Eternal Resurrection</DisplayName>
+      <Description>Champion gains experience at half normal rate, and receives no benefit from any bonuses that increases experience gain. Champion cannot learn any additional Spell traits at level-up. Champion suffers -5 Initiative and is capped at 3 Strategic Health regeneration.
+
+All Injuries were removed. Champion cannot suffer any new Injuries.
+
+Champion drains 1 Death Shard power. Champion counts as Immortal and as if it belonged to the Race: Undead. Champion also maintains its old Race.</Description>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_CombatSpeed</StrVal>
+        <Value>-5</Value>
+        <Provides>Champion gains experience at half normal rate, and receives no benefit from any bonuses that increases experience gain. Champion cannot learn any additional Spell traits at level-up. Champion suffers -5 Initiative and is capped at 3 Strategic Health regeneration.
+
+All Injuries were removed. Champion cannot suffer any new Injuries.
+
+Champion drains 1 Death Shard power. Champion counts as Immortal and as if it belonged to the Race: Undead. Champion also maintains its old Race.</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>MaxHPRegen</Attribute>
+        <Provides>.</Provides>
+        <Value>3</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>ProduceResource</Attribute>
+        <StrVal>DeathMana</StrVal>
+        <Provides>.</Provides>
+        <Value>-1</Value>
+      </GameModifier>
+      <Icon>Ability_GreaterCurse_Icon.png</Icon>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="ReignOfTheSkeletonKing">
+    <AbilityBonusOption InternalName="ReignOfTheSkeletonKing">
+		  <IMPINC>Weakness</IMPINC>
+      <DisplayName>Rule of Terror</DisplayName>
+      <Description>City growth is reduced by 20%. Undead Pioneers cost 24 Population instead of the normal 30.</Description>
+      <Icon>Crown_Icon.png</Icon>
+      <Cost>-1</Cost>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_Prestige</StrVal>
+        <Provides>City growth is reduced by 20%. Undead Pioneers cost 24 Population instead of the normal 30.</Provides>
+        <Value>-20</Value>
+      </GameModifier>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="HallowedRiteAbility_Undead">
+    <AbilityBonusType>Unit_Design</AbilityBonusType>
+    <AbilityBonusOption InternalName="HallowedRite_Undead">
+      <Type>Faction Trait</Type>
+      <DisplayName>Dark Harvest</DisplayName>
+      <Description>4(+1 per level) Mana per unit killed.
+
+	    This trait costs 2 Crystal per unit member.</Description>
+      <Icon>Ability_Assassin_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ManaFromKills</StrVal>
+        <Provides>4(+1 per level) Mana per unit killed.
+
+	    This trait costs 1 Crystal per unit member.</Provides>
+        <Value>4</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ManaFromKills</StrVal>
+        <Provides>.</Provides>
+        <Value>1</Value>
+        <PerLevel>1</PerLevel>
+      </GameModifier>
+      <IsCombatAbility>1</IsCombatAbility>
+      <ProductionRequirement>
+        <Type>Resource</Type>
+        <Attribute>RefinedCrystal</Attribute>
+        <Value>1</Value>
+      </ProductionRequirement>
+      <AdditionalTrainingTurns>12</AdditionalTrainingTurns>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Prereq>
+        <Type>Race</Type>
+        <Attribute>Race_Type_Undead</Attribute>
+      </Prereq>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="WalkingdeadUndead">
+    <AbilityBonusType>Unit_Design</AbilityBonusType>
+    <AbilityBonusOption InternalName="WalkingdeadUndead">
+      <Type>Faction Trait</Type>
+      <Prereq>
+        <Type>Race</Type>
+        <Attribute>Race_Type_Undead</Attribute>
+      </Prereq>
+      <DisplayName>Walking Dead</DisplayName>
+      <Description>For each member that this unit outnumbers an attacked enemy, the enemy has a 5% chance of losing their next round. This effect does not apply to Champions, Oversized enemies or those Immune to Fear.
+      </Description>
+      <Icon>Ability_HallowedRite_Icon.png</Icon>
+      <IsCombatAbility>1</IsCombatAbility>
+      <AdditionalTrainingTurns>12</AdditionalTrainingTurns>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>MeleeAppliesSpell</Attribute>
+        <StrVal>WalkingdeadUndead</StrVal>
+        <Provides>For each member that this unit outnumbers an attacked enemy, the enemy has a 5% chance of losing their next round. This effect does not apply to Champions, Oversized enemies or those Immune to Fear.</Provides>
+      </GameModifier>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Curseofthereturningdead">
+    <AbilityBonusType>Unit_Design</AbilityBonusType>
+    <AbilityBonusOption InternalName="Curseofthereturningdead">
+      <Type>Faction Trait</Type>
+      <DisplayName>Curse of the Returning Dead</DisplayName>
+      <Description>When this unit attacks any enemy, there is a 1 in 20 chance that the enemy suffers the Hexed trait. It does not expire at the end of combat. The Hexed trait is a particularly strong negative trait.
+
+	    This trait costs 2 Crystal per unit member.</Description>
+      <Icon>Ability_GreaterCurse_Icon.png</Icon>
+      <IsCombatAbility>1</IsCombatAbility>
+      <ProductionRequirement>
+        <Type>Resource</Type>
+        <Attribute>RefinedCrystal</Attribute>
+        <Value>2</Value>
+      </ProductionRequirement>
+      <AdditionalTrainingTurns>12</AdditionalTrainingTurns>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>MeleeAppliesSpell</Attribute>
+        <StrVal>Curseofthereturningdead</StrVal>
+        <Provides>When this unit attacks any enemy, there is a 1 in 20 chance that the enemy suffers the Hexed trait. It does not expire at the end of combat. The Hexed trait is a particularly strong negative trait.
+
+	    This trait costs 4 Crystal per unit member.</Provides>
+      </GameModifier>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+      <Prereq>
+        <Type>Race</Type>
+        <Attribute>Race_Type_Undead</Attribute>
+      </Prereq>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Athropy">
+    <AbilityBonusType>Unit_Design</AbilityBonusType>
+    <AbilityBonusOption InternalName="Athropy">
+      <Type>Faction Trait</Type>
+      <DisplayName>Athropy</DisplayName>
+      <Prereq>
+        <Type>Race</Type>
+        <Attribute>Race_Type_Undead</Attribute>
+      </Prereq>
+      <Description>This unit may never Regenerate life in combat. This does not affect other direct ways to improve health, such as Heal.
+
+When this unit attacks any enemy, there is a 1 in 3 chance that the enemy may not Regenerate any life for the remaining duration of the combat. This does not affect other direct ways to improve health, such as Heal.
+
+      </Description>
+      <Icon>Ability_Vulnerable_Icon.png</Icon>
+      <IsCombatAbility>1</IsCombatAbility>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>BattleAutoCastSpell</Attribute>
+        <StrVal>Reliquary_PreventRegen</StrVal>
+        <Provides>This unit may never Regenerate life in combat. This does not affect other direct ways to improve health, such as Heal.
+
+When this unit attacks any enemy, there is a 1 in 3 chance that the enemy may not Regenerate any life for the remaining duration of the combat. This does not affect other direct ways to improve health, such as Heal.</Provides>
+        <Value>100</Value>
+      </GameModifier>
+      <AdditionalTrainingTurns>12</AdditionalTrainingTurns>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>MeleeAppliesSpell</Attribute>
+        <StrVal>Athropy</StrVal>
+        <Provides>.</Provides>
+      </GameModifier>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+</Container>

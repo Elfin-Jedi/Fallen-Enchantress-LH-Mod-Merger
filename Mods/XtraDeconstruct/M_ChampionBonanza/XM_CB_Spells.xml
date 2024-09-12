@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--Champion Bonanza by Hellions-->
+<!--XtraDeconstruct 3.0 by Primal-->
+<Spells>
+	<SpellDef InternalName="PMV_IceBeam">
+		<DisplayName>Ice Beam</DisplayName>
+		<Description>A beam of ice shot at an enemy for 2 (+2 per level) cold damage.</Description>
+		<FormattedDescription>A beam of ice shot at an enemy for %d cold damage. This damage is halved if the victim resists.</FormattedDescription>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>PMV_Ability_IceBeam.png</IconFG>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<IsResistable>1</IsResistable>
+		<IsSpecialAbility>1</IsSpecialAbility>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Cold</AttackStat>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel] * 2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] + 2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc2] + [UnitStat_Attack_Cold]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc3]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc3]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Cold</AttackStat>
+			<IsForSpellResist>1</IsForSpellResist>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc2] + [UnitStat_Attack_Cold]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc3]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>500</AIPriority>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+					<Expression><![CDATA[[UnitStat_ResistCold]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc] < 75]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		<HitSoundFX>Spell_IceArrow_Hit_01</HitSoundFX>
+		<HitSoundFX>Spell_IceArrow_Hit_02</HitSoundFX>
+		<SpellCastSoundFX>Spell_BowAttack_FreezingCast_01</SpellCastSoundFX>
+		<SpellCastEffectName>A_IceStaff_Projectile_Particle</SpellCastEffectName>
+		<SpellCastEffectScale>0.5</SpellCastEffectScale>
+		<SpellCastProjectile>1</SpellCastProjectile>
+		<SpellCastProjectileSpeed>600</SpellCastProjectileSpeed>
+		<SpellDefEffect>
+			<EffectName>A_HailstoneStaff_Impact_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.9</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="PMV_IcicleBurst">
+		<DisplayName>Icicle Burst</DisplayName>
+		<Description>Razor-sharp icicles strike all enemy units for 20 + double the caster's level in cold damage.</Description>
+		<FormattedDescription>Razor-sharp icicles strike all enemy units for %d cold damage.</FormattedDescription>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>PMV_Ability_IcicleBurst.png</IconFG>
+		<Cooldown>5</Cooldown>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>AllEnemyUnits</SpellTargetType>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<IsResistable>1</IsResistable>
+		<IsSpecialAbility>1</IsSpecialAbility>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Cold</AttackStat>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel] * 2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] + 20]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Cold</AttackStat>
+			<IsForSpellResist>1</IsForSpellResist>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>500</AIPriority>
+		</AIData>
+		<HitSoundFX>Spell_IceArrow_Hit_01</HitSoundFX>
+		<HitSoundFX>Spell_IceArrow_Hit_02</HitSoundFX>
+		<SpellCastSoundFX>Spell_BowAttack_FreezingCast_01</SpellCastSoundFX>
+		<SpellCastEffectName>A_IceStaff_Projectile_Particle</SpellCastEffectName>
+		<SpellCastEffectScale>0.5</SpellCastEffectScale>
+		<SpellCastProjectile>1</SpellCastProjectile>
+		<SpellCastProjectileSpeed>600</SpellCastProjectileSpeed>
+		<SpellDefEffect>
+			<EffectName>A_HailstoneStaff_Impact_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.9</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="PMV_MantleOfCold_Effect">
+		<DisplayName>Mantle of Cold</DisplayName>
+		<Description>Wreaths the target in a freezing fog, doing 6 cold damage to anyone who attacks.</Description>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>A_HailstoneStaff_Impact_Particle</IconFG>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<IsCastable>0</IsCastable>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Cold</AttackStat>
+			<Value>6</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+		</AIData>
+		<HitSoundFX>Spell_IceArrow_Hit_01</HitSoundFX>
+		<HitSoundFX>Spell_IceArrow_Hit_02</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>A_HailstoneStaff_Impact_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.35</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+</Spells>

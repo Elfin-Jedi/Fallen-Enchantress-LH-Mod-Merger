@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--Champion Bonanza by Hellions-->
+<!--XtraDeconstruct 3.0 by Primal-->
+<AbilityBonuses>
+	<AbilityBonus InternalName="Spell_IceBeamAbility">
+		<AbilityBonusOption InternalName="Spell_IceBeam">
+			<DisplayName>Ice Beam</DisplayName>
+			<Description>TACTICAL ABILITY
+			::: Ice Beam (Water\Cold) :::
+			::: ((1 + Level) x2) DMG</Description>
+			<Icon>PMV_Ability_IceBeam.png</Icon>
+			<GameModifier>
+				<Provides>TACTICAL ABILITY</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>PMV_IceBeam</StrVal>
+				<Provides>::: Ice Beam (Water\Cold) :::
+				::: ((1 + Level) x2) DMG</Provides>
+			</GameModifier>
+			<CombatRating>10</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Spell_IcicleBurst">
+		<AbilityBonusOption InternalName="Spell_IcicleBurst">
+			<DisplayName>Icicle Burst</DisplayName>
+			<Description>TACTICAL ABILITY
+			::: Icicle Burst (Water\Cold) :::
+			::: ((10 + Level) x2) DMG</Description>
+			<Icon>PMV_Ability_IcicleBurst.png</Icon>
+			<GameModifier>
+				<Provides>TACTICAL ABILITY</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>PMV_IcicleBurst</StrVal>
+				<Provides>::: Icicle Burst (Water\Cold) :::
+				::: ((10 + Level) x2) DMG</Provides>
+			</GameModifier>
+			<CombatRating>200</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Spell</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+</AbilityBonuses>

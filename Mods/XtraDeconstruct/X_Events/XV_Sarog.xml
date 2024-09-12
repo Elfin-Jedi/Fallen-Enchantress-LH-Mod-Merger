@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<Quests>
+	<QuestDef InternalName="Event_X_Sarog">
+		<DisplayName>Sarog</DisplayName>
+		<Description>Long before men walked upon Elemental, dragons filled the skies; for thousands of years, the Nine Broods dominated the world. Sarog is said by some to be the last survivor of the greatest of those Broods, the Lazhu... the Red Dragons of ancient Uraq-quong. They believe it was Sarog's egg that Tan-La-Ur rescued from the caves at Mt. Jiangga, and that Sarog is the dragon who Tan-La-Ur raised in secret in the wilds of the Valgon. Sarog, in this view, is the guardian of Tan-la-Ur's legacy to man... the sacred knowledge belonging to the few remaining acolytes of the Order of the Dragon. Others believe differently; they see Sarog as a mindless creature, a near-immortal survivor of the destruction visited upon his race. It is, perhaps, better to be safe than sorry. Should you encounter Sarog, let caution be your watchword, for his power remains beyond compare.</Description>
+		<AllowQuestRejection>0</AllowQuestRejection>
+		<ShortTextAccept>Ouch!</ShortTextAccept>
+		<RewardText>Sarog's Axe</RewardText>
+		<RewardImage>W_Battle_Axe_Sarogs_Icon_01.png</RewardImage>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>TurnNumber</TriggerType>
+		<TriggerData>21</TriggerData>
+		<TriggerChance>3000</TriggerChance>
+		<PostTriggerChance>180</PostTriggerChance>
+		<Image>SanguineDragon.png</Image>
+		<DoNotDisplayStartPopup>1</DoNotDisplayStartPopup>
+		<Treasure>
+			<GameModifier>
+				<ModType>Map</ModType>
+				<Attribute>SpawnMonster</Attribute>
+				<Value>1</Value>
+				<Unitclass>Creature_X_Sarog</Unitclass>
+				<Radius>-1</Radius>
+			</GameModifier>
+		</Treasure>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+		</QuestObjectiveDef>
+	</QuestDef>
+</Quests>

@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<Container>
+  <QuestDef InternalName="Event_AvalonCalling">
+    <DisplayName>Avalon Calling</DisplayName>
+    <Description>A strange myth has spread throughout your lands. There are rumors that the Isle of Avalon has been located. Avalon is a legendary island fortress said to house the injured and dying heroes of this world. A last destination for the tired and weary warriors where they can spend their last years in peace. The celestial creatures that inhabit Avalon are said to be able to mend any wound, but once healed the hero may never leave the island.
+
+During the next 40 turns, any Champion (not Sovereigns) that gets incapacitated in battle has a small chance to feel that it is Called To Avalon. When this occurs, the Champion will leave your service and disappear from the game. Any effect that normally completely prevent Injuries, such as Eternal Resurrection, also blocks this Injury.</Description>
+    <IsStartingPointQuest>0</IsStartingPointQuest>
+    <AllowQuestRejection>0</AllowQuestRejection>
+    <ShortTextAccept>I will order my champions to be cautious until the rumor passes.</ShortTextAccept>
+    <QuestClass>Minor</QuestClass>
+    <Repeatable>0</Repeatable>
+    <TriggerType>TurnNumber</TriggerType>
+    <TriggerData>125</TriggerData>
+    <TriggerChance>5</TriggerChance>
+    <PostTriggerChance>5</PostTriggerChance>
+    <TriggerOrigin>EventLocation</TriggerOrigin>
+    <Image>BG6_WaterCliff.png</Image>
+    <Treasure>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_UnitStat_AvalonCalling</StrVal>
+        <Value>100</Value>
+        <Duration>40</Duration>
+      </GameModifier>
+    </Treasure>
+    <QuestObjectiveDef>
+      <ObjectiveID>0</ObjectiveID>
+      <QuestEnd>1</QuestEnd>
+    </QuestObjectiveDef>
+  </QuestDef>
+  <UnitStatType InternalName="UnitStat_AvalonCalling">
+    <DisplayName>ISMdfasasdfOUNTED</DisplayName>
+    <DisplayNameShort>DGE</DisplayNameShort>
+    <Description>The chance to dodge an attack in battle.</Description>
+    <Icon>Stat_Dodge_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <UnitStatGrouping>CombatStat</UnitStatGrouping>
+    <UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+    <DefaultValue>1.0</DefaultValue>
+  </UnitStatType>
+  <PlayerAbilityType InternalName="A_UnitStat_AvalonCalling">
+    <DisplayName>Unit Hit Point Bonus</DisplayName>
+    <Description>Provides a bonus to the hit points of all units.</Description>
+    <Icon>Kingdom_Crest_02.png</Icon>
+  </PlayerAbilityType>
+  <AbilityBonus InternalName="Injury_AvalonCalling">
+    <AbilityBonusType>Unit_Injury</AbilityBonusType>
+    <AbilityBonusOption InternalName="AvalonCalling">
+      <DisplayName>Called to Avalon</DisplayName>
+      <Description>Champion leaves your service to retreat to a life of solitude in Avalon</Description>
+      <Icon>Ability_Vulnerable_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_HitPoints</StrVal>
+        <Value>-30000</Value>
+        <Provides>Champion leaves your service to retreat to a life of solitude in Avalon</Provides>
+      </GameModifier>
+      <Prereq>
+        <Type>UnitStat</Type>
+        <Attribute>UnitStat_AvalonCalling</Attribute>
+        <Value>2</Value>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>TurnedUndead</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Injury_AvalonCalling2">
+    <AbilityBonusType>Unit_Injury</AbilityBonusType>
+    <AbilityBonusOption InternalName="AvalonCalling2">
+      <DisplayName>Called to Avalon</DisplayName>
+      <Description>Champion leaves your service to retreat to a life of solitude in Avalon</Description>
+      <Icon>Ability_Vulnerable_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_HitPoints</StrVal>
+        <Value>-30000</Value>
+        <Provides>Champion leaves your service to retreat to a life of solitude in Avalon</Provides>
+      </GameModifier>
+      <Prereq>
+        <Type>UnitStat</Type>
+        <Attribute>UnitStat_AvalonCalling</Attribute>
+        <Value>2</Value>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>TurnedUndead</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Injury_AvalonCalling3">
+    <AbilityBonusType>Unit_Injury</AbilityBonusType>
+    <AbilityBonusOption InternalName="AvalonCalling3">
+      <DisplayName>Called to Avalon</DisplayName>
+      <Description>Champion leaves your service to retreat to a life of solitude in Avalon</Description>
+      <Icon>Ability_Vulnerable_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_HitPoints</StrVal>
+        <Value>-30000</Value>
+        <Provides>Champion leaves your service to retreat to a life of solitude in Avalon</Provides>
+      </GameModifier>
+      <Prereq>
+        <Type>UnitStat</Type>
+        <Attribute>UnitStat_AvalonCalling</Attribute>
+        <Value>2</Value>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>TurnedUndead</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+    </AbilityBonusOption>
+  </AbilityBonus>
+</Container>

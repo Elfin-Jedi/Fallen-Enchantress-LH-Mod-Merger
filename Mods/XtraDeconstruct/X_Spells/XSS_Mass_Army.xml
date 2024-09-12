@@ -1,0 +1,1818 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<Spells>
+	<SpellDef InternalName="Spell_X_Mass_BloodRage_Army">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Blood Rage #Army</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Death5</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>700</Amount>
+		</SpellResourceCost>
+		<CanStack>1</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Improves the targets Attack.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] BLOOD RAGE #ARMY
+		::: Improves the targets Attack.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: Champions+Sovereign
+		
+		EFFECT
+		::: + 1 ATK
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Permanent
+		
+		OTHER
+		::: Can Stack
+		::: Chaos Multiplier
+		::: Time Bonus (Sov)
+		::: Player Only
+		
+		::: Caster and Targets must be on the same tile
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Death Archmage</Description>
+		<SpellBookSortCategory>X10</SpellBookSortCategory>
+		<SpellBookSortSubCategory>X10R</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Other</SpellSubClass><!--Buff-->
+		<SpellTargetType>FriendlyChampionOrSov</SpellTargetType>
+		<UnitAppSpecifier>ApplyToAll</UnitAppSpecifier>
+		<IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+		<TargetUnitsCanBeStationed>1</TargetUnitsCanBeStationed>
+		<AlwaysPromptForCaster>1</AlwaysPromptForCaster>
+		<Range>0</Range>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Boost</StrVal>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_SpellDamage_Chaos]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock1" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_X_IsCultLeader] * [UnitStat_X_Clock]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock1] * 0.01]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock2] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock4">
+				<Expression><![CDATA[[Calc_X_Clock3] * [Calc]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Mass_BloodRage_Army.png</IconFG>
+		<HitSoundFX>Spell_BloodRage_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_BloodRage_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>.35</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_Mass_BurningBlade_Army">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Burning Blade #Army</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Fire3</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>70</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<PerTurn>1</PerTurn>
+			<Amount>7</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<PreventStackingWith>BurningBlade</PreventStackingWith>
+		<UniqueSpellUnlock>Spell_X_Mass_BurningBlade_Army</UniqueSpellUnlock>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Targets Weapon does additional Fire Damage.
+		
+		See Tooltip. See WARNINGS.
+		
+		
+		
+		---------------------------------------------------
+		!WARNING!
+		Generally, Mass Army Spells do not stack with the Individual or the Mass Faction versions.
+		
+		Mass Army Spells disable the equivalent Mass Faction Spells (Spellbook).
+		
+		IF you want to re-enable a specific Mass Faction Spell, dispel the equivalent Mass Army Spell:
+		CTRL-K (Govern) > Enchantments > Dispel
+		---------------------------------------------------
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] BURNING BLADE #ARMY
+		::: Targets Weapon does additional Fire Damage.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: Champions+Sovereign
+		
+		EFFECT
+		::: + (2 + Fire Shards) Fire DMG #Tactical
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Dispelled (Enchantment)
+		
+		OTHER
+		::: Fire Shards (+1 per)
+		::: Upgradable Value #Automatic
+		::: Time Bonus (Sov)
+		::: Player Only
+		
+		::: Incompatible w/ Burning Blade
+		::: Incompatible w/ Burning Blade #Faction
+		
+		::: Caster and Targets must be on the same tile
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Fire Mage</Description>
+		<SpellBookSortCategory>X10</SpellBookSortCategory>
+		<SpellBookSortSubCategory>X10</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>FriendlyChampionOrSov</SpellTargetType>
+		<UnitAppSpecifier>ApplyToAll</UnitAppSpecifier>
+		<IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+		<TargetUnitsCanBeStationed>1</TargetUnitsCanBeStationed>
+		<AlwaysPromptForCaster>1</AlwaysPromptForCaster>
+		<Range>0</Range>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_Mass_BurningBlade_Faction</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Fire</StrVal>
+			<Duration>-1</Duration>
+			<HasUpgradableValue>1</HasUpgradableValue>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumFireShards] + 2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock1" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_X_IsCultLeader] * [UnitStat_X_Clock]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock1] * 0.01]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock2] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock4">
+				<Expression><![CDATA[[Calc_X_Clock3] * [Calc]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Mass_BurningBlade_Army.png</IconFG>
+		<HitSoundFX>Spell_BurningBlade_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_BurningBlade_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.75</EffectScale>
+			<EffectDelay>0.25</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_Mass_Celerity_Army">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Celerity #Army</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Air5</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>1500</Amount>
+		</SpellResourceCost>
+		<CanStack>1</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Improves the targets Initiative.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] CELERITY #ARMY
+		::: Improves the targets Initiative.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: Champions+Sovereign
+		
+		EFFECT
+		::: + 1 Initiative
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Permanent
+		
+		OTHER
+		::: Can Stack
+		::: Air Multiplier
+		::: Time Bonus (Sov)
+		
+		::: Caster and Targets must be on the same tile
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Air Archmage</Description>
+		<SpellBookSortCategory>X10</SpellBookSortCategory>
+		<SpellBookSortSubCategory>X10R</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Other</SpellSubClass><!--Buff-->
+		<SpellTargetType>FriendlyChampionOrSov</SpellTargetType>
+		<UnitAppSpecifier>ApplyToAll</UnitAppSpecifier>
+		<IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+		<TargetUnitsCanBeStationed>1</TargetUnitsCanBeStationed>
+		<AlwaysPromptForCaster>1</AlwaysPromptForCaster>
+		<Range>0</Range>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_SpellDamage_Air]]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock1" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_X_IsCultLeader] * [UnitStat_X_Clock]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock1] * 0.01]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock2] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock4">
+				<Expression><![CDATA[[Calc_X_Clock3] * [Calc]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Mass_Celerity_Army.png</IconFG>
+		<SpellDefEffect>
+			<EffectName>T_Haste_Particle</EffectName>
+			<LocalPosition>0,25,0</LocalPosition>
+			<EffectScale>.75</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+			<PlayOnAllTargets>1</PlayOnAllTargets>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_Mass_CloakOfThorns_Army">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Cloak of Thorns #Army</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Abjuration</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>280</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<PerTurn>1</PerTurn>
+			<Amount>8</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<PreventStackingWith>CloakOfThorns</PreventStackingWith>
+		<UniqueSpellUnlock>Spell_X_Mass_CloakOfThorns_Army</UniqueSpellUnlock>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Reflects some damage back on attacker.
+		
+		See Tooltip. See WARNINGS.
+		
+		
+		
+		---------------------------------------------------
+		!WARNING!
+		Generally, Mass Army Spells do not stack with the Individual or the Mass Faction versions.
+		
+		Mass Army Spells disable the equivalent Mass Faction Spells (Spellbook).
+		
+		IF you want to re-enable a specific Mass Faction Spell, dispel the equivalent Mass Army Spell:
+		CTRL-K (Govern) > Enchantments > Dispel
+		
+		While all Units sharing the Caster Tile will end up with the Enchantment, only one Unit will have a Maintenance Cost (The one with the Dispel Option).
+		If that Unit turns out to be a Trained Unit (instead of a Champion or your Sovereign) this may create issues.
+		To avoid those issues, make sure a Champion is the last Army member.
+		---------------------------------------------------
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] CLOAK OF THORNS #ARMY
+		::: Reflects some damage back on attacker.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: Units #Army
+		
+		EFFECT
+		::: 25% DMG Reflect
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Dispelled (Enchantment)
+		
+		OTHER
+		::: Earth Multiplier
+		::: Time Bonus (Sov)
+		::: Player Only
+		
+		::: Incompatible w/ Cloak of Thorns
+		::: Incompatible w/ Cloak of Thorns #Faction
+		
+		::: Caster and Targets must be on the same tile
+		
+		SOURCE
+		::: Path of the Mage
+		::: ::: Abjuration</Description>
+		<SpellBookSortCategory>X10</SpellBookSortCategory>
+		<SpellBookSortSubCategory>X10</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>FriendlyUnit</SpellTargetType>
+		<UnitAppSpecifier>ApplyToAll</UnitAppSpecifier>
+		<IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+		<TargetUnitsCanBeStationed>1</TargetUnitsCanBeStationed>
+		<AlwaysPromptForCaster>1</AlwaysPromptForCaster>
+		<Range>0</Range>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_Mass_CloakOfThorns_Faction</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_DamageReflect</StrVal>
+			<Duration>-1</Duration>
+			<Effect>E_CloakOfFear_Particle</Effect>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_SpellDamage_Earth] * 0.25]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock1" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_X_IsCultLeader] * [UnitStat_X_Clock]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock1] * 0.01]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock2] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock4">
+				<Expression><![CDATA[[Calc_X_Clock3] * [Calc]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Mass_CloakOfThorns_Army.png</IconFG>
+		<HitSoundFX>Spell_CloakOfThorns_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_CloakOfFear_Particle</EffectName>
+			<LocalPosition>0,40,0</LocalPosition>
+			<EffectScale>0.7</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_Mass_Courage_Army">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Courage #Army</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Life2</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>56</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<PerTurn>1</PerTurn>
+			<Amount>7</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<PreventStackingWith>Courage</PreventStackingWith>
+		<UniqueSpellUnlock>Spell_X_Mass_Courage_Army</UniqueSpellUnlock>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Increases Hit Points and Magic Resistance.
+		
+		See Tooltip. See WARNINGS.
+		
+		
+		
+		---------------------------------------------------
+		!WARNING!
+		Generally, Mass Army Spells do not stack with the Individual or the Mass Faction versions.
+		
+		Mass Army Spells disable the equivalent Mass Faction Spells (Spellbook).
+		
+		IF you want to re-enable a specific Mass Faction Spell, dispel the equivalent Mass Army Spell:
+		CTRL-K (Govern) > Enchantments > Dispel
+		---------------------------------------------------
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] COURAGE #ARMY
+		::: Instills legendary hope in your Champions: increased Hit Points and Magic Resistance.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: Champions+Sovereign #Army
+		
+		EFFECT
+		::: + (3 + Life Shards) HP
+		::: + (3 + Life Shards) Magic Resistance
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Dispelled (Enchantment)
+		
+		OTHER
+		::: Life Multiplier
+		::: Life Shards (+1 per)
+		::: Time Bonus (Sov)
+		::: Player Only
+		
+		::: Incompatible w/ Courage
+		::: Incompatible w/ Courage #Faction
+		
+		::: Caster and Targets must be on the same tile
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Life Disciple</Description>
+		<SpellBookSortCategory>X10</SpellBookSortCategory>
+		<SpellBookSortSubCategory>X10</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>FriendlyChampionOrSov</SpellTargetType>
+		<UnitAppSpecifier>ApplyToAll</UnitAppSpecifier>
+		<IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+		<TargetUnitsCanBeStationed>1</TargetUnitsCanBeStationed>
+		<AlwaysPromptForCaster>1</AlwaysPromptForCaster>
+		<Range>0</Range>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_Mass_Courage_Faction</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_MagicResist</StrVal>
+			<Duration>-1</Duration>
+			<HasUpgradableValue>1</HasUpgradableValue>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumLifeShards] + 3]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] * [UnitStat_SpellDamage_Life]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock1" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_X_IsCultLeader] * [UnitStat_X_Clock]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock1] * 0.01]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock2] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock4">
+				<Expression><![CDATA[[Calc_X_Clock3] * [Calc2]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_HitPoints</StrVal>
+			<Duration>-1</Duration>
+			<HasUpgradableValue>1</HasUpgradableValue>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumLifeShards] + 3]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] * [UnitStat_SpellDamage_Life]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock1" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_X_IsCultLeader] * [UnitStat_X_Clock]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock1] * 0.01]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock2] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock4">
+				<Expression><![CDATA[[Calc_X_Clock3] * [Calc2]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Mass_Courage_Army.png</IconFG>
+		<HitSoundFX>Spell_Courage_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_Courage_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.75</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_Mass_DestinysGift_Army">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[S] Destiny's Gift #Army</DisplayName>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>425</Amount>
+		</SpellResourceCost>
+		<CanStack>1</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Targets get a random increase in one base stats.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] DESTINY'S GIFT #ARMY
+		::: Targets get a random increase in one base stats.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: Champions+Sovereign
+		
+		EFFECT
+		::: Random
+		::: + 1 ATK
+		::: + 1 DEF
+		::: + 1 HP per Kill
+		::: + 1 Initiative
+		::: + 1.25 Magic Resistance
+		::: + 1.25% Pierce Resistance
+		::: + 2 Mana per Kill
+		::: + 2% Air\Lightning Resistance
+		::: + 2% Fire Resistance
+		::: + 2% Water\Cold Resistance
+		::: + 3 HP
+		::: + 4% Critical Chance
+		::: + 4% Damage Reflection
+		::: + 4% Splash Damage
+		::: + 5 Dodge
+		::: + 7 Dodge against Ranged
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Permanent
+		
+		OTHER
+		::: Can Stack
+		::: Caster must be Sov
+		::: Player Only
+		
+		::: Caster and Targets must be on the same tile
+		
+		SOURCE
+		::: Tech
+		::: ::: Third Book of the Magi</Description>
+		<SpellBookSortCategory>X10</SpellBookSortCategory>
+		<SpellBookSortSubCategory>X10R</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>FriendlyChampionOrSov</SpellTargetType>
+		<UnitAppSpecifier>ApplyToAll</UnitAppSpecifier>
+		<IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+		<TargetUnitsCanBeStationed>1</TargetUnitsCanBeStationed>
+		<AppliesRandomModifier>1</AppliesRandomModifier>
+		<CasterMustBeSov>1</CasterMustBeSov>
+		<Range>0</Range>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_HitPoints</StrVal>
+			<DisplayName>+3 HP</DisplayName>
+			<Value>3</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Boost</StrVal>
+			<DisplayName>+1 ATK</DisplayName>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Pierce</StrVal>
+			<DisplayName>+1 DEF</DisplayName>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<DisplayName>+1 Initiative</DisplayName>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Dodge</StrVal>
+			<DisplayName>+5 Dodge</DisplayName>
+			<Value>5</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_MagicResist</StrVal>
+			<DisplayName>+1.25 Magic Resistance</DisplayName>
+			<Value>1.25</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ResistPierce</StrVal>
+			<DisplayName>+1.25% Pierce Resistance</DisplayName>
+			<Value>1.25</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ResistFire</StrVal>
+			<DisplayName>+2% Fire Resistance</DisplayName>
+			<Value>2</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ResistLightning</StrVal>
+			<DisplayName>+2% Air\Lightning Resistance</DisplayName>
+			<Value>2</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ResistCold</StrVal>
+			<DisplayName>+2% Water\Cold Resistance</DisplayName>
+			<Value>2</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_DamageReflect</StrVal>
+			<DisplayName>+4% Damage Reflection</DisplayName>
+			<Value>0.04</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_SplashDamage</StrVal>
+			<DisplayName>+4% Splash Damage</DisplayName>
+			<Value>0.04</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ChanceToCrit</StrVal>
+			<DisplayName>+4% Critical Chance</DisplayName>
+			<Value>4</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_DodgeAgainstRanged</StrVal>
+			<DisplayName>+7 Dodge against Ranged</DisplayName>
+			<Value>7</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_HPFromKills</StrVal>
+			<DisplayName>+1 HP per Kill</DisplayName>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ManaFromKills</StrVal>
+			<DisplayName>+2 Mana per Kill</DisplayName>
+			<Value>2</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Mass_DestinysGift_Army.png</IconFG>
+		<HitSoundFX>Spell_DestinyGift_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_Paragon_Particle</EffectName>
+			<LocalPosition>0,30,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_Mass_Evade_Army">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Evade #Army</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Air3</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>80</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<PerTurn>1</PerTurn>
+			<Amount>8</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<PreventStackingWith>Evade</PreventStackingWith>
+		<UniqueSpellUnlock>Spell_X_Mass_Evade_Army</UniqueSpellUnlock>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Targets receive a Dodge bonus.
+		
+		See Tooltip. See WARNINGS.
+		
+		
+		
+		---------------------------------------------------
+		!WARNING!
+		Generally, Mass Army Spells do not stack with the Individual or the Mass Faction versions.
+		
+		Mass Army Spells disable the equivalent Mass Faction Spells (Spellbook).
+		
+		IF you want to re-enable a specific Mass Faction Spell, dispel the equivalent Mass Army Spell:
+		CTRL-K (Govern) > Enchantments > Dispel
+		
+		While all Units sharing the Caster Tile will end up with the Enchantment, only one Unit will have a Maintenance Cost (The one with the Dispel Option).
+		If that Unit turns out to be a Trained Unit (instead of a Champion or your Sovereign) this may create issues.
+		To avoid those issues, make sure a Champion is the last Army member.
+		---------------------------------------------------
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] EVADE #ARMY
+		::: Targets receive a Dodge bonus.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: Units #Army
+		
+		EFFECT
+		::: + (3 + Air Shards) x2) Dodge
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Dispelled (Enchantment)
+		
+		OTHER
+		::: Air Multiplier
+		::: Air Shards (+2 per)
+		::: Time Bonus (Sov)
+		::: Player Only
+		
+		::: Incompatible w/ Evade
+		::: Incompatible w/ Evade #Faction
+		
+		::: Caster and Targets must be on the same tile
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Air Mage</Description>
+		<SpellBookSortCategory>X10</SpellBookSortCategory>
+		<SpellBookSortSubCategory>X10</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>FriendlyUnit</SpellTargetType>
+		<UnitAppSpecifier>ApplyToAll</UnitAppSpecifier>
+		<IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+		<TargetUnitsCanBeStationed>1</TargetUnitsCanBeStationed>
+		<AlwaysPromptForCaster>1</AlwaysPromptForCaster>
+		<Range>0</Range>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_Mass_Evade_Faction</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Dodge</StrVal>
+			<Duration>-1</Duration>
+			<HasUpgradableValue>1</HasUpgradableValue>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumAirShards] + 3]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] * 2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc2] * [UnitStat_SpellDamage_Air]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock1" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_X_IsCultLeader] * [UnitStat_X_Clock]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock1] * 0.01]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock2] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock4">
+				<Expression><![CDATA[[Calc_X_Clock3] * [Calc3]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Mass_Evade_Army.png</IconFG>
+		<HitSoundFX>Spell_Evade_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_Evade_Particle</EffectName>
+			<LocalPosition>0,20,0</LocalPosition>
+			<EffectScale>0.3</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_Mass_MantleOfFire_Army">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Mantle of Fire #Army</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Fire5</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>200</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<PerTurn>1</PerTurn>
+			<Amount>8</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<PreventStackingWith>MantleOfFire</PreventStackingWith>
+		<UniqueSpellUnlock>Spell_X_Mass_MantleOfFire_Army</UniqueSpellUnlock>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Wreaths targets in flames.
+		
+		See Tooltip. See WARNINGS.
+		
+		
+		
+		---------------------------------------------------
+		!WARNING!
+		Generally, Mass Army Spells do not stack with the Individual or the Mass Faction versions.
+		
+		Mass Army Spells disable the equivalent Mass Faction Spells (Spellbook).
+		
+		IF you want to re-enable a specific Mass Faction Spell, dispel the equivalent Mass Army Spell:
+		CTRL-K (Govern) > Enchantments > Dispel
+		
+		While all Units sharing the Caster Tile will end up with the Enchantment, only one Unit will have a Maintenance Cost (The one with the Dispel Option).
+		If that Unit turns out to be a Trained Unit (instead of a Champion or your Sovereign) this may create issues.
+		To avoid those issues, make sure a Champion is the last Army member.
+		---------------------------------------------------
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] MANTLE OF FIRE #ARMY
+		::: Wreaths targets in flames.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: Units #Army
+		
+		EFFECT
+		::: Melee DEF
+		::: + 6 Fire Damage
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Dispelled (Enchantment)
+		
+		OTHER
+		::: Player Only
+		
+		::: Incompatible w/ Mantle of Fire
+		::: Incompatible w/ Mantle of Fire #Faction
+		
+		::: Caster and Targets must be on the same tile
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Fire Archmage</Description>
+		<SpellBookSortCategory>X10</SpellBookSortCategory>
+		<SpellBookSortSubCategory>X10</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>FriendlyUnit</SpellTargetType>
+		<UnitAppSpecifier>ApplyToAll</UnitAppSpecifier>
+		<IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+		<TargetUnitsCanBeStationed>1</TargetUnitsCanBeStationed>
+		<AlwaysPromptForCaster>1</AlwaysPromptForCaster>
+		<Range>0</Range>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_Mass_MantleOfFire_Faction</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>MeleeDefenseAppliesSpell</Attribute>
+			<StrVal>MantleOfFire_Effect</StrVal>
+			<Duration>-1</Duration>
+			<Effect>E_MantleofFire_Particle</Effect>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Mass_MantleOfFire_Army.png</IconFG>
+		<HitSoundFX>Spell_MantleOfFire_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_MantleofFire_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_Mass_MantleOfOceans_Army">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Mantle of Oceans #Army</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Water4</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>175</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<PerTurn>1</PerTurn>
+			<Amount>1</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<PreventStackingWith>MantleOfOceans</PreventStackingWith>
+		<UniqueSpellUnlock>Spell_X_Mass_MantleOfOceans_Army</UniqueSpellUnlock>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Tactical Spells cast by these Units cost 40% less Mana.
+		
+		See Tooltip. See WARNINGS.
+		
+		
+		
+		---------------------------------------------------
+		!WARNING!
+		Generally, Mass Army Spells do not stack with the Individual or the Mass Faction versions.
+		
+		Mass Army Spells disable the equivalent Mass Faction Spells (Spellbook).
+		
+		IF you want to re-enable a specific Mass Faction Spell, dispel the equivalent Mass Army Spell:
+		CTRL-K (Govern) > Enchantments > Dispel
+		---------------------------------------------------
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] MANTLE OF OCEANS #ARMY
+		::: Tactical Spells cast by these Units cost 40% less Mana.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: Champions+Sovereign #Army
+		
+		EFFECT
+		::: - 40% Tactical Mana Cost
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Dispelled (Enchantment)
+		
+		OTHER
+		::: Player Only
+		
+		::: Incompatible w/ Mantle of Oceans
+		::: Incompatible w/ Mantle of Oceans #Faction
+		
+		::: Caster and Targets must be on the same tile
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Water Master</Description>
+		<SpellBookSortCategory>X10</SpellBookSortCategory>
+		<SpellBookSortSubCategory>X10</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>FriendlyChampionOrSov</SpellTargetType>
+		<UnitAppSpecifier>ApplyToAll</UnitAppSpecifier>
+		<IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+		<TargetUnitsCanBeStationed>1</TargetUnitsCanBeStationed>
+		<AlwaysPromptForCaster>1</AlwaysPromptForCaster>
+		<Range>0</Range>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_Mass_MantleOfOceans_Faction</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_TacticalSpellManaCost_Multiplier</StrVal>
+			<Duration>-1</Duration>
+			<Effect>E_MantleOfOceans_Particle</Effect>
+			<Value>-0.4</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Mass_MantleOfOceans_Army.png</IconFG>
+		<HitSoundFX>Spell_MantleOfOceans_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_MantleofOceans_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_Mass_NaturesCloak_Army">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Nature's Cloak #Army</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Earth3</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>56</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<PerTurn>1</PerTurn>
+			<Amount>8</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<PreventStackingWith>NaturesCloak</PreventStackingWith>
+		<UniqueSpellUnlock>Spell_X_Mass_NaturesCloak_Army</UniqueSpellUnlock>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Increases Resistance versus elemental Damage.
+		
+		See Tooltip. See WARNINGS.
+		
+		
+		
+		---------------------------------------------------
+		!WARNING!
+		Generally, Mass Army Spells do not stack with the Individual or the Mass Faction versions.
+		
+		Mass Army Spells disable the equivalent Mass Faction Spells (Spellbook).
+		
+		IF you want to re-enable a specific Mass Faction Spell, dispel the equivalent Mass Army Spell:
+		CTRL-K (Govern) > Enchantments > Dispel
+		
+		While all Units sharing the Caster Tile will end up with the Enchantment, only one Unit will have a Maintenance Cost (The one with the Dispel Option).
+		If that Unit turns out to be a Trained Unit (instead of a Champion or your Sovereign) this may create issues.
+		To avoid those issues, make sure a Champion is the last Army member.
+		---------------------------------------------------
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] NATURE'S CLOAK #ARMY
+		::: Increases Resistance versus elemental Damage.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: Units #Army
+		
+		EFFECT
+		::: + ((2 + Earth Shards) x9) Air\Lightning Resistance
+		::: + ((2 + Earth Shards) x9) Earth Resistance
+		::: + ((2 + Earth Shards) x9) Fire Resistance
+		::: + ((2 + Earth Shards) x9) Water\Cold Resistance
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Dispelled (Enchantment)
+		
+		OTHER
+		::: Earth Shards (+9% per)
+		::: Player Only
+		
+		::: Incompatible w/ Nature's Cloak
+		::: Incompatible w/ Nature's Cloak #Faction
+		
+		::: Caster and Targets must be on the same tile
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Earth Mage</Description>
+		<SpellBookSortCategory>X10</SpellBookSortCategory>
+		<SpellBookSortSubCategory>X10</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>FriendlyUnit</SpellTargetType>
+		<UnitAppSpecifier>ApplyToAll</UnitAppSpecifier>
+		<IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+		<TargetUnitsCanBeStationed>1</TargetUnitsCanBeStationed>
+		<AlwaysPromptForCaster>1</AlwaysPromptForCaster>
+		<Range>0</Range>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_Mass_NaturesCloak_Faction</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ResistCold</StrVal>
+			<Duration>-1</Duration>
+			<Effect>E_NaturesCloak_Particle</Effect>
+			<HasUpgradableValue>1</HasUpgradableValue>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumEarthShards] + 2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc] * 9]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ResistFire</StrVal>
+			<Duration>-1</Duration>
+			<HasUpgradableValue>1</HasUpgradableValue>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumEarthShards] + 2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc] * 9]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ResistLightning</StrVal>
+			<Duration>-1</Duration>
+			<HasUpgradableValue>1</HasUpgradableValue>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumEarthShards] + 2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc] * 9]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ResistEarth</StrVal>
+			<Duration>-1</Duration>
+			<HasUpgradableValue>1</HasUpgradableValue>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumEarthShards] + 2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc] * 9]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Mass_NaturesCloak_Army.png</IconFG>
+		<HitSoundFX>Spell_NaturesCloak_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_NaturesCloak_Particle</EffectName>
+			<LocalPosition>0,20,0</LocalPosition>
+			<EffectScale>0.7</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_Mass_Regeneration_Army">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Regeneration #Army</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Life3</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>200</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<PerTurn>1</PerTurn>
+			<Amount>8</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<PreventStackingWith>Regeneration</PreventStackingWith>
+		<UniqueSpellUnlock>Spell_X_Mass_Regeneration_Army</UniqueSpellUnlock>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Heals Unit by up to 200 HP per Season.
+		
+		See Tooltip. See WARNINGS.
+		
+		
+		
+		---------------------------------------------------
+		!WARNING!
+		Generally, Mass Army Spells do not stack with the Individual or the Mass Faction versions.
+		
+		Mass Army Spells disable the equivalent Mass Faction Spells (Spellbook).
+		
+		IF you want to re-enable a specific Mass Faction Spell, dispel the equivalent Mass Army Spell:
+		CTRL-K (Govern) > Enchantments > Dispel
+		
+		While all Units sharing the Caster Tile will end up with the Enchantment, only one Unit will have a Maintenance Cost (The one with the Dispel Option).
+		If that Unit turns out to be a Trained Unit (instead of a Champion or your Sovereign) this may create issues.
+		To avoid those issues, make sure a Champion is the last Army member.
+		---------------------------------------------------
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] REGENERATION #ARMY
+		::: Heals Unit by up to 200 HP per Season.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: Units #Army
+		
+		EFFECT
+		::: + 200 HP per Season
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Dispelled (Enchantment)
+		
+		OTHER
+		::: Player Only
+		
+		::: Incompatible w/ Regeneration
+		::: Incompatible w/ Regeneration #Faction
+		
+		::: Caster and Targets must be on the same tile
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Life Mage</Description>
+		<SpellBookSortCategory>X10</SpellBookSortCategory>
+		<SpellBookSortSubCategory>X10</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>FriendlyUnit</SpellTargetType>
+		<UnitAppSpecifier>ApplyToAll</UnitAppSpecifier>
+		<IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+		<TargetUnitsCanBeStationed>1</TargetUnitsCanBeStationed>
+		<AlwaysPromptForCaster>1</AlwaysPromptForCaster>
+		<Range>0</Range>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_Mass_Regeneration_Faction</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_HealthRegen</StrVal>
+			<Duration>-1</Duration>
+			<Effect>E_Regeneration_Particle</Effect>
+			<HasUpgradableValue>1</HasUpgradableValue>
+			<Value>200</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Mass_Regeneration_Army.png</IconFG>
+		<HitSoundFX>Spell_Regeneration_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_Regeneration_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>.75</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_Mass_StealSpirit_Army">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Night of the Long Knives #Army</DisplayName>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Empire</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>60</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Purge Champions.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] NIGHT OF THE LONG KNIVES #ARMY
+		::: Purge Champions
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: Champions #Army
+		
+		EFFECT
+		::: - Champions permanently
+		::: + SpellRank for your Sov (IF available/compatible)
+		::: + 2 Reincarnation UnitStat
+		::: ::: Unlocks Reincarnation Spell
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Permanent
+		
+		OTHER
+		::: Caster must be Sov
+		::: Player Only
+		
+		::: Caster and Targets must be on the same tile
+		
+		SOURCE
+		::: Allegiance
+		::: ::: Empire</Description>
+		<SpellBookSortCategory>X10</SpellBookSortCategory>
+		<SpellBookSortSubCategory>X10C</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Debuff</SpellSubClass>
+		<SpellTargetType>FriendlyChampion</SpellTargetType>
+		<UnitAppSpecifier>ApplyToAll</UnitAppSpecifier>
+		<IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+		<TargetUnitsCanBeStationed>1</TargetUnitsCanBeStationed>
+		<CasterMustBeSov>1</CasterMustBeSov>
+		<Range>0</Range>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_Reincarnation</StrVal>
+			<ApplyToCaster>1</ApplyToCaster>
+			<Value>2</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>StealSpirit</Attribute>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>PermanentDeath</Attribute>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>S_StealSpirit_Painting.png</Image>
+		<IconFG>Spell_X_Mass_StealSpirit_Army.png</IconFG>
+		<HitSoundFX>Spell_StealSpirit_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_StealSpirit_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_Mass_Stoneskin_Army">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Stoneskin #Army</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Earth4</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>100</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<PerTurn>1</PerTurn>
+			<Amount>7</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<PreventStackingWith>Stoneskin</PreventStackingWith>
+		<UniqueSpellUnlock>Spell_X_Mass_Stoneskin_Army</UniqueSpellUnlock>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Targets receive a Defense Bonus.
+		
+		See Tooltip. See WARNINGS.
+		
+		
+		
+		---------------------------------------------------
+		!WARNING!
+		Generally, Mass Army Spells do not stack with the Individual or the Mass Faction versions.
+		
+		Mass Army Spells disable the equivalent Mass Faction Spells (Spellbook).
+		
+		IF you want to re-enable a specific Mass Faction Spell, dispel the equivalent Mass Army Spell:
+		CTRL-K (Govern) > Enchantments > Dispel
+		---------------------------------------------------
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] STONESKIN #ARMY
+		::: Targets receive a Defense Bonus.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: Champions+Sovereign #Army
+		
+		EFFECT
+		::: + (3 + Earth Shard) DEF
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Dispelled (Enchantment)
+		
+		OTHER
+		::: Earth Multiplier
+		::: Earth Shards (+1 per)
+		::: Time Bonus (Sov)
+		::: Player Only
+		
+		::: Incompatible w/ Stoneskin
+		::: Incompatible w/ Stoneskin #Faction
+		
+		::: Caster and Targets must be on the same tile
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Earth Master</Description>
+		<SpellBookSortCategory>X10</SpellBookSortCategory>
+		<SpellBookSortSubCategory>X10</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>FriendlyChampionOrSov</SpellTargetType>
+		<UnitAppSpecifier>ApplyToAll</UnitAppSpecifier>
+		<IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+		<TargetUnitsCanBeStationed>1</TargetUnitsCanBeStationed>
+		<AlwaysPromptForCaster>1</AlwaysPromptForCaster>
+		<Range>0</Range>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_Mass_Stoneskin_Faction</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Pierce</StrVal>
+			<Duration>-1</Duration>
+			<HasUpgradableValue>1</HasUpgradableValue>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumEarthShards] + 3]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] * [UnitStat_SpellDamage_Earth]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock1" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_X_IsCultLeader] * [UnitStat_X_Clock]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock1] * 0.01]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock2] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock4">
+				<Expression><![CDATA[[Calc_X_Clock3] * [Calc2]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Mass_Stoneskin_Army.png</IconFG>
+		<HitSoundFX>Spell_Stoneskin_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_Stoneskin_Particle</EffectName>
+			<LocalPosition>0,25,0</LocalPosition>
+			<EffectScale>.4</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_Mass_Tutelage_Army">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Tutelage #Army</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Air3</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>120</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<PerTurn>1</PerTurn>
+			<Amount>8</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<PreventStackingWith>Tutelage</PreventStackingWith>
+		<UniqueSpellUnlock>Spell_X_Mass_Tutelage_Army</UniqueSpellUnlock>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Targets gain Experience at a faster rate.
+		
+		See Tooltip. See WARNINGS.
+		
+		
+		
+		---------------------------------------------------
+		!WARNING!
+		Generally, Mass Army Spells do not stack with the Individual or the Mass Faction versions.
+		
+		Mass Army Spells disable the equivalent Mass Faction Spells (Spellbook).
+		
+		IF you want to re-enable a specific Mass Faction Spell, dispel the equivalent Mass Army Spell:
+		CTRL-K (Govern) > Enchantments > Dispel
+		
+		While all Units sharing the Caster Tile will end up with the Enchantment, only one Unit will have a Maintenance Cost (The one with the Dispel Option).
+		If that Unit turns out to be a Trained Unit (instead of a Champion or your Sovereign) this may create issues.
+		To avoid those issues, make sure a Champion is the last Army member.
+		---------------------------------------------------
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] TUTELAGE #ARMY
+		::: Targets gain Experience at a faster rate.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: Units #Army
+		
+		EFFECT
+		::: + 25% XP Bonus
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Dispelled (Enchantment)
+		
+		OTHER
+		::: Player Only
+		
+		::: Incompatible w/ Tutelage
+		::: Incompatible w/ Tutelage #Faction
+		
+		::: Caster and Targets must be on the same tile
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Air Mage</Description>
+		<SpellBookSortCategory>X10</SpellBookSortCategory>
+		<SpellBookSortSubCategory>X10</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>FriendlyUnit</SpellTargetType>
+		<UnitAppSpecifier>ApplyToAll</UnitAppSpecifier>
+		<IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+		<TargetUnitsCanBeStationed>1</TargetUnitsCanBeStationed>
+		<AlwaysPromptForCaster>1</AlwaysPromptForCaster>
+		<Range>0</Range>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_Mass_Tutelage_Faction</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ExpBonus</StrVal>
+			<Duration>-1</Duration>
+			<Value>25</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Mass_Tutelage_Army.png</IconFG>
+		<HitSoundFX>Spell_Enchant_04</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_Stoneskin_Particle</EffectName>
+			<LocalPosition>0,25,0</LocalPosition>
+			<EffectScale>0.5</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+</Spells>

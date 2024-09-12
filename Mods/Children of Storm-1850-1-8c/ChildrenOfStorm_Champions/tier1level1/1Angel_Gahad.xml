@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<UnitTypes>
+	<UnitType InternalName="Angel_Gahad">
+		<CreatureType>Champion</CreatureType>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-5</Value>
+			<Provides>-5% Unrest in the city this unit is in</Provides>
+		</GameModifier>
+		
+		
+		<DisplayName>Gahad</DisplayName>
+		<Backstory>When he lived with his god, Gahad was a lesser seer, responsible for minor prayers around tea-time. Events saw him put in the spotlight and then cast out from the Heavens. This occured long before the other Angels were abandoned by their god. What exactly these events were, Gahad will never speak of. If pressed, he will simply state that "the gods' lessons are beautiful". Although he would never speak of it aloud, him being cast out from the Heavens and subsequently scorned by the other Angels has deeply wounded him and he feels greatly betrayed.</Backstory>
+		
+		<ModelPath>K_Male_Mesh_01.hkb</ModelPath>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<EyeTexture>gfx\eyes\blinks\eyeblink_f3_hazel.png</EyeTexture>
+		<AnimationPack>EF_SoldierAnimationPack</AnimationPack>
+		<ShowAsSingleUnit>false</ShowAsSingleUnit>
+		<CutSceneDataPack>ReliasCutscenePack</CutSceneDataPack>
+		<ModelScale>1.0000</ModelScale>
+		<TacticalModelScale>1.5000</TacticalModelScale>
+		<EquipmentScale>1.0000</EquipmentScale>
+		<ClothMapScale>1.6</ClothMapScale>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<MovementType>land</MovementType>
+		<BobbingFrequency>0.0000</BobbingFrequency>
+		<ClothPoseIndex>0</ClothPoseIndex>
+		<InfoCardBackground>BG6_WaterCliff</InfoCardBackground>
+		<InfoCardBackgroundFlipped>1</InfoCardBackgroundFlipped>
+		<CanBeDesigned>0</CanBeDesigned>
+		
+		<Allegiance>Kingdom</Allegiance>
+		<Unique>1</Unique>
+		<IsNPC>1</IsNPC>
+		<NPCSpawnLikelihood>100</NPCSpawnLikelihood>
+		<IsChampion>1</IsChampion>
+		<Gender>Male</Gender>
+		<SpawnRating>1</SpawnRating>
+
+		<Quote>Do not speak to me about gods.</Quote>
+		<NPCRecruitmentText>%d gildar would show me that you are sincere.</NPCRecruitmentText>
+		<SelectedAbilityBonusOption>Blood_Angel</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Life1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Potential1_Level</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Life2</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Gahadswound</SelectedAbilityBonusOption>
+		
+		<Medallions InternalName=""/>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_Angel>1</UnitStat_BG_IsRace_Angel>
+			<UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsMale>1</UnitStat_BG_IsMale>
+			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
+			<UnitStat_BG_IsCelestial>1</UnitStat_BG_IsCelestial>
+			<UnitStat_HitPoints>20</UnitStat_HitPoints>
+			<UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+		</LevelMilestone>
+		<Equipment>EF_Angel_K_Male_Head_03</Equipment>
+		<Equipment>Basic_Boots</Equipment>
+		<Equipment>Sovereign_Warrior_Shirt_Pleated_ID1</Equipment>
+		<Equipment>Kraxis_Beard</Equipment>
+		<Equipment>Magnar_Hair</Equipment>
+		<AutoCreateEquipment>Staff_War</AutoCreateEquipment>
+		<Color_Skin>220,155,105,255</Color_Skin>
+		<Color_Hair>150,105,70,255</Color_Hair>
+		<Color_Clothing1>220,220,220,255</Color_Clothing1>
+		<Color_Clothing2>100,100,100,255</Color_Clothing2>
+		<Color_Metal>255,255,255,255</Color_Metal>
+		<Texture_Skin>K_Male_Freckles_Texture_01.png</Texture_Skin>
+		<Texture_Eyes>gfx\eyes\blinks\eyeblink_f3_hazel.png</Texture_Eyes>
+		<UnitModelType>AngelMale</UnitModelType>
+		<SoundPack>SoundPack_Generic_Male</SoundPack>
+		<NPCFreeRecruit>0</NPCFreeRecruit>
+		<RaceType>Race_Type_Angel</RaceType>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<WageOverride>1</WageOverride>
+	</UnitType>
+	<AbilityBonus InternalName="Gahadswound">
+		<AbilityBonusOption InternalName="Gahadswound">
+			<DisplayName>Gahad's Wound</DisplayName>
+			<Description>This unit gains +20 accuracy and spell mastery when trying to attack or cast spells on Gods</Description>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Accuracy</StrVal>
+				<StrVal2>UnitStat_BG_IsGod</StrVal2>
+				<Value>20</Value>
+				<Provides>This unit gains +20 accuracy and spell mastery when trying to attack or cast spells on Gods</Provides>
+				<vsHigher>1</vsHigher>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_MagicPower</StrVal>
+				<StrVal2>UnitStat_BG_IsGod</StrVal2>
+				<Value>20</Value>
+				<Provides>.</Provides>
+				<vsHigher>1</vsHigher>
+			</GameModifier>
+			<Icon>Ability_DeathWorship_Icon.png</Icon>
+			<HideWhenUpgraded>1</HideWhenUpgraded>
+		</AbilityBonusOption>
+	</AbilityBonus>
+</UnitTypes>

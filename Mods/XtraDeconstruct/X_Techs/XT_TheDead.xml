@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<Techs>
+	<TechDef InternalName="Tech_X_DarkRituals">
+		<DisplayName>Dark Rituals</DisplayName>
+		<Description>Learning these ceremonies will allow you to increase the influx of corpses in your cities (+15 Shared Growth).</Description>
+		<AdviceText>Don't forget to expand our grave capacity (Mausoleum, Catacomb, and Necropolis).</AdviceText>
+		<Image>S_Blight_Painting.png</Image>
+		<Color>76,79,196</Color>
+		<HotColor>182,182,244</HotColor>
+		<Cost>75</Cost>
+		<Rarity>100</Rarity>
+		<Category>Magic</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_FactionPrestige</StrVal>
+			<Icon>Prestige_Icon.png</Icon>
+			<Value>15</Value>
+			<Provides>Growth ::: +15 Shared</Provides>
+		</GameModifier>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Dead</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Rituals</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Sorcery</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>100</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>2</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>2</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_UnderworldHordes">
+		<DisplayName>Underworld Hordes</DisplayName>
+		<Description>Time to unleash undead hordes (+30 Shared Growth). Also unlocks the 'War Memorial' World Wonder.</Description>
+		<AdviceText>Beware the immortal Empire of the Dead!</AdviceText>
+		<Image>S_ShadowWorld_Painting.png</Image>
+		<Color>182,7,3</Color>
+		<HotColor>255,48,0</HotColor>
+		<Cost>666</Cost>
+		<Rarity>100</Rarity>
+		<Category>Warfare</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_FactionPrestige</StrVal>
+			<Icon>Prestige_Icon.png</Icon>
+			<Value>30</Value>
+			<Provides>Growth ::: +30 Shared</Provides>
+		</GameModifier>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Dead</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Weapons_Of_War</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>100</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>3</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_WellOfDarkness">
+		<DisplayName>Well of Darkness</DisplayName>
+		<Description>Research this knowledge to unlock the 'Well of Darkness' improvement. This also gives your cities +5 Shared Growth.</Description>
+		<AdviceText>The Well of Darkness is a direct gateway to the Styx and it will increase growth where it is built.</AdviceText>
+		<Image>Tech_X_WellOfDarkness.png</Image>
+		<Color>161,59,184</Color>
+		<HotColor>240,154,243</HotColor>
+		<Cost>33</Cost>
+		<Rarity>100</Rarity>
+		<Category>Civilization</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_FactionPrestige</StrVal>
+			<Icon>Prestige_Icon.png</Icon>
+			<Value>5</Value>
+			<Provides>Growth ::: +5 Shared</Provides>
+		</GameModifier>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Dead</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Mining</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>100</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>1</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>5</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+</Techs>

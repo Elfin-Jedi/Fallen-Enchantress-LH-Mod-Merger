@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<UnitTypes>
+	<UnitType InternalName="Drota_Hazaz">
+		<CreatureType>Champion</CreatureType>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-5</Value>
+			<Provides>-5% Unrest in the city this unit is in</Provides>
+		</GameModifier>
+
+		<DisplayName>Hazaz</DisplayName>
+		<Backstory>Hazaz is one of the few living Drota that has avoided the purge led by the Stormlord - he is not a spider hybrid like most other Drota alive today. He has managed to stay alive and avoid contact with other Drota using his exceptional skills in tracking and has a natural penchant for crafting small gadgets.</Backstory>
+		<HasEssence>true</HasEssence>
+		<ModelPath>drotabodymale.hkb</ModelPath>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<EyeTexture>gfx\eyes\blinks\eyeblink_f3_hazel.png</EyeTexture>
+		<AnimationPack>EF_MaleSovereignAnimationPack</AnimationPack>
+		<ShowAsSingleUnit>false</ShowAsSingleUnit>
+		<CutSceneDataPack>KulanCutscenePack</CutSceneDataPack>
+		<ModelScale>1.0000</ModelScale>
+		<TacticalModelScale>1.5000</TacticalModelScale>
+		<EquipmentScale>1.0000</EquipmentScale>
+		<ClothMapScale>1.6</ClothMapScale>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<MovementType>land</MovementType>
+		<BobbingFrequency>0.0000</BobbingFrequency>
+		<ClothPoseIndex>1</ClothPoseIndex>
+		<InfoCardBackground>BG50_FallenLand</InfoCardBackground>
+		<InfoCardBackgroundFlipped>1</InfoCardBackgroundFlipped>
+		<CanBeDesigned>0</CanBeDesigned>
+		<!-- -->
+		<Allegiance>Empire</Allegiance>
+		<Unique>1</Unique>
+		<IsNPC>1</IsNPC>
+		<NPCSpawnLikelihood>100</NPCSpawnLikelihood>
+		<IsChampion>1</IsChampion>
+		<Gender>Male</Gender>
+		<SoundPack>SoundPack_Generic_Male</SoundPack>
+		<SpawnRating>1</SpawnRating>
+
+		<Quote>Shelter me, please.</Quote>
+		<NPCRecruitmentText>%d and I will join your hunt!</NPCRecruitmentText>
+		<SelectedAbilityBonusOption>Blood_Drota</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Stealthy</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Air1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Death1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>HazazEscape</SelectedAbilityBonusOption>
+		<!-- -->
+		<Medallions InternalName=""/>
+		<WageOverride>1</WageOverride>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<UnitStat_Hazaz>3</UnitStat_Hazaz>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_BG_IsEmpire>1.0000</UnitStat_BG_IsEmpire>
+			<UnitStat_BG_IsMale>1.0000</UnitStat_BG_IsMale>
+			<UnitStat_BG_IsMonster>1.0000</UnitStat_BG_IsMonster>
+			<UnitStat_BG_IsRace_Drota>1.0000</UnitStat_BG_IsRace_Drota>
+			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
+			<UnitStat_CombatSpeed>22.0000</UnitStat_CombatSpeed>
+			<UnitStat_BG_IsTwisted>1.0000</UnitStat_BG_IsTwisted>
+			<UnitStat_Moves>2.0000</UnitStat_Moves>
+			<UnitStat_HitPoints>20.0000</UnitStat_HitPoints>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+		</LevelMilestone>
+		<Equipment>Goblinhead1</Equipment>
+		<AutoCreateEquipment>Dagger</AutoCreateEquipment>
+		<Color_Skin>56,56,56,255</Color_Skin>
+		<Color_Hair>147,102,67,255</Color_Hair>
+		<Color_Clothing1>120,25,20,255</Color_Clothing1>
+		<Color_Clothing2>78,60,55,255</Color_Clothing2>
+		<Color_Metal>255,255,255,255</Color_Metal>
+		<Texture_Skin>expanded_M_SandCrawler_Texture_02.dds</Texture_Skin>
+		<Texture_Eyes>gfx\eyes\blinks\eyeblink_f3_hazel.png</Texture_Eyes>
+		<UnitModelType>Goblin</UnitModelType>
+		<NPCFreeRecruit>0</NPCFreeRecruit>
+		<RaceType>Race_Type_Drota</RaceType>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+	</UnitType>
+	<AbilityBonus InternalName="HazazEscape">
+		<AbilityBonusOption InternalName="HazazEscape">
+			<DisplayName>Smoke Bombs</DisplayName>
+			<Description>Champion crafts Smoke bombs for personal use. He may use it three times. It is an ability, not an item and cannot be traded.
+
+A Smoke bomb allows Hazaz to Escape all friendly units from any battle.</Description>
+			<Icon>Ability_Summoner_Icon.png</Icon>
+			<GameModifier>
+				<Provides>Champion crafts Smoke bombs for personal use. He may use it three times. It is an ability, not an item and cannot be traded.
+
+A Smoke bomb allows Hazaz to Escape all friendly units from any battle.</Provides>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<SpellDef InternalName="HazazEscape">
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_Hazaz</Attribute>
+			<Value>1</Value>
+		</Prereq>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>HazazEscape</Attribute>
+		</Prereq>
+		<DisplayName>Smoke Bomb</DisplayName>
+		<Description>All friendly units escape battle.</Description>
+		<Image>T_Escape_Painting.png</Image>
+
+		<AutoUnlock>1</AutoUnlock>
+		<IconFG>T_Escape_Icon.png</IconFG>
+		<IconBG>T_Escape_Icon_BG.png</IconBG>
+		<IconColor>196,255,247</IconColor>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Movement</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>AllFriendlyUnits</SpellTargetType>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Hazaz</StrVal>
+			<Value>-1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>TacticalUnit</ModType>
+			<Attribute>EscapeFromBattle</Attribute>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<HitSoundFX>Spell_Teleport_03</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_Escape_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>.75</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+			<PlayOnAllTargets>1</PlayOnAllTargets>
+		</SpellDefEffect>
+	</SpellDef>
+</UnitTypes>

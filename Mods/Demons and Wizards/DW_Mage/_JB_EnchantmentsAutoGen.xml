@@ -1,0 +1,3357 @@
+<?xml version="1.0"?>
+<ContainerEnchantments>
+
+	<SpellDef InternalName="BurningBlade_Tactical">
+		<AutoUnlock>0</AutoUnlock>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Blocked</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>-1</AIPriority>
+		</AIData>
+	</SpellDef>
+	<SpellDef InternalName="BurningBlade_Tactical_Gen">
+        <DisplayName>Burning Blade</DisplayName>
+        <Description>Enchanted champion's weapon does +2 (+1 per fire shard) fire damage.</Description>
+        <FormattedDescription>Enchanted champion's weapon does +%d fire damage.</FormattedDescription>
+        <Image>S_BurningBlade_Painting.png</Image>
+        <IconFG>S_BurningBlade_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>FriendlyChampionOrSov</SpellTargetType>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <PreventStackingWith>BurningBlade</PreventStackingWith>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Fire2</Attribute>
+        </Prereq>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>10</Amount>
+        </SpellResourceCost>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Target>Unit</Target>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>BurningBlade_Tactical_Gen_TactDisc1</PreventStackingWith>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Attack_Fire</StrVal>
+            <IsForFormattedDescription>1</IsForFormattedDescription>
+            <Duration>-1</Duration>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitOwner_GetNumFireShards]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] + 2]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Calc] + 2]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>50</AIPriority>
+        <ValueCalcWrapper>
+            <ValueType>IsTargetWorthy</ValueType>
+            <Calculate InternalName="Calc" ValueOwner="TargetUnit">
+                <Expression><![CDATA[[Unit_GetHPCurrent]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] > 10]]></Expression>
+            </Calculate>
+        </ValueCalcWrapper>
+        </AIData>
+        <HitSoundFX>Spell_BurningBlade_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>S_BurningBlade_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>0.75</EffectScale>
+            <EffectDelay>0.25</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+	<SpellDef InternalName="BurningBlade_Tactical_Gen_TactDisc1">
+        <DisplayName>Burning Blade</DisplayName>
+        <Description>Enchanted champion's weapon does +2 (+1 per fire shard) fire damage.</Description>
+        <FormattedDescription>Enchanted champion's weapon does +%d fire damage.</FormattedDescription>
+        <Image>S_BurningBlade_Painting.png</Image>
+        <IconFG>S_BurningBlade_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>FriendlyChampionOrSov</SpellTargetType>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <PreventStackingWith>BurningBlade</PreventStackingWith>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Fire2</Attribute>
+        </Prereq>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+				<Amount>7</Amount>
+        </SpellResourceCost>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>BurningBlade_Tactical_Gen</PreventStackingWith>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Attack_Fire</StrVal>
+            <IsForFormattedDescription>1</IsForFormattedDescription>
+            <Duration>-1</Duration>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitOwner_GetNumFireShards]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] + 2]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Calc] + 2]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>50</AIPriority>
+        <ValueCalcWrapper>
+            <ValueType>IsTargetWorthy</ValueType>
+            <Calculate InternalName="Calc" ValueOwner="TargetUnit">
+                <Expression><![CDATA[[Unit_GetHPCurrent]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] > 10]]></Expression>
+            </Calculate>
+        </ValueCalcWrapper>
+        </AIData>
+        <HitSoundFX>Spell_BurningBlade_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>S_BurningBlade_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>0.75</EffectScale>
+            <EffectDelay>0.25</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+	<SpellDef InternalName="Candlecloak">
+		<AutoUnlock>0</AutoUnlock>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Blocked</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>-1</AIPriority>
+		</AIData>
+	</SpellDef>
+	<SpellDef InternalName="Candlecloak_Gen">
+        <DisplayName>Candlecloak</DisplayName>
+        <Description>Wreathes all your units in flames, doing 3 fire damage to anyone who attacks them.</Description>
+        <Image>T_CandleCloak_Painting.png</Image>
+        <IconFG>T_CandleCloak_Icon.png</IconFG>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>AllFriendlyUnits</SpellTargetType>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>30</Amount>
+        </SpellResourceCost>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Target>Unit</Target>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>Candlecloak_Gen_TactDisc1</PreventStackingWith>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>MeleeDefenseAppliesSpell</Attribute>
+            <StrVal>Candlecloak_Effect</StrVal>
+            <Duration>-1</Duration>
+            <Effect>E_MantleofFire_Particle</Effect>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>20</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_MantleOfFire_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>S_MantleofFire_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>1</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+            <PlayOnAllTargets>1</PlayOnAllTargets>
+        </SpellDefEffect>
+    </SpellDef>
+	<SpellDef InternalName="Candlecloak_Gen_TactDisc1">
+        <DisplayName>Candlecloak</DisplayName>
+        <Description>Wreathes all your units in flames, doing 3 fire damage to anyone who attacks them.</Description>
+        <Image>T_CandleCloak_Painting.png</Image>
+        <IconFG>T_CandleCloak_Icon.png</IconFG>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>AllFriendlyUnits</SpellTargetType>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+				<Amount>22</Amount>
+        </SpellResourceCost>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>Candlecloak_Gen</PreventStackingWith>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>MeleeDefenseAppliesSpell</Attribute>
+            <StrVal>Candlecloak_Effect</StrVal>
+            <Duration>-1</Duration>
+            <Effect>E_MantleofFire_Particle</Effect>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>20</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_MantleOfFire_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>S_MantleofFire_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>1</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+            <PlayOnAllTargets>1</PlayOnAllTargets>
+        </SpellDefEffect>
+    </SpellDef>
+	<SpellDef InternalName="CloakOfFear">
+		<AutoUnlock>0</AutoUnlock>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Blocked</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>-1</AIPriority>
+		</AIData>
+	</SpellDef>
+	<SpellDef InternalName="CloakOfFear_Gen">
+        <DisplayName>Cloak of Fear</DisplayName>
+        <Description>Enemies must make a spell resistance check before they can attack the caster for the next 5 turns.</Description>
+        <Image>S_CloakOfFear_Painting.png</Image>
+        <IconFG>S_CloakOfFear_Icon.png</IconFG>
+        <CanStack>0</CanStack>
+        <CastTime>1</CastTime>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>Self</SpellTargetType>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>35</Amount>
+        </SpellResourceCost>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Target>Unit</Target>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>CloakOfFear_Gen_TactDisc1</PreventStackingWith>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>CloakOfFear</Attribute>
+            <Duration>5</Duration>
+            <Effect>E_CloakOfFear_Particle</Effect>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>45</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_CloakOfFear_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>S_CloakOfFear_Particle</EffectName>
+            <LocalPosition>0,40,0</LocalPosition>
+            <EffectScale>0.7</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+	<SpellDef InternalName="CloakOfFear_Gen_TactDisc1">
+        <DisplayName>Cloak of Fear</DisplayName>
+        <Description>Enemies must make a spell resistance check before they can attack the caster for the next 5 turns.</Description>
+        <Image>S_CloakOfFear_Painting.png</Image>
+        <IconFG>S_CloakOfFear_Icon.png</IconFG>
+        <CanStack>0</CanStack>
+        <CastTime>1</CastTime>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>Self</SpellTargetType>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+				<Amount>26</Amount>
+        </SpellResourceCost>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>CloakOfFear_Gen</PreventStackingWith>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>CloakOfFear</Attribute>
+            <Duration>5</Duration>
+            <Effect>E_CloakOfFear_Particle</Effect>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>45</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_CloakOfFear_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>S_CloakOfFear_Particle</EffectName>
+            <LocalPosition>0,40,0</LocalPosition>
+            <EffectScale>0.7</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+	<SpellDef InternalName="DeathLash">
+		<AutoUnlock>0</AutoUnlock>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Blocked</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>-1</AIPriority>
+		</AIData>
+	</SpellDef>
+	<SpellDef InternalName="DeathLash_Gen">
+        <DisplayName>Death Lash</DisplayName>
+        <Description>+3 to Attack and Initiative, but the unit is killed at the end of combat.  This spell can only be cast on Trained Units.</Description>
+        <Image>T_DeathLash_Painting.png</Image>
+        <IconFG>T_DeathLash_Icon.png</IconFG>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>FriendlyTrainedUnit</SpellTargetType>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>5</Amount>
+        </SpellResourceCost>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Target>Unit</Target>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>DeathLash_Gen_TactDisc1</PreventStackingWith>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>CurHealth</Attribute>
+            <ApplyAtBattleEnd>1</ApplyAtBattleEnd>
+            <Calculate InternalName="Calc" ValueOwner="TargetUnit">
+                <Expression><![CDATA[[Unit_GetHPCurrent] * -1]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Attack_Boost</StrVal>
+            <Duration>-1</Duration>
+            <Effect>E_Berserk_Particle</Effect>
+            <Value>3</Value>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_CombatSpeed</StrVal>
+            <Duration>-1</Duration>
+            <Value>3</Value>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_DeathLash_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>T_Berserk_Particle</EffectName>
+            <LocalPosition>0,35,0</LocalPosition>
+            <EffectScale>0.7</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+	<SpellDef InternalName="DeathLash_Gen_TactDisc1">
+        <DisplayName>Death Lash</DisplayName>
+        <Description>+3 to Attack and Initiative, but the unit is killed at the end of combat.  This spell can only be cast on Trained Units.</Description>
+        <Image>T_DeathLash_Painting.png</Image>
+        <IconFG>T_DeathLash_Icon.png</IconFG>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>FriendlyTrainedUnit</SpellTargetType>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+				<Amount>3</Amount>
+        </SpellResourceCost>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>DeathLash_Gen</PreventStackingWith>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>CurHealth</Attribute>
+            <ApplyAtBattleEnd>1</ApplyAtBattleEnd>
+            <Calculate InternalName="Calc" ValueOwner="TargetUnit">
+                <Expression><![CDATA[[Unit_GetHPCurrent] * -1]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Attack_Boost</StrVal>
+            <Duration>-1</Duration>
+            <Effect>E_Berserk_Particle</Effect>
+            <Value>3</Value>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_CombatSpeed</StrVal>
+            <Duration>-1</Duration>
+            <Value>3</Value>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_DeathLash_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>T_Berserk_Particle</EffectName>
+            <LocalPosition>0,35,0</LocalPosition>
+            <EffectScale>0.7</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+	<SpellDef InternalName="Diamondskin">
+		<AutoUnlock>0</AutoUnlock>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Blocked</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>-1</AIPriority>
+		</AIData>
+	</SpellDef>
+	<SpellDef InternalName="Diamondskin_Gen">
+        <DisplayName>Diamondskin</DisplayName>
+        <Description>Unit is immune to physical damage for 3 turns.</Description>
+        <Image>T_Stoneskin_Painting.png</Image>
+        <IconFG>T_Diamondskin_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>FriendlyUnit</SpellTargetType>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Earth4</Attribute>
+        </Prereq>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>90</Amount>
+        </SpellResourceCost>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Target>Unit</Target>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>Diamondskin_Gen_TactDisc1</PreventStackingWith>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_ResistPierce</StrVal>
+            <DisplayName>Diamondskin</DisplayName>
+            <Duration>3</Duration>
+            <Value>100</Value>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>10</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_ManaShield_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>S_ManaShield_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>0.6</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+	<SpellDef InternalName="Diamondskin_Gen_TactDisc1">
+        <DisplayName>Diamondskin</DisplayName>
+        <Description>Unit is immune to physical damage for 3 turns.</Description>
+        <Image>T_Stoneskin_Painting.png</Image>
+        <IconFG>T_Diamondskin_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>FriendlyUnit</SpellTargetType>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Earth4</Attribute>
+        </Prereq>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+				<Amount>67</Amount>
+        </SpellResourceCost>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>Diamondskin_Gen</PreventStackingWith>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_ResistPierce</StrVal>
+            <DisplayName>Diamondskin</DisplayName>
+            <Duration>3</Duration>
+            <Value>100</Value>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>10</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_ManaShield_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>S_ManaShield_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>0.6</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+	<SpellDef InternalName="GiantForm">
+		<AutoUnlock>0</AutoUnlock>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Blocked</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>-1</AIPriority>
+		</AIData>
+	</SpellDef>
+	<SpellDef InternalName="GiantForm_Gen">
+        <DisplayName>Giant Form</DisplayName>
+        <Description>Doubles the target unit's Attack.</Description>
+        <Image>T_Growth_Painting.png</Image>
+        <IconFG>T_GiantForm_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>FriendlyChampionOrSov</SpellTargetType>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Earth5</Attribute>
+        </Prereq>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>30</Amount>
+        </SpellResourceCost>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Target>Unit</Target>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>GiantForm_Gen_TactDisc1</PreventStackingWith>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Attack_Pierce</StrVal>
+            <Duration>-1</Duration>
+            <Multiplier>2</Multiplier>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SetUnitStat</Attribute>
+            <StrVal>UnitStat_TacticalScaleMultiplier</StrVal>
+            <DisplayName>Grown</DisplayName>
+            <Duration>-1</Duration>
+            <Value>2</Value>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>255</AIPriority>
+        <ValueCalcWrapper>
+            <ValueType>IsTargetWorthy</ValueType>
+            <Calculate InternalName="Calc" ValueOwner="TargetUnit">
+                <Expression><![CDATA[[Unit_GetHPCurrent]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] > 10]]></Expression>
+            </Calculate>
+        </ValueCalcWrapper>
+        </AIData>
+        <HitSoundFX>Spell_Growth_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>T_Growth_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>.35</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+	<SpellDef InternalName="GiantForm_Gen_TactDisc1">
+        <DisplayName>Giant Form</DisplayName>
+        <Description>Doubles the target unit's Attack.</Description>
+        <Image>T_Growth_Painting.png</Image>
+        <IconFG>T_GiantForm_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>FriendlyChampionOrSov</SpellTargetType>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Earth5</Attribute>
+        </Prereq>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+				<Amount>22</Amount>
+        </SpellResourceCost>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>GiantForm_Gen</PreventStackingWith>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Attack_Pierce</StrVal>
+            <Duration>-1</Duration>
+            <Multiplier>2</Multiplier>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SetUnitStat</Attribute>
+            <StrVal>UnitStat_TacticalScaleMultiplier</StrVal>
+            <DisplayName>Grown</DisplayName>
+            <Duration>-1</Duration>
+            <Value>2</Value>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>255</AIPriority>
+        <ValueCalcWrapper>
+            <ValueType>IsTargetWorthy</ValueType>
+            <Calculate InternalName="Calc" ValueOwner="TargetUnit">
+                <Expression><![CDATA[[Unit_GetHPCurrent]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] > 10]]></Expression>
+            </Calculate>
+        </ValueCalcWrapper>
+        </AIData>
+        <HitSoundFX>Spell_Growth_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>T_Growth_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>.35</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+	<SpellDef InternalName="Growth">
+		<AutoUnlock>0</AutoUnlock>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Blocked</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>-1</AIPriority>
+		</AIData>
+	</SpellDef>
+	<SpellDef InternalName="Growth_Gen">
+        <DisplayName>Growth</DisplayName>
+        <Description>Target unit gets +50% to Attack and halves Dodge.</Description>
+        <Image>T_Growth_Painting.png</Image>
+        <IconFG>T_Growth_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>FriendlyUnit</SpellTargetType>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Life3</Attribute>
+        </Prereq>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>16</Amount>
+        </SpellResourceCost>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Target>Unit</Target>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>Growth_Gen_TactDisc1</PreventStackingWith>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Attack_Pierce</StrVal>
+            <Duration>-1</Duration>
+            <Multiplier>1.5</Multiplier>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Dodge</StrVal>
+            <Duration>-1</Duration>
+            <Multiplier>0.5</Multiplier>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SetUnitStat</Attribute>
+            <StrVal>UnitStat_TacticalScaleMultiplier</StrVal>
+            <DisplayName>Grown</DisplayName>
+            <Duration>-1</Duration>
+            <Value>1.5</Value>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>30</AIPriority>
+        <ValueCalcWrapper>
+            <ValueType>IsTargetWorthy</ValueType>
+            <Calculate InternalName="Calc" ValueOwner="TargetUnit">
+                <Expression><![CDATA[[Unit_GetHPCurrent]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] > 10]]></Expression>
+            </Calculate>
+        </ValueCalcWrapper>
+        </AIData>
+        <HitSoundFX>Spell_Growth_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>T_Growth_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>.35</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+	<SpellDef InternalName="Growth_Gen_TactDisc1">
+        <DisplayName>Growth</DisplayName>
+        <Description>Target unit gets +50% to Attack and halves Dodge.</Description>
+        <Image>T_Growth_Painting.png</Image>
+        <IconFG>T_Growth_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>FriendlyUnit</SpellTargetType>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Life3</Attribute>
+        </Prereq>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+				<Amount>12</Amount>
+        </SpellResourceCost>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>Growth_Gen</PreventStackingWith>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Attack_Pierce</StrVal>
+            <Duration>-1</Duration>
+            <Multiplier>1.5</Multiplier>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Dodge</StrVal>
+            <Duration>-1</Duration>
+            <Multiplier>0.5</Multiplier>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SetUnitStat</Attribute>
+            <StrVal>UnitStat_TacticalScaleMultiplier</StrVal>
+            <DisplayName>Grown</DisplayName>
+            <Duration>-1</Duration>
+            <Value>1.5</Value>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>30</AIPriority>
+        <ValueCalcWrapper>
+            <ValueType>IsTargetWorthy</ValueType>
+            <Calculate InternalName="Calc" ValueOwner="TargetUnit">
+                <Expression><![CDATA[[Unit_GetHPCurrent]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] > 10]]></Expression>
+            </Calculate>
+        </ValueCalcWrapper>
+        </AIData>
+        <HitSoundFX>Spell_Growth_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>T_Growth_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>.35</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+	<SpellDef InternalName="Growth_Adept">
+		<AutoUnlock>0</AutoUnlock>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Blocked</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>-1</AIPriority>
+		</AIData>
+	</SpellDef>
+	<SpellDef InternalName="Growth_Adept_Gen">
+        <DisplayName>Growth</DisplayName>
+        <Description>Target unit gets +50% to Attack and halves Dodge.</Description>
+        <Image>T_Growth_Painting.png</Image>
+        <IconFG>T_Growth_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>FriendlyUnit</SpellTargetType>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>LifeAdept3</Attribute>
+        </Prereq>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>16</Amount>
+        </SpellResourceCost>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Target>Unit</Target>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>Growth_Adept_Gen_TactDisc1</PreventStackingWith>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Attack_Pierce</StrVal>
+            <Duration>-1</Duration>
+            <Multiplier>1.5</Multiplier>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Dodge</StrVal>
+            <Duration>-1</Duration>
+            <Multiplier>0.5</Multiplier>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SetUnitStat</Attribute>
+            <StrVal>UnitStat_TacticalScaleMultiplier</StrVal>
+            <DisplayName>Grown</DisplayName>
+            <Duration>-1</Duration>
+            <Value>1.5</Value>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>30</AIPriority>
+        <ValueCalcWrapper>
+            <ValueType>IsTargetWorthy</ValueType>
+            <Calculate InternalName="Calc" ValueOwner="TargetUnit">
+                <Expression><![CDATA[[Unit_GetHPCurrent]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] > 10]]></Expression>
+            </Calculate>
+        </ValueCalcWrapper>
+        </AIData>
+        <HitSoundFX>Spell_Growth_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>T_Growth_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>.35</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+	<SpellDef InternalName="Growth_Adept_Gen_TactDisc1">
+        <DisplayName>Growth</DisplayName>
+        <Description>Target unit gets +50% to Attack and halves Dodge.</Description>
+        <Image>T_Growth_Painting.png</Image>
+        <IconFG>T_Growth_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>FriendlyUnit</SpellTargetType>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>LifeAdept3</Attribute>
+        </Prereq>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+				<Amount>12</Amount>
+        </SpellResourceCost>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>Growth_Adept_Gen</PreventStackingWith>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Attack_Pierce</StrVal>
+            <Duration>-1</Duration>
+            <Multiplier>1.5</Multiplier>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Dodge</StrVal>
+            <Duration>-1</Duration>
+            <Multiplier>0.5</Multiplier>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SetUnitStat</Attribute>
+            <StrVal>UnitStat_TacticalScaleMultiplier</StrVal>
+            <DisplayName>Grown</DisplayName>
+            <Duration>-1</Duration>
+            <Value>1.5</Value>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>30</AIPriority>
+        <ValueCalcWrapper>
+            <ValueType>IsTargetWorthy</ValueType>
+            <Calculate InternalName="Calc" ValueOwner="TargetUnit">
+                <Expression><![CDATA[[Unit_GetHPCurrent]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] > 10]]></Expression>
+            </Calculate>
+        </ValueCalcWrapper>
+        </AIData>
+        <HitSoundFX>Spell_Growth_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>T_Growth_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>.35</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+	<SpellDef InternalName="GuardianWind">
+		<AutoUnlock>0</AutoUnlock>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Blocked</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>-1</AIPriority>
+		</AIData>
+	</SpellDef>
+	<SpellDef InternalName="GuardianWind_Gen">
+        <DisplayName>Guardian Wind</DisplayName>
+        <Description>Allied units gain +25 to Dodge (+5 per air shard) vs ranged attacks.</Description>
+        <FormattedDescription>Allied units gain +%d to Dodge vs ranged attacks.</FormattedDescription>
+        <Image>T_Windshield_Painting.png</Image>
+        <IconFG>T_GuardianWind_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>AllFriendlyUnits</SpellTargetType>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Air2</Attribute>
+        </Prereq>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>4</Amount>
+        </SpellResourceCost>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Target>Unit</Target>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>GuardianWind_Gen_TactDisc1</PreventStackingWith>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_DodgeAgainstRanged</StrVal>
+            <IsForFormattedDescription>1</IsForFormattedDescription>
+            <DisplayName>Shielded</DisplayName>
+            <Duration>-1</Duration>
+            <Effect>E_GuardianWind_Particle</Effect>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitOwner_GetNumAirShards] * 5]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] + 25]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Calc] + 25]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_GuardianWind_01</HitSoundFX>
+    </SpellDef>
+	<SpellDef InternalName="GuardianWind_Gen_TactDisc1">
+        <DisplayName>Guardian Wind</DisplayName>
+        <Description>Allied units gain +25 to Dodge (+5 per air shard) vs ranged attacks.</Description>
+        <FormattedDescription>Allied units gain +%d to Dodge vs ranged attacks.</FormattedDescription>
+        <Image>T_Windshield_Painting.png</Image>
+        <IconFG>T_GuardianWind_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>AllFriendlyUnits</SpellTargetType>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Air2</Attribute>
+        </Prereq>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+				<Amount>3</Amount>
+        </SpellResourceCost>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>GuardianWind_Gen</PreventStackingWith>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_DodgeAgainstRanged</StrVal>
+            <IsForFormattedDescription>1</IsForFormattedDescription>
+            <DisplayName>Shielded</DisplayName>
+            <Duration>-1</Duration>
+            <Effect>E_GuardianWind_Particle</Effect>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitOwner_GetNumAirShards] * 5]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] + 25]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Calc] + 25]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_GuardianWind_01</HitSoundFX>
+    </SpellDef>
+	<SpellDef InternalName="GuardianWind_Adept">
+		<AutoUnlock>0</AutoUnlock>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Blocked</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>-1</AIPriority>
+		</AIData>
+	</SpellDef>
+	<SpellDef InternalName="GuardianWind_Adept_Gen">
+        <DisplayName>Guardian Wind</DisplayName>
+        <Description>Allied units gain +25 to Dodge (+5 per air shard) vs ranged attacks.</Description>
+        <FormattedDescription>Allied units gain +%d to Dodge vs ranged attacks.</FormattedDescription>
+        <Image>T_Windshield_Painting.png</Image>
+        <IconFG>T_GuardianWind_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>AllFriendlyUnits</SpellTargetType>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>AirAdept2</Attribute>
+        </Prereq>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>4</Amount>
+        </SpellResourceCost>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Target>Unit</Target>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>GuardianWind_Adept_Gen_TactDisc1</PreventStackingWith>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_DodgeAgainstRanged</StrVal>
+            <IsForFormattedDescription>1</IsForFormattedDescription>
+            <DisplayName>Shielded</DisplayName>
+            <Duration>-1</Duration>
+            <Effect>E_GuardianWind_Particle</Effect>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitOwner_GetNumAirShards] * 5]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] + 25]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Calc] + 25]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_GuardianWind_01</HitSoundFX>
+    </SpellDef>
+	<SpellDef InternalName="GuardianWind_Adept_Gen_TactDisc1">
+        <DisplayName>Guardian Wind</DisplayName>
+        <Description>Allied units gain +25 to Dodge (+5 per air shard) vs ranged attacks.</Description>
+        <FormattedDescription>Allied units gain +%d to Dodge vs ranged attacks.</FormattedDescription>
+        <Image>T_Windshield_Painting.png</Image>
+        <IconFG>T_GuardianWind_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>AllFriendlyUnits</SpellTargetType>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>AirAdept2</Attribute>
+        </Prereq>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+				<Amount>3</Amount>
+        </SpellResourceCost>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>GuardianWind_Adept_Gen</PreventStackingWith>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_DodgeAgainstRanged</StrVal>
+            <IsForFormattedDescription>1</IsForFormattedDescription>
+            <DisplayName>Shielded</DisplayName>
+            <Duration>-1</Duration>
+            <Effect>E_GuardianWind_Particle</Effect>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitOwner_GetNumAirShards] * 5]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] + 25]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Calc] + 25]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_GuardianWind_01</HitSoundFX>
+    </SpellDef>
+	<SpellDef InternalName="Haste">
+		<AutoUnlock>0</AutoUnlock>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Blocked</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>-1</AIPriority>
+		</AIData>
+	</SpellDef>
+	<SpellDef InternalName="Haste_Gen">
+        <DisplayName>Haste</DisplayName>
+        <Description>Target unit is +3 to Initiative (+1 per air shard).</Description>
+        <FormattedDescription>Target unit is +%d to Initiative.</FormattedDescription>
+        <Image>T_Haste_Painting.png</Image>
+        <IconFG>T_Haste_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>FriendlyUnit</SpellTargetType>
+        <PreventStackingWith>Haste_Adept</PreventStackingWith>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Air1</Attribute>
+        </Prereq>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>5</Amount>
+        </SpellResourceCost>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Target>Unit</Target>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>Haste_Gen_TactDisc1</PreventStackingWith>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_CombatSpeed</StrVal>
+            <IsForFormattedDescription>1</IsForFormattedDescription>
+            <DisplayName>Hasted</DisplayName>
+            <Duration>-1</Duration>
+            <Effect>E_Celerity_Particle</Effect>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitOwner_GetNumAirShards]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] + 3]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Calc] + 3]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>255</AIPriority>
+        <ValueCalcWrapper>
+            <ValueType>IsTargetWorthy</ValueType>
+            <Calculate InternalName="Calc" ValueOwner="TargetUnit">
+                <Expression><![CDATA[[Unit_GetHPCurrent]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] > 10]]></Expression>
+            </Calculate>
+        </ValueCalcWrapper>
+        </AIData>
+        <HitSoundFX>Spell_Haste_01</HitSoundFX>
+        <HitSoundFX>Spell_Haste_02</HitSoundFX>
+    </SpellDef>
+	<SpellDef InternalName="Haste_Gen_TactDisc1">
+        <DisplayName>Haste</DisplayName>
+        <Description>Target unit is +3 to Initiative (+1 per air shard).</Description>
+        <FormattedDescription>Target unit is +%d to Initiative.</FormattedDescription>
+        <Image>T_Haste_Painting.png</Image>
+        <IconFG>T_Haste_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>FriendlyUnit</SpellTargetType>
+        <PreventStackingWith>Haste_Adept</PreventStackingWith>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Air1</Attribute>
+        </Prereq>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+				<Amount>3</Amount>
+        </SpellResourceCost>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>Haste_Gen</PreventStackingWith>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_CombatSpeed</StrVal>
+            <IsForFormattedDescription>1</IsForFormattedDescription>
+            <DisplayName>Hasted</DisplayName>
+            <Duration>-1</Duration>
+            <Effect>E_Celerity_Particle</Effect>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitOwner_GetNumAirShards]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] + 3]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Calc] + 3]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>255</AIPriority>
+        <ValueCalcWrapper>
+            <ValueType>IsTargetWorthy</ValueType>
+            <Calculate InternalName="Calc" ValueOwner="TargetUnit">
+                <Expression><![CDATA[[Unit_GetHPCurrent]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] > 10]]></Expression>
+            </Calculate>
+        </ValueCalcWrapper>
+        </AIData>
+        <HitSoundFX>Spell_Haste_01</HitSoundFX>
+        <HitSoundFX>Spell_Haste_02</HitSoundFX>
+    </SpellDef>
+	<SpellDef InternalName="Haste_Adept">
+		<AutoUnlock>0</AutoUnlock>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Blocked</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>-1</AIPriority>
+		</AIData>
+	</SpellDef>
+	<SpellDef InternalName="Haste_Adept_Gen">
+        <DisplayName>Haste</DisplayName>
+        <Description>Target unit is +3 to Initiative (+1 per air shard).</Description>
+        <FormattedDescription>Target unit is +%d to Initiative.</FormattedDescription>
+        <Image>T_Haste_Painting.png</Image>
+        <IconFG>T_Haste_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>FriendlyUnit</SpellTargetType>
+        <PreventStackingWith>Haste</PreventStackingWith>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>AirAdept1</Attribute>
+        </Prereq>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>5</Amount>
+        </SpellResourceCost>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Target>Unit</Target>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>Haste_Adept_Gen_TactDisc1</PreventStackingWith>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_CombatSpeed</StrVal>
+            <IsForFormattedDescription>1</IsForFormattedDescription>
+            <DisplayName>Hasted</DisplayName>
+            <Duration>-1</Duration>
+            <Effect>E_Celerity_Particle</Effect>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitOwner_GetNumAirShards]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] + 3]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Calc] + 3]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>40</AIPriority>
+        <ValueCalcWrapper>
+            <ValueType>IsTargetWorthy</ValueType>
+            <Calculate InternalName="Calc" ValueOwner="TargetUnit">
+                <Expression><![CDATA[[Unit_GetHPCurrent]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] > 10]]></Expression>
+            </Calculate>
+        </ValueCalcWrapper>
+        </AIData>
+        <HitSoundFX>Spell_Haste_01</HitSoundFX>
+        <HitSoundFX>Spell_Haste_02</HitSoundFX>
+    </SpellDef>
+	<SpellDef InternalName="Haste_Adept_Gen_TactDisc1">
+        <DisplayName>Haste</DisplayName>
+        <Description>Target unit is +3 to Initiative (+1 per air shard).</Description>
+        <FormattedDescription>Target unit is +%d to Initiative.</FormattedDescription>
+        <Image>T_Haste_Painting.png</Image>
+        <IconFG>T_Haste_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>FriendlyUnit</SpellTargetType>
+        <PreventStackingWith>Haste</PreventStackingWith>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>AirAdept1</Attribute>
+        </Prereq>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+				<Amount>3</Amount>
+        </SpellResourceCost>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>Haste_Adept_Gen</PreventStackingWith>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_CombatSpeed</StrVal>
+            <IsForFormattedDescription>1</IsForFormattedDescription>
+            <DisplayName>Hasted</DisplayName>
+            <Duration>-1</Duration>
+            <Effect>E_Celerity_Particle</Effect>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitOwner_GetNumAirShards]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] + 3]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Calc] + 3]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>40</AIPriority>
+        <ValueCalcWrapper>
+            <ValueType>IsTargetWorthy</ValueType>
+            <Calculate InternalName="Calc" ValueOwner="TargetUnit">
+                <Expression><![CDATA[[Unit_GetHPCurrent]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] > 10]]></Expression>
+            </Calculate>
+        </ValueCalcWrapper>
+        </AIData>
+        <HitSoundFX>Spell_Haste_01</HitSoundFX>
+        <HitSoundFX>Spell_Haste_02</HitSoundFX>
+    </SpellDef>
+	<SpellDef InternalName="Stoneskin_Tactical">
+		<AutoUnlock>0</AutoUnlock>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Blocked</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>-1</AIPriority>
+		</AIData>
+	</SpellDef>
+	<SpellDef InternalName="Stoneskin_Tactical_Gen">
+        <DisplayName>Stoneskin</DisplayName>
+        <Description>Target champion's Defense is raised by 3 (+1 per earth shard).</Description>
+        <FormattedDescription>Target champion's Defense is raised by %d.</FormattedDescription>
+        <Image>T_Stoneskin_Painting.png</Image>
+        <IconFG>T_Stoneskin_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>FriendlyChampionOrSov</SpellTargetType>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <PreventStackingWith>Stoneskin</PreventStackingWith>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Earth2</Attribute>
+        </Prereq>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>15</Amount>
+        </SpellResourceCost>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Target>Unit</Target>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>Stoneskin_Tactical_Gen_TactDisc1</PreventStackingWith>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Defense_Pierce</StrVal>
+            <IsForFormattedDescription>1</IsForFormattedDescription>
+            <Duration>-1</Duration>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitOwner_GetNumEarthShards]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] + 3]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Calc] + 3]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>10</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_StoneSkin_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>T_StoneSkin_Particle</EffectName>
+            <LocalPosition>0,25,0</LocalPosition>
+            <EffectScale>.4</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+	<SpellDef InternalName="Stoneskin_Tactical_Gen_TactDisc1">
+        <DisplayName>Stoneskin</DisplayName>
+        <Description>Target champion's Defense is raised by 3 (+1 per earth shard).</Description>
+        <FormattedDescription>Target champion's Defense is raised by %d.</FormattedDescription>
+        <Image>T_Stoneskin_Painting.png</Image>
+        <IconFG>T_Stoneskin_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>FriendlyChampionOrSov</SpellTargetType>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <PreventStackingWith>Stoneskin</PreventStackingWith>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Earth2</Attribute>
+        </Prereq>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+				<Amount>11</Amount>
+        </SpellResourceCost>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>Stoneskin_Tactical_Gen</PreventStackingWith>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Defense_Pierce</StrVal>
+            <IsForFormattedDescription>1</IsForFormattedDescription>
+            <Duration>-1</Duration>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitOwner_GetNumEarthShards]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] + 3]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Calc] + 3]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>10</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_StoneSkin_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>T_StoneSkin_Particle</EffectName>
+            <LocalPosition>0,25,0</LocalPosition>
+            <EffectScale>.4</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+	<SpellDef InternalName="Stoneskin_Tactical_Adept">
+		<AutoUnlock>0</AutoUnlock>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Blocked</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>-1</AIPriority>
+		</AIData>
+	</SpellDef>
+	<SpellDef InternalName="Stoneskin_Tactical_Adept_Gen">
+        <DisplayName>Stoneskin</DisplayName>
+        <Description>Target champion's Defense is raised by 3 (+1 per earth shard).</Description>
+        <FormattedDescription>Target champion's Defense is raised by %d.</FormattedDescription>
+        <Image>T_Stoneskin_Painting.png</Image>
+        <IconFG>T_Stoneskin_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>FriendlyChampionOrSov</SpellTargetType>
+        <PreventStackingWith>Stoneskin</PreventStackingWith>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>EarthAdept2</Attribute>
+        </Prereq>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>15</Amount>
+        </SpellResourceCost>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Target>Unit</Target>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>Stoneskin_Tactical_Adept_Gen_TactDisc1</PreventStackingWith>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Defense_Pierce</StrVal>
+            <IsForFormattedDescription>1</IsForFormattedDescription>
+            <Duration>-1</Duration>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitOwner_GetNumEarthShards]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] + 3]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Calc] + 3]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>10</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_StoneSkin_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>T_StoneSkin_Particle</EffectName>
+            <LocalPosition>0,25,0</LocalPosition>
+            <EffectScale>.4</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+	<SpellDef InternalName="Stoneskin_Tactical_Adept_Gen_TactDisc1">
+        <DisplayName>Stoneskin</DisplayName>
+        <Description>Target champion's Defense is raised by 3 (+1 per earth shard).</Description>
+        <FormattedDescription>Target champion's Defense is raised by %d.</FormattedDescription>
+        <Image>T_Stoneskin_Painting.png</Image>
+        <IconFG>T_Stoneskin_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>FriendlyChampionOrSov</SpellTargetType>
+        <PreventStackingWith>Stoneskin</PreventStackingWith>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>EarthAdept2</Attribute>
+        </Prereq>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+				<Amount>11</Amount>
+        </SpellResourceCost>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>Stoneskin_Tactical_Adept_Gen</PreventStackingWith>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Defense_Pierce</StrVal>
+            <IsForFormattedDescription>1</IsForFormattedDescription>
+            <Duration>-1</Duration>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitOwner_GetNumEarthShards]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] + 3]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Calc] + 3]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>10</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_StoneSkin_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>T_StoneSkin_Particle</EffectName>
+            <LocalPosition>0,25,0</LocalPosition>
+            <EffectScale>.4</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+	<SpellDef InternalName="JB_ProtectionFromCold">
+		<AutoUnlock>0</AutoUnlock>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Blocked</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>-1</AIPriority>
+		</AIData>
+	</SpellDef>
+	<SpellDef InternalName="JB_ProtectionFromCold_Gen">
+			<DisplayName>Protection from Cold</DisplayName>
+			<Description>All allied units gain 50% Cold Resistance. Hexed units only gain +25%.</Description>
+			<Image>S_MantleofOceans_Painting.png</Image>
+			<IconFG>T_ProtectionFromCold_Icon.png</IconFG>
+			<AutoUnlock>1</AutoUnlock>
+			<CanStack>0</CanStack>
+			<SpellBookSortCategory>Unit</SpellBookSortCategory>
+			<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+			<SpellType>Tactical</SpellType>
+			<SpellClass>Defensive</SpellClass>
+			<SpellSubClass>Buff</SpellSubClass>
+			<SpellTargetType>AllFriendlyUnits</SpellTargetType>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_Mage_Abjuration</Attribute>
+			</Prereq>
+			<SpellResourceCost>
+				<Resource>Mana</Resource>
+				<Amount>30</Amount>
+			</SpellResourceCost>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Target>Unit</Target>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>JB_ProtectionFromCold_Gen_TactDisc1</PreventStackingWith>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ResistCold</StrVal>
+				<Duration>-1</Duration>
+				<Value>50</Value>
+			</GameModifier>
+			<GameModifier>
+			  <ModType>Unit</ModType>
+			  <Attribute>AdjustUnitStat</Attribute>
+			  <StrVal>UnitStat_ResistCold</StrVal>
+			  <Duration>-1</Duration>
+			  <Calculate InternalName="Calc1" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_Reliquary_IsCursed]]]></Expression>
+			  </Calculate>
+			  <Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc1]*-25]]></Expression>
+			  </Calculate>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>0</AIPriority>
+			</AIData>
+			<HitSoundFX>Spell_ProtectionFromCold_01</HitSoundFX>
+			<SpellDefEffect>
+				<EffectName>S_MantleofOceans_Particle</EffectName>
+				<LocalPosition>0,0,0</LocalPosition>
+				<EffectScale>1</EffectScale>
+				<EffectDelay>0</EffectDelay>
+				<SnapToTerrain>1</SnapToTerrain>
+			</SpellDefEffect>
+		</SpellDef>
+	<SpellDef InternalName="JB_ProtectionFromCold_Gen_TactDisc1">
+			<DisplayName>Protection from Cold</DisplayName>
+			<Description>All allied units gain 50% Cold Resistance. Hexed units only gain +25%.</Description>
+			<Image>S_MantleofOceans_Painting.png</Image>
+			<IconFG>T_ProtectionFromCold_Icon.png</IconFG>
+			<AutoUnlock>1</AutoUnlock>
+			<CanStack>0</CanStack>
+			<SpellBookSortCategory>Unit</SpellBookSortCategory>
+			<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+			<SpellType>Tactical</SpellType>
+			<SpellClass>Defensive</SpellClass>
+			<SpellSubClass>Buff</SpellSubClass>
+			<SpellTargetType>AllFriendlyUnits</SpellTargetType>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_Mage_Abjuration</Attribute>
+			</Prereq>
+			<SpellResourceCost>
+				<Resource>Mana</Resource>
+				<Amount>22</Amount>
+			</SpellResourceCost>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>JB_ProtectionFromCold_Gen</PreventStackingWith>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ResistCold</StrVal>
+				<Duration>-1</Duration>
+				<Value>50</Value>
+			</GameModifier>
+			<GameModifier>
+			  <ModType>Unit</ModType>
+			  <Attribute>AdjustUnitStat</Attribute>
+			  <StrVal>UnitStat_ResistCold</StrVal>
+			  <Duration>-1</Duration>
+			  <Calculate InternalName="Calc1" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_Reliquary_IsCursed]]]></Expression>
+			  </Calculate>
+			  <Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc1]*-25]]></Expression>
+			  </Calculate>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>0</AIPriority>
+			</AIData>
+			<HitSoundFX>Spell_ProtectionFromCold_01</HitSoundFX>
+			<SpellDefEffect>
+				<EffectName>S_MantleofOceans_Particle</EffectName>
+				<LocalPosition>0,0,0</LocalPosition>
+				<EffectScale>1</EffectScale>
+				<EffectDelay>0</EffectDelay>
+				<SnapToTerrain>1</SnapToTerrain>
+			</SpellDefEffect>
+		</SpellDef>
+	<SpellDef InternalName="JB_ProtectionFromFire">
+		<AutoUnlock>0</AutoUnlock>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Blocked</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>-1</AIPriority>
+		</AIData>
+	</SpellDef>
+	<SpellDef InternalName="JB_ProtectionFromFire_Gen">
+			<DisplayName>Protection from Fire</DisplayName>
+			<Description>All allied units gain 50% Fire Resistance. Hexed units only gain +25%.</Description>
+			<Image>S_MantleofFire_Painting.png</Image>
+			<IconFG>T_ProtectionFromFire_Icon.png</IconFG>
+			<AutoUnlock>1</AutoUnlock>
+			<CanStack>0</CanStack>
+			<SpellBookSortCategory>Unit</SpellBookSortCategory>
+			<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+			<SpellType>Tactical</SpellType>
+			<SpellClass>Defensive</SpellClass>
+			<SpellSubClass>Buff</SpellSubClass>
+			<SpellTargetType>AllFriendlyUnits</SpellTargetType>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_Mage_Abjuration</Attribute>
+			</Prereq>
+			<SpellResourceCost>
+				<Resource>Mana</Resource>
+				<Amount>30</Amount>
+			</SpellResourceCost>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Target>Unit</Target>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>JB_ProtectionFromFire_Gen_TactDisc1</PreventStackingWith>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ResistFire</StrVal>
+				<Duration>-1</Duration>
+				<Value>50</Value>
+			</GameModifier>
+			<GameModifier>
+			  <ModType>Unit</ModType>
+			  <Attribute>AdjustUnitStat</Attribute>
+			  <StrVal>UnitStat_ResistFire</StrVal>
+			  <Duration>-1</Duration>
+			  <Calculate InternalName="Calc1" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_Reliquary_IsCursed]]]></Expression>
+			  </Calculate>
+			  <Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc1]*-25]]></Expression>
+			  </Calculate>
+			</GameModifier>			
+			<AIData AIPersonality="AI_General">
+				<AIPriority>0</AIPriority>
+			</AIData>
+			<HitSoundFX>Spell_MantleOfFire_01</HitSoundFX>
+			<SpellDefEffect>
+				<EffectName>S_MantleofFire_Particle</EffectName>
+				<LocalPosition>0,0,0</LocalPosition>
+				<EffectScale>1</EffectScale>
+				<EffectDelay>0</EffectDelay>
+				<SnapToTerrain>1</SnapToTerrain>
+			</SpellDefEffect>
+		</SpellDef>
+	<SpellDef InternalName="JB_ProtectionFromFire_Gen_TactDisc1">
+			<DisplayName>Protection from Fire</DisplayName>
+			<Description>All allied units gain 50% Fire Resistance. Hexed units only gain +25%.</Description>
+			<Image>S_MantleofFire_Painting.png</Image>
+			<IconFG>T_ProtectionFromFire_Icon.png</IconFG>
+			<AutoUnlock>1</AutoUnlock>
+			<CanStack>0</CanStack>
+			<SpellBookSortCategory>Unit</SpellBookSortCategory>
+			<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+			<SpellType>Tactical</SpellType>
+			<SpellClass>Defensive</SpellClass>
+			<SpellSubClass>Buff</SpellSubClass>
+			<SpellTargetType>AllFriendlyUnits</SpellTargetType>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_Mage_Abjuration</Attribute>
+			</Prereq>
+			<SpellResourceCost>
+				<Resource>Mana</Resource>
+				<Amount>22</Amount>
+			</SpellResourceCost>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>JB_ProtectionFromFire_Gen</PreventStackingWith>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ResistFire</StrVal>
+				<Duration>-1</Duration>
+				<Value>50</Value>
+			</GameModifier>
+			<GameModifier>
+			  <ModType>Unit</ModType>
+			  <Attribute>AdjustUnitStat</Attribute>
+			  <StrVal>UnitStat_ResistFire</StrVal>
+			  <Duration>-1</Duration>
+			  <Calculate InternalName="Calc1" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_Reliquary_IsCursed]]]></Expression>
+			  </Calculate>
+			  <Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc1]*-25]]></Expression>
+			  </Calculate>
+			</GameModifier>			
+			<AIData AIPersonality="AI_General">
+				<AIPriority>0</AIPriority>
+			</AIData>
+			<HitSoundFX>Spell_MantleOfFire_01</HitSoundFX>
+			<SpellDefEffect>
+				<EffectName>S_MantleofFire_Particle</EffectName>
+				<LocalPosition>0,0,0</LocalPosition>
+				<EffectScale>1</EffectScale>
+				<EffectDelay>0</EffectDelay>
+				<SnapToTerrain>1</SnapToTerrain>
+			</SpellDefEffect>
+		</SpellDef>
+	<SpellDef InternalName="JB_ObscuringFog">
+		<AutoUnlock>0</AutoUnlock>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Blocked</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>-1</AIPriority>
+		</AIData>
+	</SpellDef>
+	<SpellDef InternalName="JB_ObscuringFog_Gen">
+			<DisplayName>Obscuring Fog</DisplayName>
+			<Description>Summons a fog that blurs your units and improves their Dodge by 3 (+1 per water shard) and an additional 3 (+1 per air shard) vs missile attacks.</Description>
+			<FormattedDescription>Summons a fog that blurs your units and gives them +%d to Dodge and an additional +%d vs missile attacks.</FormattedDescription>
+			<Image>T_ObscuringFog_Painting.png</Image>
+			<IconFG>T_ObscuringFog_Icon.png</IconFG>
+			<AutoUnlock>1</AutoUnlock>
+			<CanStack>0</CanStack>
+			<SpellBookSortCategory>Unit</SpellBookSortCategory>
+			<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+			<SpellType>Tactical</SpellType>
+			<SpellClass>Defensive</SpellClass>
+			<SpellSubClass>Buff</SpellSubClass>
+			<SpellTargetType>AllFriendlyUnits</SpellTargetType>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_Mage_StrategicMancy</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>Air1</Attribute>
+			</Prereq>
+			<SpellResourceCost>
+				<Resource>Mana</Resource>
+				<Amount>12</Amount>
+			</SpellResourceCost>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Target>Unit</Target>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>JB_ObscuringFog_Gen_TactDisc1</PreventStackingWith>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Dodge</StrVal>
+				<IsForFormattedDescription>1</IsForFormattedDescription>
+				<Duration>-1</Duration>
+				<Effect>E_ObscuringFog_Particle</Effect>
+				<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[UnitOwner_GetNumWaterShards] + 3]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="ValueForFormattedDescription">
+					<Expression><![CDATA[[Calc]]]></Expression>
+				</Calculate>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_DodgeAgainstRanged</StrVal>
+				<IsForFormattedDescription>1</IsForFormattedDescription>
+				<Duration>-1</Duration>
+				<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[UnitOwner_GetNumAirShards] + 3]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="ValueForFormattedDescription">
+					<Expression><![CDATA[[Calc]]]></Expression>
+				</Calculate>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>15</AIPriority>
+			</AIData>
+			<HitSoundFX>Spell_Obscuring_Fog_01</HitSoundFX>
+		</SpellDef>
+	<SpellDef InternalName="JB_ObscuringFog_Gen_TactDisc1">
+			<DisplayName>Obscuring Fog</DisplayName>
+			<Description>Summons a fog that blurs your units and improves their Dodge by 3 (+1 per water shard) and an additional 3 (+1 per air shard) vs missile attacks.</Description>
+			<FormattedDescription>Summons a fog that blurs your units and gives them +%d to Dodge and an additional +%d vs missile attacks.</FormattedDescription>
+			<Image>T_ObscuringFog_Painting.png</Image>
+			<IconFG>T_ObscuringFog_Icon.png</IconFG>
+			<AutoUnlock>1</AutoUnlock>
+			<CanStack>0</CanStack>
+			<SpellBookSortCategory>Unit</SpellBookSortCategory>
+			<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+			<SpellType>Tactical</SpellType>
+			<SpellClass>Defensive</SpellClass>
+			<SpellSubClass>Buff</SpellSubClass>
+			<SpellTargetType>AllFriendlyUnits</SpellTargetType>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_Mage_StrategicMancy</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>Air1</Attribute>
+			</Prereq>
+			<SpellResourceCost>
+				<Resource>Mana</Resource>
+				<Amount>9</Amount>
+			</SpellResourceCost>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>JB_ObscuringFog_Gen</PreventStackingWith>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Dodge</StrVal>
+				<IsForFormattedDescription>1</IsForFormattedDescription>
+				<Duration>-1</Duration>
+				<Effect>E_ObscuringFog_Particle</Effect>
+				<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[UnitOwner_GetNumWaterShards] + 3]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="ValueForFormattedDescription">
+					<Expression><![CDATA[[Calc]]]></Expression>
+				</Calculate>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_DodgeAgainstRanged</StrVal>
+				<IsForFormattedDescription>1</IsForFormattedDescription>
+				<Duration>-1</Duration>
+				<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[UnitOwner_GetNumAirShards] + 3]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="ValueForFormattedDescription">
+					<Expression><![CDATA[[Calc]]]></Expression>
+				</Calculate>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>15</AIPriority>
+			</AIData>
+			<HitSoundFX>Spell_Obscuring_Fog_01</HitSoundFX>
+		</SpellDef>
+	<SpellDef InternalName="JB_GiftOfIron">
+		<AutoUnlock>0</AutoUnlock>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Blocked</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>-1</AIPriority>
+		</AIData>
+	</SpellDef>
+	<SpellDef InternalName="JB_GiftOfIron_Gen">
+			<DisplayName>Gift of Iron</DisplayName>
+			<Description>All allied units have their Defense raised by 5 (+2 per earth shard).</Description>
+			<FormattedDescription>All allied units have their Defense raised by %d.</FormattedDescription>
+			<Image>T_Stoneskin_Painting.png</Image>
+			<IconFG>T_GiftOfIron_Icon.png</IconFG>
+			<AutoUnlock>1</AutoUnlock>
+			<CanStack>0</CanStack>
+			<CastTime>1</CastTime>
+			<SpellBookSortCategory>Unit</SpellBookSortCategory>
+			<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+			<SpellType>Tactical</SpellType>
+			<SpellClass>Defensive</SpellClass>
+			<SpellSubClass>Buff</SpellSubClass>
+			<SpellTargetType>AllFriendlyUnits</SpellTargetType>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_Mage_StrategicMancy</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>Earth1</Attribute>
+			</Prereq>
+			<SpellResourceCost>
+				<Resource>Mana</Resource>
+				<Amount>45</Amount>
+			</SpellResourceCost>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Target>Unit</Target>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>JB_GiftOfIron_Gen_TactDisc1</PreventStackingWith>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Defense_Pierce</StrVal>
+				<IsForFormattedDescription>1</IsForFormattedDescription>
+				<Duration>-1</Duration>
+				<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[UnitOwner_GetNumEarthShards] * 2]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc] + 5]]></Expression>
+				</Calculate>
+				<Calculate InternalName="ValueForFormattedDescription">
+					<Expression><![CDATA[[Calc] + 5]]></Expression>
+				</Calculate>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>10</AIPriority>
+			</AIData>
+			<HitSoundFX>Spell_GiftOfIron_01</HitSoundFX>
+			<SpellDefEffect>
+				<EffectName>T_StoneSkin_Particle</EffectName>
+				<LocalPosition>0,25,0</LocalPosition>
+				<EffectScale>.4</EffectScale>
+				<EffectDelay>0</EffectDelay>
+				<SnapToTerrain>1</SnapToTerrain>
+				<PlayOnAllTargets>1</PlayOnAllTargets>
+			</SpellDefEffect>
+		</SpellDef>
+	<SpellDef InternalName="JB_GiftOfIron_Gen_TactDisc1">
+			<DisplayName>Gift of Iron</DisplayName>
+			<Description>All allied units have their Defense raised by 5 (+2 per earth shard).</Description>
+			<FormattedDescription>All allied units have their Defense raised by %d.</FormattedDescription>
+			<Image>T_Stoneskin_Painting.png</Image>
+			<IconFG>T_GiftOfIron_Icon.png</IconFG>
+			<AutoUnlock>1</AutoUnlock>
+			<CanStack>0</CanStack>
+			<CastTime>1</CastTime>
+			<SpellBookSortCategory>Unit</SpellBookSortCategory>
+			<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+			<SpellType>Tactical</SpellType>
+			<SpellClass>Defensive</SpellClass>
+			<SpellSubClass>Buff</SpellSubClass>
+			<SpellTargetType>AllFriendlyUnits</SpellTargetType>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_Mage_StrategicMancy</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>Earth1</Attribute>
+			</Prereq>
+			<SpellResourceCost>
+				<Resource>Mana</Resource>
+				<Amount>33</Amount>
+			</SpellResourceCost>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>JB_GiftOfIron_Gen</PreventStackingWith>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Defense_Pierce</StrVal>
+				<IsForFormattedDescription>1</IsForFormattedDescription>
+				<Duration>-1</Duration>
+				<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[UnitOwner_GetNumEarthShards] * 2]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc] + 5]]></Expression>
+				</Calculate>
+				<Calculate InternalName="ValueForFormattedDescription">
+					<Expression><![CDATA[[Calc] + 5]]></Expression>
+				</Calculate>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>10</AIPriority>
+			</AIData>
+			<HitSoundFX>Spell_GiftOfIron_01</HitSoundFX>
+			<SpellDefEffect>
+				<EffectName>T_StoneSkin_Particle</EffectName>
+				<LocalPosition>0,25,0</LocalPosition>
+				<EffectScale>.4</EffectScale>
+				<EffectDelay>0</EffectDelay>
+				<SnapToTerrain>1</SnapToTerrain>
+				<PlayOnAllTargets>1</PlayOnAllTargets>
+			</SpellDefEffect>
+		</SpellDef>
+	<SpellDef InternalName="JB_GiftOfIron_Adept">
+		<AutoUnlock>0</AutoUnlock>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Blocked</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>-1</AIPriority>
+		</AIData>
+	</SpellDef>
+	<SpellDef InternalName="JB_GiftOfIron_Adept_Gen">
+			<DisplayName>Gift of Iron</DisplayName>
+			<Description>All allied units have their Defense raised by 5 (+2 per earth shard).</Description>
+			<FormattedDescription>All allied units have their Defense raised by %d.</FormattedDescription>
+			<Image>T_Stoneskin_Painting.png</Image>
+			<IconFG>T_GiftOfIron_Icon.png</IconFG>
+			<AutoUnlock>1</AutoUnlock>
+			<CanStack>0</CanStack>
+			<CastTime>1</CastTime>
+			<SpellBookSortCategory>Unit</SpellBookSortCategory>
+			<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+			<SpellType>Tactical</SpellType>
+			<SpellClass>Defensive</SpellClass>
+			<SpellSubClass>Buff</SpellSubClass>
+			<SpellTargetType>AllFriendlyUnits</SpellTargetType>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_Mage_StrategicMancy</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>EarthAdept1</Attribute>
+			</Prereq>
+			<SpellResourceCost>
+				<Resource>Mana</Resource>
+				<Amount>45</Amount>
+			</SpellResourceCost>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Target>Unit</Target>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>JB_GiftOfIron_Adept_Gen_TactDisc1</PreventStackingWith>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Defense_Pierce</StrVal>
+				<IsForFormattedDescription>1</IsForFormattedDescription>
+				<Duration>-1</Duration>
+				<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[UnitOwner_GetNumEarthShards] * 2]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc] + 5]]></Expression>
+				</Calculate>
+				<Calculate InternalName="ValueForFormattedDescription">
+					<Expression><![CDATA[[Calc] + 5]]></Expression>
+				</Calculate>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>10</AIPriority>
+			</AIData>
+			<HitSoundFX>Spell_GiftOfIron_01</HitSoundFX>
+			<SpellDefEffect>
+				<EffectName>T_StoneSkin_Particle</EffectName>
+				<LocalPosition>0,25,0</LocalPosition>
+				<EffectScale>.4</EffectScale>
+				<EffectDelay>0</EffectDelay>
+				<SnapToTerrain>1</SnapToTerrain>
+				<PlayOnAllTargets>1</PlayOnAllTargets>
+			</SpellDefEffect>
+		</SpellDef>
+	<SpellDef InternalName="JB_GiftOfIron_Adept_Gen_TactDisc1">
+			<DisplayName>Gift of Iron</DisplayName>
+			<Description>All allied units have their Defense raised by 5 (+2 per earth shard).</Description>
+			<FormattedDescription>All allied units have their Defense raised by %d.</FormattedDescription>
+			<Image>T_Stoneskin_Painting.png</Image>
+			<IconFG>T_GiftOfIron_Icon.png</IconFG>
+			<AutoUnlock>1</AutoUnlock>
+			<CanStack>0</CanStack>
+			<CastTime>1</CastTime>
+			<SpellBookSortCategory>Unit</SpellBookSortCategory>
+			<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+			<SpellType>Tactical</SpellType>
+			<SpellClass>Defensive</SpellClass>
+			<SpellSubClass>Buff</SpellSubClass>
+			<SpellTargetType>AllFriendlyUnits</SpellTargetType>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_Mage_StrategicMancy</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>EarthAdept1</Attribute>
+			</Prereq>
+			<SpellResourceCost>
+				<Resource>Mana</Resource>
+				<Amount>33</Amount>
+			</SpellResourceCost>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>JB_GiftOfIron_Adept_Gen</PreventStackingWith>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Defense_Pierce</StrVal>
+				<IsForFormattedDescription>1</IsForFormattedDescription>
+				<Duration>-1</Duration>
+				<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[UnitOwner_GetNumEarthShards] * 2]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc] + 5]]></Expression>
+				</Calculate>
+				<Calculate InternalName="ValueForFormattedDescription">
+					<Expression><![CDATA[[Calc] + 5]]></Expression>
+				</Calculate>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>10</AIPriority>
+			</AIData>
+			<HitSoundFX>Spell_GiftOfIron_01</HitSoundFX>
+			<SpellDefEffect>
+				<EffectName>T_StoneSkin_Particle</EffectName>
+				<LocalPosition>0,25,0</LocalPosition>
+				<EffectScale>.4</EffectScale>
+				<EffectDelay>0</EffectDelay>
+				<SnapToTerrain>1</SnapToTerrain>
+				<PlayOnAllTargets>1</PlayOnAllTargets>
+			</SpellDefEffect>
+		</SpellDef>
+	<SpellDef InternalName="JB_DivineBoon_Tactical">
+		<AutoUnlock>0</AutoUnlock>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Blocked</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>-1</AIPriority>
+		</AIData>
+	</SpellDef>
+	<SpellDef InternalName="JB_DivineBoon_Tactical_Gen">
+			<DisplayName>Divine Boon</DisplayName>
+			<Description>Target unit gains +1 counterattack, +10 Dodge and +4 Hit Points regenerated per round.</Description>
+			<Image>T_Focus_Painting.png</Image>
+			<IconFG>JB_DivineBoon_Icon.png</IconFG>
+			<AutoUnlock>1</AutoUnlock>
+			<CanStack>0</CanStack>
+			<SpellBookSortCategory>Unit</SpellBookSortCategory>
+			<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+			<SpellType>Tactical</SpellType>
+			<SpellClass>Defensive</SpellClass>
+			<SpellSubClass>Buff</SpellSubClass>
+			<SpellTargetType>FriendlyUnit</SpellTargetType>
+			<Prereq>
+				<Type>Allegiance</Type>
+				<Attribute>Kingdom</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_Mage_EnchantmentMastery</Attribute>
+			</Prereq>
+			<SpellResourceCost>
+				<Resource>Mana</Resource>
+				<Amount>34</Amount>
+			</SpellResourceCost>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Target>Unit</Target>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>JB_DivineBoon_Tactical_Gen_TactDisc1</PreventStackingWith>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_MaxCounterAttack</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Counterattack with any melee weapon</Provides>
+				<Duration>-1</Duration>
+				<Effect>JB_E_DivineBoon_Particle</Effect>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_TacticalHealthRegen</StrVal>
+                <Value>4</Value>
+				<Duration>-1</Duration>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Dodge</StrVal>
+                <Value>10</Value>
+                <Provides>+10 to Dodge</Provides>
+				<Duration>-1</Duration>
+            </GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+			<HitSoundFX>Spell_ManaShield_01</HitSoundFX>
+			<SpellDefEffect>
+				<EffectName>JB_T_DivineBoon_Particle</EffectName>
+				<LocalPosition>0,40,0</LocalPosition>
+				<EffectScale>0.7</EffectScale>
+				<EffectDelay>0</EffectDelay>
+				<SnapToTerrain>1</SnapToTerrain>
+			</SpellDefEffect>
+		</SpellDef>				
+	<SpellDef InternalName="JB_DivineBoon_Tactical_Gen_TactDisc1">
+			<DisplayName>Divine Boon</DisplayName>
+			<Description>Target unit gains +1 counterattack, +10 Dodge and +4 Hit Points regenerated per round.</Description>
+			<Image>T_Focus_Painting.png</Image>
+			<IconFG>JB_DivineBoon_Icon.png</IconFG>
+			<AutoUnlock>1</AutoUnlock>
+			<CanStack>0</CanStack>
+			<SpellBookSortCategory>Unit</SpellBookSortCategory>
+			<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+			<SpellType>Tactical</SpellType>
+			<SpellClass>Defensive</SpellClass>
+			<SpellSubClass>Buff</SpellSubClass>
+			<SpellTargetType>FriendlyUnit</SpellTargetType>
+			<Prereq>
+				<Type>Allegiance</Type>
+				<Attribute>Kingdom</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_Mage_EnchantmentMastery</Attribute>
+			</Prereq>
+			<SpellResourceCost>
+				<Resource>Mana</Resource>
+				<Amount>25</Amount>
+			</SpellResourceCost>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>JB_DivineBoon_Tactical_Gen</PreventStackingWith>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_MaxCounterAttack</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Counterattack with any melee weapon</Provides>
+				<Duration>-1</Duration>
+				<Effect>JB_E_DivineBoon_Particle</Effect>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_TacticalHealthRegen</StrVal>
+                <Value>4</Value>
+				<Duration>-1</Duration>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Dodge</StrVal>
+                <Value>10</Value>
+                <Provides>+10 to Dodge</Provides>
+				<Duration>-1</Duration>
+            </GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+			<HitSoundFX>Spell_ManaShield_01</HitSoundFX>
+			<SpellDefEffect>
+				<EffectName>JB_T_DivineBoon_Particle</EffectName>
+				<LocalPosition>0,40,0</LocalPosition>
+				<EffectScale>0.7</EffectScale>
+				<EffectDelay>0</EffectDelay>
+				<SnapToTerrain>1</SnapToTerrain>
+			</SpellDefEffect>
+		</SpellDef>				
+	<SpellDef InternalName="JB_DarkFury_Tactical">
+		<AutoUnlock>0</AutoUnlock>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Blocked</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>-1</AIPriority>
+		</AIData>
+	</SpellDef>
+	<SpellDef InternalName="JB_DarkFury_Tactical_Gen">
+			<DisplayName>Dark Fury</DisplayName>
+			<Description>Unit gains +2 Initiative immediately, then +3 Attack whenever they damage an opponent with a melee attack.  Unit also loses 1 Hit Point each round.</Description>
+			<Image>T_DeathLash_Painting.png</Image>
+			<IconFG>JB_DarkFury_Icon.png</IconFG>
+			<AutoUnlock>1</AutoUnlock>
+			<CanStack>0</CanStack>
+			<SpellBookSortCategory>Unit</SpellBookSortCategory>
+			<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+			<SpellType>Tactical</SpellType>
+			<SpellClass>Offensive</SpellClass>
+			<SpellSubClass>Buff</SpellSubClass>
+			<SpellTargetType>FriendlyUnit</SpellTargetType>
+			<Prereq>
+				<Type>Allegiance</Type>
+				<Attribute>Empire</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_Mage_EnchantmentMastery</Attribute>
+			</Prereq>
+			<SpellResourceCost>
+				<Resource>Mana</Resource>
+				<Amount>34</Amount>
+			</SpellResourceCost>	
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Target>Unit</Target>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>JB_DarkFury_Tactical_Gen_TactDisc1</PreventStackingWith>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>CurHealth</Attribute>
+				<Duration>-1</Duration>
+				<Effect>JB_E_DarkFury_Particle</Effect>
+				<PerTurn>1</PerTurn>
+				<Value>-1</Value>
+				<DisplayName>-1 Health</DisplayName>
+				<Provides>Unit loses 1 Hit Point each round</Provides>
+            </GameModifier>	
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_CombatSpeed</StrVal>
+                <Value>2</Value>
+                <Provides>+2 to Initiative</Provides>
+				<Duration>-1</Duration>
+            </GameModifier>
+			<GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>MeleeAppliesSpell</Attribute>
+                <StrVal>JB_DarkFury_Effect</StrVal>
+                <Provides>Unit gains 3 Attack whenever they damage an opponent with a melee attack</Provides>
+            </GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+			<HitSoundFX>Spell_CloakOfFear_01</HitSoundFX>
+			<SpellDefEffect>
+				<EffectName>JB_T_DarkFury_Particle</EffectName>
+				<LocalPosition>0,40,0</LocalPosition>
+				<EffectScale>0.7</EffectScale>
+				<EffectDelay>0</EffectDelay>
+				<SnapToTerrain>1</SnapToTerrain>
+			</SpellDefEffect>
+		</SpellDef>
+	<SpellDef InternalName="JB_DarkFury_Tactical_Gen_TactDisc1">
+			<DisplayName>Dark Fury</DisplayName>
+			<Description>Unit gains +2 Initiative immediately, then +3 Attack whenever they damage an opponent with a melee attack.  Unit also loses 1 Hit Point each round.</Description>
+			<Image>T_DeathLash_Painting.png</Image>
+			<IconFG>JB_DarkFury_Icon.png</IconFG>
+			<AutoUnlock>1</AutoUnlock>
+			<CanStack>0</CanStack>
+			<SpellBookSortCategory>Unit</SpellBookSortCategory>
+			<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+			<SpellType>Tactical</SpellType>
+			<SpellClass>Offensive</SpellClass>
+			<SpellSubClass>Buff</SpellSubClass>
+			<SpellTargetType>FriendlyUnit</SpellTargetType>
+			<Prereq>
+				<Type>Allegiance</Type>
+				<Attribute>Empire</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_Mage_EnchantmentMastery</Attribute>
+			</Prereq>
+			<SpellResourceCost>
+				<Resource>Mana</Resource>
+				<Amount>25</Amount>
+			</SpellResourceCost>	
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>JB_DarkFury_Tactical_Gen</PreventStackingWith>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>CurHealth</Attribute>
+				<Duration>-1</Duration>
+				<Effect>JB_E_DarkFury_Particle</Effect>
+				<PerTurn>1</PerTurn>
+				<Value>-1</Value>
+				<DisplayName>-1 Health</DisplayName>
+				<Provides>Unit loses 1 Hit Point each round</Provides>
+            </GameModifier>	
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_CombatSpeed</StrVal>
+                <Value>2</Value>
+                <Provides>+2 to Initiative</Provides>
+				<Duration>-1</Duration>
+            </GameModifier>
+			<GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>MeleeAppliesSpell</Attribute>
+                <StrVal>JB_DarkFury_Effect</StrVal>
+                <Provides>Unit gains 3 Attack whenever they damage an opponent with a melee attack</Provides>
+            </GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+			<HitSoundFX>Spell_CloakOfFear_01</HitSoundFX>
+			<SpellDefEffect>
+				<EffectName>JB_T_DarkFury_Particle</EffectName>
+				<LocalPosition>0,40,0</LocalPosition>
+				<EffectScale>0.7</EffectScale>
+				<EffectDelay>0</EffectDelay>
+				<SnapToTerrain>1</SnapToTerrain>
+			</SpellDefEffect>
+		</SpellDef>
+	<SpellDef InternalName="JB_ImprovedProtectionFromFire">
+		<AutoUnlock>0</AutoUnlock>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Blocked</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>-1</AIPriority>
+		</AIData>
+	</SpellDef>
+	<SpellDef InternalName="JB_ImprovedProtectionFromFire_Gen">
+			<DisplayName>Improved Protection from Fire</DisplayName>
+			<Description>All allied units gain 75% Fire Resistance.  Hexed units only gain +50%.</Description>
+			<Image>S_MantleofFire_Painting.png</Image>
+			<IconFG>T_ProtectionFromFire_Icon.png</IconFG>
+			<AutoUnlock>1</AutoUnlock>
+			<CanStack>0</CanStack>
+			<SpellBookSortCategory>Unit</SpellBookSortCategory>
+			<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+			<SpellType>Tactical</SpellType>
+			<SpellClass>Defensive</SpellClass>
+			<SpellSubClass>Buff</SpellSubClass>
+			<SpellTargetType>AllFriendlyUnits</SpellTargetType>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_Mage_AbjurationMastery</Attribute>
+			</Prereq>
+			<SpellResourceCost>
+				<Resource>Mana</Resource>
+				<Amount>42</Amount>
+			</SpellResourceCost>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Target>Unit</Target>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>JB_ImprovedProtectionFromFire_Gen_TactDisc1</PreventStackingWith>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ResistFire</StrVal>
+				<Duration>-1</Duration>
+				<Value>75</Value>
+			</GameModifier>
+			<GameModifier>
+			  <ModType>Unit</ModType>
+			  <Attribute>AdjustUnitStat</Attribute>
+			  <StrVal>UnitStat_ResistFire</StrVal>
+			  <Duration>-1</Duration>
+			  <Calculate InternalName="Calc1" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_Reliquary_IsCursed]]]></Expression>
+			  </Calculate>
+			  <Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc1]*-25]]></Expression>
+			  </Calculate>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>0</AIPriority>
+			</AIData>
+			<HitSoundFX>Spell_MantleOfFire_01</HitSoundFX>
+			<SpellDefEffect>
+				<EffectName>S_MantleofFire_Particle</EffectName>
+				<LocalPosition>0,0,0</LocalPosition>
+				<EffectScale>1</EffectScale>
+				<EffectDelay>0</EffectDelay>
+				<SnapToTerrain>1</SnapToTerrain>
+			</SpellDefEffect>
+		</SpellDef>
+	<SpellDef InternalName="JB_ImprovedProtectionFromFire_Gen_TactDisc1">
+			<DisplayName>Improved Protection from Fire</DisplayName>
+			<Description>All allied units gain 75% Fire Resistance.  Hexed units only gain +50%.</Description>
+			<Image>S_MantleofFire_Painting.png</Image>
+			<IconFG>T_ProtectionFromFire_Icon.png</IconFG>
+			<AutoUnlock>1</AutoUnlock>
+			<CanStack>0</CanStack>
+			<SpellBookSortCategory>Unit</SpellBookSortCategory>
+			<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+			<SpellType>Tactical</SpellType>
+			<SpellClass>Defensive</SpellClass>
+			<SpellSubClass>Buff</SpellSubClass>
+			<SpellTargetType>AllFriendlyUnits</SpellTargetType>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_Mage_AbjurationMastery</Attribute>
+			</Prereq>
+			<SpellResourceCost>
+				<Resource>Mana</Resource>
+				<Amount>31</Amount>
+			</SpellResourceCost>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>JB_ImprovedProtectionFromFire_Gen</PreventStackingWith>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ResistFire</StrVal>
+				<Duration>-1</Duration>
+				<Value>75</Value>
+			</GameModifier>
+			<GameModifier>
+			  <ModType>Unit</ModType>
+			  <Attribute>AdjustUnitStat</Attribute>
+			  <StrVal>UnitStat_ResistFire</StrVal>
+			  <Duration>-1</Duration>
+			  <Calculate InternalName="Calc1" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_Reliquary_IsCursed]]]></Expression>
+			  </Calculate>
+			  <Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc1]*-25]]></Expression>
+			  </Calculate>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>0</AIPriority>
+			</AIData>
+			<HitSoundFX>Spell_MantleOfFire_01</HitSoundFX>
+			<SpellDefEffect>
+				<EffectName>S_MantleofFire_Particle</EffectName>
+				<LocalPosition>0,0,0</LocalPosition>
+				<EffectScale>1</EffectScale>
+				<EffectDelay>0</EffectDelay>
+				<SnapToTerrain>1</SnapToTerrain>
+			</SpellDefEffect>
+		</SpellDef>
+	<SpellDef InternalName="JB_ImprovedProtectionFromCold">
+		<AutoUnlock>0</AutoUnlock>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Blocked</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>-1</AIPriority>
+		</AIData>
+	</SpellDef>
+	<SpellDef InternalName="JB_ImprovedProtectionFromCold_Gen">
+			<DisplayName>Improved Protection from Cold</DisplayName>
+			<Description>All allied units gain 75% Cold Resistance.  Hexed units only gain +50%.</Description>
+			<Image>S_MantleofOceans_Painting.png</Image>
+			<IconFG>T_ProtectionFromCold_Icon.png</IconFG>
+			<AutoUnlock>1</AutoUnlock>
+			<CanStack>0</CanStack>
+			<SpellBookSortCategory>Unit</SpellBookSortCategory>
+			<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+			<SpellType>Tactical</SpellType>
+			<SpellClass>Defensive</SpellClass>
+			<SpellSubClass>Buff</SpellSubClass>
+			<SpellTargetType>AllFriendlyUnits</SpellTargetType>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_Mage_AbjurationMastery</Attribute>
+			</Prereq>
+			<SpellResourceCost>
+				<Resource>Mana</Resource>
+				<Amount>42</Amount>
+			</SpellResourceCost>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Target>Unit</Target>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>JB_ImprovedProtectionFromCold_Gen_TactDisc1</PreventStackingWith>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ResistCold</StrVal>
+				<Duration>-1</Duration>
+				<Value>75</Value>
+			</GameModifier>
+			<GameModifier>
+			  <ModType>Unit</ModType>
+			  <Attribute>AdjustUnitStat</Attribute>
+			  <StrVal>UnitStat_ResistCold</StrVal>
+			  <Duration>-1</Duration>
+			  <Calculate InternalName="Calc1" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_Reliquary_IsCursed]]]></Expression>
+			  </Calculate>
+			  <Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc1]*-25]]></Expression>
+			  </Calculate>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>0</AIPriority>
+			</AIData>
+			<HitSoundFX>Spell_ProtectionFromCold_01</HitSoundFX>
+			<SpellDefEffect>
+				<EffectName>S_MantleofOceans_Particle</EffectName>
+				<LocalPosition>0,0,0</LocalPosition>
+				<EffectScale>1</EffectScale>
+				<EffectDelay>0</EffectDelay>
+				<SnapToTerrain>1</SnapToTerrain>
+			</SpellDefEffect>
+		</SpellDef>		
+	<SpellDef InternalName="JB_ImprovedProtectionFromCold_Gen_TactDisc1">
+			<DisplayName>Improved Protection from Cold</DisplayName>
+			<Description>All allied units gain 75% Cold Resistance.  Hexed units only gain +50%.</Description>
+			<Image>S_MantleofOceans_Painting.png</Image>
+			<IconFG>T_ProtectionFromCold_Icon.png</IconFG>
+			<AutoUnlock>1</AutoUnlock>
+			<CanStack>0</CanStack>
+			<SpellBookSortCategory>Unit</SpellBookSortCategory>
+			<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+			<SpellType>Tactical</SpellType>
+			<SpellClass>Defensive</SpellClass>
+			<SpellSubClass>Buff</SpellSubClass>
+			<SpellTargetType>AllFriendlyUnits</SpellTargetType>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_Mage_AbjurationMastery</Attribute>
+			</Prereq>
+			<SpellResourceCost>
+				<Resource>Mana</Resource>
+				<Amount>31</Amount>
+			</SpellResourceCost>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>JB_ImprovedProtectionFromCold_Gen</PreventStackingWith>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ResistCold</StrVal>
+				<Duration>-1</Duration>
+				<Value>75</Value>
+			</GameModifier>
+			<GameModifier>
+			  <ModType>Unit</ModType>
+			  <Attribute>AdjustUnitStat</Attribute>
+			  <StrVal>UnitStat_ResistCold</StrVal>
+			  <Duration>-1</Duration>
+			  <Calculate InternalName="Calc1" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_Reliquary_IsCursed]]]></Expression>
+			  </Calculate>
+			  <Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc1]*-25]]></Expression>
+			  </Calculate>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>0</AIPriority>
+			</AIData>
+			<HitSoundFX>Spell_ProtectionFromCold_01</HitSoundFX>
+			<SpellDefEffect>
+				<EffectName>S_MantleofOceans_Particle</EffectName>
+				<LocalPosition>0,0,0</LocalPosition>
+				<EffectScale>1</EffectScale>
+				<EffectDelay>0</EffectDelay>
+				<SnapToTerrain>1</SnapToTerrain>
+			</SpellDefEffect>
+		</SpellDef>		
+	<SpellDef InternalName="JB_ProtectionFromMagic">
+		<AutoUnlock>0</AutoUnlock>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Blocked</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>-1</AIPriority>
+		</AIData>
+	</SpellDef>
+	<SpellDef InternalName="JB_ProtectionFromMagic_Gen">
+			<DisplayName>Protection from Magic</DisplayName>
+			<Description>All allied units gain +20 Spell Resistance.</Description>
+			<Image>S_MantleofOceans_Painting.png</Image>
+			<IconFG>JB_ProtectionFromMagic_Icon.png</IconFG>
+			<AutoUnlock>1</AutoUnlock>
+			<CanStack>0</CanStack>
+			<SpellBookSortCategory>Unit</SpellBookSortCategory>
+			<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+			<SpellType>Tactical</SpellType>
+			<SpellClass>Defensive</SpellClass>
+			<SpellSubClass>Buff</SpellSubClass>
+			<SpellTargetType>AllFriendlyUnits</SpellTargetType>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_Mage_AbjurationMastery</Attribute>
+			</Prereq>
+			<SpellResourceCost>
+				<Resource>Mana</Resource>
+				<Amount>54</Amount>
+			</SpellResourceCost>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Target>Unit</Target>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>JB_ProtectionFromMagic_Gen_TactDisc1</PreventStackingWith>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_MagicResist</StrVal>
+				<Duration>-1</Duration>
+				<Effect>JB_E_ProtectionMagic_Particle</Effect>
+				<Value>20</Value>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+			<HitSoundFX>Spell_Chaos_01</HitSoundFX>
+			<SpellDefEffect>
+				<EffectName>JB_ProtectionMagic_Particle</EffectName>
+				<LocalPosition>0,0,0</LocalPosition>
+				<EffectScale>1</EffectScale>
+				<EffectDelay>0</EffectDelay>
+				<SnapToTerrain>1</SnapToTerrain>
+			</SpellDefEffect>
+		</SpellDef>		
+	<SpellDef InternalName="JB_ProtectionFromMagic_Gen_TactDisc1">
+			<DisplayName>Protection from Magic</DisplayName>
+			<Description>All allied units gain +20 Spell Resistance.</Description>
+			<Image>S_MantleofOceans_Painting.png</Image>
+			<IconFG>JB_ProtectionFromMagic_Icon.png</IconFG>
+			<AutoUnlock>1</AutoUnlock>
+			<CanStack>0</CanStack>
+			<SpellBookSortCategory>Unit</SpellBookSortCategory>
+			<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+			<SpellType>Tactical</SpellType>
+			<SpellClass>Defensive</SpellClass>
+			<SpellSubClass>Buff</SpellSubClass>
+			<SpellTargetType>AllFriendlyUnits</SpellTargetType>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_Mage_AbjurationMastery</Attribute>
+			</Prereq>
+			<SpellResourceCost>
+				<Resource>Mana</Resource>
+				<Amount>40</Amount>
+			</SpellResourceCost>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>JB_ProtectionFromMagic_Gen</PreventStackingWith>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_MagicResist</StrVal>
+				<Duration>-1</Duration>
+				<Effect>JB_E_ProtectionMagic_Particle</Effect>
+				<Value>20</Value>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+			<HitSoundFX>Spell_Chaos_01</HitSoundFX>
+			<SpellDefEffect>
+				<EffectName>JB_ProtectionMagic_Particle</EffectName>
+				<LocalPosition>0,0,0</LocalPosition>
+				<EffectScale>1</EffectScale>
+				<EffectDelay>0</EffectDelay>
+				<SnapToTerrain>1</SnapToTerrain>
+			</SpellDefEffect>
+		</SpellDef>		
+	<SpellDef InternalName="JB_ForceShield_Tactical">
+		<AutoUnlock>0</AutoUnlock>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Blocked</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>-1</AIPriority>
+		</AIData>
+	</SpellDef>
+	<SpellDef InternalName="JB_ForceShield_Tactical_Gen">
+			<DisplayName>Force Shield</DisplayName>
+			<Description>Target unit gains +1 Defence per level of the caster.</Description>
+			<Description>Target unit gains %d Defence.</Description>
+			<Image>S_Courage_Painting.png</Image>
+			<IconFG>JB_Forcefield_Icon.png</IconFG>
+			<AutoUnlock>1</AutoUnlock>
+			<CanStack>0</CanStack>
+			<SpellBookSortCategory>Unit</SpellBookSortCategory>
+			<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+			<SpellType>Tactical</SpellType>
+			<SpellClass>Defensive</SpellClass>
+			<SpellSubClass>Buff</SpellSubClass>
+			<SpellTargetType>FriendlyUnit</SpellTargetType>
+			<HideInHiergamenon>1</HideInHiergamenon>
+			<PreventStackingWith>JB_ForceShield</PreventStackingWith>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_Mage_AbjurationMastery</Attribute>
+			</Prereq>
+			<SpellResourceCost>
+				<Resource>Mana</Resource>
+				<Amount>24</Amount>
+			</SpellResourceCost>		
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Target>Unit</Target>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>JB_ForceShield_Tactical_Gen_TactDisc1</PreventStackingWith>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Defense_Pierce</StrVal>
+				<IsForFormattedDescription>1</IsForFormattedDescription>
+				<Duration>-1</Duration>
+				<HasUpgradableValue>1</HasUpgradableValue>
+				<Effect>JB_E_Forcefield_Particle</Effect>
+				<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[Unit_GetLevel]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc] * 1]]></Expression>
+				</Calculate>
+				<Calculate InternalName="ValueForFormattedDescription">
+					<Expression><![CDATA[[Calc] * 1]]></Expression>
+				</Calculate>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+			<HitSoundFX>Spell_Enchant_04</HitSoundFX>
+			<SpellDefEffect>
+				<EffectName>JB_Forcefield_Particle</EffectName>
+				<LocalPosition>0,0,0</LocalPosition>
+				<EffectScale>1</EffectScale>
+				<EffectDelay>0</EffectDelay>
+				<SnapToTerrain>1</SnapToTerrain>
+			</SpellDefEffect>
+		</SpellDef>			
+	<SpellDef InternalName="JB_ForceShield_Tactical_Gen_TactDisc1">
+			<DisplayName>Force Shield</DisplayName>
+			<Description>Target unit gains +1 Defence per level of the caster.</Description>
+			<Description>Target unit gains %d Defence.</Description>
+			<Image>S_Courage_Painting.png</Image>
+			<IconFG>JB_Forcefield_Icon.png</IconFG>
+			<AutoUnlock>1</AutoUnlock>
+			<CanStack>0</CanStack>
+			<SpellBookSortCategory>Unit</SpellBookSortCategory>
+			<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+			<SpellType>Tactical</SpellType>
+			<SpellClass>Defensive</SpellClass>
+			<SpellSubClass>Buff</SpellSubClass>
+			<SpellTargetType>FriendlyUnit</SpellTargetType>
+			<HideInHiergamenon>1</HideInHiergamenon>
+			<PreventStackingWith>JB_ForceShield</PreventStackingWith>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_Mage_AbjurationMastery</Attribute>
+			</Prereq>
+			<SpellResourceCost>
+				<Resource>Mana</Resource>
+				<Amount>18</Amount>
+			</SpellResourceCost>		
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>JB_ForceShield_Tactical_Gen</PreventStackingWith>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Defense_Pierce</StrVal>
+				<IsForFormattedDescription>1</IsForFormattedDescription>
+				<Duration>-1</Duration>
+				<HasUpgradableValue>1</HasUpgradableValue>
+				<Effect>JB_E_Forcefield_Particle</Effect>
+				<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[Unit_GetLevel]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc] * 1]]></Expression>
+				</Calculate>
+				<Calculate InternalName="ValueForFormattedDescription">
+					<Expression><![CDATA[[Calc] * 1]]></Expression>
+				</Calculate>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+			<HitSoundFX>Spell_Enchant_04</HitSoundFX>
+			<SpellDefEffect>
+				<EffectName>JB_Forcefield_Particle</EffectName>
+				<LocalPosition>0,0,0</LocalPosition>
+				<EffectScale>1</EffectScale>
+				<EffectDelay>0</EffectDelay>
+				<SnapToTerrain>1</SnapToTerrain>
+			</SpellDefEffect>
+		</SpellDef>			
+	<SpellDef InternalName="JB_PowerSurge">
+		<AutoUnlock>0</AutoUnlock>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Blocked</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>-1</AIPriority>
+		</AIData>
+	</SpellDef>
+	<SpellDef InternalName="JB_PowerSurge_Gen">
+			<DisplayName>Power Surge</DisplayName>
+			<Description>Grants +40% Spell Damage, +10 Spell Mastery, +40% mana cost for 2 turns.</Description>
+			<Image>S_AnnointedByFire_Painting.png</Image>
+			<IconFG>JB_PowerSurge2.png</IconFG>
+			<AutoUnlock>1</AutoUnlock>
+			<Cooldown>10</Cooldown>
+			<CanStack>0</CanStack>
+			<SpellBookSortCategory>Unit</SpellBookSortCategory>
+			<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+			<SpellType>Tactical</SpellType>
+			<SpellClass>Offensive</SpellClass>
+			<SpellSubClass>Buff</SpellSubClass>
+			<SpellTargetType>FriendlyUnit</SpellTargetType>
+			<Range>0</Range>
+			<HideInHiergamenon>0</HideInHiergamenon>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_Mage_PowerSurge</Attribute>
+			</Prereq>
+			<SpellResourceCost>
+				<Resource>Mana</Resource>
+				<Amount>0</Amount>
+			</SpellResourceCost>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Target>Unit</Target>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>JB_PowerSurge_Gen_TactDisc1</PreventStackingWith>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_SpellDamage</StrVal>
+                <Value>40</Value>
+				<Duration>3</Duration>
+				<Effect>JB_E_PowerSurge_Particle</Effect>
+                <Provides>+40% Spell Damage</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_MagicPower</StrVal>
+                <Value>10</Value>
+				<Duration>3</Duration>
+                <Provides>+10 Spell Mastery</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_TacticalSpellManaCost_Multiplier</StrVal>
+                <Value>0.4</Value>
+				<Duration>3</Duration>
+                <Provides>+40% mana cost for tactical spells</Provides>
+            </GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+			<HitSoundFX>Spell_FeedTheFire</HitSoundFX>
+			<SpellDefEffect>
+				<EffectName>JB_PowerSurge_Particle</EffectName>
+				<LocalPosition>0,0,0</LocalPosition>
+				<EffectScale>1</EffectScale>
+				<EffectDelay>0</EffectDelay>
+				<SnapToTerrain>1</SnapToTerrain>
+			</SpellDefEffect>
+		</SpellDef>		
+	<SpellDef InternalName="JB_PowerSurge_Gen_TactDisc1">
+			<DisplayName>Power Surge</DisplayName>
+			<Description>Grants +40% Spell Damage, +10 Spell Mastery, +40% mana cost for 2 turns.</Description>
+			<Image>S_AnnointedByFire_Painting.png</Image>
+			<IconFG>JB_PowerSurge2.png</IconFG>
+			<AutoUnlock>1</AutoUnlock>
+			<Cooldown>10</Cooldown>
+			<CanStack>0</CanStack>
+			<SpellBookSortCategory>Unit</SpellBookSortCategory>
+			<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+			<SpellType>Tactical</SpellType>
+			<SpellClass>Offensive</SpellClass>
+			<SpellSubClass>Buff</SpellSubClass>
+			<SpellTargetType>FriendlyUnit</SpellTargetType>
+			<Range>0</Range>
+			<HideInHiergamenon>0</HideInHiergamenon>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_Mage_PowerSurge</Attribute>
+			</Prereq>
+			<SpellResourceCost>
+				<Resource>Mana</Resource>
+				<Amount>0</Amount>
+			</SpellResourceCost>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>JB_Mage_EnchantmentAffinity1</Attribute>
+		</Prereq>
+		<PreventStackingWith>JB_PowerSurge_Gen</PreventStackingWith>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_SpellDamage</StrVal>
+                <Value>40</Value>
+				<Duration>3</Duration>
+				<Effect>JB_E_PowerSurge_Particle</Effect>
+                <Provides>+40% Spell Damage</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_MagicPower</StrVal>
+                <Value>10</Value>
+				<Duration>3</Duration>
+                <Provides>+10 Spell Mastery</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_TacticalSpellManaCost_Multiplier</StrVal>
+                <Value>0.4</Value>
+				<Duration>3</Duration>
+                <Provides>+40% mana cost for tactical spells</Provides>
+            </GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+			<HitSoundFX>Spell_FeedTheFire</HitSoundFX>
+			<SpellDefEffect>
+				<EffectName>JB_PowerSurge_Particle</EffectName>
+				<LocalPosition>0,0,0</LocalPosition>
+				<EffectScale>1</EffectScale>
+				<EffectDelay>0</EffectDelay>
+				<SnapToTerrain>1</SnapToTerrain>
+			</SpellDefEffect>
+		</SpellDef>		
+
+</ContainerEnchantments>

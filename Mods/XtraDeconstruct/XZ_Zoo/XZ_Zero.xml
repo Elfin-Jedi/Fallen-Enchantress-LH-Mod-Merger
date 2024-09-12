@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<AbilityBonuses>
+	<AbilityBonus InternalName="Talent_X_Zero">
+		<AbilityBonusType>Champion_Talent</AbilityBonusType>
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusType>Unit_Level_Path</AbilityBonusType>
+		<AbilityBonusOption InternalName="Talent_X_Zero">
+			<DisplayName>Zero</DisplayName>
+			<RequiredLevel>2</RequiredLevel>
+			<Description>Don't be a zero...</Description>
+			<GameModifier>
+				<Provides>PATH</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>::: Zero</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_PathSelected</StrVal>
+				<Value>-1</Value>
+				<Provides>::: Selected</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>STATS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ArmorProficiency</StrVal>
+				<Value>2</Value>
+				<Provides>::: +2 Armor Proficiency
+				
+				::: Allows Chain Armor
+				::: Allows Light Plate Armor
+				::: Allows Masterwork Chain Armor
+				::: Allows Plate Armor
+				::: Allows Champion Armor</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>!WARNING!</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>::: Blocks 'Dual Class' Talent</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>::: No additional Path Abilities available</Provides>
+			</GameModifier>
+			<Cost>-2</Cost>
+			<Icon>Talent_X_Zero.png</Icon>
+			<TraitTreePicture>Screen_X_Zero.png</TraitTreePicture>
+			<BackgroundColor>0,0,0</BackgroundColor>
+			<HighlightColor>0,0,0</HighlightColor>
+			<Type>X_Path</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>0</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+</AbilityBonuses>

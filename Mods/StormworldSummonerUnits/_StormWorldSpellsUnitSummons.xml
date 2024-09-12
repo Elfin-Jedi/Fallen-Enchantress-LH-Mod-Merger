@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Spells>
+	<SpellDef InternalName="SummonFireElemental_Ability">
+		<DisplayName>Summon Fire Elemental</DisplayName>
+		<Description>Summons a level 3 (+1 per fire shard) Fire Elemental.</Description>
+		<FormattedDescription>Summons a level %d Fire Elemental.</FormattedDescription>
+		<Image>S_SummonFireElemental_Painting.png</Image>
+		<IconFG>S_SummonFireElemental_Icon.png</IconFG>
+		<IconBG>S_SummonFireElemental_Icon_BG.png</IconBG>
+		<IconColor>167,249,131</IconColor>
+		<CanStack>0</CanStack>
+		<Cooldown>3</Cooldown>
+		<SpellBookSortCategory>Summon</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Summon</SpellBookSortSubCategory>
+		<SpellType>Tatical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Summon</SpellSubClass>
+		<SpellTargetType>EmptyTile</SpellTargetType>
+		<IsSpecialAbility>1</IsSpecialAbility>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>12</Amount>
+        </SpellResourceCost>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Fire Elemental</StrVal>
+			<UnitClass>FireElemental_BG_Summon</UnitClass>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression>
+					<![CDATA[[UnitOwner_GetNumFireShards]+3]]>
+				</Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression>
+					<![CDATA[[Calc]]]>
+				</Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression>
+					<![CDATA[[Calc]]]>
+				</Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>45</AIPriority>
+		</AIData>
+		<HitSoundFX>Spell_SummonFireElemental_01</HitSoundFX>
+		<WorldLightOverrideTime>4</WorldLightOverrideTime>
+		<WorldLightOverrideAmbiant>30,30,30</WorldLightOverrideAmbiant>
+		<WorldLightOverrideDiffuse>30,30,30</WorldLightOverrideDiffuse>
+		<WorldLightOverrideRim0>255,0,0</WorldLightOverrideRim0>
+		<WorldLightOverrideRim1>255,156,0</WorldLightOverrideRim1>
+		<SpellDefEffect>
+			<EffectName>S_SummonFireElemental_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.5</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="SummonIceElemental_Ability">
+		<DisplayName>Summons Ice Elemental</DisplayName>
+		<Description>Summons a level 1 (+1 per water shard) Ice Elemental.</Description>
+		<FormattedDescription>Summons a level %d Ice Elemental</FormattedDescription>
+		<Image>T_SummonIceElemental_Painting.png</Image>
+		<IconFG>T_SummonIceElemental_Icon.png</IconFG>
+		<IconBG>T_SummonIceElemental_Icon_BG.png</IconBG>
+		<IconColor>32,45,243</IconColor>
+		<AutoUnlock>1</AutoUnlock>
+		<CanStack>0</CanStack>
+		<Cooldown>3</Cooldown>
+		<SpellBookSortCategory>Summon</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Summon</SpellBookSortSubCategory>
+		<SpellType>Tatical</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Summon</SpellSubClass>
+		<SpellTargetType>EmptyTile</SpellTargetType>
+		<IsSpecialAbility>1</IsSpecialAbility>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>12</Amount>
+        </SpellResourceCost>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Ice Elemental</StrVal>
+			<UnitClass>IceElemental_BG_Summon</UnitClass>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression>
+					<![CDATA[[Unit_GetLevel]+1]]>
+				</Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression>
+					<![CDATA[[Calc]]]>
+				</Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression>
+					<![CDATA[[Calc]]]>
+				</Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>45</AIPriority>
+		</AIData>
+		<HitSoundFX>Spell_SummonIceElemental_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_SummonIceElemental_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.3</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="SummonEarthElemental_Ability">
+		<DisplayName>Summon Earth Elemental</DisplayName>
+		<Description>Summons a level 3 (+1 per earth shard) Earth Elemental.</Description>
+		<FormattedDescription>Summons a level %d Earth Elemental.</FormattedDescription>
+		<Image>S_SummonEarthElemental_Painting.png</Image>
+		<IconFG>S_SummonEarthElemental_Icon.png</IconFG>
+		<IconBG>S_SummonEarthElemental_Icon_BG.png</IconBG>
+		<IconColor>167,249,131</IconColor>
+		<AutoUnlock>1</AutoUnlock>
+		<CanStack>0</CanStack>
+		<Cooldown>3</Cooldown>
+		<SpellBookSortCategory>Summon</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Summon</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Summon</SpellSubClass>
+		<SpellTargetType>EmptyTile</SpellTargetType>
+		<IsSpecialAbility>1</IsSpecialAbility>		
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>12</Amount>
+        </SpellResourceCost>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Earth Elemental</StrVal>
+			<UnitClass>EarthElemental_BG_Summon</UnitClass>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression>
+					<![CDATA[[Unit_GetLevel]+3]]>
+				</Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression>
+					<![CDATA[[Calc]]]>
+				</Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression>
+					<![CDATA[[Calc]]]>
+				</Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>45</AIPriority>
+		</AIData>
+		<HitSoundFX>Spell_SummonEarthElemental_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_SummonEarthElemental_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.5</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="SummonAirElemental_Ability">
+		<DisplayName>Summon Air Elemental</DisplayName>
+		<Description>Summons a level 3 (+1 per air shard) Air Elemental.</Description>
+		<FormattedDescription>Summons a level %d Air Elemental.</FormattedDescription>
+		<Image>M_AirElemental_Card.png</Image>
+		<IconFG>S_SummonAirElemental_Icon.png</IconFG>
+		<IconColor>167,249,131</IconColor>
+		<CanStack>0</CanStack>
+		<Cooldown>3</Cooldown>
+		<SpellBookSortCategory>Summon</SpellBookSortCategory>
+		<SpellType>Tatical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Summon</SpellSubClass>
+		<SpellTargetType>EmptyTile</SpellTargetType>		
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>12</Amount>
+        </SpellResourceCost>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Air Elemental</StrVal>
+			<UnitClass>AirElemental_BG_Summon</UnitClass>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression>
+					<![CDATA[[UnitOwner_GetNumAirShards]+3]]>
+				</Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression>
+					<![CDATA[[Calc]]]>
+				</Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression>
+					<![CDATA[[Calc]]]>
+				</Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>45</AIPriority>
+		</AIData>
+		<HitSoundFX>Spell_SummonAirElemental_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_SummonAirElemental_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.5</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+</Spells>

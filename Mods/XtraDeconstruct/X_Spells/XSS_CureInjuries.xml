@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<Spells>
+	<SpellDef InternalName="Spell_X_Injury1">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Life Elixir I</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Life2</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>200</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>-1 injury, +25 Regeneration (Self).
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] LIFE ELIXIR I
+		::: Removes one injury and gives +25 Strategic Regeneration for 5 Seasons (Self).
+		
+		DOMAIN
+		::: Strategic
+		::: Self
+		
+		EFFECT
+		::: - 1 Random Injury
+		::: + 25 Strategic Regeneration
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistable
+		
+		INTERVAL
+		::: Instant
+		::: 5 Seasons for Regeneration
+		
+		OTHERS
+		::: N/A
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Life Disciple</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Heal</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Heal</SpellSubClass>
+		<SpellTargetType>Self</SpellTargetType>
+		<AlwaysPromptForCaster>1</AlwaysPromptForCaster>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>HealRandomInjury</Attribute>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_HealthRegen</StrVal>
+			<Duration>5</Duration>
+			<HasUpgradableValue>1</HasUpgradableValue>
+			<Value>25</Value>
+		</GameModifier>
+		<Cooldown>15</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Injury1.png</IconFG>
+		<HitSoundFX>Spell_Regeneration_01</HitSoundFX>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_Injury2">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Life Elixir II</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Life3</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>350</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>-1 injury, +33 Regeneration (1 Champion).
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] LIFE ELIXIR II
+		::: Removes one injury and gives +33 Strategic Regeneration for 5 Seasons (1 Champion).
+		
+		DOMAIN
+		::: Strategic
+		::: Champion or Sov
+		
+		EFFECT
+		::: - 1 Random Injury
+		::: + 33 Strategic Regeneration
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistable
+		
+		INTERVAL
+		::: Instant
+		::: 5 Seasons for Regeneration
+		
+		OTHERS
+		::: N/A
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Life Mage</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Heal</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Heal</SpellSubClass>
+		<SpellTargetType>FriendlyChampionOrSov</SpellTargetType>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>HealRandomInjury</Attribute>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_HealthRegen</StrVal>
+			<Duration>5</Duration>
+			<HasUpgradableValue>1</HasUpgradableValue>
+			<Value>33</Value>
+		</GameModifier>
+		<Cooldown>15</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Injury2.png</IconFG>
+		<HitSoundFX>Spell_Regeneration_01</HitSoundFX>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_Injury3">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Life Elixir III</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Life4</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>750</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Removes all injuries, +40 Regeneration (1 Champion).
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] LIFE ELIXIR III
+		::: Removes all injuries and gives +40 Strategic Regeneration for 5 Seasons (1 Champion).
+		
+		DOMAIN
+		::: Strategic
+		::: Champion or Sovereign
+		
+		EFFECT
+		::: - All Injuries
+		::: + 40 Strategic Regeneration
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistable
+		
+		INTERVAL
+		::: Instant
+		::: 5 Seasons for Regeneration
+		
+		OTHERS
+		::: N/A
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Life Master</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Heal</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Heal</SpellSubClass>
+		<SpellTargetType>FriendlyChampionOrSov</SpellTargetType>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>HealInjuries</Attribute>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_HealthRegen</StrVal>
+			<Duration>5</Duration>
+			<HasUpgradableValue>1</HasUpgradableValue>
+			<Value>40</Value>
+		</GameModifier>
+		<Cooldown>25</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Injury3.png</IconFG>
+		<HitSoundFX>Spell_Regeneration_01</HitSoundFX>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_Injury4">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Life Elixir IV</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Life5</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>1750</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Removes all injuries, +200 Hit Points (ALL).
+		
+		See Tooltip. See WARNINGS.
+		
+		
+		
+		---------------------------------------------------
+		!WARNING!
+		
+		Mass Spells are memory intensive and may provoke a crash.
+		---------------------------------------------------
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] LIFE ELIXIR IV
+		::: Removes all injuries and restores 200 Hit Points (ALL).
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: Units
+		
+		EFFECT
+		::: - All Injuries
+		::: + 200 HP (Heal)
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistable
+		
+		INTERVAL
+		::: Instant
+		
+		OTHERS
+		::: 150x150 Area
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Life Archmage</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Heal</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Heal</SpellSubClass>
+		<SpellTargetType>FriendlyUnit</SpellTargetType>
+		<UnitAppSpecifier>ApplyToAll</UnitAppSpecifier>
+		<AllowFriendlyFireInRadius>0</AllowFriendlyFireInRadius>
+		<IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+		<TargetUnitsCanBeStationed>1</TargetUnitsCanBeStationed>
+		<Range>0</Range>
+		<Radius>75</Radius>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>HealInjuries</Attribute>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<Value>200</Value>
+		</GameModifier>
+		<Cooldown>100</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Injury4.png</IconFG>
+		<HitSoundFX>Spell_Regeneration_01</HitSoundFX>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_InjuryR1">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Death Elixir I</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Death2</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>225</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>-1 injury, +25 Regeneration (Self).
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] DEATH ELIXIR I
+		::: Removes one injury and gives +25 Strategic Regeneration for 5 Seasons (Self).
+		
+		DOMAIN
+		::: Strategic
+		::: Self
+		
+		EFFECT
+		::: - 1 Random Injury
+		::: + 25 Strategic Regeneration
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistable
+		
+		INTERVAL
+		::: Instant
+		::: 5 Seasons for Regeneration
+		
+		OTHERS
+		::: N/A
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Death Disciple</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Heal</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Heal</SpellSubClass>
+		<SpellTargetType>Self</SpellTargetType>
+		<AlwaysPromptForCaster>1</AlwaysPromptForCaster>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>HealRandomInjury</Attribute>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_HealthRegen</StrVal>
+			<Duration>5</Duration>
+			<HasUpgradableValue>1</HasUpgradableValue>
+			<Value>25</Value>
+		</GameModifier>
+		<Cooldown>15</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_InjuryR1.png</IconFG>
+		<HitSoundFX>Spell_Regeneration_01</HitSoundFX>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_InjuryR2">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Death Elixir II</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Death3</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>400</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>-1 injury, +33 Regeneration (1 Champion).
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] DEATH ELIXIR II
+		::: Removes one injury and gives +33 Strategic Regeneration for 5 Seasons (1 Champion).
+		
+		DOMAIN
+		::: Strategic
+		::: Champion or Sovereign
+		
+		EFFECT
+		::: - 1 Random Injury
+		::: + 33 Strategic Regeneration
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistable
+		
+		INTERVAL
+		::: Instant
+		::: 5 Seasons for Regeneration
+		
+		OTHERS
+		::: N/A
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Death Mage</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Heal</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Heal</SpellSubClass>
+		<SpellTargetType>FriendlyChampionOrSov</SpellTargetType>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>HealRandomInjury</Attribute>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_HealthRegen</StrVal>
+			<Duration>5</Duration>
+			<HasUpgradableValue>1</HasUpgradableValue>
+			<Value>33</Value>
+		</GameModifier>
+		<Cooldown>15</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_InjuryR2.png</IconFG>
+		<HitSoundFX>Spell_Regeneration_01</HitSoundFX>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_InjuryR3">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Death Elixir III</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Death4</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>825</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Removes all injuries, +40 Regeneration (1 Champion).
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] DEATH ELIXIR III
+		::: Removes all injuries and gives +40 Strategic Regeneration for 5 Seasons (1 Champion).
+		
+		DOMAIN
+		::: Strategic
+		::: Champion or Sovereign
+		
+		EFFECT
+		::: - All Injury
+		::: + 40 Strategic Regeneration
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistable
+		
+		INTERVAL
+		::: Instant
+		::: 5 Seasons for Regeneration
+		
+		OTHERS
+		::: N/A
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Death Master</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Heal</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Heal</SpellSubClass>
+		<SpellTargetType>FriendlyChampionOrSov</SpellTargetType>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>HealInjuries</Attribute>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_HealthRegen</StrVal>
+			<Duration>5</Duration>
+			<HasUpgradableValue>1</HasUpgradableValue>
+			<Value>40</Value>
+		</GameModifier>
+		<Cooldown>25</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_InjuryR3.png</IconFG>
+		<HitSoundFX>Spell_Regeneration_01</HitSoundFX>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_InjuryR4">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Death Elixir IV</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Death5</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>1900</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Removes all injuries, +200 Hit Points (ALL).
+		
+		See Tooltip. See WARNINGS.
+		
+		
+		
+		---------------------------------------------------
+		!WARNING!
+		
+		Mass Spells are memory intensive and may provoke a crash.
+		---------------------------------------------------
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] DEATH ELIXIR IV
+		::: Removes all injuries and restores 200 Hit Points (ALL).
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: Units
+		
+		EFFECT
+		::: - All Injuries
+		::: + 200 HP (Heal)
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistable
+		
+		INTERVAL
+		::: Instant
+		
+		OTHERS
+		::: 150x150 Area
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Death Archmage</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Heal</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Heal</SpellSubClass>
+		<SpellTargetType>FriendlyUnit</SpellTargetType>
+		<UnitAppSpecifier>ApplyToAll</UnitAppSpecifier>
+		<AllowFriendlyFireInRadius>0</AllowFriendlyFireInRadius>
+		<IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+		<TargetUnitsCanBeStationed>1</TargetUnitsCanBeStationed>
+		<Range>0</Range>
+		<Radius>75</Radius>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>HealInjuries</Attribute>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<Value>200</Value>
+		</GameModifier>
+		<Cooldown>100</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_InjuryR4.png</IconFG>
+		<HitSoundFX>Spell_Regeneration_01</HitSoundFX>
+	</SpellDef>
+</Spells>

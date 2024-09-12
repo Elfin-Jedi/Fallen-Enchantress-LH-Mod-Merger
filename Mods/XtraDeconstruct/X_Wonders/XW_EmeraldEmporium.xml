@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<ImprovementTypes>
+	<ImprovementType InternalName="Wonder_X_EmeraldEmporium">
+		<DisplayName>Emerald Emporium</DisplayName>
+		<Description>The extravagant owner claims she is a descendant of Tar-Thela. Notwithstanding her claims, she is certainly a capable scribe and an accomplished merchant. You're glad she picked your city to establish her emporium.
+		
+		+1 Fame per Season
+		+100 Fame
+		+3 Gildar per Season
+		-1% Unrest
+		-2% Unrest in all your cities
+		All Magic Tomes now available in this city shop
+		
+		Requires Conclave Archivist Specialization.
+		Requires an Essence.
+		(Blocked by The Decalon)
+		
+		World Wonder.</Description>
+		<AllowedPerGame>1</AllowedPerGame>
+		<RequiresCity>1</RequiresCity>
+		<BarredTerrain>River</BarredTerrain>
+		<BarredTerrain>SwampTerrain</BarredTerrain>
+		<PreferredTerrain>City</PreferredTerrain>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<PreferredTerrain>Forest</PreferredTerrain>
+		<RequiresCityImprovement>1</RequiresCityImprovement>
+		<RequiredImprovement>ScrollScribe</RequiredImprovement>
+		<Prereq>
+			<Type>Resource</Type>
+			<Attribute>TileYieldEssence</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Ereogs_Journal</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Lizardmeninferiority</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Ascetics</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>TheDecalon</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<LaborToBuild>1053</LaborToBuild>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>RefinedCrystal</Attribute>
+			<Value>-50</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_XL_Beer</Attribute>
+			<Value>-50</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Fame</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Fame per Season</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Fame</Attribute>
+			<Value>100</Value>
+			<Provides>+100 Fame</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Gold</Attribute>
+			<Value>3</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+3 Gildar per Season</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>-1% Unrest</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_Additive_Unrest</StrVal>
+			<Value>-2</Value>
+			<Provides>-2% Unrest in all your cities</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>Magic Tomes now available in this city shop</Provides>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>633</AIPriority>
+			<AITag>Arcane</AITag>
+		</AIData>
+		<ArtDef>ArtDef_X_EmeraldEmporium_Wonder</ArtDef>
+		<UnlocksShopItem>Item_X_Tome_A</UnlocksShopItem>
+		<UnlocksShopItem>Item_X_Tome_E</UnlocksShopItem>
+		<UnlocksShopItem>Item_X_Tome_F</UnlocksShopItem>
+		<UnlocksShopItem>Item_X_Tome_W</UnlocksShopItem>
+		<UnlocksShopItem>Item_XL_Tome_D_2</UnlocksShopItem>
+		<UnlocksShopItem>Item_XL_Tome_L_2</UnlocksShopItem>
+		<UnlocksShopItem>Item_X_Tome_BT</UnlocksShopItem>
+		<UnlocksShopItem>Item_X_Tome_BE</UnlocksShopItem>
+		<UnlocksShopItem>Item_X_Tome_S</UnlocksShopItem>
+		<UnlocksShopItem>Item_X_Tome_N</UnlocksShopItem>
+	</ImprovementType>
+</ImprovementTypes>

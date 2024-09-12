@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<GameItemTypes>
+
+	<GameItemType InternalName="JB_Crossbow_Ignys">
+        <DisplayName>Ignys Crossbow</DisplayName>
+        <Description>This is a powerful weapon that can shoot clear through a body and into the person behind him.</Description>
+        <Type>Weapon</Type>
+        <Type>Defense</Type>
+        <WeaponType>Bow</WeaponType>
+        <WeaponUpgradeType>Crossbow</WeaponUpgradeType>
+        <CanBeEquipped>1</CanBeEquipped>
+        <ShopValue>120</ShopValue>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Accuracy</StrVal>
+            <Value>-10</Value>
+        </GameModifier>		
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Attack_Pierce</StrVal>
+            <Value>8</Value>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Attack_Fire</StrVal>
+            <Value>3</Value>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_CombatSpeed</StrVal>
+            <Value>-8</Value>
+        </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_ArmorPierce</StrVal>
+                <Value>33</Value>
+                <Provides>Ignores 33% of the victim's Defense</Provides>
+            </GameModifier>	
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_IsBow</StrVal>
+                <Value>1</Value>
+                <Provides>Enables abilities that require Bows</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>UnlockRangedAction</Attribute>
+                <StrVal>BowAttack_Flaming</StrVal>
+                <Provides>Ranged attack</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>UnlockCombatAbility</Attribute>
+                <StrVal>PowerShot3</StrVal>
+                <Provides>Power Shot- Strike through 3 units in a line</Provides>
+            </GameModifier>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+        <IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+        <Likelihood>20</Likelihood>
+        <RarityDisplay>Uncommon</RarityDisplay>
+        <TacticalRange>20</TacticalRange>
+        <AIData AIPersonality="AI_General">
+            <AIPrefType>AIPrefType_BOW</AIPrefType>
+            <AIPriority>108</AIPriority>
+        </AIData>
+        <ArtDef>JB_Crossbow_Ignys__ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="JB_Crossbow_Ignys__ArtDef">
+            <GameItemTypeModelPack InternalName="JB_Crossbow_Ignys__Default">
+                <IconFile>JB_W_LightCrossBow_Ignys_Icon.png</IconFile>
+                <TintR>0</TintR>
+                <TintG>0</TintG>
+                <TintB>0</TintB>
+                <AttackSFX>Hit_Arrow1</AttackSFX>
+                <AttackSFX>Hit_Arrow2</AttackSFX>
+                <EquipSFX>Equip_BowandArrow_01</EquipSFX>
+                <EquipSFX>Equip_BowandArrow_02</EquipSFX>
+                <EquipSFX>Equip_BowandArrow_03</EquipSFX>
+                <SoundPack>SoundPack_Bow</SoundPack>
+                <SupportedUnitModelType>AmarianFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>AmarianMale</SupportedUnitModelType>
+                <SupportedUnitModelType>DarklingMale</SupportedUnitModelType>
+                <SupportedUnitModelType>EmpireFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>EmpireMale</SupportedUnitModelType>
+                <SupportedUnitModelType>FallenFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>FallenMale</SupportedUnitModelType>
+                <SupportedUnitModelType>HenchmanMale</SupportedUnitModelType>
+                <SupportedUnitModelType>IroneerFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>IroneerMale</SupportedUnitModelType>
+                <SupportedUnitModelType>KingdomFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
+                <SupportedUnitModelType>MancerFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>MancerMale</SupportedUnitModelType>
+                <SupportedUnitModelType>QuendarFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>QuendarMale</SupportedUnitModelType>
+                <SupportedUnitModelType>SlaveMale</SupportedUnitModelType>
+                <SupportedUnitModelType>TarthanFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
+                <SupportedUnitModelType>UrxenFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>UrxenMale</SupportedUnitModelType>
+                <SupportedUnitModelType>WraithFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>WraithMale</SupportedUnitModelType>
+                <SupportedUnitModelType>JB_RakturFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>JB_AsrillorgueFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>JB_RakturMale</SupportedUnitModelType>
+                <SupportedUnitModelType>JB_AsrillorgueMale</SupportedUnitModelType>
+                <SupportedUnitModelType>JB_IceElfFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>JB_GithFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>JB_MorquaiFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>JB_IceElfMale</SupportedUnitModelType>
+                <SupportedUnitModelType>JB_GithMale</SupportedUnitModelType>
+                <SupportedUnitModelType>JB_MorquaiMale</SupportedUnitModelType>
+                <SupportedUnitModelType>JB_QunariFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>JB_GorgalFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>JB_BlackTrogFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>JB_QunariMale</SupportedUnitModelType>
+                <SupportedUnitModelType>JB_GorgalMale</SupportedUnitModelType>
+                <SupportedUnitModelType>JB_BlackTrogMale</SupportedUnitModelType>
+                <SupportedUnitModelType>JB_OtaranFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>JB_GaushFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>JB_OtaranMale</SupportedUnitModelType>
+                <SupportedUnitModelType>JB_GaushMale</SupportedUnitModelType>
+                <SupportedUnitModelType>JB_AygethosFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>JB_SiirdiFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>JB_CormenlonFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>JB_AygethosMale</SupportedUnitModelType>
+                <SupportedUnitModelType>JB_SiirdiMale</SupportedUnitModelType>
+                <SupportedUnitModelType>JB_CormenlonMale</SupportedUnitModelType>
+                <SupportedUnitModelType>JB_UrnsFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>JB_UrnsMale</SupportedUnitModelType>
+                <SupportedUnitModelType>JB_BeastmanFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>JB_BeastmanMale</SupportedUnitModelType>
+                <SupportedUnitModelType>JB_DarkElfFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>JB_DarkElfMale</SupportedUnitModelType>
+				<!-- COS Support -->
+				<SupportedUnitModelType>Centaur</SupportedUnitModelType>
+				<SupportedUnitModelType>DrotaMale</SupportedUnitModelType>
+				<SupportedUnitModelType>DrotaFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>ShadowMale</SupportedUnitModelType>
+				<SupportedUnitModelType>ShadowFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>Goblin</SupportedUnitModelType>
+				<SupportedUnitModelType>LizardmanFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>AngelFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>DwarfFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>ElfFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>FrostGiantMale</SupportedUnitModelType>
+				<SupportedUnitModelType>FrostGiantFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>LivingStone</SupportedUnitModelType>
+				<SupportedUnitModelType>LizardmanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>Golem</SupportedUnitModelType>
+				<SupportedUnitModelType>Undead</SupportedUnitModelType>
+				<SupportedUnitModelType>DeathLegion</SupportedUnitModelType>
+				<SupportedUnitModelType>AngelMale</SupportedUnitModelType>
+				<SupportedUnitModelType>DwarfMale</SupportedUnitModelType>
+				<SupportedUnitModelType>ElfMale</SupportedUnitModelType>					
+                <GameItemTypeModel>
+                    <ModelFile>Gfx\HKB\Weapons\W_Crossbow_01.hkb</ModelFile>
+                    <Texture_All>Gfx\HKB\Armor\W_Crossbow_Texture_01.png</Texture_All>
+                    <Attachment>hand_Right_Lcf</Attachment>
+                </GameItemTypeModel>
+                <GameItemTypeModel>
+                    <ModelFile>Gfx\HKB\Armor\K_ArcherQuiver_01.hkb</ModelFile>
+                    <Texture_All>Gfx\HKB\Armor\K_Female_Armor_Archer_Texture_01.dds</Texture_All>
+                    <Attachment>back_Lcf</Attachment>
+                </GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>
+	
+    <GameItemType InternalName="JB_ScourgeDart">
+        <DisplayName>Scourge Fire</DisplayName>
+        <Description>Unlocks Scourge Fire- a ranged attack that inflicts 10 + caster level Infernal damage.</Description>
+        <Type>Weapon</Type>
+        <Type>Defense</Type>
+        <WeaponType>Bow</WeaponType>
+        <WeaponUpgradeType>Bow</WeaponUpgradeType>
+        <CanBeEquipped>1</CanBeEquipped>	
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>UnlockRangedAction</Attribute>
+                <StrVal>JB_SourgeDart</StrVal>		
+                <Provides>Unlocks Scourge Fire- a ranged attack that inflicts 10 + caster level Infernal damage.</Provides>
+            </GameModifier>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+        <RarityDisplay>Uncommon</RarityDisplay>
+        <TacticalRange>20</TacticalRange>
+        <IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+        <AIData AIPersonality="AI_General">
+            <AIPrefType>AIPrefType_BOW</AIPrefType>
+            <AIPriority>202</AIPriority>
+        </AIData>
+        <ArtDef>JB_ScourgeDart_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="JB_ScourgeDart_ArtDef">
+            <GameItemTypeModelPack InternalName="ShortJB_ScourgeDart_Default">
+                <IconFile>JB_Ability_ScourgeDart_Icon.png</IconFile>
+                <TintR>0</TintR>
+                <TintG>0</TintG>
+                <TintB>0</TintB>
+                <AttackSFX>Hit_Staff_01</AttackSFX>
+                <AttackSFX>Hit_Staff_02</AttackSFX>
+                <AttackSFX>Hit_Staff_03</AttackSFX>
+                <EquipSFX>Equip_WoodenItem_01</EquipSFX>
+                <EquipSFX>Equip_WoodenItem_02</EquipSFX>
+                <EquipSFX>Equip_WoodenItem_03</EquipSFX>
+                <SoundPack>Staff_Attack</SoundPack>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+   </GameItemType>
+ 
+	
+</GameItemTypes>

@@ -1,0 +1,136 @@
+<AbilityBonuses>
+    <DataChecksum NoParse="1">
+        <Ignore>DispName</Ignore>
+        <Translate>DisplayName,Description</Translate>
+    </DataChecksum>
+	<AbilityBonus InternalName="BrashearAbility">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Brashear">
+			<DisplayName>Brashear</DisplayName>
+			<Description>-5 to Dodge, -10 to Accuracy, +2 to attack</Description>
+			<Icon>Ability_Brute_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Dodge</StrVal>
+				<Value>-5</Value>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Accuracy</StrVal>
+				<Value>-10</Value>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Attack_Boost</StrVal>
+				<Value>2</Value>
+			</GameModifier>			
+			<AdditionalTrainingTurns>6</AdditionalTrainingTurns>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Type>Defensive</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="AllOutAbility">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="All_Out">
+			<DisplayName>Ability - All Out</DisplayName>
+			<Description>Attack all out striking enemies in an area.  Your accuracy suffers while recovering from exertion</Description>
+			<Icon>Ability_Berserkers_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>All_Out</StrVal>
+				<Provides>An area attack hitting for 125% Damage, Lose 50% Accuracy for 4 turns
+				Available at Level 4	</Provides>
+			</GameModifier>
+			<CombatRating>20</CombatRating>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Likelihood>1</Likelihood>
+			<RarityDisplay>Rare</RarityDisplay>
+			<MinimumLevel>4</MinimumLevel>
+			<RequiredLevel>4</RequiredLevel>
+			<Type>Ability</Type>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Brashear</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>6</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="SeeingRedAbility">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="SeeingRed">
+			<DisplayName>Ability - Seeing Red</DisplayName>
+			<Description>Allows the unit to use the Seeing Red ability, on striking the target you go Berserk.</Description>
+			<Icon>Ability_Archers_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>SeeingRed</StrVal>
+				<Provides>When striking an enemy, you go uncontrollably Berserk.
+				Available at Level 7</Provides>
+			</GameModifier>
+			<CombatRating>50</CombatRating>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Likelihood>1</Likelihood>
+			<RarityDisplay>Rare</RarityDisplay>
+			<MinimumLevel>7</MinimumLevel>
+			<RequiredLevel>7</RequiredLevel>
+			<Type>Ability</Type>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Brashear</Attribute>
+			</Prereq>
+			<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_IsShield</Attribute>
+			<Value>0</Value>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>6</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="LeapStrikeAbility">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="LeapStrike">
+			<DisplayName>Ability - Leap Strike</DisplayName>
+			<Description>Leap across the battlefield doing half damage to all enemies around that tile. </Description>
+			<Icon>Ability_Juggernaut_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>LeapStrike</StrVal>
+				<Provides>Leap across the battlefield to strike everyone in your path.  Lose some Damage Resistance for a time.
+				Available at Level 10</Provides>
+			</GameModifier>
+			<CombatRating>20</CombatRating>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Likelihood>1</Likelihood>
+			<RarityDisplay>Rare</RarityDisplay>
+			<MinimumLevel>10</MinimumLevel>
+			<RequiredLevel>10</RequiredLevel>
+			<Type>Ability</Type>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Brashear</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>6</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+</AbilityBonuses>		

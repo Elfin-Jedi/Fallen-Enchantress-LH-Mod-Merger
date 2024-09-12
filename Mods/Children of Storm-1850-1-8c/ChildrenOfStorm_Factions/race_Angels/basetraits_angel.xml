@@ -1,0 +1,366 @@
+<?xml version="1.0"?>
+<Container>
+  <AbilityBonus InternalName="ExperiencedAbility">
+    <AbilityBonusType>Unit_Design</AbilityBonusType>
+    <AbilityBonusOption InternalName="Experienced">
+      <Prereq>
+        <Type>Race</Type>
+        <Attribute>Race_Type_Angel</Attribute>
+      </Prereq>
+      <Prereq>
+        <Type>Race</Type>
+        <Attribute>Race_Type_Shadows</Attribute>
+      </Prereq>
+      <Prereq>
+        <Type>Race</Type>
+        <Attribute>Race_Type_Elves</Attribute>
+      </Prereq>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+ 
+  <AbilityBonus InternalName="Angel_Worship">
+    <AbilityBonusOption InternalName="Angel_Worship">
+      <IMPINC>Strength</IMPINC>
+      <DisplayName>Worship</DisplayName>
+      <Description>Unlocks the Transcendance spell that transforms any Fire/Earth/Air/Water spell into a Life shard for 50 mana. Each Life Shard connected to a city will also grant +0.5 Growth. </Description>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>UnlockSpell</Attribute>
+        <StrVal>EF_CorruptionLight</StrVal>
+        <Provides>Unlocks the Transcendance spell that transforms any Fire/Earth/Air/Water spell into a Life shard for 50 mana</Provides>
+      </GameModifier>
+      <Icon>Icon_Life.png</Icon>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_Additive_GrowthPerLifeMana</StrVal>
+        <Value>0.5</Value>
+        <Provides>Each Life Shard connected to a city will also grant +0.5 Growth</Provides>
+      </GameModifier>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <!--   <AbilityBonus InternalName="Angel_Providence">
+        <AbilityBonusOption InternalName="Angel_Providence">
+            <DisplayName>New Faith</DisplayName>
+            <Description>Angels have access to the New Faith trait when designing units. The New Faith trait is exceptionally powerful, and boosts a unit at the start of combat, for free, according to the number of shards of various types controlled. Different shard types add different effects. 
+
+		    Air Shard = +1 Accuracy, +1 Ranged Dodge
+		    Earth Shard = +2 Defense
+		    Fire Shard = +1 Fire Attack
+		    Water Shard = +1 Dodge
+		    Life Shard = +1 Tactical Health Regen,
+		   +5 all magical resistances</Description>
+            <Icon>Icon_ManaToMaintain.png</Icon>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    -->
+  <AbilityBonus InternalName="GlamourAngel">
+    <AbilityBonusOption InternalName="GlamourAngel">
+      <IMPINC>Strength</IMPINC>
+      <DisplayName>Glamour</DisplayName>
+      <Description>All trades are perceived as having 25% higher value</Description>
+      <Icon>Ability_Noble_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_Diplomacy</StrVal>
+        <Provides>All trades are perceived as having 25% higher value</Provides>
+        <Value>25</Value>
+      </GameModifier>
+      <Cost>1</Cost>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="MasterScoutAbility_Angel">
+    <AbilityBonusOption InternalName="MasterScout_Angel">
+      <IMPINC>Weakness</IMPINC>
+      <Cost>-1</Cost>
+      <DisplayName>Ruffled Feathers</DisplayName>
+      <Description>The Angels have always tried to stay out of Swamps as their wings are poorly suited for the humidity and insects.
+
+Any army that enters a Swamp tile always has its remaining Movement reduced to zero. This cannot be overwritten by items such as the Compass.</Description>
+      <Icon>Ability_Fragile_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>MovementCostOverRide</Attribute>
+        <StrVal>SwampTerrain</StrVal>
+        <Provides>The Angels have always tried to stay out of Swamps as their wings are poorly suited for the humidity and insects.
+
+Any army that enters a Swamp tile always has its remaining Movement reduced to zero. This cannot be overwritten by items such as the Compass.</Provides>
+        <Value>100</Value>
+        <PerTurn>1</PerTurn>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <!-- use for elves instead 
+  <AbilityBonus InternalName="Angel_MagicProficiency">
+    <AbilityBonusOption InternalName="Angel_MagicProficiency">
+      <DisplayName>Magic Proficiency</DisplayName>
+      <Description>All Cold, Fire and Lightning attacks from weapons and enchantments like Burning Blade are increased by 20%. This does not affect spells like Fireball.</Description>
+      <Icon>Ability_IgnorePain_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_UnitStat_Attack_Cold</StrVal>
+        <Value>20</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_UnitStat_Attack_Fire</StrVal>
+        <Value>20</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_UnitStat_Attack_Lightning</StrVal>
+        <Value>20</Value>
+      </GameModifier>
+    </AbilityBonusOption>
+  </AbilityBonus>-->
+  <AbilityBonus InternalName="FiercelyIndependent">
+    <AbilityBonusOption InternalName="FiercelyIndependent">
+      <Cost>-1</Cost>
+      <DisplayName>Fiercely Independent</DisplayName>
+      <Description>Angels are fiercely independent and believe their wings will regain their power to carry them into history. They loathe the dishonour of riding mounts, and may not ride any mounts.
+
+Angels may still research Mounted warfare and Warg Riding in order to equip hired champions.</Description>
+      <Icon>Ability_Vulnerable_Icon.png</Icon>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+      <GameModifier>
+        <Provides>Angels are fiercely independent and believe their wings will regain their power to carry them into history. They loathe the dishonour of riding mounts, and may not ride any mounts.
+
+Angels may still research Mounted warfare and Warg Riding in order to equip hired champions.</Provides>
+      </GameModifier>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <!--   <AbilityBonus InternalName="Ef_NewFaith">
+        <AbilityBonusType>Unit_Design</AbilityBonusType>
+        <AbilityBonusOption InternalName="Ef_NewFaith">
+            <DisplayName>New Faith</DisplayName>
+            <Description>At the start of combat, this unit is boosted, for free, according to the number of shards of various types controlled. Different shard types add different effects. 
+
+		    Air Shard = +1 Accuracy, +1 Ranged Dodge
+		    Earth Shard = +2 Defense
+		    Fire Shard = +1 Fire Attack
+		    Water Shard = +1 Dodge
+		    Life Shard = +1 Tactical Health Regen,
+		   +5 all magical resistances</Description>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>BattleAutoCastSpell</Attribute>
+                <StrVal>Ef_NewFaith</StrVal>
+                <Value>100</Value>
+            </GameModifier>
+            <Prereq>
+                <Type>Race</Type>
+                <Attribute>Race_Type_Angel</Attribute>
+            </Prereq>
+            <Icon>Icon_ManaToMaintain.png</Icon>
+            <AdditionalTrainingTurns>0</AdditionalTrainingTurns>
+            <HideWhenUpgraded>0</HideWhenUpgraded>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>10000</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>-->
+  <AbilityBonus InternalName="EF_ShardAffinity">
+    <AbilityBonusType>Unit_Design</AbilityBonusType>
+    <AbilityBonusOption InternalName="EF_ShardAffinity">
+      <Type>Faction Trait</Type>
+      <IsCombatAbility>1</IsCombatAbility>
+      <DisplayName>Shard Affinity</DisplayName>
+      <Description>When defending any city with an elemental shard shrine (or any improvement that produces shard power) inside the city walls, melee attacks from this unit deals 2 additional magic damage (fire=fire, water=cold, air=lightning, earth=poison). Multiple types stack, but more than one of each type does nothing. Life shards do not add any damage. The extra damage does not appear in Unit Details, but it is added when striking enemies in battle. 
+
+This trait cannot be selected at the same time as Lust for Power.</Description>
+      <Icon>Ability_Attunement_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Attack_Cold</StrVal>
+        <StrVal2>ExpandedTraits_FLAG_DefendingACityWithWaterShard</StrVal2>
+        <Value>2</Value>
+        <vsLower>1</vsLower>
+        <Provides>When defending any city with an elemental shard shrine (or any improvement that produces shard power) inside the city walls, melee attacks from this unit deals 2 additional magic damage (fire=fire, water=cold, air=lightning, earth=poison). Multiple types stack, but more than one of each type does nothing. Life shards do not add any damage. The extra damage does not appear in Unit Details, but it is added when striking enemies in battle. 
+
+This trait cannot be selected at the same time as Lust for Power.</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Attack_Poison</StrVal>
+        <StrVal2>ExpandedTraits_FLAG_DefendingACityWithEarthShard</StrVal2>
+        <Value>2</Value>
+        <vsLower>1</vsLower>
+        <Provides>.</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Attack_Fire</StrVal>
+        <StrVal2>ExpandedTraits_FLAG_DefendingACityWithFireShard</StrVal2>
+        <Value>2</Value>
+        <vsLower>1</vsLower>
+        <Provides>.</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Attack_Lightning</StrVal>
+        <StrVal2>ExpandedTraits_FLAG_DefendingACityWithAirShard</StrVal2>
+        <Value>2</Value>
+        <vsLower>1</vsLower>
+        <Provides>.</Provides>
+      </GameModifier>
+      <AdditionalTrainingTurns>10</AdditionalTrainingTurns>
+      <Prereq>
+        <Type>Race</Type>
+        <Attribute>Race_Type_Angel</Attribute>
+      </Prereq>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>6</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+    <AbilityBonusOption InternalName="EF_LustForPower">
+      <Type>Faction Trait</Type>
+      <DisplayName>Lust for Power</DisplayName>
+      <Description>When attacking a city with a shard shrine (or any improvement that produces shard power) inside the city walls, this unit gains +20 Accuracy against all defenders. 
+
+This trait cannot be selected at the same time as Shard Affinity.</Description>
+      <Icon>Ability_Attunement_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Accuracy</StrVal>
+        <StrVal2>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal2>
+        <Value>20</Value>
+        <vsHigher>1</vsHigher>
+        <Provides>When attacking a city with a shard shrine (or any improvement that produces shard power) inside the city walls, this unit gains +20 Accuracy against all defenders. 
+
+This trait cannot be selected at the same time as Shard Affinity.</Provides>
+      </GameModifier>
+      <AdditionalTrainingTurns>10</AdditionalTrainingTurns>
+      <Prereq>
+        <Type>Race</Type>
+        <Attribute>Race_Type_Angel</Attribute>
+      </Prereq>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>4</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="EF_OneTrueGod">
+    <AbilityBonusType>Unit_Design</AbilityBonusType>
+    <AbilityBonusOption InternalName="EF_OneTrueGod">
+      <Type>Faction Trait</Type>
+      <DisplayName>Holy War</DisplayName>
+      <IsCombatAbility>1</IsCombatAbility>
+      <Description>This unit gains +25 Accuracy and Spell mastery when trying to attack or cast spells against any God that is not the One True God. In addition, this unit gains +20 accuracy against any Summoned units. If the target is both Summoned and a God, the bonus to Accuracy stacks for a total +45 (spell mastery bonus only against Gods). </Description>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Accuracy</StrVal>
+        <StrVal2>UnitStat_BG_IsGod</StrVal2>
+        <Value>25</Value>
+        <vsHigher>1</vsHigher>
+        <Provides>This unit gains +25 Accuracy and Spell mastery when trying to attack or cast spells against any God that is not the One True God. In addition, this unit gains +20 accuracy against any Summoned units. If the target is both Summoned and a God, the bonus to Accuracy stacks for a total +45 (spell mastery bonus only against Gods)</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_MagicPower</StrVal>
+        <StrVal2>UnitStat_BG_IsGod</StrVal2>
+        <Provides>.</Provides>
+        <Value>25</Value>
+        <vsHigher>1</vsHigher>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Accuracy</StrVal>
+        <StrVal2>UnitStat_BG_IsSummoned</StrVal2>
+        <Provides>.</Provides>
+        <Value>20</Value>
+        <vsHigher>1</vsHigher>
+      </GameModifier>
+      <AdditionalTrainingTurns>10</AdditionalTrainingTurns>
+      <Icon>Ability_DeathWorship_Icon.png</Icon>
+      <HideWhenUpgraded>1</HideWhenUpgraded>
+      <Prereq>
+        <Type>Race</Type>
+        <Attribute>Race_Type_Angel</Attribute>
+      </Prereq>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>1</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="EF_RighteousPath">
+    <AbilityBonusType>Unit_Design</AbilityBonusType>
+    <AbilityBonusOption InternalName="EF_RighteousPath">
+      <Type>Faction Trait</Type>
+      <IsCombatAbility>1</IsCombatAbility>
+      <DisplayName>Righteous Path</DisplayName>
+      <Description>When being attacked by any unit fighting for an Empire faction, this unit gains +15 Resistance to physical attacks.</Description>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistPierce</StrVal>
+        <Value>15</Value>
+        <vsOtherAllegiance>1</vsOtherAllegiance>
+        <Provides>When being attacked by any unit fighting for an Empire faction, this unit gains +15 Resistance to physical attacks</Provides>
+      </GameModifier>
+      <AdditionalTrainingTurns>10</AdditionalTrainingTurns>
+      <Icon>Ability_FleshBoundTome_Icon.png</Icon>
+      <HideWhenUpgraded>1</HideWhenUpgraded>
+      <Prereq>
+        <Type>Race</Type>
+        <Attribute>Race_Type_Angel</Attribute>
+      </Prereq>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Increased_Moves_Angel">
+    <AbilityBonusType>Unit_Level</AbilityBonusType>
+    <AbilityBonusOption InternalName="Increased_Moves_Angel">
+      <DisplayName>Wingboost</DisplayName>
+      <Description>+1 Moves</Description>
+      <Icon>ability_Celestial.png</Icon>
+      <MinimumLevel>5</MinimumLevel>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Moves</StrVal>
+        <Provides>+1 Moves</Provides>
+        <Value>1</Value>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Likelihood>600</Likelihood>
+      <RarityDisplay>Common</RarityDisplay>
+      <Type>Ability</Type>
+      <Prereq>
+        <Type>UnitStat</Type>
+        <Attribute>UnitStat_BG_IsRace_Angel</Attribute>
+        <Value>1</Value>
+      </Prereq>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+</Container>

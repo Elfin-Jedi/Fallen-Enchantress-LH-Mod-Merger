@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<Spells>
+	<SpellDef InternalName="Spell_X_GerminalSundown">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[S] Germinal Sundown</DisplayName>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Empire</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>2000</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Revive the land.
+		
+		See Tooltip. See WARNINGS.
+		
+		
+		
+		---------------------------------------------------
+		!WARNING!
+		
+		Mass Spells are memory intensive and may provoke a crash.
+		---------------------------------------------------
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] GERMINAL SUNDOWN
+		::: Revive the land.
+		
+		DOMAIN
+		::: Strategic
+		::: Neutral+
+		::: Forest, Land
+		
+		EFFECT
+		::: Place Dead Environment #Empire
+		
+		INTERVAL
+		::: Until settled by Kingdom
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		OTHER
+		::: 150x150 Area
+		::: Caster must be Sov
+		::: Player Only
+		
+		SOURCE
+		::: Allegiance
+		::: ::: Empire
+		
+		::: Tech
+		::: ::: Book of Mastery</Description>
+		<SpellBookSortCategory>World</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Map</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Terraform</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>NeutralGround</SpellTargetType>
+		<CasterMustBeSov>1</CasterMustBeSov>
+		<IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+		<Range>75</Range>
+		<Radius>75</Radius>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>PlaceEnvironment</Attribute>
+			<TerrainType>DeadEnvironment</TerrainType>
+		</GameModifier>
+		<Cooldown>75</Cooldown>
+		<ValidTerrainCategory>Forest</ValidTerrainCategory>
+		<ValidTerrainCategory>Land</ValidTerrainCategory>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_GerminalSundown.png</IconFG>
+		<HitSoundFX>Spell_BirthOfSummer_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>Revive_Land</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_VernalRejuvenation">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[S] Vernal Rejuvenation</DisplayName>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Kingdom</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>2000</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Revive the land.
+		
+		See Tooltip. See WARNINGS
+		
+		
+		
+		---------------------------------------------------
+		!WARNING!
+		
+		Mass Spells are memory intensive and may provoke a crash.
+		---------------------------------------------------
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] VERNAL REJUVENATION
+		::: Revive the land.
+		
+		DOMAIN
+		::: Strategic
+		::: Neutral+
+		::: Forest, Land
+		
+		EFFECT
+		::: Place Grassland Environment #Kingdom
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until settled by Empire
+		
+		OTHER
+		::: 150x150 Area
+		::: Caster must be Sov
+		::: Player Only
+		
+		SOURCE
+		::: Allegiance
+		::: ::: Kingdom
+		
+		::: Tech
+		::: ::: Book of Mastery</Description>
+		<SpellBookSortCategory>World</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Map</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Terraform</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>NeutralGround</SpellTargetType>
+		<CasterMustBeSov>1</CasterMustBeSov>
+		<IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+		<Range>75</Range>
+		<Radius>75</Radius>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>PlaceEnvironment</Attribute>
+			<TerrainType>GrasslandEnvironment</TerrainType>
+		</GameModifier>
+		<Cooldown>75</Cooldown>
+		<ValidTerrainCategory>Forest</ValidTerrainCategory>
+		<ValidTerrainCategory>Land</ValidTerrainCategory>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_VernalRejuvenation.png</IconFG>
+		<HitSoundFX>Spell_BirthOfSummer_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>Revive_Land</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+</Spells>

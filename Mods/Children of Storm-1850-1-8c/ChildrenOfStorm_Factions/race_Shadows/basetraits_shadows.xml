@@ -1,0 +1,290 @@
+<?xml version="1.0"?>
+<Container>
+	<!--
+  <AbilityBonus InternalName="MasterScoutAbility_Shadow">
+    <AbilityBonusOption InternalName="MasterScoutAbility_Shadow">
+      <DisplayName>Semi-corporeal</DisplayName>
+      <Description>Monsters won't attack any units owned by this faction, including non-Shadow units.</Description>
+      <Icon>Ability_MasterScouts_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_MonsterAggression</StrVal>
+        <Value>-100</Value>
+        <Provides>Monsters ignore this player</Provides>
+      </GameModifier>
+      <Cost>1</Cost>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>-->
+	<AbilityBonus InternalName="MasterScoutAbility_Shadow2">
+		<AbilityBonusOption InternalName="MasterScoutAbility_Shadow2">
+			<DisplayName>Otherworldly sight</DisplayName>
+			<Description>All armies have +1 Sight range (4 total)</Description>
+			<Icon>Ability_SpellResistance_Icon.png</Icon>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<GameModifier>
+				<Provides>All armies led by a Shadow sovereign or a Shadow trained unit gain +1 Sight range</Provides>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Shadow_ShardDuality">
+		<AbilityBonusOption InternalName="Shadow_ShardDuality">
+			<IMPINC>Strength</IMPINC>
+			<DisplayName>Shard Duality</DisplayName>
+			<Description>As a Kingdom, the Shadows naturally spread the life of such factions around them. However Shadows are not like other Kingdoms, for their life always begins in another's death. 
+
+All improvements that produce Life Shard power also produce Death Shard power</Description>
+			<Icon>Ability_Affinity_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Additive_deathshardperLifeMana</StrVal>
+				<Value>1</Value>
+				<Provides>As a Kingdom, the Shadows naturally spread the life of such factions around them. However Shadows are not like other Kingdoms, for their life always begins in another's death. 
+
+All improvements that produce Life Shard power also produce Death Shard power</Provides>
+			</GameModifier>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="HeroicAbilityshadow">
+		<AbilityBonusOption InternalName="HeroicShadow">
+			<IMPINC>Strength</IMPINC>
+			<DisplayName>Uncertain Fame</DisplayName>
+			<Description>The Shadows are trusted less than the other factions. After all, they are a bit strange around the edges. If they prove their intentions, the people of the wastes will flock to their banners.
+
+Faction suffers -25% Growth in all cities.</Description>
+			<Icon>Ability_Heroic_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Prestige</StrVal>
+				<Value>-25</Value>
+				<Provides>The Shadows are trusted less than the other factions. After all, they are a bit strange around the edges. If they prove their intentions, the people of the wastes will flock to their banners.
+
+Faction suffers -25% Growth in all cities.</Provides>
+			</GameModifier>
+			<Cost>1</Cost>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<!--  <AbilityBonus InternalName="BetrayersAbilityShadow">
+    <AbilityBonusOption InternalName="BetrayersAbilityShadow">
+      <DisplayName>Flexible Ideology</DisplayName>
+      <Description>This faction can recruit Empire and Kingdom champions.</Description>
+      <Icon>Ability_Betrayers_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_RecruitAnyAllegiance</StrVal>
+		
+<Provides>This faction can recruit Empire and Kingdom champions.</Provides>
+        <Value>1</Value>
+      </GameModifier>
+      <Cost>1</Cost>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>-->
+
+	<AbilityBonus InternalName="ShadowLimit">
+		<AbilityBonusOption InternalName="ShadowLimit">
+			<Cost>-1</Cost>
+			<DisplayName>No Natural Birth</DisplayName>
+			<Description>Each Shadow unit requires 1 Shadow resource per member. The faction starts with 20 Shadows. Each 300 Population in all controlled cities produce 1 Shadow per turn as they are collected from the dead</Description>
+			<Icon>Ability_AfraidofDying_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Shadow</StrVal>
+				<Provides>Each Shadow unit requires 1 Shadow resource per member. The faction starts with 20 Shadows. Each 300 Population in all controlled cities produce 1 Shadow per turn as they are collected from the dead</Provides>
+				<Value>100</Value>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Shadow</Attribute>
+				<Value>20.0</Value>
+				<Provides>.</Provides>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Shadowarmor">
+		<AbilityBonusOption InternalName="Shadowarmor">
+			<IMPINC>Strength</IMPINC>
+			<DisplayName>Shadowforged Armor</DisplayName>
+			<Description>Armor and weapons cost half the normal metal. Upgrading trained units cost half as much as it normally would.
+
+Faction may not build Weaponsmiths or Armorer improvements and automatically raze any they find</Description>
+			<Icon>Ability_MasterSmiths_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Training_Metal</StrVal>
+				<Value>-50</Value>
+				<Provides>Armor and weapons cost half the normal metal. Upgrading trained units cost half as much as it normally would.</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_UnitUpgrades</StrVal>
+				<Value>-50</Value>
+				<Provides>.</Provides>
+			</GameModifier>
+			<Cost>1</Cost>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<ImprovementType InternalName="Weaponsmith">
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Shadowarmor</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+	</ImprovementType>
+	<ImprovementType InternalName="Armorer">
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Shadowarmor</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+	</ImprovementType>
+	<AbilityBonus InternalName="Shadowtrait_DestroyShadow">
+		<AbilityBonusType>Unit_Design</AbilityBonusType>
+		<AbilityBonusOption InternalName="Shadowtrait_DestroyShadow">
+			<Type>Faction Trait</Type>
+			<DisplayName>Shadowbreaker</DisplayName>
+			<Description>When this unit attacks any enemy, there is a 1 in 15 chance that the enemy suffers the Broken Shadow trait. It does not expire at the end of combat. The trait reduces Spell Mastery by 10, and the unit loses 10 Accuracy when attacking any Shadow.</Description>
+			<Icon>Ability_GreaterCurse_Icon.png</Icon>
+			<IsCombatAbility>1</IsCombatAbility>
+			<AdditionalTrainingTurns>12</AdditionalTrainingTurns>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Prereq>
+				<Type>Race</Type>
+				<Attribute>Race_Type_Shadows</Attribute>
+			</Prereq>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>MeleeAppliesSpell</Attribute>
+				<StrVal>Shadowtrait_DestroyShadow</StrVal>
+				<Provides>When this unit attacks any enemy, there is a 1 in 15 chance that the enemy suffers the Broken Shadow trait. It does not expire at the end of combat. The trait reduces Spell Mastery by 10, and the unit loses 10 Accuracy when attacking any Shadow.</Provides>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="BrokenShadow">
+		<AbilityBonusOption InternalName="BrokenShadow">
+			<DisplayName>Broken Shadow</DisplayName>
+			<Description>Unit suffers -10 Spell Mastery. Any attack against a Shadow suffers -10 Accuracy, unless this unit is also a Shadow.</Description>
+			<Icon>Ability_TisButAScratch_Icon.png</Icon>
+			<IsCombatAbility>1</IsCombatAbility>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Accuracy</StrVal>
+				<StrVal2>UnitStat_BG_IsRace_Shadows</StrVal2>
+
+				<Provides>Unit suffers -10 Spell Mastery. Any attack against a Shadow suffers -10 Accuracy, unless this unit is also a Shadow.</Provides>
+				<Value>-10</Value>
+				<vsHigher>1</vsHigher>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_MagicPower</StrVal>
+				<Value>-10</Value>
+				<Provides>.</Provides>
+			</GameModifier>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Shadowtrait_FluidShadow">
+		<AbilityBonusType>Unit_Design</AbilityBonusType>
+		<AbilityBonusOption InternalName="Shadowtrait_FluidShadow">
+			<Type>Faction Trait</Type>
+			<DisplayName>Fluid Edges</DisplayName>
+			<Description>Unit gains 10 Dodge but also suffer -25 Fire Resistance.</Description>
+			<Icon>Ability_PathOfTheAssassin_Icon.png</Icon>
+			<IsCombatAbility>1</IsCombatAbility>
+			<AdditionalTrainingTurns>8</AdditionalTrainingTurns>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Dodge</StrVal>
+				<Value>10</Value>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ResistFire</StrVal>
+				<Value>-25</Value>
+			</GameModifier>
+			<Prereq>
+				<Type>Race</Type>
+				<Attribute>Race_Type_Shadows</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Shadowtrait_KillingShadow">
+		<AbilityBonusType>Unit_Design</AbilityBonusType>
+		<AbilityBonusOption InternalName="Shadowtrait_KillingShadow">
+			<Type>Faction Trait</Type>
+			<DisplayName>Killing Shadow</DisplayName>
+			<Description>Unit ignores 15% of target Defenses from armor. This stacks with other similar bonuses.
+
+This trait costs 1 Crystal per unit member</Description>
+			<Icon>Ability_Sweep_Icon.png</Icon>
+			<IsCombatAbility>1</IsCombatAbility>
+			<AdditionalTrainingTurns>10</AdditionalTrainingTurns>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<ProductionRequirement>
+				<Type>Resource</Type>
+				<Attribute>RefinedCrystal</Attribute>
+				<Value>1</Value>
+			</ProductionRequirement>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ArmorPierce</StrVal>
+				<Value>15</Value>
+				<Provides>Unit ignores 15% of target Defenses from armor. This stacks with other similar bonuses.</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>Race</Type>
+				<Attribute>Race_Type_Shadows</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+</Container>

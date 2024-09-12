@@ -1,0 +1,2408 @@
+<?xml version="1.0"?>
+<AbilityBonuses>
+	
+	<!-- Changes to default abilities -->
+	<AbilityBonus InternalName="LargeAbility">
+		<AbilityBonusOption InternalName="Large">      
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_IsLarge</StrVal>
+				<Provides>This unit counts as Large</Provides>
+				<Value>1</Value>
+			</GameModifier>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="MonsterousAbility">
+		<AbilityBonusOption InternalName="Monsterous">      
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_IsLarge</StrVal>
+				<Provides>This unit counts as Large</Provides>
+				<Value>1</Value>
+			</GameModifier>
+		</AbilityBonusOption>
+	</AbilityBonus>
+    <AbilityBonus InternalName="GhostAbility">
+        <AbilityBonusOption InternalName="Ghost">
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_CannotBeCharmed</StrVal>
+                <Value>1</Value>
+                <Provides>Immune to Charm</Provides>
+            </GameModifier>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	
+	<!-- New Stuff -->
+	<AbilityBonus InternalName="Dodge3Ability">
+		<AbilityBonusOption InternalName="Dodge3">
+			<DisplayName>Dodge III</DisplayName>
+			<Description>+6 to Dodge</Description>
+			<Icon>Ability_DodgeIII_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Dodge</StrVal>
+				<Value>6</Value>
+				<Provides>+6 to Dodge</Provides>
+			</GameModifier>
+			<Type>Defensive</Type>
+			<UpgradePathID>Dodge</UpgradePathID>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Dodge2</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>    
+	<AbilityBonus InternalName="JB_StunAbility">
+		<AbilityBonusOption InternalName="JB_Stun">
+			<DisplayName>Stun</DisplayName>
+			<Description>Attack that causes the unit to lose its next attack, unless it resists</Description>
+			<Icon>Ability_Stun_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>Stun</StrVal>
+				<Provides>Attack that causes the unit to lose its next attack, unless it resists</Provides>
+			</GameModifier>
+			<CombatRating>5</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>10</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_DoubleStrikeAbility">
+		<AbilityBonusOption InternalName="JB_DoubleStrike">
+			<DisplayName>Double Strike</DisplayName>
+			<Description>Strike twice at -20 to Accuracy</Description>
+			<Icon>Ability_DoubleStrike_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>DoubleStrike</StrVal>
+				<Provides>Strike twice at -20 to Accuracy</Provides>
+			</GameModifier>
+			<CombatRating>5</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>50</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>	
+	<AbilityBonus InternalName="JB_MultipleStrikeAbility">
+		<AbilityBonusOption InternalName="JB_MultipleStrike">
+			<DisplayName>Multiple Strike</DisplayName>
+			<Description>Attack up to 3 adjacent enemies</Description>
+			<Icon>JB_Ability_Multistrike_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_MultipleStrike_Ability</StrVal>
+				<Provides>Attack up to 3 adjacent enemies</Provides>
+			</GameModifier>
+			<CombatRating>10</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>						
+	<AbilityBonus InternalName="JB_Spell_PullOfTheEarthAbility">
+		<AbilityBonusOption InternalName="JB_Spell_PullOfTheEarth">
+			<DisplayName>Pull of the Earth</DisplayName>
+			<Description>Allows the unit to cast Pull of the Earth</Description>
+			<Icon>T_PullOfTheEarth_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_PullOfTheEarth_Ability</StrVal>
+				<Provides>Units within range are knocked prone unless they resist</Provides>
+			</GameModifier>
+			<CombatRating>25</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>		
+	<AbilityBonus InternalName="JB_FuryFlameAbility">
+		<AbilityBonusOption InternalName="JB_FuryFlame">
+			<DisplayName>Fury Flame</DisplayName>
+			<Description>Allows the unit to cast Fury Flame</Description>
+			<Icon>S_AnnointedByFire_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_FuryFlame_Ability</StrVal>
+				<Provides>Allows the unit to cast Fury Flame</Provides>
+			</GameModifier>
+			<CombatRating>50</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>150</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_Spell_GuardianWindAbility">
+		<AbilityBonusOption InternalName="JB_Spell_GuardianWind">
+			<DisplayName>Guardian Wind</DisplayName>
+			<Description>Allows the unit to cast Guardian Wind</Description>
+			<Icon>T_Windshield_Painting.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_GuardianWind_Ability</StrVal>
+				<Provides>Allied units gain +15 to Dodge (+5 per air shard) vs ranged attacks.</Provides>
+			</GameModifier>
+			<CombatRating>5</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>		
+	<AbilityBonus InternalName="JB_RushAbility">
+		<AbilityBonusOption InternalName="JB_Rush">
+			<DisplayName>Rush</DisplayName>
+			<Description>Take an extra action.</Description>
+			<Icon>Ability_Rush_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>Rush</StrVal>
+				<Provides>Rush- Unit takes an extra action</Provides>
+			</GameModifier>
+			<CombatRating>5</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>		
+	<AbilityBonus InternalName="JB_Spell_DrainLifeAbility">
+		<AbilityBonusOption InternalName="JB_Spell_DrainLife">
+			<DisplayName>Drain Life</DisplayName>
+			<Description>Allows the unit to cast Drain Life</Description>
+			<Icon>T_DrainLife_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_DrainLife_Ability</StrVal>
+				<Provides>Transfers 12 hit points (+2 per death shard) from enemy unit to the caster.</Provides>
+			</GameModifier>
+			<CombatRating>10</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>	
+	<AbilityBonus InternalName="JB_Blood_AngelAbility">
+		<AbilityBonusOption InternalName="JB_Blood_Angel">
+			<DisplayName>Angel</DisplayName>
+			<Description>Immune to Critical Attack, Immune to Poison, +1 Accuracy per Level, +1 Dodge per Level, +1 Spell Resistance per Level, +3 Hit Points per Level, +20 Dodge against Ranged</Description>
+			<Icon>JB_Ability_Blood_Angel_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ChanceToAvoidCrit</StrVal>
+				<Value>100</Value>
+				<Provides>Unit never suffers a Critical Attack</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ResistPoison</StrVal>
+				<Value>100</Value>
+				<Provides>Unit takes no damage from Poison</Provides>
+			</GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_JB_ResistDivine</StrVal>
+                <Value>100</Value>
+                <Provides>Immune to Divine damage</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_JB_ResistInfernal</StrVal>
+                <Value>100</Value>
+                <Provides>Immune to Infernal damage</Provides>
+            </GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Accuracy</StrVal>
+				<Value>1</Value>
+				<PerLevel>1</PerLevel>
+				<Provides>+1 Accuracy per Level</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Dodge</StrVal>
+				<Value>1</Value>
+				<PerLevel>1</PerLevel>
+				<Provides>+1 Dodge per Level</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_MagicResist</StrVal>
+				<Value>1</Value>
+				<PerLevel>1</PerLevel>
+				<Provides>+1 Spell Resistance per Level</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_HitPoints</StrVal>
+				<Value>3</Value>
+				<PerLevel>1</PerLevel>
+				<Provides>+3 Hit Point per Level</Provides>
+			</GameModifier>	     
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_DodgeAgainstRanged</StrVal>
+				<Value>20</Value>
+			</GameModifier>				
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_IsFlying</StrVal>
+				<Value>1</Value>
+				<Provides>This unit is capable of flight and counts as Flying</Provides>
+			</GameModifier>			
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_IsCelestial</StrVal>
+				<Provides>This unit counts as Celestial</Provides>
+				<Value>1</Value>
+			</GameModifier>				
+			<CombatRating>25</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>		
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>100</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_BlinkAbility">
+		<AbilityBonusOption InternalName="JB_Blink">
+			<DisplayName>Blink</DisplayName>
+			<Description>Teleport to any location in Tactical combat.</Description>
+			<Icon>JB_Ability_Blink_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>Blink</StrVal>
+				<Provides>Allows the unit to cast Blink</Provides>
+			</GameModifier>
+			<CombatRating>5</CombatRating>	
+			<IsCombatAbility>1</IsCombatAbility>				
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>				
+	<AbilityBonus InternalName="JB_Spell_HealAbility">
+		<AbilityBonusOption InternalName="JB_Spell_Heal">
+			<DisplayName>Heal</DisplayName>
+			<Description>Allows the unit to cast Heal</Description>
+			<Icon>T_Heal_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_Heal_Ability</StrVal>
+				<Provides>Heals target unit by 16 (+2 per life shard).</Provides>
+			</GameModifier>
+			<CombatRating>5</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>		
+	<AbilityBonus InternalName="JB_Spell_StaticShockAbility">
+		<AbilityBonusOption InternalName="JB_Spell_StaticShock">
+			<DisplayName>Static Shock</DisplayName>
+			<Description>3 adjacent enemies are blasted with a lightning charge, taking 8 (+2 per level) in lightning damage.</Description>
+			<Icon>Ability_StaticBlast_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_StaticShock_Ability</StrVal>
+				<Provides>3 adjacent enemies are blasted with a lightning charge, taking 8 (+2 per level) in lightning damage.</Provides>
+			</GameModifier>
+			<CombatRating>5</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_Spell_RiptideAbility">
+		<AbilityBonusOption InternalName="JB_Spell_Riptide">
+			<DisplayName>Riptide</DisplayName>
+			<Description>Summon a wave that does 8 damage (+2 per water shard) to 3 adjacent enemies.</Description>
+			<Icon>S_TidalWave_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_Riptide_Ability</StrVal>
+				<Provides>Summon a wave that does 8 damage (+2 per water shard) to 3 adjacent enemies.</Provides>
+			</GameModifier>
+			<CombatRating>5</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_Spell_LightningBoltAbility">
+		<AbilityBonusOption InternalName="JB_Spell_LightningBolt">
+			<DisplayName>Lightning Bolt</DisplayName>
+			<Description>Does 8 (+2 per Level) Lightning damage to all units in a line 5 tiles long.</Description>
+			<Icon>T_ChainLightning_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_LightningBolt_Ability</StrVal>
+				<Provides>Does 8 (+2 per Level) Lightning damage to all units in a line 5 tiles long.</Provides>
+			</GameModifier>
+			<CombatRating>10</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_Spell_FlameDartAbility">
+		<AbilityBonusOption InternalName="JB_Spell_FlameDart">
+			<DisplayName>Flame Dart</DisplayName>
+			<Description>A fiery dart strikes for double the caster's level (+2 per fire shard) in fire damage.</Description>
+			<Icon>T_FlameDart_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>FlameDart_Ability</StrVal>
+				<Provides>A fiery dart strikes for double the caster's level (+2 per fire shard) in fire damage.</Provides>
+			</GameModifier>
+			<CombatRating>5</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_Spell_MassSlowAbility">
+		<AbilityBonusOption InternalName="JB_Spell_MassSlow">
+			<DisplayName>Slow All</DisplayName>
+			<Description>All enemy units suffer -3 to Initiative (-1 per water shard) unless they resist.</Description>
+			<Icon>T_Slow_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_MassSlow_Ability</StrVal>
+				<Provides>All enemy units suffer -3 to Initiative (-1 per water shard) unless they resist.</Provides>
+			</GameModifier>
+			<CombatRating>25</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>25</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>	
+	<AbilityBonus InternalName="JB_Spell_Slow_Cooldown5_Ability">
+        <AbilityBonusOption InternalName="JB_Spell_Slow_Cooldown5">
+            <DisplayName>Slow</DisplayName>
+            <Description>Allows the unit to cast Slow</Description>
+            <Icon>T_Slow_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>UnlockCombatAbility</Attribute>
+                <StrVal>JB_Slow_Cooldown5_Ability</StrVal>
+                <Provides>Target enemy unit suffers -2 to Initiative unless they resist</Provides>
+            </GameModifier>
+            <CombatRating>5</CombatRating>
+            <IsCombatAbility>1</IsCombatAbility>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	<AbilityBonus InternalName="JB_Spell_ChaosAbility">
+		<AbilityBonusOption InternalName="JB_Spell_Chaos">
+			<DisplayName>Chaos</DisplayName>
+			<Description>Does a random effect to target enemy unit unless they resist.</Description>
+			<Icon>T_Chaos_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_Chaos_Ability</StrVal>
+				<Provides>Does a random effect to target enemy unit unless they resist.</Provides>
+			</GameModifier>
+			<CombatRating>5</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>	
+	<AbilityBonus InternalName="JB_Spell_HasteAbility">
+		<AbilityBonusOption InternalName="JB_Spell_Haste">
+			<DisplayName>Chaos</DisplayName>
+			<Description>Target unit is +3 to Initiative (+1 per air shard).</Description>
+			<Icon>T_Haste_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_Haste_Ability</StrVal>
+				<Provides>Target unit is +3 to Initiative (+1 per air shard).</Provides>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>		
+	<AbilityBonus InternalName="JB_Spell_SoulSpearArchonAbility">
+		<AbilityBonusOption InternalName="JB_Spell_SoulSpearArchon">
+			<DisplayName>Soul Spear</DisplayName>
+			<Description>A spear of light strikes the victim doing double the caster's level damage and reducing their Attack by 2.</Description>
+			<Icon>JB_MMLife1_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_SoulSpearArchon_Ability</StrVal>
+				<Provides>A spear of light strikes the victim doing double the caster's level damage and reducing their Attack by 2.</Provides>
+			</GameModifier>
+			<CombatRating>5</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_FieryBlastAbility">
+		<AbilityBonusOption InternalName="JB_FieryBlast">
+			<DisplayName>Fiery Blast</DisplayName>
+			<Description>Target unit takes 5 + triple the caster's level in fire damage.</Description>
+			<Icon>JB_Ability_FieryBlast_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_FieryBlast_Ability</StrVal>
+				<Provides>Mid range attack that does 5 + triple the caster's level in fire damage.</Provides>
+			</GameModifier>
+			<CombatRating>75</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_CloakOfThornsAbility">
+		<AbilityBonusOption InternalName="JB_CloakOfThorns">
+			<DisplayName>Cloak of Thorns</DisplayName>
+			<Description>25% of the damage done to the target is reflected back on his attacker.</Description>
+			<Icon>S_CloakOfThorns_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_CloakOfThorns_Ability</StrVal>
+				<Provides>25% of the damage done to the target is reflected back on his attacker.</Provides>
+			</GameModifier>
+			<CombatRating>15</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>25</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_Spell_FractureAbility">
+		<AbilityBonusOption InternalName="JB_Spell_Fracture">
+			<DisplayName>Fracture</DisplayName>
+			<Description>Allows the unit to cast Fracture</Description>
+			<Icon>T_Fracture_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_Fracture_Ability</StrVal>
+				<Provides>Target unit loses 25% of his Hit Points and Defense unless they resist</Provides>
+			</GameModifier>
+			<CombatRating>25</CombatRating>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<IsCombatAbility>1</IsCombatAbility>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_Spell_SyphonStrengthAbility">
+		<AbilityBonusOption InternalName="JB_Spell_SyphonStrength">
+			<DisplayName>Syphon Strength</DisplayName>
+			<Description>Allows the unit to cast Syphon Strength</Description>
+			<Icon>T_SyphonStrength_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_SyphonStrength_Ability</StrVal>
+				<Provides>The victim's Attack is lowered by 25% and the caster's Attack is increased by 25% unless the victim resists</Provides>
+			</GameModifier>
+			<CombatRating>25</CombatRating>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<IsCombatAbility>1</IsCombatAbility>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_Spell_LeechAbility">
+		<AbilityBonusOption InternalName="JB_Spell_Leech">
+			<DisplayName>Leech</DisplayName>
+			<Description>Allows the unit to cast Leech</Description>
+			<Icon>T_SyphonStrength_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_Leech_Ability</StrVal>
+				<Provides>Transfers 1 hit point per caster level from enemy unit to the caster unless resisted</Provides>
+			</GameModifier>
+			<CombatRating>5</CombatRating>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<IsCombatAbility>1</IsCombatAbility>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>     
+	<AbilityBonus InternalName="JB_ForestDwellerAbility">
+		<AbilityBonusOption InternalName="JB_ForestDweller">
+			<DisplayName>Forest Dweller</DisplayName>
+			<Description>May pass through Forest terrain without any penalty</Description>
+			<Icon>JB_Ability_ForestDweller_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>MovementCostOverRide</Attribute>
+				<StrVal>Forest</StrVal>
+				<Value>8</Value>
+				<Provides>No Movement penalty in Forests</Provides>
+			</GameModifier>
+			<IsCombatAbility>0</IsCombatAbility>
+			<Type>Army</Type>				
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>		
+	<AbilityBonus InternalName="JB_SpriteSparkAbility">
+		<AbilityBonusOption InternalName="JB_SpriteSpark">
+			<DisplayName>Sprite Spark</DisplayName>
+			<Description>Does 1 (+1 per level) lightning damage to the victim.  This damage is multipled by the amount of units casting.</Description>
+			<Icon>T_SoulSpark_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_SpriteSpark_Ability</StrVal>
+				<Provides>Does 1 (+1 per level) lightning damage to the victim.  This damage is multipled by the amount of units casting.</Provides>
+			</GameModifier>
+			<CombatRating>5</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>		
+	<!--<AbilityBonus InternalName="JB_Blood_ShadowCreatureAbility">
+		<AbilityBonusOption InternalName="JB_Blood_ShadowCreature">
+			<DisplayName>Shadow Creature</DisplayName>
+			<Description>+10 Dodge, Immune to Poison and Counterattack, +5 Initiative on first turn of combat</Description>
+			<Icon>JB_Ability_BloodNightwalkAsassin_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Dodge</StrVal>
+				<Value>10</Value>
+				<Provides>+10 to Dodge</Provides>
+			</GameModifier>	
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>CannotBeCounterattacked</Attribute>
+				<Provides>Unit never gets Counterattacked</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ResistPoison</StrVal>
+				<Value>100</Value>
+				<Provides>Unit takes no damage from Poison</Provides>
+			</GameModifier>		
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_CombatSpeed</StrVal>
+				<Value>5</Value>
+				<Provides>+5 Initiative for the first turn of combat</Provides>
+				<xActions>1</xActions>
+			</GameModifier>			
+			<Type>Defensive</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>-->
+	<AbilityBonus InternalName="JB_QuickOffTheMarkAbility"> 
+		<AbilityBonusOption InternalName="JB_QuickOffTheMark">
+			<DisplayName>Quick off the Mark</DisplayName>
+			<Description>+2 Initiative and +1 Move on the first turn of combat</Description>
+			<Icon>JB_Ability_QuickOfTheMark_Icon.png</Icon>	
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_CombatSpeed</StrVal>
+				<Value>2</Value>
+				<Provides>+2 Initiative for the first turn of combat</Provides>
+				<xActions>1</xActions>
+			</GameModifier>	
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Move for the first turn of combat</Provides>
+				<xActions>1</xActions>
+			</GameModifier>
+			<CombatRating>5</CombatRating>
+			<Type>Aggressive</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_Spell_ShadowJumpAbility">
+		<AbilityBonusOption InternalName="JB_Spell_ShadowJump">
+			<DisplayName>Shadow Jump</DisplayName>
+			<Description>Allows the unit to cast Shadow Jump</Description>
+			<Icon>JB_ShadowJump_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_ShadowJump_Ability</StrVal>
+				<Provides>Teleport to a location and take 1 further action immediately.</Provides>
+			</GameModifier>
+			<CombatRating>5</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_ForestDwellerAbility">
+		<AbilityBonusOption InternalName="JB_ForestDweller">
+			<DisplayName>Forest Dweller</DisplayName>
+			<Description>May pass through Forest terrain without any penalty</Description>
+			<Icon>JB_Ability_ForestDweller_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>MovementCostOverRide</Attribute>
+				<StrVal>Forest</StrVal>
+				<Value>8</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>May pass through Forest terrain without any penalty</Provides>
+			</GameModifier>
+			<IsCombatAbility>0</IsCombatAbility>
+			<Type>Army</Type>				
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>		
+	<AbilityBonus InternalName="JB_Spell_OakformAbility">
+		<AbilityBonusOption InternalName="JB_Spell_Oakform">
+			<DisplayName>Oakform</DisplayName>
+			<Description>+5 Defense and cannot be knocked prone, but Movement reduced to 1.  Lasts for 3 turns.</Description>
+			<Icon>JB_Ability_Oakform_Icon.png</Icon>	
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_Oakform_Ability</StrVal>
+				<Provides>+5 Defense and cannot be knocked prone, but Movement reduced to 1.  Lasts for 3 turns.</Provides>
+			</GameModifier>		
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>				
+	<AbilityBonus InternalName="JB_Spell_RootCageAbility">
+		<AbilityBonusOption InternalName="JB_Spell_RootCage">
+			<DisplayName>Root Cage</DisplayName>
+			<Description>Target enemy is immobilized for 3 rounds unless they resist</Description>
+			<Icon>JB_Ability_RootCage_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_RootCage_Ability</StrVal>
+				<Provides>Target enemy is immobilized for 3 rounds unless they resist</Provides>
+			</GameModifier>
+			<CombatRating>25</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_Spell_RootCageAreaAbility">
+		<AbilityBonusOption InternalName="JB_Spell_RootCageArea">
+			<DisplayName>Tangleroots</DisplayName>
+			<Description>Target enemies are immobilized for 3 rounds unless they resist</Description>
+			<Icon>JB_Ability_RootCage_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_RootCage_Ability</StrVal>
+				<Provides>Target enemies are immobilized for 3 rounds unless they resist</Provides>
+			</GameModifier>
+			<CombatRating>50</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_CallForestBeastAbility">
+		<AbilityBonusOption InternalName="JB_CallForestBeast">
+			<DisplayName>Call Forest Beast</DisplayName>
+			<Description>Summons a bear or great wolf to aid you in battle</Description>
+			<Icon>JB_Spell_SummonForestBeast_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_CallForestBeast_Ability</StrVal>
+				<Provides>Summons a bear or great wolf to aid you in battle</Provides>
+			</GameModifier>
+			<CombatRating>25</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_Spell_ShadowsGraspAbility">
+		<AbilityBonusOption InternalName="JB_Spell_ShadowsGrasp">
+			<DisplayName>Shadows Grasp</DisplayName>
+			<Description>Target feels the cold touch of the Shadow Planes, taking 4 (plus half caster's level) damage and losing 10% from their Attack, Dodge and Initiative.</Description>
+			<Icon>JB_ShadowsGrasp_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_ShadowsGrasp_Ability</StrVal>
+				<Provides>Target feels the cold touch of the Shadow Planes, taking 4 (plus half caster's level) damage and losing 10% from their Attack, Dodge and Initiative.</Provides>
+			</GameModifier>
+			<CombatRating>10</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_Spell_FadeAbility">
+		<AbilityBonusOption InternalName="JB_Spell_Fade">
+			<DisplayName>Fade</DisplayName>
+			<Description>Target unit loses the caster's level (+1 per shadow power) health each turn, has physical Attack halved but gains 50% physical resistance.  Lasts 10 turns.</Description>
+			<Icon>JB_Fade_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_Fade_Ability</StrVal>
+				<Provides>Target unit loses the caster's level (+1 per shadow power) health each turn, has physical Attack halved but gains 50% physical resistance.  Lasts 10 turns.</Provides>
+			</GameModifier>
+			<CombatRating>25</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_Spell_MindslicingAbility">
+		<AbilityBonusOption InternalName="JB_Spell_Mindslicing">
+			<DisplayName>Mindslicing</DisplayName>
+			<Description>Does 10 (+1 per level) damage and target unit loses next turn.  Half damage if the victim resists.</Description>
+			<Icon>JB_Mindslicing_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_Mindslicing_Ability</StrVal>
+				<Provides>Does 10 (+1 per level) damage and target unit loses next turn.  Half damage if the victim resists.</Provides>
+			</GameModifier>
+			<CombatRating>25</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_Spell_RayOfDarkness_NoCooldownAbility">
+		<AbilityBonusOption InternalName="JB_Spell_RayOfDarkness_NoCooldown">
+			<DisplayName>Ray Of Darkness</DisplayName>
+			<Description>A ray of darkness strikes the victim doing double the caster's level damage and reducing their Dodge by 5.</Description>
+			<Icon>JB_MMShadow1_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_RayOfDarkness_NoCooldown_Ability</StrVal>
+				<Provides>A ray of darkness strikes the victim doing double the caster's level damage and reducing their Dodge by 5.</Provides>
+			</GameModifier>
+			<CombatRating>25</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>		
+	<AbilityBonus InternalName="JB_Spell_SpiritStrike_NoCooldownAbility">
+		<AbilityBonusOption InternalName="JB_Spell_SpiritStrike_NoCooldown">
+			<DisplayName>Spirit Strike</DisplayName>
+			<Description>Does 1 (+1 per level) lightning damage to the victim.  This damage is multipled by the amount of units casting.</Description>
+			<Icon>JB_T_SpiritSpark_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_SpiritStrike_NoCooldown_Ability</StrVal>
+				<Provides>Does 1 (+1 per level) lightning damage to the victim.  This damage is multipled by the amount of units casting.</Provides>
+			</GameModifier>
+			<CombatRating>25</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>				
+	<AbilityBonus InternalName="JB_Spell_ArcaneArrowAbility">
+		<AbilityBonusOption InternalName="JB_Spell_ArcaneArrow">
+			<DisplayName>Arcane Arrow</DisplayName>
+			<Description>An arcane arrow strikes the victim doing 9 + caster's level damage.</Description>
+			<Icon>JB_MMBattle1.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_ArcaneArrow_Ability</StrVal>
+				<Provides>An arcane arrow strikes the victim doing 9 + caster's level damage.</Provides>
+			</GameModifier>
+			<CombatRating>5</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_Spell_SoulSpearAbility">
+		<AbilityBonusOption InternalName="JB_Spell_SoulSpear">
+			<DisplayName>Soul Spear</DisplayName>
+			<Description>A spear of light strikes the victim doing double the caster's level damage and reducing their Attack by 2.</Description>
+			<Icon>JB_MMLife1_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_SoulSpear_Ability</StrVal>
+				<Provides>A spear of light strikes the victim doing double the caster's level damage and reducing their Attack by 2.</Provides>
+			</GameModifier>
+			<CombatRating>5</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>		
+	<AbilityBonus InternalName="JB_Spell_IcyBlastAbility">
+		<AbilityBonusOption InternalName="JB_Spell_IcyBlast">
+			<DisplayName>Icy Blast</DisplayName>
+			<Description>An blast of cold strikes the victim doing 7 + caster's level damage and reducing their Initiative by 2.</Description>
+			<Icon>JB_MMWater1_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_IcyBlast_Ability</StrVal>
+				<Provides>An blast of cold strikes the victim doing 7 + caster's level damage and reducing their Initiative by 2.</Provides>
+			</GameModifier>
+			<CombatRating>5</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_SidestepAbility">
+		<AbilityBonusOption InternalName="JB_Sidestep">
+			<DisplayName>Sidestep</DisplayName>
+			<Description>Move to an adjacent unoccupied square and take 1 further action immediately.  Grants +10 Dodge until subsequent turn.</Description>
+			<Icon>JB_Ability_Sidestep_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_Sidestep_Ability</StrVal>
+				<Provides>Move to an adjacent unoccupied square and take 1 further action immediately.  Grants +10 Dodge until subsequent turn.</Provides>
+			</GameModifier>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>						
+	<AbilityBonus InternalName="JB_Trigger_MassHopelessness_SeraphAngelAbility">
+		<AbilityBonusOption InternalName="JB_Trigger_MassHopelessness_SeraphAngel">
+			<DisplayName>Mass Hopelessness</DisplayName>
+			<Description>Mass Hopelessness is triggered against enemy units when combat begins</Description>
+			<Icon>JB_Hopelessness.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>BattleAutoCastSpell</Attribute>
+				<StrVal>JB_MassHopelessness_AngelSeraph</StrVal>
+				<Value>100</Value>
+				<Provides>Mass Hopelessness is triggered against enemy units when combat begins (halves Attack of all enemy units for 3 turns unless they resist).</Provides>
+			</GameModifier>
+			<CombatRating>75</CombatRating>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>		
+	<AbilityBonus InternalName="JB_Spell_DiamondAuraAbility">
+		<AbilityBonusOption InternalName="JB_Spell_DiamondAura">
+			<DisplayName>Diamond Aura</DisplayName>
+			<Description>Allows the unit to cast Diamond Aura</Description>
+			<Icon>JB_DiamondAura_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_DiamondAura_Ability</StrVal>
+				<Provides>Friendly units within 1 tile of the caster are immune to physical damage for 3 turns.</Provides>
+			</GameModifier>
+			<CombatRating>25</CombatRating>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>			
+	<AbilityBonus InternalName="JB_Maul_CR25_Ability">
+		<AbilityBonusOption InternalName="JB_Maul_CR25">
+			<DisplayName>Maul</DisplayName>
+			<Description>Unit continues to attack until it misses, each attack has a cumulative -15% to Accuracy</Description>
+			<Icon>Ability_Maul_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_MaulChance</StrVal>
+				<Value>100</Value>
+				<Provides>Unit continues to attack until it misses, each attack has a cumulative -15% to Accuracy</Provides>
+			</GameModifier>
+			<CombatRating>25</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Aggressive</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_HuntsmanAbility">
+		<AbilityBonusOption InternalName="JB_Huntsman">
+			<DisplayName>Master Huntsman</DisplayName>
+			<Description>+50% Attack vs Beasts</Description>
+			<Icon>Ability_Hunter_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Attack_Boost</StrVal>
+				<StrVal2>UnitStat_BG_IsBeast</StrVal2>
+				<Multiplier>1.5</Multiplier>
+				<Provides>+50% Attack vs Beasts unless user is Beasts</Provides>
+				<vsHigher>1</vsHigher>
+			</GameModifier>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Aggressive</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>				
+    <AbilityBonus InternalName="JB_AssassinsMarkAbility">
+        <AbilityBonusOption InternalName="JB_AssassinsMark">
+            <DisplayName>Assassins Mark</DisplayName>
+            <Description>Unit suffers +25% damage from unit with the Mark ability</Description>
+            <Icon>JB_Ability_DeathMark_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>SetUnitStat</Attribute>
+                <StrVal>UnitStat_JB_IsMarked</StrVal>
+				<DisplayName>Marked for Death</DisplayName>
+				<Provides>Unit suffers +25% damage from unit with the Death Mark ability</Provides>
+				<Duration>-1</Duration>
+                <Value>1</Value>
+            </GameModifier>
+            <Type>Weakness</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>		
+	<AbilityBonus InternalName="JB_Spell_WebOfShadowsAbility">
+		<AbilityBonusOption InternalName="JB_Spell_WebOfShadows">
+			<DisplayName>Web of Shadows</DisplayName>
+			<Description>Target enemy is immobilized (Move and Dodge reduced to 0, -25% Accuracy) for 3 rounds unless they resist.</Description>
+			<Icon>JB_WebShadows_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_WebOfShadows_Ability</StrVal>
+				<Provides>Target enemy is immobilized (Move and Dodge reduced to 0, -25% Accuracy) for 3 rounds unless they resist.</Provides>
+			</GameModifier>
+			<CombatRating>25</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_Spell_ObscuringDarknessAbility">
+		<AbilityBonusOption InternalName="JB_Spell_ObscuringDarkness">
+			<DisplayName>Obscuring Darkness</DisplayName>
+			<Description>Summons a black mist that surrounds enemy units obscurring their vision, causing -30% Accuracy but making them harder to hit (+15% dodge and a further +15% vs. ranged)</Description>
+			<Icon>JB_ShadowMist_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_ObscuringDarkness_Ability</StrVal>
+				<Provides>Summons a black mist that surrounds enemy units obscurring their vision, causing -30% Accuracy but making them harder to hit (+15% dodge and a further +15% vs. ranged).</Provides>
+			</GameModifier>
+			<CombatRating>25</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_ResistLightningAbility">
+		<AbilityBonusOption InternalName="JB_ResistLightning">
+			<DisplayName>Resist Lightning</DisplayName>
+			<Description>Halves Lightning damage</Description>
+			<Icon>JB_Ability_ResistLightning_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ResistLightning</StrVal>
+				<Value>50</Value>
+			</GameModifier>
+			<CombatRating>5</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Defensive</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_Spell_WrathOfNatureAreaAbility">
+		<AbilityBonusOption InternalName="JB_Spell_WrathOfNatureArea">
+			<DisplayName>Mass Wrath of Nature</DisplayName>
+			<Description>An arcane blast strikes the victim doing 6 + caster's level lightning damage and reducing their Resistance to Fire, Water, Lightning and Poison by 5 (+1 per level).</Description>
+			<Icon>JB_MultiMNature1_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_WrathOfNatureArea_Ability</StrVal>
+				<Provides>An arcane blast strikes the victim doing 6 + caster's level lightning damage and reducing their Resistance to Fire, Water, Lightning and Poison by 5 (+1 per level).</Provides>
+			</GameModifier>
+			<CombatRating>50</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_ThinkerAbility">
+		<AbilityBonusOption InternalName="JB_Thinker">
+			<DisplayName>Thinker</DisplayName>
+			<Description>-5% Unrest in the city this unit is in, +2 Initiative for the first turn of combat</Description>
+			<Icon>JB_Ability_Thinker_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Unrest</Attribute>
+				<Value>-5</Value>
+				<Provides>-5% Unrest in the city this unit is in</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_CombatSpeed</StrVal>
+				<Value>2</Value>
+				<Provides>+2 Initiative for the first turn of combat</Provides>
+				<xActions>1</xActions>
+			</GameModifier>	
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_CleverAbility">
+		<AbilityBonusOption InternalName="JB_Clever">
+			<DisplayName>Clever</DisplayName>
+			<Description>+10% Experience, +2 Initiative for the first turn of combat</Description>
+			<Icon>JB_Ability_Clever_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ExpBonus</StrVal>
+				<Value>10</Value>
+				<Provides>+10% Experience</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_CombatSpeed</StrVal>
+				<Value>2</Value>
+				<Provides>+2 Initiative for the first turn of combat</Provides>
+				<xActions>1</xActions>
+			</GameModifier>	
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_Spell_BullChargeAbility">
+		<AbilityBonusOption InternalName="JB_Spell_BullCharge">
+			<DisplayName>Bull Charge</DisplayName>
+			<Description>Allows the unit to use the Bull Charge ability</Description>
+			<Icon>JB_Ability_BullCharge_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_BullCharge_Ability</StrVal>
+				<Provides>Charge through an adjacent enemy unit, dealing damage equal to your attack and knocking the target prone.</Provides>
+			</GameModifier>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Aggressive</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_Spell_DivineInfernoAbility">
+		<AbilityBonusOption InternalName="JB_Spell_DivineInferno">
+			<DisplayName>Divine Inferno</DisplayName>
+			<Description>Allows the unit to cast Divine Inferno</Description>
+			<Icon>JB_DivineInferno_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_DivineInferno_Ability</StrVal>
+				<Provides>Divine Inferno does 8 (+2 per level of the caster) lightning damage to units within a 1 tile radius.    Demons and Undead suffer double damage.</Provides>
+			</GameModifier>
+			<CombatRating>25</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_ArmorPiercingAbility">
+		<AbilityBonusOption InternalName="JB_ArmorPiercing">
+			<DisplayName>Armor Piercing</DisplayName>
+			<Description>Ignores 50% of the victim's Defense</Description>
+			<Icon>JB_Ability_ArmorPiercing_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ArmorPierce</StrVal>
+				<Value>50</Value>
+				<Provides>Ignores 50% of the victim's Defense</Provides>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_QuickStrikeAbility">
+		<AbilityBonusOption InternalName="JB_QuickStrike">
+		<DisplayName>Quick Strike</DisplayName>
+			<Description>Allows the unit to use the Quick Strike ability, which strikes the target with an attack that deals 75% of the attacker's normal damage, then immediately take another action.</Description>
+			<Icon>JB_Ability_QuickStrike_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_QuickStrike</StrVal>
+				<Provides>Unit strikes the target with an attack that deals 75% of the attacker's normal damage, then immediately takes another action.</Provides>
+			</GameModifier>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>			
+	<AbilityBonus InternalName="JB_MaimingStrikeAbility">
+		<AbilityBonusOption InternalName="JB_MaimingStrike">
+			<DisplayName>Maiming Strike</DisplayName>
+			<Description>Attack that does normal damage and and reduces target's Attack by 25%.</Description>
+			<Icon>JB_Ability_MaimingStrike_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_MaimingStrike_Ability</StrVal>
+				<Provides>Attack that does normal damage and reduces target's Attack by 25%</Provides>
+			</GameModifier>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+    <AbilityBonus InternalName="JB_Trigger_FlameWaveAbility">
+        <AbilityBonusOption InternalName="JB_Trigger_FlameWave">
+            <DisplayName>Flame Wave</DisplayName>
+            <Description>Flame Wave is triggered when combat begins</Description>
+            <Icon>T_Flamewave_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>BattleAutoCastSpell</Attribute>
+                <StrVal>JB_FlameWave_Ability</StrVal>
+                <Value>100</Value>
+                <Provides>Flame Wave is triggered when combat begins</Provides>
+            </GameModifier>
+            <CombatRating>25</CombatRating>
+            <Type>Ability</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>	
+	<AbilityBonus InternalName="JB_Spell_SyphonStrengthAbility">
+		<AbilityBonusOption InternalName="JB_Spell_SyphonStrength">
+			<DisplayName>Syphon Strength</DisplayName>
+			<Description>Allows the unit to cast Syphon Strength</Description>
+			<Icon>T_SyphonStrength_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_SyphonStrength_Ability</StrVal>
+				<Provides>The victim's Attack is lowered by 25% and the caster's Attack is increased by 25% unless the victim resists.</Provides>
+			</GameModifier>
+			<CombatRating>50</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_Spell_BrimstoneFirestormAbility">
+		<AbilityBonusOption InternalName="JB_Spell_BrimstoneFirestorm">
+			<DisplayName>Brimstone Firestorm</DisplayName>
+			<Description>Allows the unit to cast Brimstone Firestorm</Description>
+			<Icon>JB_Brimstone Firestorm_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_BrimstoneFirestorm_Ability</StrVal>
+				<Provides>Brimstone Firestorm 1 fire damage and 1 infernal damage per level of the caster to units within a 1 tile radius.</Provides>
+			</GameModifier>
+			<CombatRating>25</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_Spell_DireAfflictionAbility">
+		<AbilityBonusOption InternalName="JB_Spell_DireAffliction">
+			<DisplayName>Dire Affliction</DisplayName>
+			<Description>Allows the unit to cast Dire Affliction</Description>
+			<Icon>JB_T_DireAffliction_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_DireAffliction_Ability</StrVal>
+				<Provides>Target loses 10% (+1 per caster level) Accuracy and Spell Mastery.</Provides>
+			</GameModifier>
+			<CombatRating>5</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_Spell_IncendiaryArrowAreaAbility">
+		<AbilityBonusOption InternalName="JB_Spell_IncendiaryArrowArea">
+			<DisplayName>Mass Incendiary Arrow</DisplayName>
+			<Description>A fiery dart strikes units within a 1 tile radius doing 7 + caster's level fire damage, plus a further 2 fire damage per round for the next 2 rounds.</Description>
+			<Icon>JB_MultiMFire1_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_IncendiaryArrowArea_Ability</StrVal>
+				<Provides>A fiery dart strikes units within a 1 tile radius doing 7 + caster's level fire damage, plus a further 2 fire damage per round for the next 2 rounds.</Provides>
+			</GameModifier>
+			<CombatRating>25</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>		
+	<AbilityBonus InternalName="JB_Spell_MantleOfFireAbility">
+		<AbilityBonusOption InternalName="JB_Spell_MantleOfFire">
+			<DisplayName>Mantle of Fire</DisplayName>
+			<Description>Wreaths the target in flames, doing 6 fire damage to anyone who attacks him.</Description>
+			<Icon>S_MantleofFire_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_MantleOfFire_Ability</StrVal>
+				<Provides>Wreaths the target in flames, doing 6 fire damage to anyone who attacks him.</Provides>
+			</GameModifier>
+			<CombatRating>5</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>		
+	<AbilityBonus InternalName="JB_BurningHands_Ability">
+		<AbilityBonusOption InternalName="JB_Spell_BurningHands">
+			<DisplayName>Burning Hands</DisplayName>
+			<Description>3 adjacent enemies are blasted with heat, taking 8 (+2 per fire shard) in fire damage.</Description>
+			<Icon>T_BurningHands_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_BurningHands_Ability</StrVal>
+				<Provides>3 adjacent enemies are blasted with heat, taking 8 (+2 per fire shard) in fire damage.</Provides>
+			</GameModifier>
+			<CombatRating>5</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>	
+	<AbilityBonus InternalName="JB_Spell_AshCloud_Ability">
+		<AbilityBonusOption InternalName="JB_Spell_AshCloud">
+			<DisplayName>Ash Cloud</DisplayName>
+			<Description>Enemies in a 1 tile radius are engulfed in a cloud of ash, reducing their Accuracy and Dodge by 25% for 5 turns, unless they resist.</Description>
+			<Icon>JB_T_AshCloud_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_AshCloud_Ability</StrVal>
+				<Provides>Enemies in a 1 tile radius are engulfed in a cloud of ash, reducing their Accuracy and Dodge by 25% for 5 turns, unless they resist.</Provides>
+			</GameModifier>
+			<CombatRating>5</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>	
+	<AbilityBonus InternalName="JB_Spell_Doombolt_Ability">
+		<AbilityBonusOption InternalName="JB_Spell_Doombolt">
+			<DisplayName>Doombolt</DisplayName>
+			<Description>A bolt of doom strikes the victim doing double the caster's level damage and reducing their Attack and Initiative by 1.</Description>
+			<Icon>JB_MMDeath1_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_Doombolt_Ability</StrVal>
+				<Provides>A bolt of doom strikes the victim doing double the caster's level damage and reducing their Attack and Initiative by 1.</Provides>
+			</GameModifier>
+			<CombatRating>5</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>	
+    <AbilityBonus InternalName="JB_RadiantLightAbility">
+        <AbilityBonusOption InternalName="JB_RadiantLight">
+            <DisplayName>Radiant Light</DisplayName>
+            <Description>All enemies suffer a -25% to Accuracy and Dodge for 3 turns, unless they resist.</Description>
+            <Icon>JB_T_RadiantLight_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>UnlockCombatAbility</Attribute>
+                <StrVal>JB_RadiantLight_Ability</StrVal>
+                <Provides>All enemies suffer a -25% to Accuracy and Dodge for 3 turns, unless they resist</Provides>
+            </GameModifier>
+            <CombatRating>25</CombatRating>
+            <Type>Ability</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>	
+    <AbilityBonus InternalName="JB_Spell_AbhorrentInfusionAbility">
+        <AbilityBonusOption InternalName="JB_Spell_AbhorrentInfusion">
+            <DisplayName>Abhorrent Infusion</DisplayName>
+            <Description>Transfers 4 hit points (+1 per caster level) from all enemies to the caster.  Damage is halved if the enemy resists.</Description>
+            <Icon>JB_T_AbhorrentInfusion_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>UnlockCombatAbility</Attribute>
+                <StrVal>JB_AbhorrentInfusion_Ability</StrVal>
+                <Provides>Transfers 4 hit points (+1 per caster level) from all enemies to the caster.  Damage is halved if the enemy resists.</Provides>
+            </GameModifier>
+            <CombatRating>25</CombatRating>
+            <Type>Ability</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>	
+    <AbilityBonus InternalName="JB_Spell_CurseOfAnguishAbility">
+        <AbilityBonusOption InternalName="JB_Spell_CurseOfAnguish">
+            <DisplayName>Curse Of Anguish</DisplayName>
+            <Description>Target suffers -1 Move and -50% Attack for 3 turns, unless resisted.</Description>
+            <Icon>JB_T_CurseOfDoubt_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>UnlockCombatAbility</Attribute>
+                <StrVal>JB_CurseOfAnguish_Ability</StrVal>
+                <Provides>Target suffers -1 Move and -50% Attack for 3 turns, unless resisted.</Provides>
+            </GameModifier>
+            <CombatRating>5</CombatRating>
+            <Type>Ability</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>	
+    <AbilityBonus InternalName="JB_AntiMagicAbility">
+        <AbilityBonusOption InternalName="JB_AntiMagic">
+            <DisplayName>Anti-Magic</DisplayName>
+            <Description>+20 to the Army's Spell Resistance</Description>
+            <Icon>JB_Ability_AntiMagic_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustArmyStat</Attribute>
+                <StrVal>UnitStat_MagicResist</StrVal>
+                <Value>20</Value>
+                <Provides>+20 to the Army's Spell Resistance</Provides>
+            </GameModifier>
+            <Type>Army</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>    
+	<AbilityBonus InternalName="JB_AbyssalHeraldAbility">
+        <AbilityBonusOption InternalName="JB_AbyssalHerald">
+            <DisplayName>Abyssal Herald</DisplayName>
+            <Description>+1 to the Army's Infernal Attack</Description>
+            <Icon>JB_Ability_AbyssalHerald_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustArmyStat</Attribute>
+                <StrVal>UnitStat_JB_Attack_Infernal</StrVal>
+                <Value>1</Value>
+                <Provides>+1 to the Army's Infernal Attack</Provides>
+            </GameModifier>
+            <Type>Army</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	<AbilityBonus InternalName="JB_Spell_Diamondskin_SelfAbility">
+        <AbilityBonusOption InternalName="JB_Spell_Diamondskin_Self">
+			<DisplayName>Diamondskin</DisplayName>
+            <Description>Unit is immune to physical damage for 3 turns</Description>
+            <Icon>T_Diamondskin_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>UnlockCombatAbility</Attribute>
+                <StrVal>Diamondskin_Self</StrVal>
+                <Provides>Unit is immune to physical damage for 3 turns.</Provides>
+            </GameModifier>
+            <Type>Ability</Type>
+            <CombatRating>25</CombatRating>			 
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="JB_Spell_InfernalBreathAbility">
+        <AbilityBonusOption InternalName="JB_Spell_InfernalBreath">
+            <DisplayName>Infernal Breath</DisplayName>
+            <Description>Target unit takes the caster's attack strength in infernal damage</Description>
+            <Icon>Ability_FireBreath_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>UnlockCombatAbility</Attribute>
+                <StrVal>JB_InfernalBreath</StrVal>
+                <Provides>Ranged attack that does the caster's Attack in Infernal damage</Provides>
+            </GameModifier>
+            <CombatRating>100</CombatRating>
+            <IsCombatAbility>1</IsCombatAbility>
+            <Type>Ability</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>	    
+	<AbilityBonus InternalName="JB_SpiritGuardianAbility">
+        <AbilityBonusOption InternalName="JB_SpiritGuardian">
+            <DisplayName>Spirit Guardian</DisplayName>
+            <Description>+25% to the Army's resistance vs. Physical attacks</Description>
+            <Icon>JB_Ability_SpiritGuardian_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustArmyStat</Attribute>
+                <StrVal>UnitStat_ResistPierce</StrVal>
+                <Value>25</Value>
+                <Provides>+25% to the Army's resistance vs. Physical attacks</Provides>
+            </GameModifier>
+            <Type>Army</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	<AbilityBonus InternalName="JB_FerociousAbility">
+		<AbilityBonusOption InternalName="JB_Ferocious">
+		<DisplayName>Ferocious</DisplayName>
+			<Description>+10% chance to Maul when attacking</Description>
+			<Icon>JB_Ability_Ferocious_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_MaulChance</StrVal>
+                <Value>10</Value>
+                <Provides>+10% chance to Maul when attacking</Provides>
+            </GameModifier>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Aggressive</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>			
+	<AbilityBonus InternalName="JB_Spell_RayOfDarknessAreaAbility">
+		<AbilityBonusOption InternalName="JB_Spell_RayOfDarknessArea">
+			<DisplayName>Mass Ray of Darkness</DisplayName>
+			<Description>A ray of darkness strikes the victim doing double the caster's level damage and reducing their Dodge by 5.</Description>
+			<Icon>JB_MultiMShadow1_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_RayOfDarknessArea_Ability</StrVal>
+				<Provides>A ray of darkness strikes the victim doing double the caster's level damage and reducing their Dodge by 5.</Provides>
+			</GameModifier>
+			<CombatRating>25</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>		
+	<AbilityBonus InternalName="JB_BerserkerAbility">
+		<AbilityBonusOption InternalName="JB_Berserker">
+			<DisplayName>Berserker</DisplayName>
+			<Description>Unit autmatically goes Berserk in tactical combat giving them +2 to Attack and Initiative but the unit attacks enemies without the player's direction.  Berserk units never cast spells.</Description>
+			<Icon>JB_Ability_Berserker_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>BattleAutoCastSpell</Attribute>
+				<StrVal>Berserk_Self</StrVal>
+                <Value>100</Value>
+				<Provides>Unit autmatically goes Berserk in tactical combat giving them +2 to Attack and Initiative but the unit attacks enemies without the player's direction.  Berserk units never cast spells.</Provides>
+			</GameModifier>
+			<CombatRating>5</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Aggressive</Type>				
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>	
+	<AbilityBonus InternalName="JB_Spell_TameAbility">
+		<AbilityBonusOption InternalName="JB_Spell_Tame">
+			<DisplayName>Tame</DisplayName>
+			<Description>Take control of the targeted Beast unless it resists.</Description>
+			<Icon>T_Tame_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_Tame_Ability</StrVal>
+				<Provides>Take control of the targeted Beast unless it resists.</Provides>
+			</GameModifier>
+			<CombatRating>5</CombatRating>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_Spell_JadeGriffinAbility">
+		<AbilityBonusOption InternalName="JB_Spell_JadeGriffin">
+			<DisplayName>Griffins Aegis</DisplayName>
+			<Description>Target unit gains +25% resistance to physical damage and +1 counterattack.</Description>
+			<Icon>JB_T_JadeGriffin_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_JadeGriffin_Ability</StrVal>
+				<Provides>Target unit gains +25% resistance to physical damage and +1 counterattack.</Provides>
+			</GameModifier>
+			<CombatRating>5</CombatRating>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_Spell_LifeLeechAbility">
+		<AbilityBonusOption InternalName="JB_Spell_LifeLeech">
+			<DisplayName>Life Leech</DisplayName>
+			<Description>Transfers 3 hit points (multiplied by the amount of units casting) from enemy unit to the casting unit.  Can be resisted.</Description>
+			<Icon>JB_LifeLeech_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_LifeLeech_Ability</StrVal>
+				<Provides>Transfers 3 hit points (multiplied by the amount of units casting) from enemy unit to the casting unit.  Can be resisted.</Provides>
+			</GameModifier>
+			<CombatRating>5</CombatRating>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>	
+	<AbilityBonus InternalName="JB_Spell_DeathlyBlastAbility">
+		<AbilityBonusOption InternalName="JB_Spell_DeathlyBlast">
+			<DisplayName>Deathly Blast</DisplayName>
+			<Description>Inflicts 4 infernal damage multiplied by the number of casting units.  If the unit is killed a Skeleton is raised in their place.  Can be resisted.</Description>
+			<Icon>JB_DeathBurst_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_DeathlyBlast_Ability</StrVal>
+				<Provides>Inflicts 4 infernal damage multiplied by the number of casting units.  If the unit is killed a Skeleton is raised in their place.  Can be resisted.</Provides>
+			</GameModifier>
+			<CombatRating>5</CombatRating>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>	
+	<AbilityBonus InternalName="JB_Trigger_MassBleed_BloodAngelAbility">
+		<AbilityBonusOption InternalName="JB_Trigger_MassBleed_BloodAngel">
+			<DisplayName>Blood Rites</DisplayName>
+			<Description>Blood Rites is triggered on all friendly units when combat begins</Description>
+			<Icon>JB_BloodRites_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>BattleAutoCastSpell</Attribute>
+				<StrVal>JB_MassBleed_AngelBlood</StrVal>
+				<Value>100</Value>
+				<Provides>Blood Rites is triggered on all friendly units when combat begins (all friendly units are given the Bleed I & II abilities)</Provides>
+			</GameModifier>
+			<CombatRating>75</CombatRating>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>		
+    <AbilityBonus InternalName="JB_ImmuneToFearAbility">
+        <AbilityBonusOption InternalName="JB_ImmuneToFear">
+            <DisplayName>Immune to Fear</DisplayName>
+            <Description>Immune to Fear</Description>
+            <Icon>JB_ImmuneFear_Icon.png</Icon>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_ImmuneToFear</StrVal>
+					<Provides>Immune to Fear</Provides>
+					<Value>1</Value>
+				</GameModifier>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>ImmuneToFear</Attribute>
+					<Provides>.</Provides>
+				</GameModifier>
+            <IsCombatAbility>1</IsCombatAbility>
+            <Type>Defensive</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="JB_ImmuneToCharmAbility">
+        <AbilityBonusOption InternalName="JB_ImmuneToCharm">
+            <DisplayName>Immune to Charm</DisplayName>
+            <Description>Immune to Charm and Tame effects</Description>
+            <Icon>JB_ImmuneCharm_Icon.png</Icon>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_CannotBeCharmed</StrVal>
+					<Provides>Immune to Charm and Tame effects</Provides>
+					<Value>1</Value>
+				</GameModifier>
+            <IsCombatAbility>1</IsCombatAbility>
+            <Type>Defensive</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	<AbilityBonus InternalName="JB_NoxiousMist_Ability">
+		<AbilityBonusOption InternalName="JB_Spell_NoxiousMist">
+			<DisplayName>Noxious Mist</DisplayName>
+			<Description>A short range attack that covers targeted enemies with a toxic mist, stunning and poisoning them unless resisted</Description>
+			<Icon>JB_Ability_PoisonCloud_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_NoxiousMist_Ability</StrVal>
+				<Provides>A short range attack that covers targeted enemies with a toxic mist, stunning and poisoning them unless resisted.</Provides>
+			</GameModifier>
+			<CombatRating>25</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>25</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>	
+    <AbilityBonus InternalName="JB_Spell_DiamondskinSelfAbility">
+        <AbilityBonusOption InternalName="JB_Spell_DiamondskinSelf">
+            <DisplayName>Diamondskin</DisplayName>
+            <Description>Allows the unit to cast Diamondskin</Description>
+            <Icon>T_Diamondskin_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>UnlockCombatAbility</Attribute>
+                <StrVal>JB_DiamondskinSelf_Ability</StrVal>
+                <Provides>Caster is immune to physical damage for 3 turns</Provides>
+            </GameModifier>
+            <CombatRating>25</CombatRating>
+            <IsCombatAbility>1</IsCombatAbility>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	
+	<!-- Shard Bond Abilities -->
+	<AbilityBonus InternalName="JB_ShardBondAirAbility">
+		<AbilityBonusOption InternalName="JB_ShardBondAir">
+			<DisplayName>Shard Bond: Air</DisplayName>
+			<Description>Shard Bond: Air</Description>
+			<Icon>JB_Ability_AirMancer2_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>AirMana</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Air Power (faction wide)</Provides>
+			</GameModifier>
+			<Type>Defensive</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>	
+	<AbilityBonus InternalName="JB_ShardBondEarthAbility">
+		<AbilityBonusOption InternalName="JB_ShardBondEarth">
+			<DisplayName>Shard Bond: Earth</DisplayName>
+			<Description>Shard Bond: Earth</Description>
+			<Icon>JB_Ability_EarthMancer2_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>EarthMana</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Earth Power (faction wide)</Provides>
+			</GameModifier>
+			<Type>Defensive</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>	
+	<AbilityBonus InternalName="JB_ShardBondFireAbility">
+		<AbilityBonusOption InternalName="JB_ShardBondFire">
+			<DisplayName>Shard Bond: Fire</DisplayName>
+			<Description>Shard Bond: Fire</Description>
+			<Icon>JB_Ability_FireMancer2_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>FireMana</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Fire Power (faction wide)</Provides>
+			</GameModifier>
+			<Type>Defensive</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>	
+	<AbilityBonus InternalName="JB_ShardBondWaterAbility">
+		<AbilityBonusOption InternalName="JB_ShardBondWater">
+			<DisplayName>Shard Bond: Water</DisplayName>
+			<Description>Shard Bond: Water</Description>
+			<Icon>JB_Ability_WaterMancer2_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>WaterMana</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Water Power (faction wide)</Provides>
+			</GameModifier>
+			<Type>Defensive</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>	
+	<AbilityBonus InternalName="JB_ShardBondLifeAbility">
+		<AbilityBonusOption InternalName="JB_ShardBondLife">
+			<DisplayName>Shard Bond: Life</DisplayName>
+			<Description>Shard Bond: Life</Description>
+			<Icon>JB_Ability_LifeMancer2_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>LifeMana</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Life Power (faction wide)</Provides>
+			</GameModifier>
+			<Type>Defensive</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>	
+	<AbilityBonus InternalName="JB_ShardBondDeathAbility">
+		<AbilityBonusOption InternalName="JB_ShardBondDeath">
+			<DisplayName>Shard Bond: Death</DisplayName>
+			<Description>Shard Bond: Death</Description>
+			<Icon>JB_Ability_DeathMancer2_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>DeathMana</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Death Power (faction wide)</Provides>
+			</GameModifier>
+			<Type>Defensive</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>	
+
+	<!-- Call Unit Abilities -->
+	<AbilityBonus InternalName="JB_Spell_CallSummonsAir2Ability">
+		<AbilityBonusOption InternalName="JB_Spell_CallSummonsAir2">
+			<DisplayName>Call Storm Wind Warg</DisplayName>
+			<Description>Summons a Wind Warg (level equal to the caster) in tactical combat.</Description>
+			<Icon>JB_SummonWindWarg_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_CallSummonsAir2_Ability</StrVal>
+				<Provides>Summons a Wind Warg (level equal to the caster) in tactical combat</Provides>
+			</GameModifier>
+			<CombatRating>25</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>75</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>	
+	<AbilityBonus InternalName="JB_Spell_CallSummonsEarth2Ability">
+		<AbilityBonusOption InternalName="JB_Spell_CallSummonsEarth2">
+			<DisplayName>Call Sand Golem</DisplayName>
+			<Description>Summons a Sand Golem (level equal to the caster) in tactical combat.</Description>
+			<Icon>JB_SummonSandGolem_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_CallSummonsEarth2_Ability</StrVal>
+				<Provides>Summons a Sand Golem (level equal to the caster) in tactical combat</Provides>
+			</GameModifier>
+			<CombatRating>25</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>75</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>	
+	<AbilityBonus InternalName="JB_Spell_CallSummonsFire2Ability">
+		<AbilityBonusOption InternalName="JB_Spell_CallSummonsFire2">
+			<DisplayName>Call Ignys</DisplayName>
+			<Description>Summons an Ignys (level equal to the caster) in tactical combat.</Description>
+			<Icon>T_SummonIgnys_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_CallSummonsFire2_Ability</StrVal>
+				<Provides>Summons an Ignys (level equal to the caster) in tactical combat</Provides>
+			</GameModifier>
+			<CombatRating>25</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>75</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>	
+	<AbilityBonus InternalName="JB_Spell_CallSummonsWater2bility">
+		<AbilityBonusOption InternalName="JB_Spell_CallSummonsWater2">
+			<DisplayName>Call River Naja</DisplayName>
+			<Description>Summons a River Naja (level equal to the caster) in tactical combat.</Description>
+			<Icon>JB_SummonRiverNaja_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_CallSummonsWater2_Ability</StrVal>
+				<Provides>Summons a River Naja (level equal to the caster) in tactical combat</Provides>
+			</GameModifier>
+			<CombatRating>25</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>75</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>		
+	<AbilityBonus InternalName="JB_Spell_CallSummonsLife2Ability">
+		<AbilityBonusOption InternalName="JB_Spell_CallSummonsLife2">
+			<DisplayName>Call Celestial Defender</DisplayName>
+			<Description>Summons a Celestial Defender (level equal to the caster) in tactical combat.</Description>
+			<Icon>JB_SummonHavenDefender_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_CallSummonsLife2_Ability</StrVal>
+				<Provides>Summons a Celestial Defender (level equal to the caster) in tactical combat</Provides>
+			</GameModifier>
+			<CombatRating>25</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>75</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>	
+	<AbilityBonus InternalName="JB_Spell_CallSummonsDeath2Ability">
+		<AbilityBonusOption InternalName="JB_Spell_CallSummonsDeath2">
+			<DisplayName>Call Cindercorpse</DisplayName>
+			<Description>Summons a Cindercorpse (level equal to the caster) in tactical combat.</Description>
+			<Icon>JB_SummonCindercorpse_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_CallSummonsDeath2_Ability</StrVal>
+				<Provides>Summons a Cindercorpse (level equal to the caster) in tactical combat</Provides>
+			</GameModifier>
+			<CombatRating>25</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>75</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>		
+	<AbilityBonus InternalName="JB_Spell_CallSummonsAir3Ability">
+		<AbilityBonusOption InternalName="JB_Spell_CallSummonsAir3">
+			<DisplayName>Call Storm Pack Drake</DisplayName>
+			<Description>Summons a Storm Pack Drake (level equal to the caster) in tactical combat.</Description>
+			<Icon>JB_SummonPackDrake_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_CallSummonsAir3_Ability</StrVal>
+				<Provides>Summons a Storm Pack Drake (level equal to the caster) in tactical combat</Provides>
+			</GameModifier>
+			<CombatRating>50</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>100</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>	
+	<AbilityBonus InternalName="JB_Spell_CallSummonsEarth3Ability">
+		<AbilityBonusOption InternalName="JB_Spell_CallSummonsEarth3">
+			<DisplayName>Call Crag Shrill</DisplayName>
+			<Description>Summons a Crag Shrill (level equal to the caster) in tactical combat.</Description>
+			<Icon>JB_SummonCragShrill_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_CallSummonsEarth3_Ability</StrVal>
+				<Provides>Summons a Crag Shrill (level equal to the caster) in tactical combat</Provides>
+			</GameModifier>
+			<CombatRating>50</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>100</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>	
+	<AbilityBonus InternalName="JB_Spell_CallSummonsFire3Ability">
+		<AbilityBonusOption InternalName="JB_Spell_CallSummonsFire3">
+			<DisplayName>Call Inferno Spider</DisplayName>
+			<Description>Summons a Inferno Spider (level equal to the caster) in tactical combat.</Description>
+			<Icon>JB_SummonInfernoSpider_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_CallSummonsFire3_Ability</StrVal>
+				<Provides>Summons a Inferno Spider (level equal to the caster) in tactical combat</Provides>
+			</GameModifier>
+			<CombatRating>50</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>100</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>	
+	<AbilityBonus InternalName="JB_Spell_CallSummonsWater3Ability">
+		<AbilityBonusOption InternalName="JB_Spell_CallSummonsWater3">
+			<DisplayName>Call Sea Skath</DisplayName>
+			<Description>Summons a Sea Skath (level equal to the caster) in tactical combat.</Description>
+			<Icon>JB_SummonSeaSkath_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_CallSummonsWater3_Ability</StrVal>
+				<Provides>Summons a Sea Skath (level equal to the caster) in tactical combat</Provides>
+			</GameModifier>
+			<CombatRating>50</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>100</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>		
+	<AbilityBonus InternalName="JB_Spell_CallSummonsLife3Ability">
+		<AbilityBonusOption InternalName="JB_Spell_CallSummonsLife3">
+			<DisplayName>Call Cyxel</DisplayName>
+			<Description>Summons a Cyxel (level equal to the caster) in tactical combat.</Description>
+			<Icon>JB_SummonLifeCat_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_CallSummonsLife3_Ability</StrVal>
+				<Provides>Summons a Cyxel (level equal to the caster) in tactical combat</Provides>
+			</GameModifier>
+			<CombatRating>50</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>100</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>	
+	<AbilityBonus InternalName="JB_Spell_CallSummonsDeath3Ability">
+		<AbilityBonusOption InternalName="JB_Spell_CallSummonsDeath3">
+			<DisplayName>Call Dire Boar</DisplayName>
+			<Description>Summons a Dire Boar (level equal to the caster) in tactical combat.</Description>
+			<Icon>JB_SummonDireBoar_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_CallSummonsDeath3_Ability</StrVal>
+				<Provides>Summons a Dire Boar (level equal to the caster) in tactical combat</Provides>
+			</GameModifier>
+			<CombatRating>50</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>100</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>		
+	
+	<AbilityBonus InternalName="JB_CallWaterShrillsAbility">
+		<AbilityBonusOption InternalName="JB_CallWaterShrills">
+			<DisplayName>Call Water Shrills</DisplayName>
+			<Description>Summons a random sized unit of Water Shrills (level equal to the caster) in tactical combat.</Description>
+			<Icon>Party_JB_SummonShrillWater_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_CallWaterShrills_Ability</StrVal>
+				<Provides>Summons a random sized unit of Water Shrills (level equal to the caster) in tactical combat</Provides>
+			</GameModifier>
+			<CombatRating>50</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>150</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>	
+	<AbilityBonus InternalName="JB_CallStormWolfPartyAbility">
+		<AbilityBonusOption InternalName="JB_CallStormWolfParty">
+			<DisplayName>Call Storm Wolf Party</DisplayName>
+			<Description>Summons a Storm Wolf Party (level equal to the caster) in tactical combat.</Description>
+			<Icon>JB_SummonWindWarg_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_CallStormWolfParty_Ability</StrVal>
+				<Provides>Summons a Storm Wolf Party (level equal to the caster) in tactical combat</Provides>
+			</GameModifier>
+			<CombatRating>25</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>150</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>		
+	<AbilityBonus InternalName="JB_CallLightbringerAbility">
+		<AbilityBonusOption InternalName="JB_CallLightbringer">
+			<DisplayName>Call Lightbringer</DisplayName>
+			<Description>Allows the unit to cast Call Lightbringer</Description>
+			<Icon>T_SummonLightbringer_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_CallLightbringer_Ability</StrVal>
+				<Provides>Summons a Lightbringer</Provides>
+			</GameModifier>
+			<CombatRating>50</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_SummonShadowDemonsAbility">
+		<AbilityBonusOption InternalName="JB_SummonShadowDemons">
+			<DisplayName>Summon Shadow Demons</DisplayName>
+			<Description>Summons a random sized unit of Shadow Demons (level equal to the caster) in tactical combat.</Description>
+			<Icon>Party_JB_SummonShadowDemon_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>JB_SummonShadowDemons_Ability</StrVal>
+				<Provides>Summons a random sized unit of Shadow Demons (level equal to the caster) in tactical combat</Provides>
+			</GameModifier>
+			<CombatRating>50</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>150</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>	
+
+	<!-- From COS, thanks HF -->
+	<AbilityBonus InternalName="UnitStat_BG_IsCelestialAbility">
+		<AbilityBonusOption InternalName="UnitStat_BG_IsCelestial">
+			<DisplayName>Celestial</DisplayName>
+			<Description>This unit counts as Celestial</Description>
+			<Icon>Ability_Noble_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_IsCelestial</StrVal>
+				<Provides>This unit counts as Celestial</Provides>
+				<Value>1</Value>
+			</GameModifier>
+			<HideWhenUpgraded>1</HideWhenUpgraded>
+		</AbilityBonusOption>
+	</AbilityBonus>
+
+	<!-- Death Adept Abilities for Empire Henchmen -->
+	<AbilityBonus InternalName="LifeAdept1Ability">
+		<AbilityBonusOption InternalName="LifeAdept1">
+			<Prereq>
+				<Type>Allegiance</Type>
+				<Attribute>Kingdom</Attribute>
+			</Prereq>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="LifeAdept2Ability">
+		<AbilityBonusOption InternalName="LifeAdept2">
+			<Prereq>
+				<Type>Allegiance</Type>
+				<Attribute>Kingdom</Attribute>
+			</Prereq>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="LifeAdept3Ability">
+		<AbilityBonusOption InternalName="LifeAdept3">
+			<Prereq>
+				<Type>Allegiance</Type>
+				<Attribute>Kingdom</Attribute>
+			</Prereq>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_DeathAdept1Ability">
+		<AbilityBonusType>Unit_Design</AbilityBonusType>
+		<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+		<AbilityBonusOption InternalName="JB_DeathAdept1">
+			<DisplayName>Death Adept</DisplayName>
+			<Description>Death mages specialize in powerful curses that weaken enemies</Description>
+			<Icon>JB_Ability_DeathAdeptI_Icon.png</Icon>
+			<PerkTreePosX>3</PerkTreePosX>
+			<PerkTreePosY>4</PerkTreePosY>
+			<Prereq>
+				<Type>Allegiance</Type>
+				<Attribute>Empire</Attribute>
+			</Prereq>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Provides>Unlocks the following spell</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_GreyMagic</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Grey magic</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_GreyMagic</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Spellbook</Provides>
+			</GameModifier>
+			<AdditionalTrainingTurns>20</AdditionalTrainingTurns>
+			<Type>Spell</Type>
+			<UpgradePathID>JB_DeathAdept</UpgradePathID>
+			<SupportedUnitModelType>HenchmanMale</SupportedUnitModelType>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_DeathAdept2Ability">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+		<AbilityBonusOption InternalName="JB_DeathAdept2">
+			<DisplayName>Death Adept II</DisplayName>
+			<Description>Death mages specialize in powerful curses that weaken enemies</Description>
+			<Icon>JB_Ability_DeathAdeptII_Icon.png</Icon>
+			<PerkTreePosX>4</PerkTreePosX>
+			<PerkTreePosY>4</PerkTreePosY>
+			<Prereq>
+				<Type>Allegiance</Type>
+				<Attribute>Empire</Attribute>
+			</Prereq>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Provides>Unlocks the following spell</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_GreyMagic</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Grey magic</Provides>
+			</GameModifier>
+			<Type>Spell</Type>
+			<UpgradePathID>JB_DeathAdept</UpgradePathID>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>JB_DeathAdept1</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_DeathAdept3Ability">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+		<AbilityBonusOption InternalName="JB_DeathAdept3">
+			<DisplayName>Death Adept III</DisplayName>
+			<Description>Death mages specialize in powerful curses that weaken enemies</Description>
+			<Icon>JB_Ability_DeathAdeptIII_Icon.png</Icon>
+			<PerkTreePosX>5</PerkTreePosX>
+			<PerkTreePosY>4</PerkTreePosY>
+			<Prereq>
+				<Type>Allegiance</Type>
+				<Attribute>Empire</Attribute>
+			</Prereq>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Provides>Unlocks the following spell</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_GreyMagic</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Grey magic</Provides>
+			</GameModifier>
+			<Type>Spell</Type>
+			<UpgradePathID>JB_DeathAdept</UpgradePathID>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>JB_DeathAdept2</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+
+		
+</AbilityBonuses>
+  

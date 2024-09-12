@@ -1,0 +1,813 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<Quests>
+	<QuestDef InternalName="Quest_X_Dragon1">
+		<DisplayName>The Path of Wind and Woe</DisplayName>
+		<Description>The crags around you give way to a flat, open steppe. A strange quiet surrounds this place, the sanctity of old gods and ancient rituals. The statue of a dragon towers over you. It is, you sense, immeasurably ancient, and yet it shows no signs of damage or wear. Placed in the statue's hands is a massive gemstone, a jewel whose color shifts and changes like a thing alive as you approach. In its facets you glimpse the reflections of the creatures of Elemental. Some are majestic and beautiful, others are monstrous and terrifying.
+		
+		You reach for the gem... and the instant your fingers touch it, the statue speaks.
+		
+		I am Hengam, one of three guardians - those who guard the Scepter of Dominion, that which commands obedience from all living things. Do you dare quest for such power?</Description>
+		<IsStartingPointQuest>0</IsStartingPointQuest>
+		<ShortTextAccept>Yes</ShortTextAccept>
+		<AllowQuestRejection>0</AllowQuestRejection>
+		<RewardText>Dragon's Eye</RewardText>
+		<RewardImage>Item_DragonsEye.png</RewardImage>
+		<SuccessText>The Dragon's Eye gem slips easily from the statues clutches.</SuccessText>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>QuestLocation</TriggerType>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>5</SpawnRating>
+		<TriggerChance>0</TriggerChance>
+		<AICanGoOnQuest>0</AICanGoOnQuest>
+		<Image>Q_DragonStatue2.png</Image>
+		<PrefQuestLoc>QuestLoc_Dragon2</PrefQuestLoc>
+		<Treasure>
+			<GameModifier InternalName="Reward1">
+				<ModType>GiveItem</ModType>
+				<Attribute>Loot_DragonEye</Attribute>
+				<Value>100</Value>
+			</GameModifier>
+		</Treasure>
+		<Treasure>
+			<GameModifier InternalName="Reward3">
+				<ModType>Unit</ModType>
+				<Attribute>GiveExperience</Attribute>
+				<Value>18</Value>
+			</GameModifier>
+		</Treasure>
+		<Treasure>
+			<GameModifier InternalName="Reward4">
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>30</Value>
+			</GameModifier>
+		</Treasure>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<NextObjectiveID>1</NextObjectiveID>
+			<Description>Investigate the statue.</Description>
+			<ChoiceText>"You are brave, little one, to attempt a quest so great. Very well. You must begin by walking the path of Wind and Woe. Wind first; journey to the Temple of Amokah, he who was once the Elemental Lord of the Air, and defeat the creatures who live there. Then Woe; visit the cavern of the Vengier, and prove yourself worthy by overcoming the evil things that lurk within that darkness. Return to me after you do those things, and I will aid you in your quest."</ChoiceText>
+			<ChoiceMedallion>Q_DragonStatue2.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>I'll take the gem by force!</Description>
+				<NextObjectiveID>6</NextObjectiveID>
+				<PopupMessage>The earth trembles as the statue comes to life and creatures rise out of the ground.</PopupMessage>
+				<Encounter>
+					<Liklihood>100</Liklihood>
+					<BattleIdentifier>StormDragon</BattleIdentifier>
+					<WillRespawn>0</WillRespawn>
+					<WanderingRadius>0</WanderingRadius>
+					<UnitInstance>
+						<UnitType>StormDragon</UnitType>
+						<UnitName>Hengam</UnitName>
+						<Level>15</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>EarthElemental</UnitType>
+						<Level>8</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>EarthElemental</UnitType>
+						<Level>8</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>EarthElemental</UnitType>
+						<Level>8</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>EarthElemental</UnitType>
+						<Level>8</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>CragSpawn</UnitType>
+						<UnitGroupingType>UnitGroupingType_Party</UnitGroupingType>
+						<Level>6</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>CragSpawn</UnitType>
+						<UnitGroupingType>UnitGroupingType_Party</UnitGroupingType>
+						<Level>6</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>CragSpawn</UnitType>
+						<UnitGroupingType>UnitGroupingType_Party</UnitGroupingType>
+						<Level>6</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>CragSpawn</UnitType>
+						<Level>6</Level>
+					</UnitInstance>
+				</Encounter>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I will do as you say.</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<NextObjectiveID>2</NextObjectiveID>
+			<Description>Explore the Storm-Ravaged Temple</Description>
+			<Treasure>
+				<GameModifier>
+					<ModType>Map</ModType>
+					<Attribute>CreateGoodieHut</Attribute>
+					<StrVal>Storm Ravaged Temple</StrVal>
+					<Unitclass>GH_ForgottenTemple</Unitclass>
+					<Radius>6</Radius>
+				</GameModifier>
+			</Treasure>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Explore the Storm Ravaged Temple.</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>ClearGoodieHut</Type>
+				<TextData>GH_ForgottenTemple</TextData>
+				<Flag>RevealTarget</Flag>
+			</QuestConditionDef>
+			<ChoiceText>The walls of this temple have been worn smooth by the tempest that eternally rages around it. The rocks are split and blackened by lightning strikes and the clouds above are broken by a single great circle directly above the temple, like a giant shining eye looking down. The prayers of generations of pilgrims still echo in the storm, as do the elementals they worshipped.
+			
+			As you watch these elementals begin to descend around you, brilliant creatures formed of the sky and the light. In a single voice, they command you to flee.</ChoiceText>
+			<ChoiceMedallion>M_AirElemental_Card.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_01.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>Attack</Description>
+				<NextObjectiveID>2</NextObjectiveID>
+				<Encounter>
+					<Liklihood>100</Liklihood>
+					<BattleIdentifier>AirElemental</BattleIdentifier>
+					<WillRespawn>0</WillRespawn>
+					<WanderingRadius>0</WanderingRadius>
+					<UnitInstance>
+						<UnitType>AirElemental</UnitType>
+						<UnitName>Aenai of the Tempest</UnitName>
+						<Level>10</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>AirElemental</UnitType>
+						<Level>7</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>AirElemental</UnitType>
+						<Level>7</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>AirShrill</UnitType>
+						<UnitGroupingType>UnitGroupingType_Party</UnitGroupingType>
+						<Level>3</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>AirShrill</UnitType>
+						<Level>3</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>AirShrill</UnitType>
+						<Level>3</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>WildingArcher</UnitType>
+						<UnitGroupingType>UnitGroupingType_Group</UnitGroupingType>
+						<Level>4</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>WildingArcher</UnitType>
+						<UnitGroupingType>UnitGroupingType_Party</UnitGroupingType>
+						<Level>4</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>WildingArcher</UnitType>
+						<UnitGroupingType>UnitGroupingType_Party</UnitGroupingType>
+						<Level>4</Level>
+					</UnitInstance>
+				</Encounter>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I'll return later</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>2</ObjectiveID>
+			<NextObjectiveID>3</NextObjectiveID>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Defeat the Air Elementals</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>BattleFinished</Type>
+				<TextData>AirElemental</TextData>
+				<MoreTextData>Victory</MoreTextData>
+			</QuestConditionDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>3</ObjectiveID>
+			<NextObjectiveID>4</NextObjectiveID>
+			<Description>Explore the Cavern of Loss</Description>
+			<Treasure>
+				<GameModifier>
+					<ModType>Map</ModType>
+					<Attribute>CreateGoodieHut</Attribute>
+					<StrVal>Cavern of Loss</StrVal>
+					<Unitclass>GH_Quest_Cave</Unitclass>
+					<Radius>6</Radius>
+				</GameModifier>
+			</Treasure>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Explore the Cavern of Loss.</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>ClearGoodieHut</Type>
+				<TextData>GH_Quest_Cave</TextData>
+				<Flag>RevealTarget</Flag>
+			</QuestConditionDef>
+			<ChoiceText>Blood stains the floor of the massive cave entrance, as if a river of it once flowed through here. You see scraps of armor, torn like paper... shattered bones... rusted weapons... but no evidence of anything alive. The back of the cavern descends into darkness, and you can't imagine what waits for you beyond it.
+			
+			For this cave is said to be the grave of the citizens of Vengier, a great city captured by a Yithril general. After none of his soldiers returned from exploring this cave and tired of executing and burying the citizens of Vengier, the general ordered the citizens marched into this cavern. The creatures within the cave feasted on the prisoners. But when the prisoners stopped the creatures, now hungry for the blood and flesh of men, came out of the cavern. They attacked the commander's army and dragged them all back into the cavern's depths.</ChoiceText>
+			<ChoiceMedallion>CaveEvil_Medallion.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_01.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>Explore the cave</Description>
+				<NextObjectiveID>4</NextObjectiveID>
+				<Encounter>
+					<Liklihood>100</Liklihood>
+					<BattleIdentifier>BoneOgre</BattleIdentifier>
+					<TacticalMap>T_Cave_Generic_01</TacticalMap>
+					<WillRespawn>0</WillRespawn>
+					<WanderingRadius>0</WanderingRadius>
+					<UnitInstance>
+						<UnitType>BoneOgre</UnitType>
+						<Level>7</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>Butcherman</UnitType>
+						<UnitGroupingType>UnitGroupingType_Group</UnitGroupingType>
+						<Level>4</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>Butcherman</UnitType>
+						<UnitGroupingType>UnitGroupingType_Group</UnitGroupingType>
+						<Level>4</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>Butcherman</UnitType>
+						<UnitGroupingType>UnitGroupingType_Party</UnitGroupingType>
+						<Level>4</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>Butcherman</UnitType>
+						<UnitGroupingType>UnitGroupingType_Party</UnitGroupingType>
+						<Level>4</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>Butcherman</UnitType>
+						<UnitGroupingType>UnitGroupingType_Party</UnitGroupingType>
+						<Level>4</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>Butcherman</UnitType>
+						<Level>4</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>Butcherman</UnitType>
+						<Level>4</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>Butcherman</UnitType>
+						<Level>4</Level>
+					</UnitInstance>
+				</Encounter>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Flee.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>4</ObjectiveID>
+			<NextObjectiveID>5</NextObjectiveID>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Defeat the Bone Ogre</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>BattleFinished</Type>
+				<TextData>BoneOgre</TextData>
+				<MoreTextData>Victory</MoreTextData>
+			</QuestConditionDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>5</ObjectiveID>
+			<NextObjectiveID>-1</NextObjectiveID>
+			<QuestEnd>1</QuestEnd>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Return to the Dragon Statue.</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>UnitEntersQuestLocation</Type>
+			</QuestConditionDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>6</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Defeat the Dragon</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>BattleFinished</Type>
+				<TextData>StormDragon</TextData>
+				<MoreTextData>Victory</MoreTextData>
+			</QuestConditionDef>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Quest_X_Dragon2">
+		<DisplayName>The Lost Eye</DisplayName>
+		<Description>There is the statue of a dragon here, tall and fierce. Its claws are together as if clutching something, but whatever it was is gone now.
+		
+		You search the area but don't find any evidence of who was here before you. In the distance you can see the smoke of a small camp. If you are lucky whoever claimed the dragon's prize, or someone who knows who they were, is at the camp.</Description>
+		<IsStartingPointQuest>0</IsStartingPointQuest>
+		<ShortTextAccept>Investigate the camp</ShortTextAccept>
+		<AllowQuestRejection>0</AllowQuestRejection>
+		<RewardText>Dragon's Eye</RewardText>
+		<RewardImage>Item_DragonsEye.png</RewardImage>
+		<SuccessText>With the death of Arneson the rest of the soldiers flee. One group breaks into Arneson's quarters and tries to make off with the Dragon's Eye. But when they start to leave you are blocking their way. They meekly hand over the gem and scurry out of the room.</SuccessText>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>QuestLocation</TriggerType>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>5</SpawnRating>
+		<TriggerChance>0</TriggerChance>
+		<AICanGoOnQuest>0</AICanGoOnQuest>
+		<Image>Q_DragonStatue1.png</Image>
+		<PrefQuestLoc>QuestLoc_Dragon1</PrefQuestLoc>
+		<Treasure>
+			<GameModifier InternalName="Reward1">
+				<ModType>GiveItem</ModType>
+				<Attribute>Loot_DragonEye</Attribute>
+				<Value>100</Value>
+			</GameModifier>
+		</Treasure>
+		<Treasure>
+			<GameModifier InternalName="Reward3">
+				<ModType>Unit</ModType>
+				<Attribute>GiveExperience</Attribute>
+				<Value>18</Value>
+			</GameModifier>
+		</Treasure>
+		<Treasure>
+			<GameModifier InternalName="Reward4">
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>30</Value>
+			</GameModifier>
+		</Treasure>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<NextObjectiveID>1</NextObjectiveID>
+			<Treasure>
+				<GameModifier>
+					<ModType>Map</ModType>
+					<Attribute>CreateGoodieHut</Attribute>
+					<StrVal>Camp</StrVal>
+					<Unitclass>GH_Quest_AbandonedVillage</Unitclass>
+					<Radius>4</Radius>
+				</GameModifier>
+			</Treasure>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Explore the Camp</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>ClearGoodieHut</Type>
+				<TextData>GH_Quest_AbandonedVillage</TextData>
+				<Flag>RevealTarget</Flag>
+			</QuestConditionDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<QuestConditionDef>
+				<ID>0</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Collect 20 Crystal to pay Kithra</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>RefinedCrystal</TextData>
+				<NumericData>20</NumericData>
+			</QuestConditionDef>
+			<ChoiceText>You ask about the dragon statue, and everyone knows of the statue and the great gem it held. They call it the Dragon's Eye, and they say that it is rumored that there are two statues, each with an eye. If both eyes are brought to a third statue then the Scepter of Dominion can be won, which will awake the dragons of Elemental and allow the bearer to command them.
+			
+			But they are shocked to hear that the gem is gone, several rush off toward the statue when you tell them, seers, storytellers and adventurers who have been following the legend of the Scepter for years. You have given up questioning them when a woman sits down beside you. She has a stern, but not unattractive face with short brown hair and armor etched in green.
+			
+			"I am Kithra, a daughter of the Kings of Ithul, and I know who took the Dragon's Eye."
+			
+			According to Kithra she was traveling with the man who took the Eye, they were going to win it together. But he betrayed her, took the Eye and left her here. She knows where he is, but she warns that he is a powerful man, especially in his lands. But she won't tell you who he is unless you pay her.
+			
+			"I have traveled the length of Elemental in search of the Eye, and lost it. If you would pay me some small measure of crystal, I would gladly tell you everything I know and be done with this quest."</ChoiceText>
+			<ChoiceMedallion>B1_C7_TarthanFirebrand.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_01.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>Tell me about this man (-20 crystal)</Description>
+				<RequiredConditionID>0</RequiredConditionID>
+				<NextObjectiveID>2</NextObjectiveID>
+				<PopupMessage>Kithra tells you his name is Arneson, head of the Free Riders a powerful mercenary band. She also gives you directions to their distant compound where she believes he is heading.</PopupMessage>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I'll come back later if I'm interested</Description>
+				<NextObjectiveID>6</NextObjectiveID>
+				<PopupMessage>"I will be at the dragon statue if you want to pay my price." Kithra says.</PopupMessage>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>2</ObjectiveID>
+			<NextObjectiveID>3</NextObjectiveID>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<Treasure>
+				<GameModifier>
+					<ModType>Map</ModType>
+					<Attribute>CreateGoodieHut</Attribute>
+					<StrVal>Free Rider Compound</StrVal>
+					<Unitclass>GH_Quest_Estate</Unitclass>
+					<Radius>12</Radius>
+				</GameModifier>
+			</Treasure>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Find the Free Rider Compound.</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>ClearGoodieHut</Type>
+				<TextData>GH_Quest_Estate</TextData>
+				<Flag>RevealTarget</Flag>
+			</QuestConditionDef>
+			<ChoiceText>The compound is full of what you could consider soldiers, except they are better armed.
+			
+			"Turn back magician." An armored sentry yells to you, "Arneson controls more than men, more than dragons, but the titans themselves. Should you irritate him he will remove you from this world."</ChoiceText>
+			<ChoiceMedallion>B1_C7_KingsGuardian.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_01.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>Attack</Description>
+				<NextObjectiveID>3</NextObjectiveID>
+				<Encounter>
+					<Liklihood>100</Liklihood>
+					<BattleIdentifier>FreeRiders</BattleIdentifier>
+					<WillRespawn>0</WillRespawn>
+					<WanderingRadius>0</WanderingRadius>
+					<UnitInstance>
+						<UnitType>Quest_Defender_FreeRider</UnitType>
+						<UnitName>Free Rider Sentry</UnitName>
+						<UnitGroupingType>UnitGroupingType_Group</UnitGroupingType>
+						<Level>4</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>Quest_Defender_FreeRider</UnitType>
+						<UnitName>Free Rider Sentry</UnitName>
+						<UnitGroupingType>UnitGroupingType_Group</UnitGroupingType>
+						<Level>4</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>Quest_Defender_FreeRider</UnitType>
+						<UnitName>Free Rider Sentry</UnitName>
+						<UnitGroupingType>UnitGroupingType_Group</UnitGroupingType>
+						<Level>4</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>Quest_Archer_FreeRider</UnitType>
+						<UnitName>Free Rider Archer</UnitName>
+						<UnitGroupingType>UnitGroupingType_Squad</UnitGroupingType>
+						<Level>3</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>Quest_Archer_FreeRider</UnitType>
+						<UnitName>Free Rider Archer</UnitName>
+						<UnitGroupingType>UnitGroupingType_Squad</UnitGroupingType>
+						<Level>3</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>Quest_Archer_FreeRider</UnitType>
+						<UnitName>Free Rider Archer</UnitName>
+						<UnitGroupingType>UnitGroupingType_Squad</UnitGroupingType>
+						<Level>3</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>Quest_Heavy_FreeRider</UnitType>
+						<UnitName>Free Rider Elite</UnitName>
+						<UnitGroupingType>UnitGroupingType_Party</UnitGroupingType>
+						<Level>6</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>Quest_Light_FreeRider</UnitType>
+						<UnitName>Free Rider Skirmisher</UnitName>
+						<UnitGroupingType>UnitGroupingType_Company</UnitGroupingType>
+						<Level>2</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>Quest_Light_FreeRider</UnitType>
+						<UnitName>Free Rider Skirmisher</UnitName>
+						<UnitGroupingType>UnitGroupingType_Company</UnitGroupingType>
+						<Level>2</Level>
+					</UnitInstance>
+				</Encounter>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Apologize and leave.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>3</ObjectiveID>
+			<NextObjectiveID>4</NextObjectiveID>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Defeat the Free Riders</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>BattleFinished</Type>
+				<TextData>FreeRiders</TextData>
+				<MoreTextData>Victory</MoreTextData>
+			</QuestConditionDef>
+			<ChoiceText>The gates of the estate open and you finish the last of the guards. Another host of soldiers rushes out to meet you, or to guard the man who follows them. He is a giant, even the largest of his guard only comes to his shoulder. And when he speaks it is in the language of magic. He begins to summon...</ChoiceText>
+			<ChoiceMedallion>Sovereign_Parriden.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_01.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>Attack</Description>
+				<NextObjectiveID>4</NextObjectiveID>
+				<Encounter>
+					<Liklihood>100</Liklihood>
+					<BattleIdentifier>Arneson</BattleIdentifier>
+					<WillRespawn>0</WillRespawn>
+					<WanderingRadius>0</WanderingRadius>
+					<UnitInstance>
+						<UnitType>Champion_Arneson</UnitType>
+						<UnitName>Arneson</UnitName>
+						<UnitSubclassType>Champion</UnitSubclassType>
+						<Level>10</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>Quest_Archer_FreeRider</UnitType>
+						<UnitName>Free Rider Archer</UnitName>
+						<UnitGroupingType>UnitGroupingType_Squad</UnitGroupingType>
+						<Level>5</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>Quest_Archer_FreeRider</UnitType>
+						<UnitName>Free Rider Archer</UnitName>
+						<UnitGroupingType>UnitGroupingType_Squad</UnitGroupingType>
+						<Level>5</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>Quest_Heavy_FreeRider</UnitType>
+						<UnitName>Free Rider Elite</UnitName>
+						<UnitGroupingType>UnitGroupingType_Party</UnitGroupingType>
+						<Level>8</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>Quest_Light_FreeRider</UnitType>
+						<UnitName>Free Rider Skirmisher</UnitName>
+						<UnitGroupingType>UnitGroupingType_Company</UnitGroupingType>
+						<Level>4</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>Quest_Light_FreeRider</UnitType>
+						<UnitName>Free Rider Skirmisher</UnitName>
+						<UnitGroupingType>UnitGroupingType_Company</UnitGroupingType>
+						<Level>4</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>MireSkath</UnitType>
+						<UnitGroupingType>UnitGroupingType_Party</UnitGroupingType>
+						<Level>6</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>MireSkath</UnitType>
+						<UnitGroupingType>UnitGroupingType_Party</UnitGroupingType>
+						<Level>6</Level>
+					</UnitInstance>
+				</Encounter>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>4</ObjectiveID>
+			<NextObjectiveID>5</NextObjectiveID>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Defeat Arneson</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>BattleFinished</Type>
+				<TextData>Arneson</TextData>
+				<MoreTextData>Victory</MoreTextData>
+			</QuestConditionDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>5</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>6</ObjectiveID>
+			<QuestConditionDef>
+				<ID>0</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Return to the dragon statue and talk to Kithra</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>UnitEntersQuestLocation</Type>
+			</QuestConditionDef>
+			<QuestConditionDef>
+				<ID>1</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Collect 20 Crystal to pay Kithra</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>RefinedCrystal</TextData>
+				<NumericData>20</NumericData>
+			</QuestConditionDef>
+			<ChoiceText>Kithra is waiting next to the statue when you arrive.
+			
+			"Did you bring the crystal?" she asks.</ChoiceText>
+			<ChoiceMedallion>B1_C7_TarthanFirebrand.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_01.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>Yes, tell me about this man (-20 crystal)</Description>
+				<RequiredConditionID>1</RequiredConditionID>
+				<NextObjectiveID>2</NextObjectiveID>
+				<PopupMessage>Kithra tell you his name is Arneson, head of the Free Riders a powerful mercenary band. She also gives you directions to their distant compound where she believes he is heading.</PopupMessage>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>No, I'll come back later if I'm interested</Description>
+				<NextObjectiveID>6</NextObjectiveID>
+				<PopupMessage>"I'll be here," she says.</PopupMessage>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Quest_X_Dragon3">
+		<DisplayName>The Dragongate</DisplayName>
+		<Description>There is a dragon statue here, formed of smooth brown stone with veins of clear crystal running throughout. Light dances in the crystal like starlight and reflects pale images of the surrounding world. There are two empty eye sockets on the statue and a short inscription at the base which reads:
+		
+		"To gain the power to rule this world and all who are born of it, seek my brothers."</Description>
+		<IsStartingPointQuest>0</IsStartingPointQuest>
+		<AllowQuestRejection>0</AllowQuestRejection>
+		<RewardText>Ashwake Dragon</RewardText>
+		<RewardImage>D_Dragon_Card_01.png</RewardImage>
+		<SuccessText>The dragons are beaten, the largest lays wheezing on the ground with barely enough strength to lift his head.
+		
+		"Submit to me." you demand.
+		
+		The dragon bows his head.</SuccessText>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>QuestLocation</TriggerType>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>5</SpawnRating>
+		<TriggerChance>0</TriggerChance>
+		<AICanGoOnQuest>0</AICanGoOnQuest>
+		<Image>Q_DragonStatue3.png</Image>
+		<PrefQuestLoc>QuestLoc_Dragon3</PrefQuestLoc>
+		<Treasure>
+			<GameModifier InternalName="Reward1">
+				<ModType>Unit</ModType>
+				<Attribute>UnitJoinArmy</Attribute>
+				<StrVal>AshwakeDragon</StrVal>
+				<Value>10</Value>
+				<UnitClass>Unit</UnitClass>
+			</GameModifier>
+		</Treasure>
+		<Treasure>
+			<GameModifier InternalName="Reward3">
+				<ModType>Unit</ModType>
+				<Attribute>GiveExperience</Attribute>
+				<Value>18</Value>
+			</GameModifier>
+		</Treasure>
+		<Treasure>
+			<GameModifier InternalName="Reward4">
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>30</Value>
+			</GameModifier>
+		</Treasure>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<NextObjectiveID>1</NextObjectiveID>
+			<Description>Collect two dragon eyes from other dragon statues in the world.</Description>
+			<QuestConditionDef>
+				<ID>0</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Collect two dragon eyes from other dragon statues in the world</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>CheckForItem</Type>
+				<TextData>Loot_DragonEye</TextData>
+				<NumericData>2</NumericData>
+				<CompletionText>You have found 2 Dragon Eyes</CompletionText>
+			</QuestConditionDef>
+			<QuestConditionDef>
+				<ID>1</ID>
+				<DependentCondition>0</DependentCondition>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Collect 2 Dragon Eyes</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>UnitEntersQuestLocation</Type>
+				<CannotCompleteText>Return the missing eyes to the Dragon</CannotCompleteText>
+			</QuestConditionDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<NextObjectiveID>2</NextObjectiveID>
+			<ChoiceText>You place the dragon eyes in the eye sockets and for a moment these is no response. How would you know that distant fissures split the ground, that volcanoes erupted, that ancient chasms opened to the world for the first time in centuries. It isn't until the things released have come for you, when dark shadows drop the world to darkness and the screech of dragons jolt you out of your contemplation of that statue that you realize what has occurred.
+			
+			The largest dragon speaks in a voice that causes the ground to tremble. "You are not the dragonlord, kneel before the first lords of Elemental."</ChoiceText>
+			<ChoiceMedallion>F_DragonAlly.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_01.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>I will not submit (Attack)</Description>
+				<NextObjectiveID>2</NextObjectiveID>
+				<Encounter>
+					<Liklihood>100</Liklihood>
+					<BattleIdentifier>AshwakeDragon</BattleIdentifier>
+					<WillRespawn>0</WillRespawn>
+					<WanderingRadius>0</WanderingRadius>
+					<UnitInstance>
+						<UnitType>AshwakeDragon</UnitType>
+						<Level>14</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>FellDragon</UnitType>
+						<Level>12</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>ClambercoilDragon</UnitType>
+						<Level>10</Level>
+					</UnitInstance>
+				</Encounter>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I'll return later</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>2</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Defeat the Dragons</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>BattleFinished</Type>
+				<TextData>AshwakeDragon</TextData>
+				<MoreTextData>Victory</MoreTextData>
+			</QuestConditionDef>
+		</QuestObjectiveDef>
+	</QuestDef>
+</Quests>

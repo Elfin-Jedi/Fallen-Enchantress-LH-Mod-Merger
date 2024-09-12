@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<GameItemTypes>
+
+	<GameItemType InternalName="JB_Plain_Skirt_ID1">
+		<DisplayName>Plain Skirt (Light)</DisplayName>
+		<Type>LowerBody</Type>
+		<Subtype>Clothes</Subtype>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ArtDef>JB_Plain_Skirt_ID1_ArtDef</ArtDef>
+		<GameItemTypeArtDef InternalName="JB_Plain_Skirt_ID1_ArtDef">
+			<GameItemTypeModelPack InternalName="JB_Plain_Skirt_ID1_Default">
+				<IconFile>MerchantSkirt_Light.png</IconFile>
+				<SupportedUnitModelType>AngelMale</SupportedUnitModelType>
+				<GameItemTypeModel>
+					<ModelFile>Gfx\HKB\Clothes\K_Female_Skirt_Mesh_01.hkb</ModelFile>
+					<AttachmentType>Skinned</AttachmentType>
+					<Color_Clothing2>Color_Clothing1</Color_Clothing2>
+					<Texture_Clothing2>JB_Plain_Skirt_Texture_01.png</Texture_Clothing2>
+				</GameItemTypeModel>
+			</GameItemTypeModelPack>
+		</GameItemTypeArtDef>
+	</GameItemType>		
+	<GameItemType InternalName="JB_Plain_Skirt_ID2">
+		<DisplayName>Plain Skirt (Dark)</DisplayName>
+		<Type>LowerBody</Type>
+		<Subtype>Clothes</Subtype>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ArtDef>JB_Plain_Skirt_ID2_ArtDef</ArtDef>
+		<GameItemTypeArtDef InternalName="JB_Plain_Skirt_ID2_ArtDef">
+			<GameItemTypeModelPack InternalName="JB_Plain_Skirt_ID2_Default">
+				<IconFile>MerchantSkirt_Light.png</IconFile>
+				<SupportedUnitModelType>AngelMale</SupportedUnitModelType>
+				<GameItemTypeModel>
+					<ModelFile>Gfx\HKB\Clothes\K_Female_Skirt_Mesh_01.hkb</ModelFile>
+					<AttachmentType>Skinned</AttachmentType>
+					<Color_Clothing2>Color_Clothing2</Color_Clothing2>
+					<Texture_Clothing2>JB_Plain_Skirt_Texture_01.png</Texture_Clothing2>
+				</GameItemTypeModel>
+			</GameItemTypeModelPack>
+		</GameItemTypeArtDef>
+	</GameItemType>		
+
+    <GameItemType InternalName="JB_Greatsword_Brute">
+        <DisplayName>Brute's Blade</DisplayName>
+        <Description>This simple heavy blade is large and rather destructive in the hands of anyone strong enough to wield it.</Description>
+        <Type>Weapon</Type>
+        <Type>Defense</Type>
+        <WeaponType>TwoHanded</WeaponType>
+        <WeaponUpgradeType>Blade</WeaponUpgradeType>
+        <CanBeEquipped>1</CanBeEquipped>
+        <ShopValue>55</ShopValue>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Attack_Pierce</StrVal>
+            <Value>14</Value>
+        </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_MaxCounterAttack</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Counterattack per round</Provides>
+            </GameModifier>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+        <Likelihood>40</Likelihood>
+        <RarityDisplay>Common</RarityDisplay>
+        <HeroOnly>1</HeroOnly>
+        <IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+        <AIData AIPersonality="AI_General">
+            <AIPrefType>AIPrefType_CUTTING</AIPrefType>
+            <AIPriority>300</AIPriority>
+        </AIData>
+        <ArtDef>Greatsword_ArtDef</ArtDef>
+    </GameItemType>	
+	
+</GameItemTypes>

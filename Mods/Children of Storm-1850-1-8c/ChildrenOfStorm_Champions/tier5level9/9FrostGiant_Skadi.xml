@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<UnitTypes>
+	<UnitType InternalName="FrostGiant_Skadi">
+		<CreatureType>Champion</CreatureType>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-5</Value>
+			<Provides>-5% Unrest in the city this unit is in</Provides>
+		</GameModifier>
+		
+		<DisplayName>Skadi</DisplayName>
+		<Backstory>Since the Cataclysm, Skadi's heart has turned cold, even for a frost giant.  She has spent most of her time since then in the wild lands, hunting dangerous prey and cursing the loss of her kith and kin.</Backstory>
+		
+		<ModelPath>M_Demon_Elemental_Mesh_01.hkb</ModelPath>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<EyeTexture>gfx\Eyes\blinks\Eyeblink_F4_Blk.png</EyeTexture>
+		<AnimationPack>EF_FemaleSovereignAnimationPack</AnimationPack>
+		
+		<ShowAsSingleUnit>false</ShowAsSingleUnit>
+		<CutSceneDataPack>FrostGiantCutscenePack</CutSceneDataPack>
+		<ModelScale>1.0000</ModelScale>
+		<TacticalModelScale>1.5000</TacticalModelScale>
+		<EquipmentScale>1.0000</EquipmentScale>
+		<ClothMapScale>1.6</ClothMapScale>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<MovementType>land</MovementType>
+		<BobbingFrequency>0.0000</BobbingFrequency>
+		
+		<ClothPoseIndex>2</ClothPoseIndex>
+		<InfoCardBackground>BG_Arctic</InfoCardBackground>
+		<InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+		
+		<CanBeDesigned>0</CanBeDesigned>
+		<Allegiance>Empire</Allegiance>
+		<Unique>1</Unique>
+		<IsNPC>1</IsNPC>
+		<NPCSpawnLikelihood>100</NPCSpawnLikelihood>
+		<IsChampion>1</IsChampion>
+		<Gender>Female</Gender>
+		<SoundPack>SoundPack_Generic_Female</SoundPack>
+		
+		<SpawnRating>9</SpawnRating>
+		<Quote>Let the world freeze.  I'll survive.</Quote>
+		<NPCRecruitmentText>%d and I will freeze the hearts of your foes.</NPCRecruitmentText>
+		<SelectedAbilityBonusOption>Blood_FrostGiants</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>PathOfTheMage</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>ToweringLords</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Skadi_Aura</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Evoker</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Death1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Water1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Water2</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Water3</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Hydromancy</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Frostborn</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Icegripped</SelectedAbilityBonusOption>
+		
+		<Medallions InternalName=""/>
+		<WageOverride>1</WageOverride>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<LevelMilestone InternalName="">
+			<Level>1</Level>
+			<UnitStat_Accuracy>80.0000</UnitStat_Accuracy>
+			<UnitStat_BG_IsEmpire>1.0000</UnitStat_BG_IsEmpire>
+			<UnitStat_BG_IsFemale>1.0000</UnitStat_BG_IsFemale>
+			<UnitStat_BG_IsMonster>1.0000</UnitStat_BG_IsMonster>
+			<UnitStat_BG_IsRace_FrostGiant>1.0000</UnitStat_BG_IsRace_FrostGiant>
+			<UnitStat_BG_IsChampion>1.0000</UnitStat_BG_IsChampion>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_CombatSpeed>22.0000</UnitStat_CombatSpeed>
+			<UnitStat_HitPoints>20.0000</UnitStat_HitPoints>
+		</LevelMilestone>
+		
+		<Equipment>Patchwork_Cloak_ID2</Equipment>
+		
+		<AutoCreateEquipment>BoarSpear_Krax</AutoCreateEquipment>
+		<!--<AutoCreateEquipment>BasicIcebeast1</AutoCreateEquipment>-->
+		<AutoCreateEquipment>RoundShield_Glyph</AutoCreateEquipment>
+		<AutoCreateEquipment>Robe_Mage</AutoCreateEquipment>
+		<AutoCreateEquipment>LongstriderBoots</AutoCreateEquipment>
+		<AutoCreateEquipment>TildaHerbs</AutoCreateEquipment>
+		
+		
+		<Color_Skin>50,50,201,255</Color_Skin>
+		<Color_Hair>50,50,50,255</Color_Hair>
+		<Color_Clothing1>200,200,200,255</Color_Clothing1>
+		<Color_Clothing2>50,50,50,255</Color_Clothing2>
+		<Color_Metal>87,130,171,255</Color_Metal>
+		<Texture_Skin>M_Demon_Elemental_Texture_03.png</Texture_Skin>
+		
+		<UnitModelType>FrostGiantFemale</UnitModelType>
+		<NPCFreeRecruit>0</NPCFreeRecruit>
+		<RaceType>Race_Type_FrostGiants</RaceType>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+	</UnitType>	
+	
+	<SpellDef InternalName="Skadi_FreezingAura">
+		<DisplayName>Freezing Aura</DisplayName>
+		<Description>Skadi's freezing aura does 3 cold damage to anyone who strikes her.</Description>
+		<IconFG>Ability_ResistCold_Icon.png</IconFG>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<IsCastable>0</IsCastable>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Cold</AttackStat>
+			<Value>3</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+		</AIData>
+		<HitSoundFX>Spell_DarkEnchant_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_Blizzard_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.35</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+
+	<AbilityBonus InternalName="Skadi_Aura">
+		<AbilityBonusOption InternalName="Skadi_Aura">
+			<DisplayName>Freezing Aura</DisplayName>
+			<Description>Skadi's freezing aura does 3 cold damage to anyone who strikes her.</Description>
+			<Icon>Ability_ResistCold_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<Provides>+33% Cold resistance.</Provides>
+				<StrVal>UnitStat_ResistCold</StrVal>
+				<Value>33</Value>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>MeleeDefenseAppliesSpell</Attribute>
+				<Provides>Anyone who strikes Skadi takes 3 cold damage</Provides>
+				<StrVal>Skadi_FreezingAura</StrVal>
+				<Value>100</Value>
+			</GameModifier>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<IsCombatAbility>1</IsCombatAbility>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+</UnitTypes>

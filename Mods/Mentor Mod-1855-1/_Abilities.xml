@@ -1,0 +1,38 @@
+<!-- This is a mod file to be used with shrill mod merger -->
+<AbilityBonuses>
+	<!--Syntax: 
+	Additions: Just enter in the normal Format, you can add a comment with 
+	-->
+	<!--Priority:x-->
+	<!-- where x is between 0 and 100 after the first braket to assign a priority to the addition change, default priority is 1, base file has priority 0
+	To edit either replace with a new version or for more compatility:
+	 --[[insert magic tags here]]--
+	
+	-->
+
+	<AbilityBonus InternalName="MentorAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="Mentor">
+            <DisplayName>Mentor</DisplayName>
+            <Description>Can teach other champions spells and some other traits he owns at level 2 for the price of influence.</Description>
+            <Icon>Ability_Educated_Icon.png</Icon>
+            <HideWhenUpgraded>1</HideWhenUpgraded>
+            <IsCombatAbility>0</IsCombatAbility>
+            <Likelihood>175</Likelihood>
+            <RarityDisplay>Uncommon</RarityDisplay>
+			<GameModifier>
+				<Provides>Can teach other champions spells and some other traits he owns at level 2 for the price of influence.</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>Allegiance</Type>
+				<Attribute>Kingdom</Attribute>
+			</Prereq>
+            <Type>Army</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>	
+
+	
+</AbilityBonuses>

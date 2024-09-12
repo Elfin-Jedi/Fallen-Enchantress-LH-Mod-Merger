@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<UnitTypes>
+	<UnitType InternalName="Golem_Melailned">
+		<CreatureType>Champion</CreatureType>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-5</Value>
+			<Provides>-5% Unrest in the city this unit is in</Provides>
+		</GameModifier>
+
+		<DisplayName>Melailned</DisplayName>
+		<Backstory>Like other Obsidian Golems, Melailned was made out of lava rock and is protected by powerful enchantments against hostile magic. Melailned obtained consciousness long before those Golems that were created by the White Wizard. Born from the Anima Tsa Animana, the Spell of Life from Lifelessness, Melailned is unique even amongst other Obsidian Golems because it remembers some of the spell that called it into existence.
+
+Since its creation, Melailned has searched for knowledge to further its own ability to create more Golems. It is capable of creating similes but they break up to ash within days. The Golem now believes that the task it has set for itself is beyond its powers and, thus, is looking for an empire to join, where it believes it can further its studies.
+		</Backstory>
+
+		<ModelPath>ef_golem_body.hkb</ModelPath>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<EyeTexture>gfx\eyes\blinks\eyeblink_f3_hazel.png</EyeTexture>
+		<AnimationPack>EF_FemaleSovereignAnimationPack</AnimationPack>
+		<ShowAsSingleUnit>false</ShowAsSingleUnit>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<ModelScale>1.0000</ModelScale>
+		<TacticalModelScale>1.5000</TacticalModelScale>
+		<EquipmentScale>1.0000</EquipmentScale>
+		<ClothMapScale>1.6</ClothMapScale>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<MovementType>land</MovementType>
+		<BobbingFrequency>0.0000</BobbingFrequency>
+		<ClothPoseIndex>3</ClothPoseIndex>
+		<InfoCardBackground>BG37_Field</InfoCardBackground>
+		<InfoCardBackgroundFlipped>1</InfoCardBackgroundFlipped>
+		<CanBeDesigned>0</CanBeDesigned>
+		<!-- -->
+		<Allegiance>Empire</Allegiance>
+		<Unique>1</Unique>
+		<IsNPC>1</IsNPC>
+		<NPCSpawnLikelihood>100</NPCSpawnLikelihood>
+		<IsChampion>1</IsChampion>
+		<Gender>Male</Gender>
+		<SoundPack>SoundPack_Generic_Male</SoundPack>
+		<SpawnRating>1</SpawnRating>
+		<Quote>Today I am alone. Tomorrow? Time will tell.</Quote>
+		<NPCRecruitmentText>Give me a lab, some servants, %d gildar and leave me to my work!</NPCRecruitmentText>
+		<SelectedAbilityBonusOption>Blood_Golem</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>ImmuneToCriticals_Melailned</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>SpellResistance_Level</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Earth1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>AnimaTsaAnimana</SelectedAbilityBonusOption>
+		<!-- -->
+		<Medallions InternalName=""/>
+		<WageOverride>1</WageOverride>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_BG_IsConstruct>1.0000</UnitStat_BG_IsConstruct>
+			<UnitStat_BG_IsEmpire>1.0000</UnitStat_BG_IsEmpire>
+			<UnitStat_BG_IsHumanoid>1.0000</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsNotAlive>1.0000</UnitStat_BG_IsNotAlive>
+			<UnitStat_BG_IsRace_Golem>1.0000</UnitStat_BG_IsRace_Golem>
+			<UnitStat_BG_IsChampion>1.0000</UnitStat_BG_IsChampion>
+			<UnitStat_CombatSpeed>22.0000</UnitStat_CombatSpeed>
+			<UnitStat_HitPoints>20.0000</UnitStat_HitPoints>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+		</LevelMilestone>
+		<AutoCreateEquipment>Warhammer</AutoCreateEquipment>
+		<Color_Skin>5,5,10,55</Color_Skin>
+		<Color_Hair>168,123,88,255</Color_Hair>
+		<Color_Clothing1>120,25,20,255</Color_Clothing1>
+		<Color_Clothing2>78,60,55,255</Color_Clothing2>
+		<Color_Metal>0,0,0</Color_Metal>
+		<Texture_Skin>M_Golem_Texture_01.dds</Texture_Skin>
+		<Texture_Eyes>gfx\eyes\blinks\eyeblink_f3_hazel.png</Texture_Eyes>
+		<UnitModelType>Golem</UnitModelType>
+		<NPCFreeRecruit>0</NPCFreeRecruit>
+		<RaceType>Race_Type_Golem</RaceType>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+	</UnitType>
+	<AbilityBonus InternalName="ImmuneToCriticalsAbility_Melailned">
+		<AbilityBonusOption InternalName="ImmuneToCriticals_Melailned">
+			<DisplayName>Immune to Criticals</DisplayName>
+			<Description>Immune to Critical attacks</Description>
+			<Icon>Ability_ImmuneToCriticals_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ChanceToAvoidCrit</StrVal>
+				<Value>100</Value>
+			</GameModifier>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<IsCombatAbility>1</IsCombatAbility>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="AnimaTsaAnimana">
+		<AbilityBonusOption InternalName="AnimaTsaAnimana">
+			<DisplayName>Anima Tsa Animana</DisplayName>
+			<Description>When Champion is level 8 he may cast Summon Obsidian Golem (Strategic)</Description>
+			<Icon>Ability_FleshBoundTome_Icon.png</Icon>
+			<GameModifier>
+				<Provides>May cast Summon Obsidian Golem (strategic only) once champion is level 8</Provides>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<SpellDef InternalName="AnimaTsaAnimana">
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_Level</Attribute>
+			<Value>8</Value>
+		</Prereq>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>AnimaTsaAnimana</Attribute>
+		</Prereq>
+		<DisplayName>Summon Obsidian Golem</DisplayName>
+		<Description>Summons a level 2 Obsidian Golem from volcanic ashes.</Description>
+		<Image>Ability_FleshBoundTome_Icon.png</Image>
+		<IconFG>Ability_FleshBoundTome_Icon.png</IconFG>
+		<IconBG>Ability_FleshBoundTome_Icon.png</IconBG>
+		<IconColor>174,255,59</IconColor>
+		<AutoUnlock>1</AutoUnlock>
+		<CanStack>0</CanStack>
+		<SpellBookSortCategory>Summon</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Summon</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Summon</SpellSubClass>
+		<SpellTargetType>Self</SpellTargetType>
+		<Range>0</Range>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>40</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<PerTurn>1</PerTurn>
+			<Amount>1</Amount>
+		</SpellResourceCost>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Obsidian Golem</StrVal>
+			<UnitClass>ObsidianGolem_BG_Summon</UnitClass>
+			<Duration>-1</Duration>
+			<Value>2</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>100</AIPriority>
+		</AIData>
+		<HitSoundFX>Spell_Heal_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_Heal_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>.75</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<UnitType InternalName="ObsidianGolem_BG_Summon">
+		<DisplayName>Obsidian Golem</DisplayName>
+		<CreatureType>Construct</CreatureType>
+		<CanBeDesigned>0</CanBeDesigned>
+		<IsSovereign>0</IsSovereign>
+		<AllowGrouping>0</AllowGrouping>
+		<HasWages>0</HasWages>
+		<SpawnRating>9</SpawnRating>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_Attack_Blunt>21</UnitStat_Attack_Blunt>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_CombatSpeed>18</UnitStat_CombatSpeed>
+			<UnitStat_Defense_Cutting>30</UnitStat_Defense_Cutting>
+			<UnitStat_Defense_Pierce>30</UnitStat_Defense_Pierce>
+			<UnitStat_HitPoints>40</UnitStat_HitPoints>
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsConstruct>1</UnitStat_BG_IsConstruct>
+		</LevelMilestone>
+		<LevelMilestone InternalName="L2">
+			<Level>2</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_Attack_Blunt>22</UnitStat_Attack_Blunt>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_CombatSpeed>18</UnitStat_CombatSpeed>
+			<UnitStat_Defense_Cutting>32</UnitStat_Defense_Cutting>
+			<UnitStat_Defense_Pierce>32</UnitStat_Defense_Pierce>
+			<UnitStat_HitPoints>44</UnitStat_HitPoints>
+		</LevelMilestone>
+		<LevelMilestone InternalName="L3">
+			<Level>3</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_Attack_Blunt>23</UnitStat_Attack_Blunt>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_CombatSpeed>18</UnitStat_CombatSpeed>
+			<UnitStat_Defense_Cutting>34</UnitStat_Defense_Cutting>
+			<UnitStat_Defense_Pierce>34</UnitStat_Defense_Pierce>
+			<UnitStat_HitPoints>48</UnitStat_HitPoints>
+		</LevelMilestone>
+		<LevelMilestone InternalName="L4">
+			<Level>4</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_Attack_Blunt>24</UnitStat_Attack_Blunt>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_CombatSpeed>18</UnitStat_CombatSpeed>
+			<UnitStat_Defense_Cutting>36</UnitStat_Defense_Cutting>
+			<UnitStat_Defense_Pierce>36</UnitStat_Defense_Pierce>
+			<UnitStat_HitPoints>52</UnitStat_HitPoints>
+		</LevelMilestone>
+		<LevelMilestone InternalName="L5">
+			<Level>5</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_Attack_Blunt>25</UnitStat_Attack_Blunt>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_CombatSpeed>18</UnitStat_CombatSpeed>
+			<UnitStat_Defense_Cutting>38</UnitStat_Defense_Cutting>
+			<UnitStat_Defense_Pierce>38</UnitStat_Defense_Pierce>
+			<UnitStat_HitPoints>56</UnitStat_HitPoints>
+		</LevelMilestone>
+		<LevelMilestone InternalName="L6">
+			<Level>6</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_Attack_Blunt>26</UnitStat_Attack_Blunt>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_CombatSpeed>18</UnitStat_CombatSpeed>
+			<UnitStat_Defense_Cutting>40</UnitStat_Defense_Cutting>
+			<UnitStat_Defense_Pierce>40</UnitStat_Defense_Pierce>
+			<UnitStat_HitPoints>60</UnitStat_HitPoints>
+		</LevelMilestone>
+		<LevelMilestone InternalName="L7">
+			<Level>7</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_Attack_Blunt>27</UnitStat_Attack_Blunt>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_CombatSpeed>18</UnitStat_CombatSpeed>
+			<UnitStat_Defense_Cutting>42</UnitStat_Defense_Cutting>
+			<UnitStat_Defense_Pierce>42</UnitStat_Defense_Pierce>
+			<UnitStat_HitPoints>64</UnitStat_HitPoints>
+		</LevelMilestone>
+		<LevelMilestone InternalName="L8">
+			<Level>8</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_Attack_Blunt>28</UnitStat_Attack_Blunt>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_CombatSpeed>18</UnitStat_CombatSpeed>
+			<UnitStat_Defense_Cutting>44</UnitStat_Defense_Cutting>
+			<UnitStat_Defense_Pierce>44</UnitStat_Defense_Pierce>
+			<UnitStat_HitPoints>68</UnitStat_HitPoints>
+		</LevelMilestone>
+		<LevelMilestone InternalName="L9">
+			<Level>9</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_Attack_Blunt>29</UnitStat_Attack_Blunt>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_CombatSpeed>18</UnitStat_CombatSpeed>
+			<UnitStat_Defense_Cutting>46</UnitStat_Defense_Cutting>
+			<UnitStat_Defense_Pierce>46</UnitStat_Defense_Pierce>
+			<UnitStat_HitPoints>72</UnitStat_HitPoints>
+		</LevelMilestone>
+		<LevelMilestone InternalName="L10">
+			<Level>10</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_Attack_Blunt>30</UnitStat_Attack_Blunt>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_CombatSpeed>18</UnitStat_CombatSpeed>
+			<UnitStat_Defense_Cutting>48</UnitStat_Defense_Cutting>
+			<UnitStat_Defense_Pierce>48</UnitStat_Defense_Pierce>
+			<UnitStat_HitPoints>76</UnitStat_HitPoints>
+		</LevelMilestone>
+		<LevelMilestone InternalName="L11">
+			<Level>11</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_Attack_Blunt>31</UnitStat_Attack_Blunt>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_CombatSpeed>18</UnitStat_CombatSpeed>
+			<UnitStat_Defense_Cutting>50</UnitStat_Defense_Cutting>
+			<UnitStat_Defense_Pierce>50</UnitStat_Defense_Pierce>
+			<UnitStat_HitPoints>80</UnitStat_HitPoints>
+		</LevelMilestone>
+		<LevelMilestone InternalName="L12">
+			<Level>12</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_Attack_Blunt>32</UnitStat_Attack_Blunt>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_CombatSpeed>18</UnitStat_CombatSpeed>
+			<UnitStat_Defense_Cutting>52</UnitStat_Defense_Cutting>
+			<UnitStat_Defense_Pierce>52</UnitStat_Defense_Pierce>
+			<UnitStat_HitPoints>84</UnitStat_HitPoints>
+		</LevelMilestone>
+		<LevelMilestone InternalName="L13">
+			<Level>13</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_Attack_Blunt>33</UnitStat_Attack_Blunt>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_CombatSpeed>18</UnitStat_CombatSpeed>
+			<UnitStat_Defense_Cutting>54</UnitStat_Defense_Cutting>
+			<UnitStat_Defense_Pierce>54</UnitStat_Defense_Pierce>
+			<UnitStat_HitPoints>88</UnitStat_HitPoints>
+		</LevelMilestone>
+		<LevelMilestone InternalName="L14">
+			<Level>14</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_Attack_Blunt>34</UnitStat_Attack_Blunt>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_CombatSpeed>18</UnitStat_CombatSpeed>
+			<UnitStat_Defense_Cutting>56</UnitStat_Defense_Cutting>
+			<UnitStat_Defense_Pierce>56</UnitStat_Defense_Pierce>
+			<UnitStat_HitPoints>92</UnitStat_HitPoints>
+		</LevelMilestone>
+		<LevelMilestone InternalName="L15">
+			<Level>15</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_Attack_Blunt>35</UnitStat_Attack_Blunt>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_CombatSpeed>18</UnitStat_CombatSpeed>
+			<UnitStat_Defense_Cutting>58</UnitStat_Defense_Cutting>
+			<UnitStat_Defense_Pierce>58</UnitStat_Defense_Pierce>
+			<UnitStat_HitPoints>96</UnitStat_HitPoints>
+		</LevelMilestone>
+		<LevelMilestone InternalName="L16">
+			<Level>16</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_Attack_Blunt>36</UnitStat_Attack_Blunt>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_CombatSpeed>18</UnitStat_CombatSpeed>
+			<UnitStat_Defense_Cutting>60</UnitStat_Defense_Cutting>
+			<UnitStat_Defense_Pierce>60</UnitStat_Defense_Pierce>
+			<UnitStat_HitPoints>100</UnitStat_HitPoints>
+		</LevelMilestone>
+		<LevelMilestone InternalName="L17">
+			<Level>17</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_Attack_Blunt>37</UnitStat_Attack_Blunt>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_CombatSpeed>18</UnitStat_CombatSpeed>
+			<UnitStat_Defense_Cutting>62</UnitStat_Defense_Cutting>
+			<UnitStat_Defense_Pierce>62</UnitStat_Defense_Pierce>
+			<UnitStat_HitPoints>104</UnitStat_HitPoints>
+		</LevelMilestone>
+		<LevelMilestone InternalName="L18">
+			<Level>18</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_Attack_Blunt>38</UnitStat_Attack_Blunt>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_CombatSpeed>18</UnitStat_CombatSpeed>
+			<UnitStat_Defense_Cutting>64</UnitStat_Defense_Cutting>
+			<UnitStat_Defense_Pierce>64</UnitStat_Defense_Pierce>
+			<UnitStat_HitPoints>108</UnitStat_HitPoints>
+		</LevelMilestone>
+		<LevelMilestone InternalName="L19">
+			<Level>19</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_Attack_Blunt>39</UnitStat_Attack_Blunt>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_CombatSpeed>18</UnitStat_CombatSpeed>
+			<UnitStat_Defense_Cutting>66</UnitStat_Defense_Cutting>
+			<UnitStat_Defense_Pierce>66</UnitStat_Defense_Pierce>
+			<UnitStat_HitPoints>112</UnitStat_HitPoints>
+		</LevelMilestone>
+		<LevelMilestone InternalName="L20">
+			<Level>20</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_Attack_Blunt>40</UnitStat_Attack_Blunt>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_CombatSpeed>18</UnitStat_CombatSpeed>
+			<UnitStat_Defense_Cutting>68</UnitStat_Defense_Cutting>
+			<UnitStat_Defense_Pierce>68</UnitStat_Defense_Pierce>
+			<UnitStat_HitPoints>116</UnitStat_HitPoints>
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>ImmuneToPoison</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>ImmuneToCriticals</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>ImmuneToMagic</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Overpower</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>UnitStat_BG_IsSummonedAbility</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>UnitStat_BG_IsNotAliveAbility</SelectedAbilityBonusOption>
+		<Quote>'Created to Destroy, I await one powerful enough to serve.'</Quote>
+		<Backstory>Animated by the Anima Tsa Animana. Crafted from volcanic glass or lava rock, these creatures are most often found among the ruins of the great cities of man, though from time to time they are uncovered in more unusual locales.
+
+When an Obsidian Golem is destroyed it reverts back to the lava rock it was prior to enchantment.</Backstory>
+		<Medallions InternalName="">
+			<All>M_Golem_ObsidianGolem_Card_01.png</All>
+		</Medallions>
+		<AnimationPack>GolemAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>2</ClothMapScale>
+		<Color_Skin>5,5,10,55</Color_Skin>
+		<CutSceneDataPack>ObsidianGolemUnitCutscenePack</CutSceneDataPack>
+		<EyeTexture>gfx/eyes/male_brown_eye.png</EyeTexture>
+		<InfoCardBackground>BG26_Throne</InfoCardBackground>
+		<MaxScaleMainMap>0.8</MaxScaleMainMap>
+		<ModelPath>gfx/hkb/Monsters/M_Golem_Mesh_01.hkb</ModelPath>
+		<ModelScale>2.3</ModelScale>
+		<OnAttackParticleName>Golem_Attack</OnAttackParticleName>
+		<OnHitParticleName>Golem_Hit</OnHitParticleName>
+		<ShowAsSingleUnit>1</ShowAsSingleUnit>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Golem1</SoundPack>
+		<Texture_Skin>Gfx\HKB\Monsters\M_Golem_Texture_01.png</Texture_Skin>
+	</UnitType>
+</UnitTypes>

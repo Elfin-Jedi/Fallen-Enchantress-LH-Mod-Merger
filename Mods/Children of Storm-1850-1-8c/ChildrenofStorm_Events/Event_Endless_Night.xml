@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Container>
+  <QuestDef InternalName="Event_EndlessNight">
+    <DisplayName>Endless Night</DisplayName>
+    <Description>Something has disturbed the orbit of the moon! It is now positioned in such a way that your lands have fallen under the shadow of an endless eclipse.
+
+Growth in all cities has been reduced by 300%. All cities lose 1 Grain. Both these effects may lead to population loss in your cities. The duration of the event is unknown, but your astronomers tell you it shouldn't last more than a few years. Both Growth and Grain returns to normal after this.</Description>
+    <IsStartingPointQuest>0</IsStartingPointQuest>
+    <AllowQuestRejection>0</AllowQuestRejection>
+   <ShortTextAccept>The sun will return... in time.</ShortTextAccept>
+    <QuestClass>Minor</QuestClass>
+    <Repeatable>0</Repeatable>
+   <TriggerType>TurnNumber</TriggerType>
+    <TriggerData>125</TriggerData>
+    <TriggerChance>5</TriggerChance>
+    <PostTriggerChance>5</PostTriggerChance>
+
+    <TriggerOrigin>EventLocation</TriggerOrigin>
+    <Image>BG_EmpireRugged.png</Image>
+    <Treasure>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_Additive_TileYieldGrain</StrVal>
+	<Value>-1</Value>
+	<Duration>24</Duration>
+</GameModifier>
+
+     <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_Prestige</StrVal>
+	<Value>-300</Value>
+	<Duration>24</Duration>
+</GameModifier>
+
+ 
+    </Treasure>
+    <QuestObjectiveDef>
+      <ObjectiveID>0</ObjectiveID>
+      <QuestEnd>1</QuestEnd>
+    </QuestObjectiveDef>
+  </QuestDef>
+</Container>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<UnitTypes>
+	<UnitType InternalName="Centaur_Kerbasi">
+		<DisplayName>Kerbasi</DisplayName>
+		<Backstory>While other Centaurs have a strong sense of tradition, respect for tribal rules, and community values, Kerbasi values only one thing - the chance to trample down his enemies and destroy them with the thrusts of his spear. Recently, this led to an altercation when the son of a tribal elder compared Kerbasi's battle lust to that of the trogs (a not entirely unfair comparison, if truth be told.)  Kerbasi now seeks redemption through feats of battle and conquest.</Backstory>
+
+		<CreatureType>Champion</CreatureType>
+
+		<ModelPath>centaur_malemainbody.hkb</ModelPath>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<EyeTexture>gfx\eyes\blinks\eyeblink_m1_gold.png</EyeTexture>
+		<AnimationPack>EF_MaleSovereignAnimationPack</AnimationPack>
+
+		<ShowAsSingleUnit>false</ShowAsSingleUnit>
+		<CutSceneDataPack>KulanCutscenePack</CutSceneDataPack>
+		<ModelScale>1.0000</ModelScale>
+		<TacticalModelScale>1.5000</TacticalModelScale>
+		<EquipmentScale>1.0000</EquipmentScale>
+		<ClothMapScale>1.6000</ClothMapScale>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<MovementType>land</MovementType>
+		<BobbingFrequency>0.0000</BobbingFrequency>
+
+		<ClothPoseIndex>0</ClothPoseIndex>
+		<InfoCardBackground>BG_River</InfoCardBackground>
+		<InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+
+		<CanBeDesigned>0</CanBeDesigned>
+		<Allegiance>Kingdom</Allegiance>
+		<Unique>1</Unique>
+		<IsNPC>1</IsNPC>
+		<NPCSpawnLikelihood>100</NPCSpawnLikelihood>
+		<SpawnRating>7</SpawnRating>
+
+		<Quote>The key thing about a spear is to remain on the side opposite the pointy end.</Quote>
+		<NPCRecruitmentText>%d gildar would show me that you are sincere.</NPCRecruitmentText>
+
+		<SelectedAbilityBonusOption>Blood_Centaur</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>PathOfTheWarrior</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Kerbasi_Berserk</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>ArmorProficiency1_Warrior</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Charge</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Impulsive</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Spell_BattleCry</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Spearman1</SelectedAbilityBonusOption>
+
+
+		<Medallions InternalName=""/>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_BG_IsKingdom>1.0000</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsMale>1.0000</UnitStat_BG_IsMale>
+			<UnitStat_BG_IsMonster>1.0000</UnitStat_BG_IsMonster>
+			<UnitStat_BG_IsRace_Centaur>1.0000</UnitStat_BG_IsRace_Centaur>
+			<UnitStat_BG_IsChampion>1.0000</UnitStat_BG_IsChampion>
+			<UnitStat_CombatSpeed>22.0000</UnitStat_CombatSpeed>
+			<UnitStat_HitPoints>20.0000</UnitStat_HitPoints>
+			<UnitStat_Moves>3.0000</UnitStat_Moves>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+		</LevelMilestone>
+
+		<Equipment>Centaur_F_Male_Head_05</Equipment>
+		<Equipment>F_CornRows_Hair_Mesh_01</Equipment>
+		<Equipment>centaur_base_mount</Equipment>
+
+		<AutoCreateEquipment>Pike_Shocking_Centaur</AutoCreateEquipment>
+		<AutoCreateEquipment>ChainHelmet_Masterwork</AutoCreateEquipment>
+		<AutoCreateEquipment>ChainBreastpiece</AutoCreateEquipment>
+		<AutoCreateEquipment>ChainGreaves</AutoCreateEquipment>
+		<AutoCreateEquipment>ChainVambraces</AutoCreateEquipment>
+		<AutoCreateEquipment>LeatherBoots_Soldiers</AutoCreateEquipment>
+		<AutoCreateEquipment>BeltOfSpeed</AutoCreateEquipment>
+
+		<Color_Skin>79,48,20,255</Color_Skin>
+		<Color_Hair>99,63,30,255</Color_Hair>
+		<Color_Clothing1>138,61,13,255</Color_Clothing1>
+		<Color_Clothing2>30,63,99,255</Color_Clothing2>
+		<Color_Metal>176,133,194,255</Color_Metal>
+		<Texture_Skin>Trog_Skin_M_02.png</Texture_Skin>
+		<Texture_Eyes>gfx\eyes\blinks\eyeblink_m1_gold.png</Texture_Eyes>		
+		<Gender>Male</Gender>
+		<UnitModelType>Centaur</UnitModelType>
+
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-5</Value>
+			<Provides>-5% Unrest in the city this unit is in</Provides>
+		</GameModifier>
+		<NPCFreeRecruit>0</NPCFreeRecruit>
+		<RaceType>Race_Type_Centaur</RaceType>
+		<WageOverride>1</WageOverride>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SoundPack>SoundPack_Generic_Male</SoundPack>
+		<IsSovereign>0</IsSovereign>
+		<IsChampion>1</IsChampion>
+	</UnitType>	
+
+	<AbilityBonus InternalName="Kerbasi_Berserk">
+		<AbilityBonusOption InternalName="Kerbasi_Berserk">
+			<DisplayName>Kerbasi's Battlelust</DisplayName>
+			<Description>Kerbasi has the ability to choose to go berserk in combat; sometimes, however, the battle rage overcomes him and he acts without thinking.</Description>
+			<Icon>Ability_UncontrolledRage_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>UnlockCombatAbility</Attribute>
+                <StrVal>Berserk_Self</StrVal>
+                <Provides>Can go Berserk- +2 to Attack and Initiative but the unit attacks enemies without the player's direction.  Berserk units never cast spells.</Provides>
+            </GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_AIControlChance</StrVal>
+				<Value>20</Value>
+				<Provides>There is a 20% chance that this unit will not be controllable in battle and instead acts on its own (re-rolled each round).</Provides>
+			</GameModifier>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>0</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+
+</UnitTypes>

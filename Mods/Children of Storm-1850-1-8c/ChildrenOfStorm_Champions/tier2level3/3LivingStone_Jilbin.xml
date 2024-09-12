@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<UnitTypes>
+	<UnitType InternalName="LivingStone_Jilbin">
+		<CreatureType>Champion</CreatureType>
+		<EffectAttachment>
+			<Attachment>chest_center_lcf</Attachment>
+			<EffectName>Jiblineffect</EffectName>
+			<EffectPosition>0,0,0</EffectPosition>
+			<EffectRotation>0,0,0</EffectRotation>
+			<EffectScale>0.6</EffectScale>
+		</EffectAttachment>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-5</Value>
+			<Provides>-5% Unrest in the city this unit is in</Provides>
+		</GameModifier>
+
+		<DisplayName>Jilbin</DisplayName>
+		<Backstory>Early on Jilbin showed signs of being a remarkable wizard. Instead of staying with other Living Stone to further explore her abilities, she decided to venture out into the world. However, the Jilbin of today is a very different person altogether. She is covered in magical runes and seems emotionally distant as to the fate of her people. Something happened when she was out pursuing her own destiny - something that granted her terrifying powers. She will not respond to most common social interactions but if coaxed can speak for hours about how "time dances" or how the "stars are singing". She has clearly gone a little insane on her travels. If left alone she will spend days looking into mirrors. For what reason? Only she knows.</Backstory>
+
+		<ModelPath>M_Demon_Elemental_Mesh_01.hkb</ModelPath>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<EyeTexture>gfx\eyes\blinks\eyeblink_f3_hazel.png</EyeTexture>
+		<AnimationPack>EF_FemaleSovereignAnimationPack</AnimationPack>
+		<ShowAsSingleUnit>false</ShowAsSingleUnit>
+		<CutSceneDataPack>ReliasCutscenePack</CutSceneDataPack>
+		<ModelScale>1.0000</ModelScale>
+		<TacticalModelScale>1.5000</TacticalModelScale>
+		<EquipmentScale>1.0000</EquipmentScale>
+		<ClothMapScale>1.6</ClothMapScale>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<MovementType>land</MovementType>
+		<BobbingFrequency>0.0000</BobbingFrequency>
+		<ClothPoseIndex>2</ClothPoseIndex>
+		<InfoCardBackground>BG13_Volcanic</InfoCardBackground>
+		<InfoCardBackgroundFlipped>1</InfoCardBackgroundFlipped>
+		<CanBeDesigned>0</CanBeDesigned>
+		<!-- -->
+		<Allegiance>Kingdom</Allegiance>
+		<Unique>1</Unique>
+		<IsNPC>1</IsNPC>
+		<NPCSpawnLikelihood>100</NPCSpawnLikelihood>
+		<IsChampion>1</IsChampion>
+		<Gender>Female</Gender>
+		<SpawnRating>3</SpawnRating>
+		<Quote>For people like us, nothing is beyond reach.</Quote>
+		<NPCRecruitmentText>For %d gildar, we will wander the earths together.</NPCRecruitmentText>
+		<SelectedAbilityBonusOption>Blood_LivingStone</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Fire1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Air1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Earth1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Weak</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>JiblinsAscension</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>PathOfTheMage</SelectedAbilityBonusOption>
+		<!-- -->
+		<Medallions InternalName=""/>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_HitPoints>20</UnitStat_HitPoints>
+			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_LivingStone>1</UnitStat_BG_IsRace_LivingStone>
+			<UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsFemale>1</UnitStat_BG_IsFemale>
+			<UnitStat_BG_IsNotAlive>1</UnitStat_BG_IsNotAlive>
+		</LevelMilestone>
+		<SoundPack>SoundPack_Generic_Female</SoundPack>
+		<AutoCreateEquipment>Shortsword</AutoCreateEquipment>
+		<Color_Skin>30,84,48,255</Color_Skin>
+		<Color_Hair>168,123,88,255</Color_Hair>
+		<Color_Clothing1>200,200,200,255</Color_Clothing1>
+		<Color_Clothing2>0,0,0,255</Color_Clothing2>
+		<Color_Metal>255,255,255,255</Color_Metal>
+		<Texture_Skin>M_Ice_Elemental_Resoln_Texture_01.png</Texture_Skin>
+		<Texture_Eyes>gfx\eyes\blinks\eyeblink_f3_hazel.png</Texture_Eyes>
+		<UnitModelType>LivingStone</UnitModelType>
+		<NPCFreeRecruit>0</NPCFreeRecruit>
+		<RaceType>Race_Type_LivingStone</RaceType>
+		<WageOverride>1</WageOverride>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+	</UnitType>
+	<AbilityBonus InternalName="JiblinsAscension">
+		<AbilityBonusOption InternalName="JiblinsAscension">
+			<DisplayName>Ascension</DisplayName>
+			<Description>Any enchantments cast on this unit costs 25% less mana.
+
+In addition, unit may cast Ascension spell in battle on itself. Ascension reduces mana cost for tactical spells by 10% and stacks with itself.</Description>
+			<Icon>Ability_PathOfTheGovernor_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_EnchantmentMaintenanceMultiplier</StrVal>
+				<Provides>Any enchantments cast on this unit costs 25% less mana.</Provides>
+				<Value>-0.25</Value>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>Ascended_Jiblin</StrVal>
+				<Provides>In addition, unit may cast Ascension spell in battle on itself. Ascension reduces mana cost for tactical spells by 10% and stacks with itself.</Provides>
+			</GameModifier>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<IsCombatAbility>1</IsCombatAbility>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<SpellDef InternalName="Ascended_Jiblin">
+		<DisplayName>Ascension</DisplayName>
+		<Description>-10% Mana cost for spells. Stacks.</Description>
+		<Image>S_BurningBlade_Painting.png</Image>
+		<IconFG>T_FeedTheFire_Icon.png</IconFG>
+		<IconColor>255,158,6</IconColor>
+		<CanStack>1</CanStack>
+		<Cooldown>3</Cooldown>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>Self</SpellTargetType>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<IsCastable>0</IsCastable>
+		<IsSpecialAbility>1</IsSpecialAbility>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_TacticalSpellManaCost_Multiplier</StrVal>
+			<Value>-0.1</Value>
+			<Duration>-1</Duration>
+			<Provides>-10% mana cost for tactical spells</Provides>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>50</AIPriority>
+		</AIData>
+		<HitSoundFX>Spell_BurningBlade_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_BurningBlade_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.75</EffectScale>
+			<EffectDelay>0.25</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+</UnitTypes>

@@ -1,0 +1,2166 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<GameItemTypes>
+	<GameItemType InternalName="Axe_Possessed">
+		<DisplayName>Possessed Axe</DisplayName>
+		<Description>This cursed axe is lethal to allies and enemies around the wielder.</Description>
+		<Type>Weapon</Type>
+		<Type>Defense</Type>
+		<WeaponType>TwoHanded</WeaponType>
+		<WeaponUpgradeType>Axe</WeaponUpgradeType>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>75</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Pierce</StrVal>
+			<Value>13</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_Immersive_M</StrVal>
+			<Value>-1</Value>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>This cursed axe is lethal to allies and enemies around the wielder.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>CORE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>-2</Value>
+			<Provides>::: -2 Initiative</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL ABILITY</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Cleave_Ability</StrVal>
+			<Provides>::: Cleave :::
+			::: Strikes up to 3 adjacent enemies</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL EFFECT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_BackswingChance</StrVal>
+			<Value>100</Value>
+			<Provides>::: Backswing :::
+			::: On missed swing, backswings</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ClumsyChance</StrVal>
+			<Value>100</Value>
+			<Provides>::: Clumsy :::
+			::: Randomly strikes ally or enemy</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>XOTIC</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_IsWarriorAxe</StrVal>
+			<Value>2</Value>
+			<Provides>::: Warrior Axe :::
+			::: +2 Initiative
+			::: +15% Cleave Bonus
+			::: Applied in Tactical if Warrior</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<Likelihood>8</Likelihood>
+		<RarityDisplay>Common</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_X_Immersive_2H</Attribute>
+			<Value>3</Value>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Injury_X_Maimed_Hand</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_CUTTING</AIPrefType>
+			<AIPriority>1</AIPriority>
+		</AIData>
+		<ArtDef>Axe_Possessed_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="BunnySlippers">
+		<DisplayName>Bunny Slippers</DisplayName>
+		<Description>Made from the most foul, cruel, and bad-tempered rodent you ever set eyes on!</Description>
+		<Type>Boots</Type>
+		<Subtype>Clothes</Subtype>
+		<CanBeEquipped>1</CanBeEquipped>
+		<CustomizationPointCost>1</CustomizationPointCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<ShopValue>25</ShopValue>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>Made from the most foul, cruel, and bad-tempered rodent you ever set eyes on!</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>STATS</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Dodge</StrVal>
+			<Value>10</Value>
+			<Provides>::: +10 Dodge</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL ACTION</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Tactical_Auto_Dodge_Boost</StrVal>
+			<Value>20</Value>
+			<Provides>::: +20 Dodge when Defending</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>1</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>UltraRare</RarityDisplay>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_Charms_Advanced</Attribute>
+		</Prereq>
+		<HeroOnly>1</HeroOnly>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>1</AIPriority>
+		</AIData>
+		<ArtDef>BunnySlippers_X_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="CursedBell">
+		<DisplayName>Cursed Bell</DisplayName>
+		<Description>This bell was hung with a string down into a grave, so that those accidently buried alive could be found. But when hundreds started ringing at once, they knew it was far worse than someone buried alive.</Description>
+		<Type>Consumable</Type>
+		<ShopValue>100</ShopValue>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>This bell was hung with a string down into a grave, so that those accidently buried alive could be found. But when hundreds started ringing at once, they knew it was far worse than someone buried alive.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL ITEM</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UseSpell</Attribute>
+			<StrVal>CursedBell_Ability</StrVal>
+			<Provides>::: Cursed Bell :::
+			::: ALL lose next Action
+			::: Caster loses next Action
+			::: Resistable</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<Likelihood>8</Likelihood>
+		<RarityDisplay>Common</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<IsUsable>0</IsUsable>
+		<UsableInBattle>1</UsableInBattle>
+		<UsableOnlyOnceInBattle>0</UsableOnlyOnceInBattle>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>1</AIPriority>
+		</AIData>
+		<ArtDef>CursedBell_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Dagger_Breathstealer">
+		<DisplayName>Breathstealer</DisplayName>
+		<Description>Victims of this weapon's attack cannot cast spells, or cry for help.</Description>
+		<Type>Weapon</Type>
+		<WeaponType>OneHanded</WeaponType>
+		<WeaponUpgradeType>DaggerBlade</WeaponUpgradeType>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>400</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Pierce</StrVal>
+			<Value>12</Value>
+		</GameModifier>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>Victims of this weapon's attack cannot cast spells, or cry for help.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>CORE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>3</Value>
+			<Provides>+3 Initiative</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL EFFECT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_MaxCounterAttack</StrVal>
+			<Value>1</Value>
+			<Provides>::: Counterattack :::
+			::: +1 per Action</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL MELEE ATK</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>MeleeAppliesSpell</Attribute>
+			<StrVal>Silence_Ability</StrVal>
+			<Provides>::: Silence Effect :::
+			::: Target can't cast for 1 Action
+			::: Resistable</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>XOTIC</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_IsAssassinDagger</StrVal>
+			<Value>1</Value>
+			<Provides>::: Assassin Dagger :::
+			::: +5 Critical Chance
+			::: +25% Critical Damage
+			::: +1 Initiative
+			::: Applied in Tactical if Assassin</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<Likelihood>10</Likelihood>
+		<RarityDisplay>Uncommon3</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_CUTTING</AIPrefType>
+			<AIPriority>133</AIPriority>
+		</AIData>
+		<ArtDef>Dagger_Breathstealer_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Dagger_Enzo">
+		<DisplayName>Enzo's Knife</DisplayName>
+		<Description>It's a fairly unassuming knife, but each strike weakens the victim a little more, and makes the next strike that much more deadly.</Description>
+		<Type>Weapon</Type>
+		<WeaponType>OneHanded</WeaponType>
+		<WeaponUpgradeType>DaggerBlade</WeaponUpgradeType>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>500</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Pierce</StrVal>
+			<Value>9</Value>
+		</GameModifier>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>It's a fairly unassuming knife, but each strike weakens the victim a little more, and makes the next strike that much more deadly.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>CORE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>3</Value>
+			<Provides>::: +3 Initiative</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL EFFECT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_MaxCounterAttack</StrVal>
+			<Value>1</Value>
+			<Provides>::: Counterattack :::
+			::: +1 per Action</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_MaulChance</StrVal>
+			<Value>100</Value>
+			<Provides>::: Maul :::
+			::: Continuous ATK</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL MELEE ATK</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>MeleeAppliesSpell</Attribute>
+			<StrVal>Enzo_Effect</StrVal>
+			<Provides>::: Enzo Effect :::
+			::: -1 DEF per hit</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>XOTIC</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_IsAssassinDagger</StrVal>
+			<Value>1</Value>
+			<Provides>::: Assassin Dagger :::
+			::: +5 Critical Chance
+			::: +25% Critical Damage
+			::: +1 Initiative
+			::: Applied in Tactical if Assassin</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<Likelihood>10</Likelihood>
+		<RarityDisplay>Uncommon</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_CUTTING</AIPrefType>
+			<AIPriority>133</AIPriority>
+		</AIData>
+		<ArtDef>Dagger_Enzo_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="DragonTeeth">
+		<DisplayName>Dragon Teeth</DisplayName>
+		<Description>Throw them onto the ground and Skeleton's will rise to serve you.</Description>
+		<Type>Consumable</Type>
+		<ShopValue>100</ShopValue>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>Throw them onto the ground and Skeleton's will rise to serve you.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL ITEM</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UseSpell</Attribute>
+			<StrVal>DragonTeeth_Ability</StrVal>
+			<Provides>::: Dragon Teeth :::
+			::: Can raise 3 Skeletons
+			::: Level = Summon Bonus + 1</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<Likelihood>8</Likelihood>
+		<RarityDisplay>Common3</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<IsUsable>0</IsUsable>
+		<UsableInBattle>1</UsableInBattle>
+		<UsableOnlyOnceInBattle>0</UsableOnlyOnceInBattle>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>1</AIPriority>
+		</AIData>
+		<ArtDef>DragonTeeth_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Longbow_Skath">
+		<DisplayName>Skath Longbow</DisplayName>
+		<Description>Made of skath fins and enchanted to retain some of that creatures deadly power.</Description>
+		<Type>Weapon</Type>
+		<Type>Defense</Type>
+		<WeaponType>Bow</WeaponType>
+		<WeaponUpgradeType>Bow</WeaponUpgradeType>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>150</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Pierce</StrVal>
+			<Value>9</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_Immersive_M</StrVal>
+			<Value>-1</Value>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>Made of skath fins and enchanted to retain some of that creatures deadly power.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>CORE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>-6</Value>
+			<Provides>::: -6 Initiative</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL ABILITY</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>DeadlyBite_Ability</StrVal>
+			<Provides>::: Deadly Bite :::
+			::: ATK x2</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL SPECIAL</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockRangedAction</Attribute>
+			<StrVal>BowAttack_Basic</StrVal>
+			<Provides>::: Ranged ATK</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>XOTIC</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_IsBow</StrVal>
+			<Value>1</Value>
+			<Provides>::: Is a Bow</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_IsMarksmanBow</StrVal>
+			<Value>4</Value>
+			<Provides>::: Marksman Bow :::
+			::: +4 Initiative
+			::: Applied in Tactical if Marksman</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Likelihood>8</Likelihood>
+		<RarityDisplay>Uncommon3</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<TacticalRange>20</TacticalRange>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_X_Immersive_2H</Attribute>
+			<Value>3</Value>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Injury_X_Maimed_Hand</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Brawler</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_BOW</AIPrefType>
+			<AIPriority>75</AIPriority>
+		</AIData>
+		<ArtDef>Longbow_Skath_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Longbow_Stag">
+		<DisplayName>Stag Longbow</DisplayName>
+		<Description>Enchanted to bestow the speed of the stag, made for an archer who wants to fire early and often.</Description>
+		<Type>Weapon</Type>
+		<Type>Defense</Type>
+		<WeaponType>Bow</WeaponType>
+		<WeaponUpgradeType>Bow</WeaponUpgradeType>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>150</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Pierce</StrVal>
+			<Value>9</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_Immersive_M</StrVal>
+			<Value>-1</Value>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>Enchanted to bestow the speed of the stag, made for an archer who wants to fire early and often.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL SPECIAL</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockRangedAction</Attribute>
+			<StrVal>BowAttack_Basic</StrVal>
+			<Provides>::: Ranged ATK</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>XOTIC</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_IsBow</StrVal>
+			<Value>1</Value>
+			<Provides>::: Is a Bow</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_IsMarksmanBow</StrVal>
+			<Value>1</Value>
+			<Provides>::: Marksman Bow :::
+			::: +1 Initiative
+			::: Applied in Tactical if Marksman</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Likelihood>8</Likelihood>
+		<RarityDisplay>Uncommon4</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<TacticalRange>20</TacticalRange>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_X_Immersive_2H</Attribute>
+			<Value>3</Value>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Injury_X_Maimed_Hand</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Brawler</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_BOW</AIPrefType>
+			<AIPriority>66</AIPriority>
+		</AIData>
+		<ArtDef>Longbow_Stag_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="LuckyDice">
+		<DisplayName>Lucky Dice</DisplayName>
+		<Description>Even those that don't believe in luck reach for their favorite d6 when the game is on the line.</Description>
+		<Type>Accessory</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>50</ShopValue>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>Even those that don't believe in luck reach for their favorite d6 when the game is on the line.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>RESISTANCE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_MagicResist</StrVal>
+			<Value>5</Value>
+			<Provides>::: +5 Magic</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>STATS</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Accuracy</StrVal>
+			<Value>5</Value>
+			<Provides>::: +5 Accuracy</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Dodge</StrVal>
+			<Value>5</Value>
+			<Provides>::: +5 Dodge</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<Likelihood>10</Likelihood>
+		<RarityDisplay>Uncommon1</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<IsUsable>0</IsUsable>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>250</AIPriority>
+		</AIData>
+		<ArtDef>ArtDef_X_LuckyDice_Accessory</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Maul_Lollipop">
+		<DisplayName>Giant Lollipop</DisplayName>
+		<Description>We make holes in teeth!</Description>
+		<Type>Weapon</Type>
+		<WeaponType>Blunt</WeaponType>
+		<WeaponUpgradeType>Blunt</WeaponUpgradeType>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>375</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Pierce</StrVal>
+			<Value>21</Value>
+		</GameModifier>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>We make holes in teeth!</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>CORE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>-6</Value>
+			<Provides>::: -6 Initiative</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL ABILITY</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>SugarRush</StrVal>
+			<Provides>::: Sugar Rush :::
+			::: +100% ATK but lose next action</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL EFFECT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_BashChance</StrVal>
+			<Value>100</Value>
+			<Provides>::: Bash :::
+			::: May knock target prone
+			::: Chance (%) = DMG/100</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>XOTIC</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_IsCommanderHammer</StrVal>
+			<Value>5</Value>
+			<Provides>::: Commander Hammer :::
+			::: +5 Initiative
+			::: +1 Counterattack per Action
+			::: Applied in Tactical if Commander</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<Likelihood>10</Likelihood>
+		<RarityDisplay>Rare4</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_BLUNT</AIPrefType>
+			<AIPriority>500</AIPriority>
+		</AIData>
+		<ArtDef>Maul_Lollipop_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="PlateBoots_Blood">
+		<DisplayName>Blood God Boots</DisplayName>
+		<Description>How many battlefields have these boots tread across?</Description>
+		<Type>Boots</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>325</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Pierce</StrVal>
+			<Value>6</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_PlateArmor_Sabatons</StrVal>
+			<Value>1</Value>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>How many battlefields have these boots tread across?</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_PlateArmor</StrVal>
+			<Value>1</Value>
+			<Provides>CORE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>-1</Value>
+			<Provides>::: -1 Initiative</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL EFFECT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_BloodGodArmor</StrVal>
+			<Value>1</Value>
+			<Provides>::: Blood God Armor :::
+			::: 2x Blood God Armor DMG</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Likelihood>10</Likelihood>
+		<RarityDisplay>Uncommon4</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_ArmorProficiency</Attribute>
+			<Value>2</Value>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5000</AIPriority>
+		</AIData>
+		<ArtDef>Art_PlateBoots_Blood</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="PlateBoots_LadyUmber">
+		<DisplayName>Lady Umber's Boots</DisplayName>
+		<Description>When her heels were dug in, Lady Umber was unlikely to be moved. These boots cannot be worn by men.</Description>
+		<Type>Boots</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>400</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Pierce</StrVal>
+			<Value>7</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_PlateArmor_Sabatons</StrVal>
+			<Value>1</Value>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>When her heels were dug in, Lady Umber was unlikely to be moved. These boots cannot be worn by men.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_PlateArmor</StrVal>
+			<Value>1</Value>
+			<Provides>CORE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>-1</Value>
+			<Provides>::: -1 Initiative</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL ACTION</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Tactical_Auto_Defense_Boost</StrVal>
+			<Value>25</Value>
+			<Provides>::: +25 DEF when Defending</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Likelihood>10</Likelihood>
+		<RarityDisplay>Rare</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_ArmorProficiency</Attribute>
+			<Value>2</Value>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>7000</AIPriority>
+		</AIData>
+		<ArtDef>Art_PlateBoots_LadyUmber</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="PlateBreastpiece_Blood">
+		<DisplayName>Blood God Cuirass</DisplayName>
+		<Description>A cage of pain funnels the rage of the wearer, until it is set free.</Description>
+		<Type>Torso</Type>
+		<Type>Surcoat</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>575</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Pierce</StrVal>
+			<Value>11</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_PlateArmor_Cuirass</StrVal>
+			<Value>1</Value>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>A cage of pain funnels the rage of the wearer, until it is set free.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_PlateArmor</StrVal>
+			<Value>1</Value>
+			<Provides>CORE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>-2</Value>
+			<Provides>::: -2 Initiative</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL ABILITY</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>BloodGodArmor_Ability</StrVal>
+			<Provides>::: Anguish :::
+			::: 8 DMG to ALL adjacent units
+			::: 4 DMG to the wearer</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Likelihood>10</Likelihood>
+		<RarityDisplay>Uncommon</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_ArmorProficiency</Attribute>
+			<Value>2</Value>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Primitive</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5000</AIPriority>
+		</AIData>
+		<ArtDef>Art_PlateBreastpiece_Blood</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="PlateBreastpiece_LadyUmber">
+		<DisplayName>Lady Umber's Cuirass</DisplayName>
+		<Description>Because of this cuirass Lady Umber was rumored to be invulnerable to mortal attacks. This cuirass cannot be worn by men.</Description>
+		<Type>Torso</Type>
+		<Type>Surcoat</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>1000</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Pierce</StrVal>
+			<Value>12</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_PlateArmor_Cuirass</StrVal>
+			<Value>1</Value>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>Because of this cuirass Lady Umber was rumored to be invulnerable to mortal attacks. This cuirass cannot be worn by men.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_PlateArmor</StrVal>
+			<Value>1</Value>
+			<Provides>CORE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>-2</Value>
+			<Provides>::: -2 Initiative</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>RESISTANCE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ResistPierce</StrVal>
+			<Value>30</Value>
+			<Provides>::: +30% Pierce</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Likelihood>10</Likelihood>
+		<RarityDisplay>Rare1</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_ArmorProficiency</Attribute>
+			<Value>2</Value>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Primitive</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>9000</AIPriority>
+		</AIData>
+		<ArtDef>Art_PlateBreastpiece_LadyUmber</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="PlateGreaves_Blood">
+		<DisplayName>Blood God Greaves</DisplayName>
+		<Description>Cursed greaves bound in the prayers of the faithless.</Description>
+		<Type>LowerBody</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>350</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Pierce</StrVal>
+			<Value>8</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_PlateArmor_Greaves</StrVal>
+			<Value>1</Value>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>Cursed greaves bound in the prayers of the faithless.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_PlateArmor</StrVal>
+			<Value>1</Value>
+			<Provides>CORE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>-1</Value>
+			<Provides>::: -1 Initiative</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL MELEE DEF</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>MeleeDefenseAppliesSpell</Attribute>
+			<StrVal>BloodGodArmor_Effect</StrVal>
+			<Provides>::: Blood God Armor :::
+			::: 2 DMG to attacker
+			::: 1 DMG to wearer</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Likelihood>10</Likelihood>
+		<RarityDisplay>Uncommon1</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_ArmorProficiency</Attribute>
+			<Value>2</Value>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Primitive</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5000</AIPriority>
+		</AIData>
+		<ArtDef>Art_PlateGreaves_Blood</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="PlateGreaves_LadyUmber">
+		<DisplayName>Lady Umber's Greaves</DisplayName>
+		<Description>These greaves are powerful on their own, but in combination with Lady Umber's cuirass it makes the wearer nearly invulnerable. These greaves cannot be worn by men.</Description>
+		<Type>LowerBody</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>750</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Pierce</StrVal>
+			<Value>9</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_PlateArmor_Greaves</StrVal>
+			<Value>1</Value>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>These greaves are powerful on their own, but in combination with Lady Umber's cuirass it makes the wearer nearly invulnerable. These greaves cannot be worn by men.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_PlateArmor</StrVal>
+			<Value>1</Value>
+			<Provides>CORE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>-1</Value>
+			<Provides>::: -1 Initiative</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>RESISTANCE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ResistPierce</StrVal>
+			<Value>20</Value>
+			<Provides>::: +20% Pierce</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Likelihood>10</Likelihood>
+		<RarityDisplay>Rare3</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_ArmorProficiency</Attribute>
+			<Value>2</Value>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Primitive</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>7500</AIPriority>
+		</AIData>
+		<ArtDef>Art_PlateGreaves_LadyUmber</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="PlateHelmet_Blood">
+		<DisplayName>Blood God Helm</DisplayName>
+		<Description>When the helm is worn, the sounds of iron on flesh and the battlefield cries become, for a time, distant and quiet.</Description>
+		<Type>Head</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>300</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Pierce</StrVal>
+			<Value>4</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_PlateArmor_Helm</StrVal>
+			<Value>1</Value>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>When the helm is worn, the sounds of iron on flesh and the battlefield cries become, for a time, distant and quiet.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_PlateArmor</StrVal>
+			<Value>1</Value>
+			<Provides>CORE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>-1</Value>
+			<Provides>::: -1 Initiative</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL EFFECT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_BloodGodArmor_Caster</StrVal>
+			<Provides>::: Blood God Armor (Wearer) :::
+			::: Nullifies Blood God Armor DMG</Provides>
+			<Value>-1</Value>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Likelihood>10</Likelihood>
+		<RarityDisplay>Uncommon2</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_ArmorProficiency</Attribute>
+			<Value>2</Value>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Vain</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Injury_X_Claustrophobic</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>4000</AIPriority>
+		</AIData>
+		<ArtDef>ArtDef_X_Helm_Blood_Armor</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="PlateHelmet_Silver">
+		<DisplayName>Silver Helm</DisplayName>
+		<Description>"I am the mountain, and though storms rage about me, I will not fall." -Inscription in the Silver Helm.</Description>
+		<Type>Head</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>1800</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Pierce</StrVal>
+			<Value>6</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_PlateArmor_Helm</StrVal>
+			<Value>1</Value>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>"I am the mountain, and though storms rage about me, I will not fall." -Inscription in the Silver Helm.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_PlateArmor</StrVal>
+			<Value>1</Value>
+			<Provides>CORE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>-1</Value>
+			<Provides>::: -1 Initiative</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>IMMUNITY</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>ImmuneToSwarm</Attribute>
+			<Provides>::: To Swarm</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Likelihood>10</Likelihood>
+		<RarityDisplay>Rare2</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_ArmorProficiency</Attribute>
+			<Value>2</Value>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Vain</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Injury_X_Claustrophobic</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>7500</AIPriority>
+		</AIData>
+		<ArtDef>ArtDef_X_Helm_Silver_Armor</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="PlateVambraces_Blood">
+		<DisplayName>Blood God Vambraces</DisplayName>
+		<Description>These vambraces cut into the skin of the wearer, but its enchantment passes along this pain to all you touch.</Description>
+		<Type>Forearms</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>250</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Pierce</StrVal>
+			<Value>4</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_PlateArmor_Vambraces</StrVal>
+			<Value>1</Value>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>These vambraces cut into the skin of the wearer, but its enchantment passes along this pain to all you touch.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_PlateArmor</StrVal>
+			<Value>1</Value>
+			<Provides>CORE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>-1</Value>
+			<Provides>::: -1 Initiative</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL MELEE ATK</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>MeleeAppliesSpell</Attribute>
+			<StrVal>BloodGodArmor_Effect</StrVal>
+			<Provides>::: Blood God Armor :::
+			::: 2 DMG to target
+			::: 1 DMG to wearer</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Likelihood>10</Likelihood>
+		<RarityDisplay>Uncommon2</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_ArmorProficiency</Attribute>
+			<Value>2</Value>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Primitive</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>3750</AIPriority>
+		</AIData>
+		<ArtDef>Art_PlateVambraces_Blood</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="PlateVambraces_LadyUmber">
+		<DisplayName>Lady Umber's Vambraces</DisplayName>
+		<Description>Though these bladed vambraces were made for battle, Lady Umber was fond of using them against servents and lovers as well. These vambraces cannot be worn by men.</Description>
+		<Type>Forearms</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>400</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Pierce</StrVal>
+			<Value>7</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_PlateArmor_Vambraces</StrVal>
+			<Value>1</Value>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>Though these bladed vambraces were made for battle, Lady Umber was fond of using them against servents and lovers as well. These vambraces cannot be worn by men.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_PlateArmor</StrVal>
+			<Value>1</Value>
+			<Provides>CORE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>-1</Value>
+			<Provides>::: -1 Initiative</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>STATS</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CritDamageMultiplier</StrVal>
+			<Value>1</Value>
+			<Provides>::: +100% Critical DMG</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Likelihood>10</Likelihood>
+		<RarityDisplay>Rare1</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_ArmorProficiency</Attribute>
+			<Value>2</Value>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Primitive</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>6000</AIPriority>
+		</AIData>
+		<ArtDef>Art_PlateVambraces_LadyUmber</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Potion_BottledWind">
+		<DisplayName>Bottled Wind</DisplayName>
+		<Description>A storm rages inside this bottle. There is no safe way to let it out.</Description>
+		<Type>Consumable</Type>
+		<ShopValue>50</ShopValue>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>A storm rages inside this bottle. There is no safe way to let it out.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL ITEM</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UseSpell</Attribute>
+			<StrVal>BottledWind_Ability</StrVal>
+			<Provides>::: Bottled Wind :::
+			::: ALL are knocked prone
+			::: Caster is knocked prone
+			::: Applies to all within a 1 radius
+			::: Resistable</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<Likelihood>8</Likelihood>
+		<RarityDisplay>Common4</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<IsUsable>0</IsUsable>
+		<UsableInBattle>1</UsableInBattle>
+		<UsableOnlyOnceInBattle>0</UsableOnlyOnceInBattle>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>333</AIPriority>
+		</AIData>
+		<ArtDef>BottledWind_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Potion_Quicksilver">
+		<DisplayName>Quicksilver Potion</DisplayName>
+		<Description>Quicksilver spins in the bottle, never slowing.</Description>
+		<Type>Consumable</Type>
+		<ShopValue>200</ShopValue>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>Quicksilver spins in the bottle, never slowing.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL ITEM</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UseSpell</Attribute>
+			<StrVal>QuicksilverPotion_Ability</StrVal>
+			<Provides>::: Quicksilver Potion :::
+			::: Get 3 Actions immediately
+			::: May lose several Actions subsequently</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<Likelihood>8</Likelihood>
+		<RarityDisplay>Common1</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<IsUsable>0</IsUsable>
+		<UsableInBattle>1</UsableInBattle>
+		<UsableOnlyOnceInBattle>0</UsableOnlyOnceInBattle>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>800</AIPriority>
+		</AIData>
+		<ArtDef>QuicksilverPotion_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Ring_Bishops">
+		<DisplayName>Bishop's Ring</DisplayName>
+		<Description>The ultimate reward of suffering is knowing we can survive it.</Description>
+		<Type>Accessory</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<CustomizationPointCost>1</CustomizationPointCost>
+		<ShopValue>100</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_Ring</StrVal>
+			<Value>-1</Value>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>The ultimate reward of suffering is knowing we can survive it.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL ABILITY</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>BishopsRing_Heal</StrVal>
+			<Provides>::: Release :::
+			::: Self-heal
+			::: (Charges x1.5) HP</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL MELEE DEF</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>MeleeDefenseAppliesSpell</Attribute>
+			<StrVal>BishopsRing_Charge</StrVal>
+			<Provides>::: +1 Charge when struck</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>1</IsAvailableForSovereignCustomization>
+		<Likelihood>10</Likelihood>
+		<RarityDisplay>Uncommon</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<IsUsable>0</IsUsable>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_X_Ring</Attribute>
+			<Value>1</Value>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>1</AIPriority>
+		</AIData>
+		<ArtDef>Ring_Bishops_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Ring_Revenging">
+		<DisplayName>Revenging Ring</DisplayName>
+		<Description>The ultimate reward of suffering is in returning it on our enemies.</Description>
+		<Type>Accessory</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<CustomizationPointCost>1</CustomizationPointCost>
+		<ShopValue>100</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_Ring</StrVal>
+			<Value>-1</Value>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>The ultimate reward of suffering is in returning it on our enemies.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL ABILITY</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>RevengingRing_Bash</StrVal>
+			<Provides>::: Release :::
+			::: (Charges x1.5) DMG</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL MELEE DEF</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>MeleeDefenseAppliesSpell</Attribute>
+			<StrVal>RevengingRing_Charge</StrVal>
+			<Provides>::: +1 Charge when struck</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>1</IsAvailableForSovereignCustomization>
+		<Likelihood>10</Likelihood>
+		<RarityDisplay>Uncommon1</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<IsUsable>0</IsUsable>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_X_Ring</Attribute>
+			<Value>1</Value>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>1</AIPriority>
+		</AIData>
+		<ArtDef>Ring_Revenging_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Scroll_BattleCry">
+		<DisplayName>Battle Cry Scroll</DisplayName>
+		<Description>With proper training a soldier can respond immediately to his commander, with this scroll the training isn't required.</Description>
+		<Type>Consumable</Type>
+		<ShopValue>225</ShopValue>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>With proper training a soldier can respond immediately to his commander, with this scroll the training isn't required.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL ITEM</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UseSpell</Attribute>
+			<StrVal>BattleCry_Ability</StrVal>
+			<Provides>::: Battle Cry Scroll :::
+			::: ALL allies act immediately
+			::: May lose Actions subsequently</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<Likelihood>8</Likelihood>
+		<RarityDisplay>Uncommon3</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<IsUsable>0</IsUsable>
+		<UsableInBattle>1</UsableInBattle>
+		<UsableOnlyOnceInBattle>0</UsableOnlyOnceInBattle>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>800</AIPriority>
+		</AIData>
+		<ArtDef>Scroll_BattleCry_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Scroll_Imprison">
+		<DisplayName>Imprison Scroll</DisplayName>
+		<Description>"Cage and chain, rage and pain. Whatever is bound within, will never be free again." -Quendar nursery rhyme.</Description>
+		<Type>Consumable</Type>
+		<ShopValue>225</ShopValue>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>"Cage and chain, rage and pain. Whatever is bound within, will never be free again." -Quendar nursery rhyme.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL ITEM</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UseSpell</Attribute>
+			<StrVal>Spell_X_Imprison</StrVal>
+			<Provides>::: Imprison Scroll :::
+			::: Immobilizes target
+			::: Inflicts 5 DMG per Action
+			::: Lasts for 5 Actions
+			::: Resistable</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<Likelihood>8</Likelihood>
+		<RarityDisplay>Uncommon1</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<IsUsable>0</IsUsable>
+		<UsableInBattle>1</UsableInBattle>
+		<UsableOnlyOnceInBattle>0</UsableOnlyOnceInBattle>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>667</AIPriority>
+		</AIData>
+		<ArtDef>Scroll_Imprison_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Scroll_Silence">
+		<DisplayName>Silence Scroll</DisplayName>
+		<Description>"Quieter than a stalker's shadow, quieter than the night. Quieter than a politician's prayer or the morning's last starlight." -Silence Invocation</Description>
+		<Type>Consumable</Type>
+		<ShopValue>50</ShopValue>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>"Quieter than a stalker's shadow, quieter than the night. Quieter than a politician's prayer or the morning's last starlight." -Silence Invocation</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL ITEM</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UseSpell</Attribute>
+			<StrVal>Silence</StrVal>
+			<Provides>::: Silence :::
+			::: Target can't cast for 3 Actions
+			::: Resistable</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<Likelihood>8</Likelihood>
+		<RarityDisplay>Common3</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<IsUsable>0</IsUsable>
+		<UsableInBattle>1</UsableInBattle>
+		<UsableOnlyOnceInBattle>0</UsableOnlyOnceInBattle>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>1</AIPriority>
+		</AIData>
+		<ArtDef>Scroll_Silence_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Shortbow_Gold">
+		<DisplayName>Golden Shortbow</DisplayName>
+		<Description>A masterwork shortbow crafted for young nobles, that they would learn from battle without being to close to it.</Description>
+		<Type>Weapon</Type>
+		<Type>Defense</Type>
+		<WeaponType>Bow</WeaponType>
+		<WeaponUpgradeType>Bow</WeaponUpgradeType>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>100</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Pierce</StrVal>
+			<Value>6</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_Immersive_M</StrVal>
+			<Value>-1</Value>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>A masterwork shortbow crafted for young nobles, that they would learn from battle without being to close to it.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>CORE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>-6</Value>
+			<Provides>::: -6 Initiative</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>STATS</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ExpBonus</StrVal>
+			<Value>10</Value>
+			<Provides>::: +10% Experience</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL SPECIAL</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockRangedAction</Attribute>
+			<StrVal>BowAttack_Basic</StrVal>
+			<Provides>::: Ranged ATK</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>XOTIC</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_IsBow</StrVal>
+			<Value>1</Value>
+			<Provides>::: Is a Bow</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_IsMarksmanBow</StrVal>
+			<Value>4</Value>
+			<Provides>::: Marksman Bow :::
+			::: +4 Initiative
+			::: Applied in Tactical if Marksman</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Likelihood>8</Likelihood>
+		<RarityDisplay>Uncommon4</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<TacticalRange>20</TacticalRange>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_X_Immersive_2H</Attribute>
+			<Value>3</Value>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Injury_X_Maimed_Hand</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Brawler</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_BOW</AIPrefType>
+			<AIPriority>40</AIPriority>
+		</AIData>
+		<ArtDef>Shortbow_Gold_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Shortbow_Harridan">
+		<DisplayName>Harridan Shortbow</DisplayName>
+		<Description>The spider silk bowstring enchants arrows that are fired from it.</Description>
+		<Type>Weapon</Type>
+		<Type>Defense</Type>
+		<WeaponType>Bow</WeaponType>
+		<WeaponUpgradeType>Bow</WeaponUpgradeType>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>50</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Pierce</StrVal>
+			<Value>6</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_Immersive_M</StrVal>
+			<Value>-1</Value>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>The spider silk bowstring enchants arrows that are fired from it.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>CORE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>-6</Value>
+			<Provides>::: -6 Initiative</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL EFFECT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>::: Harridan :::
+			::: Webs targets for 1 Action
+			::: Resistable</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL SPECIAL</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockRangedAction</Attribute>
+			<StrVal>BowAttack_Harridan</StrVal>
+			<Provides>::: Ranged ATK</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>XOTIC</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_IsBow</StrVal>
+			<Value>1</Value>
+			<Provides>::: Is a Bow</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_IsMarksmanBow</StrVal>
+			<Value>4</Value>
+			<Provides>::: Marksman Bow :::
+			::: +4 Initiative
+			::: Applied in Tactical if Marksman</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Likelihood>8</Likelihood>
+		<RarityDisplay>Uncommon3</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<TacticalRange>20</TacticalRange>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_X_Immersive_2H</Attribute>
+			<Value>3</Value>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Injury_X_Maimed_Hand</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Brawler</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_BOW</AIPrefType>
+			<AIPriority>40</AIPriority>
+		</AIData>
+		<ArtDef>Shortbow_Harridan_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Staff_Shadowbolt">
+		<DisplayName>Shadowbolt Staff</DisplayName>
+		<Description>A black staff of onyx enchanted in the depths of Deorcnysse.</Description>
+		<Type>Weapon</Type>
+		<Type>Defense</Type>
+		<WeaponType>Staff</WeaponType>
+		<WeaponUpgradeType>FireStaff</WeaponUpgradeType>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>50</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Pierce</StrVal>
+			<Value>6</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_Immersive_M</StrVal>
+			<Value>-1</Value>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>A black staff of onyx enchanted in the depths of Deorcnysse.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>CORE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>-6</Value>
+			<Provides>::: -6 Initiative</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL EFFECT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>::: Shadowbolt :::
+			::: -5 Magic Resistance</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL SPECIAL</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockRangedAction</Attribute>
+			<StrVal>BowAttack_Shadowbolt</StrVal>
+			<Provides>::: Ranged ATK</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>XOTIC</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_IsWizardStaff</StrVal>
+			<Value>5</Value>
+			<Provides>::: Wizard Staff :::
+			::: +5 Initiative
+			::: Applied in Tactical if Wizard</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<Likelihood>8</Likelihood>
+		<RarityDisplay>Uncommon2</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<TacticalRange>20</TacticalRange>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_X_Immersive_2H</Attribute>
+			<Value>3</Value>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Injury_X_Maimed_Hand</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_BLUNT</AIPrefType>
+			<AIPriority>40</AIPriority>
+		</AIData>
+		<ArtDef>Staff_Shadowbolt_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Staff_Snake">
+		<DisplayName>Staff of the Serpent</DisplayName>
+		<Description>The petrified form of serpent, enchanted to spit venom.</Description>
+		<Type>Weapon</Type>
+		<Type>Defense</Type>
+		<WeaponType>Staff</WeaponType>
+		<WeaponUpgradeType>FireStaff</WeaponUpgradeType>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>225</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Pierce</StrVal>
+			<Value>6</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_Immersive_M</StrVal>
+			<Value>-1</Value>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>The petrified form of serpent, enchanted to spit venom.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>CORE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Poison</StrVal>
+			<Value>6</Value>
+			<Provides>::: +6 Death\Poison ATK</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL ABILITY</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Serpents_Call</StrVal>
+			<Provides>::: Summon :::
+			::: Can summon a Naja
+			::: Level = 3</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL SPECIAL</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockRangedAction</Attribute>
+			<StrVal>BowAttack_Toxic</StrVal>
+			<Provides>::: Toxic Ranged ATK</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>XOTIC</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_IsWizardStaff</StrVal>
+			<Value>1</Value>
+			<Provides>::: Wizard Staff :::
+			::: +1 Initiative
+			::: Applied in Tactical if Wizard</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Likelihood>8</Likelihood>
+		<RarityDisplay>Uncommon4</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<TacticalRange>20</TacticalRange>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_X_Immersive_2H</Attribute>
+			<Value>3</Value>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Injury_X_Maimed_Hand</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_BLUNT</AIPrefType>
+			<AIPriority>133</AIPriority>
+		</AIData>
+		<ArtDef>Staff_Snake_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Staff_Stag">
+		<DisplayName>Staff of the Stag</DisplayName>
+		<Description>There is more than magic imbued in this staff, there are generations of rituals, rites and prayers bound into the knotted wood.</Description>
+		<Type>Weapon</Type>
+		<Type>Defense</Type>
+		<WeaponType>Spear</WeaponType>
+		<WeaponUpgradeType>Staff</WeaponUpgradeType>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>225</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Pierce</StrVal>
+			<Value>4</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_Immersive_M</StrVal>
+			<Value>-1</Value>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>There is more than magic imbued in this staff, there are generations of rituals, rites and prayers bound into the knotted wood.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL ABILITY</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>HealingLight</StrVal>
+			<Provides>::: Healing Light :::
+			::: ((Level + 4) x2) HP
+			::: Applies to all adjacent Allies</Provides>
+		</GameModifier>
+		<!--<GameModifier>
+			<Provides>XOTIC</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_IsWizardStaff</StrVal>
+			<Value>1</Value>
+			<Provides>::: Wizard Staff :::
+			::: +1 Initiative
+			::: Applied in Tactical if Wizard</Provides>
+		</GameModifier>-->
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Likelihood>10</Likelihood>
+		<RarityDisplay>Uncommon3</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<!--<TacticalRange>20</TacticalRange>-->
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_X_Immersive_2H</Attribute>
+			<Value>3</Value>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Injury_X_Maimed_Hand</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_BLUNT</AIPrefType>
+			<AIPriority>1</AIPriority>
+		</AIData>
+		<ArtDef>Staff_Stag_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Longsword_Vorpal">
+		<DisplayName>Vorpal Blade</DisplayName>
+		<Description>So sharp, it may take a victim a minute to realize he is dead.</Description>
+		<Type>Weapon</Type>
+		<WeaponType>OneHanded</WeaponType>
+		<WeaponUpgradeType>Blade</WeaponUpgradeType>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>650</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Pierce</StrVal>
+			<Value>25</Value>
+		</GameModifier>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>So sharp, it may take a victim a minute to realize he is dead.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>CORE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>2</Value>
+			<Provides>::: +2 Initiative</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>STATS</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ChanceToCrit</StrVal>
+			<Value>100</Value>
+			<Provides>::: +100 Critical Chance</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL EFFECT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_MaxCounterAttack</StrVal>
+			<Value>1</Value>
+			<Provides>::: Counterattack :::
+			::: +1 per Action</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>XOTIC</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_IsNinjaSword</StrVal>
+			<Value>1</Value>
+			<Provides>::: Ninja Sword :::
+			::: +1 Initiative
+			::: +10% ATK
+			::: Applied in Tactical if Ninja</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_IsSword</StrVal>
+			<Value>1</Value>
+			<Provides>::: Is a Paladin Blade</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<Likelihood>10</Likelihood>
+		<RarityDisplay>Rare</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Prereq>
+			<Type>UnitStat_Level</Type>
+			<Attribute>7</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_CUTTING</AIPrefType>
+			<AIPriority>7500</AIPriority>
+		</AIData>
+		<ArtDef>Longsword_Vorpal_ArtDef</ArtDef>
+	</GameItemType>
+</GameItemTypes>

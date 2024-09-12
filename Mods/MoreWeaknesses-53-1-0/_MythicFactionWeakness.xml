@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Created with the Elemental Editor -->
+<!-- CoreAbilities.xml -->
+<!-- -->
+<AbilityBonuses>
+    <DataChecksum NoParse="1">
+        <Ignore>DispName</Ignore>
+        <Translate>DisplayName,Description</Translate>
+    </DataChecksum>
+    <AbilityBonus InternalName="Player_Weakness">
+        <AbilityBonusType>Player</AbilityBonusType>
+        <AbilityBonusOption InternalName="MythicRebels">
+            <DisplayName>Hostile Citizens</DisplayName>
+            <Description>+20% Unrest</Description>
+            <Icon>Ability_Rebels_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_Additive_Unrest</StrVal>
+                <Value>20</Value>
+                <Provides>+20% Unrest</Provides>
+            </GameModifier>
+            <Cost>-2</Cost>
+            <HideWhenUpgraded>0</HideWhenUpgraded>
+            <Type>Weakness</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+        <AbilityBonusOption InternalName="HexedEmpire">
+            <DisplayName>Hexed</DisplayName>
+            <Description>All units have -20% to Dodge and -20% to Accuracy</Description>
+            <Icon>Ability_Lucky_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_UnitStat_Accuracy</StrVal>
+                <Value>-20</Value>
+                <Provides>All units are -20% to Accuracy</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_UnitStat_Dodge</StrVal>
+                <Value>-20</Value>
+                <Provides>All units are -20% to Dodge</Provides>
+            </GameModifier>
+            <Cost>-2</Cost>
+            <HideWhenUpgraded>0</HideWhenUpgraded>
+            <Type>Army</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+    </AbilityBonusOption>
+    <AbilityBonusOption InternalName="SlowEmpire">
+            <DisplayName>Slow</DisplayName>
+            <Description>All units get -10% Initiative</Description>
+            <Icon>Ability_Quick_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_UnitStat_CombatSpeed</StrVal>
+                <Value>-10</Value>
+                <Provides>-10% Initiative</Provides>
+            </GameModifier>
+            <Cost>-2</Cost>
+            <HideWhenUpgraded>0</HideWhenUpgraded>
+            <Type>Army</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+    </AbilityBonusOption>
+    <AbilityBonusOption InternalName="MythicBrittleEmpire">
+            <DisplayName>Brittle Citizens</DisplayName>
+            <Description>All units get -20% Hit Points</Description>
+            <Icon>Ability_FactionTough_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_UnitStat_HitPoints</StrVal>
+                <Value>-20</Value>
+                <Provides>All units get -20% Hit Points</Provides>
+            </GameModifier>
+            <Cost>-2</Cost>
+            <HideWhenUpgraded>0</HideWhenUpgraded>
+            <Type>Army</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+    </AbilityBonusOption>
+    <AbilityBonusOption InternalName="MythicWeakArmor">
+        <AbilityBonusType>Player</AbilityBonusType>
+            <DisplayName>Bad Armor Designers</DisplayName>
+            <Description>All units get -25% to Defense</Description>
+            <Icon>Ability_Armorer_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_UnitStat_Defense_Pierce</StrVal>
+                <Value>-20</Value>
+                <Provides>-20% Defense for the faction</Provides>
+            </GameModifier>
+            <Cost>-2</Cost>
+            <HideWhenUpgraded>0</HideWhenUpgraded>
+            <Type>Army</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+    </AbilityBonusOption>	
+    <AbilityBonusOption InternalName="MythicUneducated">
+        <AbilityBonusType>Player</AbilityBonusType>
+        <DisplayName>Extremely Uneducated</DisplayName>
+        <Description>-20% to Research</Description>
+        <Icon>Ability_Uneducated_Icon.png</Icon>
+        <GameModifier>
+            <ModType>Player</ModType>
+            <Attribute>AbilityBonus</Attribute>
+            <StrVal>A_Research</StrVal>
+            <Value>-20</Value>
+            <Provides>-20% to Research</Provides>
+        </GameModifier>
+        <Cost>-2</Cost>
+        <HideWhenUpgraded>0</HideWhenUpgraded>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+        </AIData>
+    </AbilityBonusOption>
+    <AbilityBonusOption InternalName="MythicVulnerableEmpire">
+			<AbilityBonusType>Player</AbilityBonusType>	
+            <DisplayName>Extremely Vulnerable To Magic</DisplayName>
+            <Description>All units get -40% to Spell Resistance</Description>
+            <Icon>Ability_Vulnerable_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_UnitStat_MagicResist</StrVal>
+                <Value>-30</Value>
+                <Provides>-30% Spell Resistance</Provides>
+            </GameModifier>
+            <Cost>-2</Cost>
+            <HideWhenUpgraded>0</HideWhenUpgraded>
+            <IsCombatAbility>1</IsCombatAbility>
+            <Type>Weakness</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+    </AbilityBonusOption>
+    <AbilityBonusOption InternalName="MythicBadEmpireSmithing">
+			<AbilityBonusType>Player</AbilityBonusType>	
+            <DisplayName>Bad Industry</DisplayName>
+            <Description>All production is 20% longer, materials and upgrades are 20% more expensive.</Description>
+            <Icon>Ability_Vulnerable_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_Training_RefinedCrystal</StrVal>
+                <Value>20</Value>
+                <Provides>20% Crystal costs for weapons and armor</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_Training_Metal</StrVal>
+                <Value>20</Value>
+                <Provides>20% Crystal costs for weapons and armor</Provides>
+            </GameModifier>			
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_Training_Labor_Equipment</StrVal>
+                <Value>20</Value>
+                <Provides>20% Production cost for weapons and armor</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_UnitUpgrades</StrVal>
+                <Value>20</Value>
+                <Provides>20% Upgrade costs</Provides>
+            </GameModifier>
+            <Cost>-2</Cost>
+            <HideWhenUpgraded>0</HideWhenUpgraded>
+            <IsCombatAbility>1</IsCombatAbility>
+            <Type>Weakness</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+    </AbilityBonusOption>
+    </AbilityBonus>	
+</AbilityBonuses>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<UnitTypes>
+	<UnitType InternalName="FrostGiant_Jamsaxa">
+		<CreatureType>Champion</CreatureType>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-5</Value>
+			<Provides>-5% Unrest in the city this unit is in</Provides>
+		</GameModifier>
+
+		<DisplayName>Jamsaxa</DisplayName>
+		<Backstory>Jamsaxa saw her entire family destroyed by the Cataclysm. Her heart is now a dark place and she weeps every night for her loss. She exists now only to destroy as many of the "damned Worldbreakers" as possible.</Backstory>
+		<HasEssence>true</HasEssence>
+		<ModelPath>M_Demon_Elemental_Mesh_01.hkb</ModelPath>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<EyeTexture>gfx\eyes\blinks\eyeblink_f3_hazel.png</EyeTexture>
+		<AnimationPack>EF_MaleSovereignAnimationPack</AnimationPack>
+		<ShowAsSingleUnit>false</ShowAsSingleUnit>
+		<CutSceneDataPack>FrostGiantCutscenePack</CutSceneDataPack>
+		<ModelScale>1.0000</ModelScale>
+		<TacticalModelScale>1.5000</TacticalModelScale>
+		<EquipmentScale>1.0000</EquipmentScale>
+		<ClothMapScale>1.6</ClothMapScale>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<MovementType>land</MovementType>
+		<BobbingFrequency>0.0000</BobbingFrequency>
+		<ClothPoseIndex>9</ClothPoseIndex>
+		<InfoCardBackground>BG19_Field</InfoCardBackground>
+		<InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+		<CanBeDesigned>0</CanBeDesigned>
+		<!-- -->
+		<Allegiance>Empire</Allegiance>
+		<Unique>1</Unique>
+		<IsNPC>1</IsNPC>
+		<NPCSpawnLikelihood>100</NPCSpawnLikelihood>
+		<IsChampion>1</IsChampion>
+		<Gender>Female</Gender>
+		<SoundPack>SoundPack_Generic_Female</SoundPack>
+		<SpawnRating>1</SpawnRating>
+
+		<Quote>I want to kill as many of the Worldbreakers as possible.</Quote>
+		<NPCRecruitmentText>%d and I will show you the measure of my vengeance.</NPCRecruitmentText>
+		<SelectedAbilityBonusOption>Blood_FrostGiants</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>ToweringLords</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>JamsaxasRevenge</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Strength</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Water1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Hardy</SelectedAbilityBonusOption>
+		<!-- -->
+		<Medallions InternalName=""/>
+		<WageOverride>1</WageOverride>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<LevelMilestone InternalName="">
+			<Level>1</Level>
+			<UnitStat_Accuracy>80.0000</UnitStat_Accuracy>
+			<UnitStat_BG_IsEmpire>1.0000</UnitStat_BG_IsEmpire>
+			<UnitStat_BG_IsFemale>1.0000</UnitStat_BG_IsFemale>
+			<UnitStat_BG_IsMonster>1.0000</UnitStat_BG_IsMonster>
+			<UnitStat_BG_IsRace_FrostGiant>1.0000</UnitStat_BG_IsRace_FrostGiant>
+			<UnitStat_BG_IsChampion>1.0000</UnitStat_BG_IsChampion>
+			<UnitStat_CombatSpeed>22.0000</UnitStat_CombatSpeed>
+			<UnitStat_HitPoints>20.0000</UnitStat_HitPoints>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+		</LevelMilestone>
+		<AutoCreateEquipment>Axe</AutoCreateEquipment>
+		<AutoCreateEquipment>LeatherBreastpiece</AutoCreateEquipment>
+		<Color_Skin>218,218,218,255</Color_Skin>
+		<Color_Hair>147,102,67,255</Color_Hair>
+		<Color_Clothing1>130,165,190,255</Color_Clothing1>
+		<Color_Clothing2>130,165,190,255</Color_Clothing2>
+		<Color_Metal>130,165,190,255</Color_Metal>
+		<Texture_Skin>M_Demon_Elemental_Texture_03.png</Texture_Skin>
+		<Texture_Eyes>gfx\eyes\blinks\eyeblink_f3_hazel.png</Texture_Eyes>
+		<UnitModelType>FrostGiantFemale</UnitModelType>
+		<NPCFreeRecruit>0</NPCFreeRecruit>
+		<RaceType>Race_Type_FrostGiants</RaceType>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+	</UnitType>
+	<AbilityBonus InternalName="JamsaxasRevenge">
+		<AbilityBonusOption InternalName="JamsaxasRevenge">
+			<CombatRating>40</CombatRating>
+			<DisplayName>Jamsaxa's Revenge</DisplayName>
+			<Description>Jamsaxa gains 30% attack against any opponent that has more Grey Magic than her.</Description>
+			<Icon>Ability_Thief_Icon.png</Icon>
+
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Attack_Pierce</StrVal>
+				<StrVal2>UnitStat_BG_GreyMagic</StrVal2>
+				<Multiplier>1.3</Multiplier>
+				<Provides>+30% Attack vs Opponents with more Grey Magic</Provides>
+				<vsHigher>1</vsHigher>
+			</GameModifier>
+
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+</UnitTypes>

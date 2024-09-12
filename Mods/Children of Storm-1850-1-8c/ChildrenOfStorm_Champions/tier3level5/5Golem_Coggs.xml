@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<UnitTypes>
+	<UnitType InternalName="Golem_Melailned">
+		<CreatureType>Champion</CreatureType>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-5</Value>
+			<Provides>-5% Unrest in the city this unit is in</Provides>
+		</GameModifier>
+		
+		<DisplayName>Coggs</DisplayName>
+		<Backstory>Coggs was once used to provide the force to turn a huge wheel in a machine to manufacture metal goods.  Day after day, Coggs would tirelessly tread in a circle, pushing the large drive-wheel round and round.  Eventually, the soot, grease, and grime from the machine, the nearby ovens, and the generally filthy working conditions stained him nearly black. It was mindless work; Coggs was no more than a part of the machine.  
+
+This isn't to say that Coggs' mind was idle during that time, however. When he was liberated and given free will by a group of White Golems, Coggs let them know that he had thought of countless ways to improve the efficiency of the operation while he had been observing it as he turned the wheel.  The other golems listened, but directed him to travel to their city for 'processing'.  Coggs did so, but when he arrived, none of the other golems seemed interested.  When he explained his ideas to the golem in charge of the 'processing' operation, the information was noted and Coggs was assigned to work in a production facility.  Essentially, he found himself doing menial labor again.  As he worked, he began thinking of ways to improve efficiency once again. He explained these to the supervisor golem, but the supervisor golem informed Coggs that his role was to produce, and that another golem would be responsible for such innovations if warranted.
+
+This seemed inefficient to Coggs, and, now that he has free will, he has decided to leave to see if he can find someone to listen to and implement his ideas.</Backstory>
+
+		<ModelPath>ef_golem_body.hkb</ModelPath>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<EyeTexture>gfx\Eyes\blinks\eyeblink_m5_Black.png</EyeTexture>
+		<AnimationPack>EF_LeaderAnimationPack</AnimationPack>
+		
+		<ShowAsSingleUnit>false</ShowAsSingleUnit>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<ModelScale>1.0000</ModelScale>
+		<TacticalModelScale>1.5000</TacticalModelScale>
+		<EquipmentScale>1.0000</EquipmentScale>
+		<ClothMapScale>1.6</ClothMapScale>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<MovementType>land</MovementType>
+		<BobbingFrequency>0.0000</BobbingFrequency>
+		
+		<ClothPoseIndex>9</ClothPoseIndex>
+		<InfoCardBackground>BG_GoodScene</InfoCardBackground>
+		<InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+		
+		<CanBeDesigned>0</CanBeDesigned>
+		
+		<Allegiance>Empire</Allegiance>
+		<Unique>1</Unique>
+		<IsNPC>1</IsNPC>
+		<NPCSpawnLikelihood>100</NPCSpawnLikelihood>
+		<IsChampion>1</IsChampion>
+		<SoundPack>SoundPack_Generic_Male</SoundPack>
+		<Gender>Male</Gender>
+		<SpawnRating>5</SpawnRating>
+
+		<Quote>This would work so much better if you try it this way.</Quote>
+		<NPCRecruitmentText>Give me a factory, some servants, %d gildar and leave me to my work!</NPCRecruitmentText>
+		<SelectedAbilityBonusOption>Blood_Golem</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>PathOfTheGovernor</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Coggs_Efficiency</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Spell_Obsession</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Earth1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Potential</SelectedAbilityBonusOption>
+		
+		<Medallions InternalName=""/>
+		<WageOverride>1</WageOverride>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_BG_IsConstruct>1.0000</UnitStat_BG_IsConstruct>
+			<UnitStat_BG_IsEmpire>1.0000</UnitStat_BG_IsEmpire>
+			<UnitStat_BG_IsHumanoid>1.0000</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsNotAlive>1.0000</UnitStat_BG_IsNotAlive>
+			<UnitStat_BG_IsRace_Golem>1.0000</UnitStat_BG_IsRace_Golem>
+			<UnitStat_BG_IsChampion>1.0000</UnitStat_BG_IsChampion>
+			<UnitStat_CombatSpeed>22.0000</UnitStat_CombatSpeed>
+			<UnitStat_HitPoints>20.0000</UnitStat_HitPoints>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+		</LevelMilestone>
+		
+		<!--<Equipment>Muchant_Cloak_ID1</Equipment>-->
+		<AutoCreateEquipment>Warhammer</AutoCreateEquipment>
+		
+		<Color_Skin>0,0,0,255</Color_Skin>
+		<Color_Hair>163,118,83,255</Color_Hair>
+		<Color_Clothing1>120,25,20,255</Color_Clothing1>
+		<Color_Clothing2>78,60,55,255</Color_Clothing2>
+		<Color_Metal>30,63,99,255</Color_Metal>
+		<Texture_Skin>M_Golem_Texture_01.png</Texture_Skin>
+		
+		<UnitModelType>Golem</UnitModelType>
+		<NPCFreeRecruit>0</NPCFreeRecruit>
+		<RaceType>Race_Type_Golem</RaceType>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+	</UnitType>
+
+	<AbilityBonus InternalName="Coggs_Efficiency">
+		<AbilityBonusOption InternalName="Coggs_Efficiency">
+			<DisplayName>Coggs' Efficiency Improvements</DisplayName>
+			<Description>Coggs' ability to find ways to streamline operations, recycle scraps of waste, and position workers for most efficient operation effectively provides the city he's stationed in a greater base of production to work from.</Description>
+			<Icon>Ability_MasterSmiths_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>TileYieldMaterials</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Material in the city in which Coggs is stationed</Provides>
+			</GameModifier>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>0</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	
+</UnitTypes>

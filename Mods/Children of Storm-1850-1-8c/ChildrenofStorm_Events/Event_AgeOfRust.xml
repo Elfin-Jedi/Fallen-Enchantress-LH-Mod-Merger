@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Container>
+  <QuestDef InternalName="Event_AgeOfRust">
+    <DisplayName>Age of Rust</DisplayName>
+    <Description>Your miners are reporting a strange occurence taking place in your metal mines. Ore nodes that were previously thought viable have turned out to be practically useless. The metal looks like it has rusted even though there's no dampness or oxygen nearby. It is as if the metal has been corrupted somehow, or suffered from some kind of infection. The following years will come to be called the Age of Rust by your population.
+
+For the next 24 turns your Metal income is reduced by 100%. Your current Metal stock is unaffected. Your current weapons and armor are unaffected.</Description>
+   <IsStartingPointQuest>0</IsStartingPointQuest>
+    <AllowQuestRejection>0</AllowQuestRejection>
+   <ShortTextAccept>We will not use our metal frivolously for now.</ShortTextAccept>
+    <QuestClass>Minor</QuestClass>
+    <Repeatable>0</Repeatable>
+   <TriggerType>TurnNumber</TriggerType>
+    <TriggerData>125</TriggerData>
+    <TriggerChance>5</TriggerChance>
+    <PostTriggerChance>5</PostTriggerChance>
+
+    <TriggerOrigin>EventLocation</TriggerOrigin>
+    <Image>Res_Ores_Plains.png</Image>
+
+    <Treasure>
+
+     <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_Metal</StrVal>
+	<Value>-100</Value>
+	<Duration>24</Duration>
+</GameModifier>
+
+ 
+    </Treasure>
+    <QuestObjectiveDef>
+      <ObjectiveID>0</ObjectiveID>
+      <QuestEnd>1</QuestEnd>
+    </QuestObjectiveDef>
+  </QuestDef>
+</Container>

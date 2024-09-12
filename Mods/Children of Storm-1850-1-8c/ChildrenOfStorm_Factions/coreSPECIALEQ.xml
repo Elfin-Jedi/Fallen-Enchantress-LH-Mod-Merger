@@ -1,0 +1,1393 @@
+<?xml version="1.0"?>
+<Container>
+	<!-- centaur spears -->
+	<GameItemType InternalName="Spear">
+		<DisplayName>Spear</DisplayName>
+		<Description>A strong oak spear, sharpened to a deadly point.</Description>
+		<Type>Weapon</Type>
+		<Type>Defense</Type>
+		<WeaponType>Spear</WeaponType>
+		<WeaponUpgradeType>Spear</WeaponUpgradeType>
+		<CanBeEquipped>1</CanBeEquipped>
+		<AdditionalTrainingTurns>12</AdditionalTrainingTurns>
+		<ShopValue>30</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Pierce</StrVal>
+			<Value>5</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ArmorPierce</StrVal>
+			<Value>33</Value>
+			<Provides>Ignores 33% of the victim's Defense</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CannotBeCounterattacked</Attribute>
+			<Value>-1</Value>
+			<Provides>Immune to Counterattack</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Impale_Ability</StrVal>
+			<Provides>Impale- Strike an opponent and whoever is behind them</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>1</IsAvailableForSovereignCustomization>
+		<RarityDisplay>Common</RarityDisplay>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Defensive</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Defensive_Centaur</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_PIERCING</AIPrefType>
+			<AIPriority>110</AIPriority>
+		</AIData>
+		<ArtDef>Spear_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Spear_Centaur">
+		<DisplayName>Short Spear</DisplayName>
+		<Description>This spear is short enough to be wielded with one hand, leaving the other free for a shield.</Description>
+		<Type>Weapon</Type>
+		<WeaponType>Spear</WeaponType>
+		<WeaponUpgradeType>Spear</WeaponUpgradeType>
+		<CanBeEquipped>1</CanBeEquipped>
+		<AdditionalTrainingTurns>12</AdditionalTrainingTurns>
+		<ShopValue>30</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Pierce</StrVal>
+			<Value>5</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ArmorPierce</StrVal>
+			<Value>33</Value>
+			<Provides>Ignores 33% of the victim's Defense</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CannotBeCounterattacked</Attribute>
+			<Value>-1</Value>
+			<Provides>Immune to Counterattack</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Impale_Ability</StrVal>
+			<Provides>Impale- Strike an opponent and whoever is behind them</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<RarityDisplay>Common</RarityDisplay>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Defensive_Centaur</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_PIERCING</AIPrefType>
+			<AIPriority>110</AIPriority>
+		</AIData>
+		<ArtDef>Spear_Krax_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Spear_Ice">
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Defensive_Centaur</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<DisplayName>Ice Spear</DisplayName>
+		<Description>The point pierces armor, and the chill seeps through flesh and bone.</Description>
+		<Type>Weapon</Type>
+		<Type>Defense</Type>
+		<WeaponType>Spear</WeaponType>
+		<WeaponUpgradeType>Spear</WeaponUpgradeType>
+		<CanBeEquipped>1</CanBeEquipped>
+		<AdditionalTrainingTurns>18</AdditionalTrainingTurns>
+		<ShopValue>140</ShopValue>
+		<ProductionRequirement>
+			<Type>Resource</Type>
+			<Attribute>RefinedCrystal</Attribute>
+			<Value>2</Value>
+		</ProductionRequirement>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Pierce</StrVal>
+			<Value>6</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Cold</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ArmorPierce</StrVal>
+			<Value>33</Value>
+			<Provides>Ignores 33% of the victim's Defense</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CannotBeCounterattacked</Attribute>
+			<Value>-1</Value>
+			<Provides>Immune to Counterattack</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Impale_Ability</StrVal>
+			<Provides>Impale- Strike an opponent and whoever is behind them</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<Likelihood>40</Likelihood>
+		<RarityDisplay>Common</RarityDisplay>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Defensive</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Enchantment</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_PIERCING</AIPrefType>
+			<AIPriority>160</AIPriority>
+		</AIData>
+		<ArtDef>Spear_Ice_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Spear_Ice_Centaur">
+		<DisplayName>Short Ice Spear</DisplayName>
+		<Description>The point pierces armor, and the chill seeps through flesh and bone.</Description>
+		<Type>Weapon</Type>
+		<WeaponType>Spear</WeaponType>
+		<WeaponUpgradeType>Spear</WeaponUpgradeType>
+		<CanBeEquipped>1</CanBeEquipped>
+		<AdditionalTrainingTurns>18</AdditionalTrainingTurns>
+		<ShopValue>140</ShopValue>
+		<ProductionRequirement>
+			<Type>Resource</Type>
+			<Attribute>RefinedCrystal</Attribute>
+			<Value>2</Value>
+		</ProductionRequirement>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Pierce</StrVal>
+			<Value>6</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Cold</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ArmorPierce</StrVal>
+			<Value>33</Value>
+			<Provides>Ignores 33% of the victim's Defense</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CannotBeCounterattacked</Attribute>
+			<Value>-1</Value>
+			<Provides>Immune to Counterattack</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Impale_Ability</StrVal>
+			<Provides>Impale- Strike an opponent and whoever is behind them</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<RarityDisplay>Common</RarityDisplay>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Defensive</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Enchantment</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_PIERCING</AIPrefType>
+			<AIPriority>160</AIPriority>
+		</AIData>
+		<ArtDef>Spear_Ice_Krax_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="BoarSpear">
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Defensive_Centaur</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<DisplayName>Boar Spear</DisplayName>
+		<Description>A Boar Spear has two "wings" behind the blade to keep enraged boars from charging up the spear and attacking the wielder (Trogs have been known to do the same).</Description>
+		<Type>Weapon</Type>
+		<Type>Defense</Type>
+		<WeaponType>Spear</WeaponType>
+		<WeaponUpgradeType>Spear</WeaponUpgradeType>
+		<CanBeEquipped>1</CanBeEquipped>
+		<AdditionalTrainingTurns>16</AdditionalTrainingTurns>
+		<ShopValue>45</ShopValue>
+		<ProductionRequirement>
+			<Type>Resource</Type>
+			<Attribute>Metal</Attribute>
+			<Value>2</Value>
+		</ProductionRequirement>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Pierce</StrVal>
+			<Value>11</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ArmorPierce</StrVal>
+			<Value>33</Value>
+			<Provides>Ignores 33% of the victim's Defense</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CannotBeCounterattacked</Attribute>
+			<Value>-1</Value>
+			<Provides>Immune to Counterattack</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Impale_Ability</StrVal>
+			<Provides>Impale- Strike an opponent and whoever is behind them</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<RarityDisplay>Uncommon</RarityDisplay>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Defensive_Centaur</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Blacksmithing</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_PIERCING</AIPrefType>
+			<AIPriority>230</AIPriority>
+		</AIData>
+		<ArtDef>BoarSpear_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="BoarSpear_Centaur">
+		<DisplayName>Winged Spear</DisplayName>
+		<Description>Krax weaponsmiths forge lighter versions of the boar spear so their soldiers can wield them with shields in battle.</Description>
+		<Type>Weapon</Type>
+		<WeaponType>Spear</WeaponType>
+		<WeaponUpgradeType>Spear</WeaponUpgradeType>
+		<CanBeEquipped>1</CanBeEquipped>
+		<AdditionalTrainingTurns>16</AdditionalTrainingTurns>
+		<ShopValue>45</ShopValue>
+		<ProductionRequirement>
+			<Type>Resource</Type>
+			<Attribute>Metal</Attribute>
+			<Value>2</Value>
+		</ProductionRequirement>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Pierce</StrVal>
+			<Value>11</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ArmorPierce</StrVal>
+			<Value>33</Value>
+			<Provides>Ignores 33% of the victim's Defense</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CannotBeCounterattacked</Attribute>
+			<Value>-1</Value>
+			<Provides>Immune to Counterattack</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Impale_Ability</StrVal>
+			<Provides>Impale- Strike an opponent and whoever is behind them</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<RarityDisplay>Uncommon</RarityDisplay>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Defensive_Centaur</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Blacksmithing</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_PIERCING</AIPrefType>
+			<AIPriority>230</AIPriority>
+		</AIData>
+		<ArtDef>BoarSpear_Krax_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Pike">
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Defensive_Centaur</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<DisplayName>Pike</DisplayName>
+		<Description>A deadly weapon for hunting or war.</Description>
+		<Type>Weapon</Type>
+		<Type>Defense</Type>
+		<WeaponType>Spear</WeaponType>
+		<WeaponUpgradeType>Spear</WeaponUpgradeType>
+		<CanBeEquipped>1</CanBeEquipped>
+		<AdditionalTrainingTurns>20</AdditionalTrainingTurns>
+		<ShopValue>60</ShopValue>
+		<ProductionRequirement>
+			<Type>Resource</Type>
+			<Attribute>Metal</Attribute>
+			<Value>3</Value>
+		</ProductionRequirement>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Pierce</StrVal>
+			<Value>18</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ArmorPierce</StrVal>
+			<Value>33</Value>
+			<Provides>Ignores 33% of the victim's Defense</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CannotBeCounterattacked</Attribute>
+			<Value>-1</Value>
+			<Provides>Immune to Counterattack</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Impale_Ability</StrVal>
+			<Provides>Impale- Strike an opponent and whoever is behind them</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<RarityDisplay>Uncommon</RarityDisplay>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Defensive</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>War_Colleges</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_PIERCING</AIPrefType>
+			<AIPriority>370</AIPriority>
+		</AIData>
+		<ArtDef>Pike_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Pike_Centaur">
+		<DisplayName>Short Pike</DisplayName>
+		<Description>"Bring the armorers and make them lay with their creations." - Emperor Karavox after being defeated at the Battle of Spines.</Description>
+		<Type>Weapon</Type>
+		<WeaponType>Spear</WeaponType>
+		<WeaponUpgradeType>Spear</WeaponUpgradeType>
+		<CanBeEquipped>1</CanBeEquipped>
+		<AdditionalTrainingTurns>20</AdditionalTrainingTurns>
+		<ShopValue>75</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Pierce</StrVal>
+			<Value>18</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ArmorPierce</StrVal>
+			<Value>33</Value>
+			<Provides>Ignores 33% of the victim's Defense</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CannotBeCounterattacked</Attribute>
+			<Value>-1</Value>
+			<Provides>Immune to Counterattack</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Impale_Ability</StrVal>
+			<Provides>Impale- Strike an opponent and whoever is behind them</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<RarityDisplay>Uncommon</RarityDisplay>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Defensive_Centaur</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>War_Colleges</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_PIERCING</AIPrefType>
+			<AIPriority>260</AIPriority>
+		</AIData>
+		<ArtDef>Pike_Krax_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Pike_Shocking">
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Defensive_Centaur</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<DisplayName>Lightning Pike</DisplayName>
+		<Description>Also known as the lightning rod, this pike not only unleashes lightning with every attack but helps protect its wielder from the lightning attacks of others.</Description>
+		<Type>Weapon</Type>
+		<Type>Defense</Type>
+		<WeaponType>Spear</WeaponType>
+		<WeaponUpgradeType>Spear</WeaponUpgradeType>
+		<CanBeEquipped>1</CanBeEquipped>
+		<AdditionalTrainingTurns>40</AdditionalTrainingTurns>
+		<ShopValue>860</ShopValue>
+		<ProductionRequirement>
+			<Type>Resource</Type>
+			<Attribute>RefinedCrystal</Attribute>
+			<Value>5</Value>
+		</ProductionRequirement>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Pierce</StrVal>
+			<Value>19</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Lightning</StrVal>
+			<Value>3</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ArmorPierce</StrVal>
+			<Value>33</Value>
+			<Provides>Ignores 33% of the victim's Defense</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CannotBeCounterattacked</Attribute>
+			<Value>-1</Value>
+			<Provides>Immune to Counterattack</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ResistLightning</StrVal>
+			<Value>50</Value>
+			<Provides>+50% Lightning resistance</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Impale_Ability</StrVal>
+			<Provides>Impale- Strike an opponent and whoever is behind them</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<RarityDisplay>Rare</RarityDisplay>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Defensive</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Arcane_Weapons</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_PIERCING</AIPrefType>
+			<AIPriority>450</AIPriority>
+		</AIData>
+		<ArtDef>Pike_Shocking_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Pike_Shocking_Centaur">
+		<DisplayName>Short Lightning Pike</DisplayName>
+		<Description>Also known as the lightning rod, this pike not only unleashes lightning with every attack but helps protect its wielder from the lightning attacks of others.</Description>
+		<Type>Weapon</Type>
+		<WeaponType>Spear</WeaponType>
+		<WeaponUpgradeType>Spear</WeaponUpgradeType>
+		<CanBeEquipped>1</CanBeEquipped>
+		<AdditionalTrainingTurns>40</AdditionalTrainingTurns>
+		<ShopValue>860</ShopValue>
+		<ProductionRequirement>
+			<Type>Resource</Type>
+			<Attribute>RefinedCrystal</Attribute>
+			<Value>5</Value>
+		</ProductionRequirement>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Pierce</StrVal>
+			<Value>19</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Lightning</StrVal>
+			<Value>3</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ArmorPierce</StrVal>
+			<Value>33</Value>
+			<Provides>Ignores 33% of the victim's Defense</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CannotBeCounterattacked</Attribute>
+			<Value>-1</Value>
+			<Provides>Immune to Counterattack</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ResistLightning</StrVal>
+			<Value>50</Value>
+			<Provides>+50% Lightning resistance</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Impale_Ability</StrVal>
+			<Provides>Impale- Strike an opponent and whoever is behind them</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<RarityDisplay>Rare</RarityDisplay>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Defensive_Centaur</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Arcane_Weapons</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_PIERCING</AIPrefType>
+			<AIPriority>450</AIPriority>
+		</AIData>
+		<ArtDef>Pike_Shocking_Krax_ArtDef</ArtDef>
+	</GameItemType>
+	<!-- frost giant frostfire -->
+	<GameItemType InternalName="Longbow_Ignys">
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>FrostGiant_Frostfire</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<DisplayName>Ignys Longbow</DisplayName>
+		<Description>Also known as the firefly bow.  Arrows fired from this bow catch fire in the air, often making the arrows appear to jump out of the sky on dark nights.</Description>
+		<Type>Weapon</Type>
+		<Type>Defense</Type>
+		<WeaponType>Bow</WeaponType>
+		<WeaponUpgradeType>Bow</WeaponUpgradeType>
+		<CanBeEquipped>1</CanBeEquipped>
+		<AdditionalTrainingTurns>60</AdditionalTrainingTurns>
+		<ShopValue>320</ShopValue>
+		<ProductionRequirement>
+			<Type>Resource</Type>
+			<Attribute>RefinedCrystal</Attribute>
+			<Value>3</Value>
+		</ProductionRequirement>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Pierce</StrVal>
+			<Value>12</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Fire</StrVal>
+			<Value>2</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>-6</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_IsBow</StrVal>
+			<Value>1</Value>
+			<Provides>Enables abilities that require Bows</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockRangedAction</Attribute>
+			<StrVal>BowAttack_Ignys</StrVal>
+			<Provides>Ranged attack</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<RarityDisplay>Rare</RarityDisplay>
+		<TacticalRange>20</TacticalRange>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>NoRangedWeapons</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Arcane_Weapons</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_BOW</AIPrefType>
+			<AIPriority>226</AIPriority>
+		</AIData>
+		<ArtDef>Longbow_Ignys_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Longbow_Ignys_FrostGiant">
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>FrostGiant_Frostfire</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<DisplayName>Frostfire Longbow</DisplayName>
+		<Description>Arrows fired from this bow immediately chill to dangerously cold temperatures in the air, and leave trails of glimmering supernatural ice crystals, sometimes making the arrows appear to jump out of the sky on dark nights.</Description>
+		<Type>Weapon</Type>
+		<Type>Defense</Type>
+		<WeaponType>Bow</WeaponType>
+		<WeaponUpgradeType>Bow</WeaponUpgradeType>
+		<CanBeEquipped>1</CanBeEquipped>
+		<AdditionalTrainingTurns>60</AdditionalTrainingTurns>
+		<ShopValue>320</ShopValue>
+		<ProductionRequirement>
+			<Type>Resource</Type>
+			<Attribute>RefinedCrystal</Attribute>
+			<Value>3</Value>
+		</ProductionRequirement>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Pierce</StrVal>
+			<Value>12</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Cold</StrVal>
+			<Value>2</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>-6</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_IsBow</StrVal>
+			<Value>1</Value>
+			<Provides>Enables abilities that require Bows</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockRangedAction</Attribute>
+			<StrVal>BowAttack_Frostfire</StrVal>
+			<Provides>Ranged attack</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<RarityDisplay>Rare</RarityDisplay>
+		<TacticalRange>20</TacticalRange>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Arcane_Weapons</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_BOW</AIPrefType>
+			<AIPriority>226</AIPriority>
+		</AIData>
+		<ArtDef>Longbow_Ignys_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Axe_Burning">
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>FrostGiant_Frostfire</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<DisplayName>Burning Axe</DisplayName>
+		<Description>This axe smoulders with an internal fire, but when its handle is gripped the blade bursts into flame.</Description>
+		<Type>Weapon</Type>
+		<Type>Defense</Type>
+		<WeaponType>TwoHanded</WeaponType>
+		<WeaponUpgradeType>Axe</WeaponUpgradeType>
+		<CanBeEquipped>1</CanBeEquipped>
+		<AdditionalTrainingTurns>12</AdditionalTrainingTurns>
+		<ShopValue>150</ShopValue>
+		<ProductionRequirement>
+			<Type>Resource</Type>
+			<Attribute>RefinedCrystal</Attribute>
+			<Value>3</Value>
+		</ProductionRequirement>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Pierce</StrVal>
+			<Value>9</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Fire</StrVal>
+			<Value>2</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>-2</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_BackswingChance</StrVal>
+			<Value>100</Value>
+			<Provides>Backswing- If the attack misses the unit gets a second attack against the same target</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Cleave_Ability</StrVal>
+			<Provides>Cleave- Strike 3 adjacent enemies</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<Likelihood>40</Likelihood>
+		<RarityDisplay>Common</RarityDisplay>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>GreatAxes</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Enchantment</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_CUTTING</AIPrefType>
+			<AIPriority>198</AIPriority>
+		</AIData>
+		<ArtDef>Axe_Burning_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Axe_Burning_FrostGiant">
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>FrostGiant_Frostfire</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<DisplayName>Frostfire Axe</DisplayName>
+		<Description>This head of this axe is covered in a thin coat of rime, but when its handle is gripped the blade bursts into coruscating frostfire.</Description>
+		<Type>Weapon</Type>
+		<Type>Defense</Type>
+		<WeaponType>TwoHanded</WeaponType>
+		<WeaponUpgradeType>Axe</WeaponUpgradeType>
+		<CanBeEquipped>1</CanBeEquipped>
+		<AdditionalTrainingTurns>12</AdditionalTrainingTurns>
+		<ShopValue>150</ShopValue>
+		<ProductionRequirement>
+			<Type>Resource</Type>
+			<Attribute>RefinedCrystal</Attribute>
+			<Value>3</Value>
+		</ProductionRequirement>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Pierce</StrVal>
+			<Value>9</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Cold</StrVal>
+			<Value>2</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>-2</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_BackswingChance</StrVal>
+			<Value>100</Value>
+			<Provides>Backswing- If the attack misses the unit gets a second attack against the same target</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Cleave_Ability</StrVal>
+			<Provides>Cleave- Strike 3 adjacent enemies</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<Likelihood>40</Likelihood>
+		<RarityDisplay>Common</RarityDisplay>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Enchantment</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_CUTTING</AIPrefType>
+			<AIPriority>200</AIPriority>
+		</AIData>
+		<ArtDef>Axe_Frostfire</ArtDef>
+		<GameItemTypeArtDef InternalName="Axe_Frostfire">
+			<GameItemTypeModelPack InternalName="Axe_Frostfire">
+				<SupportedUnitModelType>AmarianFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>AmarianMale</SupportedUnitModelType>
+				<SupportedUnitModelType>DarklingMale</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireMale</SupportedUnitModelType>
+				<SupportedUnitModelType>FallenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>FallenMale</SupportedUnitModelType>
+				<SupportedUnitModelType>HenchmanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>IroneerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>IroneerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>KingdomFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarMale</SupportedUnitModelType>
+				<SupportedUnitModelType>SlaveMale</SupportedUnitModelType>
+				<SupportedUnitModelType>TarthanFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenMale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithMale</SupportedUnitModelType>
+				<SupportedUnitModelType>Centaur</SupportedUnitModelType>
+				<SupportedUnitModelType>DrotaMale</SupportedUnitModelType>
+				<SupportedUnitModelType>DrotaFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>ShadowMale</SupportedUnitModelType>
+				<SupportedUnitModelType>ShadowFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>Goblin</SupportedUnitModelType>
+				<SupportedUnitModelType>LizardmanFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>AngelFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>DwarfFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>ElfFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>FrostGiantMale</SupportedUnitModelType>
+				<SupportedUnitModelType>FrostGiantFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>LivingStone</SupportedUnitModelType>
+				<SupportedUnitModelType>LizardmanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>Golem</SupportedUnitModelType>
+				<SupportedUnitModelType>Undead</SupportedUnitModelType>
+				<SupportedUnitModelType>DeathLegion</SupportedUnitModelType>
+				<SupportedUnitModelType>AngelMale</SupportedUnitModelType>
+				<SupportedUnitModelType>DwarfMale</SupportedUnitModelType>
+				<SupportedUnitModelType>ElfMale</SupportedUnitModelType>
+				<SupportedUnitModelType>Skeleton</SupportedUnitModelType>
+				<SupportedUnitModelType>IronGolem</SupportedUnitModelType>
+				<SupportedUnitModelType>JuggernautMale</SupportedUnitModelType>
+				<SupportedUnitModelType>Banshee</SupportedUnitModelType>
+				<SupportedUnitModelType>HenchmanFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>DarUrxenMale</SupportedUnitModelType>
+				<SupportedUnitModelType>DarUrxenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>HashainiFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>HashainiMale</SupportedUnitModelType>
+				<SupportedUnitModelType>MunduraMale</SupportedUnitModelType>
+				<SupportedUnitModelType>MunduraFemale</SupportedUnitModelType>				
+				<IconFile>axe_frostwyrm.png</IconFile>
+				<TintR>0</TintR>
+				<TintG>0</TintG>
+				<TintB>0</TintB>
+				<AttackSFX>Hit_Hammer1</AttackSFX>
+				<AttackSFX>Hit_Hammer2</AttackSFX>
+				<AttackSFX>Hit_Hammer3</AttackSFX>
+				<EquipSFX>Equip_WoodenItem_01</EquipSFX>
+				<EquipSFX>Equip_WoodenItem_02</EquipSFX>
+				<EquipSFX>Equip_WoodenItem_03</EquipSFX>
+				<GameItemTypeModel>
+					<ModelFile>gfx/hkb/Weapons/W_Axe_Burning_01.hkb</ModelFile>
+					<Texture_All>gfx/hkb/Weapons/FE_Weapons_01.png</Texture_All>
+					<Attachment>hand_right_Lcf</Attachment>
+					<Color_Metal>90,87,87</Color_Metal>
+					<EffectAttachment>
+						<Attachment>Effect_Loc_01</Attachment>
+						<EffectName>A_FrostwyrmAxe_Particle</EffectName>
+						<EffectPosition>6,0,0</EffectPosition>
+						<EffectRotation>0,0,0</EffectRotation>
+						<EffectScale>0.25</EffectScale>
+					</EffectAttachment>
+				</GameItemTypeModel>
+			</GameItemTypeModelPack>
+		</GameItemTypeArtDef>
+	</GameItemType>
+	<GameItemType InternalName="BattleAxe_Burning">
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>FrostGiant_Frostfire</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<DisplayName>Burning Battle Axe</DisplayName>
+		<Description>The blade of this great axe is set with twin citrines.  The amber gemstones look like eyes, and are said to be able to entrance enemies in battle.</Description>
+		<Type>Weapon</Type>
+		<Type>Defense</Type>
+		<WeaponType>TwoHanded</WeaponType>
+		<WeaponUpgradeType>Axe</WeaponUpgradeType>
+		<CanBeEquipped>1</CanBeEquipped>
+		<AdditionalTrainingTurns>24</AdditionalTrainingTurns>
+		<ShopValue>620</ShopValue>
+		<ProductionRequirement>
+			<Type>Resource</Type>
+			<Attribute>RefinedCrystal</Attribute>
+			<Value>5</Value>
+		</ProductionRequirement>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Pierce</StrVal>
+			<Value>14</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Fire</StrVal>
+			<Value>2</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>-2</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_BackswingChance</StrVal>
+			<Value>100</Value>
+			<Provides>Backswing- If the attack misses the unit gets a second attack against the same target</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Cleave_Ability</StrVal>
+			<Provides>Cleave- Strike 3 adjacent enemies</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<RarityDisplay>Uncommon</RarityDisplay>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>GreatAxes</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Magical_Forging</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_CUTTING</AIPrefType>
+			<AIPriority>288</AIPriority>
+		</AIData>
+		<ArtDef>BattleAxe_Burning_ArtDef</ArtDef>
+	</GameItemType>
+
+	<GameItemType InternalName="BattleAxe_Burning_FrostGiant">
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>FrostGiant_Frostfire</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<DisplayName>Frostfire Battle Axe</DisplayName>
+		<Description>The blade of this great axe is set with twin aquamarines.  The pale blue gemstones look like eyes, and are said to be able to entrance enemies in battle.</Description>
+		<Type>Weapon</Type>
+		<Type>Defense</Type>
+		<WeaponType>TwoHanded</WeaponType>
+		<WeaponUpgradeType>Axe</WeaponUpgradeType>
+		<CanBeEquipped>1</CanBeEquipped>
+		<AdditionalTrainingTurns>24</AdditionalTrainingTurns>
+		<ShopValue>620</ShopValue>
+		<ProductionRequirement>
+			<Type>Resource</Type>
+			<Attribute>RefinedCrystal</Attribute>
+			<Value>5</Value>
+		</ProductionRequirement>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Pierce</StrVal>
+			<Value>14</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Cold</StrVal>
+			<Value>2</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>-2</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_BackswingChance</StrVal>
+			<Value>100</Value>
+			<Provides>Backswing- If the attack misses the unit gets a second attack against the same target</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Cleave_Ability</StrVal>
+			<Provides>Cleave- Strike 3 adjacent enemies</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<RarityDisplay>Uncommon</RarityDisplay>
+
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Magical_Forging</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_CUTTING</AIPrefType>
+			<AIPriority>288</AIPriority>
+		</AIData>
+		<ArtDef>BattleAxe_Frostfire</ArtDef>
+		<GameItemTypeArtDef InternalName="BattleAxe_Frostfire">
+			<GameItemTypeModelPack InternalName="BattleAxe_Frostfire">
+				<SupportedUnitModelType>AmarianFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>AmarianMale</SupportedUnitModelType>
+				<SupportedUnitModelType>DarklingMale</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireMale</SupportedUnitModelType>
+				<SupportedUnitModelType>FallenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>FallenMale</SupportedUnitModelType>
+				<SupportedUnitModelType>HenchmanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>IroneerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>IroneerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>KingdomFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarMale</SupportedUnitModelType>
+				<SupportedUnitModelType>SlaveMale</SupportedUnitModelType>
+				<SupportedUnitModelType>TarthanFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenMale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithMale</SupportedUnitModelType>
+				<SupportedUnitModelType>Centaur</SupportedUnitModelType>
+				<SupportedUnitModelType>DrotaMale</SupportedUnitModelType>
+				<SupportedUnitModelType>DrotaFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>ShadowMale</SupportedUnitModelType>
+				<SupportedUnitModelType>ShadowFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>Goblin</SupportedUnitModelType>
+				<SupportedUnitModelType>LizardmanFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>AngelFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>DwarfFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>ElfFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>FrostGiantMale</SupportedUnitModelType>
+				<SupportedUnitModelType>FrostGiantFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>LivingStone</SupportedUnitModelType>
+				<SupportedUnitModelType>LizardmanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>Golem</SupportedUnitModelType>
+				<SupportedUnitModelType>Undead</SupportedUnitModelType>
+				<SupportedUnitModelType>DeathLegion</SupportedUnitModelType>
+				<SupportedUnitModelType>AngelMale</SupportedUnitModelType>
+				<SupportedUnitModelType>DwarfMale</SupportedUnitModelType>
+				<SupportedUnitModelType>ElfMale</SupportedUnitModelType>
+				<SupportedUnitModelType>Skeleton</SupportedUnitModelType>
+				<SupportedUnitModelType>IronGolem</SupportedUnitModelType>
+				<SupportedUnitModelType>JuggernautMale</SupportedUnitModelType>
+				<SupportedUnitModelType>Banshee</SupportedUnitModelType>
+				<SupportedUnitModelType>HenchmanFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>DarUrxenMale</SupportedUnitModelType>
+				<SupportedUnitModelType>DarUrxenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>HashainiFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>HashainiMale</SupportedUnitModelType>
+				<SupportedUnitModelType>MunduraMale</SupportedUnitModelType>
+				<SupportedUnitModelType>MunduraFemale</SupportedUnitModelType>
+				<IconFile>W_Battle_Axe_Frostfire_Icon_01.png</IconFile>
+				<TintR>0</TintR>
+				<TintG>0</TintG>
+				<TintB>0</TintB>
+				<AttackSFX>Hit_Axe1</AttackSFX>
+				<AttackSFX>Hit_Axe2</AttackSFX>
+				<EquipSFX>Equip_WoodenItem_01</EquipSFX>
+				<EquipSFX>Equip_WoodenItem_02</EquipSFX>
+				<EquipSFX>Equip_WoodenItem_03</EquipSFX>
+				<GameItemTypeModel>
+					<ModelFile>gfx/hkb/Weapons/W_Battle_Axe_Burning_01.hkb</ModelFile>
+					<Texture_All>gfx/hkb/Weapons/FE_Weapons_01.png</Texture_All>
+					<Attachment>hand_right_Lcf</Attachment>
+					<Color_Metal>90,87,87</Color_Metal>
+					<EffectAttachment>
+						<Attachment>Effect_Loc_01</Attachment>
+						<EffectName>A_FrostfireBattleAxe_Particle</EffectName>
+						<EffectPosition>0,1,0</EffectPosition>
+						<EffectRotation>0,0,0</EffectRotation>
+						<EffectScale>0.25</EffectScale>
+					</EffectAttachment>
+					<EffectAttachment>
+						<Attachment>Effect_Loc_02</Attachment>
+						<EffectName>A_FrostfireBattleAxe_Particle</EffectName>
+						<EffectPosition>0,-1,0</EffectPosition>
+						<EffectRotation>0,0,0</EffectRotation>
+						<EffectScale>0.25</EffectScale>
+					</EffectAttachment>
+				</GameItemTypeModel>
+			</GameItemTypeModelPack>
+		</GameItemTypeArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Staff_Hellfire">
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>FrostGiant_Frostfire</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<DisplayName>Hellfire Staff</DisplayName>
+		<Description>Also known as the dragon's breath staff.  A torrent of fire can be coaxed out of the flames that continually burn at the staff's tip.</Description>
+		<Type>Weapon</Type>
+		<Type>Defense</Type>
+		<WeaponType>Staff</WeaponType>
+		<WeaponUpgradeType>FireStaff</WeaponUpgradeType>
+		<CanBeEquipped>1</CanBeEquipped>
+		<AdditionalTrainingTurns>48</AdditionalTrainingTurns>
+		<ShopValue>290</ShopValue>
+		<ProductionRequirement>
+			<Type>Resource</Type>
+			<Attribute>RefinedCrystal</Attribute>
+			<Value>6</Value>
+		</ProductionRequirement>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Fire</StrVal>
+			<Value>12</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>-6</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockRangedAction</Attribute>
+			<StrVal>BowAttack_Ignys</StrVal>
+			<Provides>Ranged attack</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<Likelihood>10</Likelihood>
+		<RarityDisplay>Rare</RarityDisplay>
+		<TacticalRange>20</TacticalRange>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>NoRangedWeapons</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Arcane_Weapons</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_BLUNT</AIPrefType>
+			<AIPriority>198</AIPriority>
+		</AIData>
+		<ArtDef>Staff_Hellfire_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Staff_Incineration">
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>FrostGiant_Frostfire</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<DisplayName>Incineration Staff</DisplayName>
+		<Description>A jet of fire can be coaxed from the embers that eternally burn on the tip of this staff.</Description>
+		<Type>Weapon</Type>
+		<Type>Defense</Type>
+		<WeaponType>Staff</WeaponType>
+		<WeaponUpgradeType>FireStaff</WeaponUpgradeType>
+		<CanBeEquipped>1</CanBeEquipped>
+		<AdditionalTrainingTurns>24</AdditionalTrainingTurns>
+		<CustomizationPointCost>1</CustomizationPointCost>
+		<ShopValue>150</ShopValue>
+		<ProductionRequirement>
+			<Type>Resource</Type>
+			<Attribute>RefinedCrystal</Attribute>
+			<Value>3</Value>
+		</ProductionRequirement>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Fire</StrVal>
+			<Value>6</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>-6</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockRangedAction</Attribute>
+			<StrVal>BowAttack_Flaming</StrVal>
+			<Provides>Ranged attack</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>1</IsAvailableForSovereignCustomization>
+		<Likelihood>20</Likelihood>
+		<RarityDisplay>Uncommon</RarityDisplay>
+		<TacticalRange>20</TacticalRange>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>NoRangedWeapons</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Enchantment</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_BLUNT</AIPrefType>
+			<AIPriority>114</AIPriority>
+		</AIData>
+		<ArtDef>Staff_Incineration_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="AmuletOfFlames">
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>FrostGiant_Frostfire</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<DisplayName>Amulet of Flames</DisplayName>
+		<Description>When it is worn even the wearer's caress burns those he or she touches.  Although some see this as a weapon, the Quendar are known to use it for pleasure.</Description>
+		<Type>Accessory</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<AdditionalTrainingTurns>16</AdditionalTrainingTurns>
+		<ShopValue>180</ShopValue>
+		<ProductionRequirement>
+			<Type>Resource</Type>
+			<Attribute>RefinedCrystal</Attribute>
+			<Value>4</Value>
+		</ProductionRequirement>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Fire</StrVal>
+			<Value>2</Value>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<Likelihood>20</Likelihood>
+		<RarityDisplay>Uncommon</RarityDisplay>
+		<IsUsable>0</IsUsable>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Glyph_Stones</Attribute>
+		</Prereq>
+		          <AIData AIPersonality="AI_General">
+                <AIPriority>40</AIPriority>
+            </AIData>
+		<ArtDef>AmuletOfFlames_ArtDef</ArtDef>
+		<GameItemTypeArtDef InternalName="AmuletOfFlames_ArtDef">
+			<GameItemTypeModelPack InternalName="AmuletOfFlames_Default">
+				<IconFile>AmuletofFlame_Item.png</IconFile>
+				<TintR>240</TintR>
+				<TintG>10</TintG>
+				<TintB>10</TintB>
+				<SFX>Equip_MagicRing_01</SFX>
+				<SFX>Equip_MagicRing_02</SFX>
+				<SFX>Equip_MagicRing_03</SFX>
+				<SFX>Equip_MagicRing_04</SFX>
+				<GameItemTypeModel>
+				</GameItemTypeModel>
+			</GameItemTypeModelPack>
+		</GameItemTypeArtDef>
+	</GameItemType>
+	<GameItemType InternalName="RingOfEmbers">
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>FrostGiant_Frostfire</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<DisplayName>Ring of Embers</DisplayName>
+		<Description>This ring imbues the wearer's attacks with fire.</Description>
+		<Type>Accessory</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<AdditionalTrainingTurns>8</AdditionalTrainingTurns>
+		<ShopValue>75</ShopValue>
+		<ProductionRequirement>
+			<Type>Resource</Type>
+			<Attribute>RefinedCrystal</Attribute>
+			<Value>2</Value>
+		</ProductionRequirement>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Fire</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<Likelihood>20</Likelihood>
+		<RarityDisplay>Uncommon</RarityDisplay>
+		<IsUsable>0</IsUsable>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Charms</Attribute>
+		</Prereq>
+		<ArtDef>RingOfEmbers_ArtDef</ArtDef>
+		            <AIData AIPersonality="AI_General">
+                <AIPriority>20</AIPriority>
+            </AIData>
+		<GameItemTypeArtDef InternalName="RingOfEmbers_ArtDef">
+			<GameItemTypeModelPack InternalName="RingOfEmbers_Default">
+				<IconFile>RingOfEmbers_Item.png</IconFile>
+				<TintR>0</TintR>
+				<TintG>0</TintG>
+				<TintB>0</TintB>
+				<SFX>Equip_MagicRing_01</SFX>
+				<SFX>Equip_MagicRing_02</SFX>
+				<SFX>Equip_MagicRing_03</SFX>
+				<SFX>Equip_MagicRing_04</SFX>
+				<GameItemTypeModel>
+				</GameItemTypeModel>
+			</GameItemTypeModelPack>
+		</GameItemTypeArtDef>
+	</GameItemType>
+</Container>

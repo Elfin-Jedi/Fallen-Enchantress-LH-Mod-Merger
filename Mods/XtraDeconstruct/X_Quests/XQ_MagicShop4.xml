@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<Quests>
+	<QuestDef InternalName="Quest_X_Magic4">
+		<DisplayName>Vatula's Reliquary</DisplayName>
+		<Description>Vatula is nowhere to be found, oh, wait, here he is, eating some Goat Stew.</Description>
+		<IsStartingPointQuest>0</IsStartingPointQuest>
+		<AllowQuestRejection>0</AllowQuestRejection>
+		<ShortTextAccept>Can I have some?</ShortTextAccept>
+		<RewardText>Unknown</RewardText>
+		<RewardImage>Question_Mark_Icon.png</RewardImage>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>QuestLocation</TriggerType>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>5</SpawnRating>
+		<TriggerChance>0</TriggerChance>
+		<AICanGoOnQuest>0</AICanGoOnQuest>
+		<Image>K_Amethyst_Vault_Thumb_01.png</Image>
+		<PrefQuestLoc>GH_X_Magic4</PrefQuestLoc>
+		<Treasure>
+			<GameModifier>
+				<ModType>GiveItem</ModType>
+				<Attribute>Consumable_X_MagicShop4</Attribute>
+			</GameModifier>
+		</Treasure>
+		<Treasure>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>GiveExperience</Attribute>
+				<Value>0</Value>
+			</GameModifier>
+		</Treasure>
+		<Treasure>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>0</Value>
+			</GameModifier>
+		</Treasure>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<NextObjectiveID>1</NextObjectiveID>
+			<AutoFulfillSuccessConditionsOnSetup>1</AutoFulfillSuccessConditionsOnSetup>
+			<DisableQuestChoiceTooltips>0</DisableQuestChoiceTooltips>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<ID>0</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Return to Vatula's Reliquary for additional shopping.</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>UnitEntersQuestLocation</Type>
+			</QuestConditionDef>
+			<ChoiceText>I have a vast choice of magical items but they aren't free!</ChoiceText>
+			<ChoiceMedallion>BG32_ArcaneHall.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>I'll come back later.</Description>
+				<NextObjectiveID>0</NextObjectiveID>
+				<PopupMessage>"I'll be waiting here," says Vatula's.</PopupMessage>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Show me what you've got.</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<NextObjectiveID>2</NextObjectiveID>
+			<DisableQuestChoiceTooltips>0</DisableQuestChoiceTooltips>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<ID>1</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy Curgen's Hammer</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>6000</NumericData>
+			</QuestConditionDef>
+			<QuestConditionDef>
+				<ID>2</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy Delin's Ember</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>4000</NumericData>
+			</QuestConditionDef>
+			<QuestConditionDef>
+				<ID>3</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy Equinox</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>3300</NumericData>
+			</QuestConditionDef>
+			<QuestConditionDef>
+				<ID>4</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy Heart of the Glacier</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>5000</NumericData>
+			</QuestConditionDef>
+			<QuestConditionDef>
+				<ID>5</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy M4-RK</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>3750</NumericData>
+			</QuestConditionDef>
+			<QuestConditionDef>
+				<ID>6</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy Sarog's Axe</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>3000</NumericData>
+			</QuestConditionDef>
+			<QuestConditionDef>
+				<ID>7</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy the Scepter of Dominion</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>6666</NumericData>
+			</QuestConditionDef>
+			<QuestConditionDef>
+				<ID>8</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy Star Forged Boots</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>3300</NumericData>
+			</QuestConditionDef>
+			<QuestConditionDef>
+				<ID>9</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy Star Forged Cuirass</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>6000</NumericData>
+			</QuestConditionDef>
+			<QuestConditionDef>
+				<ID>10</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy Star Forged Gauntlets</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>3300</NumericData>
+			</QuestConditionDef>
+			<QuestConditionDef>
+				<ID>11</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy Star Forged Greaves</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>3300</NumericData>
+			</QuestConditionDef>
+			<QuestConditionDef>
+				<ID>12</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy Sunderer</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>3000</NumericData>
+			</QuestConditionDef>
+			<QuestConditionDef>
+				<ID>13</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy a Sword of the Sun and Moon</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>3750</NumericData>
+			</QuestConditionDef>
+			<QuestConditionDef>
+				<ID>14</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy a Sword of Wrath</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>3750</NumericData>
+			</QuestConditionDef>
+			<QuestConditionDef>
+				<ID>15</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy the Tectonic Bulwark</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>5500</NumericData>
+			</QuestConditionDef>
+			<QuestConditionDef>
+				<ID>16</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy a Star Forged Crown</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>3300</NumericData>
+			</QuestConditionDef>
+			<QuestConditionDef>
+				<ID>17</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy Vetrar's Fist</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>3000</NumericData>
+			</QuestConditionDef>
+			<ChoiceText>Anything you like?</ChoiceText>
+			<ChoiceMedallion>BG32_ArcaneHall.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>I'll come back later.</Description>
+				<NextObjectiveID>2</NextObjectiveID>
+				<PopupMessage>"Summon me when you need," says Vatula.
+				
+				You find Cooking Goat Stew by Vatula in your backpack.</PopupMessage>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Buy Curgen's Hammer (-6000 Gildar).</Description>
+				<RequiredConditionID>1</RequiredConditionID>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Maul_CurgensHammer</Attribute>
+						<BoolVal1>1</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Buy Delin's Ember (-4000 Gildar).</Description>
+				<RequiredConditionID>2</RequiredConditionID>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>DelinsEmber</Attribute>
+						<BoolVal1>1</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Buy Equinox (-3300 Gildar).</Description>
+				<RequiredConditionID>3</RequiredConditionID>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Longsword_Equinox</Attribute>
+						<BoolVal1>1</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Buy Heart of the Glacier (-5000 Gildar).</Description>
+				<RequiredConditionID>4</RequiredConditionID>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Greatsword_HeartOfTheGlacier</Attribute>
+						<BoolVal1>1</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Buy M4-RK (-3750 Gildar).</Description>
+				<RequiredConditionID>5</RequiredConditionID>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>M4RK</Attribute>
+						<BoolVal1>1</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Buy Sarog's Axe (-3000 Gildar).</Description>
+				<RequiredConditionID>6</RequiredConditionID>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Greataxe_Flaming</Attribute>
+						<BoolVal1>1</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Buy the Scepter of Dominion (-6666 Gildar).</Description>
+				<RequiredConditionID>7</RequiredConditionID>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Mace_ScepterOfDominion</Attribute>
+						<BoolVal1>1</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Buy Star Forged Boots (-3300 Gildar).</Description>
+				<RequiredConditionID>8</RequiredConditionID>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>PlateBoots_Titan</Attribute>
+						<BoolVal1>1</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Buy Star Forged Cuirass (-6000 Gildar).</Description>
+				<RequiredConditionID>9</RequiredConditionID>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>PlateBreastpiece_Titan</Attribute>
+						<BoolVal1>1</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Buy Star Forged Gauntlets (-3300 Gildar).</Description>
+				<RequiredConditionID>10</RequiredConditionID>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>PlateVambraces_Titan</Attribute>
+						<BoolVal1>1</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Buy Star Forged Greaves (-3300 Gildar).</Description>
+				<RequiredConditionID>11</RequiredConditionID>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>PlateGreaves_Titan</Attribute>
+						<BoolVal1>1</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Buy Sunderer (-3000 Gildar).</Description>
+				<RequiredConditionID>12</RequiredConditionID>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Greataxe_Sunderer</Attribute>
+						<BoolVal1>1</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Buy a Sword of the Sun and Moon (-3750 Gildar).</Description>
+				<RequiredConditionID>13</RequiredConditionID>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Longsword_SwordOfTheSunAndMoon</Attribute>
+						<BoolVal1>1</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Buy a Sword of Wrath (-3750 Gildar).</Description>
+				<RequiredConditionID>14</RequiredConditionID>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Greatsword_SwordOfWrath</Attribute>
+						<BoolVal1>1</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Buy the Tectonic Bulwark (-5500 Gildar).</Description>
+				<RequiredConditionID>15</RequiredConditionID>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>TowerShield_TectonicBulwark</Attribute>
+						<BoolVal1>1</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Buy a Star Forged Crown (-3300 Gildar).</Description>
+				<RequiredConditionID>16</RequiredConditionID>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>PlateHelmet_Titans</Attribute>
+						<BoolVal1>1</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Buy Vetrar's Fist (-3000 Gildar).</Description>
+				<RequiredConditionID>17</RequiredConditionID>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Mace_Freezing</Attribute>
+						<BoolVal1>1</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>2</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+		</QuestObjectiveDef>
+	</QuestDef>
+</Quests>

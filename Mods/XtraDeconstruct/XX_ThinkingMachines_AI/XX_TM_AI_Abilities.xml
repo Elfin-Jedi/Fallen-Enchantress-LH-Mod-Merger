@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<AbilityBonuses>
+	<AbilityBonus InternalName="Ability_X_ThinkingMachine1b">
+		<AbilityBonusType>Unit_Design</AbilityBonusType>
+		<AbilityBonusOption InternalName="Ability_X_ThinkingMachine1b">
+			<DisplayName>Advantageous Innovation I</DisplayName>
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Tech_X_ThinkingMachine</Attribute>
+			</Prereq>
+			<AdditionalTrainingTurns>1</AdditionalTrainingTurns>
+			<Description>Advantageous Innovation I</Description>
+			<GameModifier>
+				<Provides>CORE</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Attack_Boost</StrVal>
+				<Value>0.1</Value>
+				<PerLevel>1</PerLevel>
+				<Provides>::: +1 ATK per 10 Levels</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Defense_Pierce</StrVal>
+				<Value>0.1</Value>
+				<PerLevel>1</PerLevel>
+				<Provides>::: +1 DEF per 10 Levels</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_CombatSpeed</StrVal>
+				<Value>0.1</Value>
+				<PerLevel>1</PerLevel>
+				<Provides>::: +1 Initiative per 10 Levels</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>0.1</Value>
+				<PerLevel>1</PerLevel>
+				<Provides>::: +1 Move per 10 Levels</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>STATS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Accuracy</StrVal>
+				<Value>1</Value>
+				<PerLevel>1</PerLevel>
+				<Provides>::: +1 Accuracy per 1 Level</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Dodge</StrVal>
+				<Value>1</Value>
+				<PerLevel>1</PerLevel>
+				<Provides>::: +1 Dodge per 1 Level</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_DodgeAgainstRanged</StrVal>
+				<Value>1</Value>
+				<PerLevel>1</PerLevel>
+				<Provides>::: +1 Dodge against Ranged per 1 Level</Provides>
+			</GameModifier>
+			<Icon>Ability_X_ThinkingMachine1a.png</Icon>
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Ability_X_ThinkingMachine2b">
+		<AbilityBonusType>Unit_Design</AbilityBonusType>
+		<AbilityBonusOption InternalName="Ability_X_ThinkingMachine2b">
+			<DisplayName>Advantageous Innovation II</DisplayName>
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Tech_X_ThinkingMachine</Attribute>
+			</Prereq>
+			<AdditionalTrainingTurns>1</AdditionalTrainingTurns>
+			<Description>Advantageous Innovation II</Description>
+			<GameModifier>
+				<Provides>CORE</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Attack_Boost</StrVal>
+				<Value>0.1</Value>
+				<PerLevel>1</PerLevel>
+				<Provides>::: +1 ATK per 5 Levels
+				::: Compounded</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Attack_Boost</StrVal>
+				<StrVal2>UnitStat_BG_IsTwisted</StrVal2>
+				<Value>1</Value>
+				<BonusValue>0.99</BonusValue>
+				<vsHigher>1</vsHigher>
+				<Provides>::: +1 ATK vs Twisted</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Defense_Pierce</StrVal>
+				<Value>0.1</Value>
+				<PerLevel>1</PerLevel>
+				<Provides>::: +1 DEF per 5 Levels
+				::: Compounded</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>EXPERIENCE BONUS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>FreeLevel</Attribute>
+				<Provides>::: +1 Level</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>0.025</Value>
+				<PerLevel>1</PerLevel>
+				<Provides>::: +1 move per 8 Levels
+				::: Compounded</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>REGENERATION</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_TacticalHealthRegen</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1 per Action</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_CombatSpeed</StrVal>
+				<Value>0.025</Value>
+				<PerLevel>1</PerLevel>
+				<Provides>::: +1 Initiative per 8 Levels
+				::: Compounded</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>RESISTANCE</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ResistPoison</StrVal>
+				<Value>2</Value>
+				<PerLevel>1</PerLevel>
+				<Provides>::: +2% Death\Poison per Level</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_MagicResist</StrVal>
+				<Value>2</Value>
+				<PerLevel>1</PerLevel>
+				<Provides>::: +2 Magic per Level</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>STATS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Accuracy</StrVal>
+				<Value>1</Value>
+				<PerLevel>1</PerLevel>
+				<Provides>::: +2 Accuracy per Level
+				::: Compounded</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Dodge</StrVal>
+				<Value>0.25</Value>
+				<PerLevel>1</PerLevel>
+				<Provides>::: +5 Dodge per 4 Levels
+				::: Compounded</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_DodgeAgainstRanged</StrVal>
+				<Value>0.25</Value>
+				<PerLevel>1</PerLevel>
+				<Provides>::: +5 Dodge against Ranged per 4 Levels
+				::: Compounded</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>XOTIC</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_TacticalScaleMultiplier</StrVal>
+				<Multiplier>1.01</Multiplier>
+				<PerLevel>1</PerLevel>
+				<Provides>::: Visually larger in combat</Provides>
+			</GameModifier>
+			<Icon>Ability_X_ThinkingMachine2a.png</Icon>
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Ability_X_ThinkingMachine3b">
+		<AbilityBonusType>Unit_Design</AbilityBonusType>
+		<AbilityBonusOption InternalName="Ability_X_ThinkingMachine3b">
+			<DisplayName>Advantageous Innovation III</DisplayName>
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Tech_X_ThinkingMachine</Attribute>
+			</Prereq>
+			<AdditionalTrainingTurns>1</AdditionalTrainingTurns>
+			<Description>Advantageous Innovation III</Description>
+			<GameModifier>
+				<Provides>CORE</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Attack_Boost</StrVal>
+				<Value>0.13</Value>
+				<PerLevel>1</PerLevel>
+				<Provides>::: +1 ATK per 3 Levels
+				::: Compounded</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Attack_Boost</StrVal>
+				<StrVal2>UnitStat_BG_IsDragon</StrVal2>
+				<Value>2</Value>
+				<BonusValue>0.99</BonusValue>
+				<vsHigher>1</vsHigher>
+				<Provides>::: +2 ATK vs Dragon</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Attack_Boost</StrVal>
+				<StrVal2>UnitStat_BG_IsTwisted</StrVal2>
+				<Value>1</Value>
+				<BonusValue>0.99</BonusValue>
+				<vsHigher>1</vsHigher>
+				<Provides>::: +2 ATK vs Twisted
+				::: Compounded</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Defense_Pierce</StrVal>
+				<Value>0.13</Value>
+				<PerLevel>1</PerLevel>
+				<Provides>::: +1 DEF per 3 Levels
+				::: Compounded</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_CombatSpeed</StrVal>
+				<Value>0.075</Value>
+				<PerLevel>1</PerLevel>
+				<Provides>::: +1 Initiative per 5 Levels
+				::: Compounded</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>FREE EXPERIENCE</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>FreeLevel</Attribute>
+				<Provides>::: +2 Levels
+				::: Compounded</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>0.015</Value>
+				<PerLevel>1</PerLevel>
+				<Provides>::: +1 Move per 7 Levels
+				::: Compounded</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>REGENERATION</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_TacticalHealthRegen</StrVal>
+				<Value>2</Value>
+				<Provides>::: +3 per Action
+				::: Compounded</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>RESISTANCE</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ResistPoison</StrVal>
+				<Value>1</Value>
+				<PerLevel>1</PerLevel>
+				<Provides>::: +3% Death/Poison per Level
+				::: Compounded</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_MagicResist</StrVal>
+				<Value>1</Value>
+				<PerLevel>1</PerLevel>
+				<Provides>::: +3 Magic per Level
+				::: Compounded</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ResistPierce</StrVal>
+				<Value>1</Value>
+				<PerLevel>1</PerLevel>
+				<Provides>::: +1% Pierce per Level
+				::: Compounded</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>STATS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Accuracy</StrVal>
+				<Value>1</Value>
+				<PerLevel>1</PerLevel>
+				<Provides>::: +3 Accuracy per Level
+				::: Compounded</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ChanceToAvoidCrit</StrVal>
+				<Value>1</Value>
+				<PerLevel>1</PerLevel>
+				<Provides>::: +1 Critical Avoidance per Level</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Dodge</StrVal>
+				<Value>0.25</Value>
+				<PerLevel>1</PerLevel>
+				<Provides>::: +3 Dodge per 2 Levels
+				::: Compounded</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_DodgeAgainstRanged</StrVal>
+				<Value>0.17</Value>
+				<PerLevel>1</PerLevel>
+				<Provides>::: +5 Dodge against Ranged per 2 Levels
+				::: Compounded</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ChanceToAvoidProne</StrVal>
+				<Value>3</Value>
+				<PerLevel>1</PerLevel>
+				<Provides>::: +3 Knocked Prone Avoidance per Level</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>TACTICAL EFFECT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_MaxCounterAttack</StrVal>
+				<Value>0.05</Value>
+				<PerLevel>1</PerLevel>
+				<Provides>::: +1 Counterattack per 20 Levels</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>XOTIC</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>::: Visually larger in combat</Provides>
+			</GameModifier>
+			<Icon>Ability_X_ThinkingMachine3a.png</Icon>
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="BrokenSpiritAbility">
+		<AbilityBonusOption InternalName="BrokenSpirit">
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Resource_X_PPE</Attribute>
+				<Value>-1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>!SHENANIGANS!</Provides>
+			</GameModifier>
+		</AbilityBonusOption>
+	</AbilityBonus>
+</AbilityBonuses>

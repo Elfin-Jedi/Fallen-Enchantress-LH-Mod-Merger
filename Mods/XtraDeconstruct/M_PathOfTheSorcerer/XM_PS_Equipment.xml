@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--Path of the Sorcerer: D. Elliot Lamb a.k.a davrovana w/ help (graphics) from fsemprini-->
+<!--XtraDeconstruct 3.0 by Primal-->
+<GameItemTypes>
+	<GameItemType InternalName="Mana_Stone">
+		<DisplayName>Mana Stone</DisplayName>
+		<Description>A magical experiment has left mana solidified. Holding this stone confers strong magical energy to the holder.</Description>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<ShopValue>125</ShopValue>
+		<Type>Accessory</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<!--<AffectsGlobalResources>1</AffectsGlobalResources>--><!--?-->
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>A magical experiment has left mana solidified. Holding this stone confers strong magical energy to the holder.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>STRATEGIC EFFECT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_EnchantmentMaintenanceMultiplier</StrVal>
+			<Multiplier>0.5</Multiplier>
+			<Provides>::: Enchantments Maintenance :::
+			::: -50%</Provides>
+		</GameModifier>	
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Summoned</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<IsUsable>0</IsUsable>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5000</AIPriority>
+		</AIData>
+		<ArtDef>ArtDef_X_ManaStone_Accessory</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Staff_Sorcerer">
+		<DisplayName>Sorcerer's Staff</DisplayName>
+		<Description>Only Sorcerers can use this staff. It calms the user's mind, and focuses their thoughts. Up close, it delivers a shocking blow.</Description>
+		<Type>Weapon</Type>
+		<Type>Defense</Type>
+		<WeaponType>Spear</WeaponType>
+		<WeaponUpgradeType>Staff</WeaponUpgradeType>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>300</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Lightning</StrVal>
+			<Value>6</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_Immersive_M</StrVal>
+			<Value>-1</Value>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>Only Sorcerers can use this staff. It calms the user's mind, and focuses their thoughts. Up close, it delivers a shocking blow.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>2</Value>
+			<Provides>::: +2 Initiative</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>SPELL POTENCY</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_SpellDamage</StrVal>
+			<Value>10</Value>
+			<Provides>::: +10% Spell DMG</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>STATS</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_DodgeAgainstRanged</StrVal>
+			<Value>20</Value>
+			<Provides>::: +20 Dodge vs Ranged</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL SPECIAL</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockRangedAction</Attribute>
+			<StrVal>BowAttack_Lightning</StrVal>
+			<Provides>::: Lightning Ranged ATK</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>XOTIC</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_IsWizardStaff</StrVal>
+			<Value>1</Value>
+			<Provides>::: Wizard Staff :::
+			::: +1 Initiative
+			::: Applied in Tactical if Wizard</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Nil</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_X_Immersive_2H</Attribute>
+			<Value>3</Value>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Injury_X_Maimed_Hand</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_PathOfTheSorcerer</Attribute>
+			<Value>1</Value>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_BLUNT</AIPrefType>
+			<AIPriority>150</AIPriority>
+		</AIData>
+		<ArtDef>ArtDef_X_Staff_Sorcerer_Weapon</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Staff_Sorcerer2">
+		<DisplayName>Spell Lance</DisplayName>
+		<Description>Only Sorcerers can use this staff. It strikes with incredible magical power.</Description>
+		<Type>Weapon</Type>
+		<Type>Defense</Type>
+		<WeaponType>Spear</WeaponType>
+		<WeaponUpgradeType>Staff</WeaponUpgradeType>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>800</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Pierce</StrVal>
+			<Value>12</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_Immersive_M</StrVal>
+			<Value>-1</Value>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>Only Sorcerers can use this staff. It strikes with incredible magical power.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>CORE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Lightning</StrVal>
+			<Value>20</Value>
+			<Provides>::: +20 Air\Lightning ATK</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>2</Value>
+			<Provides>::: +2 Initiative</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>SPELL POTENCY</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_SpellDamage</StrVal>
+			<Value>25</Value>
+			<Provides>::: +25% Spell DMG</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>STATS</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_DodgeAgainstRanged</StrVal>
+			<Value>20</Value>
+			<Provides>::: +20 Dodge vs Ranged</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>XOTIC</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_IsWizardStaff</StrVal>
+			<Value>1</Value>
+			<Provides>::: Wizard Staff :::
+			::: +1 Initiative
+			::: Applied in Tactical if Wizard</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Unique</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_X_Immersive_2H</Attribute>
+			<Value>3</Value>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Injury_X_Maimed_Hand</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_PathOfTheSorcerer</Attribute>
+			<Value>1</Value>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_BLUNT</AIPrefType>
+			<AIPriority>1100</AIPriority>
+		</AIData>
+		<ArtDef>Staff_Spell_ArtDef</ArtDef>
+	</GameItemType>
+</GameItemTypes>

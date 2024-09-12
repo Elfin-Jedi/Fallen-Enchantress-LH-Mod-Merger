@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Black Market Bazaar by Hellions - supports the custom units found in Additional Faction Traits and Races, Blood and Mana, Children of Storm, Demons and Wizards, Female Henchman & XtraDeconstruct: Legacy of Magic - compatible with Path of the Paladin & Between Life and Death -->
+<GameItemTypes>
+	<GameItemType InternalName="EsotericExposer">
+        <DisplayName>Esoteric Exposer</DisplayName>
+        <Description>Can the brain be attuned to arcane energies? This helmet would be the argument to convince the most stubborn naysayer.</Description>
+        <Type>Head</Type>
+        <CanBeEquipped>1</CanBeEquipped>
+        <ShopValue>300</ShopValue>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Defense_Pierce</StrVal>
+            <Value>2</Value>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_TreasureHunter</StrVal>
+            <Value>20</Value>
+            <Provides>20% chance to find better items from goodie huts</Provides>
+        </GameModifier>        
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+        <Likelihood>20</Likelihood>
+        <RarityDisplay>Uncommon</RarityDisplay>
+		<HeroOnly>1</HeroOnly>		
+            <AIData AIPersonality="AI_General">
+                <AIPriority>26</AIPriority>
+            </AIData>
+        <ArtDef>Art_EsotericExposer</ArtDef>		
+    </GameItemType>
+	<GameItemType InternalName="LeatherVambraces_ArtifactHandlers">
+        <DisplayName>Artifact Handlers</DisplayName>
+        <Description>The tools of trade of ancient curators haunting the museums of yonder, these gloves were also used by unscrupulous graverobbers to find secret treasure chambers.</Description>
+        <Type>Forearms</Type>
+        <CanBeEquipped>1</CanBeEquipped>
+        <ShopValue>300</ShopValue>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Defense_Pierce</StrVal>
+            <Value>1</Value>
+        </GameModifier>
+		 <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_TreasureHunter</StrVal>
+            <Value>20</Value>
+            <Provides>20% chance to find better items from goodie huts</Provides>
+        </GameModifier>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+        <Likelihood>20</Likelihood>
+        <RarityDisplay>Uncommon</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>20</AIPriority>
+            </AIData>
+        <ArtDef>Art_LeatherVambraces_ArtifactHandlers</ArtDef>		
+    </GameItemType>
+	<GameItemType InternalName="Robe_Riches">
+        <DisplayName>Robe of Riches</DisplayName>
+        <Description>These robes will allow you to play "seeker, finder, keeper" with a definite advantage over the other contestants.</Description>
+        <Type>Torso</Type>
+        <Type>Surcoat</Type>
+        <Type>Lowerbody</Type>
+        <CanBeEquipped>1</CanBeEquipped>        
+        <ShopValue>300</ShopValue>        
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Defense_Pierce</StrVal>
+            <Value>6</Value>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_TreasureHunter</StrVal>
+            <Value>20</Value>
+            <Provides>20% chance to find better items from goodie huts</Provides>
+        </GameModifier>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+        <Likelihood>20</Likelihood>
+        <RarityDisplay>Uncommon</RarityDisplay>
+		<HeroOnly>1</HeroOnly>        
+            <AIData AIPersonality="AI_General">
+                <AIPriority>70</AIPriority>
+            </AIData>
+        <ArtDef>Art_Robe_Riches</ArtDef>		
+	</GameItemType>
+    <GameItemType InternalName="TreasureGormandizer">
+        <DisplayName>Treasure Gormandizer</DisplayName>
+        <Description>A strangely glowing sphere which feeds into the inner greed of its owner and heightens the need to unearth lost treasures.</Description>
+        <Type>Accessory</Type>
+        <CanBeEquipped>1</CanBeEquipped>        
+        <ShopValue>300</ShopValue>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_TreasureHunter</StrVal>
+            <Value>25</Value>
+            <Provides>25% chance to find better items from goodie huts</Provides>
+        </GameModifier>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+        <Likelihood>20</Likelihood>
+        <RarityDisplay>Uncommon</RarityDisplay>
+        <HeroOnly>1</HeroOnly>
+        <IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+        <IsUsable>0</IsUsable>
+			<AIData AIPersonality="AI_General">
+                <AIPriority>50</AIPriority>
+            </AIData>
+        <ArtDef>TreasureGormandizer_ArtDef</ArtDef>        
+    </GameItemType>	
+</GameItemTypes>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--Republic Governement: D. Elliot Lamb a.k.a davrovana-->
+<!--XtraDeconstruct 3.0 by Primal-->
+<AbilityBonuses>
+	<AbilityBonus InternalName="Blood_X_Movement1_Republic">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_X_Movement1_Republic">
+			<DisplayName>Legionary</DisplayName>
+			<MinimumLevel>5</MinimumLevel>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_BlackMancer</Attribute>
+			</Prereq>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_R</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_X_Movement1_Rions">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_X_Movement1_Rions">
+			<DisplayName>Legionary</DisplayName>
+			<MinimumLevel>5</MinimumLevel>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Ability_RG_Sions</Attribute>
+			</Prereq>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_ZRG</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_X_Movement2_Republic">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_X_Movement2_Republic">
+			<DisplayName>Quick March</DisplayName>
+			<Description>MOVEMENT
+			::: +1 Tile per Army (+0.14 Movement)</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustArmyStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>0.14</Value>
+				<Provides>::: +1 Tile per Army (+0.14 Movement)</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_X_Movement1_Republic</Attribute>
+			</Prereq>
+			<MinimumLevel>10</MinimumLevel>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_R</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>30</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_X_Movement2_Rions">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_X_Movement2_Rions">
+			<DisplayName>Quick March</DisplayName>
+			<Description>MOVEMENT
+			::: +1 Tile per Army (+0.14 Movement)</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustArmyStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>0.14</Value>
+				<Provides>::: +1 Tile per Army (+0.14 Movement)</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_X_Movement1_Rions</Attribute>
+			</Prereq>
+			<MinimumLevel>10</MinimumLevel>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_ZRG</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>30</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+</AbilityBonuses>

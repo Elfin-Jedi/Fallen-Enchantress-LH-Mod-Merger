@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<UnitTypes>
+	<UnitType InternalName="Elves_Nadarien">
+		<CreatureType>Champion</CreatureType>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-5</Value>
+			<Provides>-5% Unrest in the city this unit is in</Provides>
+		</GameModifier>
+
+		<DisplayName>Nadarien</DisplayName>
+		<Backstory>Nadarien is a famous seer amongst the Elves. Profoundly in tune with the world around her, some Elves even believe she is able to see the future. Although Nadarien herself has never specifically claimed such powers, there is no doubt she is a capable magician.</Backstory>
+		<HasEssence>true</HasEssence>
+		<ModelPath>K_Female_Mesh_01.hkb</ModelPath>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<EyeTexture>gfx\eyes\blinks\Eyeblink_F4_Gray.png</EyeTexture>
+		<AnimationPack>EF_SoldierAnimationPack</AnimationPack>
+		<ShowAsSingleUnit>false</ShowAsSingleUnit>
+		<CutSceneDataPack>ReliasCutscenePack</CutSceneDataPack>
+		<ModelScale>1.0000</ModelScale>
+		<TacticalModelScale>1.5000</TacticalModelScale>
+		<EquipmentScale>1.0000</EquipmentScale>
+		<ClothMapScale>1.6</ClothMapScale>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<MovementType>land</MovementType>
+		<BobbingFrequency>0.0000</BobbingFrequency>
+		<ClothPoseIndex>18</ClothPoseIndex>
+		<InfoCardBackground>BG27_CastlePlains</InfoCardBackground>
+		<InfoCardBackgroundFlipped>1</InfoCardBackgroundFlipped>
+		<CanBeDesigned>0</CanBeDesigned>
+		<!-- -->
+		<Allegiance>Kingdom</Allegiance>
+		<Unique>1</Unique>
+		<IsNPC>1</IsNPC>
+		<NPCSpawnLikelihood>100</NPCSpawnLikelihood>
+		<IsChampion>1</IsChampion>
+		<Gender>Female</Gender>
+		<SoundPack>SoundPack_Generic_Female</SoundPack>
+		<SpawnRating>1</SpawnRating>
+
+		<Quote>All things in balance and unity.</Quote>
+		<NPCRecruitmentText>%d is the amount you will pay me.</NPCRecruitmentText>
+		<SelectedAbilityBonusOption>Blood_Elves</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Fire1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Earth1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>NadariensCoscinsc</SelectedAbilityBonusOption>
+		<Medallions InternalName=""/>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_BG_IsHumanoid>1.0000</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsKingdom>1.0000</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsFemale>1.0000</UnitStat_BG_IsFemale>
+			<UnitStat_BG_IsRace_Elves>1.0000</UnitStat_BG_IsRace_Elves>
+			<UnitStat_BG_IsChampion>1.0000</UnitStat_BG_IsChampion>
+			<UnitStat_CombatSpeed>22.0000</UnitStat_CombatSpeed>
+			<UnitStat_BG_IsImmortal>1</UnitStat_BG_IsImmortal>
+			<UnitStat_HitPoints>20.0000</UnitStat_HitPoints>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+		</LevelMilestone>
+		<Equipment>Ladies_Cape_ID1</Equipment>
+		<Equipment>Elf_Angel_K_Female_Head_01</Equipment>
+		<Equipment>Sovereign_Shoulder_Length_Hair</Equipment>
+		<Equipment>Noble_Shirt_ID1</Equipment>
+		<Equipment>Country_Corset_ID1</Equipment>
+		<Equipment>Basic_Skirt_ID1</Equipment>
+		<Equipment>SnakeSkinBoots</Equipment>
+		<AutoCreateEquipment>Staff_War</AutoCreateEquipment>
+		<Color_Skin>252,191,127,255</Color_Skin>
+		<Color_Hair>218,183,93,255</Color_Hair>
+		<Color_Clothing1>62,91,60,255</Color_Clothing1>
+		<Color_Clothing2>99,63,30,255</Color_Clothing2>
+		<Color_Metal>150,155,135,255</Color_Metal>
+		<Texture_Skin>CPELF_skin2f.png</Texture_Skin>
+		<Texture_Eyes>gfx\eyes\blinks\eyeblink_f3_hazel.png</Texture_Eyes>
+		<UnitModelType>ElfFemale</UnitModelType>
+		<NPCFreeRecruit>0</NPCFreeRecruit>
+		<RaceType>Race_Type_Elves</RaceType>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<WageOverride>1</WageOverride>
+	</UnitType>
+	<AbilityBonus InternalName="NadariensCoscinsc">
+		<AbilityBonusOption InternalName="NadariensCoscinsc">
+			<DisplayName>Nadarien's Consciousness</DisplayName>
+			<Description>Produces 1 Mana per turn. Enchantments on Nadarien cost 30% less mana maintenance.</Description>
+			<Icon>Ability_FleshBoundTome_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>ProduceResource</Attribute>
+				<StrVal>Mana</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Mana per turn</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_EnchantmentMaintenanceMultiplier</StrVal>
+				<Provides>Enchantments on Nadarien cost 30% less mana maintenance.</Provides>
+				<Value>-0.3</Value>
+			</GameModifier>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>0</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+</UnitTypes>

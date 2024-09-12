@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<AbilityBonuses>
+	<AbilityBonus InternalName="Ability_X_Bard_Recruitment1">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Ability_X_Bard_Recruitment1">
+			<DisplayName>Negotiator</DisplayName>
+			<Description>RECRUITMENT
+			::: -20% Cost in Champion Camps</Description>
+			<Icon>Ability_Diplomatic_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>7</PerkTreePosY>
+			<MinimumLevel>7</MinimumLevel>
+			<GameModifier>
+				<Provides>RECRUITMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Recruiting</StrVal>
+				<Value>-20.0</Value>
+				<Provides>::: -20% Cost in Champion Camps</Provides>
+			</GameModifier>
+			<Type>Army</Type>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Ability_X_Bard_CommanderHammer</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>0</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Champion_Weakness">
+		<AbilityBonusType>Champion_Talent</AbilityBonusType>
+		<AbilityBonusOption InternalName="Weakness_X_Blunt">
+			<DisplayName>Blunt</DisplayName>
+			<Description>Recruitment ::: +250% Cost in Champion Camps</Description>
+			<GameModifier>
+				<Provides>RECRUITMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Recruiting</StrVal>
+				<Value>250</Value>
+				<Provides>::: +250% Cost in Champion Camps</Provides>
+			</GameModifier>
+			<Cost>-1</Cost>
+			<Icon>Weakness_X_Blunt.png</Icon>
+			<Type>Weakness</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Talent_X_Bard">
+		<AbilityBonusType>Champion_Talent</AbilityBonusType>
+		<AbilityBonusOption InternalName="Talent_X_Bard">
+			<DisplayName>Bard</DisplayName>
+			<Description>Recruitment ::: -66% Cost in Champion Camps</Description>
+			<GameModifier>
+				<Provides>RECRUITMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Recruiting</StrVal>
+				<Value>-66.0</Value>
+				<Provides>::: -66% Cost in Champion Camps</Provides>
+			</GameModifier>
+			<Cost>1</Cost>
+			<Icon>Ability_Bard_Icon.png</Icon>
+			<Type>X_Talent</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+</AbilityBonuses>

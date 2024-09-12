@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<ImprovementTypes>
+	<ImprovementType InternalName="Produce_X_Corpses1">
+		<DisplayName>Produce Corpses I</DisplayName>
+		<Description>Gathering Corpses from battlefields increases growth in your city and is done instead of training units or constructing buildings.</Description>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>DLC04_UndeadFaction</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Administration</Attribute>
+		</Prereq>
+		<LaborToBuild>-1</LaborToBuild>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Prestige</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<ApplyDuringConstruction>1</ApplyDuringConstruction>
+			<Provides>+1 Growth</Provides>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>2</AIPriority>
+			<AITag>Prestige</AITag>
+		</AIData>
+		<ArtDef>Produce_X_Corpses1_ArtDef</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="Produce_X_Corpses2">
+		<DisplayName>Produce Corpses II</DisplayName>
+		<Description>Gathering Corpses from battlefields increases growth in your city and is done instead of training units or constructing buildings.</Description>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>DLC04_UndeadFaction</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Education</Attribute>
+		</Prereq>
+		<RequiresCityImprovement>1</RequiresCityImprovement>
+		<RequiredImprovement>TradeGuild</RequiredImprovement>
+		<LaborToBuild>-1</LaborToBuild>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Prestige</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<ApplyDuringConstruction>1</ApplyDuringConstruction>
+			<Provides>+1 Growth</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ResourceMultiplier</ModType>
+			<Attribute>Prestige</Attribute>
+			<Value>1.5</Value>
+			<PerTurn>1</PerTurn>
+			<ApplyDuringConstruction>1</ApplyDuringConstruction>
+			<Provides>+50% Growth</Provides>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>2</AIPriority>
+			<AITag>Prestige</AITag>
+		</AIData>
+		<ArtDef>Produce_X_Corpses2_ArtDef</ArtDef>
+	</ImprovementType>
+</ImprovementTypes>

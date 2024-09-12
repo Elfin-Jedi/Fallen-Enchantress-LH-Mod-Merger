@@ -1,0 +1,206 @@
+<UnitTypes>
+	
+	<UnitType InternalName="Prince_Anttacius">
+		<DisplayName>Prince Anttacius</DisplayName>
+		<Backstory>The son of a wealthy lord Anttacius has displayed signs of genius his entire life. This led him to be spoiled and sheltered as a child. However his father pushed Anttacius hard and he soon became a formidable leader in his own right. Despite he young age Anttacius quickly rose to power and became the dominant prince in Handura. His genius for trade and politics allows him to openly or secretly control everything that goes on in Handura. The current troubled times have led the princes of Hundura to grant him more and more power.</Backstory>
+		<HasEssence>true</HasEssence>
+		<ModelPath>Gfx\HKB\Units\K_Male_Mesh_01.hkb</ModelPath>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<EyeTexture>gfx\eyes\blinks\eyeblink_m4_blue.png</EyeTexture>
+		<AnimationPack>KulanAnimationPack</AnimationPack>
+		<ShowAsSingleUnit>false</ShowAsSingleUnit>
+		<CutSceneDataPack>AnttCutscenePack</CutSceneDataPack>
+		<ModelScale>1.0000</ModelScale>
+		<TacticalModelScale>1.5000</TacticalModelScale>
+		<EquipmentScale>1.0000</EquipmentScale>
+		<ClothMapScale>1.6000</ClothMapScale>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<MovementType>land</MovementType>
+		<BobbingFrequency>0.0000</BobbingFrequency>
+		<ClothPoseIndex>2</ClothPoseIndex>
+		<InfoCardBackground>BG12_Day</InfoCardBackground>
+		<InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+		<CanBeDesigned>0</CanBeDesigned>
+		<UserDesigned>true</UserDesigned>
+		<IsModDependent>true</IsModDependent>
+        <Medallions InternalName="">
+            <All>F_Antt_Card.png</All>
+        </Medallions>		
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<LevelMilestone InternalName="">
+			<Level>1</Level>
+            <UnitStat_Accuracy>80</UnitStat_Accuracy>
+            <UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
+            <UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+            <UnitStat_HitPoints>20</UnitStat_HitPoints>			
+			<UnitStat_BG_IsRace_Mundura>1</UnitStat_BG_IsRace_Mundura>
+			<UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsSovereign>1</UnitStat_BG_IsSovereign>
+			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
+			<UnitStat_BG_IsMale>1</UnitStat_BG_IsMale>		
+		</LevelMilestone>
+		<Equipment>K_Male_Head_03</Equipment>
+		<Equipment>Sovereign_Warrior_Shirt_Pleated_White</Equipment>
+		<Equipment>Basic_Boots</Equipment>
+		<Equipment>Noblemans_Pants_ID2</Equipment>
+		<Equipment>Sovereign_Fez_Hair_ID2</Equipment>
+		<Equipment>Warrior_Surcoat_ID2</Equipment>
+		<AutoCreateEquipment>Staff_War</AutoCreateEquipment>
+		<Color_Skin>250,199,148,255</Color_Skin>
+		<Color_Hair>171,117,99,255</Color_Hair>
+		<Color_Clothing1>255,255,255,255</Color_Clothing1>
+		<Color_Clothing2>30,66,99,255</Color_Clothing2>
+		<Color_Metal>128,128,128,255</Color_Metal>
+		<Texture_Skin>K_Male_Freckles_Texture_01.png</Texture_Skin>
+		<Texture_Eyes>gfx\eyes\blinks\eyeblink_m4_blue.png</Texture_Eyes>
+		<Gender>Male</Gender>
+		<UnitModelType>MunduraMale</UnitModelType>
+        <AIMilitaryStrategy>MobileWarfare</AIMilitaryStrategy>
+		<PossibleAITrait>Builder</PossibleAITrait>
+        <PossibleAITrait>Aggressive</PossibleAITrait>
+        <PossibleAITrait>Proud</PossibleAITrait>
+        <PossibleAITrait>Expansionist</PossibleAITrait>
+        <PossibleAITrait>Militaristic</PossibleAITrait>
+		<SelectedAbilityBonusOption>Blood_Mundura</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Noble</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Life1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Water1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Wealthy</SelectedAbilityBonusOption>	
+		<SelectedAbilityBonusOption>Brilliant</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Cowardly</SelectedAbilityBonusOption>	
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Unrest</Attribute>
+            <Value>-10</Value>
+            <Provides>-10% Unrest in the city this unit is in</Provides>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Map</ModType>
+            <Attribute>SummonUnit</Attribute>
+            <Value>1</Value>
+            <Multiplier>3</Multiplier>
+            <UnitClass>Unit_Horsemen_Mundura</UnitClass>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Map</ModType>
+            <Attribute>SummonUnit</Attribute>
+            <Value>1</Value>
+            <Multiplier>3</Multiplier>
+            <UnitClass>Unit_Militia_Mundura</UnitClass>
+        </GameModifier>
+		<IsSovereign>1</IsSovereign>
+		<FactionToLead>CustomFaction_Hundura</FactionToLead>
+		<HasWages>0</HasWages>
+		<NPCFreeRecruit>0</NPCFreeRecruit>
+		<RaceType>Race_Type_Mundura</RaceType>
+		<IgnoreItemTrainingCosts>false</IgnoreItemTrainingCosts>
+		<AdditionalTrainingTurns>0.0000</AdditionalTrainingTurns>
+		<WageOverride>0.0000</WageOverride>
+		<UnitTypeVersion>1</UnitTypeVersion>
+		<TileRadius>0</TileRadius>
+		<GetPerksOnLevelUp>0</GetPerksOnLevelUp>
+		<DividesBattleExp>1</DividesBattleExp>
+		<CanSqueeze>0</CanSqueeze>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<AllowGrouping>true</AllowGrouping>
+		<SoundPack>SoundPack_Generic_Male</SoundPack>
+		<IsChampion>0</IsChampion>
+	</UnitType>	
+	
+	<UnitType InternalName="MissEmellien">
+		<DisplayName>Mistress Emellien</DisplayName>
+        <UnitDisplayName>Mistress Emellien</UnitDisplayName>
+        <Class>Sovereign</Class>
+        <Allegiance>Empire</Allegiance>
+        <CreatureType>Champion</CreatureType>
+        <RaceType>Race_Type_Hashaini</RaceType>
+        <Unique>1</Unique>
+        <CanBeDesigned>0</CanBeDesigned>
+        <FactionToLead>CustomFaction_Hashaini</FactionToLead>
+        <Gender>Female</Gender>
+        <HasWages>0</HasWages>
+        <IsSovereign>1</IsSovereign>
+        <HasEssence>1</HasEssence>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Unrest</Attribute>
+            <Value>-10</Value>
+            <Provides>-10% Unrest in the city this unit is in</Provides>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Map</ModType>
+            <Attribute>SummonUnit</Attribute>
+            <Value>1</Value>
+            <Multiplier>3</Multiplier>
+            <UnitClass>Unit_Spearman_Hashaini</UnitClass>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Map</ModType>
+            <Attribute>SummonUnit</Attribute>
+            <Value>1</Value>
+            <Multiplier>3</Multiplier>
+            <UnitClass>Unit_Peasant_Hashaini</UnitClass>
+        </GameModifier>
+        <LevelMilestone InternalName="L1">
+            <Level>1</Level>
+            <UnitStat_Accuracy>80</UnitStat_Accuracy>
+            <UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
+            <UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+            <UnitStat_HitPoints>20</UnitStat_HitPoints>
+			<UnitStat_BG_IsRace_Hashaini>1</UnitStat_BG_IsRace_Hashaini>		
+			<UnitStat_BG_IsEmpire>1</UnitStat_BG_IsEmpire>
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsSovereign>1</UnitStat_BG_IsSovereign>
+			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
+			<UnitStat_BG_IsFemale>1</UnitStat_BG_IsFemale>			
+        </LevelMilestone>
+		<SelectedAbilityBonusOption>Blood_Hashaini</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>BanditLord</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Air1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Death1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Impulsive</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Tactician</SelectedAbilityBonusOption>
+		<AutoCreateEquipment>Shortsword_Crude</AutoCreateEquipment>
+		<Equipment>K_Female_Head_04</Equipment>
+		<Equipment>F_Mohawk_Hair_Mesh_01</Equipment>
+		<Equipment>Shortsleeve_Empire_Shirt_Female</Equipment>
+		<Equipment>Female_Umber_Vest_ID2</Equipment>
+		<Equipment>Empire_Female_Leather_Gloves_Dark</Equipment>
+		<Equipment>HighTopBoots_ID2</Equipment>
+		<Backstory>As a child Emllien survived alone on the streets as a beggar and worse. One day in a random purge of the city slums she was arrested and exiled from her home city. She would have died in the wilderness if the Hashaini had not taken her in. She quickly learned everything they taught her, including the importance of veangence. One day she entered her old home in disguise and killed everyone she believed had wronged her. After that few challenged her rise to leadership amongst the Hashaini.</Backstory>
+		<LorebookIntroText>As a child Emllien survived alone on the streets as a beggar and worse. One day in a random purge of the city slums she was arrested and exiled from her home city. She would have died in the wilderness if the Hashaini had not taken her in. She quickly learned everything they taught her, including the importance of veangence. One day she entered her old home in disguise and killed everyone she believed had wronged her. After that few challenged her rise to leadership amongst the Hashaini.</LorebookIntroText>	
+		<AIMilitaryStrategy>Swordsman</AIMilitaryStrategy>
+        <PossibleAITrait>Manipulator</PossibleAITrait>
+        <PossibleAITrait>Aggressive</PossibleAITrait>
+        <PossibleAITrait>Greedy</PossibleAITrait>	
+		<UserDesigned>true</UserDesigned>
+		<IsModDependent>true</IsModDependent>
+        <Medallions InternalName="">
+            <All>F_Miss_Card.png</All>
+        </Medallions>
+		<AnimationPack>BanditAnimationPack</AnimationPack>
+        <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+        <ClothMapScale>1.6</ClothMapScale>
+        <ClothPoseIndex>32</ClothPoseIndex>
+		<Color_Skin>202,138,82,255</Color_Skin>
+		<Color_Hair>89,58,30,255</Color_Hair>
+		<Color_Clothing1>33,15,5,255</Color_Clothing1>
+		<Color_Clothing2>50,50,50,255</Color_Clothing2>
+		<Color_Metal>128,128,128,255</Color_Metal>
+		<CutSceneDataPack>Emer_CutscenePack</CutSceneDataPack>
+		<InfoCardBackground>BG_BarrenForest</InfoCardBackground>
+        <InfoCardBackgroundFlipped>1</InfoCardBackgroundFlipped>
+        <ModelPath>Gfx\HKB\Units\K_Female_Mesh_01.hkb</ModelPath>
+        <ModelScale>1</ModelScale>
+        <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+        <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+        <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+        <SoundPack>SoundPack_Generic_Female</SoundPack>
+        <TacticalModelScale>1.5</TacticalModelScale>
+		<Texture_Skin>NewTarthGirlSkin.png</Texture_Skin>
+		<Texture_Eyes>gfx\eyes\blinks\eyeblink_f3_hazel.png</Texture_Eyes>
+        <UnitModelType>HashainiFemale</UnitModelType>
+    </UnitType>
+	
+</UnitTypes>

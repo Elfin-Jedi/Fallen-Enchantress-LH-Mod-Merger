@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<AbilityBonuses>	
+	
+	<ContainerPathAssassinBlockDefaultAbilities>
+		<AbilityBonus InternalName="Executioner1Ability">
+			<AbilityBonusOption InternalName="Executioner1">
+				<PerkTreePosX>-1</PerkTreePosX>
+				<PerkTreePosY>-1</PerkTreePosY>
+				<Prereq>
+					<Type>Allegiance</Type>
+					<Attribute>Blocked</Attribute>
+				</Prereq>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>Blocked</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>0</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="Executioner2Ability">
+			<AbilityBonusOption InternalName="Executioner2">
+				<PerkTreePosX>-1</PerkTreePosX>
+				<PerkTreePosY>-1</PerkTreePosY>
+				<Prereq>
+					<Type>Allegiance</Type>
+					<Attribute>Blocked</Attribute>
+				</Prereq>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>Blocked</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>0</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>		
+		<AbilityBonus InternalName="RainOfArrowsAbility">
+			<AbilityBonusOption InternalName="RainOfArrows">
+				<PerkTreePosX>-1</PerkTreePosX>
+				<PerkTreePosY>-1</PerkTreePosY>
+				<Prereq>
+					<Type>Allegiance</Type>
+					<Attribute>Blocked</Attribute>
+				</Prereq>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>Blocked</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>0</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+	</ContainerPathAssassinBlockDefaultAbilities>
+		
+	<ContainerPathAssassinAbilities>
+		<AbilityBonus InternalName="JB_Spell_BolasAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Spell_Bolas">
+				<DisplayName>Bolas</DisplayName>
+				<Description>Allows the unit to use the Throw Bola ability</Description>
+				<Icon>JB_Ability_Bolas_Icon.png</Icon>
+				<PerkTreePosX>0</PerkTreePosX>
+				<PerkTreePosY>2</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>UnlockCombatAbility</Attribute>
+					<StrVal>JB_Bolas_Ability</StrVal>
+					<Provides>Target unit is knocked prone for 2 rounds</Provides>
+				</GameModifier>
+				<Type>Ability</Type>
+				<CombatRating>10</CombatRating>
+				<IsCombatAbility>1</IsCombatAbility>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>PathOfTheAssassin</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="JB_Spell_SmokeBombAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Spell_SmokeBomb">
+				<DisplayName>Smoke Bomb</DisplayName>
+				<Description>All units within 1 tile radius of the target tile are +25 Dodge, -25 Accuracy for 3 turns</Description>
+				<Icon>JB_Ability_SmokeBombs_Icon.png</Icon>
+				<PerkTreePosX>1</PerkTreePosX>
+				<PerkTreePosY>1</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>UnlockCombatAbility</Attribute>
+					<StrVal>JB_SmokeBomb_Ability</StrVal>
+					<Provides>All Units within 1 tile radius of the target tile are +20 Dodge, -20 Accuracy for 3 turns</Provides>
+				</GameModifier>
+				<Type>Ability</Type>
+				<CombatRating>10</CombatRating>
+				<IsCombatAbility>1</IsCombatAbility>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Spell_Bolas</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="JB_ExecutionerAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Executioner">
+				<DisplayName>Executioner</DisplayName>
+				<Description>+1 Attack per level vs Champions</Description>
+				<Icon>JB_Ability_Executioner_Icon.png</Icon>
+				<PerkTreePosX>3</PerkTreePosX>
+				<PerkTreePosY>1</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_Attack_Boost</StrVal>
+					<StrVal2>Champion</StrVal2>
+					<Value>1</Value>
+					<PerLevel>1</PerLevel>
+					<Provides>+1 Attack per level vs Champions</Provides>
+					<vsUnitType>1</vsUnitType>
+				</GameModifier>
+				<Type>Aggressive</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>VitalStrike2</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="JB_Spell_TumbleAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Spell_Tumble">
+				<DisplayName>Tumble</DisplayName>
+				<Description>Move to an adjacent unoccupied square, unit receives +40 dodge bonus until next turn</Description>
+				<Icon>JB_Ability_Tumble_Icon.png</Icon>
+				<PerkTreePosX>3</PerkTreePosX>
+				<PerkTreePosY>11</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>UnlockCombatAbility</Attribute>
+					<StrVal>JB_Tumble_Ability</StrVal>
+					<Provides>Move to an adjacent unoccupied square, unit receives +40 dodge bonus until next turn</Provides>
+				</GameModifier>
+				<Type>Ability</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>Acrobat_Level</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="JB_Spell_SidestepAbility_Level">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Spell_Sidestep_Level">
+				<DisplayName>Side Step</DisplayName>
+				<Description>Move to an adjacent unoccupied square and take 1 further action immediately.  Grants +10 Dodge until subsequent turn.</Description>
+				<Icon>JB_Ability_Sidestep_Icon.png</Icon>
+				<PerkTreePosX>4</PerkTreePosX>
+				<PerkTreePosY>12</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>UnlockCombatAbility</Attribute>
+					<StrVal>JB_Sidestep_Ability</StrVal>
+					<Provides>Move to an adjacent unoccupied square and take 1 further action immediately.  Grants +10 Dodge until subsequent turn.</Provides>
+				</GameModifier>
+				<Type>Ability</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Spell_Tumble</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<!-- Modify Hobble -->
+		<AbilityBonus InternalName="HobbleAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="Hobble">
+				<PerkTreePosX>4</PerkTreePosX>
+				<PerkTreePosY>1</PerkTreePosY>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>VitalStrike3</Attribute>
+				</Prereq>
+			</AbilityBonusOption>
+		</AbilityBonus>		
+		<AbilityBonus InternalName="JB_MarkAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Mark">
+				<DisplayName>Death Mark</DisplayName>
+				<Description>+25% Attack vs a Marked unit</Description>
+				<Icon>JB_Ability_Mark_Icon.png</Icon>
+				<PerkTreePosX>4</PerkTreePosX>
+				<PerkTreePosY>4</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>UnlockCombatAbility</Attribute>
+					<StrVal>JB_SetMark_Ability</StrVal>
+					<Provides>Allows the unit to set a Mark</Provides>
+				</GameModifier>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_Attack_Boost</StrVal>
+					<StrVal2>UnitStat_JB_IsMarked</StrVal2>
+					<Multiplier>1.25</Multiplier>
+					<Provides>+25% Attack vs a Marked unit unless user is also Marked</Provides>
+					<vsHigher>1</vsHigher>
+				</GameModifier>	
+				<CombatRating>10</CombatRating>
+				<IsCombatAbility>1</IsCombatAbility>
+				<Type>Ability</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>VitalStrike3</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>		
+		<AbilityBonus InternalName="JB_ImmuneToSwarmAbility_Assassin">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_ImmuneToSwarm_Assassin">
+				<DisplayName>Immune to Swarm</DisplayName>
+				<Description>Immune to Swarm</Description>
+				<Icon>Ability_ImmuneToCriticals_Icon.png</Icon>
+				<PerkTreePosX>6</PerkTreePosX>
+				<PerkTreePosY>5</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>ImmuneToSwarm</Attribute>
+					<Provides>Immune to Swarm</Provides>
+				</GameModifier>
+				<CombatRating>10</CombatRating>
+				<IsCombatAbility>1</IsCombatAbility>
+				<Type>Defensive</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>Spell_ShadowShift</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>		
+		<AbilityBonus InternalName="JB_SneakAttackAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_SneakAttack">
+				<DisplayName>Sneak Attack</DisplayName>
+				<Description>Unit makes an attack against a random enemy before combat begins</Description>
+				<Icon>JB_Ability_SneakAttack_Icon.png</Icon>
+				<PerkTreePosX>6</PerkTreePosX>
+				<PerkTreePosY>11</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>BattleAutoCastSpell</Attribute>
+					<StrVal>JB_SneakAttack_Ability</StrVal>
+					<Value>100</Value>
+					<Provides>Unit makes an attack against a random enemy before combat begins</Provides>
+				</GameModifier>
+				<CombatRating>25</CombatRating>
+				<Type>Ability</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>Charge_Level</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+	</ContainerPathAssassinAbilities>
+
+	
+</AbilityBonuses>
+		

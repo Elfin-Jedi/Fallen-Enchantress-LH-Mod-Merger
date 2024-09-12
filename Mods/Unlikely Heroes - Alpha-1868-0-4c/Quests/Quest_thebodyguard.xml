@@ -1,0 +1,123 @@
+<QuestDef InternalName="Quest_Thebodyguard">
+        <DisplayName>The Body Guard</DisplayName>
+        <Description>You take a seat at the first open table and you overhear the occupants of the next table celebrating.  You edge slightly closer to be able to listen in.
+		
+		"Well boys, another job well done!"  The mugs clank together in agreement and the speaker continues, "I know some of you don't like this kinda work, and honestly sometimes I'm not so sure of it either, but in these times we need to provide whatever we can for our families."  Nods of acceptance go around the table and another voice speaks up, "Look, its a shame what's going to happen to those boys but we have a pretty good deal here and I for one am not going to take it for granted."  He continues, "We all know the twisted aren't the ideal trading partners, but this deal puts food in my kid's bellies and thats all that matters."  
+		
+		As another muted agreement starts to form, you quickly interrupt.  "What is this, I'm hearing about a deal with a twisted?"  "Mind your own business!" comes a quick retort from the original speaker.  You unsheath your weapon and reply back "This land is my business."
+		
+		The table, seemingly, doesn't have a real fighter among them and the flash of your weapon quickly sedates the group.  When you are confident none of them are about to pull any funny business you continue, "So explain to me this deal..."
+		
+		They tell you of their unholy deal with the butchermen that haunt the area.  This group has carved out a living by setting up naive travellers into crossing their paths, and then looting the corpses after.  The butchermen have no interest in the worldly possessions so its a risk free venture.
+		
+		You keep your face expressionless and ask for the details of their most recent encounter.  You are told of a man and a boy that just left the inn and if you were to hurry you might be able to catch them in time.
+		</Description>
+        <IsStartingPointQuest>1</IsStartingPointQuest>
+        <ShortTextAccept>"Hurry up and tell me where they are heading!"</ShortTextAccept>
+        <ShortTextDeny>"Well thats a pretty good scheme you boys have.  Carry on."</ShortTextDeny>
+		<SuccessText>Boldin has joined your party</SuccessText>
+        <RewardText>??</RewardText>
+        <RewardImage>Gold_Large1.png</RewardImage>
+        <SuccessText></SuccessText>
+        <QuestClass>Minor</QuestClass>
+        <Repeatable>0</Repeatable>
+        <TriggerType>QuestLocation</TriggerType>
+        <TriggerOrigin>EventLocation</TriggerOrigin>
+        <SpawnRating>1</SpawnRating>
+        <Image>Q_ImpoverishedLord.png</Image>
+        <PrefQuestLoc>QuestLoc_Inn1</PrefQuestLoc>
+		<Treasure>
+			<GameModifier InternalName="Reward2">
+				<ModType>Unit</ModType>
+				<Attribute>UnitJoinArmy</Attribute>
+				<Value>1</Value>
+				<StrVal>Champion_Boldin</StrVal>
+				<UnitClass>Champion</UnitClass>
+			</GameModifier>
+  		</Treasure>
+        <QuestObjectiveDef>
+            <ObjectiveID>0</ObjectiveID>
+            <NextObjectiveID>1</NextObjectiveID>
+            <Description>Stop the ambush</Description>
+            <Treasure>
+                <GameModifier>
+					<ModType>Map</ModType>
+					<Attribute>CreateGoodieHut</Attribute>
+					<StrVal>Ambush</StrVal>
+					<UnitClass>GH_Quest_Battlefield</UnitClass>
+					<Radius>2</Radius>
+				</GameModifier>
+            </Treasure>
+            <QuestConditionDef>
+                <Objective>
+                    <Icon>Mana_32.png</Icon>
+                    <Text>Stop the ambush</Text>
+                    <IsOptional>0</IsOptional>
+                </Objective>
+                <Class>Success</Class>
+                <Type>ClearGoodieHut</Type>
+                <TextData>GH_Quest_Battlefield</TextData>
+                <Flag>RevealTarget</Flag>
+            </QuestConditionDef>
+			<ChoiceText>As you approach you hear the sounds of a desperate battle.  3 Butchermen are all converging on a man with a shield.  Huddled behind him is a boy, no older than 6.  
+			
+			The rage filled butchermen slowly but surely gain ground on the lone defender, stumbling him back with every blow.  The fear in the boy is coming out as choked whines as you race to help this pair in distress.  You close the gap quickly, but before you get a chance to do anything a powerful blow simultaneously knocks the defender back and causes the boy to wince and curl up at his feet.  The blowback leads him to fall backwards over the boy, and before the man can right himself, or before you can intervene the butchermen are on the boy.  His screams pierce the air, but knowing he is now lost, you focus on revenging the dying boy.</ChoiceText>
+			<ChoiceMedallion>B_Highwayman_Card_01.png</ChoiceMedallion>
+            <ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>Attack!</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Encounter>
+					<Liklihood>100</Liklihood>
+					<BattleIdentifier>Boldinambush</BattleIdentifier>
+					<WillRespawn>0</WillRespawn>
+					<WanderingRadius>0</WanderingRadius>
+					<UnitInstance>
+						<UnitType>Butcherman</UnitType>
+						<Level>1</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>Butcherman</UnitType>
+						<Level>1</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>Butcherman</UnitType>
+						<Level>1</Level>
+					</UnitInstance>
+				</Encounter>
+			</QuestChoiceDef>
+        </QuestObjectiveDef>
+        <QuestObjectiveDef>
+            <ObjectiveID>1</ObjectiveID>
+            <NextObjectiveID>2</NextObjectiveID>
+            <PopupObjectiveMsg>0</PopupObjectiveMsg>
+            <QuestConditionDef>
+                <Objective>
+                    <Icon>Mana_32.png</Icon>
+                    <Text>Stop the ambush</Text>
+                    <IsOptional>0</IsOptional>
+                </Objective>
+                <Class>Success</Class>
+                <Type>BattleFinished</Type>
+                <TextData>Boldinambush</TextData>
+                <MoreTextData>Victory</MoreTextData>
+				<CompletionText>After the last of the Butchermen fall you get the chance to return your attentions to the victims.  Weeping over the boy's corpse, with his limp head sitting in his lap, the man looks near inconsolable.  After some time of silence, you approach the man and offer your condolensces on the loss of his son.
+				
+				"This isn't my son!" he growls at you.  Without knowing how to answer you sit in silence and wait for him to continue.  "This isn't my son" he repeats, "but he was under my care.  How could I let this happen?"  The grief mixes with rage and for another few moments you allow his tears to flow freely.
+				
+				After he settles down a bit you explain what happened at the inn.  This immediately refocuses him as the thought of revenge is firing through his body.  You agree to accompany him there but are afraid of what will happen when he gets there.
+				
+				Luckily when you arrive at the inn, the group who set him up is no longer there.  This sets him off on a new path of rage and he flips the first table he sees.  Before trouble can escalate you corral him around the neck and drag him outside.  As the clear air hits him, he collapses on the ground, all indignation stamped out of him.
+				
+				"Now what?" he looks up at you and pleads.  "I have failed in my duty and I can't possibly go back there."
+				
+				You aren't sure where he is referring to, but you see an opportunity.  "Well I can sure use you at my side."
+				
+				Sarcastically he responds "Why so I can let you die as well?"
+				
+				"I saw how that played out and you did everything you could.  You were set up and there was some bad luck, but your fighting skills are impressive. Come protect me like you did that boy and I will feel immortal."
+				
+				Allthough you aren't sure if your words did the trick, or he just had no better place to be, the man, Boldin, agrees to join you.</CompletionText>
+            </QuestConditionDef>
+        </QuestObjectiveDef>
+    </QuestDef>

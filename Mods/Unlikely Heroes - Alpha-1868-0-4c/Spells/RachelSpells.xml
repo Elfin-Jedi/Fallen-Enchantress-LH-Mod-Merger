@@ -1,0 +1,223 @@
+<Spells>
+    <DataChecksum NoParse="1">
+        <Ignore>DisplayName</Ignore>
+        <Translate>DisplayName</Translate>
+    </DataChecksum>
+	<SpellDef InternalName="CleansingRain">
+		<DisplayName>Cleansing Rain</DisplayName>
+		<Description>Heals all Allies in combat and gives temporary resistance to Poison. Costs 5 crystals.</Description>
+		<FormattedDescription>Heals %d hit points and +50%% to Poison Resist to all allies.  Burns 5 Crystals. </FormattedDescription>
+		<Image>T_Heal_Painting.png</Image>
+		<IconFG>Ability_Attunement_Icon.png</IconFG>
+		<IconColor>32,45,243</IconColor>
+		<Cooldown>5</Cooldown>
+		<CastTime>1</CastTime>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Heal</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Heal</SpellSubClass>
+		<SpellTargetType>AllFriendlyUnits</SpellTargetType>
+		<UnitAppSpecifier>ApplyToAll</UnitAppSpecifier>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<IsCastable>0</IsCastable>
+		<IsSpecialAbility>1</IsSpecialAbility>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_Level</Attribute>
+			<Value>7</Value>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>RefinedCrystal</Resource>
+			<Amount>5</Amount>
+		</SpellResourceCost>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel] * 1]]></Expression>
+			</Calculate>
+            <Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Calc] * [UnitStat_BonusHealing]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc2]]]></Expression>
+            </Calculate>
+           <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Calc2]]]></Expression>
+            </Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ResistPoison</StrVal>
+			<Duration>3<Duration>
+			<Value>50</Value>
+			<Provides>+50% Poison Resistance</Provides>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>10</AIPriority>
+		</AIData>
+       <HitSoundFX>Spell_Wellspring_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>T_Heal_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>.75</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="CrystalBlast">
+		<DisplayName>Crystal Blast</DisplayName>
+		<Description>A blast of energy that does damage 3x per caster level.  The effort leaves the caster too tired to act for the next 2 turns. Costs 3 crystals.</Description>
+		<FormattedDescription>Blasts enemy for %d damage. Costs 3 crystals. You are stunned for 2 turns.</FormattedDescription>
+		<Image>T_ManaBlast_Painting.png</Image>
+		<IconFG>T_ManaBlast_Icon.png</IconFG>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<IsResistable>1</IsResistable>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_Level</Attribute>
+			<Value>10</Value>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>RefinedCrystal</Resource>
+			<Amount>3</Amount>
+		</SpellResourceCost>
+		<Cooldown>5</Cooldown>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel] * 3]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc] * -1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<IsForSpellResist>1</IsForSpellResist>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel] * 1.5]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc] * -1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>TacticalUnit</ModType>
+			<Attribute>ChanceToLoseNextTurn</Attribute>
+			<ApplyToCaster>1</ApplyToCaster>
+			<DisplayName>Dazed</DisplayName>
+			<!-- Duration doesn't seem to be lasting 2 turns? -->
+			<Duration>2</Duration>
+			<Effect>E_Daze_Particle</Effect>
+			<Value>100</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+		</AIData>
+		<HitSoundFX>Spell_ManaBlastImpact_01</HitSoundFX>
+		<SpellCastSoundFX>Spell_ManaBlastTravel_01</SpellCastSoundFX>
+		<SpellCastEffectName>T_ManaBlast_Particle</SpellCastEffectName>
+		<SpellCastEffectScale>1</SpellCastEffectScale>
+		<SpellCastProjectile>1</SpellCastProjectile>
+		<SpellCastProjectileSpeed>700</SpellCastProjectileSpeed>
+		<SpellDefEffect>
+			<EffectName>T_ManaBlastImpact_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.5</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="SelfSacrifice">
+		<DisplayName>Self Sacrifice</DisplayName>
+		<Description>Rachel heals her ally 3 hp per level, but at the cost of draining her 1 hp per level.  Burns 1 Crystal on use.  Health Bonuses do not apply.</Description>
+		<FormattedDescription>Heals friendly unit by %d. Damages caster on use. Uses 1 Crystal. Health Bonuses do not apply.</FormattedDescription>
+		<Image>T_Heal_Painting.png</Image>
+		<IconFG>T_Heal_Icon.png</IconFG>
+		<IconBG>T_Heal_Icon_BG.png</IconBG>
+		<IconColor>174,255,59</IconColor>
+		<Cooldown>3</Cooldown>
+<!--	What is this tag?
+		<AutoUnlock>1</AutoUnlock>  -->
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Heal</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Heal</SpellSubClass>
+		<SpellTargetType>FriendlyUnit</SpellTargetType>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_Level</Attribute>
+			<Value>4</Value>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>RefinedCrystal</Resource>
+			<Amount>1</Amount>
+		</SpellResourceCost>
+		<ApproachTargetTile>1</ApproachTargetTile>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<IsCastable>0</IsCastable>
+		<IsSpecialAbility>1</IsSpecialAbility>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel] * 3]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<ApplyToCaster>1</ApplyToCaster>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel] * -1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>15</AIPriority>
+		</AIData>
+		<CasterAnimationType>26</CasterAnimationType>
+		<HitSoundFX>Spell_Heal_01</HitSoundFX>
+		<HitSoundFX>Spell_Heal_02</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_Heal_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>.75</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+</Spells>		

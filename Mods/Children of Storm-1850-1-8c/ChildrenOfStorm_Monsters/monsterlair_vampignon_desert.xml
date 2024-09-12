@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<Container>
+  <UnitType InternalName="Vampignon_desert">
+    <DisplayName>Deserthorn</DisplayName>
+    <CreatureType>Beast</CreatureType>
+    <CanBeDesigned>0</CanBeDesigned>
+    <IsSovereign>0</IsSovereign>
+    <AllowGrouping>0</AllowGrouping>
+    <HasWages>0</HasWages>
+    <SpawnRating>2</SpawnRating>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <UnitStat_Accuracy>75</UnitStat_Accuracy>
+      <UnitStat_CombatSpeed>20</UnitStat_CombatSpeed>
+      <UnitStat_Attack_Pierce>8</UnitStat_Attack_Pierce>
+      <UnitStat_HitPoints>2</UnitStat_HitPoints>
+      <UnitStat_BG_IsMonster>1</UnitStat_BG_IsMonster>
+      <UnitStat_BG_IsBeast>1</UnitStat_BG_IsBeast>
+      <UnitStat_Defense_Blunt>2</UnitStat_Defense_Blunt>
+      <UnitStat_Defense_Cutting>2</UnitStat_Defense_Cutting>
+      <UnitStat_Defense_Pierce>2</UnitStat_Defense_Pierce>
+    </LevelMilestone>
+    <LevelMilestone InternalName="L1">
+      <Level>20</Level>
+      <UnitStat_Accuracy>75</UnitStat_Accuracy>
+      <UnitStat_CombatSpeed>20</UnitStat_CombatSpeed>
+      <UnitStat_Attack_Pierce>32</UnitStat_Attack_Pierce>
+      <UnitStat_Attack_Poison>2</UnitStat_Attack_Poison>
+      <UnitStat_BG_IsMonster>1</UnitStat_BG_IsMonster>
+      <UnitStat_BG_IsBeast>1</UnitStat_BG_IsBeast>
+      <UnitStat_Defense_Blunt>10</UnitStat_Defense_Blunt>
+      <UnitStat_Defense_Cutting>10</UnitStat_Defense_Cutting>
+      <UnitStat_Defense_Pierce>10</UnitStat_Defense_Pierce>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Charge</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Rage_desertspecial</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>VulnerableToCold</SelectedAbilityBonusOption>
+    <Treasure>
+      <Liklihood>30</Liklihood>
+      <GameModifier>
+        <ModType>GiveItem</ModType>
+        <StrVal>Common</StrVal>
+      </GameModifier>
+    </Treasure>
+
+         <Treasure>
+      <Liklihood>70</Liklihood>
+       </Treasure>
+    <Backstory>Deserthorns are eyeless beasts that wander the deserts of the world. They will charge at any hostile movement. The Deserthorns bond for life with their mates and killing one of a pair will send the other into a crazed rage.</Backstory>
+    <Medallions InternalName="">
+      <All>vampignon_medallion_desert.png</All>
+    </Medallions>
+    <AlwaysInTileCenter>1</AlwaysInTileCenter>
+    <AnimationPack>4HydraAnimationPack</AnimationPack>
+    <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+    <ClothMapScale>0.615</ClothMapScale>
+    <Color_Skin>34,34,34,255</Color_Skin>
+    <CutSceneDataPack>SandCrawlerUnitCutscenePack</CutSceneDataPack>
+    <EyeTexture>gfx/eyes/male_brown_eye.png</EyeTexture>
+    <InfoCardBackground>BG_KingdomFertile</InfoCardBackground>
+    <ModelPath>vampignon_mesh_desert.hkb</ModelPath>
+    <ModelScale>0.7</ModelScale>
+    <TacticalModelScale>1.05</TacticalModelScale>
+    <ClothMapScale>1.1000</ClothMapScale>
+    <SkeletonPath>vampignon_skeleton.hkb</SkeletonPath>
+    <SoundPack>SoundPack_Dragon1</SoundPack>
+    <Texture_All>vampignon_skin_desert.dds</Texture_All>
+  </UnitType>
+  <AbilityBonus InternalName="RageAbility_desertspecial">
+    <AbilityBonusOption InternalName="Rage_desertspecial">
+      <DisplayName>Rage</DisplayName>
+      <Description>+8 Attack when under 50% hp</Description>
+      <Icon>Ability_Rage_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Attack_Boost</StrVal>
+        <Value>8</Value>
+        <Provides>+8 Attack when under 50% Hit Points</Provides>
+        <WhenUnderPercentHitPoints>50</WhenUnderPercentHitPoints>
+      </GameModifier>
+      <AdditionalTrainingTurns>10</AdditionalTrainingTurns>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <IsCombatAbility>1</IsCombatAbility>
+      <CombatRating>10</CombatRating>
+      <Type>Aggressive</Type>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <GoodieHutType InternalName="Lair_Vampignon_desert">
+    <Name>Deserthorn Lair</Name>
+    <Description>Deserthorn rarely stay in one place for long, but on occassion their camps can be found in desert areas.</Description>
+    <Rarity>40</Rarity>
+    <IsStartingPointObject>1</IsStartingPointObject>
+    <MinDistanceFromStartingPoints>3</MinDistanceFromStartingPoints>
+    <BarredTerrain>River</BarredTerrain>
+    <PreferredTerrain>DesertTerrain</PreferredTerrain>
+    <SpawnRating>0</SpawnRating>
+    <TileDesign>Lair_Deserthorn</TileDesign>
+    <DrawnIcon>Lair_Warg.png</DrawnIcon>
+    <OnSelectSFX>Click_Forest_Wolf</OnSelectSFX>
+    <Medallions InternalName="">
+      <All>vampignon_medallion_desert.png</All>
+    </Medallions>
+    <Treasure>
+      <Liklihood>100</Liklihood>
+      <GameModifier>
+        <ModType>GiveItem</ModType>
+        <StrVal>Common</StrVal>
+      </GameModifier>
+    </Treasure>
+    <Encounter>
+      <Liklihood>100</Liklihood>
+      <WillRespawn>0</WillRespawn>
+      <WanderingRadius>0</WanderingRadius>
+      <UnitInstance>
+        <UnitType>Vampignon_desert</UnitType>
+        <Level>2</Level>
+        <UnitGroupingType>UnitGroupingType_Pair</UnitGroupingType>
+      </UnitInstance>
+      <UnitInstance>
+        <UnitType>Vampignon_desert</UnitType>
+        <Level>1</Level>
+        <UnitGroupingType>UnitGroupingType_Pair</UnitGroupingType>
+      </UnitInstance>
+      <UnitInstance>
+        <UnitType>Vampignon_desert</UnitType>
+        <Level>2</Level>
+        <UnitGroupingType>UnitGroupingType_Pair</UnitGroupingType>
+      </UnitInstance>
+    </Encounter>
+    <Encounter>
+      <Liklihood>-1</Liklihood>
+      <WillRespawn>1</WillRespawn>
+      <RespawnChance>5</RespawnChance>
+      <RespawnDelay>35</RespawnDelay>
+      <WanderingRadius>5</WanderingRadius>
+      <UnitInstance>
+        <UnitType>Vampignon_desert</UnitType>
+        <Level>1</Level>
+        <UnitGroupingType>UnitGroupingType_Pair</UnitGroupingType>
+      </UnitInstance>
+      <UnitInstance>
+        <UnitType>Vampignon_desert</UnitType>
+        <Level>1</Level>
+        <UnitGroupingType>UnitGroupingType_Pair</UnitGroupingType>
+      </UnitInstance>
+    </Encounter>
+  </GoodieHutType>
+</Container>

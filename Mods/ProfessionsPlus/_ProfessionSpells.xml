@@ -1,0 +1,893 @@
+<SpellDefs>
+	<SpellDef InternalName="ArcaneMissle">
+        <DisplayName>Magic Missle</DisplayName>
+        <Description>Target enemy takes 3 damage (+3 per level of the caster and +1 damage per shard). Damage is unresistable.</Description>
+        <FormattedDescription>Target enemy takes %d damage.</FormattedDescription>
+        <Image>T_Sunder_Painting.png</Image>
+        <IconFG>T_ShadowBolt_Icon.png</IconFG>
+		<AutoUnlock>1</AutoUnlock>
+		<Cooldown>3</Cooldown>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Damage</SpellSubClass>
+        <SpellTargetType>EnemyUnit</SpellTargetType>
+		<Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Warlock</Attribute>
+        </Prereq>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>36</Amount>
+        </SpellResourceCost>
+        <GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+				<IsForFormattedDescription>1</IsForFormattedDescription>
+				<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[UnitOwner_GetNumLifeShards] + [UnitOwner_GetNumDeathShards]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[Calc] + [UnitOwner_GetNumFireShards]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc3" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[Calc2] + [UnitOwner_GetNumAirShards]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc4" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[Calc3] + [UnitOwner_GetNumWaterShards]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc5" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[Calc4] + [UnitOwner_GetNumEarthShards]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc6" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[Calc5] * -1]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc7" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[Unit_GetLevel] * -3]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc8">
+					<Expression><![CDATA[[Calc6] + [Calc7]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc8] - 3]]></Expression>
+				</Calculate>
+				<Calculate InternalName="ValueForFormattedDescription">
+					<Expression><![CDATA[[Calc8] - 3]]></Expression>
+				</Calculate>
+		</GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_Sunder_01</HitSoundFX>
+		<SpellCastSoundFX>Spell_Shadowbolt_Travel</SpellCastSoundFX>
+        <SpellCastEffectName>T_ShadowBolt_Particle</SpellCastEffectName>
+        <SpellCastEffectScale>0.60</SpellCastEffectScale>
+        <SpellCastProjectile>1</SpellCastProjectile>
+        <SpellCastProjectileSpeed>700</SpellCastProjectileSpeed>
+        <SpellDefEffect>
+            <EffectName>T_Sunder_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>1</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+	<SpellDef InternalName="HunterTrap">
+        <DisplayName>Trap</DisplayName>
+        <Description>Target enemy up to 7 tiles away takes normal attack damage and is immobilized for 3 rounds unless they dodge.</Description>
+		<FormattedDescription>Launch a %d Attack and immobilize the victim for 3 rounds.</FormattedDescription>
+        <Image>Ability_TangledWeb_Icon.png</Image>
+        <IconFG>T_Imprison_Icon.png</IconFG>
+		<AutoUnlock>1</AutoUnlock>
+        <CanStack>0</CanStack>
+        <Cooldown>5</Cooldown>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitCurse</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Debuff</SpellSubClass>
+        <SpellTargetType>EnemyUnit</SpellTargetType>
+		<Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Hunter</Attribute>
+        </Prereq>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <IsCastable>0</IsCastable>
+        <CanBeDodged>1</CanBeDodged>
+        <IsSpecialAbility>1</IsSpecialAbility>
+		<Range>7</Range>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Accuracy</StrVal>
+            <Duration>1</Duration>
+            <Value>5</Value>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>DefendableDamage</Attribute>
+            <AttackStat>UnitStat_Attack_Pierce</AttackStat>
+            <IsForFormattedDescription>1</IsForFormattedDescription>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_CombinedAttack]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SetUnitStat</Attribute>
+            <StrVal>UnitStat_Moves</StrVal>
+            <DisplayName>Trapped</DisplayName>
+            <Duration>3</Duration>
+            <Effect>E_TangledWeb_Particle</Effect>
+            <PerTurn>1</PerTurn>
+            <Value>0</Value>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SetUnitStat</Attribute>
+            <StrVal>UnitStat_Dodge</StrVal>
+            <Duration>5</Duration>
+            <PerTurn>1</PerTurn>
+            <Value>0</Value>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>15</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_Imprison</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>Y_TangledWeb_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>1.5</EffectScale>
+            <EffectDelay>0.25</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+	<SpellDef InternalName="MartialLaw">
+        <DisplayName>Martial Law</DisplayName>
+        <Description>Increases the cities production by 25%, reduces unrest by 25% but it produces no research, gold, or mana.</Description>
+        <Image>S_Inspiration_Painting.png</Image>
+        <IconFG>S_Oppression_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>City</SpellBookSortCategory>
+        <SpellBookSortSubCategory>CityEnchantment</SpellBookSortSubCategory>
+        <SpellType>Strategic</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>FriendlyCity</SpellTargetType>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>General</Attribute>
+        </Prereq>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>10</Amount>
+        </SpellResourceCost>
+		<GameModifier>
+            <ModType>ResourceMultiplier</ModType>
+            <Attribute>Research</Attribute>
+            <Duration>-1</Duration>
+            <PerTurn>1</PerTurn>
+            <Value>0</Value>
+        </GameModifier>
+		<GameModifier>
+            <ModType>ResourceMultiplier</ModType>
+            <Attribute>Gold</Attribute>
+            <Duration>-1</Duration>
+            <PerTurn>1</PerTurn>
+            <Value>0</Value>
+        </GameModifier>
+		<GameModifier>
+            <ModType>ResourceMultiplier</ModType>
+            <Attribute>Mana</Attribute>
+            <Duration>-1</Duration>
+            <PerTurn>1</PerTurn>
+            <Value>0</Value>
+        </GameModifier>
+        <GameModifier>
+            <ModType>ResourceMultiplier</ModType>
+            <Attribute>Production</Attribute>
+            <Duration>-1</Duration>
+            <PerTurn>1</PerTurn>
+            <Value>1.25</Value>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Unrest</Attribute>
+            <Duration>-1</Duration>
+            <PerTurn>1</PerTurn>
+            <Value>-25</Value>
+        </GameModifier>
+        <ValidTerrainCategory>City</ValidTerrainCategory>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>30</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_BlessCity_01</HitSoundFX>
+        <SpellCastEffectName>Brilliance</SpellCastEffectName>
+        <SpellCastEffectScale>.4</SpellCastEffectScale>
+        <SpellDefEffect>
+            <EffectName>S_Blight_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>1</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>	
+	<SpellDef InternalName="PilferEffect">
+        <DisplayName>Pilfer</DisplayName>
+        <Description>Enemy has a 15% of attacking the wrong target and loses gold in the process.</Description>
+        <Image>Ability_PoisonousI_Icon.png</Image>
+        <IconFG>Ability_PoisonousI_Icon.png</IconFG>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Damage</SpellSubClass>
+        <SpellTargetType>EnemyUnit</SpellTargetType>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <IsCastable>0</IsCastable>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_ClumsyChance</StrVal>
+            <DisplayName>Addled</DisplayName>
+            <Duration>-1</Duration>
+            <Value>15</Value>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Gold</Attribute>
+			<ApplyToCaster>1</ApplyToCaster>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Unit_GetLevel] * 2]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] + 2]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_Beserk_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>T_Berserk_Particle</EffectName>
+            <LocalPosition>0,35,0</LocalPosition>
+            <EffectScale>0.7</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+	<SpellDef InternalName="CalloftheWild">
+        <DisplayName>Call of the Wild</DisplayName>
+        <Description>Summons a wolven companion that scales in caster level.</Description>
+        <Image>S_CharmMonster_Painting.png</Image>
+        <IconFG>S_CharmMonster_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Summon</SpellBookSortCategory>
+        <SpellBookSortSubCategory>Summon</SpellBookSortSubCategory>
+        <SpellType>Strategic</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Summon</SpellSubClass>
+        <SpellTargetType>Self</SpellTargetType>
+		<AppliesRandomModifier>1</AppliesRandomModifier>
+        <Range>0</Range>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Beastlord</Attribute>
+        </Prereq>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>45</Amount>
+        </SpellResourceCost>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <PerTurn>1</PerTurn>
+            <Amount>1</Amount>
+        </SpellResourceCost>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SummonUnit</Attribute>
+            <StrVal>Wolf</StrVal>
+            <UnitClass>Wolf</UnitClass>
+            <Duration>-1</Duration>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_BonusSummonLevel] - 5]]></Expression>
+            </Calculate>
+	    <Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Calc] + [Unit_GetLevel]]]></Expression>
+            </Calculate>	
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc2]]]></Expression>
+            </Calculate>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SummonUnit</Attribute>
+            <StrVal>Wolf</StrVal>
+            <UnitClass>Wolf</UnitClass>
+            <Duration>-1</Duration>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_BonusSummonLevel] - 5]]></Expression>
+            </Calculate>
+	    <Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Calc] + [Unit_GetLevel]]]></Expression>
+            </Calculate>	
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc2]]]></Expression>
+            </Calculate>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SummonUnit</Attribute>
+            <StrVal>Wolf</StrVal>
+            <UnitClass>Wolf</UnitClass>
+            <Duration>-1</Duration>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_BonusSummonLevel] - 5]]></Expression>
+            </Calculate>
+	    <Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Calc] + [Unit_GetLevel]]]></Expression>
+            </Calculate>	
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc2]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SummonUnit</Attribute>
+            <StrVal>Ice Warg</StrVal>
+            <UnitClass>IceWarg</UnitClass>
+            <Duration>-1</Duration>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_BonusSummonLevel] - 3]]></Expression>
+            </Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Calc] + [Unit_GetLevel]]]></Expression>
+            </Calculate>	
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc2]]]></Expression>
+            </Calculate>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SummonUnit</Attribute>
+            <StrVal>Ice Warg</StrVal>
+            <UnitClass>IceWarg</UnitClass>
+            <Duration>-1</Duration>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_BonusSummonLevel] - 3]]></Expression>
+            </Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Calc] + [Unit_GetLevel]]]></Expression>
+            </Calculate>	
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc2]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SummonUnit</Attribute>
+            <StrVal>Shadow Warg</StrVal>
+            <UnitClass>ShadowWarg</UnitClass>
+            <Duration>-1</Duration>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_BonusSummonLevel] - 1]]></Expression>
+            </Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Calc] + [Unit_GetLevel]]]></Expression>
+            </Calculate>	
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc2]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SummonUnit</Attribute>
+            <StrVal>Timber Warg</StrVal>
+            <UnitClass>TimberWarg</UnitClass>
+            <Duration>-1</Duration>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_BonusSummonLevel] - 3]]></Expression>
+            </Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Calc] + [Unit_GetLevel]]]></Expression>
+            </Calculate>	
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc2]]]></Expression>
+            </Calculate>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SummonUnit</Attribute>
+            <StrVal>Timber Warg</StrVal>
+            <UnitClass>TimberWarg</UnitClass>
+            <Duration>-1</Duration>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_BonusSummonLevel] - 3]]></Expression>
+            </Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Calc] + [Unit_GetLevel]]]></Expression>
+            </Calculate>	
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc2]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>70</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_NaturesCall_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>S_SummonEarthElemental_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>0.5</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+	<SpellDef InternalName="CalloftheWild_Tactical">
+        <DisplayName>Call of the Wild</DisplayName>
+        <Description>Summons a wolven companion that scales in caster level.</Description>
+        <FormattedDescription>Summons a level %d wolven companion.</FormattedDescription>
+        <Image>T_SummonIceElemental_Painting.png</Image>
+        <IconFG>T_SummonIceElemental_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Summon</SpellBookSortCategory>
+        <SpellBookSortSubCategory>Summon</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Summon</SpellSubClass>
+        <SpellTargetType>EmptyTile</SpellTargetType>
+		<AppliesRandomModifier>1</AppliesRandomModifier>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <PreventStackingWith>CalloftheWild</PreventStackingWith>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Beastlord</Attribute>
+        </Prereq>
+		 <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>45</Amount>
+        </SpellResourceCost>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SummonUnit</Attribute>
+            <StrVal>Wolf</StrVal>
+            <UnitClass>Wolf</UnitClass>
+            <Duration>-1</Duration>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_BonusSummonLevel] - 5]]></Expression>
+            </Calculate>
+	    <Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Calc] + [Unit_GetLevel]]]></Expression>
+            </Calculate>	
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc2]]]></Expression>
+            </Calculate>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SummonUnit</Attribute>
+            <StrVal>Wolf</StrVal>
+            <UnitClass>Wolf</UnitClass>
+            <Duration>-1</Duration>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_BonusSummonLevel] - 5]]></Expression>
+            </Calculate>
+	    <Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Calc] + [Unit_GetLevel]]]></Expression>
+            </Calculate>	
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc2]]]></Expression>
+            </Calculate>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SummonUnit</Attribute>
+            <StrVal>Wolf</StrVal>
+            <UnitClass>Wolf</UnitClass>
+            <Duration>-1</Duration>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_BonusSummonLevel] - 5]]></Expression>
+            </Calculate>
+	    <Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Calc] + [Unit_GetLevel]]]></Expression>
+            </Calculate>	
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc2]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SummonUnit</Attribute>
+            <StrVal>Ice Warg</StrVal>
+            <UnitClass>IceWarg</UnitClass>
+            <Duration>-1</Duration>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_BonusSummonLevel] - 3]]></Expression>
+            </Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Calc] + [Unit_GetLevel]]]></Expression>
+            </Calculate>	
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc2]]]></Expression>
+            </Calculate>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SummonUnit</Attribute>
+            <StrVal>Ice Warg</StrVal>
+            <UnitClass>IceWarg</UnitClass>
+            <Duration>-1</Duration>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_BonusSummonLevel] - 3]]></Expression>
+            </Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Calc] + [Unit_GetLevel]]]></Expression>
+            </Calculate>	
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc2]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SummonUnit</Attribute>
+            <StrVal>Shadow Warg</StrVal>
+            <UnitClass>ShadowWarg</UnitClass>
+            <Duration>-1</Duration>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_BonusSummonLevel] - 2]]></Expression>
+            </Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Calc] + [Unit_GetLevel]]]></Expression>
+            </Calculate>	
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc2]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SummonUnit</Attribute>
+            <StrVal>Timber Warg</StrVal>
+            <UnitClass>TimberWarg</UnitClass>
+            <Duration>-1</Duration>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_BonusSummonLevel] - 3]]></Expression>
+            </Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Calc] + [Unit_GetLevel]]]></Expression>
+            </Calculate>	
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc2]]]></Expression>
+            </Calculate>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SummonUnit</Attribute>
+            <StrVal>Timber Warg</StrVal>
+            <UnitClass>TimberWarg</UnitClass>
+            <Duration>-1</Duration>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_BonusSummonLevel] - 3]]></Expression>
+            </Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Calc] + [Unit_GetLevel]]]></Expression>
+            </Calculate>	
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc2]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>70</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_NaturesCall_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>S_SummonEarthElemental_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>0.5</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+	
+	<SpellDef InternalName="SummonShadowWarg_Tactical">
+        <DisplayName>Summon Shadow Warg</DisplayName>
+        <Description>Summons a Shadow Warg based on the caster's level and summoning skill.</Description>
+        <FormattedDescription>Summons a level %d Shadow Warg.</FormattedDescription>
+        <Image>M_Warg_ShadowWarg_Card.png</Image>
+        <IconFG>S_SummonShadowWarg_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Summon</SpellBookSortCategory>
+        <SpellBookSortSubCategory>Summon</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Summon</SpellSubClass>
+        <SpellTargetType>EmptyTile</SpellTargetType>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <PreventStackingWith>SummonShadowWarg</PreventStackingWith>
+        <Prereq>
+            <Type>Allegiance</Type>
+            <Attribute>Empire</Attribute>
+        </Prereq>
+		<Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Summoner</Attribute>
+        </Prereq>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>30</Amount>
+        </SpellResourceCost>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SummonUnit</Attribute>
+            <StrVal>Shadow Warg</StrVal>
+            <UnitClass>ShadowWarg</UnitClass>
+            <IsForFormattedDescription>1</IsForFormattedDescription>
+            <Duration>-1</Duration>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_BonusSummonLevel] + [Unit_GetLevel]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>
+		<AIData AIPersonality="AI_General">
+            <AIPriority>10</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_SummonShadowWarg_01</HitSoundFX>
+        <WorldLightOverrideTime>2</WorldLightOverrideTime>
+        <WorldLightOverrideAmbiant>30,30,30</WorldLightOverrideAmbiant>
+        <WorldLightOverrideDiffuse>30,30,30</WorldLightOverrideDiffuse>
+        <WorldLightOverrideRim0>212,0,192</WorldLightOverrideRim0>
+        <WorldLightOverrideRim1>0,132,234</WorldLightOverrideRim1>
+        <SpellDefEffect>
+            <EffectName>Y_SummonDeathDemon_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>1</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="SummonShadowWarg">
+        <DisplayName>Summon Shadow Warg</DisplayName>
+        <Description>Summons a level 1 Shadow Warg.</Description>
+        <Image>M_Warg_ShadowWarg_Card.png</Image>
+        <IconFG>S_SummonSpiritWolf_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Summon</SpellBookSortCategory>
+        <SpellBookSortSubCategory>Summon</SpellBookSortSubCategory>
+        <SpellType>Strategic</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Summon</SpellSubClass>
+        <SpellTargetType>Self</SpellTargetType>
+        <Range>0</Range>
+		<Prereq>
+            <Type>Allegiance</Type>
+            <Attribute>Empire</Attribute>
+        </Prereq>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Summoner</Attribute>
+        </Prereq>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>30</Amount>
+        </SpellResourceCost>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <PerTurn>1</PerTurn>
+            <Amount>1</Amount>
+        </SpellResourceCost>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SummonUnit</Attribute>
+            <StrVal>Shadow Warg</StrVal>
+            <UnitClass>ShadowWarg</UnitClass>
+            <Duration>-1</Duration>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_BonusSummonLevel] + [Unit_GetLevel]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>10</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_SummonShadowWarg_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>Y_SummonDeathDemon_Particle</EffectName>
+            <LocalPosition>0,20,0</LocalPosition>
+            <EffectScale>1</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+	<SpellDef InternalName="SummonSpiritWolf_Tactical">
+        <DisplayName>Summon Spirit Wolf</DisplayName>
+        <Description>Summons a Spirit Wolf based on the caster's level and summoning skill.</Description>
+        <FormattedDescription>Summons a level %d Spirit Wolf.</FormattedDescription>
+        <Image>M_Warg_SpiritWolf_Card.png</Image>
+        <IconFG>S_SummonShadowWarg_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Summon</SpellBookSortCategory>
+        <SpellBookSortSubCategory>Summon</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Summon</SpellSubClass>
+        <SpellTargetType>EmptyTile</SpellTargetType>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <PreventStackingWith>SummonShadowWarg</PreventStackingWith>
+        <Prereq>
+            <Type>Allegiance</Type>
+            <Attribute>Kingdom</Attribute>
+        </Prereq>
+		<Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Summoner</Attribute>
+        </Prereq>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>30</Amount>
+        </SpellResourceCost>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SummonUnit</Attribute>
+            <StrVal>Spirit Wolf</StrVal>
+            <UnitClass>SpiritWolf</UnitClass>
+            <IsForFormattedDescription>1</IsForFormattedDescription>
+            <Duration>-1</Duration>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_BonusSummonLevel] + [Unit_GetLevel]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>
+		<AIData AIPersonality="AI_General">
+            <AIPriority>10</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_SummonShadowWarg_01</HitSoundFX>
+        <WorldLightOverrideTime>2</WorldLightOverrideTime>
+        <WorldLightOverrideAmbiant>30,30,30</WorldLightOverrideAmbiant>
+        <WorldLightOverrideDiffuse>30,30,30</WorldLightOverrideDiffuse>
+        <WorldLightOverrideRim0>212,0,192</WorldLightOverrideRim0>
+        <WorldLightOverrideRim1>0,132,234</WorldLightOverrideRim1>
+        <SpellDefEffect>
+            <EffectName>S_BlindingLight_Particle</EffectName>
+            <LocalPosition>0,60,0</LocalPosition>
+            <EffectScale>2</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+            <PlayOnCaster>1</PlayOnCaster>
+        </SpellDefEffect>
+    </SpellDef>	
+	<SpellDef InternalName="SummonSpiritWolf">
+        <DisplayName>Summon Spirit Wolf</DisplayName>
+        <Description>Summons a Spirit based on the caster's level and summoning skill.</Description>
+        <FormattedDescription>Summons a level %d Spirit Wolf.</FormattedDescription>
+        <Image>M_Warg_SpiritWolf_Card.png</Image>
+        <IconFG>S_SummonSpiritWolf_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Summon</SpellBookSortCategory>
+        <SpellBookSortSubCategory>Summon</SpellBookSortSubCategory>
+        <SpellType>Strategic</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Summon</SpellSubClass>
+        <SpellTargetType>Self</SpellTargetType>
+        <Range>0</Range>
+		<Prereq>
+            <Type>Allegiance</Type>
+            <Attribute>Kingdom</Attribute>
+        </Prereq>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Summoner</Attribute>
+        </Prereq>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>30</Amount>
+        </SpellResourceCost>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <PerTurn>1</PerTurn>
+            <Amount>1</Amount>
+        </SpellResourceCost>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SummonUnit</Attribute>
+            <StrVal>Spirit Wolf</StrVal>
+            <UnitClass>SpiritWolf</UnitClass>
+            <Duration>-1</Duration>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_BonusSummonLevel] + [Unit_GetLevel]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>10</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_SummonShadowWarg_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>S_BlindingLight_Particle</EffectName>
+            <LocalPosition>0,60,0</LocalPosition>
+            <EffectScale>2</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+            <PlayOnCaster>1</PlayOnCaster>
+        </SpellDefEffect>
+    </SpellDef>
+	
+	<SpellDef InternalName="Quickcast">
+        <DisplayName>Quickcast</DisplayName>
+        <Description>The caster can immediately cast a spell with no casting time.</Description>
+        <Image>T_Focus_Painting.png</Image>
+        <IconFG>T_Focus_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+		<Cooldown>7</Cooldown>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>Self</SpellTargetType>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Sorcerer</Attribute>
+        </Prereq>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>24</Amount>
+        </SpellResourceCost>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_SpellCastTimeModifier</StrVal>
+            <Value>-2</Value>
+            <Duration>2</Duration>
+            <Effect>E_Focused_Particle</Effect>
+            <Provides>Hastened casting</Provides>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_CombatSpeed</StrVal>
+            <Duration>1</Duration>
+            <UpdateDurationAtTurnStart>1</UpdateDurationAtTurnStart>
+            <Value>100</Value>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>25</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_Focus_01</HitSoundFX>
+        <SpellCastEffectName>T_Focus_Particle</SpellCastEffectName>
+        <SpellCastEffectScale>1</SpellCastEffectScale>
+    </SpellDef>
+
+</SpellDefs>

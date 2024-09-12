@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<UnitTypes>
+	<UnitType InternalName="Steel immacculate_571279746-43907">
+		<DisplayName>Steel Immacculate</DisplayName>
+		<Description>There are few creatures on Elemental that are able to withstand more damage than an War Golem.  Long have they stood silent, patient sentry over their charges.</Description>
+		<Quote>'Our enemies will tremble at our might.'</Quote>
+		<Backstory>These are creatures forged of mana and metal; beings who can be summoned into existence only by those possessing the blood of the Aivernach - the Iron Tribes of old. An Iron Golem can wield any weapon given to it, and is a master of defense; long after the last men of Aivern fell to the hordes of Meergas Maz Adul's Nerazga, its Iron Golems remained, stalwart protectors of the city walls.</Backstory>
+		<HasEssence>false</HasEssence>
+		<ModelPath>JB_WarGolem_Mesh_01.hkb</ModelPath>
+		<SkeletonPath>JB_IronGolem_Skeleton_01.hkb</SkeletonPath>
+		<EyeTexture>gfx/eyes/male_brown_eye.png</EyeTexture>
+		<AnimationPack>IronGolemAnimationPack</AnimationPack>
+		<ShowAsSingleUnit>false</ShowAsSingleUnit>
+		<CutSceneDataPack>IronGolemUnitCutscenePack</CutSceneDataPack>
+		<ModelScale>0.8000</ModelScale>
+		<TacticalModelScale>1.5000</TacticalModelScale>
+		<EquipmentScale>2.0000</EquipmentScale>
+		<ClothMapScale>1.6000</ClothMapScale>
+		<BattleAnimationBehavior>Stationary</BattleAnimationBehavior>
+		<MovementType>land</MovementType>
+		<BobbingFrequency>0.0000</BobbingFrequency>
+		<ClothPoseIndex>0</ClothPoseIndex>
+		<InfoCardBackground>BG49_FallenCastle</InfoCardBackground>
+		<InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+		<CanBeDesigned>1</CanBeDesigned>
+		<UserDesigned>true</UserDesigned>
+		<IsModDependent>false</IsModDependent>
+		<Medallions InternalName=""/>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<LevelMilestone InternalName="">
+			<Level>1</Level>
+			<UnitStat_BG_IsConstruct>1.0000</UnitStat_BG_IsConstruct>
+			<UnitStat_BG_IsMonster>1.0000</UnitStat_BG_IsMonster>
+			<UnitStat_Defense_Pierce>20.0000</UnitStat_Defense_Pierce>
+			<UnitStat_HitPoints>65.0000</UnitStat_HitPoints>
+			<UnitStat_Moves>2.0000</UnitStat_Moves>
+		</LevelMilestone>
+		<Equipment>JB_WarGolemOffhand_BoarSpear</Equipment>
+		<EquipmentUpgradeDef>
+			<SelectionCriterion>MaximizeBest</SelectionCriterion>
+			<ComparisonAttribute>UnitStat_Attack_Pierce</ComparisonAttribute>
+			<WeaponUpgradeType>Blade</WeaponUpgradeType>
+			<EquipmentSlot>Weapon</EquipmentSlot>
+			<ForUpgradeActionOnly>0</ForUpgradeActionOnly>
+		</EquipmentUpgradeDef>
+		<EquipmentUpgradeDef>
+			<SelectionCriterion>MaximizeSum</SelectionCriterion>
+			<ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+			<EquipmentSlot>Defense</EquipmentSlot>
+			<ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+		</EquipmentUpgradeDef>
+		<ProductionRequirement InternalName="">
+			<Type>Resource</Type>
+			<Attribute>Mana</Attribute>
+			<Value>30.0000</Value>
+		</ProductionRequirement>
+		<ProductionRequirement InternalName="">
+			<Type>Resource</Type>
+			<Attribute>Metal</Attribute>
+			<Value>25.0000</Value>
+		</ProductionRequirement>
+		<Color_Metal>70,40,40,255</Color_Metal>
+		<Texture_Skin>JB_WarGolem_Texture_01.png</Texture_Skin>
+		<CreatorFactionName>JB_KingdomOfOtaran</CreatorFactionName>
+		<Gender>Male</Gender>
+		<UnitModelType>JB_WarGolem</UnitModelType>
+		<SelectedAbilityBonusOption>JB_Blood_HeavyMetalGolem</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>JB_Striding_GolemDesign</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>BrutalNature</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Fast</SelectedAbilityBonusOption>
+		<IsSovereign>0</IsSovereign>
+		<HasWages>1</HasWages>
+		<NPCFreeRecruit>0</NPCFreeRecruit>
+		<IgnoreItemTrainingCosts>false</IgnoreItemTrainingCosts>
+		<AdditionalTrainingTurns>200.0000</AdditionalTrainingTurns>
+		<WageOverride>0.0000</WageOverride>
+		<UnitTypeVersion>1</UnitTypeVersion>
+		<TileRadius>0</TileRadius>
+		<GetPerksOnLevelUp>0</GetPerksOnLevelUp>
+		<DividesBattleExp>1</DividesBattleExp>
+		<CanSqueeze>0</CanSqueeze>
+		<OnHitParticleName>Golem_Hit</OnHitParticleName>
+		<OnAttackParticleName>Golem_Attack</OnAttackParticleName>
+		<AllowGrouping>false</AllowGrouping>
+		<SoundPack>SoundPack_Golem1</SoundPack>
+		<Prereq InternalName="Prereq 671">
+			<Type>AbilityBonusOption</Type>
+			<Target>Player</Target>
+			<Attribute>JB_GolemCrafters</Attribute>
+			<Value>0.0000</Value>
+		</Prereq>
+		<Prereq InternalName="Prereq 672">
+			<Type>Tech</Type>
+			<Target>player</Target>
+			<Attribute>Blacksmithing</Attribute>
+			<Value>0.0000</Value>
+		</Prereq>
+		<IsChampion>0</IsChampion>
+	</UnitType>
+</UnitTypes>

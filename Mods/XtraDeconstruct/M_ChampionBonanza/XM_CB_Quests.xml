@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--Champion Bonanza by Hellions-->
+<!--XtraDeconstruct 3.0 by Primal-->
+<Quests>
+	<QuestDef InternalName="Quest_DrainingTheDemon">
+		<DisplayName>Draining The Demon</DisplayName>
+		<Description>As soon as you enter the inn hoping to find some comfortable room for the night, you are immediately accosted by a dirty man who turns out to be the proprietor.
+		
+		"We need your help stranger. An evil magician named Barnabas came through our village a few hours ago and abducted Widow Moiraine and her young daughter Shara. He's a twisted wizard who performs dark rituals of unspeakable evil and if you don't stop him, Moiraine and her daughter will be forever lost. And probably damned too. Please save them. Barnabas had accomplices with him and they might have separated."
+		
+		Something is terribly off. The man's impassive face and monotonous voice don't match the urgency of the situation he just described. There's also this strange growling echo in his voice. You have seen no signs of panic when you entered this peaceful village. As you press the man with further questions, he clams up and shakes his head in what could be resigned despair.</Description>
+		<IsStartingPointQuest>0</IsStartingPointQuest>
+		<ShortTextAccept>I will follow Barnabas</ShortTextAccept>
+		<ShortTextDeny>I've got an empire to build</ShortTextDeny>
+		<RewardText>Who can say?</RewardText>
+		<RewardImage>Question_Mark_Icon.png</RewardImage>
+		<SuccessText>You have successfully saved Mhoorsh from complete annihilation. You quickly find out she was using the innkeeper as a mouthpiece and she's the one who directed you to follow Barnabas' tracks. Your agreement to help her binds her to a demonic contract and she is now forced to help you until the debt is paid in full. As you consider your actions, you're not sure you did Elemental a favor by keeping this creature alive but the alternative of letting the Ritualists have their way wasn't any more appealing. As you leave the cellar, you hear a voice inside your head whispering: "I weave the material for the outfit of your doom". A premonition of things to come?</SuccessText>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>QuestLocation</TriggerType>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>4</SpawnRating>
+		<Image>M_Magician_Card_01.png</Image>
+		<PrefQuestLoc>QuestLoc_Inn1</PrefQuestLoc>
+		<Treasure>
+			<GameModifier InternalName="Reward1">
+				<ModType>Unit</ModType>
+				<Attribute>UnitJoinArmy</Attribute>
+				<Value>9</Value>
+				<StrVal>Champion_Mhoorsh</StrVal>
+				<UnitClass>Champion</UnitClass>
+			</GameModifier>
+		</Treasure>
+		<Treasure>
+			<GameModifier InternalName="Reward3">
+				<ModType>Unit</ModType>
+				<Attribute>GiveExperience</Attribute>
+				<Value>15</Value>
+			</GameModifier>
+		</Treasure>
+		<Treasure>
+			<GameModifier InternalName="Reward4">
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>25</Value>
+			</GameModifier>
+		</Treasure>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<NextObjectiveID>1</NextObjectiveID>
+			<Description>Find Barnabas</Description>
+			<Treasure>
+				<GameModifier>
+					<ModType>Map</ModType>
+					<Attribute>CreateGoodieHut</Attribute>
+					<StrVal>Barnabas' campfire</StrVal>
+					<Unitclass>GH_Quest_Camp</Unitclass>
+					<Radius>6</Radius>
+				</GameModifier>
+			</Treasure>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Find Barnabas</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>ClearGoodieHut</Type>
+				<TextData>GH_Quest_Camp</TextData>
+				<Flag>RevealTarget</Flag>
+			</QuestConditionDef>
+			<ChoiceText>As you approach the camp, you see the outline of a hooded man sitting next to the fire, his face hidden in shadows. He is speaking to someone but he appears to be alone. 
+			
+			"Yes Sleetha, we are late but according to the map it's only a matter of days until we reach Brazibon's mansion. And once we are reunited with our brothers, the circle of power will be complete... The face of Elemental will change forever when we drain that monstrosity's energy and claim it as our own".
+			
+			Something seems to be shifting besides Barnabas or maybe it's only a trick of the flames?</ChoiceText>
+			<ChoiceMedallion>L_Champion_Kingdom_01.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>Enter the camp</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Encounter>
+					<Liklihood>100</Liklihood>
+					<BattleIdentifier>Barnabas</BattleIdentifier>
+					<WillRespawn>0</WillRespawn>
+					<WanderingRadius>0</WanderingRadius>
+					<UnitInstance>
+						<UnitType>DarkWizard</UnitType>
+						<UnitName>Barnabas</UnitName>
+						<Level>10</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>AssassinDemon</UnitType>
+						<UnitName>Sleetha</UnitName>
+						<Level>10</Level>
+					</UnitInstance>
+				</Encounter>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I will return later.</Description>
+				<NextObjectiveID>0</NextObjectiveID>
+				<PopupMessage>You quietly slip away, your presence undetected.</PopupMessage>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<NextObjectiveID>2</NextObjectiveID>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Kill Barnabas and take his map</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>BattleFinished</Type>
+				<TextData>Barnabas</TextData>
+				<MoreTextData>Victory</MoreTextData>
+				<CompletionText>You've sent Barnabas and his pet demon back to the hell that spawned them. You take possession of Barnabas' map. Now what the heck was he talking about? You must find out!</CompletionText>
+			</QuestConditionDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>2</ObjectiveID>
+			<NextObjectiveID>3</NextObjectiveID>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<Treasure>
+				<GameModifier>
+					<ModType>Map</ModType>
+					<Attribute>CreateGoodieHut</Attribute>
+					<StrVal>Ruined Mansion</StrVal>
+					<Unitclass>GH_Quest_RavenousHarridan</Unitclass>
+					<Radius>6</Radius>
+				</GameModifier>
+			</Treasure>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Follow the map to the ruined mansion</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>ClearGoodieHut</Type>
+				<TextData>GH_Quest_RavenousHarridan</TextData>
+				<Flag>RevealTarget</Flag>
+			</QuestConditionDef>
+			<ChoiceText>You've followed Barnabas' poor excuse for a map and finally come upon some broken down mansion in the middle of nowhere. This must be where this Brazibon person dwells. A quick reconnaissance reveals that the place is deserted. Until you hear some strange chanting coming from... underground? You locate the door leading to the cellar and find a very humid spiral staircase going down deep. Having come this far, you start your descent into the bowels of the mansion. The chanting, ritualistic in nature, is getting louder. You finally come upon an open doorway and hold your breath. Three hooded figures are surrounding what appears to be a gigantic cocoon into which something is hissing and exerting itself. Something dark, ancient and very evil.
+			
+			"Cease fighting against your bonds, Mhoorsh, Demon Spider Queen of the Underworld" some hateful voice exclaims. "You cannot escape the binding of our combined magicks. As soon as Barnabas joins us, we will perform the ceremony. We will drain your immortal essence and claim it as our own. We shall be invincible and will bring about another cataclysm to subjugate Elemental". A chorus of horrid cackles concludes this terrifying monologue. 
+			
+			"Be patient Mhoorsh, your ordeal and your existence are almost over. In the meantime savor the irony of being trapped into someone else's web for a change!"</ChoiceText>
+			<ChoiceMedallion>M_Magician_Card_01.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>Kill those sick magicians</Description>
+				<NextObjectiveID>3</NextObjectiveID>
+				<Encounter>
+					<Liklihood>100</Liklihood>
+					<BattleIdentifier>Brazibon</BattleIdentifier>
+					<WillRespawn>0</WillRespawn>
+					<WanderingRadius>0</WanderingRadius>
+					<UnitInstance>
+						<UnitType>DarkWizard</UnitType>
+						<UnitName>Brazibon</UnitName>
+						<Level>10</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>Lich</UnitType>
+						<UnitName>Duke Tibia</UnitName>
+						<Level>10</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>Ritualist</UnitType>
+						<UnitName>Brother Jovas</UnitName>
+						<Level>10</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>AssassinDemon</UnitType>
+						<UnitName>Veezurk</UnitName>
+						<Level>10</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>AssassinDemon</UnitType>
+						<UnitName>Torgosh</UnitName>
+						<Level>10</Level>
+					</UnitInstance>
+				</Encounter>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I'll return in a little while</Description>
+				<NextObjectiveID>2</NextObjectiveID>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>3</ObjectiveID>
+			<NextObjectiveID>-1</NextObjectiveID>
+			<QuestEnd>1</QuestEnd>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Kill those sick magicians</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>BattleFinished</Type>
+				<TextData>Brazibon</TextData>
+				<MoreTextData>Victory</MoreTextData>
+			</QuestConditionDef>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Quest_TheSororitysLament">
+		<DisplayName>The Sorority's Lament</DisplayName>
+		<Description>As you enter this abandoned cemetery, silence weighs you down. The decades of neglect have taken their toll and you notice, pillaging too. Suddenly you hear furtive movements behind a dilapidated mausoleum. Noticing your approach, a fearful and very distressed man reveals himself. Words pour out of him in a rush and you can't help but notice the fountain of tears coming out of his bloodshot eyes. From the disjointed recount, you gather that a party of "archeologists" where working on several digs until they found a promising casket. Breaking the seals resulted in tragedy as two furious ghosts attacked when their remains where violated. They tore the soul from their leader's body, a certain Molly, and took off after killing the remaining "archeologists" with their horrific wail. This man, the sole survivor, begs for your help. 
+		
+		"Please save my sweet Molly, I know she's not dead, her spirit has only been stolen and can be retrieved from these hateful ghosts".</Description>
+		<IsStartingPointQuest>0</IsStartingPointQuest>
+		<ShortTextAccept>Yes of course I will help you.</ShortTextAccept>
+		<ShortTextDeny>I have no time to waste helping grave robbers.</ShortTextDeny>
+		<RewardText>A fuzzy good feeling inside?</RewardText>
+		<RewardImage>Gold_Large1.png</RewardImage>
+		<SuccessText>Congratulations you have successfully reunited Molly's spirit with her body. The man who asked for your help now weeps tears of joy. Molly on the other hand, who happens to be a semi-famous Bandit Lord, ungratefully spurns his embarrassing displays of affection. A bit unsettled by her out of body experience, Molly is asking to join your ranks.</SuccessText>
+		<AllowQuestRejection>1</AllowQuestRejection>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>QuestLocation</TriggerType>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>3</SpawnRating>
+		<Image>M_Banshee_Card_01.png</Image>
+		<PrefQuestLoc>QuestLoc_Graveyard</PrefQuestLoc>
+		<Treasure>
+			<GameModifier InternalName="Reward1">
+				<ModType>Unit</ModType>
+				<Attribute>UnitJoinArmy</Attribute>
+				<Value>7</Value>
+				<StrVal>Champion_Molly</StrVal>
+				<UnitClass>Champion</UnitClass>
+			</GameModifier>
+		</Treasure>
+		<Treasure>
+			<GameModifier InternalName="Reward3">
+				<ModType>Unit</ModType>
+				<Attribute>GiveExperience</Attribute>
+				<Value>15</Value>
+			</GameModifier>
+		</Treasure>
+		<Treasure>
+			<GameModifier InternalName="Reward4">
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>20</Value>
+			</GameModifier>
+		</Treasure>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<NextObjectiveID>1</NextObjectiveID>
+			<Description>Find the Wailing Sisters' retreat.</Description>
+			<Treasure>
+				<GameModifier>
+					<ModType>Map</ModType>
+					<Attribute>CreateGoodieHut</Attribute>
+					<StrVal>Mysterious Cave</StrVal>
+					<UnitClass>GH_Quest_Cave</UnitClass>
+					<Radius>8</Radius>
+				</GameModifier>
+			</Treasure>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Destroy the Banshees</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>ClearGoodieHut</Type>
+				<TextData>GH_Quest_Cave</TextData>
+				<Flag>RevealTarget</Flag>
+			</QuestConditionDef>
+			<ChoiceText>The air is suddenly freezing. You shake with sudden shivers and fright takes hold of your soul. You know you have found the Banshees.</ChoiceText>
+			<ChoiceMedallion>M_Banshee_Card_01.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>Tear them apart, mystically speaking of course</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Encounter>
+					<Liklihood>100</Liklihood>
+					<BattleIdentifier>Banshee</BattleIdentifier>
+					<TacticalMap>T_Curgens_Tomb_01</TacticalMap>
+					<WillRespawn>0</WillRespawn>
+					<WanderingRadius>0</WanderingRadius>
+					<UnitInstance>
+						<UnitType>Banshee</UnitType>
+						<UnitName>Sister Meleeeena</UnitName>
+						<Level>6</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>Banshee</UnitType>
+						<UnitName>Sister Seleeeena</UnitName>
+						<Level>6</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>SkeletonA</UnitType>
+						<UnitName>The Extended Family</UnitName>
+						<UnitGroupingType>UnitGroupingType_Group</UnitGroupingType>
+						<Level>6</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>SkeletonC</UnitType>
+						<UnitName>The Family Friends</UnitName>
+						<UnitGroupingType>UnitGroupingType_Group</UnitGroupingType>
+						<Level>6</Level>
+					</UnitInstance>
+				</Encounter>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I shall be back, make no mistake</Description>
+				<NextObjectiveID>0</NextObjectiveID>
+				<PopupMessage>"Weeeee wiiiiill beeeee waitiiiiiing foooor yooooooou." the Banshees respond.</PopupMessage>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<NextObjectiveID>2</NextObjectiveID>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<Description>Fight the Monsters</Description>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Destroy the Banshees</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>BattleFinished</Type>
+				<TextData>Banshee</TextData>
+				<MoreTextData>Victory</MoreTextData>
+			</QuestConditionDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>2</ObjectiveID>
+			<NextObjectiveID>3</NextObjectiveID>
+			<Description>Return to the dilapidated cemetary</Description>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Return to the dilapidated cemetary</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>UnitEntersQuestLocation</Type>
+			</QuestConditionDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>3</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Quest_WhisperOnTheWind">
+		<DisplayName>A Whisper On The Wind</DisplayName>
+		<Description>Coming upon this ancient stone ring probably erected to worship some forgotten gods, you can't help musing about the passing of time. Just when melancholy is about to fill your heart, the wind picks up suddenly. Insistently. How strange...
+		
+		"Mortal, I need you assistance." A voice whispers out of the blue. Bewildered, you look around. There is no one. Could there be ancient spirits still residing here?
+		
+		"No, no, no! Do not look for me for I am not truly at your side. My name is Rhol Shushah and I am what you land walkers call a "Crow Demon". Not very flattering I might add. Anyway as I said, I need your assistance. The Council of Elder Air Elementals, those pompous windbags, have punished me for taking too much interest in the affairs of mortals. For such a crime -hear the hyperbole- I have been sentenced to imprisonment in an airless pocket. The ultimate torture for one of my kind. I've managed to bribe the guardian so I could send my message to you."  
+		
+		"I feel for you but perhaps you could get to the point?" you respond to thin air.
+		
+		"Such impatience! Very well, the short version. If you can prove your worth -as a mortal representative- to the Council of airheads, they will be forced to concede that my transgressions were done in the name of scientific research. As I've been prompt to tell them. For that, you will have to defeat two sets of adversaries. The Council of the airbrushed will be observing. And finally the incentive: you help me, I help you. A modus vivendi of sorts. What do you say mortal?"</Description>
+		<IsStartingPointQuest>0</IsStartingPointQuest>
+		<ShortTextAccept>I accept the challenge</ShortTextAccept>
+		<ShortTextDeny>I've really got better things to do</ShortTextDeny>
+		<RewardText>A new stormy ally</RewardText>
+		<RewardImage>Medallion_Shushah.png</RewardImage>
+		<SuccessText>"I knew you were no pushover! You have proven your worth to the Council of Windbags err... Air Elementals! I am now free as the wind blows!" exclaims Rhol Shushah who has just materialized in a clap of thunder.
+		
+		"Now let's go have some fun!"</SuccessText>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>QuestLocation</TriggerType>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>4</SpawnRating>
+		<Image>Medallion_Shushah.png</Image>
+		<PrefQuestLoc>QuestLoc_StoneRing</PrefQuestLoc>
+		<Treasure>
+			<GameModifier InternalName="Reward1">
+				<ModType>Unit</ModType>
+				<Attribute>UnitJoinArmy</Attribute>
+				<Value>9</Value>
+				<StrVal>Champion_Shushah</StrVal>
+				<UnitClass>Champion</UnitClass>
+			</GameModifier>
+		</Treasure>
+		<Treasure>
+			<GameModifier InternalName="Reward3">
+				<ModType>Unit</ModType>
+				<Attribute>GiveExperience</Attribute>
+				<Value>15</Value>
+			</GameModifier>
+		</Treasure>
+		<Treasure>
+			<GameModifier InternalName="Reward4">
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>25</Value>
+			</GameModifier>
+		</Treasure>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<NextObjectiveID>1</NextObjectiveID>
+			<Description>The First Challenge</Description>
+			<Treasure>
+				<GameModifier>
+					<ModType>Map</ModType>
+					<Attribute>CreateGoodieHut</Attribute>
+					<StrVal>The Ruined Temple</StrVal>
+					<Unitclass>GH_ForgottenTemple</Unitclass>
+					<Radius>6</Radius>
+				</GameModifier>
+			</Treasure>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>The First Challenge</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>ClearGoodieHut</Type>
+				<TextData>GH_ForgottenTemple</TextData>
+				<Flag>RevealTarget</Flag>
+			</QuestConditionDef>
+			<ChoiceText>You come upon the ruined temple, the landmark agreed upon for the first battle. You can't help but swallow your anxiety as your opponents make their appearance: a Shrill Lord and his elemental pets!</ChoiceText>
+			<ChoiceMedallion>Shrilllord.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>Fight the Shrills</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Encounter>
+					<Liklihood>100</Liklihood>
+					<BattleIdentifier>ShrillLord</BattleIdentifier>
+					<WillRespawn>0</WillRespawn>
+					<WanderingRadius>0</WanderingRadius>
+					<UnitInstance>
+						<UnitType>ShrillLord</UnitType>
+						<Level>10</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>AirShrill</UnitType>
+						<Level>10</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>EarthShrill</UnitType>
+						<Level>10</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>FireShrill</UnitType>
+						<Level>10</Level>
+					</UnitInstance>
+					 <UnitInstance>
+						<UnitType>WaterShrill</UnitType>
+						<Level>10</Level>
+					</UnitInstance>
+				</Encounter>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I'm pretty sure I'll be back.</Description>
+				<NextObjectiveID>0</NextObjectiveID>
+				<PopupMessage>Maybe it's time to regroup, Shushah can wait a few seasons more.</PopupMessage>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<NextObjectiveID>2</NextObjectiveID>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Turn them into Shrill pudding</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>BattleFinished</Type>
+				<TextData>ShrillLord</TextData>
+				<MoreTextData>Victory</MoreTextData>
+				<CompletionText>"Yeeeeeessss! You did it!" huffs and puffs Shushah. "A word of advice, don't invite a Shrill Lord to diner, he can never decide whether he prefers his servings to be hot or cold. Now on to the second challenge!"</CompletionText>
+			</QuestConditionDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>2</ObjectiveID>
+			<NextObjectiveID>3</NextObjectiveID>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<Treasure>
+				<GameModifier>
+					<ModType>Map</ModType>
+					<Attribute>CreateGoodieHut</Attribute>
+					<StrVal>Electric Field</StrVal>
+					<Unitclass>GH_Quest_Field</Unitclass>
+					<Radius>6</Radius>
+				</GameModifier>
+			</Treasure>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>The Second Challenge</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>ClearGoodieHut</Type>
+				<TextData>GH_Quest_Field</TextData>
+				<Flag>RevealTarget</Flag>
+			</QuestConditionDef>
+			<ChoiceText>You follow Shushah's instructions to get to the "Electric Field" and find out it's been struck by lightning multiple times. It's not that surprising considering it's the home of Fantoush, the Storm Dragon. Who also happens to be your next adversary."</ChoiceText>
+			<ChoiceMedallion>M_StormDragon_Card.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>Show him you're no lightning rod</Description>
+				<NextObjectiveID>3</NextObjectiveID>
+				<Encounter>
+					<Liklihood>100</Liklihood>
+					<BattleIdentifier>StormDragon</BattleIdentifier>
+					<WillRespawn>0</WillRespawn>
+					<WanderingRadius>0</WanderingRadius>
+					<UnitInstance>
+						<UnitType>StormDragon</UnitType>
+						<UnitName>Fantoush</UnitName>
+						<Level>10</Level>
+					</UnitInstance>
+				</Encounter>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Ahem, I'm sure I'll be back</Description>
+				<NextObjectiveID>2</NextObjectiveID>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>3</ObjectiveID>
+			<NextObjectiveID>-1</NextObjectiveID>
+			<QuestEnd>1</QuestEnd>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Defeat Fantoush</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>BattleFinished</Type>
+				<TextData>StormDragon</TextData>
+				<MoreTextData>Victory</MoreTextData>
+			</QuestConditionDef>
+		</QuestObjectiveDef>
+	</QuestDef>
+</Quests>

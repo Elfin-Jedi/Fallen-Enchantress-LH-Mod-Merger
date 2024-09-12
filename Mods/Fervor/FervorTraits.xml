@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<AbilityBonuses>
+
+    <AbilityBonus InternalName="Blood_HallastanAbility">
+        <AbilityBonusOption InternalName="Blood_Hallastan">
+            <DisplayName>Hallastan Blood</DisplayName>
+            <Description>+1 Attack, +10 Spell Resistance, and gains Smite.</Description>
+            <Icon>RoundCrest_Hallasta.png</Icon>
+			<GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Boost</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Attack</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_MagicResist</StrVal>
+                <Value>10</Value>
+                <Provides>+10 Spell Resistance</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>UnlockCombatAbility</Attribute>
+                <StrVal>Smite</StrVal>
+                <Provides>Smite - does +1 per Level fire damage, usable at short range.</Provides>
+            </GameModifier>	
+            <HideWhenUpgraded>0</HideWhenUpgraded>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	
+	<AbilityBonus InternalName="Blood_PiatranAbility">
+        <AbilityBonusOption InternalName="Blood_Piatran">
+            <DisplayName>Piatran Blood</DisplayName>
+            <Description>+100% Poison Resistance, -50% Lightning Resistance, and gains Viper's Bite.</Description>
+            <Icon>RoundCrest_Piatra.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_ResistPoison</StrVal>
+                <Value>100</Value>
+                <Provides>+100% Poison Resistance</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_ResistLightning</StrVal>
+                <Value>-50</Value>
+                <Provides>-50% Lightning Resistance</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>UnlockCombatAbility</Attribute>
+                <StrVal>VipersBite</StrVal>
+                <Provides>Viper's Bite - Melee poison attack. If the targeted unit dies, gain 3 mana.</Provides>
+            </GameModifier>	
+            <HideWhenUpgraded>0</HideWhenUpgraded>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	    <AbilityBonus InternalName="Spell_SmiteAbility">
+        <AbilityBonusOption InternalName="Spell_Smite">
+            <DisplayName>Smite</DisplayName>
+            <Description>Allows the unit to use the Smite ability</Description>
+            <Icon>Ability_Tough_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>UnlockCombatAbility</Attribute>
+                <StrVal>Smite</StrVal>
+                <Provides>Smite - does +1 per Level fire damage, usable at short range.</Provides>
+            </GameModifier>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	<AbilityBonus InternalName="Spell_VipersBiteAbility">
+        <AbilityBonusOption InternalName="Spell_VipersBite">
+            <DisplayName>Viper's Bite</DisplayName>
+            <Description>Allows the unit to use the Viper's Bite ability</Description>
+            <Icon>Ability_Stun_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>UnlockCombatAbility</Attribute>
+                <StrVal>VipersBite</StrVal>
+                <Provides>Viper's Bite - Melee poison attack for 2 damage per level. If the targeted unit dies, gain 3 mana.</Provides>
+            </GameModifier>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	
+    <AbilityBonus InternalName="DarkRitesAbility">
+        <AbilityBonusType>Player</AbilityBonusType>
+        <AbilityBonusOption InternalName="DarkRites">
+            <DisplayName>Dark Rites</DisplayName>
+            <Description>Unlocks the Imprison spell, Demonic Ally (Arcane Mastery) and Summon Death Demon (Black Quire).</Description>
+            <Icon>Ability_Binding_Icon.png</Icon>		
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>UnlockSpell</Attribute>
+                <StrVal>DarkRitesImprison</StrVal>
+                <Provides>Unlocks Imprison, a spell that traps and damages one enemy.</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>UnlockSpell</Attribute>
+                <StrVal>DarkRitesDemonicAlly</StrVal>
+                <Provides>Unlocks Demonic Ally, a spell that summons an Assassin Demon. May summon one per champion with Death II or greater (unlocked by Sorcery technology).</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>UnlockSpell</Attribute>
+                <StrVal>DarkRitesSummonDeathDemon</StrVal>
+                <Provides>Unlocks Summon Death Demon, a spell that summons a Death Demon. May summon one per champion with Death V or greater (unlocked by Black Quire technology).</Provides>
+            </GameModifier>
+			<GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>UnlockSpell</Attribute>
+                <StrVal>DarkRitesFoulRitual</StrVal>
+                <Provides>Unlocks Foul Ritual, a spell that kills a target Champion to summon another in its place.  Can be cast four times.</Provides>
+            </GameModifier>
+			<Cost>2</Cost>	
+			<Type>Army</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	
+    <AbilityBonus InternalName="HolyCrusadersAbility">
+        <AbilityBonusType>Player</AbilityBonusType>
+        <AbilityBonusOption InternalName="HolyCrusaders">
+            <DisplayName>Fervor</DisplayName>
+            <Description>Unlocks Fireblessed Armor, Tempered Steel.  Replaces Inns with Chapels, Festivals with Churches, Consulates with Chapter Houses, and the Theatre/Arena with a Cathedral. Start with two Crusaders</Description>
+            <Icon>Ability_Zealotry_Icon.png</Icon>	
+			<GameModifier>
+                <Provides>Unlocks Fireblessed Chain Armor, Fireblessed Plate Armor, Tempered Shortswords, and Tempered Longswords.</Provides>
+            </GameModifier>
+            <GameModifier>
+                <Provides>Replaces Inns with Chapels, Festivals with Churches, Consulates with Chapter Houses, and the Theatre/Arena with a Cathedral.  These give the Crusader unit.</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Map</ModType>
+                <Attribute>SummonUnit</Attribute>
+                <StrVal>Crusader</StrVal>
+                <Value>4</Value>
+                <Provides>+1 starting Crusader</Provides>
+                <UnitClass>Crusader</UnitClass>
+            </GameModifier>	
+			<GameModifier>
+                <ModType>Map</ModType>
+                <Attribute>SummonUnit</Attribute>
+                <StrVal>Crusader</StrVal>
+                <Value>4</Value>
+                <Provides>+1 starting Crusader</Provides>
+                <UnitClass>Crusader</UnitClass>
+            </GameModifier>	
+			<Cost>2</Cost>	
+			<Type>Army</Type>			
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	<AbilityBonus InternalName="ResoluteAbility">
+        <AbilityBonusType>Champion_Talent</AbilityBonusType>
+        <AbilityBonusOption InternalName="Resolute">
+            <DisplayName>Resolute</DisplayName>
+            <Description>+3 Defense</Description>
+            <Icon>Ability_TemperedSteel_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Defense_Pierce</StrVal>
+                <Value>3</Value>
+                <Provides>+3 Defense</Provides>
+            </GameModifier>
+            <Cost>1</Cost>
+            <Type>Defensive</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	<AbilityBonus InternalName="MercilessAbility">
+        <AbilityBonusType>Champion_Talent</AbilityBonusType>
+        <AbilityBonusOption InternalName="Merciless">
+            <DisplayName>Merciless</DisplayName>
+            <Description>+10% Spell Damage, +5 Spell Mastery</Description>
+            <Icon>Ability_Pyromancy_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_SpellDamage</StrVal>
+                <Value>10<Value>
+                <Provides>+10% Spell Damage</Provides>
+            </GameModifier>
+			<GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_MagicPower</StrVal>
+                <Value>5</Value>
+				<Provides>+5 Spell Mastery</Provides>
+            </GameModifier>
+            <Cost>1</Cost>
+            <Type>Aggressive</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	<AbilityBonus InternalName="ViciousAbility">
+        <AbilityBonusType>Champion_Talent</AbilityBonusType>
+        <AbilityBonusOption InternalName="Vicious">
+            <DisplayName>Vicious</DisplayName>
+            <Description>+5 to Critical Hit chance, +20% to Critical Hit damage</Description>
+            <Icon>Ability_ChannelLightning_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_ChanceToCrit</StrVal>
+                <Value>5</Value>
+                <Provides>+5 to Critical Hit chance</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_CritDamageMultiplier</StrVal>
+                <Value>0.1</Value>
+                <Provides>+20% to Critical Hit damage</Provides>
+            </GameModifier>
+            <Cost>1</Cost>
+            <Type>Defensive</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	<AbilityBonus InternalName="MobilityAbility">
+        <AbilityBonusType>Champion_Talent</AbilityBonusType>
+        <AbilityBonusOption InternalName="Mobility">
+            <DisplayName>Mobility</DisplayName>
+            <Description>+1 Moves</Description>
+            <Icon>Ability_RoadWarriors_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Moves</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Moves</Provides>
+            </GameModifier>
+            <Cost>1</Cost>
+            <Type>Aggressive</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	
+	<AbilityBonus InternalName="ThrallAbility">
+        <AbilityBonusOption InternalName="Thrall">
+            <DisplayName>Thrall</DisplayName>
+            <Description>-1 Hit Point per Level, -10 Spell Resist and -4 Initiative</Description>
+            <Icon>Ability_Slave_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_HitPoints</StrVal>
+                <Value>-1</Value>
+                <PerLevel>1</PerLevel>
+                <Provides>-1 Hit Point per Level</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_MagicResist</StrVal>
+                <Value>-10</Value>
+                <Provides>-10 Spell Resistance</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_CombatSpeed</StrVal>
+                <Value>-4</Value>
+                <Provides>-4 Initiative</Provides>
+            </GameModifier>
+            <Type>Weakness</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	<AbilityBonus InternalName="TrainThrallsAbility">
+        <AbilityBonusOption InternalName="TrainThralls">
+            <DisplayName>Corrupt Thralls</DisplayName>
+            <Description>This faction can corrupt men into Thralls.  Thralls don't cost wages and cost less labor to produce but are weak of will and body.</Description>
+            <Icon>Ability_TrainSlaves_Icon.png</Icon>
+            <GameModifier>
+                <Provides>This faction can corrupt men into Thralls.  Thralls don't cost wages and cost less labor to produce but are weak of will and body.</Provides>
+            </GameModifier>
+            <Type>Army</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	
+    <AbilityBonus InternalName="Player_Weakness">
+        <AbilityBonusType>Player</AbilityBonusType>
+        <AbilityBonusOption InternalName="Overzealous">
+            <DisplayName>Overzealous</DisplayName>
+            <Description>This faction is zealous and discriminates against all dissenters. +5% Unrest. -1 Fame per 10 turns.</Description>
+            <Icon>Ability_Cruel_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_Additive_Unrest</StrVal>
+                <Value>5</Value>
+                <Provides>+5% Unrest</Provides>
+            </GameModifier>
+			<GameModifier>
+                <ModType>Resource</ModType>
+                <Attribute>Fame</Attribute>
+                <Value>-0.1</Value>
+                <PerTurn>1</PerTurn>
+                <Provides>-1 Fame every 10 Seasons</Provides>
+            </GameModifier>
+            <Cost>-1</Cost>
+            <Type>Army</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+		
+        <AbilityBonusOption InternalName="Paranoid_Isolationists">
+            <DisplayName>Paranoid Isolationists</DisplayName>
+            <Description>This faction is paranoid of interference in their affairs. -50% value of trades and cannot offer trade, economic, or research treaties.</Description>
+            <Icon>Ability_Amnesia_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_Diplomacy</StrVal>
+                <Value>-50</Value>
+                <Provides>-50% value of trades</Provides>
+            </GameModifier>
+            <Cost>-1</Cost>
+            <Type>Defensive</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	
+	<AbilityBonus InternalName="Champion_History">
+        <AbilityBonusType>Champion_History</AbilityBonusType>
+        <AbilityBonusOption InternalName="CrusaderHero">
+            <DisplayName>Crusader</DisplayName>
+            <Description>Start with a Crusader unit.  May cast the Convert spell, which converts men to the cause</Description>
+            <Icon>Ability_Crusader_Icon.png</Icon>
+            <GameModifier>
+                <Provides>May cast the Convert spell, which converts men to the cause</Provides>
+            </GameModifier>
+			<GameModifier>
+                <ModType>Map</ModType>
+                <Attribute>SummonUnit</Attribute>
+                <StrVal>Crusader</StrVal>
+                <Value>5</Value>
+                <Provides>+1 starting Crusader</Provides>
+                <UnitClass>Defender</UnitClass>
+            </GameModifier>
+            <Cost>1</Cost>
+            <Type>Aggressive</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+		<AbilityBonusOption InternalName="Priest">
+            <DisplayName>Priest</DisplayName>
+            <Description>+20% Mana</Description>
+            <Icon>Ability_Affinity_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_Mana</StrVal>
+                <Value>30</Value>
+                <Provides>+30% Mana</Provides>					
+            </GameModifier>	
+            <Cost>1</Cost>
+            <Type>Army</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+	</AbilityBonus>
+	
+	<AbilityBonus InternalName="Champion_Weakness">
+        <AbilityBonusType>Champion_Talent</AbilityBonusType>
+        <AbilityBonusOption InternalName="Deranged">
+            <DisplayName>Deranged</DisplayName>
+            <Description>-10% to the Army's Experience.  This leader is dangerously deranged, and all troops under command must be wary.</Description>
+            <Icon>Ability_Scarred_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustArmyStat</Attribute>
+                <StrVal>UnitStat_ExpBonus</StrVal>
+                <Value>-10</Value>
+                <Provides>-10% to the Army's Experience</Provides>
+            </GameModifier>
+            <Cost>-1</Cost>
+            <Type>Weakness</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+		<AbilityBonusOption InternalName="Fanatical">
+            <DisplayName>Fanatical</DisplayName>
+            <Description>+1 to Initiative, +5 Unrest in all cities.  This leader is a religious fanatic, and has a burning desire to kill heathens!</Description>
+            <Icon>Ability_AfraidofDying_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_CombatSpeed</StrVal>
+                <Value>1</Value>
+            </GameModifier>
+			<GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_Additive_Unrest</StrVal>
+                <Value>5</Value>
+                <Provides>+5 Unrest in all cities</Provides>
+            </GameModifier>
+            <Cost>-1</Cost>
+            <Type>Weakness</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+		<AbilityBonusOption InternalName="Careless">
+            <DisplayName>Careless</DisplayName>
+            <Description>-2 Defense</Description>
+            <Icon>Ability_BrokenSpirit_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Defense_Pierce</StrVal>
+                <Value>-2</Value>
+                <Provides>-2 Defense</Provides>
+            </GameModifier>
+            <Cost>-1</Cost>
+            <Type>Weakness</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+		<AbilityBonusOption InternalName="Lazy">
+            <DisplayName>Lazy</DisplayName>
+            <Description>-1 to Initiative</Description>
+            <Icon>Ability_Inefficient_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_CombatSpeed</StrVal>
+                <Value>-1</Value>
+            </GameModifier>
+            <Cost>-1</Cost>
+            <Type>Weakness</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+	</AbilityBonus>
+	
+</AbilityBonuses>

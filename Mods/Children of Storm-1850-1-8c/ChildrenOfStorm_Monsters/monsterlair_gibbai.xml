@@ -1,0 +1,509 @@
+<?xml version="1.0"?>
+<Container>
+  <UnitType InternalName="Gibbai">
+    <DisplayName>Gibbai</DisplayName>
+    <CreatureType>Elemental</CreatureType>
+    <CanBeDesigned>0</CanBeDesigned>
+    <IsSovereign>0</IsSovereign>
+    <AllowGrouping>0</AllowGrouping>
+    <HasWages>0</HasWages>
+    <SpawnRating>6</SpawnRating>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <UnitStat_Accuracy>75</UnitStat_Accuracy>
+      <UnitStat_Attack_Pierce>11</UnitStat_Attack_Pierce>
+      <UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+      <UnitStat_CombatSpeed>20</UnitStat_CombatSpeed>
+      <UnitStat_HitPoints>11</UnitStat_HitPoints>
+      <UnitStat_WeightCapacity>100</UnitStat_WeightCapacity>
+      <UnitStat_BG_IsMonster>1</UnitStat_BG_IsMonster>
+      <UnitStat_BG_IsElemental>1</UnitStat_BG_IsElemental>
+      <UnitStat_Defense_Blunt>12</UnitStat_Defense_Blunt>
+      <UnitStat_Defense_Cutting>12</UnitStat_Defense_Cutting>
+      <UnitStat_Defense_Pierce>12</UnitStat_Defense_Pierce>
+    </LevelMilestone>
+    <LevelMilestone InternalName="L15">
+      <Level>15</Level>
+      <UnitStat_Accuracy>75</UnitStat_Accuracy>
+      <UnitStat_Attack_Pierce>22</UnitStat_Attack_Pierce>
+      <UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+      <UnitStat_CombatSpeed>20</UnitStat_CombatSpeed>
+      <UnitStat_HitPoints>17</UnitStat_HitPoints>
+      <UnitStat_WeightCapacity>100</UnitStat_WeightCapacity>
+      <UnitStat_Defense_Blunt>22</UnitStat_Defense_Blunt>
+      <UnitStat_Defense_Cutting>22</UnitStat_Defense_Cutting>
+      <UnitStat_Defense_Pierce>22</UnitStat_Defense_Pierce>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Tough</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>VulnerableToFire</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Dodge1</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Dodge2</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Dodge3</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>ShadowStrike1_Gibbai</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>DeflectMissiles</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>NightmareDimension</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>UnitStat_BG_IsFlyingAbility</SelectedAbilityBonusOption>
+    <Backstory>Gibbais are dark spirits that first crawled out of their hiding places during the War of Magic. As is well known, this was the first time that the lands became truly affected by the Kingdom and Empire ideologies, causing the very environment around these nations to change. Possibly this gave the Gibbai their dark powers. Half-corporeal, their touch can pass through almost any armour and reach for the heart of whoever they have set their evil minds to haunt that day. They are disturbing to look at with the naked eye, parts of their body will grow transparent and then return to normal moments later. They are even capable of using this fading method to levitate for short amounts of time.
+
+The Gibbai are responsible for much of the bad blood that has risen against the Shadows of late, even though the Shadows and the Gibbai are nothing alike.</Backstory>
+    <Medallions InternalName="">
+      <All>ryzomgibbai_medallion.png</All>
+    </Medallions>
+    <AnimationPack>7HydraAnimationPack</AnimationPack>
+    <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+    <ClothMapScale>0.615</ClothMapScale>
+    <Color_Skin>34,34,34,255</Color_Skin>
+    <CutSceneDataPack>BoneOgreUnitCutscenePack</CutSceneDataPack>
+    <EyeTexture>gfx/eyes/male_brown_eye.png</EyeTexture>
+    <InfoCardBackground>BG_EmpireRugged</InfoCardBackground>
+    <ModelPath>gibbai_mesh.hkb</ModelPath>
+    <ModelScale>2.5</ModelScale>
+    <TacticalModelScale>3.75</TacticalModelScale>
+    <ClothMapScale>1.6000</ClothMapScale>
+    <SkeletonPath>ryzomgibbai_skeleton.hkb</SkeletonPath>
+    <SoundPack>SoundPack_Dragon1</SoundPack>
+    <Color_All>0,0,0,255</Color_All>
+  </UnitType>
+  <AbilityBonus InternalName="ShadowStrike1Ability">
+    <AbilityBonusOption InternalName="ShadowStrike1_Gibbai">
+      <DisplayName>Spirit Touch</DisplayName>
+      <Description>Attacks ignore 100% of the target's Defense</Description>
+      <Icon>Ability_ShadowStrikeI_Icon.png</Icon>
+      <IsCombatAbility>1</IsCombatAbility>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ArmorPierce</StrVal>
+        <Value>50</Value>
+        <Provides>Attacks ignore 100% of the target's Defense</Provides>
+      </GameModifier>
+      <CombatRating>100</CombatRating>
+      <Type>Aggressive</Type>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="NightmareDimension">
+    <AbilityBonusOption InternalName="NightmareDimension">
+      <DisplayName>Nightmare Dimension</DisplayName>
+      <Description>Nightmare Dimension</Description>
+      <Icon>Ability_Amnesia_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_NightmareDimension</StrVal>
+        <Multiplier>2</Multiplier>
+        <Provides>If attacked on the strategic map, Gibbai will pull the attacking army into an alternate dimension. While in this dimension the Gibbai deal +50% Pierce attack against all targets. If the Gibbai are the ones that initiate the battle, this effect does not occur. If the Gibbai are grouped with other units this effect may sometimes occur if attacked.</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Attack_Pierce</StrVal>
+        <StrVal2>UnitStat_NightmareDimension</StrVal2>
+        <Multiplier>1.5</Multiplier>
+        <vsLower>1</vsLower>
+        <Provides>.</Provides>
+      </GameModifier>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <GoodieHutType InternalName="Lair_Gibbai">
+    <Name>Gibbai Lair</Name>
+    <Description>Gibbai rarely stay in one place for long, but on occassion their camps can be found in forest areas.</Description>
+    <Rarity>40</Rarity>
+    <MinDistanceFromStartingPoints>12</MinDistanceFromStartingPoints>
+    <BarredTerrain>River</BarredTerrain>
+    <PreferredTerrain>Category:Forest</PreferredTerrain>
+    <PreferredTerrain>SwampTerrain</PreferredTerrain>
+    <ReleaseGuardiansOnInfluenceHit>1</ReleaseGuardiansOnInfluenceHit>
+    <SpawnRating>0</SpawnRating>
+    <TileDesign>Lair_Warg</TileDesign>
+    <DrawnIcon>Lair_Warg.png</DrawnIcon>
+    <OnSelectSFX>Click_Forest_Wolf</OnSelectSFX>
+    <Medallions InternalName="">
+      <All>ryzomgibbai_medallion.png</All>
+    </Medallions>
+    <Treasure>
+      <Liklihood>100</Liklihood>
+      <GameModifier>
+        <ModType>GiveItem</ModType>
+        <StrVal>Rare</StrVal>
+      </GameModifier>
+    </Treasure>
+    <Encounter>
+      <TacticalMap>SW_NightmareDimension5</TacticalMap>
+      <Liklihood>100</Liklihood>
+      <WillRespawn>0</WillRespawn>
+      <WanderingRadius>0</WanderingRadius>
+      <UnitInstance>
+        <UnitType>Gibbai</UnitType>
+        <Level>2</Level>
+      </UnitInstance>
+      <UnitInstance>
+        <UnitType>Gibbai</UnitType>
+        <Level>3</Level>
+      </UnitInstance>
+      <UnitInstance>
+        <UnitType>Gibbai</UnitType>
+        <Level>5</Level>
+      </UnitInstance>
+      <UnitInstance>
+        <UnitType>Gibbai</UnitType>
+        <Level>3</Level>
+      </UnitInstance>
+      <UnitInstance>
+        <UnitType>Gibbai</UnitType>
+        <Level>2</Level>
+      </UnitInstance>
+    </Encounter>
+    <Encounter>
+      <TacticalMap>SW_NightmareDimension5</TacticalMap>
+      <Liklihood>-1</Liklihood>
+      <WillRespawn>1</WillRespawn>
+      <RespawnChance>5</RespawnChance>
+      <RespawnDelay>35</RespawnDelay>
+      <WanderingRadius>5</WanderingRadius>
+      <UnitInstance>
+        <UnitType>Gibbai</UnitType>
+        <Level>4</Level>
+      </UnitInstance>
+      <UnitInstance>
+        <UnitType>Gibbai</UnitType>
+        <Level>2</Level>
+      </UnitInstance>
+      <UnitInstance>
+        <UnitType>Gibbai</UnitType>
+        <Level>1</Level>
+      </UnitInstance>
+    </Encounter>
+  </GoodieHutType>
+  <AnimationPack InternalName="7HydraAnimationPack">
+    <DisplayName>Hydra Animation Pack</DisplayName>
+    <IsAvailableForSovereignCustomization>False</IsAvailableForSovereignCustomization>
+    <AnimationSubPack>7D_Hydra_Idle_Animations</AnimationSubPack>
+    <AnimationSubPack>7D_Hydra_HeroPoseFront_Animations</AnimationSubPack>
+    <AnimationSubPack>7D_Hydra_Run_Animations</AnimationSubPack>
+    <AnimationSubPack>7D_Hydra_BattleRun_Animations</AnimationSubPack>
+    <AnimationSubPack>7D_Hydra_BattleIdle_Animations</AnimationSubPack>
+    <AnimationSubPack>7D_Hydra_Attack_Animations</AnimationSubPack>
+    <AnimationSubPack>7D_Hydra_AttackKill_Animations</AnimationSubPack>
+    <AnimationSubPack>7D_Hydra_Dodge_Animations</AnimationSubPack>
+    <AnimationSubPack>7D_Hydra_Block_Animations</AnimationSubPack>
+    <AnimationSubPack>7D_Hydra_OnHit_Animations</AnimationSubPack>
+    <AnimationSubPack>7D_Hydra_Death_Animations</AnimationSubPack>
+    <AnimationSubPack>7D_Hydra_ClothPose_Animations</AnimationSubPack>
+    <AnimationSubPack>7D_Hydra_KnockedProne_Animations</AnimationSubPack>
+    <AnimationSubPack>7D_Hydra_ProneIdle_Animations</AnimationSubPack>
+    <AnimationSubPack>7D_Hydra_Prone_OnHit_Animations</AnimationSubPack>
+    <AnimationSubPack>7D_Hydra_Prone_Killed_Animations</AnimationSubPack>
+    <AnimationSubPack>7D_Hydra_Prone_Recover_Animations</AnimationSubPack>
+  </AnimationPack>
+  <AnimationSubPack InternalName="7D_Hydra_Idle_Animations">
+    <Type>Idle</Type>
+    <AnimationInSubPack>
+      <Animation>7D_Hydra_Idle_01</Animation>
+      <likelihood>33</likelihood>
+    </AnimationInSubPack>
+    <AnimationInSubPack>
+      <Animation>7D_Hydra_Idle_02</Animation>
+      <likelihood>33</likelihood>
+    </AnimationInSubPack>
+    <AnimationInSubPack>
+      <Animation>7D_Hydra_Idle_03</Animation>
+      <likelihood>33</likelihood>
+    </AnimationInSubPack>
+    <AnimationInSubPack>
+      <Animation>7D_Hydra_Idle_04</Animation>
+      <likelihood>33</likelihood>
+    </AnimationInSubPack>
+    <AnimationInSubPack>
+      <Animation>7D_Hydra_Idle_05</Animation>
+      <likelihood>33</likelihood>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="7D_Hydra_HeroPoseFront_Animations">
+    <Type>HeroPoseFront</Type>
+    <AnimationInSubPack>
+      <Animation>7D_Hydra_Idle_01</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="7D_Hydra_Run_Animations">
+    <Type>Run</Type>
+    <AnimationInSubPack>
+      <Animation>7D_Hydra_Run_01</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="7D_Hydra_BattleRun_Animations">
+    <Type>BattleRun</Type>
+    <AnimationInSubPack>
+      <Animation>7D_Hydra_BattleRun_01</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="7D_Hydra_BattleIdle_Animations">
+    <Type>BattleIdle</Type>
+    <AnimationInSubPack>
+      <Animation>7D_Hydra_Idle_02</Animation>
+      <likelihood>33</likelihood>
+    </AnimationInSubPack>
+    <AnimationInSubPack>
+      <Animation>7D_Hydra_Idle_03</Animation>
+      <likelihood>33</likelihood>
+    </AnimationInSubPack>
+    <AnimationInSubPack>
+      <Animation>7D_Hydra_Idle_04</Animation>
+      <likelihood>33</likelihood>
+    </AnimationInSubPack>
+    <AnimationInSubPack>
+      <Animation>7D_Hydra_Idle_05</Animation>
+      <likelihood>33</likelihood>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="7D_Hydra_Attack_Animations">
+    <Type>Attack</Type>
+    <AnimationInSubPack>
+      <Animation>7D_Hydra_Attack_01</Animation>
+      <likelihood>25</likelihood>
+    </AnimationInSubPack>
+    <AnimationInSubPack>
+      <Animation>7D_Hydra_Attack_02</Animation>
+      <likelihood>25</likelihood>
+    </AnimationInSubPack>
+    <AnimationInSubPack>
+      <Animation>7D_Hydra_Attack_03</Animation>
+      <likelihood>25</likelihood>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="7D_Hydra_AttackKill_Animations">
+    <Type>AttackKill</Type>
+    <AnimationInSubPack>
+      <Animation>7D_Hydra_Attack_01</Animation>
+      <likelihood>25</likelihood>
+    </AnimationInSubPack>
+    <AnimationInSubPack>
+      <Animation>7D_Hydra_Attack_02</Animation>
+      <likelihood>25</likelihood>
+    </AnimationInSubPack>
+    <AnimationInSubPack>
+      <Animation>7D_Hydra_Attack_03</Animation>
+      <likelihood>25</likelihood>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="7D_Hydra_Dodge_Animations">
+    <Type>Dodge</Type>
+    <AnimationInSubPack>
+      <Animation>7D_Hydra_Dodge_01</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="7D_Hydra_Block_Animations">
+    <Type>Block</Type>
+    <AnimationInSubPack>
+      <Animation>7D_Hydra_Onhit_01</Animation>
+      <likelihood>25</likelihood>
+    </AnimationInSubPack>
+    <AnimationInSubPack>
+      <Animation>7D_Hydra_Onhit_02</Animation>
+      <likelihood>25</likelihood>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="7D_Hydra_OnHit_Animations">
+    <Type>OnHit</Type>
+    <AnimationInSubPack>
+      <Animation>7D_Hydra_Onhit_01</Animation>
+      <likelihood>25</likelihood>
+    </AnimationInSubPack>
+    <AnimationInSubPack>
+      <Animation>7D_Hydra_Onhit_02</Animation>
+      <likelihood>25</likelihood>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="7D_Hydra_Death_Animations">
+    <Type>Death</Type>
+    <AnimationInSubPack>
+      <Animation>7D_Hydra_Death_01</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="7D_Hydra_ClothPose_Animations">
+    <Type>ClothPose</Type>
+    <AnimationInSubPack>
+      <Animation>7D_Hydra_ClothPose_01</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="7D_Hydra_KnockedProne_Animations">
+    <Type>KnockedProne</Type>
+    <AnimationInSubPack>
+      <Animation>7D_Hydra_KnockedProne</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="7D_Hydra_ProneIdle_Animations">
+    <Type>ProneIdle</Type>
+    <AnimationInSubPack>
+      <Animation>7D_Hydra_ProneIdle</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="7D_Hydra_Prone_OnHit_Animations">
+    <Type>OnHitProne</Type>
+    <AnimationInSubPack>
+      <Animation>7D_Hydra_Onhit_01</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="7D_Hydra_Prone_Killed_Animations">
+    <Type>ProneDeath</Type>
+    <AnimationInSubPack>
+      <Animation>7D_Hydra_Death_01</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="7D_Hydra_Prone_Recover_Animations">
+    <Type>Recover</Type>
+    <AnimationInSubPack>
+      <Animation>7D_Hydra_Prone_Recover</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <Animation InternalName="7D_Hydra_KnockedProne">
+    <FileName>ryzomgibbai_proneenter.hkb</FileName>
+    <CropFrames>0</CropFrames>
+  </Animation>
+  <Animation InternalName="7D_Hydra_ProneIdle">
+    <FileName>ryzomgibbai_proneloop.hkb</FileName>
+    <CropFrames>0</CropFrames>
+  </Animation>
+  <Animation InternalName="7D_Hydra_Prone_Recover">
+    <FileName>ryzomgibbai_pronerecover.hkb</FileName>
+    <CropFrames>0</CropFrames>
+  </Animation>
+  <Animation InternalName="7D_Hydra_ClothPose_01">
+    <FileName>ryzomgibbai_clothpose01.hkb</FileName>
+    <CropFrames>0</CropFrames>
+  </Animation>
+  <Animation InternalName="7D_Hydra_Idle_01">
+    <FileName>ryzomgibbai_idle01.hkb</FileName>
+    <CropFrames>0</CropFrames>
+  </Animation>
+  <Animation InternalName="7D_Hydra_Idle_02">
+    <FileName>ryzomgibbai_idle02.hkb</FileName>
+    <CropFrames>0</CropFrames>
+  </Animation>
+  <Animation InternalName="7D_Hydra_Idle_03">
+    <FileName>ryzomgibbai_idle03.hkb</FileName>
+    <CropFrames>0</CropFrames>
+  </Animation>
+  <Animation InternalName="7D_Hydra_Idle_04">
+    <FileName>ryzomgibbai_idle04.hkb</FileName>
+    <CropFrames>0</CropFrames>
+  </Animation>
+  <Animation InternalName="7D_Hydra_Idle_05">
+    <FileName>ryzomgibbai_idle05.hkb</FileName>
+    <CropFrames>0</CropFrames>
+  </Animation>
+  <Animation InternalName="7D_Hydra_Run_01">
+    <FileName>ryzomgibbai_run01.hkb</FileName>
+    <DeltaZ>225</DeltaZ>
+    <PlaybackSpeedModifier>1.5</PlaybackSpeedModifier>
+  </Animation>
+  <Animation InternalName="7D_Hydra_BattleRun_01">
+    <FileName>ryzomgibbai_run01.hkb</FileName>
+    <DeltaZ>225</DeltaZ>
+    <PlaybackSpeedModifier>1.5</PlaybackSpeedModifier>
+  </Animation>
+  <Animation InternalName="7D_Hydra_Attack_01">
+    <FileName>ryzomgibbai_attack01.hkb</FileName>
+    <CropFrames>2</CropFrames>
+  </Animation>
+  <Animation InternalName="7D_Hydra_Attack_02">
+    <FileName>ryzomgibbai_attack02.hkb</FileName>
+  </Animation>
+  <Animation InternalName="7D_Hydra_Attack_03">
+    <FileName>ryzomgibbai_attack03.hkb</FileName>
+  </Animation>
+  <Animation InternalName="7D_Hydra_Onhit_01">
+    <FileName>ryzomgibbai_attacked01.hkb</FileName>
+  </Animation>
+  <Animation InternalName="7D_Hydra_Onhit_02">
+    <FileName>ryzomgibbai_attacked02.hkb</FileName>
+  </Animation>
+  <Animation InternalName="7D_Hydra_Dodge_01">
+    <FileName>ryzomgibbai_dodge01.hkb</FileName>
+  </Animation>
+  <Animation InternalName="7D_Hydra_Death_01">
+    <FileName>ryzomgibbai_death01.hkb</FileName>
+  </Animation>
+  <TerrainType InternalName="Rugged_Land_Gibbai">
+    <DisplayName>Nightmare Dimension</DisplayName>
+    <MaxHeight>55</MaxHeight>
+    <MinHeight>50</MinHeight>
+    <MovementCost>8</MovementCost>
+    <TerrainMovementNote>1x Movement</TerrainMovementNote>
+    <Category>Land</Category>
+    <IsTerrainFeature>0</IsTerrainFeature>
+    <IsBaseTerrain>1</IsBaseTerrain>
+    <PassableByLandUnits>1</PassableByLandUnits>
+    <PassableByWaterUnits>0</PassableByWaterUnits>
+    <PassableByAirUnits>1</PassableByAirUnits>
+    <SuitableForStartingLocation>1</SuitableForStartingLocation>
+    <Indestructable>0</Indestructable>
+    <MinTilesPerSplat>0</MinTilesPerSplat>
+    <MaxTilesPerSplat>0</MaxTilesPerSplat>
+    <MinBrushRadius>0</MinBrushRadius>
+    <MaxBrushRadius>0</MaxBrushRadius>
+    <GenMethod>Radial</GenMethod>
+    <PlacementOrder>0</PlacementOrder>
+    <SupportsSubTerrain>false</SupportsSubTerrain>
+    <IsBorderTerrain>0</IsBorderTerrain>
+    <CannotBorder>Category:Water</CannotBorder>
+    <MapGenPlaceChance>20</MapGenPlaceChance>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>AdjustDefendingUnit</Attribute>
+      <Value>1</Value>
+      <StrVal>UnitStat_NightmareDimension</StrVal>
+      <PerTurn>1</PerTurn>
+    </GameModifier>
+    <TerrainTypeEnvData>
+      <Environment>Barren</Environment>
+      <Texture>gfx/terrain/barren_ground_Blighted.dds</Texture>
+      <TextureWeight>1.0000</TextureWeight>
+      <TerrainPropData>P_Berren_Rugged_01,100</TerrainPropData>
+      <TerrainPropData>P_Berren_Rugged_02,100</TerrainPropData>
+      <TerrainPropData>P_Berren_Rugged_03,100</TerrainPropData>
+      <TerrainPropData>P_Berren_Rugged_04,100</TerrainPropData>
+      <TerrainPropData>P_Berren_Rugged_05,100</TerrainPropData>
+      <TacticalMap>T_Barren_Rugged_01</TacticalMap>
+      <TacticalMap>T_Barren_Rugged_02</TacticalMap>
+      <TacticalMap>T_Barren_Rugged_03</TacticalMap>
+      <TacticalMap>T_Barren_Rugged_09</TacticalMap>
+      <TacticalMap>T_Barren_Rugged_10</TacticalMap>
+      <DistanceFogColor>94,89,76</DistanceFogColor>
+      <ClothMapColor>200,165,115</ClothMapColor>
+    </TerrainTypeEnvData>
+    <TerrainTypeEnvData>
+      <Environment>Dead</Environment>
+      <GrantsTileYields>1</GrantsTileYields>
+      <Texture>gfx/terrain/fallen_ground_rough.dds</Texture>
+      <TerrainPropData>P_Fallen_Rugged_Land_01,100</TerrainPropData>
+      <TerrainPropData>P_Fallen_Rugged_Land_02,100</TerrainPropData>
+      <TerrainPropData>P_Fallen_Rugged_Land_03,100</TerrainPropData>
+      <TerrainPropData>P_Fallen_Rugged_Land_04,100</TerrainPropData>
+      <TerrainPropData>P_Fallen_Rugged_Land_05,100</TerrainPropData>
+      <TerrainPropData>P_Fallen_Rugged_Land_06,100</TerrainPropData>
+      <TextureWeight>1.0000</TextureWeight>
+      <TacticalMap>T_Fallen_Rugged_01</TacticalMap>
+      <DistanceFogColor>83,65,88</DistanceFogColor>
+      <ClothMapColor>150,160,165</ClothMapColor>
+    </TerrainTypeEnvData>
+    <TerrainTypeEnvData>
+      <Environment>Grassland</Environment>
+      <GrantsTileYields>1</GrantsTileYields>
+      <Texture>gfx/terrain/light_grass_rough.dds</Texture>
+      <TextureWeight>1.0000</TextureWeight>
+      <TerrainPropData>P_Grassland_01,100</TerrainPropData>
+      <TerrainPropData>P_Grassland_02,50</TerrainPropData>
+      <TerrainPropData>P_Grassland_03,30</TerrainPropData>
+      <TerrainPropData>P_Grassland_04,100</TerrainPropData>
+      <TerrainPropData>P_Grassland_05,90</TerrainPropData>
+      <TacticalMap>T_Grassland_Rugged_01</TacticalMap>
+      <TacticalMap>T_Grassland_Rugged_02</TacticalMap>
+      <TacticalMap>T_Grassland_Rugged_03</TacticalMap>
+      <DistanceFogColor>200,220,228</DistanceFogColor>
+      <ClothMapColor>175,170,110</ClothMapColor>
+    </TerrainTypeEnvData>
+  </TerrainType>
+</Container>

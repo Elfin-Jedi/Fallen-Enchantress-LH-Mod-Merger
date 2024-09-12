@@ -1,0 +1,720 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<ImprovementTypes>
+	
+    <ImprovementType InternalName="AncMonument">
+        <DisplayName>Ancient Monument</DisplayName>
+        <Description>Ancient Monuments can be built on prestious locations.  They produce 1 Influence per Season, and 1 Research per Season.</Description>
+        <IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+        <RequiresCity>0</RequiresCity>
+        <RequiresResource>1</RequiresResource>
+        <SupportedResourceType>ScenicViewBonusType</SupportedResourceType>
+        <PreferredTerrain>Category:Land</PreferredTerrain>	
+        <GameModifier>
+            <ModType>ConstructionResourceCost</ModType>
+            <Attribute>Gold</Attribute>
+            <Value>-10</Value>
+        </GameModifier>
+        <LaborToBuild>100</LaborToBuild>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Research</Attribute>
+            <Value>1</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>+1 Research</Provides>
+        </GameModifier>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Archaeology</Attribute>
+            <Target>Player</Target>
+        </Prereq>		
+        <AIData AIPersonality="AI_General">
+            <AIPriority>25</AIPriority>
+            <AITag>Study</AITag>
+        </AIData>
+        <ArtDef>Art_AncMonument</ArtDef>
+    </ImprovementType>
+	
+    <ImprovementType InternalName="ArchAncientTemple">
+        <DisplayName>Ancient Temple</DisplayName>
+        <Description>Ancient Temples can only be built on temple ruins.  They provide additional Research every Season.</Description>
+        <IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+        <RequiresResource>1</RequiresResource>
+        <SupportedResourceType>TempleRuins</SupportedResourceType>
+        <PreferredTerrain>Category:Land</PreferredTerrain>
+        <LaborToBuild>80</LaborToBuild>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Research</Attribute>
+            <Value>2</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>+2 Research per Season</Provides>
+            <UpgradeComparisonID>1</UpgradeComparisonID>
+        </GameModifier>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Archaeology</Attribute>
+            <Target>Player</Target>
+        </Prereq>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+            <AITag>Shards</AITag>
+        </AIData>
+        <ArtDef>Art_AncientTemple</ArtDef>
+    </ImprovementType>
+	
+    <ImprovementType InternalName="AncientTemple">
+        <Prereq>
+            <Type>RestrictedAbilityBonusOption</Type>
+            <Attribute>Archaeology</Attribute>
+            <Target>Player</Target>
+        </Prereq>
+    </ImprovementType>
+
+    <ImprovementType InternalName="Stable">
+        <Prereq>
+            <Type>RestrictedAbilityBonusOption</Type>
+            <Attribute>Horses</Attribute>
+            <Target>Player</Target>
+        </Prereq>	
+    </ImprovementType>	
+
+    <ImprovementType InternalName="Ranch_Lord">
+        <DisplayName>Destrier Ranch</DisplayName>
+        <Description>Destrier Ranches can be built on Wild Horses to provide 1 Horse every season.</Description>
+        <IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+        <RequiresResource>1</RequiresResource>
+        <SupportedResourceType>Horses</SupportedResourceType>
+        <PreferredTerrain>Category:Land</PreferredTerrain>
+        <UpgradeTier>2</UpgradeTier>
+        <Prereq>
+            <Type>Tech</Type>
+            <Attribute>Animal_Husbandry</Attribute>
+        </Prereq>	
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Horses</Attribute>
+            <Target>Player</Target>
+        </Prereq>	
+        <LaborToBuild>88</LaborToBuild>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Horses</Attribute>
+            <Value>1</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>+1 Horse per Season</Provides>
+            <UpgradeComparisonID>1</UpgradeComparisonID>
+            <UpgradeComparisonText>Horses per Season</UpgradeComparisonText>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>TileYieldMaterials</Attribute>
+            <Value>1</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>+1 Materials</Provides>
+        </GameModifier>			
+        <AIData AIPersonality="AI_General">
+            <AIPrefType>AIPrefType_MOUNT</AIPrefType>
+            <AIPriority>10</AIPriority>
+            <AITag>Farming</AITag>
+        </AIData>
+        <UnlocksShopItem>Warhorse</UnlocksShopItem>
+        <ArtDef>Art_Stable</ArtDef>
+    </ImprovementType>	
+	
+    <ImprovementType InternalName="Stable_Lord">
+        <DisplayName>Destrier Stable</DisplayName>
+        <Description>Destrier Stables can be built on Wild Horses to provide 1 Horse every 4 seasons, and 1 Material in the nearest city.</Description>
+        <IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+        <RequiresResource>1</RequiresResource>
+        <SupportedResourceType>Horses</SupportedResourceType>
+        <PreferredTerrain>Category:Land</PreferredTerrain>
+        <UpgradesToImprovement>Ranch_Lord</UpgradesToImprovement>		
+        <LaborToBuild>100</LaborToBuild>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Horses</Attribute>
+            <Value>0.5</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>+0.5 Horses</Provides>
+        </GameModifier>
+        <Prereq>
+            <Type>Tech</Type>
+            <Attribute>Mounted_Warfare</Attribute>
+        </Prereq>		
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>TileYieldMaterials</Attribute>
+            <Value>1</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>+1 Materials</Provides>
+        </GameModifier>	
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Horses</Attribute>
+            <Target>Player</Target>
+        </Prereq>			
+        <AIData AIPersonality="AI_General">
+            <AIPrefType>AIPrefType_MOUNT</AIPrefType>
+            <AIPriority>25</AIPriority>
+            <AITag>Workshop</AITag>
+        </AIData>
+        <UnlocksShopItem>Destrier</UnlocksShopItem>
+        <ArtDef>Art_Stable</ArtDef>
+    </ImprovementType>	
+	
+    <ImprovementType InternalName="HorseMarket">
+        <DisplayName>Horse Market</DisplayName>
+        <Description>A Horse Markets produces 1 horse every 4 turns.</Description>
+        <RequiresCity>1</RequiresCity>
+        <ReqCityLevel>2</ReqCityLevel>
+        <BarredTerrain>River</BarredTerrain>
+        <BarredTerrain>SwampTerrain</BarredTerrain>
+        <PreferredTerrain>City</PreferredTerrain>
+        <PreferredTerrain>Category:Land</PreferredTerrain>
+        <PreferredTerrain>Forest</PreferredTerrain>
+        <Prereq>
+            <Type>Tech</Type>
+            <Attribute>Mounted_Warfare</Attribute>
+        </Prereq>		
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Horses</Attribute>
+            <Target>Player</Target>
+        </Prereq>		
+        <LaborToBuild>250</LaborToBuild>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Horses</Attribute>
+            <Value>0.25</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>+0.25 Horses</Provides>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPrefType>AIPrefType_MOUNT</AIPrefType>
+            <AIPriority>10</AIPriority>
+            <AITag>Farming</AITag>
+        </AIData>
+        <ArtDef>Art_HorseMarket</ArtDef>
+    </ImprovementType>
+	
+    <ImprovementType InternalName="WargPit">
+        <DisplayName>Warg Market</DisplayName>
+        <Description>A Warg Market produces 1 Warg every 4 turns.</Description>
+        <RequiresCity>1</RequiresCity>
+        <ReqCityLevel>2</ReqCityLevel>
+        <BarredTerrain>River</BarredTerrain>
+        <BarredTerrain>SwampTerrain</BarredTerrain>
+        <PreferredTerrain>City</PreferredTerrain>
+        <PreferredTerrain>Category:Land</PreferredTerrain>
+        <PreferredTerrain>Forest</PreferredTerrain>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Kennels</Attribute>
+            <Target>Player</Target>
+        </Prereq>		
+        <LaborToBuild>322</LaborToBuild>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Wargs</Attribute>
+            <Value>0.25</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>+0.25 Wargs</Provides>
+        </GameModifier>	
+        <Prereq>
+            <Type>Tech</Type>
+            <Attribute>Animal_Husbandry</Attribute>
+        </Prereq>	
+        <AIData AIPersonality="AI_General">
+            <AIPrefType>AIPrefType_MOUNT</AIPrefType>
+            <AIPriority>5</AIPriority>
+            <AITag>Farming</AITag>
+        </AIData>
+        <ArtDef>Art_WargMarket</ArtDef>
+    </ImprovementType>	
+	
+	
+    <ImprovementType InternalName="BloodWargDen">
+        <DisplayName>Blood Warg Den</DisplayName>
+        <Description>Blood Warg Dens can be built on Wild Wargs. They provide Wargs every season, and spawn Hunting Wargs.</Description>
+        <IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+        <RequiresResource>1</RequiresResource>
+        <SupportedResourceType>Wargs</SupportedResourceType>
+        <PreferredTerrain>Category:Land</PreferredTerrain>
+        <UpgradesToImprovement>BloodKennel</UpgradesToImprovement>
+        <UpgradeTier>1</UpgradeTier>
+        <LaborToBuild>166</LaborToBuild>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Wargs</Attribute>
+            <Value>0.5</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>+0.5 Wargs per Season</Provides>
+            <UpgradeComparisonID>1</UpgradeComparisonID>
+            <UpgradeComparisonText>Wargs per Season</UpgradeComparisonText>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Player</ModType>
+            <Attribute>LimitedUnitCap</Attribute>
+            <StrVal>HuntWarg</StrVal>
+            <Value>1</Value>
+            <Provides>Recruit a Hunting Warg Packs</Provides>
+        </GameModifier>			
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Kennels</Attribute>
+            <Target>Player</Target>
+        </Prereq>			
+        <AIData AIPersonality="AI_General">
+            <AIPrefType>AIPrefType_MOUNT</AIPrefType>
+            <AIPriority>15</AIPriority>
+            <AITag>Workshop</AITag>
+        </AIData>
+        <ArtDef>Art_Kennel</ArtDef>
+    </ImprovementType>	
+	
+    <ImprovementType InternalName="BloodKennel">
+        <DisplayName>Blood Kennel</DisplayName>
+        <Description>Blood Kennels upgrade from Blood Warg Dens. They provide additional Wargs every Season and Blood Warg Packs.</Description>
+        <IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+        <RequiresResource>1</RequiresResource>
+        <SupportedResourceType>Wargs</SupportedResourceType>
+        <PreferredTerrain>Category:Land</PreferredTerrain>
+        <UpgradeTier>2</UpgradeTier>
+        <Prereq>
+            <Type>Tech</Type>
+            <Attribute>Wildland_Allies</Attribute>
+        </Prereq>
+        <LaborToBuild>166</LaborToBuild>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Wargs</Attribute>
+            <Value>1</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>+1 Wargs per Season</Provides>
+            <UpgradeComparisonID>1</UpgradeComparisonID>
+            <UpgradeComparisonText>Wargs per Season</UpgradeComparisonText>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Player</ModType>
+            <Attribute>LimitedUnitCap</Attribute>
+            <StrVal>HuntWargPack</StrVal>
+            <Value>1</Value>
+            <Provides>Recruit a Hunting Warg Pack</Provides>
+        </GameModifier>			
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Kennels</Attribute>
+            <Target>Player</Target>
+        </Prereq>	
+        <AIData AIPersonality="AI_General">
+            <AIPrefType>AIPrefType_MOUNT</AIPrefType>
+            <AIPriority>15</AIPriority>
+            <AITag>Workshop</AITag>
+        </AIData>
+        <ArtDef>Art_Kennel</ArtDef>
+    </ImprovementType>	
+
+    <ImprovementType InternalName="Outpost_Consulate">
+        <DisplayName>Consulate</DisplayName>
+        <Description>Increases the Growth of the city attached to this outpost.</Description>
+        <HideInBuildList>1</HideInBuildList>
+        <IsOutpostUpgrade>1</IsOutpostUpgrade>
+        <Prereq>
+            <Type>Tech</Type>
+            <Attribute>Cooperation</Attribute>
+        </Prereq>
+        <Prereq>
+            <Type>RestrictedAbilityBonusOption</Type>
+            <Attribute>Toll</Attribute>
+            <Target>Player</Target>
+        </Prereq>		
+        <LaborToBuild>540</LaborToBuild>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Prestige</Attribute>
+            <Value>1</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>+1 Growth to the attached city</Provides>
+        </GameModifier>
+        <ArtDef>Art_Outpost_Consulate</ArtDef>
+    </ImprovementType>
+	
+    <ImprovementType InternalName="Outpost_Toll">
+        <DisplayName>Toll</DisplayName>
+        <Description>Increases the Gildar production of the city attached to this outpost by 2, and Unrest by 1%.</Description>
+        <HideInBuildList>1</HideInBuildList>
+        <IsOutpostUpgrade>1</IsOutpostUpgrade>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Toll</Attribute>
+            <Target>Player</Target>
+        </Prereq>
+        <LaborToBuild>123</LaborToBuild>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Gold</Attribute>
+            <Value>2</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>+2 Gildar per Season</Provides>
+            <UpgradeComparisonID>1</UpgradeComparisonID>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Unrest</Attribute>
+            <Value>1</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>+1% Unrest</Provides>
+        </GameModifier>		
+        <AIData AIPersonality="AI_General">
+            <AIPriority>15</AIPriority>
+            <AITag>Merchant</AITag>
+        </AIData>
+        <ArtDef>Art_Outpost_Toll</ArtDef>
+    </ImprovementType>
+	
+    <ImprovementType InternalName="BlackMarket">
+        <Prereq>
+            <Type>RestrictedAbilityBonusOption</Type>
+            <Attribute>Toll</Attribute>
+            <Target>Player</Target>
+        </Prereq>	
+    </ImprovementType>
+	
+    <ImprovementType InternalName="BlackMarketX">
+        <DisplayName>Shadow Market</DisplayName>
+        <Description>The Shadow Market reduces the cost of rushing production and increases the Gildar produced by a city, to the detriment of its citizens. As a result it will also increase the Unrest of the city.</Description>
+        <RequiresCity>1</RequiresCity>
+        <BarredTerrain>River</BarredTerrain>
+        <BarredTerrain>SwampTerrain</BarredTerrain>
+        <PreferredTerrain>City</PreferredTerrain>
+        <PreferredTerrain>Category:Land</PreferredTerrain>
+        <PreferredTerrain>Forest</PreferredTerrain>
+        <UpgradesToImprovement>ShadowGuild</UpgradesToImprovement>
+        <UpgradeTier>1</UpgradeTier>	
+        <Prereq>
+            <Type>Tech</Type>
+            <Attribute>Trading</Attribute>
+        </Prereq>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Toll</Attribute>
+            <Target>Player</Target>
+        </Prereq>	
+        <LaborToBuild>102</LaborToBuild>
+        <GameModifier>
+            <ModType>City</ModType>
+            <Attribute>RushCostDiscount</Attribute>
+            <Value>0.25</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>-25% Rush Costs</Provides>
+            <UpgradeComparisonID>1</UpgradeComparisonID>
+            <UpgradeComparisonText>Rush Cost Discount</UpgradeComparisonText>
+        </GameModifier>
+        <GameModifier>
+            <ModType>ResourceMultiplier</ModType>
+            <Attribute>Gold</Attribute>
+            <Value>1.25</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>+25% Gildar</Provides>
+            <UpgradeComparisonID>2</UpgradeComparisonID>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Unrest</Attribute>
+            <Value>5</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>+5% Unrest</Provides>
+            <UpgradeComparisonID>3</UpgradeComparisonID>
+            <UpgradeComparisonText>Unrest</UpgradeComparisonText>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>20</AIPriority>
+            <AITag>Merchant</AITag>
+        </AIData>
+        <ArtDef>Art_BlackMarket</ArtDef>
+    </ImprovementType>
+	
+    <ImprovementType InternalName="ShadowGuild">
+        <DisplayName>Shadow Guild</DisplayName>
+        <Description>The Shadow Guild reduces the cost of rushing production and increases the Gildar produced by a city, to the detriment of its citizens. As a result it will also increase the Unrest of the city.</Description>
+        <RequiresCity>1</RequiresCity>
+        <BarredTerrain>River</BarredTerrain>
+        <BarredTerrain>SwampTerrain</BarredTerrain>
+        <PreferredTerrain>City</PreferredTerrain>
+        <PreferredTerrain>Category:Land</PreferredTerrain>
+        <PreferredTerrain>Forest</PreferredTerrain>
+        <UpgradeTier>2</UpgradeTier>
+        <Prereq>
+            <Type>Tech</Type>
+            <Attribute>Economics</Attribute>
+        </Prereq>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Toll</Attribute>
+            <Target>Player</Target>
+        </Prereq>	
+        <LaborToBuild>226</LaborToBuild>
+        <GameModifier>
+            <ModType>City</ModType>
+            <Attribute>RushCostDiscount</Attribute>
+            <Value>0.33</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>-33% Rush Costs</Provides>
+            <UpgradeComparisonID>1</UpgradeComparisonID>
+            <UpgradeComparisonText>Rush Cost Discount</UpgradeComparisonText>
+        </GameModifier>
+        <GameModifier>
+            <ModType>ResourceMultiplier</ModType>
+            <Attribute>Gold</Attribute>
+            <Value>1.33</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>+33% Gildar</Provides>
+            <UpgradeComparisonID>2</UpgradeComparisonID>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Unrest</Attribute>
+            <Value>5</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>+5% Unrest</Provides>
+            <UpgradeComparisonID>3</UpgradeComparisonID>
+            <UpgradeComparisonText>Unrest</UpgradeComparisonText>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>22</AIPriority>
+            <AITag>Merchant</AITag>
+        </AIData>
+        <ArtDef>Art_GuildShadow</ArtDef>
+    </ImprovementType>	
+	
+	
+    <ImprovementType InternalName="Cleric">
+        <Prereq>
+            <Type>RestrictedAbilityBonusOption</Type>
+            <Attribute>Skeptic</Attribute>
+            <Target>Player</Target>
+        </Prereq>	
+    </ImprovementType>	
+	
+    <ImprovementType InternalName="Oracle">	
+        <Prereq>
+            <Type>RestrictedAbilityBonusOption</Type>
+            <Attribute>Skeptic</Attribute>
+            <Target>Player</Target>
+        </Prereq>	
+    </ImprovementType>	
+	
+    <ImprovementType InternalName="Embassy">
+        <Prereq>
+            <Type>RestrictedAbilityBonusOption</Type>
+            <Attribute>Xenophobia</Attribute>
+            <Target>Player</Target>
+        </Prereq>	
+    </ImprovementType>		
+	
+    <ImprovementType InternalName="WargDen">
+        <Prereq>
+            <Type>RestrictedAbilityBonusOption</Type>
+            <Attribute>Kennels</Attribute>
+            <Target>Player</Target>
+        </Prereq>	
+    </ImprovementType>	
+	
+    <ImprovementType InternalName="ClayQuarry">
+        <Prereq>
+            <Type>RestrictedAbilityBonusOption</Type>
+            <Attribute>Archaeology</Attribute>
+            <Target>Player</Target>
+        </Prereq>			
+    </ImprovementType>	
+	
+    <ImprovementType InternalName="ClayX">
+        <DisplayName>Excavation Site</DisplayName>
+        <Description>Excavation Sites can be built on Clay Pits to add a Material and a Research point to the attached city.</Description>
+        <IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+        <RequiresResource>1</RequiresResource>
+        <SupportedResourceType>Clay</SupportedResourceType>
+        <PreferredTerrain>Category:Land</PreferredTerrain>
+        <LaborToBuild>80</LaborToBuild>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>TileYieldMaterials</Attribute>
+            <Value>1</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>+1 Material</Provides>
+            <UpgradeComparisonID>1</UpgradeComparisonID>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Research</Attribute>
+            <Value>1</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>+1 Research</Provides>
+            <UpgradeComparisonID>1</UpgradeComparisonID>
+        </GameModifier>	
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Archaeology</Attribute>
+            <Target>Player</Target>
+        </Prereq>			
+        <AIData AIPersonality="AI_General">
+            <AIPriority>35</AIPriority>
+            <AITag>Workshop</AITag>
+        </AIData>
+        <ArtDef>Art_ClayX</ArtDef>
+    </ImprovementType>	
+	
+</ImprovementTypes>
+
+<ImprovementTypeArtDefs>
+    <ImprovementTypeArtDef InternalName="Art_AncMonument">
+        <ImprovementTypeArtSubPack InternalName="Art_AncMonument_Kingdom">
+            <SupportedBuildingStyle>KingdomStyle</SupportedBuildingStyle>
+            <TileDesign>B_Scenic_01</TileDesign>
+            <ConstructionTileDesign>B_ScenicB_01</ConstructionTileDesign>
+            <DrawnIcon>Improvement_Monument.png</DrawnIcon>
+            <DrawnIconConstruction>Improvement_Monument_C.png</DrawnIconConstruction>
+            <Thumbnail>K_Scenic_View_01_Thumb.png</Thumbnail>
+            <Medallions InternalName="">
+                <All>K_Scenic_View_01_Thumb.png</All>
+            </Medallions>
+        </ImprovementTypeArtSubPack>
+        <ImprovementTypeArtSubPack InternalName="Art_AncMonument_Empire">
+            <SupportedBuildingStyle>EmpireStyle</SupportedBuildingStyle>
+            <TileDesign>B_ScenicB_01</TileDesign>
+            <ConstructionTileDesign>B_ScenicB_01</ConstructionTileDesign>
+            <DrawnIcon>Improvement_Monument.png</DrawnIcon>
+            <DrawnIconConstruction>Improvement_Monument_C.png</DrawnIconConstruction>
+            <Thumbnail>F_Scenic_View_01_Thumb.png</Thumbnail>
+            <Medallions InternalName="">
+                <All>F_Scenic_View_01_Thumb.png</All>
+            </Medallions>
+        </ImprovementTypeArtSubPack>
+    </ImprovementTypeArtDef>
+	
+    <ImprovementTypeArtDef InternalName="Art_HorseMarket">
+        <ImprovementTypeArtSubPack InternalName="Art_HorseMarket_Kingdom">
+            <SupportedBuildingStyle>KingdomStyle</SupportedBuildingStyle>
+            <TileDesign>K_Dest_01</TileDesign>
+            <ConstructionTileDesign>K_DestB_01</ConstructionTileDesign>
+            <DrawnIcon>Improvement_HorseMarket.png</DrawnIcon>
+            <DrawnIconConstruction>Improvement_HorseMarketC.png</DrawnIconConstruction>
+            <Thumbnail>K_Merchant_02_Thumb.png</Thumbnail>
+            <Medallions InternalName="">
+                <All>K_Merchant_02_Thumb.png</All>
+            </Medallions>
+        </ImprovementTypeArtSubPack>
+        <ImprovementTypeArtSubPack InternalName="Art_HorseMarket_Empire">
+            <SupportedBuildingStyle>EmpireStyle</SupportedBuildingStyle>
+            <TileDesign>F_Dest_01</TileDesign>
+            <ConstructionTileDesign>F_DestB_01</ConstructionTileDesign>
+            <DrawnIcon>Improvement_HorseMarket.png</DrawnIcon>
+            <DrawnIconConstruction>Improvement_HorseMarketC.png</DrawnIconConstruction>
+            <Thumbnail>F_Merchant_Thumb_01.png</Thumbnail>
+            <Medallions InternalName="">
+                <All>F_Merchant_Thumb_01.png</All>
+            </Medallions>
+        </ImprovementTypeArtSubPack>
+    </ImprovementTypeArtDef>
+
+    <ImprovementTypeArtDef InternalName="Art_WargMarket">
+        <ImprovementTypeArtSubPack InternalName="Art_WargMarket_Kingdom">
+            <SupportedBuildingStyle>KingdomStyle</SupportedBuildingStyle>
+            <TileDesign>K_BlWolf_01</TileDesign>
+            <ConstructionTileDesign>K_DestB_01</ConstructionTileDesign>
+            <DrawnIcon>Improvement_WargMarket.png</DrawnIcon>
+            <DrawnIconConstruction>Improvement_WargMarketC.png</DrawnIconConstruction>
+            <Thumbnail>K_Merchant_02_Thumb.png</Thumbnail>
+            <Medallions InternalName="">
+                <All>K_Merchant_02_Thumb.png</All>
+            </Medallions>
+        </ImprovementTypeArtSubPack>
+        <ImprovementTypeArtSubPack InternalName="Art_WargMarket_Empire">
+            <SupportedBuildingStyle>EmpireStyle</SupportedBuildingStyle>
+            <TileDesign>F_BlWolf_01</TileDesign>
+            <ConstructionTileDesign>F_DestB_01</ConstructionTileDesign>
+            <DrawnIcon>Improvement_WargMarket.png</DrawnIcon>
+            <DrawnIconConstruction>Improvement_WargMarketC.png</DrawnIconConstruction>
+            <Thumbnail>F_Merchant_Thumb_01.png</Thumbnail>
+            <Medallions InternalName="">
+                <All>F_Merchant_Thumb_01.png</All>
+            </Medallions>
+        </ImprovementTypeArtSubPack>
+    </ImprovementTypeArtDef>	
+	
+    <ImprovementTypeArtDef InternalName="Art_GuildShadow">
+        <ImprovementTypeArtSubPack InternalName="Art_GuildShadow_Kingdom">
+            <SupportedBuildingStyle>KingdomStyle</SupportedBuildingStyle>
+            <TileDesign>F_Shadow_Guild_01</TileDesign>
+            <ConstructionTileDesign>F_Construction1x1_01</ConstructionTileDesign>
+            <DrawnIcon>Improvement_GuildShadow.png</DrawnIcon>
+            <DrawnIconConstruction>Improvement_GuildShadow_C.png</DrawnIconConstruction>
+            <Thumbnail>K_Amethyst_Vault_Thumb_01.png</Thumbnail>
+            <Medallions InternalName="">
+                <All>K_Amethyst_Vault_Thumb_01.png</All>
+            </Medallions>
+        </ImprovementTypeArtSubPack>
+        <ImprovementTypeArtSubPack InternalName="Art_GuildShadow_Empire">
+            <SupportedBuildingStyle>EmpireStyle</SupportedBuildingStyle>
+            <TileDesign>F_Shadow_Guild_01</TileDesign>
+            <ConstructionTileDesign>F_Construction1x1_01</ConstructionTileDesign>
+            <DrawnIcon>Improvement_GuildShadow.png</DrawnIcon>
+            <DrawnIconConstruction>Improvement_GuildShadow_C.png</DrawnIconConstruction>
+            <Thumbnail>K_Amethyst_Vault_Thumb_01.png</Thumbnail>
+            <Medallions InternalName="">
+                <All>K_Amethyst_Vault_Thumb_01.png</All>
+            </Medallions>
+        </ImprovementTypeArtSubPack>
+    </ImprovementTypeArtDef>
+	
+    <ImprovementTypeArtDef InternalName="Art_Outpost_Toll">
+        <ImprovementTypeArtSubPack InternalName="Art_Outpost_Toll_Kingdom">
+            <SupportedBuildingStyle>KingdomStyle</SupportedBuildingStyle>
+            <TileDesign>K_Outpost_Consulate_01</TileDesign>
+            <ConstructionTileDesign>K_Outpost_Consulate_01</ConstructionTileDesign>
+            <DrawnIcon>Improvement_Watchtower.png</DrawnIcon>
+            <DrawnIconConstruction>Improvement_Watchtower_C.png</DrawnIconConstruction>
+            <Thumbnail>K_Outpost_Consulate_Thumb_01.png</Thumbnail>
+            <Medallions InternalName="">
+                <All>K_Outpost_Consulate_Thumb_01.png</All>
+            </Medallions>
+        </ImprovementTypeArtSubPack>
+        <ImprovementTypeArtSubPack InternalName="Art_Outpost_Toll_Empire">
+            <SupportedBuildingStyle>EmpireStyle</SupportedBuildingStyle>
+            <TileDesign>F_Outpost_Toll_01</TileDesign>
+            <ConstructionTileDesign>F_Outpost_Toll_01</ConstructionTileDesign>
+            <DrawnIcon>Improvement_Watchtower.png</DrawnIcon>
+            <DrawnIconConstruction>Improvement_Watchtower_C.png</DrawnIconConstruction>
+            <Thumbnail>F_Outpost_Consulate_Thumb_01.png</Thumbnail>
+            <Medallions InternalName="">
+                <All>F_Outpost_Consulate_Thumb_01.png</All>
+            </Medallions>
+        </ImprovementTypeArtSubPack>
+    </ImprovementTypeArtDef>
+	
+    <ImprovementTypeArtDef InternalName="Art_ClayX">
+        <ImprovementTypeArtSubPack InternalName="Art_ClayX_Kingdom">
+            <SupportedBuildingStyle>KingdomStyle</SupportedBuildingStyle>
+            <TileDesign>B_Clay_01</TileDesign>
+            <ConstructionTileDesign>B_Clay_01</ConstructionTileDesign>
+            <DrawnIcon>Improvement_StoneQuarry.png</DrawnIcon>
+            <DrawnIconConstruction>Improvement_StoneQuarry_C.png</DrawnIconConstruction>
+            <Thumbnail>K_Clay_01_Thumb.png</Thumbnail>
+            <Medallions InternalName="">
+                <All>K_Clay_01_Thumb.png</All>
+            </Medallions>
+        </ImprovementTypeArtSubPack>
+        <ImprovementTypeArtSubPack InternalName="Art_ClayX_Empire">
+            <SupportedBuildingStyle>EmpireStyle</SupportedBuildingStyle>
+            <TileDesign>B_Clay_01</TileDesign>
+            <ConstructionTileDesign>B_Clay_01</ConstructionTileDesign>
+            <DrawnIcon>Improvement_StoneQuarry.png</DrawnIcon>
+            <DrawnIconConstruction>Improvement_StoneQuarry_C.png</DrawnIconConstruction>
+            <Thumbnail>F_Clay_Quarry_01_Thumb.png</Thumbnail>
+            <Medallions InternalName="">
+                <All>F_Clay_Quarry_01_Thumb.png</All>
+            </Medallions>
+        </ImprovementTypeArtSubPack>
+    </ImprovementTypeArtDef>	
+
+</ImprovementTypeArtDefs>	

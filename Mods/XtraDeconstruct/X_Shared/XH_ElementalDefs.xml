@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<ElementalDefinitions>
+	<ElementalDefs>
+		<!--BASE (FIXED)-->
+		<PlayerStartingMoney>50.0</PlayerStartingMoney>
+		<PlayerStartingPopulation>30.0</PlayerStartingPopulation>
+		<!--BASE (RANDOM - PERCENTAGE)-->
+			<!--RESOURCE HOARDS-->
+		<RandomPlacementRequirementDef InternalName="ResourceHoard_Sparse">
+			<ObjectType>ResourceHoard</ObjectType>
+			<DisplayName>Sparse [0.02]</DisplayName>
+			<ObjectsPerLandTile>0.02</ObjectsPerLandTile>
+			<DistanceBetweenObjects>4</DistanceBetweenObjects>
+			<DistanceBetweenObjectTypes>4</DistanceBetweenObjectTypes>
+			<MaxObjectsPerSector>0</MaxObjectsPerSector>
+		</RandomPlacementRequirementDef>
+		<RandomPlacementRequirementDef InternalName="ResourceHoard_Moderate">
+			<ObjectType>ResourceHoard</ObjectType>
+			<DisplayName>Moderate [0.04]</DisplayName>
+			<ObjectsPerLandTile>0.04</ObjectsPerLandTile>
+			<DistanceBetweenObjects>3</DistanceBetweenObjects>
+			<DistanceBetweenObjectTypes>3</DistanceBetweenObjectTypes>
+			<MaxObjectsPerSector>0</MaxObjectsPerSector>
+		</RandomPlacementRequirementDef>
+		<RandomPlacementRequirementDef InternalName="ResourceHoard_Dense">
+			<ObjectType>ResourceHoard</ObjectType>
+			<DisplayName>Dense [0.08]</DisplayName>
+			<ObjectsPerLandTile>0.08</ObjectsPerLandTile>
+			<DistanceBetweenObjects>2</DistanceBetweenObjects>
+			<DistanceBetweenObjectTypes>2</DistanceBetweenObjectTypes>
+			<MaxObjectsPerSector>0</MaxObjectsPerSector>
+		</RandomPlacementRequirementDef>
+		<RandomPlacementRequirementDef InternalName="ResourceHoard_X_DoNotPick">
+			<ObjectType>ResourceHoard</ObjectType>
+			<DisplayName>###############</DisplayName>
+			<ObjectsPerLandTile>0.00</ObjectsPerLandTile>
+			<DistanceBetweenObjects>7</DistanceBetweenObjects>
+			<DistanceBetweenObjectTypes>5</DistanceBetweenObjectTypes>
+			<MaxObjectsPerSector>0</MaxObjectsPerSector>
+		</RandomPlacementRequirementDef>
+		<RandomPlacementRequirementDef InternalName="ResourceHoard_X_Legendary">
+			<ObjectType>ResourceHoard</ObjectType>
+			<DisplayName>Legendary [0.11]</DisplayName>
+			<ObjectsPerLandTile>0.11</ObjectsPerLandTile>
+			<DistanceBetweenObjects>1</DistanceBetweenObjects>
+			<DistanceBetweenObjectTypes>2</DistanceBetweenObjectTypes>
+			<MaxObjectsPerSector>0</MaxObjectsPerSector>
+		</RandomPlacementRequirementDef>
+		<RandomPlacementRequirementDef InternalName="ResourceHoard_X_Ludicrous">
+			<ObjectType>ResourceHoard</ObjectType>
+			<DisplayName>Ludicrous [0.15]</DisplayName>
+			<ObjectsPerLandTile>0.15</ObjectsPerLandTile>
+			<DistanceBetweenObjects>1</DistanceBetweenObjects>
+			<DistanceBetweenObjectTypes>1</DistanceBetweenObjectTypes>
+			<MaxObjectsPerSector>0</MaxObjectsPerSector>
+		</RandomPlacementRequirementDef>
+			<!--ELEMENTAL SHARDS-->
+		<RandomPlacementRequirementDef InternalName="Shard_Sparse">
+			<ObjectType>Shard</ObjectType>
+			<DisplayName>Sparse [0.005]</DisplayName>
+			<ObjectsPerLandTile>0.005</ObjectsPerLandTile>
+			<DistanceBetweenObjects>4</DistanceBetweenObjects>
+			<DistanceBetweenObjectTypes>12</DistanceBetweenObjectTypes>
+			<MaxObjectsPerSector>2</MaxObjectsPerSector>
+		</RandomPlacementRequirementDef>
+		<RandomPlacementRequirementDef InternalName="Shard_Moderate">
+			<ObjectType>Shard</ObjectType>
+			<DisplayName>Moderate [0.010]</DisplayName>
+			<ObjectsPerLandTile>0.01</ObjectsPerLandTile>
+			<DistanceBetweenObjects>3</DistanceBetweenObjects>
+			<DistanceBetweenObjectTypes>9</DistanceBetweenObjectTypes>
+			<MaxObjectsPerSector>3</MaxObjectsPerSector>
+		</RandomPlacementRequirementDef>
+		<RandomPlacementRequirementDef InternalName="Shard_Dense">
+			<ObjectType>Shard</ObjectType>
+			<DisplayName>Dense [0.015]</DisplayName>
+			<ObjectsPerLandTile>0.015</ObjectsPerLandTile>
+			<DistanceBetweenObjects>2</DistanceBetweenObjects>
+			<DistanceBetweenObjectTypes>6</DistanceBetweenObjectTypes>
+			<MaxObjectsPerSector>5</MaxObjectsPerSector>
+		</RandomPlacementRequirementDef>
+		<RandomPlacementRequirementDef InternalName="Shard_X_DoNotPick">
+			<ObjectType>Shard</ObjectType>
+			<DisplayName>###############</DisplayName>
+			<ObjectsPerLandTile>0.000</ObjectsPerLandTile>
+			<DistanceBetweenObjects>5</DistanceBetweenObjects>
+			<DistanceBetweenObjectTypes>15</DistanceBetweenObjectTypes>
+			<MaxObjectsPerSector>1</MaxObjectsPerSector>
+		</RandomPlacementRequirementDef>
+		<RandomPlacementRequirementDef InternalName="Shard_X_Legendary">
+			<ObjectType>Shard</ObjectType>
+			<DisplayName>Legendary [0.020]</DisplayName>
+			<ObjectsPerLandTile>0.020</ObjectsPerLandTile>
+			<DistanceBetweenObjects>2</DistanceBetweenObjects>
+			<DistanceBetweenObjectTypes>5</DistanceBetweenObjectTypes>
+			<MaxObjectsPerSector>6</MaxObjectsPerSector>
+		</RandomPlacementRequirementDef>
+		<RandomPlacementRequirementDef InternalName="Shard_X_Ludicrous">
+			<ObjectType>Shard</ObjectType>
+			<DisplayName>Ludicrous [0.025]</DisplayName>
+			<ObjectsPerLandTile>0.025</ObjectsPerLandTile>
+			<DistanceBetweenObjects>1</DistanceBetweenObjects>
+			<DistanceBetweenObjectTypes>4</DistanceBetweenObjectTypes>
+			<MaxObjectsPerSector>7</MaxObjectsPerSector>
+		</RandomPlacementRequirementDef>
+			<!--EVENT FREQUENCY-->
+		<RandomEventFreqDef>Never,-1</RandomEventFreqDef>
+		<RandomEventFreqDef>LessOften,18000</RandomEventFreqDef>
+		<RandomEventFreqDef>Default,9000</RandomEventFreqDef>
+		<RandomEventFreqDef>MoreOften,5000</RandomEventFreqDef>
+			<!--GOODIE HUTS-->
+		<RandomPlacementRequirementDef InternalName="GoodieHut_Default">
+			<ObjectType>GoodieHut</ObjectType>
+			<DisplayName>Default</DisplayName>
+			<ObjectsPerLandTile>0.025</ObjectsPerLandTile>
+			<DistanceBetweenObjects>3</DistanceBetweenObjects>
+			<DistanceBetweenObjectTypes>3</DistanceBetweenObjectTypes>
+			<MaxObjectsPerSector>0</MaxObjectsPerSector>
+			<NumStartingPointObjects>2</NumStartingPointObjects>
+			<StartingPointObjectRange>4</StartingPointObjectRange>
+		</RandomPlacementRequirementDef>
+			<!--LAIRS-->
+		<RandomPlacementRequirementDef InternalName="Lair_None">
+			<ObjectType>MonsterLair</ObjectType>
+			<DisplayName>None [0.00]</DisplayName>
+			<ObjectsPerLandTile>0.0</ObjectsPerLandTile>
+			<DistanceBetweenObjects>5</DistanceBetweenObjects>
+			<DistanceBetweenObjectTypes>5</DistanceBetweenObjectTypes>
+			<MaxObjectsPerSector>0</MaxObjectsPerSector>
+			<DistanceFromStartingPoint>6</DistanceFromStartingPoint>
+			<NumStartingPointObjects>0</NumStartingPointObjects>
+			<StartingPointObjectRange>12</StartingPointObjectRange>
+		</RandomPlacementRequirementDef>
+		<RandomPlacementRequirementDef InternalName="Lair_Sparse">
+			<ObjectType>MonsterLair</ObjectType>
+			<DisplayName>Sparse [0.02]</DisplayName>
+			<ObjectsPerLandTile>0.02</ObjectsPerLandTile>
+			<DistanceBetweenObjects>5</DistanceBetweenObjects>
+			<DistanceBetweenObjectTypes>5</DistanceBetweenObjectTypes>
+			<MaxObjectsPerSector>0</MaxObjectsPerSector>
+			<DistanceFromStartingPoint>6</DistanceFromStartingPoint>
+			<NumStartingPointObjects>1</NumStartingPointObjects>
+			<StartingPointObjectRange>12</StartingPointObjectRange>
+		</RandomPlacementRequirementDef>
+		<RandomPlacementRequirementDef InternalName="Lair_Moderate">
+			<ObjectType>MonsterLair</ObjectType>
+			<DisplayName>Moderate [0.03]</DisplayName>
+			<ObjectsPerLandTile>0.03</ObjectsPerLandTile>
+			<DistanceBetweenObjects>2</DistanceBetweenObjects>
+			<DistanceBetweenObjectTypes>4</DistanceBetweenObjectTypes>
+			<MaxObjectsPerSector>0</MaxObjectsPerSector>
+			<DistanceFromStartingPoint>5</DistanceFromStartingPoint>
+			<NumStartingPointObjects>2</NumStartingPointObjects>
+			<StartingPointObjectRange>4</StartingPointObjectRange>
+		</RandomPlacementRequirementDef>
+		<RandomPlacementRequirementDef InternalName="Lair_Dense">
+			<ObjectType>MonsterLair</ObjectType>
+			<DisplayName>Dense [0.04]</DisplayName>
+			<ObjectsPerLandTile>0.04</ObjectsPerLandTile>
+			<DistanceBetweenObjects>2</DistanceBetweenObjects>
+			<DistanceBetweenObjectTypes>2</DistanceBetweenObjectTypes>
+			<MaxObjectsPerSector>0</MaxObjectsPerSector>
+			<DistanceFromStartingPoint>3</DistanceFromStartingPoint>
+			<NumStartingPointObjects>6</NumStartingPointObjects>
+			<StartingPointObjectRange>6</StartingPointObjectRange>
+		</RandomPlacementRequirementDef>
+		<RandomPlacementRequirementDef InternalName="Lair_X_DoNotPick">
+			<ObjectType>MonsterLair</ObjectType>
+			<DisplayName>###############</DisplayName>
+			<ObjectsPerLandTile>0.00</ObjectsPerLandTile>
+			<DistanceBetweenObjects>5</DistanceBetweenObjects>
+			<DistanceBetweenObjectTypes>5</DistanceBetweenObjectTypes>
+			<MaxObjectsPerSector>0</MaxObjectsPerSector>
+			<DistanceFromStartingPoint>6</DistanceFromStartingPoint>
+			<NumStartingPointObjects>0</NumStartingPointObjects>
+			<StartingPointObjectRange>12</StartingPointObjectRange>
+		</RandomPlacementRequirementDef>
+		<RandomPlacementRequirementDef InternalName="Lair_X_Legendary">
+			<ObjectType>MonsterLair</ObjectType>
+			<DisplayName>Legendary [0.05]</DisplayName>
+			<ObjectsPerLandTile>0.05</ObjectsPerLandTile>
+			<DistanceBetweenObjects>2</DistanceBetweenObjects>
+			<DistanceBetweenObjectTypes>2</DistanceBetweenObjectTypes>
+			<MaxObjectsPerSector>0</MaxObjectsPerSector>
+			<DistanceFromStartingPoint>3</DistanceFromStartingPoint>
+			<NumStartingPointObjects>7</NumStartingPointObjects>
+			<StartingPointObjectRange>5</StartingPointObjectRange>
+		</RandomPlacementRequirementDef>
+		<RandomPlacementRequirementDef InternalName="Lair_X_Ludicrous">
+			<ObjectType>MonsterLair</ObjectType>
+			<DisplayName>Ludicrous [0.06]</DisplayName>
+			<ObjectsPerLandTile>0.06</ObjectsPerLandTile>
+			<DistanceBetweenObjects>2</DistanceBetweenObjects>
+			<DistanceBetweenObjectTypes>1</DistanceBetweenObjectTypes>
+			<MaxObjectsPerSector>0</MaxObjectsPerSector>
+			<DistanceFromStartingPoint>2</DistanceFromStartingPoint>
+			<NumStartingPointObjects>8</NumStartingPointObjects>
+			<StartingPointObjectRange>4</StartingPointObjectRange>
+		</RandomPlacementRequirementDef>
+			<!--QUESTS-->
+		<RandomPlacementRequirementDef InternalName="QuestLocation_None">
+			<ObjectType>QuestLocation</ObjectType>
+			<DisplayName>None [0.0]</DisplayName>
+			<QuestsPerSpawnLevel>0</QuestsPerSpawnLevel>
+			<DistanceBetweenObjects>3</DistanceBetweenObjects>
+			<DistanceBetweenObjectTypes>3</DistanceBetweenObjectTypes>
+			<MaxObjectsPerSector>0</MaxObjectsPerSector>
+			<NumStartingPointObjects>0</NumStartingPointObjects>
+		</RandomPlacementRequirementDef>
+		<RandomPlacementRequirementDef InternalName="QuestLocation_Few">
+			<ObjectType>QuestLocation</ObjectType>
+			<DisplayName>Few [1.0]</DisplayName>
+			<QuestsPerSpawnLevel>1</QuestsPerSpawnLevel>
+			<DistanceBetweenObjects>3</DistanceBetweenObjects>
+			<DistanceBetweenObjectTypes>10</DistanceBetweenObjectTypes>
+			<MaxObjectsPerSector>0</MaxObjectsPerSector>
+			<NumStartingPointObjects>1</NumStartingPointObjects>
+			<StartingPointObjectRange>8</StartingPointObjectRange>
+		</RandomPlacementRequirementDef>
+		<RandomPlacementRequirementDef InternalName="QuestLocation_Default">
+			<ObjectType>QuestLocation</ObjectType>
+			<DisplayName>Balanced [2.0]</DisplayName>
+			<QuestsPerSpawnLevel>2</QuestsPerSpawnLevel>
+			<DistanceBetweenObjects>3</DistanceBetweenObjects>
+			<DistanceBetweenObjectTypes>8</DistanceBetweenObjectTypes>
+			<MaxObjectsPerSector>0</MaxObjectsPerSector>
+			<NumStartingPointObjects>2</NumStartingPointObjects>
+			<StartingPointObjectRange>8</StartingPointObjectRange>
+		</RandomPlacementRequirementDef>
+		<RandomPlacementRequirementDef InternalName="QuestLocation_Plenty">
+			<ObjectType>QuestLocation</ObjectType>
+			<DisplayName>Plenty [3.0]</DisplayName>
+			<QuestsPerSpawnLevel>3</QuestsPerSpawnLevel>
+			<DistanceBetweenObjects>3</DistanceBetweenObjects>
+			<DistanceBetweenObjectTypes>3</DistanceBetweenObjectTypes>
+			<MaxObjectsPerSector>0</MaxObjectsPerSector>
+			<NumStartingPointObjects>3</NumStartingPointObjects>
+			<StartingPointObjectRange>8</StartingPointObjectRange>
+		  </RandomPlacementRequirementDef>
+		<RandomPlacementRequirementDef InternalName="QuestLocation_DoNotPick">
+			<ObjectType>QuestLocation</ObjectType>
+			<DisplayName>###############</DisplayName>
+			<QuestsPerSpawnLevel>0</QuestsPerSpawnLevel>
+			<DistanceBetweenObjects>3</DistanceBetweenObjects>
+			<DistanceBetweenObjectTypes>3</DistanceBetweenObjectTypes>
+			<MaxObjectsPerSector>0</MaxObjectsPerSector>
+			<NumStartingPointObjects>0</NumStartingPointObjects>
+		  </RandomPlacementRequirementDef>
+		<RandomPlacementRequirementDef InternalName="QuestLocation_X_Legendary">
+			<ObjectType>QuestLocation</ObjectType>
+			<DisplayName>Legendary [4.0]</DisplayName>
+			<QuestsPerSpawnLevel>4</QuestsPerSpawnLevel>
+			<DistanceBetweenObjects>3</DistanceBetweenObjects>
+			<DistanceBetweenObjectTypes>2</DistanceBetweenObjectTypes>
+			<MaxObjectsPerSector>0</MaxObjectsPerSector>
+			<NumStartingPointObjects>4</NumStartingPointObjects>
+			<StartingPointObjectRange>7</StartingPointObjectRange>
+		  </RandomPlacementRequirementDef>
+		<RandomPlacementRequirementDef InternalName="QuestLocation_X_Ludicrous">
+			<ObjectType>QuestLocation</ObjectType>
+			<DisplayName>Ludicrous [5.0]</DisplayName>
+			<QuestsPerSpawnLevel>5</QuestsPerSpawnLevel>
+			<DistanceBetweenObjects>3</DistanceBetweenObjects>
+			<DistanceBetweenObjectTypes>1</DistanceBetweenObjectTypes>
+			<MaxObjectsPerSector>0</MaxObjectsPerSector>
+			<NumStartingPointObjects>5</NumStartingPointObjects>
+			<StartingPointObjectRange>6</StartingPointObjectRange>
+		  </RandomPlacementRequirementDef>
+			<!--CHAMPIONS (DISABLED)-->
+		<RandomPlacementRequirementDef InternalName="NPCCamp_None">
+			<ObjectType>NPCCamp</ObjectType>
+			<DisplayName>None</DisplayName>
+			<NPCCampsPerPlayerPerSpawnLevel>0.0</NPCCampsPerPlayerPerSpawnLevel>
+		</RandomPlacementRequirementDef>
+		<RandomPlacementRequirementDef InternalName="NPCCamp_Sparse">
+			<ObjectType>NPCCamp</ObjectType>
+			<DisplayName>Sparse</DisplayName>
+			<NPCCampsPerPlayerPerSpawnLevel>0.5</NPCCampsPerPlayerPerSpawnLevel>
+			<DistanceBetweenObjects>5</DistanceBetweenObjects>
+			<StartingPointObjectRange>3</StartingPointObjectRange>
+		</RandomPlacementRequirementDef>
+		<RandomPlacementRequirementDef InternalName="NPCCamp_Moderate">
+			<ObjectType>NPCCamp</ObjectType>
+			<DisplayName>Moderate</DisplayName>
+			<NPCCampsPerPlayerPerSpawnLevel>1.0</NPCCampsPerPlayerPerSpawnLevel>
+			<DistanceBetweenObjects>3</DistanceBetweenObjects>
+			<StartingPointObjectRange>3</StartingPointObjectRange>
+		</RandomPlacementRequirementDef>
+		<RandomPlacementRequirementDef InternalName="NPCCamp_Dense">
+			<ObjectType>NPCCamp</ObjectType>
+			<DisplayName>Dense</DisplayName>
+			<NPCCampsPerPlayerPerSpawnLevel>2.0</NPCCampsPerPlayerPerSpawnLevel>
+			<DistanceBetweenObjects>2</DistanceBetweenObjects>
+			<StartingPointObjectRange>3</StartingPointObjectRange>
+		</RandomPlacementRequirementDef>
+			<!--PRODUCTION PACE-->
+		<ProductionPaceDef>Comatose, 3.00</ProductionPaceDef>
+		<ProductionPaceDef>Sluggish, 2.00</ProductionPaceDef>
+		<ProductionPaceDef>Turtle, 1.67</ProductionPaceDef>
+		<ProductionPaceDef>VerySlow, 1.43</ProductionPaceDef>
+		<ProductionPaceDef>Slow, 1.18</ProductionPaceDef>
+		<ProductionPaceDef>Default, 1.00</ProductionPaceDef>
+		<ProductionPaceDef>Fast, 0.91</ProductionPaceDef>
+		<ProductionPaceDef>VeryFast, 0.83</ProductionPaceDef>
+		<ProductionPaceDef>Rabbit, 0.67</ProductionPaceDef>
+		<ProductionPaceDef>Legendary, 0.57</ProductionPaceDef>
+		<ProductionPaceDef>Ludicrous, 0.40</ProductionPaceDef>
+			<!--WILDLANDS-->
+		<WildlandsPerLandTiles>0.00075</WildlandsPerLandTiles>
+		<DistanceBetweenWildlands>12</DistanceBetweenWildlands>
+		<!--COLORS-->
+		<GrowthBonusDef>100:Low:1:219,94,11</GrowthBonusDef><!--[lower bound food surplus percentage (ulong)]: [string table tag]: [growth bonus (float)] : [color (byte,byte,byte)]-->
+		<GrowthBonusDef>200:Medium:2:207,163,11</GrowthBonusDef>
+		<GrowthBonusDef>300:High:3:20,200,20</GrowthBonusDef>
+		<RarityDisplay>Common:207,207,196</RarityDisplay><!--Default if not specified-->
+		<RarityDisplay>Common1:207,207,196</RarityDisplay>
+		<RarityDisplay>Common2:207,207,196</RarityDisplay>
+		<RarityDisplay>Common3:207,207,196</RarityDisplay>
+		<RarityDisplay>Common4:207,207,196</RarityDisplay>
+		<RarityDisplay>Uncommon:225,173,33</RarityDisplay>
+		<RarityDisplay>Uncommon1:225,173,33</RarityDisplay>
+		<RarityDisplay>Uncommon2:225,173,33</RarityDisplay>
+		<RarityDisplay>Uncommon3:225,173,33</RarityDisplay>
+		<RarityDisplay>Uncommon4:225,173,33</RarityDisplay>
+		<RarityDisplay>Rare:236,88,0</RarityDisplay>
+		<RarityDisplay>Rare1:236,88,0</RarityDisplay>
+		<RarityDisplay>Rare2:236,88,0</RarityDisplay>
+		<RarityDisplay>Rare3:236,88,0</RarityDisplay>
+		<RarityDisplay>Rare4:236,88,0</RarityDisplay>
+		<RarityDisplay>UltraRare:156,0,0</RarityDisplay>
+		<RarityDisplay>Unique:204,0,204</RarityDisplay>
+		<RarityDisplay>City:255,247,0</RarityDisplay>
+		<RarityDisplay>Crafted:68,108,207</RarityDisplay>
+		<RarityDisplay>Nil:61,43,31</RarityDisplay>
+		<RarityDisplay>Plunder:255,228,196</RarityDisplay>
+		<RarityDisplay>Reliquary:91,165,37</RarityDisplay>
+		<RarityDisplay>Summoned:112,48,128</RarityDisplay>
+		<RarityDisplay>Trophy:205,127,50</RarityDisplay>
+		<ThreatLevelDef>0:Weak:0,255,0</ThreatLevelDef><!--[lower bound battle rank]:[string table tag]:[color_r],[color_g],[color_b]-->
+		<ThreatLevelDef>15:Average:255,245,238</ThreatLevelDef>
+		<ThreatLevelDef>30:Strong:255,255,0</ThreatLevelDef>
+		<ThreatLevelDef>50:Deadly:255,0,0</ThreatLevelDef>
+		<ThreatLevelDef>60:Epic:68,108,207</ThreatLevelDef><!--ALT: 199,21,133-->
+		<!--GENERAL-->
+			<!--CITY-->
+		<BaseLaborCostPerTurn>0.0</BaseLaborCostPerTurn>
+		<CityAdminCostExponent>0.0</CityAdminCostExponent>
+		<CityAdminBaseCost>1.0</CityAdminBaseCost>
+		<CityCountUnrestPenalty>3</CityCountUnrestPenalty>
+		<CityLevelUpPerkOfferCount>3</CityLevelUpPerkOfferCount>
+		<CostPerLaborToRushProduction>1.33</CostPerLaborToRushProduction>
+		<CostToDemolish>0.0</CostToDemolish>
+		<CostToClearForest>0.0</CostToClearForest>
+		<DefenseDisplayIcon_Higher>Stat_Defense_Higher_Icon.png</DefenseDisplayIcon_Higher>
+		<DefenseDisplayIcon_Lower>Stat_Defense_Lower_icon.png</DefenseDisplayIcon_Lower>
+		<CityGrowthCalcDividend>1.0</CityGrowthCalcDividend>
+		<CityGrowthCalcDivisorAdd>1.0</CityGrowthCalcDivisorAdd>
+		<CityGrowthCalcDivisorMultiplier>0.0</CityGrowthCalcDivisorMultiplier>
+		<CityGrowthCalcCapitalBonus>0.0</CityGrowthCalcCapitalBonus>
+		<MaterialsForClearingForest>0.0</MaterialsForClearingForest>
+		<MaxStationedUnitCount>9</MaxStationedUnitCount>
+		<MaxTotalTileYield>10.0</MaxTotalTileYield>
+		<MinCostToRushProduction>25</MinCostToRushProduction>
+		<MinDistancesBetweenCities_TinyMap>5</MinDistancesBetweenCities_TinyMap>
+		<MinDistancesBetweenCities_SmallMap>6</MinDistancesBetweenCities_SmallMap>
+		<MinDistancesBetweenCities_MediumMap>6</MinDistancesBetweenCities_MediumMap>
+		<MinDistancesBetweenCities_LargeMap>6</MinDistancesBetweenCities_LargeMap>
+		<MinDistancesBetweenCities_HugeMap>6</MinDistancesBetweenCities_HugeMap>
+		<MinDistancesBetweenImprovements>2</MinDistancesBetweenImprovements>
+		<MinTurnsToConstructOrTrain>1</MinTurnsToConstructOrTrain>
+		<MinMaterialsTileYield>3.0</MinMaterialsTileYield>
+		<MinValidTotalTileYield>6.0</MinValidTotalTileYield>
+		<NonZOCContiguousCityUnrestPenalty>10</NonZOCContiguousCityUnrestPenalty><!--15-->
+		<OccupationInitialUnrest>50.0</OccupationInitialUnrest>
+		<OccupationTurnsBeforeReduction>0</OccupationTurnsBeforeReduction><!--5-->
+		<OccupationMinimumUnrest>0.0</OccupationMinimumUnrest>
+		<OwnershipTurnsBeforeCanRaze>1</OwnershipTurnsBeforeCanRaze>
+		<StartingCityTileYield>TileYieldGrain,4</StartingCityTileYield>
+		<StartingCityTileYield>TileYieldMaterials,3</StartingCityTileYield>
+			<!--OUTPOST-->
+		<MinDistancesBetweenOutposts>3</MinDistancesBetweenOutposts>
+		<RoadLevelAbilityForOutpostRoads>2</RoadLevelAbilityForOutpostRoads>
+			<!--POPULATION-->
+		<FoodReqPerCityPopulation>1</FoodReqPerCityPopulation>
+		<NormalPopIncrease>0.10</NormalPopIncrease>
+		<PovertyPopIncrease>0.025</PovertyPopIncrease>
+		<PrestigePopIncrease>0.00</PrestigePopIncrease>
+		<TrainingUnitsConsumesPop>1</TrainingUnitsConsumesPop>
+			<!--QUEST-->
+		<!--<ForceSpawnQuest>Quest_Dragon1</ForceSpawnQuest>-->
+		<!--<ForceSpawnQuest>Quest_Dragon2</ForceSpawnQuest>-->
+		<!--<ForceSpawnQuest>Quest_DragonFinal</ForceSpawnQuest>-->
+		<ForceSpawnQuest>Quest_X_Dragon1</ForceSpawnQuest>
+		<ForceSpawnQuest>Quest_X_Dragon2</ForceSpawnQuest>
+		<ForceSpawnQuest>Quest_X_Dragon3</ForceSpawnQuest>
+		<ForceSpawnQuest>Quest_X_Magic1</ForceSpawnQuest>
+		<ForceSpawnQuest>Quest_X_Magic2</ForceSpawnQuest>
+		<ForceSpawnQuest>Quest_X_Magic3</ForceSpawnQuest>
+		<ForceSpawnQuest>Quest_X_Magic4</ForceSpawnQuest>
+		<MaxActiveQuests>25</MaxActiveQuests>
+		<NumStartingQuestLocations>2</NumStartingQuestLocations>
+		<InitialQuestsPerSpawnLevel>2</InitialQuestsPerSpawnLevel>
+			<!--SEASONS-->
+		<TurnLimit>1000</TurnLimit>
+		<TurnLimitWarningPercentage>0.9</TurnLimitWarningPercentage>
+		<TurnLimitPacingMultiplier_Epic>3.0</TurnLimitPacingMultiplier_Epic>
+		<TurnLimitPacingMultiplier_Normal>1.0</TurnLimitPacingMultiplier_Normal>
+		<TurnLimitPacingMultiplier_Fast>0.5</TurnLimitPacingMultiplier_Fast>
+			<!--TACTICAL-->
+		<DeathwardEffect>S_DeathWard_Particle</DeathwardEffect>
+		<FortificationDefenseMultiplier>1.1</FortificationDefenseMultiplier>
+		<TacticalUnitIndicatorHighlightColor>191,255,255,0</TacticalUnitIndicatorHighlightColor>
+		<TacticalMoveHighlightColor>191,0,255,0</TacticalMoveHighlightColor>
+		<TacticalMoveRangeHighlightColor>255, 255, 0, 255</TacticalMoveRangeHighlightColor>
+		<TacticalDisplayAttackHighlightColor>191,255,0,0</TacticalDisplayAttackHighlightColor>
+		<TacticalSpellCastingHighlightColor>191,0,0,255</TacticalSpellCastingHighlightColor>
+		<TacticalSpellTargetHighlightColor>191,0,255,255</TacticalSpellTargetHighlightColor>
+		<TacticalSpellBadTargetHighlightColor>191,0,0,0</TacticalSpellBadTargetHighlightColor>
+			<!--TAXES-->
+		<DefaultTaxRateDef>TaxRate_X_040</DefaultTaxRateDef>
+			<!--TECH-->
+				<!--PACING-->
+		<TechPacingMultiplier_Epic>3.0</TechPacingMultiplier_Epic>
+		<TechPacingMultiplier_Normal>1.0</TechPacingMultiplier_Normal>
+		<TechPacingMultiplier_Fast>0.5</TechPacingMultiplier_Fast>
+				<!--VARIOUS-->
+		<KnowledgeFromResearchPercentage>10</KnowledgeFromResearchPercentage>
+		<MinNumTechsPerBreakthrough>2</MinNumTechsPerBreakthrough>
+		<TechCostMultiplier>6</TechCostMultiplier>
+		<TechCostExponent>1.5</TechCostExponent>
+		<TechOverallMultiplier>1.60</TechOverallMultiplier>
+		<TechCostPercentageIncreasePerTech>5.0</TechCostPercentageIncreasePerTech>
+			<!--TERRITORY-->
+		<HomeTerritoryAttackScalar>0.0</HomeTerritoryAttackScalar>
+		<HomeTerritoryDefenseScalar>0.0</HomeTerritoryDefenseScalar>
+		<ForeignTerritoryAttackScalar>0.0</ForeignTerritoryAttackScalar>
+		<ForeignTerritoryDefenseScalar>0.0</ForeignTerritoryDefenseScalar>
+			<!--UNITTYPES-->
+				<!--CARAVANS-->
+		<UnlimitedCaravans>0</UnlimitedCaravans>
+		<BaseCaravanTradePercentage>0.10</BaseCaravanTradePercentage>
+		<TurnsToRespawnCaravan>5</TurnsToRespawnCaravan>
+		<DefaultResourceSharingMultiplier>0.05</DefaultResourceSharingMultiplier>
+		<ConnectedByRoadResourceSharingMultiplier>2.0</ConnectedByRoadResourceSharingMultiplier>
+		<ConnectedToCapitalResourceBonus>0.1</ConnectedToCapitalResourceBonus>
+		<TradeRouteLengthMultiplier>0.0</TradeRouteLengthMultiplier>
+		<WagonMultiplier>0.0</WagonMultiplier>
+		<TradeRouteLengthWagonThreshold>10</TradeRouteLengthWagonThreshold>
+				<!--CREATURES-->
+		<MonsterPerTile>30</MonsterPerTile>
+		<MonsterSpawnRateIncrease>25</MonsterSpawnRateIncrease><!--Goes up every X Seasons (45) (20)-->
+		<WorldSpawnRatingIncrementFormula_Dividee>1.0</WorldSpawnRatingIncrementFormula_Dividee><!--m_fSpawnRatingTypeCounter_NPC += (Dividee / (numPlayers / DivisorDivisor ))-->
+		<WorldSpawnRatingIncrementFormula_DivisorDivisor>4.0</WorldSpawnRatingIncrementFormula_DivisorDivisor>
+				<!--DESIGN-->
+		<RandomUnitSlotLiklihood_Head>100</RandomUnitSlotLiklihood_Head>
+		<RandomUnitSlotLiklihood_HeadAccessory>20</RandomUnitSlotLiklihood_HeadAccessory>
+		<RandomUnitSlotLiklihood_Torso>95</RandomUnitSlotLiklihood_Torso>
+		<RandomUnitSlotLiklihood_Surcoat>50</RandomUnitSlotLiklihood_Surcoat>
+		<RandomUnitSlotLiklihood_Cloak>25</RandomUnitSlotLiklihood_Cloak>
+		<RandomUnitSlotLiklihood_Forearms>25</RandomUnitSlotLiklihood_Forearms>
+		<RandomUnitSlotLiklihood_Weapon>10</RandomUnitSlotLiklihood_Weapon>
+		<RandomUnitSlotLiklihood_Defense>10</RandomUnitSlotLiklihood_Defense>
+		<RandomUnitSlotLiklihood_LowerBody>80</RandomUnitSlotLiklihood_LowerBody>
+		<RandomUnitSlotLiklihood_Boots>50</RandomUnitSlotLiklihood_Boots>
+				<!--LIMITED-->
+		<DefaultNumTurnsToSpawnLimitedUnitType>10</DefaultNumTurnsToSpawnLimitedUnitType>
+				<!--NPC-->
+		<NPCLiklihoodRangeMax>1000</NPCLiklihoodRangeMax>
+		<NPCRecruitValueMultiplier_BattleRank>8.0</NPCRecruitValueMultiplier_BattleRank>
+		<NPCRecruitValueMultiplier_Talent>75</NPCRecruitValueMultiplier_Talent>
+		<NPCRecruitValueMultiplier>3.0</NPCRecruitValueMultiplier>
+		<NPCSameRaceRecruitMultiplier>0.5</NPCSameRaceRecruitMultiplier>
+		<NumNPCCampsPerPlayerPerSpawnLevel>1.0</NumNPCCampsPerPlayerPerSpawnLevel><!--1.0-->
+		<TurnToSpawnFreeNPC>2</TurnToSpawnFreeNPC><!--0???-->
+				<!--PIONEERS-->
+		<PioneerImprovementProductionMultiplier>0.5</PioneerImprovementProductionMultiplier>
+				<!--SOVEREIGN (AND CHAMPIONS)-->
+		<CritThreshold>0</CritThreshold><!--Difference between hitting and defending that needs to be met in order to roll for a Critical Strike using the ChanceToCrit stat (2x DMG)-->
+		<IsSovereignExemptFromSpellStatReqs>1</IsSovereignExemptFromSpellStatReqs>
+		<MaxEquippedAccessoryCount>4</MaxEquippedAccessoryCount><!--Event: 5, 6, 7, 8, 9-->
+		<ReviveSovereignManaPercentageCost>0.33</ReviveSovereignManaPercentageCost><!--0.5-->
+		<ReviveSovereignImmobilizationDuration>5</ReviveSovereignImmobilizationDuration>
+		<ReviveChampionImmobilizationMultiplier>0</ReviveChampionImmobilizationMultiplier>
+		<Sovereign_GoldPerTurn>1.0</Sovereign_GoldPerTurn><!--0.0-->
+		<Sovereign_ResearchPerTurn>1.0</Sovereign_ResearchPerTurn><!--0.0-->
+		<Sovereign_GlobalManaPerTurn>1.0</Sovereign_GlobalManaPerTurn>
+		<SovereignCreationCustomizationPoints>6</SovereignCreationCustomizationPoints>
+				<!--TROOPS-->
+		<BaseUnitWages>0.00</BaseUnitWages>
+		<EnableUpgradeGroup>1</EnableUpgradeGroup>
+		<UpgradeGoldCostPerTroop>50.0</UpgradeGoldCostPerTroop>
+		<PovertyUnitWages>0.00</PovertyUnitWages>
+		<MinTurnsBeforeUnitsDesert>10</MinTurnsBeforeUnitsDesert><!--25-->
+		<TrainingCostFactorOnWage>0.005</TrainingCostFactorOnWage>
+				<!--XP-->
+		<CombatRatingToExpMultiplier>0.49</CombatRatingToExpMultiplier><!--0.45-->
+		<MaxExpFromCombat>-1</MaxExpFromCombat><!--Disabled-->
+		<MinExpFromCombat>4</MinExpFromCombat><!--1--><!--Event: 8, 12, 16, 20-->
+		<MultiplierOnPointsToLevelUnit>1</MultiplierOnPointsToLevelUnit>
+		<ExpBaseOnPointsToLevelUnit>2.1</ExpBaseOnPointsToLevelUnit>
+		<ExpMultiplierOnDesignedUnits>0.5</ExpMultiplierOnDesignedUnits>
+		<UnitLevelUpPerkOfferCount>5</UnitLevelUpPerkOfferCount>
+		<XPPercentTrainedUnitsGiveSov>0</XPPercentTrainedUnitsGiveSov>
+		<!--<StatPointsPerLevelUp>3</StatPointsPerLevelUp>(Obsolete)-->
+			<!--VARIOUS-->
+		<DefaultWorldFOWFadeColor>60,60,70</DefaultWorldFOWFadeColor>
+		<MinDistanceBetweenStartingPoints>10</MinDistanceBetweenStartingPoints>
+		<MinTurnsBetweenDiplomaticContact>10</MinTurnsBetweenDiplomaticContact>
+		<StartingGameYear>1</StartingGameYear><!--165-->
+			<!--ZOC INFLUENCE-->
+		<ZOCImprovementInfluence>5.0</ZOCImprovementInfluence>
+		<ZOCImprovementInfluenceRadius>0.0</ZOCImprovementInfluenceRadius>
+		<DefaultImprovementSightRadius>1</DefaultImprovementSightRadius>
+		<!--VARIOUS-->
+		<CreaturesMoveLimit>2</CreaturesMoveLimit><!--1--><!--(1) Event: 2, 3, 4, 5, 6-->
+		<DefaultShadowTransparency>0.6</DefaultShadowTransparency>
+		<ExpandedEventTime>10000</ExpandedEventTime>
+		<MaulDebuffSpell>MaulDebuff</MaulDebuffSpell>
+		<MeleeAttackDistance>24</MeleeAttackDistance>
+		<MovementSpeedModifier>1.25</MovementSpeedModifier><!--1-->
+		<MovementSpeedModifierTactical>1.75</MovementSpeedModifierTactical><!--1.2-->
+		<SurrenderSovereignAbility>BrokenSpirit</SurrenderSovereignAbility>
+		<WideAttackDistance>30</WideAttackDistance>
+		<TurnToForceNewMusic>20</TurnToForceNewMusic>
+		<!--Z-->
+			<!--DYNASTY-->
+		<EnableDynasties>0</EnableDynasties>
+		<!--x-->
+		<Dynasty_MaxNumChildren>4</Dynasty_MaxNumChildren>
+		<Dynasty_ChanceToMarry>0.1</Dynasty_ChanceToMarry>
+		<Dynasty_ChanceToGiveBirth>0.1</Dynasty_ChanceToGiveBirth>
+		<Dynasty_TurnAgeGrown>100</Dynasty_TurnAgeGrown>
+		<Dynasty_TurnAgeOld>600</Dynasty_TurnAgeOld>
+		<Dynasty_MinTurnsBetweenChildren>20</Dynasty_MinTurnsBetweenChildren>
+		<Dynasty_MinTurnsUntilMarriage>50</Dynasty_MinTurnsUntilMarriage>
+		<Dynasty_ChanceToChangeAllegiance>0.67</Dynasty_ChanceToChangeAllegiance>
+		<!--x-->
+			<!--ENCUMBRANCE-->
+		<EncumbranceEffect>
+			<DisplayName>Light</DisplayName>
+			<Color>255,255,255</Color>
+			<!--format:[start percentage (float 0.1 = 10%)], [end percentage (float 0.1 = 10%)]-->
+			<Range>0.0,0.4</Range><!--a 0.0 in the range indicates being open ended-->
+		</EncumbranceEffect>
+		<EncumbranceEffect>
+			<DisplayName>Medium</DisplayName>
+			<Color>225,173,33</Color>
+			<Range>0.4,0.8</Range>
+			<StatEffect>UnitStat_CombatSpeed,0.0,-2.0</StatEffect>
+		</EncumbranceEffect>
+		<EncumbranceEffect>
+			<DisplayName>Heavy</DisplayName>
+			<Color>236,88,0</Color>
+			<Range>0.8,1.0</Range>
+			<StatEffect>UnitStat_CombatSpeed,0.0,-5.0</StatEffect>
+		</EncumbranceEffect>
+		<EncumbranceEffect>
+			<DisplayName>Over-Encumbered</DisplayName>
+			<Color>204,0,204</Color>
+			<Range>1.0,0.0</Range>
+			<StatEffect>UnitStat_CombatSpeed,0.0,-8.0</StatEffect>
+			<StatEffect>UnitStat_Moves,0.0,-1.0</StatEffect>
+		</EncumbranceEffect>
+			<!--LIGHTING-->
+				<!--TERRAIN-->
+		<DefaultWorldTerrainLightDir>-0.455, -0.455, -0.766</DefaultWorldTerrainLightDir>
+		<DefaultWorldTerrainLightAmbient>260, 260, 300</DefaultWorldTerrainLightAmbient>
+		<DefaultWorldTerrainLightDiffuse>460, 460, 390</DefaultWorldTerrainLightDiffuse>
+		<DefaultWorldTerrainRimLightDirection0> 0.925, 0.1632, -0.342</DefaultWorldTerrainRimLightDirection0>
+		<DefaultWorldTerrainRimLightDirection1>-0.763, 0.067, -0.643</DefaultWorldTerrainRimLightDirection1>
+		<DefaultWorldTerrainRimLightColor0>200, 300, 500</DefaultWorldTerrainRimLightColor0>
+		<DefaultWorldTerrainRimLightColor1>180, 180, 90</DefaultWorldTerrainRimLightColor1>
+				<!--WORLD-->
+		<DefaultWorldLightDir>-0.492, -0.853, -0.174</DefaultWorldLightDir>
+		<DefaultWorldLightAmbient>200, 200, 220</DefaultWorldLightAmbient>
+		<DefaultWorldLightDiffuse>230, 180, 135</DefaultWorldLightDiffuse>
+		<DefaultWorldRimLightDirection0>-0.951, -0.168, -0.259</DefaultWorldRimLightDirection0>
+		<DefaultWorldRimLightDirection1>0.837, 0.224, -0.500</DefaultWorldRimLightDirection1>
+		<DefaultWorldRimLightColor0>220, 145, 55</DefaultWorldRimLightColor0>
+		<DefaultWorldRimLightColor1>90, 270, 270</DefaultWorldRimLightColor1>
+			<!--STATS-->
+		<AccuracyBase>0</AccuracyBase>
+		<AccuracyPerLevel>1</AccuracyPerLevel>
+		<CharismaMultOnGrowth>0.0</CharismaMultOnGrowth>
+		<GlobalHitPointsBonus>0.0</GlobalHitPointsBonus>
+		<ConstitutionMultOnHitPoints>0.0</ConstitutionMultOnHitPoints>
+		<DexterityMultOnCritChance>0.0</DexterityMultOnCritChance>
+		<DexterityMultOnDodge>0.0</DexterityMultOnDodge>
+		<IntelligenceMultOnExperience>0</IntelligenceMultOnExperience>
+		<IntelligenceMultOnMagicPower>0</IntelligenceMultOnMagicPower>
+		<IntelligenceMultOnMagicResist>0</IntelligenceMultOnMagicResist>
+		<StrengthMultOnAttack>0.0</StrengthMultOnAttack>
+		<StrengthMultOnWeight>0</StrengthMultOnWeight>
+			<!--ZOOMING SCALE CURVE-->
+		<GFXScale_X0>0.0</GFXScale_X0>
+		<GFXScale_Y0>3.0</GFXScale_Y0>
+		<GFXScale_X1>0.4</GFXScale_X1>
+		<GFXScale_Y1>3.0</GFXScale_Y1>
+		<GFXScale_X2>0.84</GFXScale_X2>
+		<GFXScale_Y2>1.4</GFXScale_Y2>
+		<GFXScale_X3>0.98</GFXScale_X3>
+		<GFXScale_Y3>0.9</GFXScale_Y3>
+		<GFXScale_X4>1.0</GFXScale_X4>
+		<GFXScale_Y4>0.18</GFXScale_Y4>
+			<!--WHATEVER-->
+		<DeathFlybackMinDistance>40.0</DeathFlybackMinDistance>
+		<DeathFlybackMaxDistance>80.0</DeathFlybackMaxDistance>
+		<DeathFlybackMinTime>0.40</DeathFlybackMinTime>
+		<DeathFlybackMaxTime>0.8</DeathFlybackMaxTime>
+		<DistanceFogLowAngleZoomedInNearPlane>0.9</DistanceFogLowAngleZoomedInNearPlane>
+		<DistanceFogLowAngleZoomedInFarPlane>2.5</DistanceFogLowAngleZoomedInFarPlane>
+		<DistanceFogLowAngleZoomedMidNearPlane>1.1</DistanceFogLowAngleZoomedMidNearPlane>
+		<DistanceFogLowAngleZoomedMidFarPlane>1.9</DistanceFogLowAngleZoomedMidFarPlane>
+		<DistanceFogLowAngleZoomedOutNearPlane>1.6</DistanceFogLowAngleZoomedOutNearPlane>
+		<DistanceFogLowAngleZoomedOutFarPlane>2.97</DistanceFogLowAngleZoomedOutFarPlane>
+		<DistanceFogMidAngleZoomedInNearPlane>1.029025</DistanceFogMidAngleZoomedInNearPlane>
+		<DistanceFogMidAngleZoomedInFarPlane>0.854895</DistanceFogMidAngleZoomedInFarPlane>
+		<DistanceFogMidAngleZoomedMidNearPlane>4.55</DistanceFogMidAngleZoomedMidNearPlane>
+		<DistanceFogMidAngleZoomedMidFarPlane>1.313795</DistanceFogMidAngleZoomedMidFarPlane>
+		<DistanceFogMidAngleZoomedOutNearPlane>5.0</DistanceFogMidAngleZoomedOutNearPlane>
+		<DistanceFogMidAngleZoomedOutFarPlane>3.00</DistanceFogMidAngleZoomedOutFarPlane>
+		<DistanceFogHighAngleZoomedInNearPlane>0.92</DistanceFogHighAngleZoomedInNearPlane>
+		<DistanceFogHighAngleZoomedInFarPlane>3.3</DistanceFogHighAngleZoomedInFarPlane>
+		<DistanceFogHighAngleZoomedMidNearPlane>1.2</DistanceFogHighAngleZoomedMidNearPlane>
+		<DistanceFogHighAngleZoomedMidFarPlane>1.700003</DistanceFogHighAngleZoomedMidFarPlane>
+		<DistanceFogHighAngleZoomedOutNearPlane>1.6</DistanceFogHighAngleZoomedOutNearPlane>
+		<DistanceFogHighAngleZoomedOutFarPlane>2.000003</DistanceFogHighAngleZoomedOutFarPlane>
+		<DistanceFogClipZoomLevel>80</DistanceFogClipZoomLevel>
+		<MiniMapFogTexture>gfx/Screens/MiniMap_Fog.png</MiniMapFogTexture>
+		<MiniMapFogAlpha>0</MiniMapFogAlpha>
+		<MiniMapBackgroundTexture>gfx/Screens/MiniMap_Parchment.png</MiniMapBackgroundTexture>
+		<MiniMapFrustumColor>200,200,200</MiniMapFrustumColor>
+		<MiniMapCoastalColor>64,51,56</MiniMapCoastalColor>
+		<MiniMapTerrainCategoryColor>Land:166,152,136</MiniMapTerrainCategoryColor>
+		<MiniMapTerrainCategoryColor>City:166,152,136</MiniMapTerrainCategoryColor>
+		<MiniMapTerrainCategoryColor>Beach:166,152,136</MiniMapTerrainCategoryColor>
+		<MiniMapTerrainCategoryColor>Water:50,75,110</MiniMapTerrainCategoryColor>
+		<MiniMapTerrainCategoryColor>Cliff:166,152,136</MiniMapTerrainCategoryColor>
+		<MiniMapTerrainCategoryColor>Chasm:166,152,136</MiniMapTerrainCategoryColor>
+		<MiniMapTerrainCategoryColor>ChasmEdge:166,152,136</MiniMapTerrainCategoryColor> 
+		<MiniMapTerrainCategoryColor>Forest:166,152,136</MiniMapTerrainCategoryColor>
+		<MiniMapTerrainCategoryColor>Mountain:gfx/Screens/MiniMap_Mountain.png</MiniMapTerrainCategoryColor>
+		<MaterialSpecularIntensity_Skin>0.2</MaterialSpecularIntensity_Skin>
+		<MaterialSpecularIntensity_Hair>0.4</MaterialSpecularIntensity_Hair>
+		<MaterialSpecularIntensity_Clothing1>0.3</MaterialSpecularIntensity_Clothing1>
+		<MaterialSpecularIntensity_Clothing2>0.3</MaterialSpecularIntensity_Clothing2>
+		<MaterialSpecularExponent_Skin>1.0</MaterialSpecularExponent_Skin>
+		<MaterialSpecularExponent_Hair>1.0</MaterialSpecularExponent_Hair>
+		<MaterialSpecularExponent_Clothing1>0.5</MaterialSpecularExponent_Clothing1>
+		<MaterialSpecularExponent_Clothing2>0.5</MaterialSpecularExponent_Clothing2>
+		<MaterialSpecularIntensity_Metal>2.5</MaterialSpecularIntensity_Metal>
+		<MaterialSpecularIntensity_Primary>0.0</MaterialSpecularIntensity_Primary>
+		<MaterialSpecularIntensity_Secondary>0.0</MaterialSpecularIntensity_Secondary>
+		<MaterialSpecularIntensity_Roof>0.0</MaterialSpecularIntensity_Roof>
+		<MaterialSpecularIntensity_TerrainBlend>0.0</MaterialSpecularIntensity_TerrainBlend>
+		<MaterialSpecularIntensity_TerrainOnly>0.0</MaterialSpecularIntensity_TerrainOnly>
+		<MaterialSpecularIntensity_Trans>0.0</MaterialSpecularIntensity_Trans>
+		<MaterialSpecularIntensity_ScrollTransMask>0.0</MaterialSpecularIntensity_ScrollTransMask>
+		<MaterialSpecularIntensity_Eyes>0.0</MaterialSpecularIntensity_Eyes>
+		<MaterialSpecularIntensity_Crest>0.0</MaterialSpecularIntensity_Crest>
+		<MaterialSpecularIntensity_Pewter>3.0</MaterialSpecularIntensity_Pewter>
+		<MaterialSpecularIntensity_Water>3.0</MaterialSpecularIntensity_Water>
+		<MaterialSpecularExponent_Metal>6.0</MaterialSpecularExponent_Metal>
+		<MaterialSpecularExponent_Primary>16.0</MaterialSpecularExponent_Primary>
+		<MaterialSpecularExponent_Secondary>16.0</MaterialSpecularExponent_Secondary>
+		<MaterialSpecularExponent_Roof>16.0</MaterialSpecularExponent_Roof>
+		<MaterialSpecularExponent_TerrainBlend>16.0</MaterialSpecularExponent_TerrainBlend>
+		<MaterialSpecularExponent_TerrainOnly>16.0</MaterialSpecularExponent_TerrainOnly>
+		<MaterialSpecularExponent_Trans>0.0</MaterialSpecularExponent_Trans>
+		<MaterialSpecularExponent_ScrollTransMask>0.0</MaterialSpecularExponent_ScrollTransMask>
+		<MaterialSpecularExponent_Eyes>16.0</MaterialSpecularExponent_Eyes>
+		<MaterialSpecularExponent_Crest>16.0</MaterialSpecularExponent_Crest>
+		<MaterialSpecularExponent_Water>8.0</MaterialSpecularExponent_Water>
+		<MaterialSpecularExponent_Pewter>16.0</MaterialSpecularExponent_Pewter>
+		<MaterialEnvironmentMap_Skin>gfx/skymap_clothes.dds</MaterialEnvironmentMap_Skin>
+		<MaterialEnvironmentMap_Hair>gfx/skymap_streaks.dds</MaterialEnvironmentMap_Hair>
+		<MaterialEnvironmentMap_Clothing1>gfx/skymap_clothes.dds</MaterialEnvironmentMap_Clothing1>
+		<MaterialEnvironmentMap_Clothing2>gfx/skymap_clothes.dds</MaterialEnvironmentMap_Clothing2>
+		<MaterialEnvironmentMap_Metal>gfx/skymap_streaks.dds</MaterialEnvironmentMap_Metal>
+		<MaterialEnvironmentMap_Primary>gfx/skymap_simple.dds</MaterialEnvironmentMap_Primary>
+		<MaterialEnvironmentMap_Secondary>gfx/skymap_simple.dds</MaterialEnvironmentMap_Secondary>
+		<MaterialEnvironmentMap_Roof>gfx/skymap_simple.dds</MaterialEnvironmentMap_Roof>
+		<MaterialEnvironmentMap_TerrainBlend>gfx/skymap_simple.dds</MaterialEnvironmentMap_TerrainBlend>
+		<MaterialEnvironmentMap_TerrainOnly>gfx/skymap_simple.dds</MaterialEnvironmentMap_TerrainOnly>
+		<MaterialEnvironmentMap_Trans>gfx/skymap_simple.dds</MaterialEnvironmentMap_Trans>
+		<MaterialEnvironmentMap_ScrollTransMask>gfx/skymap_water.dds</MaterialEnvironmentMap_ScrollTransMask>
+		<MaterialEnvironmentMap_ScrollTransMask>gfx/skymap_simple.dds</MaterialEnvironmentMap_ScrollTransMask>
+		<MaterialEnvironmentMap_Eyes>gfx/skymap_simple.dds</MaterialEnvironmentMap_Eyes>
+		<MaterialEnvironmentMap_Crest>gfx/skymap_simple.dds</MaterialEnvironmentMap_Crest>
+		<MaterialEnvironmentMap_Water>gfx/skymap_water.dds</MaterialEnvironmentMap_Water>
+		<MaterialEnvironmentMap_Pewter>gfx/skymap_pewter.dds</MaterialEnvironmentMap_Pewter>
+		<PlaybackSpeedModifier_All>1.0</PlaybackSpeedModifier_All>
+		<PlaybackSpeedModifierTactical_All>1.0</PlaybackSpeedModifierTactical_All>
+		<PlaybackSpeedModifier_Idle>1.0</PlaybackSpeedModifier_Idle>
+		<PlaybackSpeedModifierTactical_Idle>1.0</PlaybackSpeedModifierTactical_Idle>
+		<PlaybackSpeedModifier_BattleIdle>1.0</PlaybackSpeedModifier_BattleIdle>
+		<PlaybackSpeedModifierTactical_BattleIdle>1.0</PlaybackSpeedModifierTactical_BattleIdle>
+		<PlaybackSpeedModifier_Greeting>1.0</PlaybackSpeedModifier_Greeting>
+		<PlaybackSpeedModifierTactical_Greeting>1.0</PlaybackSpeedModifierTactical_Greeting>
+		<PlaybackSpeedModifier_Run>1.0</PlaybackSpeedModifier_Run>
+		<PlaybackSpeedModifierTactical_Run>1.0</PlaybackSpeedModifierTactical_Run>
+		<PlaybackSpeedModifier_Death>1.2</PlaybackSpeedModifier_Death>
+		<PlaybackSpeedModifierTactical_Death>1.2</PlaybackSpeedModifierTactical_Death>
+		<PlaybackSpeedModifier_Attack>1.5</PlaybackSpeedModifier_Attack>
+		<PlaybackSpeedModifierTactical_Attack>1.5</PlaybackSpeedModifierTactical_Attack>
+		<PlaybackSpeedModifier_AttackKill>1.1</PlaybackSpeedModifier_AttackKill>
+		<PlaybackSpeedModifierTactical_AttackKill>1.0</PlaybackSpeedModifierTactical_AttackKill>
+		<PlaybackSpeedModifier_OnHit>1.6</PlaybackSpeedModifier_OnHit>
+		<PlaybackSpeedModifierTactical_OnHit>1.1</PlaybackSpeedModifierTactical_OnHit>
+		<PlaybackSpeedModifier_Dodge>1.5</PlaybackSpeedModifier_Dodge>
+		<PlaybackSpeedModifierTactical_Dodge>1.2</PlaybackSpeedModifierTactical_Dodge>
+		<PlaybackSpeedModifier_CastSpell>2.0</PlaybackSpeedModifier_CastSpell>
+		<PlaybackSpeedModifierTactical_CastSpell>1.0</PlaybackSpeedModifierTactical_CastSpell>
+		<PlaybackSpeedModifier_Victory>1.0</PlaybackSpeedModifier_Victory>
+		<PlaybackSpeedModifierTactical_Victory>1.0</PlaybackSpeedModifierTactical_Victory>
+		<PlaybackSpeedModifier_Awaken>1.0</PlaybackSpeedModifier_Awaken>
+		<PlaybackSpeedModifierTactical_Awaken>1.0</PlaybackSpeedModifierTactical_Awaken>
+		<PlaybackSpeedModifier_KnockedProne>1.0</PlaybackSpeedModifier_KnockedProne>
+		<PlaybackSpeedModifierTactical_KnockedProne>1.0</PlaybackSpeedModifierTactical_KnockedProne>
+		<PlaybackSpeedModifier_Recover>2.0</PlaybackSpeedModifier_Recover>
+		<PlaybackSpeedModifierTactical_Recover>1.0</PlaybackSpeedModifierTactical_Recover>
+		<PlaybackSpeedModifier_Stunned>2.0</PlaybackSpeedModifier_Stunned>
+		<PlaybackSpeedModifierTactical_Stunned>3.0</PlaybackSpeedModifierTactical_Stunned>
+		<SelectionCursorScale>1.3</SelectionCursorScale>
+		<SelectionCursorTextureOwner>gfx/FE_Selection_Fixed_01.png</SelectionCursorTextureOwner>
+		<SelectionCursorTextureOwnerAnimated>gfx/FE_Selection_Top_01.png</SelectionCursorTextureOwnerAnimated>
+		<SelectionCursorTextureOwnerTintable>gfx/FE_Selection_Tint_01.png</SelectionCursorTextureOwnerTintable>
+		<SelectionCursorTextureEnemy>gfx/FE_Selection_Enemy_01.png</SelectionCursorTextureEnemy>
+		<SelectionCursorTextureEnemyAnimated>FE_Selection_Empty.png</SelectionCursorTextureEnemyAnimated>
+		<SelectionCursorTextureEnemyTintable>gfx/FE_Selection_Tint_01.png</SelectionCursorTextureEnemyTintable>
+		<SelectionCursorTextureFriendly>gfx/FE_Selection_Friendly.png</SelectionCursorTextureFriendly>
+		<SelectionCursorTextureFriendlyAnimated>FE_Selection_Empty.png</SelectionCursorTextureFriendlyAnimated>
+		<SelectionCursorTextureFriendlyTintable>gfx/FE_Selection_Tint_01.png</SelectionCursorTextureFriendlyTintable>
+		<SelectionCursorTextureNeutral>gfx/FE_Selection_Neutral.png</SelectionCursorTextureNeutral>
+		<SelectionCursorTextureNeutralAnimated>FE_Selection_Empty.png</SelectionCursorTextureNeutralAnimated>
+		<SelectionCursorTextureNeutralTintable>gfx/FE_Selection_Tint_01.png</SelectionCursorTextureNeutralTintable>
+		<DestinationCursorTexture>gfx/FE_Selection_Destination.png</DestinationCursorTexture>
+		<DestinationCursorTextureAnimated>gfx/FE_Selection_Destination_Animate.png</DestinationCursorTextureAnimated>
+		<DestinationCursorTextureTintable>gfx/FE_Selection_Tint_01.png</DestinationCursorTextureTintable>
+		<DestinationCursorScale>1.3</DestinationCursorScale>
+	</ElementalDefs>
+</ElementalDefinitions>

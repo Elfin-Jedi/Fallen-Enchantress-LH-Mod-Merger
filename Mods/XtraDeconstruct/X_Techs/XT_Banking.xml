@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<Techs>
+	<TechDef InternalName="Tech_X_Banking">
+		<DisplayName>Banking</DisplayName>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Higher_Education</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Logistics</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Guilds</Attribute>
+		</Prereq>
+		<Description>Research in this area will allow us to construct Bank improvements which will generate interests on our Treasury.</Description>
+		<AdviceText>Building a Bank in every city will channel our surpluses into lending activites bringing in additional Gildar every season.</AdviceText>
+		<Image>Treaty.png</Image>
+		<Color>60,138,25</Color>
+		<HotColor>146,255,49</HotColor>
+		<Cost>164</Cost>
+		<Rarity>100</Rarity>
+		<Category>Civilization</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_BorrowGildar_1</StrVal>
+			<Icon>Spell_X_BorrowGildar.png</Icon>
+			<Provides>Strategic Spell ::: Borrow Gildar</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Icon>Spell_X_RecallLoan.png</Icon>
+			<Provides>Strategic Spell ::: Repay Loan</Provides>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>50</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>1</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+</Techs>

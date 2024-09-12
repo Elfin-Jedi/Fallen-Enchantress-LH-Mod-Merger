@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<Container>
+  <AbilityBonus InternalName="Champion_Weakness">
+    <AbilityBonusOption InternalName="Reliquary_Cursed">
+      <PerkTreePosX>1</PerkTreePosX>
+      <PerkTreePosY>0</PerkTreePosY>
+      <DisplayName>Hexed</DisplayName>
+      <Description>Unit counts as Hexed, and may suffer additional negative effects from spells and other sources. In addition, the unit has its Hitpoints reduced by 10% and its Strategic Health regeneration is reduced by 33%. Any enchantments cast on the unit has its mana maintenance increased by 50%.
+
+A Hex is ancient, mighty magic that is bound to the essence of its target for all eternity. Champions may under special circumstances remove the Hex by fundamentally altering who they are as a person. This is a profoundly difficult process, and far from everyone will succeed in attempts to do so.</Description>
+      <Icon>Reliquary_CurseIcon.png</Icon>
+      <Cost>-2</Cost>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_EnchantmentMaintenanceMultiplier</StrVal>
+        <Value>0.5</Value>
+        <Provides>Unit counts as Hexed, and may suffer additional negative effects from spells and other sources. In addition, the unit has its Hitpoints reduced by 10% and its Strategic Health regeneration is reduced by 33%. Any enchantments cast on the unit has its mana maintenance increased by 50%.
+
+A Hex is ancient, mighty magic that is bound to the essence of its target for all eternity. Champions may under special circumstances remove the Hex by fundamentally altering who they are as a person. This is a profoundly difficult process, and far from everyone will succeed in attempts to do so.</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Reliquary_IsCursed</StrVal>
+        <Value>1</Value>
+        <Provides>.</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_HitPoints</StrVal>
+        <Multiplier>0.9</Multiplier>
+        <Provides>.</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_HealthRegen</StrVal>
+        <Multiplier>0.66</Multiplier>
+        <Provides>.</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>1</HideWhenUpgraded>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Reliquary_LiftCurse">
+    <AbilityBonusType>Unit_Level</AbilityBonusType>
+    <AbilityBonusOption InternalName="Reliquary_LiftCurse">
+      <PerkTreePosX>2</PerkTreePosX>
+      <PerkTreePosY>0</PerkTreePosY>
+      <DisplayName>Lifted Hex</DisplayName>
+      <Description>Unit was once Hexed, but has since managed to lift it through personal development. All ill effects of the Hex have been removed. In addition, the unit may never be Hexed again.</Description>
+      <Icon>Ability_HallowedRite_Icon.png</Icon>
+      <Prereq>
+        <Type>UnitStat</Type>
+        <Attribute>UnitStat_Reliquary_CanLiftCurse</Attribute>
+        <Value>1</Value>
+      </Prereq>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Reliquary_Cursed</Attribute>
+      </Prereq>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_EnchantmentMaintenanceMultiplier</StrVal>
+        <Value>-0.5</Value>
+        <Provides>Unit was once Hexed, but has since managed to lift it through personal development. All ill effects of the Hex have been removed. In addition, the unit may never be Hexed again.</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Reliquary_IsCursed</StrVal>
+        <Value>-1</Value>
+        <Provides>.</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_HitPoints</StrVal>
+        <Multiplier>1.1</Multiplier>
+        <Provides>.</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_HealthRegen</StrVal>
+        <Multiplier>1.34</Multiplier>
+        <Provides>.</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <RarityDisplay>Rare</RarityDisplay>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>50000000</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+</Container>

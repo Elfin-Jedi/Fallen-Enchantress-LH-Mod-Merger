@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<UnitTypes>
+  <DataChecksum NoParse="1">
+    <Ignore>DispName</Ignore>
+    <Translate>DispName,Description</Translate>
+  </DataChecksum>
+  <!-- **************************************************** -->
+  <!-- ********* Mod Unit Types: Nervari Faction ********** -->
+  <!-- **************************************************** -->
+
+  <!-- **************************************************** -->
+  <!-- Highlord Nervar -->
+  <!-- **************************************************** -->
+  <UnitType InternalName="Sovereign_Nervar">
+    <DisplayName>Highlord Nervar</DisplayName>
+    <UnitDisplayName>Highlord Nervar</UnitDisplayName>
+    <Class>Sovereign</Class>
+    <Allegiance>Kingdom</Allegiance>
+    <RaceType>Race_Type_Quendar</RaceType>
+    <Unique>1</Unique>
+    <CanBeDesigned>0</CanBeDesigned>
+    <FactionToLead>CustomFaction_Nervari</FactionToLead>
+    <Gender>Male</Gender>
+    <HasWages>0</HasWages>
+    <IsSovereign>1</IsSovereign>
+    <HasEssence>1</HasEssence>
+    <UserDesigned>true</UserDesigned>
+    <IsModDependent>true</IsModDependent>
+    <GameModifier>
+      <ModType>Resource</ModType>
+      <Attribute>Unrest</Attribute>
+      <Value>-10</Value>
+      <Provides>-10% Unrest in the city this unit is in</Provides>
+    </GameModifier>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <UnitStat_Accuracy>80</UnitStat_Accuracy>
+      <UnitStat_CombatSpeed>32</UnitStat_CombatSpeed>
+      <UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+      <UnitStat_HitPoints>20</UnitStat_HitPoints>
+      <UnitStat_Moves>4</UnitStat_Moves>
+      <!-- Fix: This stat is never set in base game  -->
+      <UnitStat_IsMale>1</UnitStat_IsMale>
+      <!-- Background Unitstat Library values (compatibility only) -->
+      <UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+      <UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+      <UnitStat_BG_IsSovereign>1</UnitStat_BG_IsSovereign>
+      <UnitStat_BG_IsRace_Quendar>1</UnitStat_BG_IsRace_Quendar>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Diplomat</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Life1</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Fire1</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Fire2</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Brilliant</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Hardy</SelectedAbilityBonusOption>
+    <Equipment>F_Male_Quendar_Head_01</Equipment>
+    <Equipment>F_Male_Quendar_Horns_02</Equipment>
+    <Equipment>Fallen_Basic_Pants_ID2</Equipment>
+    <Equipment>Verga_Cloak</Equipment>
+    <Equipment>DarkWizardRobeID1</Equipment>
+    <AutoCreateEquipment>Spear</AutoCreateEquipment>
+    <Backstory>My people are Quendar. We were bred and raised to serve the greatest of the Titans, Curgen of Dred'nir, and we learned a lot from him and those who followed him. But the legacy of Curgen is heavy, it burns, it hurts. And I see that the world has changed... we have changed. Now is the time to heal our people, to bury the old pain and turn the page once again. I feel sorry for Magnar who is so short-sighted...</Backstory>
+    <LorebookIntroText>You are Quendar. You were there, when Imperium was shattered, and only your magical skill allowed you to live that day, when the land cracked and the oceans swelled into the sky. Since then, every day, surviving in a broken world, you have been thinking about the events of the past and trying to look into the future. But all your visions were grim and dark. Only one small opportunity gave a glimpse of hope.
+
+Betrayal... a terrible price to pay. But that was the only price for the lives of your people, for the opportunity to bury the past, bury the Curgen's curse and survive in the future. In the end, all such things have a terrible price. And once you see the birth and rise of Kingdoms, you finally realize that the world has changed, and it's time to put your plans into action.</LorebookIntroText>
+    <AIMilitaryStrategy>MobileWarfare</AIMilitaryStrategy>
+    <PossibleAITrait>Unstable</PossibleAITrait>
+    <PossibleAITrait>Sorcerer</PossibleAITrait>
+    <PossibleAITrait>Proud</PossibleAITrait>
+    <PossibleAITrait>Expansionist</PossibleAITrait>
+    <PossibleAITrait>Militaristic</PossibleAITrait>
+    <Medallions InternalName="">
+      <All>U_Nervar_Sovereign_Portrait.png</All>
+    </Medallions>
+    <!-- sov animations -->
+    <AnimationPack>MaleSovereignAnimationPack</AnimationPack>
+    <!-- ******************* -->
+    <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+    <ClothMapScale>1.6</ClothMapScale>
+    <ClothPoseIndex>26</ClothPoseIndex>
+    <CutSceneDataPack>KulanCutscenePack</CutSceneDataPack>
+    <InfoCardBackground>BG_Lava</InfoCardBackground>
+    <Color_Skin>145,200,165,255</Color_Skin>
+    <Color_Hair>195,195,195,255</Color_Hair>
+    <Color_Clothing1>84,31,102,255</Color_Clothing1>
+    <Color_Clothing2>138,61,13,255</Color_Clothing2>
+    <Color_Metal>255,102,0,255</Color_Metal>
+    <ModelPath>Gfx\HKB\Units\F_Male_Magnar_Body_Mesh_01.hkb</ModelPath>
+    <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+    <ModelScale>1.0000</ModelScale>
+    <TacticalModelScale>1.5000</TacticalModelScale>
+    <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+    <SoundPack>SoundPack_Generic_Male</SoundPack>
+    <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+    <Texture_Skin>Gfx\HKB\Units\Magnar_Skin_M_01.dds</Texture_Skin>
+    <EyeTexture>Gfx\Eyes\Blinks\eyeblink_m7_white.dds</EyeTexture>
+    <Texture_Eyes>Gfx\Eyes\Blinks\eyeblink_m7_white.dds</Texture_Eyes>
+    <UnitModelType>QuendarMale</UnitModelType>
+  </UnitType>
+  <!-- **************************************************** -->
+  <!-- Quendar Female Sovereign -->
+  <!-- **************************************************** -->
+  <UnitType InternalName="Generic_Sovereign_Nervari_Female">
+    <DisplayName>Quendar Sovereign</DisplayName>
+    <Class>Sovereign</Class>
+    <CreatureType>Champion</CreatureType>
+    <RaceType>Race_Type_Quendar</RaceType>
+    <CanBeDesigned>0</CanBeDesigned>
+    <Gender>Female</Gender>
+    <HasWages>0</HasWages>
+    <IsSovereign>0</IsSovereign>
+    <HasEssence>1</HasEssence>
+    <GameModifier>
+      <ModType>Resource</ModType>
+      <Attribute>Unrest</Attribute>
+      <Value>-10</Value>
+      <Provides>-10% Unrest in the city this unit is in</Provides>
+    </GameModifier>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <UnitStat_Accuracy>80</UnitStat_Accuracy>
+      <UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
+      <UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+      <UnitStat_HitPoints>20</UnitStat_HitPoints>
+      <!-- Fix: This stat is never set in base game  -->
+      <UnitStat_IsFemale>1</UnitStat_IsFemale>
+      <!-- Background Unitstat Library values (compatibility only) -->
+      <UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+      <UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+      <UnitStat_BG_IsSovereign>1</UnitStat_BG_IsSovereign>
+      <UnitStat_BG_IsRace_Quendar>1</UnitStat_BG_IsRace_Quendar>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
+    <Equipment>F_Female_Quendar_Head_01</Equipment>
+    <Equipment>F_Female_Quendar_Horns_01</Equipment>
+    <Equipment>TightBoots_Light</Equipment>
+    <Equipment>Murchant_Skirt_ID1</Equipment>
+    <Equipment>Male_Vest_ID1</Equipment>
+    <Equipment>Empire_Shirt_Female_ID1</Equipment>
+    <AIMilitaryStrategy>Swordsman</AIMilitaryStrategy>
+    <PossibleAITrait>Aggressive</PossibleAITrait>
+    <PossibleAITrait>Proud</PossibleAITrait>
+    <PossibleAITrait>Expansionist</PossibleAITrait>
+    <PossibleAITrait>Militaristic</PossibleAITrait>
+    <!-- female sov animations -->
+    <AnimationPack>FemaleSovereignAnimationPack</AnimationPack>
+    <!-- ******************* -->
+    <AnimationParticleEffect>HeroPoseFront,_Particle_Ceresa_02,0.0,-2.0,0.0,1.0,EffectAttach</AnimationParticleEffect>
+    <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+    <ClothMapScale>1.6</ClothMapScale>
+    <ClothPoseIndex>0</ClothPoseIndex>
+    <CutSceneDataPack>MagnarCutscenePack</CutSceneDataPack>
+    <InfoCardBackground>BG15_Dark</InfoCardBackground>
+    <InfoCardBackgroundFlipped>1</InfoCardBackgroundFlipped>
+    <Color_Skin>145,200,165,255</Color_Skin>
+    <Color_Hair>195,195,195,255</Color_Hair>
+    <Color_Clothing1>99,63,30,255</Color_Clothing1>
+    <Color_Clothing2>71,163,99,255</Color_Clothing2>
+    <Color_Metal>128,128,128,255</Color_Metal>
+    <ModelPath>Gfx\HKB\Units\F_Female_Magnar_Body_Mesh_01.hkb</ModelPath>
+    <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+    <ModelScale>1.0000</ModelScale>
+    <TacticalModelScale>1.5000</TacticalModelScale>
+    <EquipmentScale>1.0000</EquipmentScale>
+    <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+    <SoundPack>SoundPack_Generic_Female</SoundPack>
+    <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+    <Texture_Skin>Gfx\HKB\Units\Magnar_Skin_F_01.dds</Texture_Skin>
+    <EyeTexture>Gfx\Eyes\Blinks\Eyeblink_F3_grn.dds</EyeTexture>
+    <Texture_Eyes>Gfx\Eyes\Blinks\Eyeblink_F3_grn.dds</Texture_Eyes>
+    <UnitModelType>QuendarFemale</UnitModelType>
+  </UnitType>
+  <!-- **************************************************** -->
+  <!-- Quendar Male Sovereign -->
+  <!-- **************************************************** -->
+  <UnitType InternalName="Generic_Sovereign_Nervari_Male">
+    <DisplayName>Quendar Sovereign</DisplayName>
+    <Class>Sovereign</Class>
+    <CreatureType>Champion</CreatureType>
+    <RaceType>Race_Type_Quendar</RaceType>
+    <CanBeDesigned>0</CanBeDesigned>
+    <Gender>Male</Gender>
+    <HasWages>0</HasWages>
+    <IsSovereign>0</IsSovereign>
+    <HasEssence>1</HasEssence>
+    <GameModifier>
+      <ModType>Resource</ModType>
+      <Attribute>Unrest</Attribute>
+      <Value>-10</Value>
+      <Provides>-10% Unrest in the city this unit is in</Provides>
+    </GameModifier>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <UnitStat_Accuracy>80</UnitStat_Accuracy>
+      <UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
+      <UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+      <UnitStat_HitPoints>20</UnitStat_HitPoints>
+      <!-- Fix: This stat is never set in base game  -->
+      <UnitStat_IsMale>1</UnitStat_IsMale>
+      <!-- Background Unitstat Library values (compatibility only) -->
+      <UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+      <UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+      <UnitStat_BG_IsSovereign>1</UnitStat_BG_IsSovereign>
+      <UnitStat_BG_IsRace_Quendar>1</UnitStat_BG_IsRace_Quendar>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
+    <Equipment>F_Male_Quendar_Head_01</Equipment>
+    <Equipment>F_Male_Quendar_Horns_02</Equipment>
+    <Equipment>Large_Sion_Boots_ID1</Equipment>
+    <Equipment>Fallen_Vest_ID1</Equipment>
+    <Equipment>Fallen_Leather_Pants_ID2</Equipment>
+    <AIMilitaryStrategy>Swordsman</AIMilitaryStrategy>
+    <PossibleAITrait>Aggressive</PossibleAITrait>
+    <PossibleAITrait>Proud</PossibleAITrait>
+    <PossibleAITrait>Expansionist</PossibleAITrait>
+    <PossibleAITrait>Militaristic</PossibleAITrait>
+    <!-- replaced animations -->
+    <AnimationPack>MaleChampionAnimationPack</AnimationPack>
+    <!-- ******************* -->
+    <AnimationParticleEffect>HeroPoseFront,_Particle_Ceresa_02,0.0,-2.0,0.0,1.0,EffectAttach</AnimationParticleEffect>
+    <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+    <ClothMapScale>1.6</ClothMapScale>
+    <ClothPoseIndex>0</ClothPoseIndex>
+    <Color_Skin>145,200,165,255</Color_Skin>
+    <Color_Hair>195,195,195,255</Color_Hair>
+    <Color_Clothing1>80,30,100,255</Color_Clothing1>
+    <Color_Clothing2>140,60,15,255</Color_Clothing2>
+    <Color_Metal>255,102,0,255</Color_Metal>
+    <CutSceneDataPack>MagnarCutscenePack</CutSceneDataPack>
+    <InfoCardBackground>BG15_Dark</InfoCardBackground>
+    <ModelPath>Gfx\HKB\Units\F_Male_Magnar_Body_Mesh_01.hkb</ModelPath>
+    <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+    <ModelScale>1.0000</ModelScale>
+    <TacticalModelScale>1.5000</TacticalModelScale>
+    <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+    <SoundPack>SoundPack_Generic_Male</SoundPack>
+    <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+    <Texture_Skin>Gfx\HKB\Units\Magnar_Skin_M_01.dds</Texture_Skin>
+    <Texture_Eyes>Gfx\Eyes\Blinks\Eyeblink_M7_Red.dds</Texture_Eyes>
+    <EyeTexture>Gfx\Eyes\Blinks\Eyeblink_M7_Red.dds</EyeTexture>
+    <UnitModelType>QuendarMale</UnitModelType>
+  </UnitType>
+</UnitTypes>

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<Container>
+  <QuestDef InternalName="Event_AgeOfTheFae">
+    <DisplayName>Enter the Fae</DisplayName>
+    <Description>A combination of the waxing moon and the recent turbulence in the world of Elemental has caused the Fae to act in ever increasing amounts. Too clever or quick to be seen, their little deeds can only be noticed indirectly by observing the population. The Fae are mischievous at heart, and will use their glamour and powers of persuasion to cause chaos just for the fun of it. They'll whisper in the ears of husbands and wives and children and soldiers alike to set their minds on tasks most foul, and none may fail to heed their call. It is as if your soldiers have woken into another world, so different do your villages now seem. Your power is all but evaporated as the population take to dancing and laughing and nogoodery.
+
+For 16 turns, all your cities suffer +75 Unrest.</Description>
+    <IsStartingPointQuest>0</IsStartingPointQuest>
+    <IsStartingPointQuest>0</IsStartingPointQuest>
+    <AllowQuestRejection>0</AllowQuestRejection>
+   <ShortTextAccept>Bloody faeries!</ShortTextAccept>
+    <QuestClass>Minor</QuestClass>
+    <Repeatable>0</Repeatable>
+   <TriggerType>TurnNumber</TriggerType>
+    <TriggerData>125</TriggerData>
+    <TriggerChance>5</TriggerChance>
+    <PostTriggerChance>5</PostTriggerChance>
+
+    <TriggerOrigin>EventLocation</TriggerOrigin>
+    <Image>BG31_Market.png</Image>
+    <Treasure>
+
+
+ <GameModifier>
+            <ModType>Player</ModType>
+            <Attribute>AbilityBonus</Attribute>
+            <StrVal>A_Additive_Unrest</StrVal>
+            <Value>75</Value>
+	    <Duration>16</Duration>
+        </GameModifier>
+ 
+
+
+
+    </Treasure>
+    <QuestObjectiveDef>
+      <ObjectiveID>0</ObjectiveID>
+      <QuestEnd>1</QuestEnd>
+    </QuestObjectiveDef>
+  </QuestDef>
+</Container>

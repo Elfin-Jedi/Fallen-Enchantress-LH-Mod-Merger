@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--Outpost Upgrades original version by attackdrone-->
+<!--XtraDeconstruct 3.0 by Primal-->
+<ImprovementTypes>
+	<ImprovementType InternalName="Imp_X_Outpost_Carpenter">
+		<DisplayName>Carpenter</DisplayName>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Weaponry</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Neutralists</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Description>Increases the Production of the city attached to this outpost by 2.</Description>
+		<HideInBuildList>1</HideInBuildList>
+		<IsOutpostUpgrade>1</IsOutpostUpgrade>
+		<LaborToBuild>80</LaborToBuild>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Production</Attribute>
+			<Value>2</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+2 Production</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+			<UpgradeComparisonText>Production</UpgradeComparisonText>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>50</AIPriority>
+			<AITag>CommandPost</AITag>
+		</AIData>
+		<ArtDef>Imp_X_Outpost_Carpenter_Art</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="Imp_X_Outpost_Farm">
+		<DisplayName>Farm</DisplayName>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Agriculture</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>DLC04_UndeadFaction</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Neutralists</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Description>Increases the Food production of the city attached to this outpost by 5.</Description>
+		<HideInBuildList>1</HideInBuildList>
+		<IsOutpostUpgrade>1</IsOutpostUpgrade>
+		<PreferredTerrain>City</PreferredTerrain>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<PreferredTerrain>Forest</PreferredTerrain>
+		<BarredTerrain>DesertTerrain</BarredTerrain>
+		<BarredTerrain>ArcticTerrain</BarredTerrain>
+		<LaborToBuild>80</LaborToBuild>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Food</Attribute>
+			<Value>5</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+5 Food</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+			<UpgradeComparisonText>Food</UpgradeComparisonText>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>50</AIPriority>
+			<AITag>CommandPost</AITag>
+		</AIData>
+		<ArtDef>Imp_X_Outpost_Farm_Art</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="Imp_X_Outpost_Inn">
+		<DisplayName>Inn</DisplayName>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Cooperation</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Neutralists</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Description>By providing a safe place for travelers to rest, the Inn decreases Unrest in the city attached to this outpost by -2%.</Description>
+		<HideInBuildList>1</HideInBuildList>
+		<IsOutpostUpgrade>1</IsOutpostUpgrade>
+		<LaborToBuild>80</LaborToBuild>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-2</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>-2% Unrest</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+			<UpgradeComparisonText>Unrest</UpgradeComparisonText>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>100</AIPriority>
+			<AITag>CommandPost</AITag>
+		</AIData>
+		<ArtDef>Imp_X_Outpost_Inn_Art</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="Imp_X_Outpost_Smithy">
+		<DisplayName>Smithy</DisplayName>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Blacksmithing</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Neutralists</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Description>Increases the Production of the city attached to this outpost by 3.</Description>
+		<HideInBuildList>1</HideInBuildList>
+		<IsOutpostUpgrade>1</IsOutpostUpgrade>
+		<LaborToBuild>123</LaborToBuild>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Production</Attribute>
+			<Value>3</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+3 Production</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+			<UpgradeComparisonText>Production</UpgradeComparisonText>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>50</AIPriority>
+			<AITag>CommandPost</AITag>
+		</AIData>
+		<ArtDef>Imp_X_Outpost_Smithy_Art</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="Imp_X_Outpost_Windmill">
+		<DisplayName>Windmill</DisplayName>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Craftsmanship</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>DLC04_UndeadFaction</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Neutralists</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Description>Increases the Food production of the city attached to this outpost by 10.</Description>
+		<HideInBuildList>1</HideInBuildList>
+		<IsOutpostUpgrade>1</IsOutpostUpgrade>
+		<PreferredTerrain>City</PreferredTerrain>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<PreferredTerrain>Forest</PreferredTerrain>
+		<BarredTerrain>DesertTerrain</BarredTerrain>
+		<BarredTerrain>ArcticTerrain</BarredTerrain>
+		<LaborToBuild>166</LaborToBuild>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Food</Attribute>
+			<Value>10</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+10 Food</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+			<UpgradeComparisonText>Food</UpgradeComparisonText>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>50</AIPriority>
+			<AITag>CommandPost</AITag>
+		</AIData>
+		<ArtDef>Imp_X_Outpost_Windmill_Art</ArtDef>
+	</ImprovementType>
+</ImprovementTypes>

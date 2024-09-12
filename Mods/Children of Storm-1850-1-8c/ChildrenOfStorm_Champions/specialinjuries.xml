@@ -1,0 +1,1722 @@
+<?xml version="1.0"?>
+<Container>
+  <AbilityBonus InternalName="Injury_MissingFinger">
+    <AbilityBonusOption InternalName="MissingFinger">
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>TurnedUndead</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Injury_BrokenWing">
+    <AbilityBonusType>Unit_Injury</AbilityBonusType>
+    <AbilityBonusOption InternalName="BrokenWing">
+      <DisplayName>Broken Wing</DisplayName>
+      <Description>-15 Dodge</Description>
+      <Icon>Ability_Fragile_Icon.png</Icon>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_Angel</Attribute>
+      </Prereq>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BG_HasInjuries</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Injury</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Dodge</StrVal>
+        <Value>-15</Value>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Injury_Greed">
+    <AbilityBonusType>Unit_Injury</AbilityBonusType>
+    <AbilityBonusOption InternalName="Greed">
+      <DisplayName>Greed</DisplayName>
+      <Description>Champion steals 1 Gildar per turn</Description>
+      <Icon>Ability_BlindInOneEye_Icon.png</Icon>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_Angel</Attribute>
+      </Prereq>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BG_HasInjuries</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Injury</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>ProduceResource</Attribute>
+        <StrVal>Gold</StrVal>
+        <Value>-1</Value>
+        <Provides>Champion steals 1 Gildar per turn</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>TurnedUndead</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Injury_Vanity">
+    <AbilityBonusType>Unit_Injury</AbilityBonusType>
+    <AbilityBonusOption InternalName="Vanity">
+      <DisplayName>Vanity</DisplayName>
+      <Description>-15% to all physical Defenses</Description>
+      <Icon>Ability_CrackedSkull_Icon.png</Icon>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_Angel</Attribute>
+      </Prereq>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BG_HasInjuries</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Injury</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Defense_Pierce</StrVal>
+        <Multiplier>0.85</Multiplier>
+        <Provides>-15% to Defense</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>TurnedUndead</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Injury_Wrath">
+    <AbilityBonusType>Unit_Injury</AbilityBonusType>
+    <AbilityBonusOption InternalName="Wrath">
+      <DisplayName>Wrath</DisplayName>
+      <Description>15% chance that champion acts on its own in tactical combat (re-rolled each round)</Description>
+      <Icon>Ability_Cruel_Icon.png</Icon>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_Angel</Attribute>
+      </Prereq>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BG_HasInjuries</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Injury</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_AIControlChance</StrVal>
+        <Value>15</Value>
+        <Provides>15% chance that champion acts on its own in tactical combat (re-rolled each round)</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>TurnedUndead</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Injury_LightningAttractor">
+    <AbilityBonusType>Unit_Injury</AbilityBonusType>
+    <AbilityBonusOption InternalName="LightningAttractor">
+      <DisplayName>Lightning Attractor</DisplayName>
+      <Description>-50 Lightning resistance</Description>
+      <Icon>Ability_VulnerableToLightning_Icon.png</Icon>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_Angel</Attribute>
+      </Prereq>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BG_HasInjuries</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Injury</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistLightning</StrVal>
+        <Value>-50</Value>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>TurnedUndead</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Injury_SplitHoof">
+    <AbilityBonusType>Unit_Injury</AbilityBonusType>
+    <AbilityBonusOption InternalName="SplitHoof">
+      <DisplayName>Split Hoof</DisplayName>
+      <Description>Unit loses 1/4th of its Dodge</Description>
+      <Icon>Ability_ChippedTooth_Icon.png</Icon>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_Centaur</Attribute>
+      </Prereq>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BG_HasInjuries</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Injury</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Dodge</StrVal>
+        <Multiplier>0.75</Multiplier>
+        <Provides>Unit loses 1/4th of its Dodge</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>TurnedUndead</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Injury_WeakenedBloodCirculation">
+    <AbilityBonusType>Unit_Injury</AbilityBonusType>
+    <AbilityBonusOption InternalName="WeakenedBloodCirculation">
+      <DisplayName>Weakened Blood Circulation</DisplayName>
+      <Description>-20 Carrying Capacity</Description>
+      <Icon>Ability_Pneumonia_Icon.png</Icon>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_Centaur</Attribute>
+      </Prereq>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BG_HasInjuries</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Injury</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_WeightCapacity</StrVal>
+        <Value>-20</Value>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>TurnedUndead</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Injury_HauntingAncestor">
+    <AbilityBonusType>Unit_Injury</AbilityBonusType>
+    <AbilityBonusOption InternalName="HauntingAncestor">
+      <DisplayName>Haunting Ancestor</DisplayName>
+      <Description>A dead Ancestor has returned to haunt this Centaur. It wants to know why the old traditions have been abandoned. The Centaur has constant nightmares during sleep, and secondguesses itself constantly.
+
+-50% of current Spell Resist</Description>
+      <Icon>Ability_Uneducated_Icon.png</Icon>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_Centaur</Attribute>
+      </Prereq>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BG_HasInjuries</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Injury</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_MagicResist</StrVal>
+        <Multiplier>0.5</Multiplier>
+        <Provides>A dead Ancestor has returned to haunt this Centaur. It wants to know why the old traditions have been abandoned. The Centaur has constant nightmares during sleep, and secondguesses itself constantly.
+
+-50% of current Spell Resist</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>TurnedUndead</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Injury_Arrogance">
+    <AbilityBonusType>Unit_Injury</AbilityBonusType>
+    <AbilityBonusOption InternalName="Arrogance">
+      <DisplayName>Arrogance</DisplayName>
+      <Description>This Elf suffers from a distorted world perception where it sees itself as far more than it really is, and enemies as far less than they really are.
+
+	      Loses 1/3rd of Accuracy when attacking any lower level enemy</Description>
+      <Icon>Ability_Hallucinations_Icon.png</Icon>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_Elves</Attribute>
+      </Prereq>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BG_HasInjuries</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Injury</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Accuracy</StrVal>
+        <StrVal2>UnitStat_Level</StrVal2>
+        <Provides>This Elf suffers from a distorted world perception where it sees itself as far more than it really is, and enemies as far less than they really are.
+
+	      Loses 1/3rd of Accuracy when attacking any lower level enemy</Provides>
+        <vsLower>1</vsLower>
+        <Multiplier>0.67</Multiplier>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>TurnedUndead</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Injury_WoodenFoot">
+    <AbilityBonusType>Unit_Injury</AbilityBonusType>
+    <AbilityBonusOption InternalName="WoodenFoot">
+      <DisplayName>Wooden Foot</DisplayName>
+      <Description>The power of the forests tried to heal a wound suffered by this Elf. Instead of assisting in the healing process, a wooden growth now exists where one foot should be.
+
+-10 Dodge</Description>
+      <Icon>Ability_BrokenLeg_Icon.png</Icon>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_Elves</Attribute>
+      </Prereq>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BG_HasInjuries</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Injury</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Dodge</StrVal>
+        <Value>-10</Value>
+        <Provides>The power of the forests tried to heal a wound suffered by this Elf. Instead of assisting in the healing process, a wooden growth now exists where one foot should be.
+
+-10 Dodge</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>TurnedUndead</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Injury_WaningPotential">
+    <AbilityBonusType>Unit_Injury</AbilityBonusType>
+    <AbilityBonusOption InternalName="WaningPotential">
+      <DisplayName>Waning Potential</DisplayName>
+      <Description>This Elf is slowly fading away due to apathy. 
+
+Champion no longer counts as Immortal. No effect (spells or items) can return this elf to Immortality as long as this injury remains.</Description>
+      <Icon>Ability_Frail_Icon.png</Icon>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_Elves</Attribute>
+      </Prereq>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BG_HasInjuries</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Injury</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BG_IsImmortal</StrVal>
+        <Multiplier>0</Multiplier>
+        <Provides>This Elf is slowly fading away due to apathy. 
+
+Champion no longer counts as Immortal. No effect (spells or items) can return this elf to Immortality as long as this injury remains.</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>TurnedUndead</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_Ambrosia</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Injury_GraveMoss">
+    <AbilityBonusType>Unit_Injury</AbilityBonusType>
+    <AbilityBonusOption InternalName="GraveMoss">
+      <DisplayName>Grave Moss</DisplayName>
+      <Description>-25% Hitpoints</Description>
+      <Icon>Ability_ChippedTooth_Icon.png</Icon>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_LivingStone</Attribute>
+      </Prereq>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BG_HasInjuries</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Injury</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_HitPoints</StrVal>
+        <Multiplier>0.75</Multiplier>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>TurnedUndead</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Injury_CrystallizedParts">
+    <AbilityBonusType>Unit_Injury</AbilityBonusType>
+    <AbilityBonusOption InternalName="CrystallizedParts">
+      <DisplayName>Crystallized Parts</DisplayName>
+      <Description>Parts of this Living Stone have become crystallized in a solid form. It is extremely painful to move for this poor champion.
+
+	      -5 Initiative</Description>
+      <Icon>Ability_RottingWound_Icon.png</Icon>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_LivingStone</Attribute>
+      </Prereq>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BG_HasInjuries</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Injury</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_CombatSpeed</StrVal>
+        <Value>-5</Value>
+        <Provides>Parts of this Living Stone have become crystallized in a solid form. It is extremely painful to move for this poor champion.
+
+	      -5 Initiative</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>TurnedUndead</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Injury_FadedFire">
+    <AbilityBonusType>Unit_Injury</AbilityBonusType>
+    <AbilityBonusOption InternalName="FadedFire">
+      <DisplayName>Faded Fire</DisplayName>
+      <Description>A vital part of any Living Stone is the "will of fire" held in one's heart. It is gone from this one, however. 
+
+Champion's passive Fire attack is reduced by 50%</Description>
+      <Icon>Ability_VulnerableToFire_Icon.png</Icon>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_LivingStone</Attribute>
+      </Prereq>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BG_HasInjuries</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Injury</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Attack_Fire</StrVal>
+        <Multiplier>0.5</Multiplier>
+        <Provides>A vital part of any Living Stone is the "will of fire" held in one's heart. It is gone from this one, however. 
+
+Champion's passive Fire attack is reduced by 50%</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>TurnedUndead</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Injury_UncontrollableSolidifcation">
+    <AbilityBonusType>Unit_Injury</AbilityBonusType>
+    <AbilityBonusOption InternalName="UncontrollableSolidifcation">
+      <DisplayName>Uncontrollable Solidification</DisplayName>
+      <Description>This Shadow has lost most of its control over its own change between solid and ethereal state. How embarassing!
+
+	      Champion suffers -15 Resistance to physical attacks, and also suffers -10 Dodge</Description>
+      <Icon>Ability_TyphoidFever_Icon.png</Icon>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_Shadows</Attribute>
+      </Prereq>
+
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistPierce</StrVal>
+        <Value>-15</Value>
+	<Provides>-15 Pierce resistance</Provides>
+
+	<Provides>This Shadow has lost most of its control over its own change between solid and ethereal state. How embarassing!
+		
+-15 physical resistance</Provides>
+
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Dodge</StrVal>
+        <Value>-10</Value>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>TurnedUndead</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Injury_ShadowsShadow">
+    <AbilityBonusType>Unit_Injury</AbilityBonusType>
+    <AbilityBonusOption InternalName="Injury_ShadowsShadow">
+      <DisplayName>Shadow's Shadow</DisplayName>
+      <Description>Some Shadows develop their own shadows when they grow very old. It is seen as a bad omen by some, and a fatal weakness in character by others. 
+
+      -1 Faction Prestige</Description>
+      <Icon>Ability_Inefficient_Icon.png</Icon>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_Shadows</Attribute>
+      </Prereq>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BG_HasInjuries</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Injury</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_FactionPrestige</StrVal>
+        <Value>-1</Value>
+        <Provides>Some Shadows develop their own shadows when they grow very old. It is seen as a bad omen by some, and a fatal weakness in character by others. 
+
+      -1 Faction Prestige</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>TurnedUndead</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Injury_DependentState">
+    <AbilityBonusType>Unit_Injury</AbilityBonusType>
+    <AbilityBonusOption InternalName="DependentState">
+      <DisplayName>Dependent State</DisplayName>
+      <Description>During a Shadow's formation it undergoes a state of weakness before attaining power over its abilities and becoming sentient. This Shadow has returned to that "Dependent State".
+
+	      Champion has its magical resistances (Fire, Cold, Lightning, Poison) reduced by -25</Description>
+      <Icon>Ability_Vulnerable_Icon.png</Icon>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_Shadows</Attribute>
+      </Prereq>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BG_HasInjuries</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Injury
+		
+		During a Shadow's formation it undergoes a state of weakness before attaining power over its abilities and becoming sentient. This Shadow has returned to that "Dependent State".</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistPoison</StrVal>
+        <Value>-25</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistFire</StrVal>
+        <Value>-25</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistCold</StrVal>
+        <Value>-25</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistLightning</StrVal>
+        <Value>-25</Value>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>TurnedUndead</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Injury_Unhinged">
+    <AbilityBonusType>Unit_Injury</AbilityBonusType>
+    <AbilityBonusOption InternalName="Unhinged">
+      <DisplayName>Unhinged</DisplayName>
+      <Description>15% chance that champion acts on its own in tactical combat (re-rolled each round)</Description>
+      <Icon>Ability_Cruel_Icon.png</Icon>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_DeathLegion</Attribute>
+      </Prereq>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BG_HasInjuries</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Injury</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_AIControlChance</StrVal>
+        <Value>15</Value>
+        <Provides>15% chance that champion acts on its own in tactical combat (re-rolled each round)</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>TurnedUndead</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Injury_PoorAdaption">
+    <AbilityBonusType>Unit_Injury</AbilityBonusType>
+    <AbilityBonusOption InternalName="PoorAdaption">
+      <DisplayName>Poor Adaption</DisplayName>
+      <Description>Champion has its magical resistances (Fire, Cold, Lightning, Poison) reduced by -25</Description>
+      <Icon>Ability_BlindInOneEye_Icon.png</Icon>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_DeathLegion</Attribute>
+      </Prereq>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BG_HasInjuries</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Injury</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistPoison</StrVal>
+        <Value>-25</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistFire</StrVal>
+        <Value>-25</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistCold</StrVal>
+        <Value>-25</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistLightning</StrVal>
+        <Value>-25</Value>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>TurnedUndead</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Injury_Hellbound">
+    <AbilityBonusType>Unit_Injury</AbilityBonusType>
+    <AbilityBonusOption InternalName="Hellbound">
+      <DisplayName>Hellbound</DisplayName>
+      <Description>If hexed, can never lift it. Fire resistance reduced by -25</Description>
+      <Icon>Ability_AfraidofDying_Icon.png</Icon>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_DeathLegion</Attribute>
+      </Prereq>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BG_HasInjuries</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Injury</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistFire</StrVal>
+        <Value>-25</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Reliquary_CanLiftCurse</StrVal>
+        <Multiplier>0</Multiplier>
+        <Provides>If hexed, can never lift it.</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>TurnedUndead</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Injury_MissingLeg">
+    <AbilityBonusType>Unit_Injury</AbilityBonusType>
+    <AbilityBonusOption InternalName="MissingLeg">
+      <DisplayName>Missing Leg</DisplayName>
+      <Description>-10 Dodge</Description>
+      <Icon>Ability_BrokenLeg_Icon.png</Icon>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_Drota</Attribute>
+      </Prereq>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BG_HasInjuries</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Injury</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Dodge</StrVal>
+        <Value>-10</Value>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>TurnedUndead</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Injury_Mediocrity">
+    <AbilityBonusType>Unit_Injury</AbilityBonusType>
+    <AbilityBonusOption InternalName="Mediocrity">
+      <DisplayName>Mediocrity</DisplayName>
+      <Description>The greatest fear of the Drota is to be mediocre. Mentally this Drota champion has become stuck in that mindset.
+
+Champion cannot learn any new Level 4 or 5 Spelltraits</Description>
+      <Icon>Ability_BrokenSpirit_Icon.png</Icon>
+      <!-- see expandedfactions_injuries.xml -->
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_Drota</Attribute>
+      </Prereq>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BG_HasInjuries</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Injury
+		
+The greatest fear of the Drota is to be mediocre. Mentally this Drota champion has become stuck in that mindset.
+
+Champion cannot learn any new Level 4 or 5 Spelltraits
+</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>TurnedUndead</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Injury_FearOfBeasts">
+    <AbilityBonusType>Unit_Injury</AbilityBonusType>
+    <AbilityBonusOption InternalName="FearOfBeasts">
+      <DisplayName>Fear Of Beasts</DisplayName>
+      <Description>-30 Accuracy when attacking any Beast</Description>
+      <Icon>Ability_ChippedTooth_Icon.png</Icon>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_Drota</Attribute>
+      </Prereq>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BG_HasInjuries</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Injury</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Accuracy</StrVal>
+        <StrVal2>UnitStat_BG_IsBeast</StrVal2>
+        <Provides>-30 Accuracy when attacking any Beast</Provides>
+        <vsHigher>1</vsHigher>
+        <Value>-30</Value>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>TurnedUndead</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Injury_FearOfFire">
+    <AbilityBonusType>Unit_Injury</AbilityBonusType>
+    <AbilityBonusOption InternalName="FearOfFire">
+      <DisplayName>Fear Of Fire</DisplayName>
+      <Description>Unit loses 1/3rd of its Accuracy when attacking any enemy with (higher) Fire attack</Description>
+      <Icon>Ability_VulnerableToFire_Icon.png</Icon>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_FrostGiants</Attribute>
+      </Prereq>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BG_HasInjuries</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Injury</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Accuracy</StrVal>
+        <StrVal2>UnitStat_Attack_Fire</StrVal2>
+        <Provides>Unit loses 1/3rd of its Accuracy when attacking any enemy with (higher) Fire attack</Provides>
+        <vsHigher>1</vsHigher>
+        <Multiplier>0.67</Multiplier>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>TurnedUndead</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Injury_Shrivelled">
+    <AbilityBonusType>Unit_Injury</AbilityBonusType>
+    <AbilityBonusOption InternalName="Shrivelled">
+      <DisplayName>Shrivelled</DisplayName>
+      <Description>Reduced in size. -20 Carrying Capacity.</Description>
+      <Icon>Ability_Frail_Icon.png</Icon>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_FrostGiants</Attribute>
+      </Prereq>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BG_HasInjuries</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Injury</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_TacticalScaleMultiplier</StrVal>
+        <Value>-0.5</Value>
+        <Provides>Reduced size</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_WeightCapacity</StrVal>
+        <Value>-20</Value>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>TurnedUndead</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Injury_Icegripped">
+    <AbilityBonusType>Unit_Injury</AbilityBonusType>
+    <AbilityBonusOption InternalName="Icegripped">
+      <DisplayName>Icegripped</DisplayName>
+      <Description>Frost Giants sometimes develop an illness where they are unable to supress their own frost-filled souls. The cold seeps throughout their body, making them far colder than what is healthy.
+
+		    +50% Cold resistance. -5 Initiative.</Description>
+      <Icon>Ability_VulnerableToCold_Icon.png</Icon>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_FrostGiants</Attribute>
+      </Prereq>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BG_HasInjuries</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Injury</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_CombatSpeed</StrVal>
+        <Value>-5</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistCold</StrVal>
+        <Value>50</Value>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>TurnedUndead</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Injury_MisplacedEagerness">
+    <AbilityBonusType>Unit_Injury</AbilityBonusType>
+    <AbilityBonusOption InternalName="MisplacedEagerness">
+      <DisplayName>Misplaced Eagerness</DisplayName>
+      <Description>15% chance to strike adjacent ally instead of target when attacking in melee</Description>
+      <Icon>Ability_Uneducated_Icon.png</Icon>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_Greenskin</Attribute>
+      </Prereq>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BG_HasInjuries</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Injury</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ClumsyChance</StrVal>
+        <Value>15</Value>
+        <Provides>15% chance to strike adjacent ally instead of target when attacking in melee</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>TurnedUndead</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Injury_Berzerk">
+    <AbilityBonusType>Unit_Injury</AbilityBonusType>
+    <AbilityBonusOption InternalName="Berzerk">
+      <DisplayName>Berzerk</DisplayName>
+      <Description>15% chance that champion acts on its own in tactical combat (re-rolled each round)</Description>
+      <Icon>Ability_Cruel_Icon.png</Icon>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_Greenskin</Attribute>
+      </Prereq>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BG_HasInjuries</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Injury</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_AIControlChance</StrVal>
+        <Provides>15% chance that champion acts on its own in tactical combat (re-rolled each round)</Provides>
+        <Value>15</Value>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>TurnedUndead</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Injury_PoorStyle">
+    <AbilityBonusType>Unit_Injury</AbilityBonusType>
+    <AbilityBonusOption InternalName="PoorStyle">
+      <DisplayName>Power, not Finesse</DisplayName>
+      <Description>Unit loses 1/4th of its Accuracy, but physical damage dealt is increased by 10%</Description>
+      <Icon>Ability_NoRangedWeapons_Icon.png</Icon>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_Greenskin</Attribute>
+      </Prereq>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BG_HasInjuries</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Injury</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Accuracy</StrVal>
+        <Multiplier>0.75</Multiplier>
+        <Provides>-25% Accuracy</Provides>
+      </GameModifier>
+  
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Attack_Pierce</StrVal>
+        <Multiplier>1.1</Multiplier>
+        <Provides>+10% Attack</Provides>
+      </GameModifier>
+ 
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>TurnedUndead</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Injury_MisplacedEagerness2">
+    <AbilityBonusType>Unit_Injury</AbilityBonusType>
+    <AbilityBonusOption InternalName="MisplacedEagerness2">
+      <DisplayName>Misplaced Eagerness</DisplayName>
+      <Description>15% chance to strike adjacent ally instead of target</Description>
+      <Icon>Ability_Uneducated_Icon.png</Icon>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_Goblin</Attribute>
+      </Prereq>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BG_HasInjuries</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Injury</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ClumsyChance</StrVal>
+        <Provides>15% chance to strike adjacent ally instead of target when attacking in melee</Provides>
+        <Value>15</Value>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>TurnedUndead</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Injury_Berzerk2">
+    <AbilityBonusType>Unit_Injury</AbilityBonusType>
+    <AbilityBonusOption InternalName="Berzerk2">
+      <DisplayName>Berzerk</DisplayName>
+      <Description>15% chance that champion acts on its own in tactical combat (re-rolled each round)</Description>
+      <Icon>Ability_Cruel_Icon.png</Icon>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_Goblin</Attribute>
+      </Prereq>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BG_HasInjuries</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Injury</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_AIControlChance</StrVal>
+        <Provides>15% chance that champion acts on its own in tactical combat (re-rolled each round)</Provides>
+        <Value>15</Value>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>TurnedUndead</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Injury_PoorStyle2">
+    <AbilityBonusType>Unit_Injury</AbilityBonusType>
+    <AbilityBonusOption InternalName="PoorStyle2">
+      <DisplayName>Power, not Finesse</DisplayName>
+      <Description>Unit loses 1/4th of its Accuracy, but physical damage dealt is increased by 10%</Description>
+      <Icon>Ability_NoRangedWeapons_Icon.png</Icon>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_Goblin</Attribute>
+      </Prereq>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BG_HasInjuries</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Injury</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Accuracy</StrVal>
+        <Multiplier>0.75</Multiplier>
+        <Provides>-25% Accuracy</Provides>
+      </GameModifier>
+  
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Attack_Pierce</StrVal>
+        <Multiplier>1.1</Multiplier>
+        <Provides>+10% Pierce Attack</Provides>
+      </GameModifier>
+ 
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>TurnedUndead</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Injury_DamagedCore">
+    <AbilityBonusType>Unit_Injury</AbilityBonusType>
+    <AbilityBonusOption InternalName="DamagedCore">
+      <DisplayName>Damaged Core</DisplayName>
+      <Description>-50% of current Spell Resist</Description>
+      <Icon>Ability_RottingWound_Icon.png</Icon>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_Golem</Attribute>
+      </Prereq>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BG_HasInjuries</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Injury</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_MagicResist</StrVal>
+        <Multiplier>0.5</Multiplier>
+        <Provides>-50% of current Spell Resist</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>TurnedUndead</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Injury_RepellingEssence">
+    <AbilityBonusType>Unit_Injury</AbilityBonusType>
+    <AbilityBonusOption InternalName="RepellingEssence">
+      <DisplayName>Repelling Essence</DisplayName>
+      <Description>Enchantments on this champion costs another 50% Mana in maintenance</Description>
+      <Icon>Ability_NoArmor_Icon.png</Icon>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_Golem</Attribute>
+      </Prereq>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BG_HasInjuries</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Injury</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_EnchantmentMaintenanceMultiplier</StrVal>
+        <Provides>Enchantments on this champion costs another 50% Mana in maintenance</Provides>
+        <Value>0.5</Value>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>TurnedUndead</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Injury_Crumbling">
+    <AbilityBonusType>Unit_Injury</AbilityBonusType>
+    <AbilityBonusOption InternalName="Crumbling">
+      <DisplayName>Crumbling</DisplayName>
+      <Description>-5 Resistance to Physical attacks</Description>
+      <Icon>Ability_Clumsy_Icon.png</Icon>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_Golem</Attribute>
+      </Prereq>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BG_HasInjuries</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Injury</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistPierce</StrVal>
+        <Value>-5</Value>
+        <Provides>-5 Pierce resistance</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>TurnedUndead</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Injury_GraveMoss2">
+    <AbilityBonusType>Unit_Injury</AbilityBonusType>
+    <AbilityBonusOption InternalName="GraveMoss2">
+      <DisplayName>Grave Moss</DisplayName>
+      <Description>-25% Hitpoints</Description>
+      <Icon>Ability_ChippedTooth_Icon.png</Icon>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_CoS_Undead</Attribute>
+      </Prereq>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BG_HasInjuries</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Injury</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_HitPoints</StrVal>
+        <Multiplier>0.75</Multiplier>
+        <Provides>-25% Hitpoints</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>TurnedUndead</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Injury_Boneworm">
+    <AbilityBonusType>Unit_Injury</AbilityBonusType>
+    <AbilityBonusOption InternalName="Boneworm">
+      <DisplayName>Boneworm</DisplayName>
+      <Description>-50% Health regeneration in strategic mode</Description>
+      <Icon>Ability_CrackedSkull_Icon.png</Icon>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_CoS_Undead</Attribute>
+      </Prereq>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BG_HasInjuries</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Injury</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_HealthRegen</StrVal>
+        <Multiplier>0.5</Multiplier>
+        <Provides>-50% Health regeneration in strategic mode</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>TurnedUndead</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Injury_BrittleBones">
+    <AbilityBonusType>Unit_Injury</AbilityBonusType>
+    <AbilityBonusOption InternalName="BrittleBones">
+      <DisplayName>Brittle Bones</DisplayName>
+      <Description>-8 Resistance to Physical attacks</Description>
+      <Icon>Ability_RottingWound_Icon.png</Icon>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_CoS_Undead</Attribute>
+      </Prereq>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BG_HasInjuries</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Injury</Provides>
+      </GameModifier>
+       <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistPierce</StrVal>
+        <Value>-8</Value>
+        <Provides>-8 physical resistance</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>TurnedUndead</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Injury_Selfdoubt">
+    <AbilityBonusType>Unit_Injury</AbilityBonusType>
+    <AbilityBonusOption InternalName="Selfdoubt">
+      <DisplayName>Selfdoubt</DisplayName>
+      <Description>-15 Accuracy and Spell Mastery</Description>
+      <Icon>Ability_Clumsy_Icon.png</Icon>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_Dwarves</Attribute>
+      </Prereq>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BG_HasInjuries</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Injury</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Accuracy</StrVal>
+        <Value>-15</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_MagicPower</StrVal>
+        <Value>-15</Value>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>TurnedUndead</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Injury_ShrivelledHair">
+    <AbilityBonusType>Unit_Injury</AbilityBonusType>
+    <AbilityBonusOption InternalName="ShrivelledHair">
+      <DisplayName>Shrivelled Hair</DisplayName>
+      <Description>This Gnome's hair has shrivelled to nothingness. In Gnomish culture this is a profound mark of unworthiness and weakness. 
+	      
+	      -50% of own Spell Resist unless fighting alone (noone else in army)</Description>
+      <Icon>Ability_Conscripted_Icon.png</Icon>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_Dwarves</Attribute>
+      </Prereq>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BG_HasInjuries</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Injury</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_MagicResist</StrVal>
+        <Multiplier>0.5</Multiplier>
+        <WhenOverArmySize>2</WhenOverArmySize>
+        <Provides>This Gnome's hair has shrivelled to nothingness. In Gnomish culture this is a profound mark of unworthiness and weakness. 
+	      
+	      -50% of own Spell Resist unless fighting alone (noone else in army)</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>TurnedUndead</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Injury_Dishonored">
+    <AbilityBonusType>Unit_Injury</AbilityBonusType>
+    <AbilityBonusOption InternalName="Dishonored">
+      <DisplayName>Dishonored</DisplayName>
+      <Description>All units in this unit's army have their spell resist reduced by 5</Description>
+      <Icon>Ability_BrokenSpirit_Icon.png</Icon>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_Dwarves</Attribute>
+      </Prereq>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BG_HasInjuries</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Injury</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustArmyStat</Attribute>
+        <StrVal>UnitStat_MagicResist</StrVal>
+        <Value>-5</Value>
+        <Provides>All units in this unit's army have their spell resist reduced by 5</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>TurnedUndead</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+    </AbilityBonusOption>
+  </AbilityBonus>
+   <AbilityBonus InternalName="Injury_ImpotentTail">
+    <AbilityBonusType>Unit_Injury</AbilityBonusType>
+    <AbilityBonusOption InternalName="ImpotentTail">
+      <DisplayName>Paralyzed Tail</DisplayName>
+      <Description>-10 Dodge</Description>
+      <Icon>Ability_BrokenLeg_Icon.png</Icon>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_Lizardmen</Attribute>
+      </Prereq>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Dodge</StrVal>
+        <Value>-10</Value>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>TurnedUndead</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+      <Prereq>
+        <Type>RestrictedAbilityBonusOption</Type>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+        <Target>Unit</Target>
+      </Prereq>
+    </AbilityBonusOption>
+  </AbilityBonus>
+</Container>

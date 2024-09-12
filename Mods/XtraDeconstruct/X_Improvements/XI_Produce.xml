@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<ImprovementTypes>
+		<!--UNRESTRICTED-->
+	<ImprovementType InternalName="Produce_X_Beer">
+		<DisplayName>Produce Beer</DisplayName>
+		<Description>Producing Beer increases the amount of Beer a city provides and is done instead of training units or constructing buildings.</Description>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Cooperation</Attribute>
+		</Prereq>
+		<LaborToBuild>-1</LaborToBuild>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_X_Production</Attribute>
+			<Value>-1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Resource_XL_Beer</Attribute>
+			<PerTurn>1</PerTurn>
+			<ApplyDuringConstruction>1</ApplyDuringConstruction>
+			<Provides>+3 Beers per 2 Seasons</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+			<Value>1.5</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>2</AIPriority>
+			<AITag>Crystal</AITag>
+		</AIData>
+		<ArtDef>Produce_X_Beer_ArtDef</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="ProduceGrowth"><!--Not available for the Dead-->
+		<ArtDef>Produce_X_Growth_ArtDef</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="ProduceMana">
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_X_Production</Attribute>
+			<Value>-1</Value>
+		</GameModifier>
+		<ArtDef>Produce_X_Mana_ArtDef</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="ProduceResearch">
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_X_Production</Attribute>
+			<Value>-1</Value>
+		</GameModifier>
+		<ArtDef>Produce_X_Research_ArtDef</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="ProduceWealth">
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_X_Production</Attribute>
+			<Value>-1</Value>
+		</GameModifier>
+		<ArtDef>Produce_X_Wealth_ArtDef</ArtDef>
+	</ImprovementType>
+		<!--CONCLAVES-->
+	<ImprovementType InternalName="Produce_X_Crystal">
+		<DisplayName>Produce Crystal</DisplayName>
+		<Description>Producing Crystal increases the amount of Crystal a city provides and is done instead of training units or constructing buildings.</Description>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Glyph_Stones</Attribute>
+		</Prereq>
+		<LaborToBuild>-1</LaborToBuild>
+		<RequiresCityImprovement>1</RequiresCityImprovement>
+		<RequiredImprovement>Conclave</RequiredImprovement>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_X_Production</Attribute>
+			<Value>-1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>RefinedCrystal</Attribute>
+			<PerTurn>1</PerTurn>
+			<ApplyDuringConstruction>1</ApplyDuringConstruction>
+			<Provides>+1 Crystal per Season</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+			<Value>1</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>2</AIPriority>
+			<AITag>Mining</AITag>
+		</AIData>
+		<ArtDef>Produce_X_Crystal_ArtDef</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="Produce_X_Power_L">
+		<DisplayName>Produce Power #Life</DisplayName>
+		<Description>Producing Power increases the amount of Life Power a city provides and is done instead of training units or constructing buildings.</Description>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Kingdom</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Ereogs_Journal</Attribute>
+		</Prereq>
+		<LaborToBuild>-1</LaborToBuild>
+		<RequiresCityImprovement>1</RequiresCityImprovement>
+		<RequiredImprovement>Conclave</RequiredImprovement>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_X_Production</Attribute>
+			<Value>-1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>LifeMana</Attribute>
+			<PerTurn>1</PerTurn>
+			<ApplyDuringConstruction>1</ApplyDuringConstruction>
+			<Provides>+1 Life Power</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+			<Value>1</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+			<AITag>Shards</AITag>
+		</AIData>
+		<ArtDef>Produce_X_Power_L_ArtDef</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="Produce_X_Power_D">
+		<DisplayName>Produce Power #Death</DisplayName>
+		<Description>Producing Power increases the amount of Death Power a city provides and is done instead of training units or constructing buildings.</Description>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Empire</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Ereogs_Journal</Attribute>
+		</Prereq>
+		<LaborToBuild>-1</LaborToBuild>
+		<RequiresCityImprovement>1</RequiresCityImprovement>
+		<RequiredImprovement>Conclave</RequiredImprovement>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_X_Production</Attribute>
+			<Value>-1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>DeathMana</Attribute>
+			<PerTurn>1</PerTurn>
+			<ApplyDuringConstruction>1</ApplyDuringConstruction>
+			<Provides>+1 Death Power</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+			<Value>1</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+			<AITag>Shards</AITag>
+		</AIData>
+		<ArtDef>Produce_X_Power_D_ArtDef</ArtDef>
+	</ImprovementType>
+		<!--FORTRESSES-->
+	<ImprovementType InternalName="Produce_X_Metal">
+		<DisplayName>Produce Metal</DisplayName>
+		<Description>Producing Metal increases the amount of Metal a city provides and is done instead of training units or constructing buildings.</Description>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Construction</Attribute>
+		</Prereq>
+		<LaborToBuild>-1</LaborToBuild>
+		<RequiresCityImprovement>1</RequiresCityImprovement>
+		<RequiredImprovement>Fortress</RequiredImprovement>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_X_Production</Attribute>
+			<Value>-1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Metal</Attribute>
+			<PerTurn>1</PerTurn>
+			<ApplyDuringConstruction>1</ApplyDuringConstruction>
+			<Provides>+2 Metal per Season</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+			<Value>2</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>2</AIPriority>
+			<AITag>Crystal</AITag>
+		</AIData>
+		<ArtDef>Produce_X_Metal_ArtDef</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="Produce_X_Wargs">
+		<DisplayName>Produce Wargs</DisplayName>
+		<Description>Producing Wargs increases the amount of Wargs a city provides and is done instead of training units or constructing buildings.</Description>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Warg_Riding</Attribute>
+		</Prereq>
+		<LaborToBuild>-1</LaborToBuild>
+		<RequiresCityImprovement>1</RequiresCityImprovement>
+		<RequiredImprovement>Fortress</RequiredImprovement>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_X_Production</Attribute>
+			<Value>-1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Wargs</Attribute>
+			<PerTurn>1</PerTurn>
+			<ApplyDuringConstruction>1</ApplyDuringConstruction>
+			<Provides>+1 Warg per 2 Seasons</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+			<Value>0.5</Value>
+		</GameModifier>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Player_X_Examiners</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Gourmets</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>DrotaEmpireTactical4</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>CentaurEmpireTactical4</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Player_X_Centaurs</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+			<AITag>Workshop</AITag>
+		</AIData>
+		<ArtDef>Produce_X_Wargs_ArtDef</ArtDef>
+	</ImprovementType>
+		<!--TOWNS-->
+	<ImprovementType InternalName="Produce_X_Fame"><!--Not available for the Dead-->
+		<DisplayName>Produce Fame</DisplayName>
+		<Description>Producing Fame increases the amount of Fame a city provides and is done instead of training units or constructing buildings.</Description>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Entertainment</Attribute>
+		</Prereq>
+		<LaborToBuild>-1</LaborToBuild>
+		<RequiresCityImprovement>1</RequiresCityImprovement>
+		<RequiredImprovement>TradeGuild</RequiredImprovement>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_X_Production</Attribute>
+			<Value>-1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Fame</Attribute>
+			<PerTurn>1</PerTurn>
+			<ApplyDuringConstruction>1</ApplyDuringConstruction>
+			<Provides>+2 Fame per Season</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+			<Value>2</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+			<AITag>Prestige</AITag>
+		</AIData>
+		<ArtDef>Produce_X_Fame_ArtDef</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="Produce_X_Horses">
+		<DisplayName>Produce Horses</DisplayName>
+		<Description>Producing Horses increases the amount of Horses a city provides and is done instead of training units or constructing buildings.</Description>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Mounted_Warfare</Attribute>
+		</Prereq>
+		<LaborToBuild>-1</LaborToBuild>
+		<RequiresCityImprovement>1</RequiresCityImprovement>
+		<RequiredImprovement>TradeGuild</RequiredImprovement>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_X_Production</Attribute>
+			<Value>-1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Horses</Attribute>
+			<PerTurn>1</PerTurn>
+			<ApplyDuringConstruction>1</ApplyDuringConstruction>
+			<Provides>+1 Horse per 2 Seasons</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+			<Value>0.5</Value>
+		</GameModifier>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Player_X_Handlers</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Gourmets</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>DrotaEmpireTactical4</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>CentaurEmpireTactical4</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Player_X_Centaurs</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+			<AITag>Farming</AITag>
+		</AIData>
+		<ArtDef>Produce_X_Horses_ArtDef</ArtDef>
+	</ImprovementType>
+</ImprovementTypes>

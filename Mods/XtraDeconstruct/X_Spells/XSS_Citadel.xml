@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<Spells>
+	<SpellDef InternalName="Spell_X_Citadel_S">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Citadel</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Earth3</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>75</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>1</Amount>
+			<PerTurn>1</PerTurn>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Immobilizes Invaders for the 1st action.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] CITADEL
+		::: Immobilizes Invaders for the 1st action. Can still cast or use ranged weapons.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: City
+		
+		EFFECT
+		::: Citadel (BattleAutoCast)
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Dispelled (Enchantment)
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Earth Mage</Description>
+		<SpellBookSortCategory>City</SpellBookSortCategory>
+		<SpellBookSortSubCategory>CityEnchantment</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>FriendlyCity</SpellTargetType>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>BattleAutoCastSpell</Attribute>
+			<StrVal>Spell_X_Citadel_T</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>85</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Citadel_S.png</IconFG>
+		<IgnoreCastAnim>1</IgnoreCastAnim>
+		<HitSoundFX>Spell_Imprison</HitSoundFX>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_Citadel_T">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Citadel</DisplayName>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Invaders may not move for 1 action.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] CITADEL
+		::: Invaders may not move for 1 action. Can still cast or use ranged weapons.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Units
+		
+		EFFECT
+		::: 0 Movement
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: 1 Action
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: City Enchantment
+		::: ::: Citadel</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Debuff</SpellSubClass>
+		<SpellTargetType>AllEnemyUnits</SpellTargetType>
+		<IsResistable>0</IsResistable>
+		<IsCastable>0</IsCastable>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Moves</StrVal>
+			<Multiplier>0</Multiplier>
+			<xActions>1</xActions>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Citadel_T.png</IconFG>
+		<IgnoreCastAnim>1</IgnoreCastAnim>
+		<HitSoundFX>Spell_Imprison</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_StoneSkin_Particle</EffectName>
+			<LocalPosition>0,25,0</LocalPosition>
+			<EffectScale>.4</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+			<PlayOnAllTargets>1</PlayOnAllTargets>
+		</SpellDefEffect>
+	</SpellDef>
+</Spells>

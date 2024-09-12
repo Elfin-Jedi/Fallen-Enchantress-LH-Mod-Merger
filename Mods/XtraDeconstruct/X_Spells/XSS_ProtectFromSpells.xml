@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<Spells>
+	<SpellDef InternalName="Spell_X_ArcaneAegis">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Arcane Aegis</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Earth5</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>600</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<PerTurn>1</PerTurn>
+			<Amount>6</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<PreventStackingWith>Spell_X_SpiritOfTheOphidian</PreventStackingWith>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Protects one Unit from Enemy Spells.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] ARCANE AEGIS
+		::: Protects one Unit from Enemy Spells.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: Champion or Sovereign
+		
+		EFFECT
+		::: Spell Immunity
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Dispelled (Enchantment)
+		
+		OTHER
+		::: Incompatible w/ Spirit of the Ophidian
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Earth Archmage</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>FriendlyChampionOrSov</SpellTargetType>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>ProtectFromSpells</Attribute>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_MagicResist</StrVal>
+			<Value>500</Value>
+		</GameModifier>
+		<Cooldown>25</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>190</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_ArcaneAegis.png</IconFG>
+		<HitSoundFX>Spell_Tremor_01</HitSoundFX>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_ArcaneBulwark">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Arcane Bulwark</DisplayName>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Third_Book_Of_The_Magi</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Earth5</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>300</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<PerTurn>1</PerTurn>
+			<Amount>3</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<PreventStackingWith>Spell_X_SacredCity</PreventStackingWith>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Protects one City from enemy Spells.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] ARCANE BULWARK
+		::: Protects one City from enemy Spells.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: City
+		
+		EFFECT
+		::: Spell Immunity
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Dispelled (Enchantment)
+		
+		OTHER
+		::: Incompatible w/ Sacred City
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Earth Archmage
+		
+		::: Tech
+		::: ::: Third Book of the Magi</Description>
+		<SpellBookSortCategory>City</SpellBookSortCategory>
+		<SpellBookSortSubCategory>CityEnchantment</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>FriendlyCity</SpellTargetType>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>ProtectFromSpells</Attribute>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<ValidTerrainCategory>City</ValidTerrainCategory>
+		<Cooldown>25</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>150</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_ArcaneBulwark.png</IconFG>
+		<HitSoundFX>Spell_Tremor_01</HitSoundFX>
+	</SpellDef>
+</Spells>

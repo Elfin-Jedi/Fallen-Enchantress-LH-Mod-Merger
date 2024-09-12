@@ -1,0 +1,1649 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<Spells>
+	<SpellDef InternalName="BattleCry_Ability">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Battle Cry Scroll</DisplayName>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>All units in your army get to act immediately.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] BATTLE CRY SCROLL
+		::: All units in your army get to act immediately.
+		
+		DOMAIN
+		::: Tactical
+		::: Friendly
+		::: Units (ALL)
+		
+		EFFECT
+		::: + 100 Initiative
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: 1 Action
+		
+		OTHERS
+		::: May lose Actions subsequently
+		
+		SOURCE
+		::: Equipment
+		::: ::: Battle Cry Scroll</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>AllFriendlyUnits</SpellTargetType>
+		<IsCastable>0</IsCastable>
+		<IsSpecialAbility>1</IsSpecialAbility>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Duration>1</Duration>
+			<UpdateDurationAtTurnStart>1</UpdateDurationAtTurnStart>
+			<Effect>E_Celerity_Particle</Effect>
+			<Value>100</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>825</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_BattleCry.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BishopsRing_Charge">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Bishop's Ring (Charge)</DisplayName>
+		<CanStack>1</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>+1 Charge when struck.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] BISHOP'S RING (CHARGE)
+		::: +1 Charge when struck.
+		
+		DOMAIN
+		::: Tactical
+		::: Self
+		
+		EFFECT
+		::: + 1 Charge when struck
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Battle
+		::: Until Used (Charge)
+		
+		OTHERS
+		::: N/A
+		
+		SOURCE
+		::: Equipment
+		::: ::: Bishop's Ring</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>Self</SpellTargetType>
+		<IsCastable>0</IsCastable>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_BishopsRing</StrVal>
+			<ApplyToCaster>1</ApplyToCaster>
+			<Value>1</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Sentinel.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BishopsRing_Heal">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Bishop's Ring (Release)</DisplayName>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_BishopsRing</Attribute>
+			<Value>1</Value>
+		</Prereq>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Heals the wearer.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] BISHOP'S RING (RELEASE)
+		::: Heals the wearer.
+		
+		DOMAIN
+		::: Tactical
+		::: Self
+		
+		EFFECT
+		::: Self-heal
+		::: (1.5 x Bishop's Ring Charges) HP
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHERS
+		::: Healing Bonus
+		::: Life Multiplier
+		::: Time Bonus (Sov)
+		
+		SOURCE
+		::: Equipment
+		::: ::: Bishop's Ring</Description>
+		<FormattedDescription>Unleash the rings charges to heal %d HP.</FormattedDescription>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Heal</SpellSubClass>
+		<SpellTargetType>Self</SpellTargetType>
+		<IsCastable>0</IsCastable>
+		<IsSpecialAbility>1</IsSpecialAbility>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_BishopsRing_Temp</StrVal>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<ApplyToCaster>1</ApplyToCaster>
+			<Duration>1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BishopsRing] * 1.5]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<ApplyToCaster>1</ApplyToCaster>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BishopsRing_Temp] * 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] * [UnitStat_BonusHealing]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc2] * [UnitStat_SpellDamage_Life]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock1" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_X_IsCultLeader] * [UnitStat_X_Clock]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock1] * 0.01]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock2] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock4">
+				<Expression><![CDATA[[Calc_X_Clock3] * [Calc3]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_BishopsRing</StrVal>
+			<ApplyToCaster>1</ApplyToCaster>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BishopsRing] * -1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>5</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>666</AIPriority>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[Unit_GetCurrentDamage]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[Unit_GetHPCurrent]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc3">
+					<Expression><![CDATA[[Calc] / [Calc2]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc3] < 1.5]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>DLC03_Ability_BishopsRingHeal_Icon.png</IconFG>
+		<HitSoundFX>Spell_Heal_01</HitSoundFX>
+		<HitSoundFX>Spell_Heal_02</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_Heal_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.75</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="BloodGodArmor_Effect">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Blood God Armor</DisplayName>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>When attacked, attacker and defender both take damage.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] BLOOD GOD ARMOR
+		::: When attacked, attacker and defender both take damage.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Unit (+Self)
+		
+		EFFECT
+		::: 2 DMG to attacker
+		::: 1 DMG to wearer
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		::: ::: Blood God Helmet nullifies the wearer DMG
+		
+		INTERVAL
+		::: Instant
+		
+		OTHERS
+		::: Blood God Boots double effect
+		
+		SOURCE
+		::: Equipment
+		::: ::: Blood God Greaves
+		::: ::: Blood God Vambraces</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<IsCastable>0</IsCastable>
+		<IsSpecialAbility>1</IsSpecialAbility>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BloodGodArmor]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] * -2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<ApplyToCaster>1</ApplyToCaster>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BloodGodArmor]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BloodGodArmor_Caster] * [Calc]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3">
+				<Expression><![CDATA[[Calc2] * -1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc3]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Shockwave.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BloodGodArmor_Ability">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Anguish</DisplayName>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>8 DMG to ALL adjacent units, half that to the caster.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] ANGUISH
+		::: 8 DMG to ALL adjacent units, half that to the caster.
+		
+		DOMAIN
+		::: Tactical
+		::: Self
+		
+		EFFECT
+		::: 8 DMG to ALL adjacent units
+		::: 4 DMG to wearer
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		::: ::: Blood God Helmet nullifies the wearer DMG
+		
+		INTERVAL
+		::: Instant
+		
+		OTHERS
+		::: 3x3 Area
+		::: Blood God Boots double effect
+		
+		SOURCE
+		::: Equipment
+		::: ::: Blood God Cuirass</Description>
+		<FormattedDescription>%d DMG to ALL adjacent units, half that to the caster.</FormattedDescription>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<AllowFriendlyFireInRadius>1</AllowFriendlyFireInRadius>
+		<IsSpecialAbility>1</IsSpecialAbility>
+		<Radius>1</Radius>
+		<Range>0</Range>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BloodGodArmor] * 8]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] * -1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<ApplyToCaster>1</ApplyToCaster>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BloodGodArmor] * 4]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BloodGodArmor_Caster] * [Calc]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3">
+				<Expression><![CDATA[[Calc2] * -1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc3]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>5</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>466</AIPriority>
+			<AIMinSpellTargets>4</AIMinSpellTargets>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[UnitStat_Attack_Pierce]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc2" ValueOwner="TargetUnit">
+					<Expression><![CDATA[[UnitStat_Defense_Pierce]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc3">
+					<Expression><![CDATA[[Calc] - [Calc2]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc4" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[UnitStat_BloodGodArmor] * 32]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc3] < [Calc4]]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>DLC03_Ability_Anguish_Icon.png</IconFG>
+		<HitSoundFX>Spell_Shockwave_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_Shockwave_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+			<PlayOnAllTargets>0</PlayOnAllTargets>
+		</SpellDefEffect>
+		<SpellDefEffect>
+			<EffectName>T_Shockwave_Impact_Particle</EffectName>
+			<LocalPosition>0,50,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0.25</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+			<PlayOnAllTargets>1</PlayOnAllTargets>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="BottledWind_Ability">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Bottled Wind</DisplayName>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Knocks the wielder and all surrounding units prone.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] BOTTLED WIND
+		::: Knocks the wielder and all surrounding units prone.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Units (+Self)
+		
+		EFFECT
+		::: Knocked Prone
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHERS
+		::: 3x3 Area
+		
+		SOURCE
+		::: Equipment
+		::: ::: Bottled Wind</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Debuff</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<Radius>1</Radius>
+		<Range>0</Range>
+		<GameModifier>
+			<ModType>TacticalUnit</ModType>
+			<Attribute>TargetKnockedProne</Attribute>
+			<Duration>1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>TacticalUnit</ModType>
+			<Attribute>TargetKnockedProne</Attribute>
+			<ApplyToCaster>1</ApplyToCaster>
+			<Duration>1</Duration>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>200</AIPriority>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[UnitStat_MagicResist]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc] > 66]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>DLC03_Potion_BottledWind_Icon.png</IconFG>
+		<HitSoundFX>Spell_Knockback_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_GustofWind_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.25</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+			<PlayOnAllTargets>1</PlayOnAllTargets>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="BowAttack_Harridan">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Harridan Shortbow</DisplayName>
+		<CanStack>1</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Ranged Attack which webs.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] HARRIDAN SHORTBOW
+		::: Ranged Attack which webs.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Unit
+		
+		EFFECT
+		::: Defendable DMG
+		::: 0 Movement
+		
+		FIGHTABLE
+		::: Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: Instant
+		::: 1 Action
+		
+		OTHERS
+		::: N/A
+		
+		SOURCE
+		::: Equipment
+		::: ::: Harridan Shortbow</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<IsCastable>0</IsCastable>
+		<IsRangedAttack>1</IsRangedAttack>
+		<IsResistable>1</IsResistable>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<IsForSpellResist>1</IsForSpellResist>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SetUnitStat</Attribute>
+			<StrVal>UnitStat_Moves</StrVal>
+			<DisplayName>Webbed</DisplayName>
+			<Duration>1</Duration>
+			<Effect>E_TangledWeb_Particle</Effect>
+			<PerTurn>1</PerTurn>
+			<Value>0</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>100</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_WebbedArrow.png</IconFG>
+		<HitSoundFX>Spell_TangledWeb_02</HitSoundFX>
+		<MissSoundFX>Miss_Swing2</MissSoundFX>
+		<SpellCastSoundFX>Spell_BowAttack_BasicCast_01</SpellCastSoundFX>
+		<SpellCastEffectName>Arrow</SpellCastEffectName>
+		<SpellCastEffectScale>0.5</SpellCastEffectScale>
+		<SpellCastProjectile>1</SpellCastProjectile>
+		<SpellCastProjectileSpeed>1100</SpellCastProjectileSpeed>
+		<SpellDefEffect>
+			<EffectName>Y_TangledWeb_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1.5</EffectScale>
+			<EffectDelay>0.25</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="BowAttack_Shadowbolt">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Shadowbolt Staff</DisplayName>
+		<CanStack>1</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Ranged Attack which lower magic resistance.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] SHADOWBOLT STAFF
+		::: Ranged Attack which lower magic resistance.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Unit
+		
+		EFFECT
+		::: Defendable DMG
+		::: - 5 Magic Resistance
+		
+		FIGHTABLE
+		::: Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: Instant
+		::: Battle
+		
+		OTHERS
+		::: Chaos Multiplier
+		::: Time Bonus (Sov)
+		
+		SOURCE
+		::: Equipment
+		::: ::: Shadowbolt Staff</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<IsCastable>0</IsCastable>
+		<IsRangedAttack>1</IsRangedAttack>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<IsForSpellResist>1</IsForSpellResist>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_MagicResist</StrVal>
+			<DisplayName>Resist Loss</DisplayName>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_SpellDamage_Chaos] * -5]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock1" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_X_IsCultLeader] * [UnitStat_X_Clock]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock1] * 0.01]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock2] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock4">
+				<Expression><![CDATA[[Calc_X_Clock3] * [Calc]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>100</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Bow.png</IconFG>
+		<HitSoundFX>Spell_Shadowbolt_Hit</HitSoundFX>
+		<SpellCastSoundFX>Spell_Shadowbolt_Travel</SpellCastSoundFX>
+		<SpellCastEffectName>T_ShadowBolt_Particle</SpellCastEffectName>
+		<SpellCastEffectScale>0.30</SpellCastEffectScale>
+		<SpellCastProjectile>1</SpellCastProjectile>
+		<SpellCastProjectileSpeed>800</SpellCastProjectileSpeed>
+		<SpellDefEffect>
+			<EffectName>T_Confusion_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+			<PlayOnAllTargets>1</PlayOnAllTargets>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="CursedBell_Ability">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Cursed Bell</DisplayName>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>ALL lose their next turn.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] CURSED BELL
+		::: ALL lose their next turn.
+		
+		DOMAIN
+		::: Tactical
+		::: ALL
+		
+		EFFECT
+		::: - 1 Action
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: 1 Action
+		
+		OTHERS
+		::: N/A
+		
+		SOURCE
+		::: Equipment
+		::: ::: Cursed Bell</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitCurse</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Debuff</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<AllowFriendlyFireInRadius>1</AllowFriendlyFireInRadius>
+		<IsResistable>1</IsResistable>
+		<Radius>99</Radius>
+		<Range>0</Range>
+		<GameModifier>
+			<ModType>TacticalUnit</ModType>
+			<Attribute>ChanceToLoseNextTurn</Attribute>
+			<DisplayName>Dazed</DisplayName>
+			<Duration>1</Duration>
+			<Effect>E_Daze_Particle</Effect>
+			<Value>100</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>200</AIPriority>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[UnitStat_MagicResist]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc] > 66]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>DLC03_CursedBell_Icon.png</IconFG>
+		<HitSoundFX>DLC03_Spell_CursedBell</HitSoundFX>
+	</SpellDef>
+	<SpellDef InternalName="DeadlyBite_Ability">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Deadly Bite (Ability)</DisplayName>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>A devastating attack that strikes for double the unit's attack.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] DEADLY BITE (ABILITY)
+		::: A devastating attack that strikes for double the unit's attack.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Unit
+		
+		EFFECT
+		::: (ATK x2) DMG
+		
+		FIGHTABLE
+		::: Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHERS
+		::: Can be Dodged
+		
+		SOURCE
+		::: Equipment
+		::: ::: Skath Longbow</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<ApproachTargetTile>1</ApproachTargetTile>
+		<IsCastable>0</IsCastable>
+		<CanBeDodged>1</CanBeDodged>
+		<IsSpecialAbility>1</IsSpecialAbility>
+		<UseWeaponRange>1</UseWeaponRange>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Pierce</AttackStat>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_CombinedAttack] * 2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>5</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>750</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>DLC03_Ability_DeadlyBite_Icon.png</IconFG>
+		<CasterAnimationType>31</CasterAnimationType>
+		<HitSoundFX>Ability_DeadlyBite</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>Y_DeadlyBite_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1.0</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="DragonTeeth_Ability">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Dragon Teeth</DisplayName>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Summons 3 Skeletons beside the caster.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] DRAGON TEETH
+		::: Summons 3 Skeletons beside the caster.
+		
+		DOMAIN
+		::: Tactical
+		::: Empty Tile
+		
+		EFFECT
+		::: Summons 3 Skeletons
+		::: ::: Level = 1
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Battle
+		::: Until Killed
+		
+		OTHERS
+		::: May summon less units if tiles are not empty
+		::: Summon Bonus
+		
+		SOURCE
+		::: Equipment
+		::: ::: Dragon Teeth</Description>
+		<SpellBookSortCategory>Summon</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Summon</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Summon</SpellSubClass>
+		<SpellTargetType>EmptyTile</SpellTargetType>
+		<AppliesRandomModifier>1</AppliesRandomModifier>
+		<Radius>1</Radius>
+		<RadiusType>ADJACENT</RadiusType>
+		<Range>1</Range>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Skeleton</StrVal>
+			<UnitClass>SkeletonA_BG_Summon</UnitClass>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Skeleton</StrVal>
+			<UnitClass>SkeletonB_BG_Summon</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Skeleton</StrVal>
+			<UnitClass>SkeletonC_BG_Summon</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>150</AIPriority>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[UnitStat_BonusSummonLevel]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc] > 0]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_DragonTeeth.png</IconFG>
+		<HitSoundFX>Spell_SummonEarthElemental_01</HitSoundFX>
+		<WorldLightOverrideTime>2</WorldLightOverrideTime>
+		<WorldLightOverrideAmbiant>30,30,30</WorldLightOverrideAmbiant>
+		<WorldLightOverrideDiffuse>30,30,30</WorldLightOverrideDiffuse>
+		<WorldLightOverrideRim0>212,0,192</WorldLightOverrideRim0>
+		<WorldLightOverrideRim1>0,132,234</WorldLightOverrideRim1>
+		<HitSoundFX>Spell_SummonAirElemental_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_SummonAirElemental_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.5</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Enzo_Effect">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Enzo Effect</DisplayName>
+		<CanStack>1</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Victim suffers -1 DEF on each hit.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] ENZO EFFECT
+		::: Victim suffers -1 DEF on each hit.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Unit
+		
+		EFFECT
+		::: - 1 DEF
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Battle
+		
+		OTHERS
+		::: Stackable
+		
+		SOURCE
+		::: Equipment
+		::: ::: Enzo's Knife</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<IsCastable>0</IsCastable>
+		<IsSpecialAbility>1</IsSpecialAbility>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Pierce</StrVal>
+			<DisplayName>-1 Defense</DisplayName>
+			<Duration>-1</Duration>
+			<Value>-1</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Shockwave.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="RevengingRing_Charge">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Revenging Ring (Charge)</DisplayName>
+		<CanStack>1</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>+1 Charge when struck.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] REVENGING RING (CHARGE)
+		::: +1 Charge when struck.
+		
+		DOMAIN
+		::: Tactical
+		::: Self
+		
+		EFFECT
+		::: + 1 Charge when struck
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Battle
+		::: Until Used (Charge)
+		
+		OTHERS
+		::: N/A
+		
+		SOURCE
+		::: Equipment
+		::: ::: Revenging Ring</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>Self</SpellTargetType>
+		<IsCastable>0</IsCastable>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_RevengingRing</StrVal>
+			<ApplyToCaster>1</ApplyToCaster>
+			<Value>1</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Sentinel.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="RevengingRing_Bash">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Revenging Ring (Release)</DisplayName>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_RevengingRing</Attribute>
+			<Value>4</Value>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_Rushing</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Unleash the rings charges to damage an enemy.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] REVENGING RING (RELEASE)
+		::: Unleash the rings charges to damage an enemy (Minimum 4 charges).
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		
+		EFFECT
+		::: (1.5 x Revenging Ring Charges) DMG
+		::: GoNext
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHERS
+		::: Death Multiplier
+		::: Time Bonus (Sov)
+		
+		SOURCE
+		::: Equipment
+		::: ::: Revenging Ring</Description>
+		<FormattedDescription>Unleash the rings charges to launch a %d ATK.</FormattedDescription>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Debuff</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<IsCastable>0</IsCastable>
+		<IsSpecialAbility>1</IsSpecialAbility>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_RevengingRing_Temp</StrVal>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<ApplyToCaster>1</ApplyToCaster>
+			<Duration>1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_RevengingRing] * 1.5]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_RevengingRing</StrVal>
+			<ApplyToCaster>1</ApplyToCaster>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_RevengingRing]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc] * -1]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_RevengingRing_Temp] * -1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] * [UnitStat_SpellDamage_Death]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock1" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_X_IsCultLeader] * [UnitStat_X_Clock]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock1] * 0.01]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock2] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock4">
+				<Expression><![CDATA[[Calc_X_Clock3] * [Calc2]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>TacticalUnit</ModType>
+			<Attribute>GoNext</Attribute>
+			<ApplyToCaster>1</ApplyToCaster>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockUnitAbility</Attribute>
+			<StrVal>Ability_X_Rushing</StrVal>
+			<Duration>2</Duration>
+			<ApplyToCaster>1</ApplyToCaster>
+			<DisplayName>Rushing!</DisplayName>
+		</GameModifier>
+		<Cooldown>5</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>555</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>DLC03_Ability_RevengingRingBash_Icon.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="Serpents_Call">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Serpent's Call</DisplayName>
+		<CanStack>0</CanStack>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>30</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Summons a Naja to aid you in battle.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] SERPENT'S CALL
+		::: Summons a Naja to aid you in battle.
+		
+		DOMAIN
+		::: Tactical
+		::: Empty Tile
+		
+		EFFECT
+		::: Summon Naja
+		::: ::: Level = 3
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Battle
+		
+		OTHERS
+		::: Summon Bonus
+		::: Time Bonus (Sov)
+		
+		SOURCE
+		::: Equipment
+		::: ::: Staff of the Serpent</Description>
+		<SpellBookSortCategory>Summon</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Summon</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Summon</SpellSubClass>
+		<SpellTargetType>EmptyTile</SpellTargetType>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Naja</StrVal>
+			<UnitClass>Naja_BG_Summon</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 3]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock1" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_X_IsCultLeader] * [UnitStat_X_Clock]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock1] * 0.01]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock2] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock4">
+				<Expression><![CDATA[[Calc_X_Clock3] * [Calc]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>100</AIPriority>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[Unit_GetLevel]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc] < 8]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>DLC03_Ability_SerpentsCall_Icon.png</IconFG>
+		<HitSoundFX>Snake_Death</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_SummonEarthElemental_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.5</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Silence_Ability">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Silence Effect</DisplayName>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Prevents Spellcasting for 1 Action.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] SILENCE EFFECT
+		::: Prevents the target from being able to cast spells on their next action.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Unit
+		
+		EFFECT
+		::: Prevents Spellcasting
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: 1 Action
+		
+		OTHERS
+		::: N/A
+		
+		SOURCE
+		::: Equipment
+		::: ::: Breathstealer</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitCurse</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Debuff</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>PreventSpellcasting</Attribute>
+			<DisplayName>Silenced</DisplayName>
+			<Duration>1</Duration>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Silence.png</IconFG>
+		<HitSoundFX>Spell_Silence_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_Shrink_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>.35</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="SugarRush">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Sugar Rush</DisplayName>
+		<CanStack>1</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Double your Attack, but you lose your next action.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] SUGAR RUSH
+		::: Double your Attack, but you lose your next action.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Unit
+		
+		EFFECT
+		::: (ATK x2) DMG
+		::: - 1 Action (Self)
+		
+		FIGHTABLE
+		::: Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHERS
+		::: Crushing Blow Bonus
+		::: Earth Multiplier
+		
+		SOURCE
+		::: Equipment
+		::: ::: Giant Lollipop</Description>
+		<FormattedDescription>Launch a %d ATK, but lose your next action.</FormattedDescription>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<ApproachTargetTile>1</ApproachTargetTile>
+		<IsCastable>0</IsCastable>
+		<CanBeDodged>1</CanBeDodged>
+		<IsSpecialAbility>1</IsSpecialAbility>
+		<UseWeaponRange>1</UseWeaponRange>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Pierce</AttackStat>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_CombinedAttack] * 2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] * [UnitStat_BonusCrushingBlow]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc2] * [UnitStat_SpellDamage_Earth]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc3]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc3]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>TacticalUnit</ModType>
+			<Attribute>ChanceToLoseNextTurn</Attribute>
+			<ApplyToCaster>1</ApplyToCaster>
+			<DisplayName>Dazed</DisplayName>
+			<Duration>2</Duration>
+			<Effect>E_Daze_Particle</Effect>
+			<Value>100</Value>
+		</GameModifier>
+		<Cooldown>5</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>750</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>DLC03_Ability_SugarRush_Icon.png</IconFG>
+		<HitSoundFX>Spell_CrushingBlow_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>Y_Ability_CrushingBlow</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.6</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="QuicksilverPotion_Ability">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Quicksilver Potion</DisplayName>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Take 3 actions.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] QUICKSILVER POTION
+		::: Take 3 actions.
+		
+		DOMAIN
+		::: Tactical
+		::: Self
+		
+		EFFECT
+		::: + 100 Initiative
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: 3 Actions
+		
+		OTHERS
+		::: May lose several Actions subsequently
+		
+		SOURCE
+		::: Equipment
+		::: ::: Quicksilver Potion</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Movement</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>Self</SpellTargetType>
+		<IsSpecialAbility>1</IsSpecialAbility>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Duration>3</Duration>
+			<UpdateDurationAtTurnStart>1</UpdateDurationAtTurnStart>
+			<Value>100</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>750</AIPriority>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+					<Expression><![CDATA[[Unit_GetCurrentDamage]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc2" ValueOwner="TargetUnit">
+					<Expression><![CDATA[[Unit_GetHPCurrent]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc3">
+					<Expression><![CDATA[[Calc] / [Calc2]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc3] < 1.1]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Quicksilver.png</IconFG>
+		<HitSoundFX>Spell_DarkEnchant_04</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>Y_SummonDeathDemon_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+		<SpellDefEffect>
+			<EffectName>Y_SummonDeathDemon_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+			<PlayOnCaster>1</PlayOnCaster>
+		</SpellDefEffect>
+	</SpellDef>
+</Spells>

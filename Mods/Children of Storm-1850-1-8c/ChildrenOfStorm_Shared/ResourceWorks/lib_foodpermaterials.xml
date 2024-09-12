@@ -1,0 +1,34 @@
+  <CityResourceEffectDef InternalName="MaterialsEffectOnGrains">
+    <InputResource>TileYieldMaterials</InputResource>
+    <OutputResource>TileYieldGrain</OutputResource>
+    <ResourceForMultiplierOnInput>FoodPerMaterials</ResourceForMultiplierOnInput>
+    <EffectType>Harvest</EffectType>
+  </CityResourceEffectDef>
+
+  <PlayerAbilityType InternalName="A_Additive_FoodPerMaterials">
+    <DisplayName>Base Food Per Materials</DisplayName>
+    <Description>How much food each unit of grain produces in a city.</Description>
+    <Icon>Icon_Level.png</Icon>
+  </PlayerAbilityType>
+
+    <ResourceType InternalName="FoodPerMaterials">
+        <DisplayName>Research Per Population</DisplayName>
+        <Description>Amount of research each unit of population produces.</Description>
+        <Type>FoodPerMaterials</Type>
+        <IconColor>0,0,0</IconColor>
+        <!--<Icon>Gfx//Icons//dude_icon.png</Icon>-->
+        <Icon>Gfx//Icons//Icon_Population.png</Icon>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <ModelColor>0,0,0</ModelColor>
+        <Worth>0</Worth>
+        <Global>0</Global>
+        <Stored>0</Stored>
+        <Rarity>0.0</Rarity>
+        <Shared>0</Shared>
+        <TradedByCaravans>0</TradedByCaravans>
+        <ShownInGlobalDisplay>0</ShownInGlobalDisplay>
+        <Medallions InternalName="Population_Res_Medallions">
+            <All>Res_Ores_Plains.png</All>
+        </Medallions>
+</ResourceType>
+

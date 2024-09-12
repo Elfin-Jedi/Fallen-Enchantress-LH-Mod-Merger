@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Created with the Elemental Editor -->
+<!-- CoreAbilities.xml -->
+<!-- -->
+<AbilityBonuses>
+    <DataChecksum NoParse="1">
+        <Ignore>DispName</Ignore>
+        <Translate>DisplayName,Description</Translate>
+    </DataChecksum>
+    <AbilityBonus InternalName="Champion_Weakness">
+        <AbilityBonusType>Champion_Talent</AbilityBonusType>
+        <AbilityBonusOption InternalName="TotalClumsy">
+            <DisplayName>Totally Clumsy</DisplayName>
+            <Description>50% chance to strike allies when making melee attacks</Description>
+            <Icon>Ability_Clumsy_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_ClumsyChance</StrVal>
+                <Value>50</Value>
+                <Provides>Occasionally strikes allies when making melee attacks</Provides>
+            </GameModifier>
+            <Cost>-2</Cost>
+            <HideWhenUpgraded>0</HideWhenUpgraded>
+            <IsCombatAbility>1</IsCombatAbility>
+            <Type>Weakness</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+        <AbilityBonusOption InternalName="TotalInept">
+            <DisplayName>Totally Inept</DisplayName>
+            <Description>-50 to Accuracy when attacking</Description>
+            <Icon>Ability_Cowardly_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Accuracy</StrVal>
+                <Value>-50</Value>
+                <Provides>-50 to Accuracy when attacking</Provides>
+                <vsHigher>1</vsHigher>
+            </GameModifier>
+            <Cost>-2</Cost>
+            <HideWhenUpgraded>0</HideWhenUpgraded>
+            <IsCombatAbility>1</IsCombatAbility>
+            <Type>Weakness</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+        <AbilityBonusOption InternalName="TotallyCruel">
+            <DisplayName>Totally Cruel</DisplayName>
+            <Description>+1 to Attack, +10 Unrest in all cities</Description>
+            <Icon>Ability_Cruel_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_Additive_Unrest</StrVal>
+                <Value>10</Value>
+                <Provides>+10 Unrest in all cities</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Boost</StrVal>
+                <Value>1</Value>
+            </GameModifier>
+            <Cost>-2</Cost>
+            <HideWhenUpgraded>0</HideWhenUpgraded>
+            <Type>Weakness</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+        <AbilityBonusOption InternalName="Vulnerable">
+            <DisplayName>Vulnerable To Magic</DisplayName>
+            <Description>-40 to Spell Resistance</Description>
+            <Icon>Ability_Vulnerable_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_MagicResist</StrVal>
+                <Value>-40</Value>
+                <Provides>-40 Spell Resistance</Provides>
+            </GameModifier>
+            <Cost>-2</Cost>
+            <HideWhenUpgraded>0</HideWhenUpgraded>
+            <IsCombatAbility>1</IsCombatAbility>
+            <Type>Weakness</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+        <AbilityBonusOption InternalName="TotalWeak">
+            <DisplayName>Totally Weak</DisplayName>
+            <Description>-30 Weight Capacity</Description>
+            <Icon>Ability_Weak_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_WeightCapacity</StrVal>
+                <Value>-30</Value>
+            </GameModifier>
+            <AdditionalTrainingTurns>-10</AdditionalTrainingTurns>
+            <Cost>-1</Cost>
+            <HideWhenUpgraded>0</HideWhenUpgraded>
+            <Type>Weakness</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+</AbilityBonuses>

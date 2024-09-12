@@ -1,0 +1,104 @@
+<GameItemTypes>
+	<GameItemType InternalName="Staff_Rachel">
+		<DisplayName>Rachel's Staff</DisplayName>
+			<Description>Much like a caster's staff, the only difference in appearance is an indentation to place crystals.  The power emanating from the staff gives attackers second thoughts before striking.</Description>
+			<Type>Weapon</Type>
+			<Type>Defense</Type>
+			<WeaponType>Spear</WeaponType>
+			<WeaponUpgradeType>Staff</WeaponUpgradeType>
+			<CanBeEquipped>1</CanBeEquipped>
+			<HideInHiergamenon>1</HideInHiergamenon>
+			<ShopValue>60</ShopValue>		
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Attack_Blunt</StrVal>
+				<Value>4</Value>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Attack_Lightning</StrVal>
+				<Value>2</Value>
+			</GameModifier>
+<!-- 		Check to see if this works the way I think it should, move/reference to Spells file
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Attack_Lightning</StrVal>
+				<Provides>+1 Lightning Attack per Crystal Mine owned</Provides>
+				<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[UnitOwner_GetNumCrystalCragShards]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc]]]></Expression>
+				</Calculate>
+			</GameModifier>  -->
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ChanceToCrit</StrVal>
+				<Value>-1</Value>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Dodge</StrVal>
+				<Value>10</Value>
+				<Provides>+10 Dodge</Provides>
+			</GameModifier>
+			<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+			<RarityDisplay>Rare</RarityDisplay>
+			<HeroOnly>1</HeroOnly>
+			<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+			<AIData AIPersonality="AI_General">
+				<AIPrefType>AIPrefType_BLUNT</AIPrefType>
+				<AIPriority>79</AIPriority>
+			</AIData>
+		<ArtDef>Staff_ArtDef</ArtDef>
+       <GameItemTypeArtDef InternalName="Staff_Casters_ArtDef">
+            <GameItemTypeModelPack InternalName="Staff_Casters_Default">
+			<IconFile>W_castersStaff_Icon_01.png</IconFile>
+				<TintR>0</TintR>
+				<TintG>0</TintG>
+				<TintB>0</TintB>
+				<AttackSFX>Hit_Staff_01</AttackSFX>
+				<AttackSFX>Hit_Staff_02</AttackSFX>
+				<AttackSFX>Hit_Staff_03</AttackSFX>
+				<EquipSFX>Equip_WoodenItem_01</EquipSFX>
+				<EquipSFX>Equip_WoodenItem_02</EquipSFX>
+				<EquipSFX>Equip_WoodenItem_03</EquipSFX>
+				<OnHitParticleName>Staff_Attack</OnHitParticleName>
+				<SupportedUnitModelType>AmarianFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>AmarianMale</SupportedUnitModelType>
+				<SupportedUnitModelType>DarklingMale</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireMale</SupportedUnitModelType>
+				<SupportedUnitModelType>FallenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>FallenMale</SupportedUnitModelType>
+				<SupportedUnitModelType>HenchmanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>IroneerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>IroneerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>IronGolem</SupportedUnitModelType>
+				<SupportedUnitModelType>JuggernautMale</SupportedUnitModelType>
+				<SupportedUnitModelType>KingdomFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarMale</SupportedUnitModelType>
+				<SupportedUnitModelType>SlaveMale</SupportedUnitModelType>
+				<SupportedUnitModelType>TarthanFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenMale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithMale</SupportedUnitModelType>
+			<GameItemTypeModel>
+				<ModelFile>Gfx\HKB\Items\magnar_staff.hkb</ModelFile>
+				<Texture_All>Gfx\HKB\Items\F_Accessories_Texture_01.png</Texture_All>
+				<Attachment>hand_right_Lcf</Attachment>
+			</GameItemTypeModel>
+			</GameItemTypeModelPack>
+		</GameItemTypeArtDef>
+	</GameItemType>		
+</GameItemTypes>

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<UnitTypes>
+	<UnitType InternalName="FrostGiant_Orvandil">
+		<CreatureType>Champion</CreatureType>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-5</Value>
+			<Provides>-5% Unrest in the city this unit is in</Provides>
+		</GameModifier>
+		
+		<DisplayName>Orvandil</DisplayName>
+		<Backstory>Before the Cataclysm, Orvandil undertook a great voyage to see what other peoples the world contained.  He roamed far and wide, and became disenchanted with the ways of his people and their disregard for all 'lesser' beings.  Since the time of the Cataclysm, he has learned of his peoples' migration and plans to colonize the lands to the south.  Now, he seeks to stand as a shining example to others that not all frost giants are evil beings bent on destruction and freezing the world.  Which is not to say he's a pacifist; Orvandil long ago earned the respect due to a skilled Giant warrior.</Backstory>
+		
+		<ModelPath>M_Demon_Elemental_Mesh_01.hkb</ModelPath>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<EyeTexture>gfx\Eyes\blinks\eyeblink_m5_Black.png</EyeTexture>
+		<AnimationPack>EF_OldManAnimationPack</AnimationPack>
+		
+		<ShowAsSingleUnit>false</ShowAsSingleUnit>
+		<CutSceneDataPack>FrostGiantCutscenePack</CutSceneDataPack>
+		<ModelScale>1.0000</ModelScale>
+		<TacticalModelScale>1.5000</TacticalModelScale>
+		<EquipmentScale>1.0000</EquipmentScale>
+		<ClothMapScale>1.6</ClothMapScale>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<MovementType>land</MovementType>
+		<BobbingFrequency>0.0000</BobbingFrequency>
+		
+		<ClothPoseIndex>0</ClothPoseIndex>
+		<InfoCardBackground>BG_EmpireBarren</InfoCardBackground>
+		<InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+		
+		<CanBeDesigned>0</CanBeDesigned>
+		<Allegiance>Kingdom</Allegiance>
+		<Unique>1</Unique>
+		<IsNPC>1</IsNPC>
+		<NPCSpawnLikelihood>100</NPCSpawnLikelihood>
+		<IsChampion>1</IsChampion>
+		<Gender>Male</Gender>
+		<SoundPack>SoundPack_Generic_Male</SoundPack>
+		<SpawnRating>7</SpawnRating>
+		
+		<Quote>Let me stand beside you to stem the tide of the Fallen.</Quote>
+		<NPCRecruitmentText>For %d Gildar I will join your cause.</NPCRecruitmentText>
+		<SelectedAbilityBonusOption>Blood_FrostGiants</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>ToweringLords</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>PathOfTheDefender</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Orvandil_Cloak</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Blood_FrostGiants_extramove</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Discipline</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Axeman1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ironskin_Level</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Endurance1_Level</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Water1</SelectedAbilityBonusOption>
+		
+		<Medallions InternalName=""/>
+		<WageOverride>1</WageOverride>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<LevelMilestone InternalName="">
+			<Level>1</Level>
+			<UnitStat_Accuracy>80.0000</UnitStat_Accuracy>
+			<UnitStat_BG_IsKingdom>1.0000</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsMale>1.0000</UnitStat_BG_IsMale>
+			<UnitStat_BG_IsMonster>1.0000</UnitStat_BG_IsMonster>
+			<UnitStat_BG_IsRace_FrostGiant>1.0000</UnitStat_BG_IsRace_FrostGiant>
+			<UnitStat_BG_IsChampion>1.0000</UnitStat_BG_IsChampion>
+			<UnitStat_CombatSpeed>22.0000</UnitStat_CombatSpeed>
+			<UnitStat_HitPoints>20.0000</UnitStat_HitPoints>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+		</LevelMilestone>
+		
+		<Equipment>Cloak_Orvandil</Equipment>
+		
+		<AutoCreateEquipment>Greataxe</AutoCreateEquipment>
+		<AutoCreateEquipment>ChainBreastpiece_Reinforced</AutoCreateEquipment>
+		<AutoCreateEquipment>ChainGreaves</AutoCreateEquipment>
+		<AutoCreateEquipment>LongstriderBoots</AutoCreateEquipment>
+		<AutoCreateEquipment>RingOfTheGlacier</AutoCreateEquipment>
+		
+		<Color_Skin>255,255,255,255</Color_Skin>
+		<Color_Hair>200,200,200,255</Color_Hair>
+		<Color_Clothing1>200,200,200,255</Color_Clothing1>
+		<Color_Clothing2>0,0,135,255</Color_Clothing2>
+		<Color_Metal>51,39,121,255</Color_Metal>
+		<Texture_Skin>M_Demon_Elemental_Texture_03.png</Texture_Skin>
+		
+		<UnitModelType>FrostGiantMale</UnitModelType>
+		<NPCFreeRecruit>0</NPCFreeRecruit>
+		<RaceType>Race_Type_FrostGiants</RaceType>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+	</UnitType>
+	
+	<GameItemType InternalName="Cloak_Orvandil">
+		<DisplayName>Orvandil's Cloak</DisplayName>
+		<Description>Orvandil wears his clan's Cloak of Hierarchy, a hard-won sign of respect among the giant community.  He refuses steadfastly to let anyone else have or use the cloak.</Description>
+		<Type>Cloak</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>1000</ShopValue>
+		<HeroOnly>1</HeroOnly>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_FrostGiants</Attribute>
+		</Prereq>
+
+		<!-- Defense -->
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Pierce</StrVal>
+			<Value>0.4</Value>
+			<PerLevel>1</PerLevel>
+			<Provides>+.4 Defense per Level</Provides>
+		</GameModifier>
+
+		<!-- HP -->
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_HitPoints</StrVal>
+			<Multiplier>1.1</Multiplier>
+			<PerLevel>1</PerLevel>
+			<Provides>Provides +10% Hitpoints per level</Provides>
+		</GameModifier>
+
+		<!-- Damage -->
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Cold</StrVal>
+			<Multiplier>1.15</Multiplier>
+			<PerLevel>1</PerLevel>
+			<Provides>Provides +15% Cold damage increase per level</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Lightning</StrVal>
+			<Multiplier>1.15</Multiplier>
+			<PerLevel>1</PerLevel>
+			<Provides>Provides +15% Lightning damage increase per level</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Poison</StrVal>
+			<Multiplier>1.15</Multiplier>
+			<PerLevel>1</PerLevel>
+			<Provides>Provides +15% Poison damage increase per level</Provides>
+		</GameModifier>    
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Pierce</StrVal>
+			<Multiplier>1.1</Multiplier>
+			<PerLevel>1</PerLevel>
+			<Provides>Provides +10% Attack per level</Provides>
+		</GameModifier>
+
+		<!-- Accuracy decrease when damaged -->
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Accuracy</StrVal>
+			<Value>-10</Value>
+			<WhenUnderPercentHitPoints>80</WhenUnderPercentHitPoints>
+			<Provides>-10 Accuracy under 80% Health</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Accuracy</StrVal>
+			<Value>-10</Value>
+			<WhenUnderPercentHitPoints>60</WhenUnderPercentHitPoints>
+			<Provides>-10 Accuracy under 60% Health</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Accuracy</StrVal>
+			<Value>-10</Value>
+			<WhenUnderPercentHitPoints>40</WhenUnderPercentHitPoints>
+			<Provides>-10 Accuracy under 40% Health</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Accuracy</StrVal>
+			<Value>-10</Value>
+			<WhenUnderPercentHitPoints>20</WhenUnderPercentHitPoints>
+			<Provides>-10 Accuracy under 20% Health</Provides>
+		</GameModifier>
+
+		<!-- Tactical size increase -->
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_TacticalScaleMultiplier</StrVal>
+			<Multiplier>1.05</Multiplier>
+			<PerLevel>1</PerLevel>
+			<!--<Provides>Unit is visually 5% larger per level in combat.</Provides>-->
+		</GameModifier>
+
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<RarityDisplay>Unique</RarityDisplay>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>220</AIPriority>
+		</AIData>
+		
+		<ArtDef>FG_GarroteCloak_ArtDef</ArtDef>
+		<GameItemTypeArtDef InternalName="FG_GarroteCloak_ArtDef">
+			<GameItemTypeModelPack InternalName="GarroteCloak_Default">
+				<IconFile>GarroteCloak_Item.png</IconFile>
+				<TintR>0</TintR>
+				<TintG>0</TintG>
+				<TintB>0</TintB>
+				<SupportedUnitModelType>FrostGiantFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>FrostGiantMale</SupportedUnitModelType>
+				<GameItemTypeModel>
+					<ModelFile>Gfx\HKB\Clothes\K_Male_Cloak_Mesh_01.hkb</ModelFile>
+					<Texture_All>Gfx\HKB\Clothes\K_Male_Cloak_Garrote_Texture_01.png</Texture_All>
+					<AttachmentType>Skinned</AttachmentType>
+				</GameItemTypeModel>
+			</GameItemTypeModelPack>
+		</GameItemTypeArtDef>
+	</GameItemType>
+
+	<AbilityBonus InternalName="Orvandil_Cloak">
+		<AbilityBonusOption InternalName="Orvandil_Cloak">
+			<DisplayName>Orvandil's Cloak Trait</DisplayName>
+			<Description>Orvandil wears his clan's Cloak of Hierarchy, a hard-won sign of respect among the giant community. He refuses steadfastly to let anyone else have or use the cloak.
+
+This item is Soulbound to its original owner. It cannot be traded or sold. The item is always equipped, unless anything else is equipped for the slot.
+
+If a replacement item is equipped, then unequipped, this item returns.</Description>
+			<GameModifier>
+				<Provides>Orvandil wears his clan's Cloak of Hierarchy, a hard-won sign of respect among the giant community. He refuses steadfastly to let anyone else have or use the cloak.
+
+This item is Soulbound to its original owner. It cannot be traded or sold. The item is always equipped, unless anything else is equipped for the slot. 
+
+If a replacement item is equipped, then unequipped, this item returns.</Provides>
+			</GameModifier>
+			<Icon>GarroteCloak_Item.png</Icon>
+			<CombatRating>-15</CombatRating>
+		</AbilityBonusOption>
+	</AbilityBonus>
+</UnitTypes>

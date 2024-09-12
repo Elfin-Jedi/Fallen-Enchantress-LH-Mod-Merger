@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<Treaties>
+	<!--TREATIES-->
+		<!--PLAYER VERSION-->
+	<Treaty InternalName="Treaty_X_Janus1" Type="Agreement">
+		<DisplayName>Janus Treaty</DisplayName>
+		<Description><![CDATA[Ends Alliance
+		::: Have you heard of Janus?]]></Description>
+		<TreatyValueDescription><![CDATA[Have you heard of Janus?]]></TreatyValueDescription>
+		<Image>Action_Scroll.png</Image>
+		<Duration>0</Duration>
+		<BasePerceivedValue>1000</BasePerceivedValue>
+		<MatchingTreatyType>Treaty_X_Janus2</MatchingTreatyType>
+		<AllowsAdditionalTrading>0</AllowsAdditionalTrading>
+		<RequiredRelations><![CDATA[[RELATIONS_ALLY]]]></RequiredRelations>
+		<SetRelations><![CDATA[[RELATIONS_WAR]]]></SetRelations>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Dance_with_Dragons</Attribute>
+			<Value>0</Value>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Black_Quire</Attribute>
+			<Value>0</Value>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+			<AITradeToGetValue>50</AITradeToGetValue>
+			<AITradeOutValue>50</AITradeOutValue>
+		</AIData>
+	</Treaty>
+		<!--AI VERSION (NO SHOW HACK)-->
+	<Treaty InternalName="Treaty_X_Janus2" Type="Agreement">
+		<DisplayName>Janus Treaty</DisplayName>
+		<Description><![CDATA[Ends Alliance
+		::: Have you heard of Janus?]]></Description>
+		<TreatyValueDescription><![CDATA[Have you heard of Janus?]]></TreatyValueDescription>
+		<Image>Action_Scroll.png</Image>
+		<Duration>0</Duration>
+		<BasePerceivedValue>1000</BasePerceivedValue>
+		<MatchingTreatyType>Treaty_X_Janus1</MatchingTreatyType>
+		<AllowsAdditionalTrading>0</AllowsAdditionalTrading>
+		<RequiredRelations><![CDATA[[RELATIONS_ALLY]]]></RequiredRelations>
+		<SetRelations><![CDATA[[RELATIONS_WAR]]]></SetRelations>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>DoesNotExist</Attribute>
+			<Value>0</Value>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+			<AITradeToGetValue>50</AITradeToGetValue>
+			<AITradeOutValue>50</AITradeOutValue>
+		</AIData>
+	</Treaty>
+</Treaties>

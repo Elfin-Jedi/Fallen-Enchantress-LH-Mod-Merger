@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Container>
+
+    <UnitStatType InternalName="UnitStat_JB_Attack_Divine">
+        <DisplayName>Divine Attack</DisplayName>
+        <DisplayNameShort>Divine</DisplayNameShort>
+        <Description>The divine damage that this unit can deal.</Description>
+        <Icon>JB_Stat_AttackDivine_Icon.png</Icon>
+        <DefaultValue>0.0</DefaultValue>
+        <Hidden>1</Hidden>
+        <IsAttackStat>1</IsAttackStat>
+        <CorrespondingDefenseStat>UnitStat_JB_Defense_Divine</CorrespondingDefenseStat>
+        <CorrespondingResistStat>UnitStat_JB_ResistDivine</CorrespondingResistStat>
+        <UnitStatGrouping>CombatStat</UnitStatGrouping>
+    </UnitStatType>
+    <UnitStatType InternalName="UnitStat_JB_Attack_Infernal">
+        <DisplayName>Infernal Attack</DisplayName>
+        <DisplayNameShort>Infernal</DisplayNameShort>
+        <Description>The Infernal damage that this unit can deal.</Description>
+        <Icon>JB_Stat_AttackInfernal_Icon.png</Icon>
+        <DefaultValue>0.0</DefaultValue>
+        <Hidden>1</Hidden>
+        <IsAttackStat>1</IsAttackStat>
+        <CorrespondingDefenseStat>UnitStat_JB_Defense_Infernal</CorrespondingDefenseStat>
+        <CorrespondingResistStat>UnitStat_JB_ResistInfernal</CorrespondingResistStat>
+        <UnitStatGrouping>CombatStat</UnitStatGrouping>
+    </UnitStatType>
+    <UnitStatType InternalName="UnitStat_JB_Defense_Divine">
+        <DisplayName>Divine Defense</DisplayName>
+        <DisplayNameShort>DIV DEF</DisplayNameShort>
+        <Description>Ability to absorb divine attacks.</Description>
+        <Icon>JB_Stat_DefenseDivine_Icon.png</Icon>
+        <DefaultValue>0.0</DefaultValue>
+        <Hidden>1</Hidden>
+        <IsDefenseStat>1</IsDefenseStat>
+        <UnitStatGrouping>CombatStat</UnitStatGrouping>
+    </UnitStatType>
+    <UnitStatType InternalName="UnitStat_JB_Defense_Infernal">
+        <DisplayName>Infernal Defense</DisplayName>
+        <DisplayNameShort>INF DEF</DisplayNameShort>
+        <Description>Ability to absorb Infernal attacks.</Description>
+        <Icon>JB_Stat_DefenseInfernal_Icon.png</Icon>
+        <DefaultValue>0.0</DefaultValue>
+        <Hidden>1</Hidden>
+        <IsDefenseStat>1</IsDefenseStat>
+        <UnitStatGrouping>CombatStat</UnitStatGrouping>
+    </UnitStatType>
+    <UnitStatType InternalName="UnitStat_JB_ResistDivine">
+        <DisplayName>Divine Resistance</DisplayName>
+        <DisplayNameShort>DIV RES</DisplayNameShort>
+        <Description>Reduces divine damage by this percent.</Description>
+        <Icon>JB_Stat_DefenseDivine_Icon.png</Icon>
+        <DefaultValue>0.0</DefaultValue>
+        <Hidden>1</Hidden>
+        <UnitStatGrouping>CombatStat</UnitStatGrouping>
+    </UnitStatType>
+    <UnitStatType InternalName="UnitStat_JB_ResistInfernal">
+        <DisplayName>Infernal Resistance</DisplayName>
+        <DisplayNameShort>INF RES</DisplayNameShort>
+        <Description>Reduces infernal damage by this percent.</Description>
+        <Icon>JB_Stat_DefenseInfernal_Icon.png</Icon>
+        <DefaultValue>0.0</DefaultValue>
+        <Hidden>1</Hidden>
+        <UnitStatGrouping>CombatStat</UnitStatGrouping>
+    </UnitStatType>
+
+	<UnitStatType InternalName="UnitStat_JB_IsDisciple">
+		<DisplayName>Does this unit count as a Disciple?</DisplayName>
+        <Description>Does this unit count as a Disciple?</Description>
+		<Hidden>1</Hidden>
+        <DefaultValue>0.0</DefaultValue>
+	</UnitStatType>
+
+    <UnitStatType InternalName="UnitStat_JB_DiscipleBonusHealing">
+        <DisplayName>UnitStat_JB_DiscipleBonusHealing</DisplayName>
+		<Description>Percentage bonus to the amount of healing done by disciple spells.</Description>
+        <Icon>Stat_Dodge_Icon.png</Icon>
+        <DefaultValue>1.0</DefaultValue>
+		<DisplayPercentage>1</DisplayPercentage>
+        <Hidden>1</Hidden>
+        <UnitStatGrouping>CombatStat</UnitStatGrouping>
+    </UnitStatType>
+	<!-- Damage Bonus to all Divine spells, i.e. Prayers, Smite etc
+			1.0 = 0% bonus, 2.0 = 100% bonus ie. double damage -->	
+	<UnitStatType InternalName="UnitStat_JB_BonusDivineSpellDamage">
+        <DisplayName>UnitStat_JB_BonusDivineSpellDamage</DisplayName>
+        <Description>Multiplier to Damage from Divine spells</Description>
+        <Hidden>1</Hidden>
+        <DefaultValue>1.0</DefaultValue>
+    </UnitStatType>	
+	<!-- Damage Bonus to all Infernal spells, i.e. Prayers, Smite etc
+			1.0 = 0% bonus, 2.0 = 100% bonus ie. double damage -->	
+	<UnitStatType InternalName="UnitStat_JB_BonusInfernalSpellDamage">
+        <DisplayName>UnitStat_JB_BonusInfernalSpellDamage</DisplayName>
+        <Description>Multiplier to Damage from Infernal spells</Description>
+        <Hidden>1</Hidden>
+        <DefaultValue>1.0</DefaultValue>
+    </UnitStatType>		
+ 
+	<!-- Disciple Effect UnitStats -->
+	<!-- Additive DivineAttack bonus, 100 = +1 bonus, 200 = +2 bonus etc -->
+ 	<UnitStatType InternalName="UnitStat_JB_DiscipleEffect_DivineAttack">
+		<DisplayName>UnitStat_JB_DiscipleEffect_DivineAttack</DisplayName>
+		<Description>UnitStat_JB_DiscipleEffect_DivineAttack</Description>
+		<Hidden>1</Hidden>
+		<DefaultValue>1.0</DefaultValue>
+        <UnitStatGrouping>CombatStat</UnitStatGrouping>
+	</UnitStatType>
+	<!-- Additive InfernalAttack bonus, 100 = +1 bonus, 200 = +2 bonus etc -->
+ 	<UnitStatType InternalName="UnitStat_JB_DiscipleEffect_InfernalAttack">
+		<DisplayName>UnitStat_JB_DiscipleEffect_InfernalAttack</DisplayName>
+		<Description>UnitStat_JB_DiscipleEffect_InfernalAttack</Description>
+		<Hidden>1</Hidden>
+		<DefaultValue>1.0</DefaultValue>
+        <UnitStatGrouping>CombatStat</UnitStatGrouping>
+	</UnitStatType>
+	<!-- Damage Bonus to all Divine spells in tactical combat, i.e. Prayers, Smite etc
+			1.0 = 0% bonus, 2.0 = 100% bonus ie. double damage -->		
+ 	<UnitStatType InternalName="UnitStat_JB_DiscipleEffect_BonusDivineSpellDamage">
+		<DisplayName>UnitStat_JB_DiscipleEffect_BonusDivineSpellDamage</DisplayName>
+		<Description>UnitStat_JB_DiscipleEffect_BonusDivineSpellDamage</Description>
+		<Hidden>1</Hidden>
+		<DefaultValue>1.0</DefaultValue>
+        <UnitStatGrouping>CombatStat</UnitStatGrouping>
+	</UnitStatType>
+	<!-- Damage Bonus to all Infernal spells in tactical combat, i.e. Prayers, Smite etc
+			1.0 = 0% bonus, 2.0 = 100% bonus ie. double damage -->	
+ 	<UnitStatType InternalName="UnitStat_JB_DiscipleEffect_BonusInfernalSpellDamage">
+		<DisplayName>UnitStat_JB_DiscipleEffect_BonusInfernalSpellDamage</DisplayName>
+		<Description>UnitStat_JB_DiscipleEffect_BonusInfernalSpellDamage</Description>
+		<Hidden>1</Hidden>
+		<DefaultValue>1.0</DefaultValue>
+        <UnitStatGrouping>CombatStat</UnitStatGrouping>
+	</UnitStatType>
+	<!-- Tactical Regen bonus for Disciples -->	
+ 	<UnitStatType InternalName="UnitStat_JB_DiscipleEffect_TacticalHealthRegen">
+		<DisplayName>UnitStat_JB_DiscipleEffect_TacticalHealthRegen</DisplayName>
+		<Description>UnitStat_JB_DiscipleEffect_TacticalHealthRegen</Description>
+		<Hidden>1</Hidden>
+		<DefaultValue>1.0</DefaultValue>
+        <UnitStatGrouping>CombatStat</UnitStatGrouping>
+	</UnitStatType>
+	
+	<!-- For Priest Destroy Undead ability -->
+	<UnitStatType InternalName="UnitStat_JB_BonusDestroyUndead">
+        <DisplayName>UnitStat_JB_BonusDestroyUndead</DisplayName>
+        <Description>Multiplier to Damage for the Destroy Undead spell</Description>
+        <Hidden>1</Hidden>
+        <DefaultValue>1.0</DefaultValue>
+    </UnitStatType>		
+	<!-- For Priest Control Undead ability -->
+	<UnitStatType InternalName="UnitStat_JB_BonusControlUndead">
+        <DisplayName>UnitStat_JB_BonusControlUndead</DisplayName>
+        <Description>Bonus to chance to Control Undead</Description>
+        <Hidden>1</Hidden>
+        <DefaultValue>0.0</DefaultValue>
+    </UnitStatType>		
+	<!-- For Priest Smite Foes ability -->
+	<UnitStatType InternalName="UnitStat_JB_BonusSmiteFoes">
+        <DisplayName>UnitStat_JB_BonusSmiteFoes</DisplayName>
+        <Description>Multiplier to Damage for the Smite Foes spell</Description>
+        <Hidden>1</Hidden>
+        <DefaultValue>1.0</DefaultValue>
+    </UnitStatType>		
+	
+
+	
+</Container>

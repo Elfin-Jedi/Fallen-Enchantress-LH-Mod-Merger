@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<AbilityBonuses>
+
+    <AbilityBonus InternalName="Blood_VaynarAbility">
+        <AbilityBonusOption InternalName="Blood_Vaynar">
+            <DisplayName>Vaynar Blood</DisplayName>
+            <Description>+1 Attack (+2 vs. Undead), +5 Spell Resistance</Description>
+            <Icon>RoundCrest_Vaynar.png</Icon>
+			<GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Boost</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Attack</Provides>
+            </GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Attack_Boost</StrVal>
+				<StrVal2>Undead</StrVal2>
+				<Value>2</Value>
+				<Provides>+2 Attack vs Undead</Provides>
+				<vsUnitType>1</vsUnitType>
+			</GameModifier>			
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_MagicResist</StrVal>
+                <Value>5</Value>
+                <Provides>+5 Spell Resistance</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>UnlockCombatAbility</Attribute>
+                <StrVal>Rush</StrVal>
+                <Provides>Rush- Unit takes an extra action</Provides>
+            </GameModifier>			
+            <HideWhenUpgraded>0</HideWhenUpgraded>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	
+	
+    <AbilityBonus InternalName="KnightlyOrderAbility">
+        <AbilityBonusType>Player</AbilityBonusType>
+        <AbilityBonusOption InternalName="KnightlyOrder">
+            <DisplayName>Knightly Order</DisplayName>
+            <Description>Unlocks greatswords. Allows the construction of the Church and the Grand Cathedral.</Description>
+            <Icon>Ability_KnightlyOrder.png</Icon>	
+			<GameModifier>
+                <Provides>Unlocks two-handed swords.</Provides>
+            </GameModifier>
+            <GameModifier>
+                <Provides>Allows the construction of the Church and the Grand Cathedral.</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>City</ModType>
+                <Attribute>UnlockImprovement</Attribute>
+                <BoolVal1>1</BoolVal1>
+                <StrVal>OHF_Church</StrVal>
+            </GameModifier>				
+            <GameModifier>
+                <ModType>City</ModType>
+                <Attribute>UnlockImprovement</Attribute>
+                <BoolVal1>1</BoolVal1>
+                <StrVal>OHF_Cathedral</StrVal>
+            </GameModifier>			
+			<Cost>1</Cost>	
+			<Type>Army</Type>			
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+
+    <AbilityBonus InternalName="RighteousZeal_Ability">
+        <AbilityBonusType>Unit</AbilityBonusType>
+		<AbilityBonusOption InternalName="RighteousZeal">
+        <DisplayName>Righteous Zeal</DisplayName>
+        <Description>+1 Initiative, +10 magic resistance, +2 attack vs. opposite allegiance</Description>
+        <Icon>Ability_RighteousZeal.png</Icon>            
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_CombatSpeed</StrVal>
+            <Value>1</Value>            
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Boost</StrVal>
+			<Value>2</Value>
+			<Provides>+2 Attack vs opposite allegiance</Provides>
+			<vsOtherAllegiance>1</vsOtherAllegiance>	
+		</GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_MagicResist</StrVal>
+                <Value>10</Value>
+                <Provides>+10 Spell Resistance</Provides>
+            </GameModifier>		
+        <Cost>1</Cost>
+        <Type>Strength</Type>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+        </AIData>
+    </AbilityBonusOption>
+    </AbilityBonus>	
+		
+		
+    <AbilityBonus InternalName="DivineChampion_Ability">
+        <AbilityBonusType>Unit</AbilityBonusType>		
+		<AbilityBonusOption InternalName="DivineChampion">
+        <DisplayName>Divine Champion</DisplayName>
+        <Description>+5% to elemental resistances, +1 to attack vs. Undead or Demonic enemies per level, +50% poison resistance, +2 initative, +5 attack.</Description>
+        <Icon>Ability_DivineChampion.png</Icon>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_CombatSpeed</StrVal>
+            <Value>2</Value>
+        </GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Boost</StrVal>
+			<Value>5</Value>				
+			<Provides>+5 attack</Provides>
+		</GameModifier>		
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Boost</StrVal>
+			<StrVal2>Undead</StrVal2>
+			<Value>1</Value>
+			<PerLevel>1</PerLevel>				
+			<Provides>+1 Attack vs Undead per level</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Boost</StrVal>
+			<StrVal2>Demon</StrVal2>
+			<Value>1</Value>
+			<PerLevel>1</PerLevel>				
+			<Provides>+1 Attack vs Demon per level</Provides>
+		</GameModifier>	
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_ResistFire</StrVal>
+            <Value>5</Value>
+            <Provides>+5% Fire Resistance</Provides>
+			<PerLevel>1</PerLevel>				
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_ResistCold</StrVal>
+            <Value>5</Value>
+            <Provides>+5% Cold Resistance</Provides>
+			<PerLevel>1</PerLevel>				
+        </GameModifier>	
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_ResistLightning</StrVal>
+            <Value>5</Value>
+            <Provides>+5% Lightning Resistance</Provides>
+			<PerLevel>1</PerLevel>				
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_ResistPoison</StrVal>
+            <Value>50</Value>
+            <Provides>+50% Poison Resistance</Provides>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_HitPoints</StrVal>
+            <Value>2</Value>
+			<PerLevel>1</PerLevel>
+			<Provides>+2 HP per level</Provides>			
+        </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_HealthRegen</StrVal>
+                <Value>2</Value>
+                <Provides>Unit heals 2 points per round</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_TacticalHealthRegen</StrVal>
+                <Value>2</Value>
+            </GameModifier>		
+		
+        <Cost>2</Cost>
+        <Type>Strength</Type>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+        </AIData>
+    </AbilityBonusOption>
+    </AbilityBonus>		
+		
+
+    <AbilityBonus InternalName="SkirmisherAbility">
+        <AbilityBonusType>Unit</AbilityBonusType>
+        <AbilityBonusOption InternalName="Skirmisher">
+            <DisplayName>Skirmisher</DisplayName>
+            <Description>+1 Initiative, unlocks Rapid Shot</Description>
+            <Icon>Ability_Skirmisher_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_CombatSpeed</StrVal>
+                <Value>1</Value>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>UnlockCombatAbility</Attribute>
+                <StrVal>RapidShot</StrVal>
+                <Provides>Fire twice at reduced accuracy.</Provides>
+            </GameModifier>			
+            <AdditionalTrainingTurns>30</AdditionalTrainingTurns>
+            <Type>Aggressive</Type>
+            <UpgradePathID>Fast</UpgradePathID>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+
+    <AbilityBonus InternalName="RapidShot_RushAbility">
+        <AbilityBonusOption InternalName="Spell_RapidShot">
+            <DisplayName>Rapid Shot</DisplayName>
+            <Description>Allows the unit to use the Rapid Shot ability</Description>
+            <Icon>Ability_RainofArrows_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>UnlockCombatAbility</Attribute>
+                <StrVal>RapidShot</StrVal>
+                <Provides>Fire twice at reduced accuracy.</Provides>
+            </GameModifier>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	
+	
+
+    <AbilityBonus InternalName="HarasserAbility">
+        <AbilityBonusType>Unit</AbilityBonusType>
+        <AbilityBonusOption InternalName="Harasser">
+            <DisplayName>Harasser</DisplayName>
+            <Description>+1 Initiative, attacked enemy unit suffers -1 Initiative per level</Description>
+            <Icon>Ability_Harasser_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_CombatSpeed</StrVal>
+                <Value>1</Value>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>MeleeAppliesSpell</Attribute>
+                <StrVal>Harass_Effect</StrVal>
+                <Provides>Units struck suffer a -1 to Initiative per level</Provides>
+            </GameModifier>			
+            <AdditionalTrainingTurns>30</AdditionalTrainingTurns>
+            <Type>Aggressive</Type>
+            <UpgradePathID>Fast</UpgradePathID>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+
+
+
+		
+</AbilityBonuses>

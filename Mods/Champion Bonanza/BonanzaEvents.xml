@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Quests>    
+	<QuestDef InternalName="Quest_Yellowbelly">
+        <DisplayName>Yellowbelly</DisplayName>
+        <Description>For weeks now you've been hearing incredible tales of a huge yellow Skath roaming the countryside. Rumors of a magical experiment which would have escaped some mad wizard's laboratory. So far the none of the sightings have been confirmed. Until now. Panicked farmers are ushered in your council chambers. They are ragged, their eyes are bulging, so much that you fear they might drop from their orbits.
+
+"Sire! Yellowbelly attacked our village! It came out of the swamps in full day and launched itself on us! It... it... -SOB-... de... devoured our friends and neighbors! Some tried to fend it off with scythes and hoes but they were swept away like mere gnats and eaten in turn! I can't tell you how many people have been lost, it was chaos! We fled to the horrible sounds of the creature feasting! -SOB- Please help us!"
+
+Sigh. Yet another urgent situation to attend to.</Description>
+        <IsStartingPointQuest>0</IsStartingPointQuest>
+        <AllowQuestRejection>0</AllowQuestRejection>
+        <ShortTextAccept>I will be cautious of this creature's passing</ShortTextAccept>
+        <QuestClass>Minor</QuestClass>
+        <Repeatable>0</Repeatable>
+        <TriggerType>TurnNumber</TriggerType>
+        <TriggerData>185</TriggerData>
+        <SpawnRating>4</SpawnRating>
+        <TriggerChance>3000</TriggerChance>
+        <PostTriggerChance>14</PostTriggerChance>
+        <Image>Medallion_Yellowbelly.png</Image>
+        <QuestObjectiveDef>
+            <ObjectiveID>0</ObjectiveID>
+            <NextObjectiveID>1</NextObjectiveID>
+            <PopupObjectiveMsg>0</PopupObjectiveMsg>
+            <Treasure>
+                <GameModifier>
+                    <ModType>Map</ModType>
+                    <Attribute>SpawnMonster</Attribute>
+                    <Value>1</Value>
+                    <Unitclass>Yellowbelly_Hero</Unitclass>
+                    <Radius>24</Radius>
+                </GameModifier>
+            </Treasure>
+        </QuestObjectiveDef>
+        <QuestObjectiveDef>
+            <ObjectiveID>1</ObjectiveID>
+            <QuestEnd>1</QuestEnd>
+        </QuestObjectiveDef>
+    </QuestDef>
+	<QuestDef InternalName="Quest_AmethystAutomaton">
+        <DisplayName>Amethyst Automaton</DisplayName>
+        <Description>Reading today's daily report from your chief scout, your eyebrows quirk as your eyes land on a few short lines depicting the sighting of a Golem made entirely of amethyst that violently refracts light. Handing the note over to a page, you tell him to give this to the Loremaster for further consideration. Barely an hour later, two disheveled scholars barge into your throne room, shoving each other, shouting and speaking out of turn.
+
+"The Amethyst Automaton has been awakened! The sudden magical activity across Elemental must have pulled it out of its dormancy! While our archives are still partial, new texts we have acquired mention this Golem. Its original purpose remains shrouded in mystery but it is clearly written that it has destroyed several civilizations while executing its obsolete orders. And now it's lumbering at our doors!"
+
+Taming this land is proving to be quite taxing. Hmmm... Maybe taking the Automaton apart would yield a sizable stack of gildar? Maybe enough to outfit those demanding champions constantly clamoring for the newest equipments?</Description>
+        <IsStartingPointQuest>0</IsStartingPointQuest>
+        <AllowQuestRejection>0</AllowQuestRejection>
+        <ShortTextAccept>I will be cautious of this creature's passing</ShortTextAccept>
+        <QuestClass>Minor</QuestClass>
+        <Repeatable>0</Repeatable>
+        <TriggerType>TurnNumber</TriggerType>
+        <TriggerData>170</TriggerData>
+        <SpawnRating>4</SpawnRating>
+        <TriggerChance>3000</TriggerChance>
+        <PostTriggerChance>14</PostTriggerChance>
+        <Image>Medallion_AmethystAutomaton.png</Image>
+        <QuestObjectiveDef>
+            <ObjectiveID>0</ObjectiveID>
+            <NextObjectiveID>1</NextObjectiveID>
+            <PopupObjectiveMsg>0</PopupObjectiveMsg>
+            <Treasure>
+                <GameModifier>
+                    <ModType>Map</ModType>
+                    <Attribute>SpawnMonster</Attribute>
+                    <Value>1</Value>
+                    <Unitclass>AmethystAutomaton_Hero</Unitclass>
+                    <Radius>24</Radius>
+                </GameModifier>
+            </Treasure>
+        </QuestObjectiveDef>
+        <QuestObjectiveDef>
+            <ObjectiveID>1</ObjectiveID>
+            <QuestEnd>1</QuestEnd>
+        </QuestObjectiveDef>
+    </QuestDef>
+</Quests>

@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<Container>
+	<UnitType InternalName="Gnome_Uras">
+		<CreatureType>Champion</CreatureType>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-5</Value>
+			<Provides>-5% Unrest in the city this unit is in</Provides>
+		</GameModifier>
+
+		<DisplayName>Uras</DisplayName>
+		<Backstory>Uras is a Gnome Slayer. He was previously a lieutenant in charge of a small band of gnomes with orders to patrol a border. Uras made a decision to pursue a Greenskin warband instead of guarding a vital point of defense. It resulted in his group being killed and the village they were defending sacked. Thus, Uras was expelled from Gnomish society. He now lives his life as a Slayer, walking the lands attempting to defeat monsters, wanting to regain his lost honor.</Backstory>
+
+		<ModelPath>Gfx\HKB\Units\K_Male_Mesh_01.hkb</ModelPath>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<EyeTexture>gfx\Eyes\blinks\eyeblink_m4_brwn.png</EyeTexture>
+		<AnimationPack>EF_SoldierAnimationPack</AnimationPack>
+		<ShowAsSingleUnit>false</ShowAsSingleUnit>
+		<CutSceneDataPack>Markinn_CutscenePack</CutSceneDataPack>
+		<ModelScale>0.8</ModelScale>
+		<TacticalModelScale>1.5000</TacticalModelScale>
+		<EquipmentScale>1.0000</EquipmentScale>
+		<ClothMapScale>1.6</ClothMapScale>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<MovementType>land</MovementType>
+		<BobbingFrequency>0.0000</BobbingFrequency>
+		<ClothPoseIndex>3</ClothPoseIndex>
+		<InfoCardBackground>BG17_BurningCastle</InfoCardBackground>
+		<InfoCardBackgroundFlipped>1</InfoCardBackgroundFlipped>
+		<CanBeDesigned>0</CanBeDesigned>
+		<Medallions InternalName=""/>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<LevelMilestone InternalName="">
+			<Level>1</Level>
+			<UnitStat_Accuracy>80.0000</UnitStat_Accuracy>
+			<UnitStat_BG_IsHumanoid>1.0000</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsKingdom>1.0000</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsMale>1.0000</UnitStat_BG_IsMale>
+			<UnitStat_BG_IsRace_Dwarves>1.0000</UnitStat_BG_IsRace_Dwarves>
+			<UnitStat_BG_IsChampion>1.0000</UnitStat_BG_IsChampion>
+			<UnitStat_CombatSpeed>22.0000</UnitStat_CombatSpeed>
+			<UnitStat_HitPoints>20.0000</UnitStat_HitPoints>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+		</LevelMilestone>
+		<Equipment>EF_Dwarf_K_Male_Head_05</Equipment>
+		<Equipment>Peasant_Pants</Equipment>
+		<Equipment>Basic_Boots</Equipment>
+		<Equipment>Wizard_Beard</Equipment>
+		<Equipment>Kingdom_Leather_Gloves_Dark</Equipment>
+		<Equipment>Sovereign_Warrior_Shirt_Crappy_ID1</Equipment>
+		<Equipment>Patchwork_Cloak_ID1</Equipment>
+		<Color_Skin>197,132,82,255</Color_Skin>
+		<Color_Hair>131,42,0,255</Color_Hair>
+		<Color_Clothing1>78,49,20,255</Color_Clothing1>
+		<Color_Clothing2>0,0,0,255</Color_Clothing2>
+		<Color_Metal>56,33,10,255</Color_Metal>
+		<Texture_Skin>K_Male_Balding_Texture_01.png</Texture_Skin>
+		<Gender>Male</Gender>
+		<UnitModelType>DwarfMale</UnitModelType>
+		<!-- -->
+		<Allegiance>Kingdom</Allegiance>
+		<Unique>1</Unique>
+		<IsNPC>1</IsNPC>
+		<NPCSpawnLikelihood>100</NPCSpawnLikelihood>
+		<IsChampion>1</IsChampion>
+		<Gender>Male</Gender>
+		<SpawnRating>1</SpawnRating>
+
+		<Quote>I will regain my honour one day.</Quote>
+		<NPCRecruitmentText>My axe... for %d Gildar.</NPCRecruitmentText>
+		<AutoCreateEquipment>Axe</AutoCreateEquipment>
+		<SelectedAbilityBonusOption>Blood_Dwarves</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>UrasSlayer</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Earth1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Dishonored</SelectedAbilityBonusOption>
+
+		<NPCFreeRecruit>0</NPCFreeRecruit>
+		<RaceType>Race_Type_Dwarves</RaceType>
+		<IgnoreItemTrainingCosts>false</IgnoreItemTrainingCosts>
+		<WageOverride>1</WageOverride>
+		<UnitTypeVersion>1</UnitTypeVersion>
+		<TileRadius>0</TileRadius>
+		<GetPerksOnLevelUp>0</GetPerksOnLevelUp>
+		<DividesBattleExp>1</DividesBattleExp>
+		<CanSqueeze>0</CanSqueeze>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>    
+		<SoundPack>SoundPack_Generic_Male</SoundPack>   
+	</UnitType>
+
+	<AbilityBonus InternalName="UrasSlayer">
+		<AbilityBonusOption InternalName="UrasSlayer">
+			<DisplayName>Uras the Slayer</DisplayName>
+			<Description>Uras deals 25% extra physical damage against all Monsters.</Description>
+			<Icon>Ability_Brute_Icon.png</Icon>
+
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Attack_Pierce</StrVal>
+				<StrVal2>UnitStat_BG_IsMonster</StrVal2>
+				<Provides>25% extra attack against all Monsters</Provides>
+				<vsHigher>1</vsHigher>
+				<Multiplier>1.25</Multiplier>
+			</GameModifier>
+
+			<Cost>-1</Cost>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<IsCombatAbility>1</IsCombatAbility>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+</Container>

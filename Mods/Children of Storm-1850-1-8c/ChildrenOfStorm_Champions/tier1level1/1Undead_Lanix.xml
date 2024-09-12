@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<UnitTypes>
+	<UnitType InternalName="Undead_Lanix">
+		<CreatureType>Champion</CreatureType>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-5</Value>
+			<Provides>-5% Unrest in the city this unit is in</Provides>
+		</GameModifier>
+
+		<DisplayName>Lanix</DisplayName>
+		<Backstory>When the Skeleton King was born, Lanix was already dying from a terrible flesh eating virus. Lanix was turned undead at the very brink of death. Somehow, combining with the virus raging his body, he became something else from the others that were turned undead. Lanix' flesh stayed on his body and he exhibited a strange craving for living flesh. Lanix was the first zombie, although, unlike those that followed after, he kept his mind intact. He has loyalty to no faction; he will follow anyone as long as it means a steady supply of flesh to consume. Other undead look down on Lanix with scorn as he is less than their "purer" form. He could not care less.</Backstory>
+
+		<ModelPath>K_Male_Mesh_01.hkb</ModelPath>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<EyeTexture>Eyeblink_M1_Raven.png</EyeTexture>
+		<AnimationPack>EF_BanditAnimationPack</AnimationPack>
+		<ShowAsSingleUnit>false</ShowAsSingleUnit>
+		<CutSceneDataPack>ReliasCutscenePack</CutSceneDataPack>
+		<ModelScale>1.0000</ModelScale>
+		<TacticalModelScale>1.9000</TacticalModelScale>
+		<EquipmentScale>1.0000</EquipmentScale>
+		<ClothMapScale>1.6</ClothMapScale>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<MovementType>land</MovementType>
+		<BobbingFrequency>0.0000</BobbingFrequency>
+		<ClothPoseIndex>0</ClothPoseIndex>
+		<InfoCardBackground>BG13_Volcanic</InfoCardBackground>
+		<InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+		<CanBeDesigned>0</CanBeDesigned>
+		<Medallions InternalName=""/>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<!-- -->
+		<Allegiance>Empire</Allegiance>
+		<Unique>1</Unique>
+		<IsNPC>1</IsNPC>
+		<NPCSpawnLikelihood>100</NPCSpawnLikelihood>
+		<IsChampion>1</IsChampion>
+		<Gender>Male</Gender>
+		<SoundPack>SoundPack_Generic_Male</SoundPack>
+		<SpawnRating>1</SpawnRating>
+
+		<Quote>For the last time, I don't eat brains.</Quote>
+		<NPCRecruitmentText>%d Gildar. And I don't eat brains.</NPCRecruitmentText>
+		<SelectedAbilityBonusOption>Blood_CoS_Undead</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Death1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Quick</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>LanixHunger</SelectedAbilityBonusOption>
+
+		<!-- -->
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<UnitStat_BG_IsHumanoid>1.0000</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsEmpire>1.0000</UnitStat_BG_IsEmpire>
+			<UnitStat_BG_IsNotAlive>1</UnitStat_BG_IsNotAlive>
+			<UnitStat_BG_IsRace_Undead>1.0000</UnitStat_BG_IsRace_Undead>
+			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
+			<UnitStat_BG_IsUndead>1</UnitStat_BG_IsUndead>
+			<UnitStat_BG_IsImmortal>1</UnitStat_BG_IsImmortal>
+			<UnitStat_CombatSpeed>22.0000</UnitStat_CombatSpeed>
+			<UnitStat_HitPoints>20.0000</UnitStat_HitPoints>
+			<UnitStat_ImmuneToFear>1</UnitStat_ImmuneToFear>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+		</LevelMilestone>
+		<Equipment>K_Male_Head_01</Equipment>
+
+		<AutoCreateEquipment>Axe</AutoCreateEquipment>
+		<AutoCreateEquipment>LeatherVambraces</AutoCreateEquipment>
+
+		<Color_Metal>70,100,70,255</Color_Metal>
+		<Color_Skin>50,50,50,255</Color_Skin>
+		<Color_Hair>168,123,88,255</Color_Hair>
+		<Color_Clothing1>120,25,20,255</Color_Clothing1>
+		<Color_Clothing2>78,60,55,255</Color_Clothing2>
+		<Texture_Skin>F_Male_Zomb_Texture.png</Texture_Skin>
+		<Texture_Eyes>Eyeblink_M1_Raven.png</Texture_Eyes>
+		<UnitModelType>Undead</UnitModelType>
+		<NPCFreeRecruit>0</NPCFreeRecruit>
+		<RaceType>Race_Type_Undead</RaceType>
+		<WageOverride>1</WageOverride>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+	</UnitType>
+
+	<AbilityBonus InternalName="LanixHunger">
+		<AbilityBonusOption InternalName="LanixHunger">
+			<DisplayName>Lanix' Hunger</DisplayName>
+			<Description>Units gains +1 life per level each time it kills an enemy unit unless the enemy counts as Not Alive</Description>
+			<Icon>Ability_Harbinger_Icon.png</Icon>
+
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_HPFromKills</StrVal>
+				<Provides>Units gains +1 life per level each time it kills an enemy unit</Provides>
+				<Value>1</Value>
+				<PerLevel>1</PerLevel>
+			</GameModifier>
+
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<IsCombatAbility>1</IsCombatAbility>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+
+
+</UnitTypes>

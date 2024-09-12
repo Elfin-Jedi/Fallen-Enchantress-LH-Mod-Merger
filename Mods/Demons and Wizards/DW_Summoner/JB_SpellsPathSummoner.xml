@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Spells>  
+
+
+	<SpellDef InternalName="JB_Channeling">
+		<DisplayName>Channeling</DisplayName>
+		<Description>+1 Summon Pool per Essence in the enchanted city.</Description>
+		<Image>JB_Channeling_Painting.png</Image>
+		<IconFG>JB_Channeling_Icon.png</IconFG>
+		<AutoUnlock>1</AutoUnlock>
+		<CanStack>0</CanStack>
+		<SpellBookSortCategory>City</SpellBookSortCategory>
+		<SpellBookSortSubCategory>CityEnchantment</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>ImpResourceBooster</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>FriendlyCity</SpellTargetType>
+		<CasterMustBeSov>1</CasterMustBeSov>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>25</Amount>
+		</SpellResourceCost>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>JB_Summons</Attribute>
+			<Duration>-1</Duration>
+			<HasUpgradableValue>1</HasUpgradableValue>
+			<PerTurn>1</PerTurn>
+			<Calculate InternalName="Calc" ValueOwner="TargetCity">
+				<Expression><![CDATA[[TileYieldEssence]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<ValidTerrainCategory>City</ValidTerrainCategory>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>3</AIPriority>
+		</AIData>
+		<HitSoundFX>Spell_Imprison</HitSoundFX>
+		<SpellCastEffectName>Brilliance</SpellCastEffectName>
+		<SpellCastEffectScale>.4</SpellCastEffectScale>
+		<SpellDefEffect>
+			<EffectName>JB_S_Channeling_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.75</EffectScale>
+			<EffectDelay>0.5</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+
+	<ContainerPathSummonerSpells>
+	
+		<!-- Block the SummonShadowWarg Summoner spell -->
+		<SpellDef InternalName="SummonShadowWarg">
+			<AutoUnlock>0</AutoUnlock>
+			<CanStack>0</CanStack>
+			<HideInHiergamenon>1</HideInHiergamenon>
+			<Prereq>
+				<Type>Allegiance</Type>
+				<Attribute>Blocked</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>0</AIPriority>
+			</AIData>
+		</SpellDef>
+		<SpellDef InternalName="SummonShadowWarg_Tactical">
+			<AutoUnlock>0</AutoUnlock>
+			<CanStack>0</CanStack>
+			<HideInHiergamenon>1</HideInHiergamenon>
+			<Prereq>
+				<Type>Allegiance</Type>
+				<Attribute>Blocked</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>0</AIPriority>
+			</AIData>
+		</SpellDef>
+		
+		<!-- New Spells -->
+	    <SpellDef InternalName="JB_Counterspell_Summoner">
+			<DisplayName>Counterspell</DisplayName>
+			<Description>Disrupts a spell an enemy unit is casting unless they resist.</Description>
+			<Image>S_Corruption_Painting.png</Image>
+			<IconFG>T_Counterspell_Icon.png</IconFG>
+			<AutoUnlock>1</AutoUnlock>
+			<SpellBookSortCategory>Unit</SpellBookSortCategory>
+			<SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+			<SpellType>Tactical</SpellType>
+			<SpellClass>Offensive</SpellClass>
+			<SpellSubClass>Debuff</SpellSubClass>
+			<SpellTargetType>EnemyCaster</SpellTargetType>
+			<IsResistable>1</IsResistable>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_PathOfTheSummoner</Attribute>
+			</Prereq>
+			<SpellResourceCost>
+				<Resource>Mana</Resource>
+				<Amount>16</Amount>
+			</SpellResourceCost>
+			<GameModifier>
+				<ModType>TacticalUnit</ModType>
+				<Attribute>DisruptSpellCharge</Attribute>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>500</AIPriority>
+			</AIData>
+			<HitSoundFX>Spell_Counterspell_01</HitSoundFX>
+			<SpellDefEffect>
+				<EffectName>S_Corruption_Particle</EffectName>
+				<LocalPosition>0,0,0</LocalPosition>
+				<EffectScale>2</EffectScale>
+				<EffectDelay>0</EffectDelay>
+				<SnapToTerrain>1</SnapToTerrain>
+			</SpellDefEffect>
+		</SpellDef>	
+		<SpellDef InternalName="JB_SummonersBoon">
+			<DisplayName>Summoner's Boon</DisplayName>
+			<Description>Summoned units get a 10% boost to attack (faction wide).</Description>
+			<Image>S_SummonersBoon_Painting.png</Image>
+			<IconFG>S_SummonersBoon_Icon.png</IconFG>
+			<AutoUnlock>1</AutoUnlock>
+			<CanStack>0</CanStack>
+			<SpellBookSortCategory>Unit</SpellBookSortCategory>
+			<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+			<SpellType>Strategic</SpellType>
+			<SpellClass>Defensive</SpellClass>
+			<SpellSubClass>Buff</SpellSubClass>
+			<SpellTargetType>Self</SpellTargetType>			
+			<CasterMustBeSov>0</CasterMustBeSov>
+			<UniqueSpellUnlock>JB_SummonersBoon</UniqueSpellUnlock>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_Summoner_AttackBoost1</Attribute>
+			</Prereq>
+			<SpellResourceCost>
+				<Resource>Mana</Resource>
+				<Amount>50</Amount>
+			</SpellResourceCost>
+			<SpellResourceCost>
+				<Resource>Mana</Resource>
+				<PerTurn>1</PerTurn>
+				<Amount>1</Amount>
+			</SpellResourceCost>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_SummonAttackBoost</StrVal>
+				<Duration>-1</Duration>
+				<Effect>E_SummonersBoon_Particle</Effect>
+				<Value>10</Value>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_HitPoints</StrVal>
+				<Duration>-1</Duration>
+				<Value>0</Value>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockSpell</Attribute>
+				<StrVal>JB_SummonersBoon</StrVal>
+				<Duration>-1</Duration>
+			</GameModifier>			
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+			<HitSoundFX>Spell_Enchant_01</HitSoundFX>
+			<SpellDefEffect>
+				<EffectName>S_SummonersBoon_Particle</EffectName>
+				<LocalPosition>0,0,0</LocalPosition>
+				<EffectScale>1</EffectScale>
+				<EffectDelay>0</EffectDelay>
+				<SnapToTerrain>1</SnapToTerrain>
+			</SpellDefEffect>
+		</SpellDef>	
+	    <SpellDef InternalName="JB_SummonImp">
+			<DisplayName>Summon Imp</DisplayName>
+			<Description>Summon an Imp.  Imps can cast any spell your sovereign can.</Description>
+			<Image>T_DemonicAlly_Painting.png</Image>
+			<IconFG>T_SummonImp_Icon.png</IconFG>
+			<IconColor>167,249,131</IconColor>
+			<AutoUnlock>1</AutoUnlock>
+			<CanStack>0</CanStack>
+			<SpellBookSortCategory>Summon</SpellBookSortCategory>
+			<SpellBookSortSubCategory>Summon</SpellBookSortSubCategory>
+			<SpellType>Strategic</SpellType>
+			<SpellClass>Defensive</SpellClass>
+			<SpellSubClass>Summon</SpellSubClass>
+			<SpellTargetType>Self</SpellTargetType>
+			<Range>0</Range>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_Summoner_SummonImp</Attribute>
+			</Prereq>
+			<SpellResourceCost>
+				<Resource>Mana</Resource>
+				<Amount>30</Amount>
+			</SpellResourceCost>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>SummonUnit</Attribute>
+				<UnitClass>JB_Imp</UnitClass>
+				<Duration>-1</Duration>
+				<Value>1</Value>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Mana</Attribute>
+				<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[UnitStat_JB_SummmonManaRefund] * 30]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc] * 1]]></Expression>
+				</Calculate>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>0</AIPriority>
+			</AIData>
+			<HitSoundFX>Spell_SummonDeathDemon_01</HitSoundFX>
+			<SpellDefEffect>
+				<EffectName>Y_SummonDeathDemon_Particle</EffectName>
+				<LocalPosition>0,0,0</LocalPosition>
+				<EffectScale>1</EffectScale>
+				<EffectDelay>0</EffectDelay>
+				<SnapToTerrain>1</SnapToTerrain>
+			</SpellDefEffect>
+		</SpellDef>
+	    <SpellDef InternalName="JB_SummonDelin">
+			<DisplayName>Summon the Pyre of Men</DisplayName>
+			<Description>Summon Delin, the Pyre of Men for 5 actions.</Description>
+			<Image>M_Delin_Card_01.png</Image>
+			<IconFG>T_ParidensReturn_Icon.png</IconFG>
+			<AutoUnlock>1</AutoUnlock>
+			<Cooldown>10</Cooldown>
+			<CanStack>0</CanStack>
+			<CastTime>2</CastTime>
+			<SpellBookSortCategory>Summon</SpellBookSortCategory>
+			<SpellBookSortSubCategory>Summon</SpellBookSortSubCategory>
+			<SpellType>Tactical</SpellType>
+			<SpellClass>Offensive</SpellClass>
+			<SpellSubClass>Summon</SpellSubClass>
+			<SpellTargetType>EmptyTile</SpellTargetType>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_Summoner_SummonMastery</Attribute>
+			</Prereq>
+			<SpellResourceCost>
+				<Resource>Mana</Resource>
+				<Amount>400</Amount>
+			</SpellResourceCost>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>SummonUnit</Attribute>
+				<UnitClass>Delin_BG_Summon</UnitClass>
+				<Duration>5</Duration>
+				<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 10]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc]]]></Expression>
+				</Calculate>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>100</AIPriority>
+			</AIData>
+			<HitSoundFX>Spell_ParidensReturn_01</HitSoundFX>
+			<SpellDefEffect>
+				<EffectName>T_ParidensReturn_Particle</EffectName>
+				<LocalPosition>0,0,0</LocalPosition>
+				<EffectScale>0.4</EffectScale>
+				<EffectDelay>0</EffectDelay>
+				<SnapToTerrain>1</SnapToTerrain>
+			</SpellDefEffect>
+		</SpellDef>
+		<SpellDef InternalName="JB_SentinelWard">
+			<DisplayName>Sentinel Ward</DisplayName>
+			<Description>Summons 3 level 1 (plus summoning bonuses) Armored Sentinels for 5 turns.</Description>
+			<Image>M_ArmoredSentinel_Card_01.png</Image>
+			<IconFG>T_SummonSentinel_Icon.png</IconFG>
+			<AutoUnlock>1</AutoUnlock>
+			<Cooldown>5</Cooldown>
+			<CanStack>1</CanStack>
+			<SpellBookSortCategory>Summon</SpellBookSortCategory>
+			<SpellBookSortSubCategory>Summon</SpellBookSortSubCategory>
+			<SpellType>Strategic</SpellType>
+			<SpellClass>Defensive</SpellClass>
+			<SpellSubClass>Buff</SpellSubClass>
+			<SpellTargetType>FriendlyUnit</SpellTargetType>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_Summoner_SentinalWard</Attribute>
+			</Prereq>
+			<SpellResourceCost>
+				<Resource>Mana</Resource>
+				<Amount>80</Amount>
+			</SpellResourceCost>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>SummonUnit</Attribute>
+				<StrVal>Armored Sentinel</StrVal>
+				<UnitClass>ArmoredSentinel</UnitClass>
+				<Duration>5</Duration>
+				<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 1]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="ValueForFormattedDescription">
+					<Expression><![CDATA[[Calc]]]></Expression>
+				</Calculate>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>SummonUnit</Attribute>
+				<StrVal>Armored Sentinel</StrVal>
+				<UnitClass>ArmoredSentinel</UnitClass>
+				<Duration>5</Duration>
+				<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 1]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="ValueForFormattedDescription">
+					<Expression><![CDATA[[Calc]]]></Expression>
+				</Calculate>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>SummonUnit</Attribute>
+				<StrVal>Armored Sentinel</StrVal>
+				<UnitClass>ArmoredSentinel_BG_Summon</UnitClass>
+				<Duration>5</Duration>
+				<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 1]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="ValueForFormattedDescription">
+					<Expression><![CDATA[[Calc]]]></Expression>
+				</Calculate>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Mana</Attribute>
+				<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[UnitStat_JB_SummmonManaRefund] * 80]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc] * 1]]></Expression>
+				</Calculate>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>75</AIPriority>
+				<AITag>Defensive</AITag>
+				<AIAtWarMultiplier>2</AIAtWarMultiplier>
+			</AIData>
+			<HitSoundFX>Spell_SummonAirElemental_01</HitSoundFX>
+			<SpellDefEffect>
+				<EffectName>S_BlindingLight_Particle</EffectName>
+				<LocalPosition>0,0,0</LocalPosition>
+				<EffectScale>.75</EffectScale>
+				<EffectDelay>0</EffectDelay>
+				<SnapToTerrain>1</SnapToTerrain>
+			</SpellDefEffect>
+		</SpellDef>  	
+
+	</ContainerPathSummonerSpells>
+		
+</Spells>	

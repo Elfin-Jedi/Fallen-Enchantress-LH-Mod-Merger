@@ -1,0 +1,162 @@
+<AbilityBonuses>
+    <DataChecksum NoParse="1">
+        <Ignore>DispName</Ignore>
+        <Translate>DisplayName,Description</Translate>
+    </DataChecksum>
+<AbilityBonus InternalName="BoldinAbility">
+        <AbilityBonusType>Unit_level</AbilityBonusType>
+        <AbilityBonusOption InternalName="Boldin">
+            <DisplayName>Boldin</DisplayName>
+            <Description>-2 Attack, -5 Accuracy, +10% Prone Avoidance, +5 Damage to Twisted</Description>
+            <Icon>Ability_PathOfTheWarrior_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Boost</StrVal>
+                <Value>-2</Value>
+            </GameModifier>
+			<GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Accuracy</StrVal>
+                <Value>-5</Value>
+            </GameModifier>
+			<GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_ChanceToAvoidProne</StrVal>
+                <Value>10</Value>
+            </GameModifier>		
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Boost</StrVal>
+                <StrVal2>Twisted</StrVal2>
+                <Value>5</Value>
+                <Provides>+5 Attack vs Twisted</Provides>
+                <vsUnitType>1</vsUnitType>
+            </GameModifier>			
+            <AdditionalTrainingTurns>6</AdditionalTrainingTurns>
+            <HideWhenUpgraded>0</HideWhenUpgraded>
+            <Type>Defensive</Type>
+			<Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>PlaceholderNA</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>	
+	<AbilityBonus InternalName="EngageAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="Engage">
+            <DisplayName>Ability - Engage</DisplayName>
+            <Description>Forces an enemy to engage you in combat and lose their next turn. Lowers your defense for the rest of the fight.</Description>
+            <Icon>Ability_Savant_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>UnlockCombatAbility</Attribute>
+                <StrVal>Engage</StrVal>
+                <Provides>Forces an enemy to engage you in combat and lose their next turn. Lowers your defense for the rest of the fight.
+				Available at Level 4</Provides>
+            </GameModifier>
+            <CombatRating>20</CombatRating>
+            <HideWhenUpgraded>0</HideWhenUpgraded>
+            <IsCombatAbility>1</IsCombatAbility>
+            <Likelihood>1</Likelihood>
+            <RarityDisplay>Rare</RarityDisplay>
+            <MinimumLevel>4</MinimumLevel>
+            <RequiredLevel>4</RequiredLevel>
+            <Type>Ability</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>Boldin</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>6</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>	
+	<AbilityBonus InternalName="DisarmAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="Disarm">
+            <DisplayName>Ability - Disarm</DisplayName>
+            <Description>Lands a precise attack on the enemy's main attacking arm, reducing accuracy for the next 3 turns.</Description>
+            <Icon>Ability_Frenzy_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>UnlockCombatAbility</Attribute>
+                <StrVal>Disarm</StrVal>
+                <Provides>Does 40%% damage and reduces accuracy by 25% for the next 3 turns.
+				Available at Level 7</Provides>
+            </GameModifier>
+            <CombatRating>20</CombatRating>
+            <HideWhenUpgraded>0</HideWhenUpgraded>
+            <IsCombatAbility>1</IsCombatAbility>
+            <Likelihood>1</Likelihood>
+            <RarityDisplay>Rare</RarityDisplay>
+            <MinimumLevel>7</MinimumLevel>
+            <RequiredLevel>7</RequiredLevel>
+            <Type>Ability</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>Boldin</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>6</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>	
+	<AbilityBonus InternalName="DroptheshoulderAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="Droptheshoulder">
+            <DisplayName>Ability - Drop the Shoulder</DisplayName>
+            <Description>Lower your shoulder and charges an enemy knocking them back and doing damage equal to your defense. You lose your next turn.</Description>
+            <Icon>Ability_BladeRush_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>UnlockCombatAbility</Attribute>
+                <StrVal>Droptheshoulder</StrVal>
+                <Provides>Knocks back an enemy and does damage equal to your defense. Lose your next turn.
+				Available at Level 10</Provides>
+            </GameModifier>
+            <CombatRating>20</CombatRating>
+            <HideWhenUpgraded>0</HideWhenUpgraded>
+            <IsCombatAbility>1</IsCombatAbility>
+            <Likelihood>1</Likelihood>
+            <RarityDisplay>Rare</RarityDisplay>
+            <MinimumLevel>10</MinimumLevel>
+            <RequiredLevel>10</RequiredLevel>
+            <Type>Ability</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>Boldin</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>6</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	<AbilityBonus InternalName="EarthAdept1">	
+	 <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="EarthAdept1">
+            <MinimumLevel>4</MinimumLevel>
+            <RequiredLevel>4</RequiredLevel>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_Level</Attribute>
+			<Value>4</Value>
+		</Prereq>
+		<GameModifier>
+                <ModType>Unit</ModType>
+				<!-- <Attribute>UnlockCombatAbility</Attribute> -->
+                <Attribute>UnlockTech</Attribute>
+                <StrVal>EarthAdept1</StrVal>
+        </GameModifier>
+	</AbilityBonus>
+</AbilityBonuses>

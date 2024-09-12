@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<GameItemTypes>
+	<GameItemType InternalName="BonesplinterMount">
+		<DisplayName>Bonesplinter</DisplayName>
+		<Description>Many believe that Bonesplinter is a myth, but what does that make the man who rides him?</Description>
+		<Type>Mount</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<ShopValue>240</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Moves</StrVal>
+			<Value>2</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_Immersive_2H</StrVal>
+			<Value>-1</Value>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Spell_X_FlurryOfArrows</StrVal>
+			<Provides>Many believe that Bonesplinter is a myth, but what does that make the man who rides him?</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Spell_X_Sagittarius</StrVal>
+			<Provides>CORE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Boost</StrVal>
+			<Value>3</Value>
+			<xActions>1</xActions>
+			<Provides>::: +3 ATK for the 1st Action</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>2</Value>
+			<Provides>::: +2 Initiative</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>3</Value>
+			<xActions>1</xActions>
+			<Provides>::: +3 Initiative for the 1st Action</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>IMMUNITY</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ChanceToAvoidProne</StrVal>
+			<Value>100</Value>
+			<Provides>::: To being Knocked Prone</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>STATS</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_DodgeAgainstRanged</StrVal>
+			<Value>15</Value>
+			<Provides>::: +15 Dodge against Ranged</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL ABILITY</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Spell_X_Trample</StrVal>
+			<Provides>::: Trample :::
+			::: Normal ATK
+			::: Moves target back 1 tile
+			::: Move up 2 tiles if target dies</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_IsAfoot</StrVal>
+			<Value>-1</Value>
+			<Provides>XOTIC</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_BG_IsUsingMount</StrVal>
+			<Value>1</Value>
+			<Provides>::: Is Mounted</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_EquippedWarBoar</StrVal>
+			<Value>1</Value>
+			<Provides>::: Is Riding a Warboar</Provides>
+		</GameModifier>
+		<CutSceneDataPack>WargMountCutScenePack</CutSceneDataPack>
+		<IsAvailableForSovereignCustomization>1</IsAvailableForSovereignCustomization>
+		<CustomizationPointCost>2</CustomizationPointCost>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Unique</RarityDisplay>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_X_Immersive_M</Attribute>
+			<Value>3</Value>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_FactionNoMounts</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_UnitNoMounts</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_MOUNT</AIPrefType>
+			<AIPriority>8000</AIPriority>
+		</AIData>
+		<ArtDef>ArtDef_X_BonesplinterMount_Mount</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="DarkWizardRobe">
+		<DisplayName>Dark Sorcerer Robe</DisplayName>
+		<Description>This is not simple fabric, but red spun crystal on a robe cut from the pelt of a creature that has been long forgotten in this world.</Description>
+		<Type>Torso</Type>
+		<Type>Surcoat</Type>
+		<Type>Lowerbody</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>1500</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Pierce</StrVal>
+			<Value>20</Value>
+		</GameModifier>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>This is not simple fabric, but red spun crystal on a robe cut from the pelt of a creature that has been long forgotten in this world.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>RESISTANCE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_MagicResist</StrVal>
+			<Value>20</Value>
+			<Provides>::: +20 Magic</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>STATS</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_MagicPower</StrVal>
+			<Value>20</Value>
+			<Provides>::: +20 Magic Power</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Unique</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>12000</AIPriority>
+		</AIData>
+		<ArtDef>Art_DarkWizardRobe</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="LeatherBoots_Assassin">
+		<DisplayName>Assassin's Boots</DisplayName>
+		<Description>Boots so light even a Trog could move quietly in them.</Description>
+		<Type>Boots</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>90</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Pierce</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>Boots so light even a Trog could move quietly in them.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>CORE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>1</Value>
+			<Provides>::: +1 Initiative</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<HeroOnly>1</HeroOnly>
+		<Likelihood>10</Likelihood>
+		<RarityDisplay>Common2</RarityDisplay>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>1333</AIPriority>
+		</AIData>
+		<ArtDef>ArtDef_X_LeatherBoots_Assassin_Armor</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="LeatherBreastpiece_Assassin">
+		<DisplayName>Assassin's Cuirass</DisplayName>
+		<Description>The hardened leather of the cuirass is designed to deflect weapons, not stop them.</Description>
+		<Type>Torso</Type>
+		<Type>Surcoat</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<AdditionalTrainingTurns>6</AdditionalTrainingTurns>
+		<ShopValue>125</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Pierce</StrVal>
+			<Value>2</Value>
+		</GameModifier>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>The hardened leather of the cuirass is designed to deflect weapons, not stop them.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>STATS</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Dodge</StrVal>
+			<Value>10</Value>
+			<Provides>::: +10 Dodge</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<HeroOnly>1</HeroOnly>
+		<Likelihood>10</Likelihood>
+		<RarityDisplay>Common</RarityDisplay>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Primitive</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>750</AIPriority>
+		</AIData>
+		<ArtDef>ArtDef_X_LeatherBreastpiece_Assassin_Armor</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="LeatherGreaves_Assassin">
+		<DisplayName>Assassin's Greaves</DisplayName>
+		<Description>There is no indication of whom these pants belong to, apparently Assassin mothers don't write the names of their children in their shorts.</Description>
+		<Type>LowerBody</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<AdditionalTrainingTurns>4</AdditionalTrainingTurns>
+		<ShopValue>90</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Pierce</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>There is no indication of whom these pants belong to, apparently Assassin mothers don't write the names of their children in their shorts.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>STATS</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Dodge</StrVal>
+			<Value>5</Value>
+			<Provides>::: +5 Dodge</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<HeroOnly>1</HeroOnly>
+		<Likelihood>10</Likelihood>
+		<RarityDisplay>Common4</RarityDisplay>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Primitive</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>333</AIPriority>
+		</AIData>
+		<ArtDef>ArtDef_X_LeatherGreaves_Assassin_Armor</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="LeatherHelmet_Assassin">
+		<DisplayName>Assassin's Hood</DisplayName>
+		<Description>This hood does more than hide the wearer's identity, it wards against outside influences.</Description>
+		<Type>Head</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<AdditionalTrainingTurns>4</AdditionalTrainingTurns>
+		<ShopValue>90</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Pierce</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>This hood does more than hide the wearer's identity, it wards against outside influences.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>RESISTANCE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_MagicResist</StrVal>
+			<Value>10</Value>
+			<Provides>::: +10 Magic</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<HeroOnly>1</HeroOnly>
+		<Likelihood>10</Likelihood>
+		<RarityDisplay>Common1</RarityDisplay>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Injury_X_Claustrophobic</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Vain</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>1000</AIPriority>
+		</AIData>
+		<ArtDef>ArtDef_X_LeatherHelmet_Assassin_Armor</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="LeatherVambraces_Assassin">
+		<DisplayName>Assassin's Vambraces</DisplayName>
+		<Description>There are compartments in the vambraces for holding knives, strangling cords and poisons.</Description>
+		<Type>Forearms</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<AdditionalTrainingTurns>4</AdditionalTrainingTurns>
+		<ShopValue>90</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Pierce</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>There are compartments in the vambraces for holding knives, strangling cords and poisons.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>CORE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ChanceToCrit</StrVal>
+			<Value>5</Value>
+			<Provides>::: +5 Critical Chance</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<HeroOnly>1</HeroOnly>
+		<Likelihood>10</Likelihood>
+		<RarityDisplay>Common3</RarityDisplay>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Primitive</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>400</AIPriority>
+		</AIData>
+		<ArtDef>ArtDef_X_LeatherVambraces_Assassin_Armor</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Longsword_Bleeding">
+		<DisplayName>Bleeding Blade</DisplayName>
+		<Description>A torture device designed for the battlefield.</Description>
+		<Type>Weapon</Type>
+		<WeaponType>OneHanded</WeaponType>
+		<WeaponUpgradeType>Blade</WeaponUpgradeType>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>900</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Pierce</StrVal>
+			<Value>18</Value>
+		</GameModifier>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>A torture device designed for the battlefield.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL ABILITY</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Barbs</StrVal>
+			<Provides>::: Barbs :::
+			::: 16 DMG to caster
+			::: 16 DMG to target</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL EFFECT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_MaxCounterAttack</StrVal>
+			<Value>1</Value>
+			<Provides>::: Counterattack :::
+			::: +1 per Action</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL MELEE ATK</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>MeleeAppliesSpell</Attribute>
+			<StrVal>Reap3_Effect</StrVal>
+			<Provides>::: Reap III :::
+			::: +3 HP per Hit</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>XOTIC</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_IsNinjaSword</StrVal>
+			<Value>1</Value>
+			<Provides>::: Ninja Sword :::
+			::: +1 Initiative
+			::: +10% ATK
+			::: Applied in Tactical if Ninja</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_IsSword</StrVal>
+			<Value>1</Value>
+			<Provides>::: Is a Paladin Blade :::</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Unique</RarityDisplay>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_CUTTING</AIPrefType>
+			<AIPriority>666</AIPriority>
+		</AIData>
+		<ArtDef>Longsword_Bleeding_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="PazuzusHorn">
+		<DisplayName>Pazuzu's Horn</DisplayName>
+		<Description>The venom from this horn causes the blood to seep out of every pore of the body, leaving the victim little more than a dry husk.</Description>
+		<Type>Accessory</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>1000</ShopValue>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>The venom from this horn causes the blood to seep out of every pore of the body, leaving the victim little more than a dry husk.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL MELEE ATK</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>MeleeAppliesSpell</Attribute>
+			<StrVal>Poisoned3</StrVal>
+			<Provides>::: Poisoned III (Death\Poison) :::
+			::: 12 DMG per Action</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Unique</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<IsUsable>0</IsUsable>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>10000</AIPriority>
+		</AIData>
+		<ArtDef>PazuzusHorn_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="RabisusHorn">
+		<DisplayName>Rabisu's Horn</DisplayName>
+		<Description>Holding this horn causes unbearable sadness and thoughts of suicide. The only relief comes when inflicting pain on others.</Description>
+		<Type>Accessory</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>1000</ShopValue>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>Holding this horn causes unbearable sadness and thoughts of suicide. The only relief comes when inflicting pain on others.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL EFFECT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_MaulChance</StrVal>
+			<Value>100</Value>
+			<Provides>::: Maul :::
+			::: Continuous ATK</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Unique</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<IsUsable>0</IsUsable>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>10000</AIPriority>
+		</AIData>
+		<ArtDef>RabisusHorn_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Token_PillarOfGrazna">
+		<DisplayName>Pillar of Grazna Figurine</DisplayName>
+		<Description>Use this figurine to call the Pillar of Grazna into your service.</Description>
+		<Type>Consumable</Type>
+		<ShopValue>400</ShopValue>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>Use this figurine to call the Pillar of Grazna into your service.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>STRATEGIC ITEM</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<Value>6</Value>
+			<UnitClass>StoneGolem_Hero</UnitClass>
+			<Provides>::: Summon :::
+			::: Can summon the Pillar of Grazna
+			::: Level = 6</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Unique</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<IsUsable>1</IsUsable>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>125</AIPriority>
+		</AIData>
+		<ArtDef>Token_Grazna_ArtDef</ArtDef>
+	</GameItemType>
+</GameItemTypes>

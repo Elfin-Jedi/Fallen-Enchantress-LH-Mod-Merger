@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Created with the Elemental Editor -->
+<!-- CoreAbilities.xml -->
+<!-- -->
+<AbilityBonuses>
+    <DataChecksum NoParse="1">
+        <Ignore>DispName</Ignore>
+        <Translate>DisplayName,Description</Translate>
+    </DataChecksum>
+    <AbilityBonus InternalName="Spell_RuffianArcrage">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="Spell_RuffianArcrage">
+            <DisplayName>Ruffian Arcrage</DisplayName>
+            <Description>Ruffians experimenting with ArcStones to bring out a powerful rage, that enables a magically induced rage strike doing 2.5x Damage</Description>
+            <Icon>Ability_RuffianArcrage_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>UnlockCombatAbility</Attribute>
+                <StrVal>RuffianArcrage</StrVal>
+                <Provides>Strike a single enemy for a arcstone induced rage doing 2.5x normal attack damage</Provides>
+            </GameModifier>
+            <IsCombatAbility>1</IsCombatAbility>
+            <Type>Defensive</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="DisciplinedWarriorAbility">
+        <AbilityBonusOption InternalName="DisciplinedWarrior">
+            <DisplayName>Disciplined Warrior</DisplayName>
+            <Description>+1 Hit Point per 2 Levels, +1 Defense per 2 Levels, +1 Attack per 2 Levels, +1 Accuracy per 4 Levels, +1 Dodge per 4 Levels, +1 Initiative Per 4 Levels </Description>
+            <Icon>Ability_DisciplinedWarrior_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_HitPoints</StrVal>
+                <Value>0.5</Value>
+                <PerLevel>1</PerLevel>
+                <Provides>+1 Hit Point per 2 Levels</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Defense_Pierce</StrVal>
+                <Value>0.5</Value>
+                <PerLevel>1</PerLevel>
+                <Provides>+1 Defense per 2 Levels</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Boost</StrVal>
+                <Value>0.5</Value>
+                <PerLevel>1</PerLevel>
+                <Provides>+1 Attack per 2 Levels</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Accuracy</StrVal>
+                <Value>0.25</Value>
+                <PerLevel>1</PerLevel>
+                <Provides>+1 Accuracy per 4 Levels</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Dodge</StrVal>
+                <Value>0.25</Value>
+                <PerLevel>1</PerLevel>
+                <Provides>+1 Dodge per 4 Levels</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_CombatSpeed</StrVal>
+                <Value>0.25</Value>
+                <PerLevel>1</PerLevel>
+                <Provides>+1 Initiative Per 4 Levels</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="ViciousAttackerAbility">
+        <AbilityBonusOption InternalName="ViciousAttacker">
+            <DisplayName>Vicious Attacker</DisplayName>
+            <Description>+1 Hit Point per 4 Levels, +1 Defense per 5 Levels, +1 Attack per Level, +1 Accuracy per 4 Levels, +1 Dodge per 2 Levels, +1 Initiative Per 2 Levels </Description>
+            <Icon>Ability_ViciousAttacker_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_HitPoints</StrVal>
+                <Value>0.25</Value>
+                <PerLevel>1</PerLevel>
+                <Provides>+1 Hit Point per 4 Levels</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Defense_Pierce</StrVal>
+                <Value>0.2</Value>
+                <PerLevel>1</PerLevel>
+                <Provides>+1 Defense per 5 Levels</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Boost</StrVal>
+                <Value>1</Value>
+                <PerLevel>1</PerLevel>
+                <Provides>+1 Attack per Level</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Accuracy</StrVal>
+                <Value>0.25</Value>
+                <PerLevel>1</PerLevel>
+                <Provides>+1 Accuracy per 4 Levels</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Dodge</StrVal>
+                <Value>0.25</Value>
+                <PerLevel>1</PerLevel>
+                <Provides>+1 Dodge per 4 Levels</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_CombatSpeed</StrVal>
+                <Value>0.5</Value>
+                <PerLevel>1</PerLevel>
+                <Provides>+1 Initiative Per 2 Levels</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+</AbilityBonuses>

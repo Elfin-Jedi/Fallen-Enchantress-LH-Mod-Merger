@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--Republic Governement: D. Elliot Lamb a.k.a davrovana-->
+<!--XtraDeconstruct 3.0 by Primal-->
+<AbilityBonuses>
+	<AbilityBonus InternalName="Ability_RG_RoadBuilding">
+		<AbilityBonusType>Unit_Design</AbilityBonusType>
+		<AbilityBonusOption InternalName="Ability_RG_RoadBuilding">
+			<DisplayName>Road Building</DisplayName>
+			<Description>STRATEGIC ACTION
+			::: Can build roads
+			
+			STRATEGIC SPELLS
+			::: Can cast Obliterate Roads
+			::: Can cast Primitive Roads</Description>
+			<Icon>Ability_PathOfTheGovernor_Icon.png</Icon>
+			<GameModifier>
+				<Provides>STRATEGIC ACTION</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockAction</Attribute>
+				<StrVal>BuildRoad</StrVal>
+				<Provides>::: Can build roads</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>CanCastSpells</Attribute>
+				<Provides>STRATEGIC SPELLS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_NoMoreRoads</StrVal>
+				<Value>1</Value>
+				<Provides>::: Can cast Obliterate Roads</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_PrimitiveRoads</StrVal>
+				<Value>1</Value>
+				<Provides>::: Can cast Primitive Roads</Provides>
+			</GameModifier>
+			<AdditionalTrainingTurns>2</AdditionalTrainingTurns>
+			<Type>Army</Type>
+			<Prereq>
+				<Type>Race</Type>
+				<Attribute>Race_Type_BlackMancers</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Ability_RG_Sions">
+		<AbilityBonusOption InternalName="Ability_RG_Sions">
+			<DisplayName>Quendar Sions</DisplayName>
+			<PerkTreePosX>0</PerkTreePosX>
+			<PerkTreePosY>5</PerkTreePosY>
+			<Description>CORE
+			::: +33% ATK
+			
+			EXPERIENCE BONUS
+			::: +100%
+			
+			STATS
+			::: 40 Base HP
+			::: Can wear Plate armor
+			
+			XOTIC
+			::: Is Humanoid
+			::: Is Quendar</Description>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_NonMonsterModel</StrVal>
+				<Multiplier>0</Multiplier>
+				<Provides>CORE</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Attack_Pierce</StrVal>
+				<Multiplier>1.33</Multiplier>
+				<Provides>::: +33% ATK</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_NonSovereign</StrVal>
+				<Multiplier>0</Multiplier>
+				<Provides>EXPERIENCE BONUS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ExpBonus</StrVal>
+				<Value>100</Value>
+				<Provides>::: +100%</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>STATS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_HitPoints</StrVal>
+				<Value>32</Value>
+				<Provides>::: 40 Base HP</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ArmorProficiency</StrVal>
+				<Value>2</Value>
+				<Provides>::: Can wear Plate armor</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>STATS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_IsHumanoid</StrVal>
+				<Value>1</Value>
+				<Provides>::: Is Humanoid</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_IsRace_Quendar</StrVal>
+				<Value>1</Value>
+				<Provides>::: Is Quendar</Provides>
+			</GameModifier>
+			<Icon>Ability_X_Sions.png</Icon>
+			<Type>Aggressive</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_ZRG</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="ArmorUpkeep1_Ability">
+		<AbilityBonusOption InternalName="ArmorUpkeep1">
+			<DisplayName>Armor Upkeep I</DisplayName>
+			<Description>RESOURCES
+			::: Gildar :::
+			::: -1 per 2 Seasons</Description>
+			<Icon>Weakness_X_Incompetents.png</Icon>
+			<GameModifier>
+				<Provides>RESOURCES</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>ProduceResource</Attribute>
+				<StrVal>Gold</StrVal>
+				<Value>-0.5</Value>
+				<Provides>::: Gildar :::
+				::: -1 per 2 Seasons</Provides>
+			</GameModifier>
+			<Type>Weakness</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="ArmorUpkeep2_Ability">
+		<AbilityBonusOption InternalName="ArmorUpkeep2">
+			<DisplayName>Armor Upkeep II</DisplayName>
+			<Description>RESOURCES
+			::: Gildar :::
+			::: -1 per Season</Description>
+			<Icon>Weakness_X_Incompetents.png</Icon>
+			<GameModifier>
+				<Provides>RESOURCES</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>ProduceResource</Attribute>
+				<StrVal>Gold</StrVal>
+				<Value>-1</Value>
+				<Provides>::: Gildar :::
+				::: -1 per Season</Provides>
+			</GameModifier>
+			<Type>Weakness</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="ArmorUpkeep3_Ability">
+		<AbilityBonusOption InternalName="ArmorUpkeep3">
+			<DisplayName>Armor Upkeep III</DisplayName>
+			<Description>RESOURCES
+			::: Gildar :::
+			::: -3 per 2 Seasons</Description>
+			<Icon>Weakness_X_Incompetents.png</Icon>
+			<GameModifier>
+				<Provides>RESOURCES</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>ProduceResource</Attribute>
+				<StrVal>Gold</StrVal>
+				<Value>-1.5</Value>
+				<Provides>::: Gildar :::
+				::: -3 per 2 Seasons</Provides>
+			</GameModifier>
+			<Type>Weakness</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="ArmorUpkeep4_Ability">
+		<AbilityBonusOption InternalName="ArmorUpkeep4">
+			<DisplayName>Armor Upkeep IV</DisplayName>
+			<Description>RESOURCES
+			::: Gildar :::
+			::: -5 per 2 Seasons</Description>
+			<Icon>Weakness_X_Incompetents.png</Icon>
+			<GameModifier>
+				<Provides>RESOURCES</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>ProduceResource</Attribute>
+				<StrVal>Gold</StrVal>
+				<Value>-2.5</Value>
+				<Provides>::: Gildar :::
+				::: -5 per 2 Seasons</Provides>
+			</GameModifier>
+			<Type>Weakness</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="AwkwardAbility">
+		<AbilityBonusOption InternalName="Awkward">
+			<DisplayName>Awkward</DisplayName>
+			<Description>STATS
+			::: -10% Accuracy
+			::: -10% Magic Power
+			
+			TACTICAL EFFECT
+			::: +25% Tactical Mana Cost</Description>
+			<Icon>Ability_Amnesia_Icon.png</Icon>
+			<GameModifier>
+				<Provides>STATS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Accuracy</StrVal>
+				<Multiplier>0.9</Multiplier>
+				<Provides>::: -10% Accuracy</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_MagicPower</StrVal>
+				<Multiplier>0.9</Multiplier>
+				<Provides>::: -10 Magic Power</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>TACTICAL EFFECT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_TacticalSpellManaCost_Multiplier</StrVal>
+				<Value>0.25</Value>
+				<Provides>::: +25% Tactical Mana Cost</Provides>
+			</GameModifier>
+			<Type>Weakness</Type>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_BlackMancerAbility">
+		<AbilityBonusOption InternalName="Blood_BlackMancer">
+			<DisplayName>Black Mancer Blood</DisplayName>
+			<Description>EXPERIENCE BONUS
+			::: +3% Army XP
+			
+			UNREST
+			::: -1% in the city this unit is in
+			
+			XOTIC
+			::: Is Humanoid
+			::: Is Kingdom
+			
+			XTRA
+			::: +18 Initiative</Description>
+			<Icon>Action_StudySpells.png</Icon>
+			<PerkTreePosX>0</PerkTreePosX>
+			<PerkTreePosY>5</PerkTreePosY>
+			<GameModifier>
+				<Provides>EXPERIENCE BONUS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustArmyStat</Attribute>
+				<StrVal>UnitStat_ExpBonus</StrVal>
+				<Value>3</Value>
+				<Provides>::: +3% Army XP</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>UNREST</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Unrest</Attribute>
+				<Value>-1</Value>
+				<Provides>::: -1% in the city this unit is in</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>XOTIC</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>::: Is Humanoid
+				::: Is Kingdom</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>XTRA</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_CombatSpeed</StrVal>
+				<Value>18</Value>
+				<Provides>::: +18 Initiative</Provides>
+			</GameModifier>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_R</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="ExemplarAbility">
+		<AbilityBonusOption InternalName="Exemplar">
+			<DisplayName>Exemplar</DisplayName>
+			<Description>CORE
+			::: +50% ATK
+			
+			IMMUNITY
+			::: To being Knocked Prone
+			
+			RESISTANCE
+			::: +10 Magic</Description>
+			<Icon>Ability_Juggernaut_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_IsJuggernaut</StrVal>
+				<Value>1</Value>
+				<Provides>CORE</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Attack_Pierce</StrVal>
+				<Multiplier>1.50</Multiplier>
+				<Provides>::: +50 ATK</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>IMMUNITY</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ChanceToAvoidProne</StrVal>
+				<Value>100</Value>
+				<Provides>::: To being knocked Prone</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>RESISTANCE</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_MagicResist</StrVal>
+				<Value>10</Value>
+				<Provides>::: +10 Magic</Provides>
+			</GameModifier>
+			<CombatRating>20</CombatRating>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Aggressive</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="OutcastAbility">
+		<AbilityBonusOption InternalName="Outcast">
+			<DisplayName>Shamed</DisplayName>
+			<Description>CORE
+			::: -2 Initiative
+			
+			STATS
+			::: -2 HP
+			::: -5 Accuracy
+			::: -5 Magic Power
+			
+			INJURY
+			::: +1
+			::: Curable if acquired</Description>
+			<Icon>Injury_X_ShrivelledHair.png</Icon>
+			<GameModifier>
+				<Provides>CORE</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_CombatSpeed</StrVal>
+				<Value>-2</Value>
+				<Provides>::: -2 Initiative</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>STATS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_HitPoints</StrVal>
+				<Value>-2</Value>
+				<Provides>::: -2 HP</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Accuracy</StrVal>
+				<Value>-5</Value>
+				<Provides>::: -5 Accuracy</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_MagicPower</StrVal>
+				<Value>-5</Value>
+				<Provides>::: -5 Magic Power</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>INJURY</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_HasInjuries</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_Injury</StrVal>
+				<Value>1</Value>
+				<Provides>::: Curable if acquired</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>Reliquary_SurgeonBeetle1</Attribute>
+				<Target>Unit</Target>
+			</Prereq>
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>TurnedUndead</Attribute>
+				<Target>Unit</Target>
+			</Prereq>
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Ability_X_Immunity_Injuries</Attribute>
+			</Prereq>
+			<Type>Weakness</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="MilitaryState_Ability">
+		<AbilityBonusOption InternalName="MilitaryState">
+			<DisplayName>Military State</DisplayName>
+			<Description>UNREST
+			::: +1% in all your cities</Description>
+			<Icon>Ability_Cruel_Icon.png</Icon>
+			<GameModifier>
+				<Provides>UNREST</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Additive_Unrest</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1% in all your cities</Provides>
+			</GameModifier>
+			<Type>Weakness</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Pupilhood_Ability">
+		<AbilityBonusOption InternalName="Pupilhood">
+			<DisplayName>Pupilhood</DisplayName>
+			<Description>EXPERIENCE BONUS
+			::: +25% Army XP</Description>
+			<Icon>Player_X_Sages.png</Icon>
+			<GameModifier>
+				<Provides>EXPERIENCE BONUS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustArmyStat</Attribute>
+				<StrVal>UnitStat_ExpBonus</StrVal>
+				<Value>25</Value>
+				<Provides>::: +25% Army XP</Provides>
+			</GameModifier>
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Readiness_BM_Ability">
+		<AbilityBonusType>Unit_Design</AbilityBonusType>
+		<AbilityBonusOption InternalName="Readiness_BM">
+			<DisplayName>Readiness</DisplayName>
+			<Description>STATS
+			::: +1 Starting Battle Wisdom</Description>
+			<Icon>Ability_Readiness_Icon.png</Icon>
+			<GameModifier>
+				<Provides>STATS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Stamina_Starting</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1 Starting Battle Wisdom</Provides>
+			</GameModifier>
+			<AdditionalTrainingTurns>10</AdditionalTrainingTurns>
+			<Type>Aggressive</Type>
+			<Prereq>
+				<Type>Race</Type>
+				<Attribute>Race_Type_BlackMancers</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Readiness_BM_Ability_Level">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Readiness_BM_Level">
+			<DisplayName>Readiness</DisplayName>
+			<Description>STATS
+			::: +1 Starting Battle Wisdom</Description>
+			<Icon>Ability_Readiness_Icon.png</Icon>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>5</PerkTreePosY>
+			<GameModifier>
+				<Provides>STATS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Stamina_Starting</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1 Starting Battle Wisdom</Provides>
+			</GameModifier>
+			<Type>Aggressive</Type>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_BlackMancer</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>20</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Republic">
+		<AbilityBonusType>Player</AbilityBonusType>
+		<AbilityBonusOption InternalName="Republic">
+			<DisplayName>Republic</DisplayName>
+			<Description>Your cities are each a state with voice in a Senate government. Your sovereign is head of the military and arcane societies, but with limited power in the government. Each city-state has limited responsibility to support your military. Labor is given partial ownership of its sector of the economy.
+			
+			Fortresses are distrusted by your populace, as they fear an encroaching military state. Further, the state does not provide support for their massive food cost. Fortresses improvements are bogged down with extra food and gold cost, and create unrest.
+			
+			Conclaves and Towns have many additional economic upgrades, making them even better under a Republic.
+			
+			Human labor-based buildings produce small amounts of gold due to a wealthier labor force and economic multipliers.
+			
+			Less Mana is produced due to magic distrust and humanist biases in this culture.
+			
+			EQUIPMENT
+			::: Pupil and Master
+			::: The Art of Space-Time
+			
+			IMPROVEMENTS
+			::: Republic Improvements
+			
+			PRODUCTION
+			::: -6 Prod. per Materials in all your cities
+			::: Negated by Public Forum
+			
+			RESEARCH
+			::: -40% in all your cities
+			::: Negated by Public Forum
+			
+			RESOURCES
+			::: -10% Mana Production
+			
+			STRATEGIC SPELLS
+			::: Can cast Create Exemplar
+			::: Can cast Call Outcast Hero
+			
+			UNREST
+			::: +40% Unrest in all your cities
+			::: Negated by Public Forum
+			
+			WAGES
+			::: +33%
+			
+			!WARNING!
+			::: Might not be fully compatible w/ Traits or Races that modify or add improvements</Description>
+			<Icon>Player_X_Orators.png</Icon><!--Ability_Organized_Icon-->
+			<GameModifier>
+				<Provides>Your cities are each a state with voice in a Senate government. Your sovereign is head of the military and arcane societies, but with limited power in the government. Each city-state has limited responsibility to support your military. Labor is given partial ownership of its sector of the economy.</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>Fortresses are distrusted by your populace, as they fear an encroaching military state. Further, the state does not provide support for their massive food cost. Fortresses improvements are bogged down with extra food and gold cost, and create unrest.</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>Conclaves and Towns have many additional economic upgrades, making them even better under a Republic.</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>Human labor-based buildings produce small amounts of gold due to a wealthier labor force and economic multipliers.</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>Less Mana is produced due to magic distrust and humanist biases in this culture.</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>EQUIPMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>::: Pupil and Master
+				::: The Art of Space-Time</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>IMPROVEMENTS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>::: Republic Improvements</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>PRODUCTION</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Additive_ProductionPerMaterials</StrVal>
+				<Value>-6</Value>
+				<Provides>::: -6 Prod. per Materials in all your cities
+				::: Negated by Public Forum</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>RESEARCH</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Research</StrVal>
+				<Value>-40</Value>
+				<Provides>::: -40% in all your cities
+				::: Negated by Public Forum</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>RESOURCES</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Mana</StrVal>
+				<Value>-10</Value>
+				<Provides>::: -10% Mana Production</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>STRATEGIC SPELLS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>::: Create Exemplar :::
+				::: Create an Exemplar</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>UnlockSpell</Attribute>
+				<StrVal>CallOutcast</StrVal>
+				<Provides>::: Call Outcast Hero :::
+				::: Summon a random Henchmen</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>UNREST</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Additive_Unrest</StrVal>
+				<Value>40</Value>
+				<Provides>::: +40% Unrest in all your cities
+				::: Negated by Public Forum</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>WAGES</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_ArmyMaintenance</StrVal>
+				<Value>-33</Value>
+				<Provides>::: +33%</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>!WARNING!</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>::: Might not be fully compatible w/ Traits or Races that modify or add improvements</Provides>
+			</GameModifier>
+			<Cost>3</Cost>
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Spell_SecondWind_BM_Ability_Level">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+		<AbilityBonusOption InternalName="Spell_SecondWind_BM_Level">
+			<DisplayName>Second Wind</DisplayName>
+			<Description>TACTICAL ABILITY
+			::: Second Wind (Heal) :::
+			::: +14 HP for 7 Battle Wisdom</Description>
+			<Icon>Ability_SecondWind_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>5</PerkTreePosY>
+			<GameModifier>
+				<Provides>TACTICAL ABILITY</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>Spell_X_SecondWind</StrVal>
+				<Provides>::: Second Wind (Heal) :::
+				::: +14 HP for 7 Battle Wisdom</Provides>
+			</GameModifier>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Spell</Type>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Readiness_BM_Level</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>10</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Spell_SecondWind_BM_Ability">
+		<AbilityBonusType>Unit_Design</AbilityBonusType>
+		<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+		<AbilityBonusOption InternalName="Spell_SecondWind_BM">
+			<DisplayName>Second Wind</DisplayName>
+			<Description>TACTICAL ABILITY
+			::: Second Wind (Heal) :::
+			::: +14 HP for 7 Battle Wisdom</Description>
+			<Icon>Ability_SecondWind_Icon.png</Icon>
+			<GameModifier>
+				<Provides>TACTICAL ABILITY</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>Spell_X_SecondWind</StrVal>
+				<Provides>::: Second Wind (Heal) :::
+				::: +14 HP for 7 Battle Wisdom</Provides>
+			</GameModifier>
+			<AdditionalTrainingTurns>10</AdditionalTrainingTurns>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Ability</Type>
+			<Prereq>
+				<Type>Race</Type>
+				<Attribute>Race_Type_BlackMancers</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+</AbilityBonuses>

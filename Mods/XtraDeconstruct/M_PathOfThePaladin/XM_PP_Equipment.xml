@@ -1,0 +1,1678 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--Path of the Paladin by D. Elliot Lamb a.k.a davrovana w/ help (graphics) from fsemprini and Soronarr-->
+<!--XtraDeconstruct 3.0 by Primal-->
+<GameItemTypes>
+	<GameItemType InternalName="AmuletOfLightbane">
+		<DisplayName>Amulet of Lightbane</DisplayName>
+		<Description>When it is worn, this totem protects from magical light attacks.</Description>
+		<Type>Accessory</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>150</ShopValue>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_Amulet</StrVal>
+			<Value>-1</Value>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>When it is worn, this totem protects from magical light attacks.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>RESISTANCE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ResistArcaneLight</StrVal>
+			<Value>100</Value>
+			<Provides>::: +100% Arcane Light</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Nil</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<IsUsable>0</IsUsable>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_X_Amulet</Attribute>
+			<Value>1</Value>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>1</AIPriority>
+		</AIData>
+		<ArtDef>ArtDef_X_AmuletOfLightbane_Accessory</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Longsword_Aldergest">
+		<DisplayName>Aldergest</DisplayName>
+		<Description>Aldergest's blade is a mighty weapon, but also a tool to heal. The sword chooses its wielder, that the wielder might stand in defense of the helpless and small things of Elemental.</Description>
+		<Type>Weapon</Type>
+		<WeaponType>OneHanded</WeaponType>
+		<WeaponUpgradeType>Blade</WeaponUpgradeType>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>2000</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Pierce</StrVal>
+			<Value>34</Value>
+		</GameModifier>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>Aldergest's blade is a mighty weapon, but also a tool to heal. The sword chooses its wielder, that the wielder might stand in defense of the helpless and small things of Elemental.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>CORE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_ArcaneLight</StrVal>
+			<Provides>::: +12 Arcane Light ATK</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>3</Value>
+			<Provides>::: +3 Initiative</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL ABILITY</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Wellspring_Ability</StrVal>
+			<Provides>::: Wellspring :::
+			::: ((6 + Life Shards) x4) HP
+			::: Applies to all Allies</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL EFFECT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_MaxCounterAttack</StrVal>
+			<Value>2</Value>
+			<Provides>::: Counterattack :::
+			::: +2 per Action</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>XOTIC</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_IsNinjaSword</StrVal>
+			<Value>1</Value>
+			<Provides>::: Ninja Sword :::
+			::: +1 Initiative
+			::: +10% ATK
+			::: Applied in Tactical if Ninja</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_IsSword</StrVal>
+			<Value>1</Value>
+			<Provides>::: Is a Paladin Blade</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Unique</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_CUTTING</AIPrefType>
+			<AIPriority>6000</AIPriority>
+		</AIData>
+		<ArtDef>Longsword_Angel_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Longsword_Lumina">
+		<DisplayName>Lumina Brand</DisplayName>
+		<Description>Enchanted to exude lightrays that, up close, can melt through hardened steel. Masters of such energies may find this sword fortifies their efforts.</Description>
+		<Type>Weapon</Type>
+		<WeaponType>OneHanded</WeaponType>
+		<WeaponUpgradeType>Blade</WeaponUpgradeType>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>600</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Pierce</StrVal>
+			<Value>19</Value>
+		</GameModifier>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>Enchanted to exude lightrays that, up close, can melt through hardened steel. Masters of such energies may find this sword fortifies their efforts.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>CORE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_ArcaneLight</StrVal>
+			<Value>4</Value>
+			<Provides>::: +4 Arcane Light ATK</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_ArcaneLight</StrVal>
+			<Multiplier>1.25</Multiplier>
+			<Provides>::: +25% Arcane Light ATK</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>2</Value>
+			<Provides>::: +2 Initiative</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>SPELL POTENCY</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_SpellDamage_ArcaneLight</StrVal>
+			<Value>0.25</Value>
+			<Provides>::: +25% Arcane Light Spell DMG</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL EFFECT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_MaxCounterAttack</StrVal>
+			<Value>1</Value>
+			<Provides>::: Counterattack :::
+			::: +1 per Action</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>XOTIC</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_IsNinjaSword</StrVal>
+			<Value>1</Value>
+			<Provides>::: Ninja Sword :::
+			::: +1 Initiative
+			::: +10% ATK
+			::: Applied in Tactical if Ninja</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_IsSword</StrVal>
+			<Value>1</Value>
+			<Provides>::: Is a Paladin Blade</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>UltraRare</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_CUTTING</AIPrefType>
+			<AIPriority>2400</AIPriority>
+		</AIData>
+		<ArtDef>Longsword_Angel_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Longsword_Paladin">
+		<DisplayName>Cursed Blade</DisplayName>
+		<Description>This sword carries a powerful ward that floods the grip of the wielder with intense pain. Only when one is so passionately intent on doing justice - however interpreted - that they will endure the pain, does the ward relent.</Description>
+		<Type>Weapon</Type>
+		<WeaponType>OneHanded</WeaponType>
+		<WeaponUpgradeType>Blade</WeaponUpgradeType>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>250</ShopValue>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Pierce</StrVal>
+			<Value>17</Value>
+		</GameModifier>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>This sword carries a powerful ward that floods the grip of the wielder with intense pain. Only when one is so passionately intent on doing justice - however interpreted - that they will endure the pain, does the ward relent.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>CORE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>2</Value>
+			<Provides>::: +2 Initiative</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL EFFECT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_MaxCounterAttack</StrVal>
+			<Value>1</Value>
+			<Provides>::: Counterattack :::
+			::: +1 per Action</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>XOTIC</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_IsNinjaSword</StrVal>
+			<Value>1</Value>
+			<Provides>::: Ninja Sword :::
+			::: +1 Initiative
+			::: +10% ATK
+			::: Applied in Tactical if Ninja</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_IsSword</StrVal>
+			<Value>1</Value>
+			<Provides>::: Is a Paladin Blade</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Nil</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_PathOfThePaladin</Attribute>
+			<Value>1</Value>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_CUTTING</AIPrefType>
+			<AIPriority>525</AIPriority>
+		</AIData>
+		<ArtDef>Longsword_Souls_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Longsword_UmbrilBrand">
+		<DisplayName>Umbril Brand</DisplayName>
+		<Description>This sword kills all light that touches it in a flowing cloud of fog. Flesh, too, decays in ctonact with it, and those who can master shadow will do better still with this sweapon in hand.</Description>
+		<Type>Weapon</Type>
+		<WeaponType>OneHanded</WeaponType>
+		<WeaponUpgradeType>Blade</WeaponUpgradeType>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>625</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Pierce</StrVal>
+			<Value>19</Value>
+		</GameModifier>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>This sword kills all light that touches it in a flowing cloud of fog. Flesh, too, decays in ctonact with it, and those who can master shadow will do better still with this sweapon in hand.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>CORE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_ArcaneShadow</StrVal>
+			<Value>6</Value>
+			<Provides>::: +6 Arcane Shadow ATK</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_ArcaneShadow</StrVal>
+			<Multiplier>1.25</Multiplier>
+			<Provides>::: +25% Arcane Shadow ATK</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>2</Value>
+			<Provides>::: +2 Initiative</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>SPELL POTENCY</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_SpellDamage_ArcaneShadow</StrVal>
+			<Value>0.25</Value>
+			<Provides>::: +25% Arcane Shadow Spell DMG</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL EFFECT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_MaxCounterAttack</StrVal>
+			<Value>1</Value>
+			<Provides>::: Counterattack :::
+			::: +1 per Action</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>XOTIC</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_IsNinjaSword</StrVal>
+			<Value>1</Value>
+			<Provides>::: Ninja Sword :::
+			::: +1 Initiative
+			::: +10% ATK
+			::: Applied in Tactical if Ninja</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_IsSword</StrVal>
+			<Value>1</Value>
+			<Provides>::: Is a Paladin Blade</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>UltraRare</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_CUTTING</AIPrefType>
+			<AIPriority>2400</AIPriority>
+		</AIData>
+		<ArtDef>Broadsword_Shadow_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Longsword_Uzzerraddax">
+		<DisplayName>Uzzerraddax</DisplayName>
+		<Description>This sword embodies power never meant for this world. Every moment spent holding its hilt is a battle against madness. Yet, woe to the armies that face it - for they are as lambs to the wolf.</Description>
+		<Type>Weapon</Type>
+		<WeaponType>OneHanded</WeaponType>
+		<WeaponUpgradeType>Blade</WeaponUpgradeType>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>2000</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Pierce</StrVal>
+			<Value>32</Value>
+		</GameModifier>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>This sword embodies power never meant for this world. Every moment spent holding its hilt is a battle against madness. Yet, woe to the armies that face it - for they are as lambs to the wolf.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>CORE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>2</Value>
+			<Provides>::: +2 Initiative</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL ABILITY</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Despair_Uzzerraddax</StrVal>
+			<Provides>::: Despair Of Uzzeraddax :::
+			::: 2 HP per Level from ALL enemies
+			::: 2 DMG per Level to ALL enemies
+			::: Resistable
+			
+			::: -1 HP for caster
+			::: Permanent penalty</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL EFFECT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ArmorPierce</StrVal>
+			<Value>66</Value>
+			<Provides>::: Armor Pierce :::
+			::: Ignores 66% of the target's DEF</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_MaxCounterAttack</StrVal>
+			<Value>1</Value>
+			<Provides>::: Counterattack :::
+			::: +1 per Action</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>XOTIC</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_IsNinjaSword</StrVal>
+			<Value>1</Value>
+			<Provides>::: Ninja Sword :::
+			::: +1 Initiative
+			::: +10% ATK
+			::: Applied in Tactical if Ninja</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_IsSword</StrVal>
+			<Value>1</Value>
+			<Provides>::: Is a Paladin Blade</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Unique</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Prereq>
+			<Type>UnitStat_Level</Type>
+			<Attribute>12</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_CUTTING</AIPrefType>
+			<AIPriority>12500</AIPriority>
+		</AIData>
+		<ArtDef>Broadsword_Shadow_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Mount_MireSkath_Paladin">
+		<DisplayName>Ancient Skath</DisplayName>
+		<Description>An ancient Skath.</Description>
+		<Type>Mount</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<ShopValue>1</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Moves</StrVal>
+			<Value>2</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_Immersive_2H</StrVal>
+			<Value>-1</Value>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Spell_X_FlurryOfArrows</StrVal>
+			<Provides>An ancient Skath.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Spell_X_Sagittarius</StrVal>
+			<Provides>CORE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>2</Value>
+			<Provides>::: +2 Initiative</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>IMMUNITY</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ChanceToAvoidProne</StrVal>
+			<Value>100</Value>
+			<Provides>::: To being Knocked Prone</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL ABILITY</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>DeadlyBite</StrVal>
+			<Provides>::: Deadly Bite :::
+			::: (ATK x2)</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Spell_X_Trample</StrVal>
+			<Provides>::: Trample :::
+			::: Normal ATK
+			::: Moves target back 1 tile
+			::: Move up 2 tiles if target dies</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_IsAfoot</StrVal>
+			<Value>-1</Value>
+			<Provides>XOTIC</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_BG_IsUsingMount</StrVal>
+			<Value>1</Value>
+			<Provides>::: Is Mounted</Provides>
+		</GameModifier>
+		<CutSceneDataPack>WargMountCutScenePack</CutSceneDataPack>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>UltraRare</RarityDisplay>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_X_Immersive_M</Attribute>
+			<Value>3</Value>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_FactionNoMounts</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_UnitNoMounts</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_PathOfThePaladin</Attribute>
+			<Value>1</Value>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_MOUNT</AIPrefType>
+			<AIPriority>4000</AIPriority>
+		</AIData>
+		<ArtDef>Mount_MireSkath_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Mount_RavenousHarridan_Paladin">
+		<DisplayName>Wise Harridan</DisplayName>
+		<Description>An wise Harridan.</Description>
+		<Type>Mount</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<ShopValue>1</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Moves</StrVal>
+			<Value>2</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_Immersive_2H</StrVal>
+			<Value>-1</Value>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Spell_X_FlurryOfArrows</StrVal>
+			<Provides>A wise Harridan.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Spell_X_Sagittarius</StrVal>
+			<Provides>CORE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>2</Value>
+			<Provides>::: +2 Initiative</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>IMMUNITY</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ChanceToAvoidProne</StrVal>
+			<Value>100</Value>
+			<Provides>::: To being Knocked Prone</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL ABILITY</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Beguile</StrVal>
+			<Provides>::: Beguile :::
+			::: Target swings randomly in melee
+			::: 50% Chance to succeed
+			::: Resistable</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>TangledWeb</StrVal>
+			<Provides>::: Tangled Web :::
+			::: 0 Dodge
+			::: 0 Move
+			::: Lasts 3 Actions
+			::: Resistable
+			::: GoNext</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_IsAfoot</StrVal>
+			<Value>-1</Value>
+			<Provides>XOTIC</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_BG_IsUsingMount</StrVal>
+			<Value>1</Value>
+			<Provides>::: Is Mounted</Provides>
+		</GameModifier>
+		<CutSceneDataPack>SpiderMountCutScenePack</CutSceneDataPack>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>UltraRare</RarityDisplay>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_X_Immersive_M</Attribute>
+			<Value>3</Value>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_FactionNoMounts</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_UnitNoMounts</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_PathOfThePaladin</Attribute>
+			<Value>1</Value>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_MOUNT</AIPrefType>
+			<AIPriority>4000</AIPriority>
+		</AIData>
+		<ArtDef>ArtDef_X_RavenousHarridanMount</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Mount_YoungDragon">
+		<DisplayName>Young Dragon</DisplayName>
+		<Description>Not yet fully developed, this young dragon is nontheless mighty beyond reckoning. Riding atop it, its fiery breath will be at your command.</Description>
+		<Type>Mount</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<ShopValue>1</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Moves</StrVal>
+			<Value>2</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_Immersive_2H</StrVal>
+			<Value>-1</Value>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Spell_X_FlurryOfArrows</StrVal>
+			<Provides>Not yet fully developed, this young dragon is nontheless mighty beyond reckoning. Riding atop it, its fiery breath will be at your command.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Spell_X_Sagittarius</StrVal>
+			<Provides>CORE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>2</Value>
+			<Provides>::: +2 Initiative</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>IMMUNITY</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ChanceToAvoidProne</StrVal>
+			<Value>100</Value>
+			<Provides>::: To being Knocked Prone</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>RESISTANCE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_MagicResist</StrVal>
+			<Value>4</Value>
+			<Provides>::: +4 Magic</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>STATS</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Dodge</StrVal>
+			<StrVal2>UnitStat_X_IsAfoot</StrVal2>
+			<Multiplier>0.80</Multiplier>
+			<vsHigher>1</vsHigher>
+			<Provides>::: -20% Dodge vs Afoot</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_MagicPower</StrVal>
+			<Value>4</Value>
+			<Provides>::: +4 Magic Power</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL ABILITY</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>FireBreath_YoungDragon</StrVal>
+			<Provides>::: Weak Fire Breath (Fire) :::
+			::: (ATK x0.75) DMG
+			::: Applies to all targets within a 1 radius
+			::: Has a Range of 3
+			::: Resistable</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Spell_X_Trample</StrVal>
+			<Provides>::: Trample :::
+			::: Normal ATK
+			::: Moves target back 1 tile
+			::: Move up 2 tiles if target dies</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_IsAfoot</StrVal>
+			<Value>-1</Value>
+			<Provides>XOTIC</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_BG_IsUsingMount</StrVal>
+			<Value>1</Value>
+			<Provides>::: Is Mounted</Provides>
+		</GameModifier>
+		<GameModifier InternalName="_IsUsingMount">
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_BG_IsRidingDragon</StrVal>
+			<Value>1</Value>
+			<Provides>::: Is Riding a Dragon</Provides>
+		</GameModifier>
+		<CutSceneDataPack>CutSceneDataPack_X_Hatchling</CutSceneDataPack>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>UltraRare</RarityDisplay>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_X_Immersive_M</Attribute>
+			<Value>3</Value>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_FactionNoMounts</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_UnitNoMounts</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_PathOfThePaladin</Attribute>
+			<Value>1</Value>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_MOUNT</AIPrefType>
+			<AIPriority>9000</AIPriority>
+		</AIData>
+		<ArtDef>ArtDef_X_Ashwake_Mount</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="RingOfBrilliantFury">
+		<DisplayName>Ring of Brilliant Fury</DisplayName>
+		<Description>This ring protects from magical shadow attacks.</Description>
+		<Type>Accessory</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>150</ShopValue>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_Ring</StrVal>
+			<Value>-1</Value>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>This ring protects from magical shadow attacks.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>RESISTANCE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ResistArcaneShadow</StrVal>
+			<Value>100</Value>
+			<Provides>::: +100% Arcane Shadow</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Nil</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<IsUsable>0</IsUsable>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_X_Ring</Attribute>
+			<Value>1</Value>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>1</AIPriority>
+		</AIData>
+		<ArtDef>ArtDef_X_FlickeringRing_Accessory</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Shield_Ebleramis">
+		<DisplayName>Ebleramis</DisplayName>
+		<Description>This shield chooses its owner, one who will stand up to evil and defend the weak. It is said that in times of incredible need, Ebleramis can hold back Death itself.</Description>
+		<Type>Defense</Type>
+		<WeaponType>Shield</WeaponType>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>750</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Pierce</StrVal>
+			<Value>15</Value>
+		</GameModifier>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>This shield chooses its owner, one who will stand up to evil and defend the weak. It is said that in times of incredible need, Ebleramis can hold back Death itself.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>RESISTANCE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_MagicResist</StrVal>
+			<Value>20</Value>
+			<Provides>::: +20 Magic</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>STATS</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Dodge</StrVal>
+			<Value>15</Value>
+			<Provides>::: +15 Dodge</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL ABILITY</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>ProtectionFromDeath_Ability</StrVal>
+			<Provides>::: Protection From Death :::
+			::: If killed, resurrected w/ 50% HP. Once.
+			::: -1 HP (Permanent penalty)</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>ShieldBash_Ability</StrVal>
+			<Provides>::: Shield Bash :::
+			::: DMG + Moves back target</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL ACTION</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Tactical_Auto_Defense_Boost</StrVal>
+			<Value>24</Value>
+			<Provides>::: +24 DEF when Defending</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>XOTIC</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_IsShield</StrVal>
+			<Value>1</Value>
+			<Provides>::: Is a Shield</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_IsDefenderShield</StrVal>
+			<Value>1</Value>
+			<Provides>::: Defender Shield :::
+			::: +1 Defense
+			::: +1 Initiative
+			::: Applied in Tactical if Defender</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Unique</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Barbarians</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Barbarian</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Injury_X_Maimed_Hand</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>475</AIPriority>
+		</AIData>
+		<ArtDef>ArtDef_X_Shield_Tower_Reinforced_Armor</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Shield_Paladin">
+		<DisplayName>Broken Shield</DisplayName>
+        <Description>This shield is bent and rusted beyond any usefulness. But when raised by a warrior mad enough to put ideals over their very flesh, powerful magic hardens this bizarre creation into a bulwark tougher than any natural product of the forge.</Description>
+		<Type>Defense</Type>
+		<WeaponType>Shield</WeaponType>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>140</ShopValue>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Pierce</StrVal>
+			<Value>6</Value>
+		</GameModifier>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>This shield is bent and rusted beyond any usefulness. But when raised by a warrior mad enough to put ideals over their very flesh, powerful magic hardens this bizarre creation into a bulwark tougher than any natural product of the forge.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>STATS</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Dodge</StrVal>
+			<Value>6</Value>
+			<Provides>::: +6 Dodge</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL ABILITY</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>ShieldBash_Ability</StrVal>
+			<Provides>::: Shield Bash :::
+			::: DMG + Moves back target</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL ACTION</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Tactical_Auto_Defense_Boost</StrVal>
+			<Value>15</Value>
+			<Provides>::: +15 DEF when Defending</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>XOTIC</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_IsShield</StrVal>
+			<Value>1</Value>
+			<Provides>::: Is a Shield</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_IsDefenderShield</StrVal>
+			<Value>1</Value>
+			<Provides>::: Defender Shield :::
+			::: +1 Defense
+			::: +1 Initiative
+			::: Applied in Tactical if Defender</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Nil</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_PathOfThePaladin</Attribute>
+			<Value>1</Value>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Barbarians</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Barbarian</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Injury_X_Maimed_Hand</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>75</AIPriority>
+		</AIData>
+		<ArtDef>ArtDef_X_Shield_Rusty_Armor</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="SpiritWargMount">
+		<DisplayName>The White Warg</DisplayName>
+		<Description>This strange presence may have once been a warg, or perhaps a murdered maiden. Atop it, you will move swiftly about the battlefield, and improve your spell resistance and casting efficiency.</Description>
+		<Type>Mount</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<ShopValue>1</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Moves</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_Immersive_2H</StrVal>
+			<Value>-1</Value>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Spell_X_FlurryOfArrows</StrVal>
+			<Provides>This strange presence may have once been a warg, or perhaps a murdered maiden. Atop it, you will move swiftly about the battlefield, and improve your spell resistance and casting efficiency.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Spell_X_Sagittarius</StrVal>
+			<Provides>CORE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_ArcaneLight</StrVal>
+			<Value>3</Value>
+			<Provides>::: +3 Arcane Light ATK</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>2</Value>
+			<Provides>::: +2 Initiative</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>IMMUNITY</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ChanceToAvoidProne</StrVal>
+			<Value>100</Value>
+			<Provides>::: To being Knocked Prone</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>RESISTANCE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_MagicResist</StrVal>
+			<Value>20</Value>
+			<Provides>::: +20 Magic</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_FreshWarg</StrVal>
+			<Value>1</Value>
+			<Provides>STATS</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Dodge</StrVal>
+			<StrVal2>UnitStat_X_IsAfoot</StrVal2>
+			<Multiplier>0.80</Multiplier>
+			<vsHigher>1</vsHigher>
+			<Provides>::: -20% Dodge vs Afoot</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL EFFECT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_TacticalSpellManaCost_Multiplier</StrVal>
+			<Value>-0.1</Value>
+			<Provides>::: -10% Tactical Mana cost</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_IsAfoot</StrVal>
+			<Value>-1</Value>
+			<Provides>XOTIC</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_BG_IsUsingMount</StrVal>
+			<Value>1</Value>
+			<Provides>::: Is Mounted</Provides>
+		</GameModifier>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>UltraRare</RarityDisplay>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_X_Immersive_M</Attribute>
+			<Value>3</Value>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_FactionNoMounts</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_UnitNoMounts</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_PathOfThePaladin</Attribute>
+			<Value>1</Value>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_MOUNT</AIPrefType>
+			<AIPriority>4000</AIPriority>
+		</AIData>
+		<ArtDef>ArtDef_X_SpiritWargMount_Mount</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="WarBoarMount_Paladin">
+		<DisplayName>Sage Boar</DisplayName>
+		<Description>This War Boar has keen control over its fury. Until combat begins.</Description>
+		<Type>Mount</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<ShopValue>1</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Moves</StrVal>
+			<Value>2</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_Immersive_2H</StrVal>
+			<Value>-1</Value>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Spell_X_FlurryOfArrows</StrVal>
+			<Provides>A sage Boar.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Spell_X_Sagittarius</StrVal>
+			<Provides>CORE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Boost</StrVal>
+			<Value>3</Value>
+			<Provides>::: +3 ATK for the 1st Action</Provides>
+			<xActions>1</xActions>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>2</Value>
+			<Provides>::: +2 Initiative</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>3</Value>
+			<Provides>::: +3 Initiative for the 1st Action</Provides>
+			<xActions>1</xActions>
+		</GameModifier>
+		<GameModifier>
+			<Provides>IMMUNITY</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ChanceToAvoidProne</StrVal>
+			<Value>100</Value>
+			<Provides>::: To being Knocked Prone</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>STATS</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_DodgeAgainstRanged</StrVal>
+			<Value>25</Value>
+			<Provides>::: +25 Dodge vs Ranged</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL ABILITY</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Spell_X_Trample</StrVal>
+			<Provides>::: Trample :::
+			::: Normal ATK
+			::: Moves target back 1 tile
+			::: Move up 2 tiles if target dies</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL EFFECT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_MaxCounterAttack</StrVal>
+			<Value>1</Value>
+			<Provides>::: Counterattack :::
+			::: +1 per Action</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_IsAfoot</StrVal>
+			<Value>-1</Value>
+			<Provides>XOTIC</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_BG_IsUsingMount</StrVal>
+			<Value>1</Value>
+			<Provides>::: Is Mounted</Provides>
+		</GameModifier>
+		<CutSceneDataPack>WargMountCutScenePack</CutSceneDataPack>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>UltraRare</RarityDisplay>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_X_Immersive_M</Attribute>
+			<Value>3</Value>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_FactionNoMounts</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_UnitNoMounts</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_PathOfThePaladin</Attribute>
+			<Value>1</Value>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_MOUNT</AIPrefType>
+			<AIPriority>4000</AIPriority>
+		</AIData>
+		<ArtDef>WarBoarMount_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="WargMount_Paladin">
+		<DisplayName>Legendary Warg</DisplayName>
+		<Description>This lupine specimen moves swift as shadows.</Description>
+		<Type>Mount</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<ShopValue>1</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Moves</StrVal>
+			<Value>2</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_Immersive_2H</StrVal>
+			<Value>-1</Value>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Spell_X_FlurryOfArrows</StrVal>
+			<Provides>This lupine specimen moves swift as shadows, and will lend you its savage jaws when you need them.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Spell_X_Sagittarius</StrVal>
+			<Provides>CORE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>3</Value>
+			<Provides>::: +3 Initiative</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>IMMUNITY</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ChanceToAvoidProne</StrVal>
+			<Value>100</Value>
+			<Provides>::: To being Knocked Prone</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_FreshWarg</StrVal>
+			<Value>1</Value>
+			<Provides>STATS</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Dodge</StrVal>
+			<Value>5</Value>
+			<Provides>::: +5 Dodge</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_IsAfoot</StrVal>
+			<Value>-1</Value>
+			<Provides>XOTIC</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_BG_IsUsingMount</StrVal>
+			<Value>1</Value>
+			<Provides>::: Is Mounted</Provides>
+		</GameModifier>
+		<CutSceneDataPack>WargMountCutScenePack</CutSceneDataPack>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>UltraRare</RarityDisplay>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_X_Immersive_M</Attribute>
+			<Value>3</Value>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_FactionNoMounts</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_UnitNoMounts</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_PathOfThePaladin</Attribute>
+			<Value>1</Value>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_MOUNT</AIPrefType>
+			<AIPriority>4000</AIPriority>
+		</AIData>
+		<ArtDef>BasicWargMount_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Warhorse_Paladin">
+		<DisplayName>Legendary Warhorse</DisplayName>
+		<Description>Even the steeds of Antheros were not this stout, graceful, and handsome. Atop this mighty steed you shall travel great distances at speed, and enemies will fear your charge.</Description>
+		<Type>Mount</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<ShopValue>1</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Moves</StrVal>
+			<Value>3</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_Immersive_2H</StrVal>
+			<Value>-1</Value>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Spell_X_FlurryOfArrows</StrVal>
+			<Provides>Even the steeds of Antheros were not this stout, graceful, and handsome. Atop this mighty steed you shall travel great distances at speed, and enemies will fear your charge.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Spell_X_Sagittarius</StrVal>
+			<Provides>CORE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Boost</StrVal>
+			<Value>5</Value>
+			<Provides>::: +5 ATK for the 1st Action</Provides>
+			<xActions>1</xActions>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>1</Value>
+			<Provides>::: +1 Initiative</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>5</Value>
+			<xActions>1</xActions>
+			<Provides>::: +5 Initiative for the 1st Action</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>IMMUNITY</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ChanceToAvoidProne</StrVal>
+			<Value>100</Value>
+			<Provides>::: To being Knocked Prone</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>MOVEMENT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Moves</StrVal>
+			<Value>1</Value>
+			<Provides>::: +1 for the 1st Action</Provides>
+			<xActions>1</xActions>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_FreshHorse</StrVal>
+			<Value>1</Value>
+			<Provides>STATS</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Dodge</StrVal>
+			<StrVal2>UnitStat_X_IsAfoot</StrVal2>
+			<Multiplier>0.80</Multiplier>
+			<vsHigher>1</vsHigher>
+			<Provides>::: -20% Dodge vs Afoot</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL ABILITY</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Spell_X_Trample</StrVal>
+			<Provides>::: Trample :::
+			::: Normal ATK
+			::: Moves target back 1 tile
+			::: Move up 2 tiles if target dies</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_IsAfoot</StrVal>
+			<Value>-1</Value>
+			<Provides>XOTIC</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_BG_IsUsingMount</StrVal>
+			<Value>1</Value>
+			<Provides>::: Is Mounted</Provides>
+		</GameModifier>
+		<CutSceneDataPack>HorseMountCutScenePack</CutSceneDataPack>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>UltraRare</RarityDisplay>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_X_Immersive_M</Attribute>
+			<Value>3</Value>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_FactionNoMounts</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_UnitNoMounts</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_PathOfThePaladin</Attribute>
+			<Value>1</Value>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_MOUNT</AIPrefType>
+			<AIPriority>7000</AIPriority>
+		</AIData>
+		<ArtDef>Warhorse_ArtDef</ArtDef>
+	</GameItemType>
+</GameItemTypes>

@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<Container>
+  <!-- Magma Forge-->
+  <ImprovementType InternalName="rivermod_magmaforge">
+    <Prereq>
+      <Type>RestrictedAbilityBonusOption</Type>
+      <Attribute>Rivermod_blockmagmaforge</Attribute>
+      <Target>Player</Target>
+    </Prereq>
+    <Prereq>
+      <Type>Tech</Type>
+      <Attribute>Construction</Attribute>
+    </Prereq>
+    <DisplayName>Magma Forge</DisplayName>
+    <Description>Allows you to cast the Magma Forge spell</Description>
+    <RequiresCity>1</RequiresCity>
+    <PreferredTerrain>Magmariver</PreferredTerrain>
+    <LaborToBuild>200</LaborToBuild>
+    <GameModifier>
+      <ModType>Resource</ModType>
+      <Attribute>MagmaForge</Attribute>
+      <Value>1</Value>
+      <PerTurn>1</PerTurn>
+      <Provides>+1 Magma Forge</Provides>
+    </GameModifier>
+    <IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+    <RequiresResource>1</RequiresResource>
+    <SupportedResourceType>Magmatube</SupportedResourceType>
+    <AIData AIPersonality="AI_General">
+      <AITag>Materials</AITag>
+    </AIData>
+    <ArtDef>Art_Magmaforge</ArtDef>
+  </ImprovementType>
+  <ImprovementTypeArtDef InternalName="Art_Magmaforge">
+    <ImprovementTypeArtSubPack InternalName="Art_Magmaforge_Default">
+      <TileDesign>magmariver_forge_empire</TileDesign>
+      <ConstructionTileDesign>magmariver_forge_build</ConstructionTileDesign>
+      <DrawnIcon>Improvement_ClayQuarry.png</DrawnIcon>
+      <DrawnIconConstruction>Improvement_ClayQuarry.png</DrawnIconConstruction>
+      <Thumbnail>magmaforge.png</Thumbnail>
+      <Medallions InternalName="">
+        <All>magmaforge.png</All>
+      </Medallions>
+    </ImprovementTypeArtSubPack>
+  </ImprovementTypeArtDef>
+  <!-- poison forge // Witch Market -->
+  <ImprovementType InternalName="rivermod_WitchMarket">
+    <Prereq>
+      <Type>Tech</Type>
+      <Attribute>Cooperation</Attribute>
+    </Prereq>
+    <DisplayName>Witch Market</DisplayName>
+    <Description>Allows you to cast the Witch Market spell</Description>
+    <RequiresCity>1</RequiresCity>
+    <PreferredTerrain>Poisonriver</PreferredTerrain>
+    <LaborToBuild>200</LaborToBuild>
+    <GameModifier>
+      <ModType>Resource</ModType>
+      <Attribute>WitchMarket</Attribute>
+      <Value>1</Value>
+      <PerTurn>1</PerTurn>
+      <Provides>+1 Witch Market</Provides>
+    </GameModifier>
+    <IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+    <RequiresResource>1</RequiresResource>
+    <SupportedResourceType>Poisontube</SupportedResourceType>
+    <AIData AIPersonality="AI_General">
+      <AITag>Materials</AITag>
+    </AIData>
+    <ArtDef>Art_WitchMarket</ArtDef>
+  </ImprovementType>
+  <ImprovementTypeArtDef InternalName="Art_WitchMarket">
+    <ImprovementTypeArtSubPack InternalName="Art_Magmaforge_Default">
+      <TileDesign>poisonriver_forge_empire </TileDesign>
+      <ConstructionTileDesign>magmariver_forge_build</ConstructionTileDesign>
+      <DrawnIcon>Improvement_ClayQuarry.png</DrawnIcon>
+      <DrawnIconConstruction>Improvement_ClayQuarry.png</DrawnIconConstruction>
+      <Thumbnail>poisonforge.png</Thumbnail>
+      <Medallions InternalName="">
+        <All>poisonforge.png</All>
+      </Medallions>
+    </ImprovementTypeArtSubPack>
+  </ImprovementTypeArtDef>
+  <!-- bloodforge -->
+  <ImprovementType InternalName="rivermod_BloodForge">
+    <Prereq>
+      <Type>RestrictedAbilityBonusOption</Type>
+      <Attribute>Rivermod_NoBloodForge</Attribute>
+      <Target>Player</Target>
+    </Prereq>
+    <Prereq>
+      <Type>Tech</Type>
+      <Attribute>Arcane_Mastery</Attribute>
+    </Prereq>
+    <DisplayName>Blood Forge</DisplayName>
+    <Description>Allows you to cast the Blood Forge spell</Description>
+    <RequiresCity>1</RequiresCity>
+    <PreferredTerrain>Bloodriver</PreferredTerrain>
+    <LaborToBuild>200</LaborToBuild>
+    <GameModifier>
+      <ModType>Resource</ModType>
+      <Attribute>BloodForge</Attribute>
+      <Value>1</Value>
+      <PerTurn>1</PerTurn>
+      <Provides>+1 Blood Forge</Provides>
+    </GameModifier>
+    <IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+    <RequiresResource>1</RequiresResource>
+    <SupportedResourceType>Bloodtube</SupportedResourceType>
+    <AIData AIPersonality="AI_General">
+      <AITag>Materials</AITag>
+    </AIData>
+    <ArtDef>Art_Bloodforge</ArtDef>
+  </ImprovementType>
+  <ImprovementTypeArtDef InternalName="Art_Bloodforge">
+    <ImprovementTypeArtSubPack InternalName="Art_Magmaforge_Default">
+      <TileDesign>bloodriver_forge_empire </TileDesign>
+      <ConstructionTileDesign>magmariver_forge_build</ConstructionTileDesign>
+      <DrawnIcon>Improvement_ClayQuarry.png</DrawnIcon>
+      <DrawnIconConstruction>Improvement_ClayQuarry.png</DrawnIconConstruction>
+      <Thumbnail>bloodforge.png</Thumbnail>
+      <Medallions InternalName="">
+        <All>bloodforge.png</All>
+      </Medallions>
+    </ImprovementTypeArtSubPack>
+  </ImprovementTypeArtDef>
+  <!-- deathforge -->
+  <ImprovementType InternalName="rivermod_Death Forge">
+    <Prereq>
+      <Type>RestrictedAbilityBonusOption</Type>
+      <Attribute>Rivermod_Golem2</Attribute>
+      <Target>Player</Target>
+    </Prereq>
+    <Prereq>
+      <Type>Tech</Type>
+      <Attribute>Glyph_Stones</Attribute>
+    </Prereq>
+    <DisplayName>Death Forge</DisplayName>
+    <Description>Allows you to cast the Death Forge spell</Description>
+    <RequiresCity>1</RequiresCity>
+    <PreferredTerrain>Deathriver</PreferredTerrain>
+    <LaborToBuild>200</LaborToBuild>
+    <GameModifier>
+      <ModType>Resource</ModType>
+      <Attribute>DeathForge</Attribute>
+      <Value>1</Value>
+      <PerTurn>1</PerTurn>
+      <Provides>+1 Death Forge</Provides>
+    </GameModifier>
+    <IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+    <RequiresResource>1</RequiresResource>
+    <SupportedResourceType>Deathtube</SupportedResourceType>
+    <AIData AIPersonality="AI_General">
+      <AITag>Materials</AITag>
+    </AIData>
+    <ArtDef>Art_Deathforge</ArtDef>
+  </ImprovementType>
+  <ImprovementTypeArtDef InternalName="Art_Deathforge">
+    <ImprovementTypeArtSubPack InternalName="Art_Magmaforge_Default">
+      <TileDesign>deathriver_forge_empire </TileDesign>
+      <ConstructionTileDesign>magmariver_forge_build</ConstructionTileDesign>
+      <DrawnIcon>Improvement_ClayQuarry.png</DrawnIcon>
+      <DrawnIconConstruction>Improvement_ClayQuarry.png</DrawnIconConstruction>
+      <Thumbnail>deathforge.png</Thumbnail>
+      <Medallions InternalName="">
+        <All>deathforge.png</All>
+      </Medallions>
+    </ImprovementTypeArtSubPack>
+  </ImprovementTypeArtDef>
+</Container>

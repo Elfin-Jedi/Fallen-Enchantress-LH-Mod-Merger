@@ -1,0 +1,2295 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<Techs>
+	<!--TECHS-->
+		<!--AI-->
+	<TechDef InternalName="Tech_X_ThinkingMachine">
+		<DisplayName>Thinking Machine #AI</DisplayName>
+		<Description>Thinking Machine #AIOnly. This Technology should not appear for Players, but even with 0% probability it does appear from time to time. You should not research it. In fact, you might want to use the Ctrl+N shortcut to restart your game.</Description>
+		<AdviceText>Thinking Machine #AIOnly.</AdviceText>
+		<Image>Medallion_X_ThinkingMachine.png</Image>
+		<Color>182,7,3</Color>
+		<HotColor>255,48,0</HotColor>
+		<Cost>1</Cost>
+		<Rarity>100</Rarity>
+		<Category>Warfare</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>0</AppearanceChance>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_Victory</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_Victory2</Attribute>
+		</Prereq>
+		<GameModifier>
+			<Icon>Spell_X_ThinkingMachine.png</Icon>
+			<Provides>Design ::: Thinking Machine</Provides>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>1</AIPriority>
+			<AITradeToGetValue>1</AITradeToGetValue>
+			<AITradeOutValue>1</AITradeOutValue>
+			<AIAtWarMultiplier>1</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+		<!--CORE-->
+	<TechDef InternalName="Agriculture">
+		<GameModifier>
+			<Icon>Spell_X_BurnFields.png</Icon>
+			<Provides>Strategic Spell ::: Burn Fields (Requires Spies Faction Strength)</Provides>
+		</GameModifier>
+	</TechDef>
+	<TechDef InternalName="Administration">
+		<GameModifier>
+			<Icon>Ability_X_Foreman.png</Icon>
+			<Provides>Design ::: Foreman (Henchmen only)</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Icon>Spell_X_TorchCity.png</Icon>
+			<Provides>Strategic Spell ::: Torch City (Requires Spies Faction Strength)</Provides>
+		</GameModifier>
+	</TechDef>
+	<TechDef InternalName="Arcane_Apparel">
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_Staffs</Attribute>
+		</Prereq>
+	</TechDef>
+	<TechDef InternalName="Arcane_Armor">
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Weaklings</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+	</TechDef>
+	<TechDef InternalName="Arcane_Mastery">
+		<GameModifier>
+			<Icon>Ability_ReapII_Icon.png</Icon>
+			<Provides>Design ::: Sanguinarian</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Icon>Spell_X_ArcaneInterference.png</Icon>
+			<Provides>Strategic Spell ::: Arcane Interference (Requires Spies Faction Strength)</Provides>
+		</GameModifier>
+	</TechDef>
+	<TechDef InternalName="Archery">
+		<GameModifier>
+			<Icon>Ability_PrecisionII_Icon.png</Icon>
+			<Provides>Design ::: Precision II</Provides>
+		</GameModifier>
+	</TechDef>
+	<TechDef InternalName="Armor">
+		<GameModifier>
+			<Icon>Ability_DefenderII_Icon.png</Icon>
+			<Provides>Design ::: Bulwark</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Icon>Ability_X_Ironskin3.png</Icon>
+			<Provides>Design ::: Rhinoceros Skin</Provides>
+		</GameModifier>
+	</TechDef>
+	<TechDef InternalName="Blacksmithing">
+		<GameModifier>
+			<Icon>Ability_X_Ironskin2.png</Icon>
+			<Provides>Design ::: Elephant Skin</Provides>
+		</GameModifier>
+	</TechDef>
+	<TechDef InternalName="Book_Of_Mastery">
+		<GameModifier>
+			<Icon>Ability_X_Rage3.png</Icon>
+			<Provides>Design ::: Zing</Provides>
+		</GameModifier>
+	</TechDef>
+	<TechDef InternalName="Breons_Letters">
+		<GameModifier>
+			<Icon>Ability_X_Bellman.png</Icon>
+			<Provides>Design ::: Bellman</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Icon>Ability_XM_CanCastR.png</Icon>
+			<Provides>Design ::: Apprentices</Provides>
+		</GameModifier>
+	</TechDef>
+	<TechDef InternalName="Civics">
+		<GameModifier>
+			<Icon>Ability_X_Blood_Fame.png</Icon>
+			<Provides>Design ::: Blood Fame</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Icon>Spell_X_Disinformation.png</Icon>
+			<Provides>Strategic Spells ::: Disinformation (Requires Spies Faction Strength)</Provides>
+		</GameModifier>
+	</TechDef>
+	<TechDef InternalName="Company">
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Target>Player</Target>
+			<Attribute>Weakness_X_Frondeurs</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>100</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>5</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Construction">
+		<GameModifier>
+			<Icon>Ability_X_Sapper2.png</Icon>
+			<Provides>Design ::: Veteran Sapper</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Icon>Spell_X_SabotageCity.png</Icon>
+			<Provides>Strategic Spell ::: Sabotage City (Requires Spies Faction Strength)</Provides>
+		</GameModifier>
+	</TechDef>
+	<TechDef InternalName="Craftsmanship">
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_FrenziedMiners</StrVal>
+			<Icon>Spell_X_FrenziedMiners.png</Icon>
+			<Provides>Strategic Spell ::: Frenzied Miners</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Icon>Spell_X_WreckInfrastructures.png</Icon>
+			<Provides>Strategic Spell ::: Wreck Infrastructures (Requires Spies Faction Strength)</Provides>
+		</GameModifier>
+	</TechDef>
+	<TechDef InternalName="Drills">
+		<GameModifier>
+			<Icon>Ability_X_Ace2.png</Icon>
+			<Provides>Design ::: Ace II</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Icon>Talent_X_Immunity_Fear.png</Icon>
+			<Provides>Design ::: Immune to Fear</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Icon>Ability_X_Immunity_Swarm.png</Icon>
+			<Provides>Design ::: Immune to Swarm</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Icon>Ability_X_Leviathan_UD.png</Icon>
+			<Provides>Design ::: Leviathan</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Icon>Ability_X_Enrage3.png</Icon>
+			<Provides>Design ::: Wrath</Provides>
+		</GameModifier>
+	</TechDef>
+	<TechDef InternalName="Education">
+		<GameModifier>
+			<Icon>Spell_X_PhoenixProgram.png</Icon>
+			<Provides>Strategic Spell ::: Phoenix Program (Requires Spies Faction Strength)</Provides>
+		</GameModifier>
+	</TechDef>
+	<TechDef InternalName="Entertainment">
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Construction</Attribute>
+		</Prereq>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_CoupdetatB</StrVal>
+			<Icon>Spell_X_Coupdetat.png</Icon>
+			<Provides>Strategic Spell ::: Coup d'Etat</Provides>
+		</GameModifier>
+	</TechDef>
+	<TechDef InternalName="Ereogs_Journal">
+		<GameModifier>
+			<Icon>Ability_XM_CanCastRU.png</Icon>
+			<Provides>Unit Design ::: Jesters</Provides>
+		</GameModifier>
+	</TechDef>
+	<TechDef InternalName="Guilds">
+		<GameModifier>
+			<Icon>Spell_X_BrokenLoyalties.png</Icon>
+			<Provides>Strategic Spell ::: Broken Loyalties (Requires Betrayers Faction Strength)</Provides>
+		</GameModifier>
+	</TechDef>
+	<TechDef InternalName="Heavy_Armor">
+		<GameModifier>
+			<Icon>Ability_DefenderIII_Icon.png</Icon>
+			<Provides>Design ::: Rampart</Provides>
+		</GameModifier>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Weaklings</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+	</TechDef>
+	<TechDef InternalName="Higher_Education">
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_Inspiration2</StrVal>
+			<Icon>Spell_X_Inspiration2.png</Icon>
+			<Provides>Strategic Spell ::: Chimerical Imagination</Provides>
+		</GameModifier>
+	</TechDef>
+	<TechDef InternalName="Immortal_Codex">
+		<GameModifier>
+			<Icon>Ability_ReapIII_Icon.png</Icon>
+			<Provides>Design ::: Reaper</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Icon>Ability_X_Rage2.png</Icon>
+			<Provides>Design ::: Unnatural</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_SacredCity</StrVal>
+			<Icon>Spell_X_SacredCity.png</Icon>
+			<Provides>Strategic Spell ::: Sacred City</Provides>
+		</GameModifier>
+	</TechDef>
+	<TechDef InternalName="Knowledge">
+		<GameModifier>
+			<Icon>Ability_X_Engineer.png</Icon>
+			<Provides>Design ::: Engineer (Henchmen only)</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Icon>Spell_X_Assassinations.png</Icon>
+			<Provides>Strategic Spell ::: Assassinations (Requires Spies Faction Strength)</Provides>
+		</GameModifier>
+	</TechDef>
+	<TechDef InternalName="Logistics">
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Target>Player</Target>
+			<Attribute>Weakness_X_Frondeurs</Attribute>
+		</Prereq>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_ExpansionSatellite</StrVal>
+			<Icon>Spell_X_ExpansionSatellite.png</Icon>
+			<Provides>Strategic Spell ::: Expansion Satellite</Provides>
+		</GameModifier>
+	</TechDef>
+	<TechDef InternalName="Longbows">
+		<GameModifier>
+			<Icon>Ability_PrecisionIII_Icon.png</Icon>
+			<Provides>Design ::: Precision III</Provides>
+		</GameModifier>
+	</TechDef>
+	<TechDef InternalName="Mining">
+		<GameModifier>
+			<Icon>Ability_X_Miner.png</Icon>
+			<Provides>Design ::: Miner</Provides>
+		</GameModifier>
+	</TechDef>
+	<TechDef InternalName="Mounted_Warfare">
+		<GameModifier>
+			<Icon>Ability_X_Groom.png</Icon>
+			<Provides>Design ::: Groom</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Icon>Ability_X_Charge3.png</Icon>
+			<Provides>Design ::: Stampeder</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_FreshHorse</StrVal>
+			<Icon>Spell_X_FreshHorse.png</Icon>
+			<Provides>Strategic Spell ::: Fresh Horse</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_ZealousBreeders</StrVal>
+			<Icon>Spell_X_ZealousBreeders.png</Icon>
+			<Provides>Strategic Spell ::: Zealous Breeders</Provides>
+		</GameModifier>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_FactionNoMounts</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Gourmets</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+	</TechDef>
+	<TechDef InternalName="Refined_Arcana">
+		<GameModifier>
+			<Icon/>
+			<Provides>(DISABLED)</Provides>
+		</GameModifier>
+	</TechDef>
+	<TechDef InternalName="Refined_Defense">
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Weaklings</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+	</TechDef>
+	<TechDef InternalName="Refined_Training">
+		<GameModifier>
+			<Icon/>
+			<Provides>(DISABLED)</Provides>
+		</GameModifier>
+	</TechDef>
+	<TechDef InternalName="Restoration">
+		<GameModifier>
+			<Icon>Spell_X_SpoilFoodReserves.png</Icon>
+			<Provides>Strategic Spell ::: Spoil Food Reserves (Requires Spies Faction Strength)</Provides>
+		</GameModifier>
+	</TechDef>
+	<TechDef InternalName="Siege_Weapons">
+		<GameModifier>
+			<Icon>Ability_Knockback_Icon.png</Icon>
+			<Provides>Design ::: Crusher</Provides>
+		</GameModifier>
+	</TechDef>
+	<TechDef InternalName="Sorcery">
+		<GameModifier>
+			<Icon>Ability_ReapI_Icon.png</Icon>
+			<Provides>Design ::: Bloodsucker</Provides>
+		</GameModifier>
+	</TechDef>
+	<TechDef InternalName="Third_Book_Of_The_Magi">
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_Mass_DestinysGift_Army</StrVal>
+			<Icon>Spell_X_Mass_DestinysGift_Army.png</Icon>
+			<Provides>Strategic Spell ::: Destiny's Gift #Army</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_Mass_DestinysGift_Faction</StrVal>
+			<Icon>Spell_X_Mass_DestinysGift_Faction.png</Icon>
+			<Provides>Strategic Spell ::: Destiny's Gift #Faction</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_Volcammolation</StrVal>
+			<Icon>Spell_X_CurgensVolcano.png</Icon>
+			<Provides>Strategic Spell ::: Volcammolation</Provides>
+		</GameModifier>
+	</TechDef>
+	<TechDef InternalName="Trading">
+		<GameModifier>
+			<Icon>Ability_X_Lapidary.png</Icon>
+			<Provides>Design ::: Lapidary</Provides>
+		</GameModifier>
+	</TechDef>
+	<TechDef InternalName="Training">
+		<GameModifier>
+			<Icon>Ability_X_Ace1.png</Icon>
+			<Provides>Design ::: Ace I</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Icon>Ability_X_Behemoth_UD.png</Icon>
+			<Provides>Design ::: Behemoth</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Icon>Ability_X_Enrage2.png</Icon>
+			<Provides>Design ::: Furor</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Icon>Ability_ImmuneToCounterattack_Icon.png</Icon>
+			<Provides>Design ::: Immune to Counterattacks</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Icon>Ability_X_Sangfroid.png</Icon>
+			<Provides>Design ::: Sang-froid</Provides>
+		</GameModifier>
+	</TechDef>
+	<TechDef InternalName="War_Colleges">
+		<GameModifier>
+			<Icon>Ability_X_Ace3.png</Icon>
+			<Provides>Design ::: Ace III</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Icon>Ability_X_Veteran2.png</Icon>
+			<Provides>Design ::: Professional</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Icon>Spell_X_Forging.png</Icon>
+			<Provides>Strategic Spells ::: Forge Plate Armor (Requires Forging Power and +1 Plate Smithing Power)</Provides>
+		</GameModifier>
+	</TechDef>
+	<TechDef InternalName="Warg_Riding">
+		<GameModifier>
+			<Icon>Player_X_Disciplinarians.png</Icon>
+			<Provides>Design ::: Tamer</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_FreshWarg</StrVal>
+			<Icon>Spell_X_FreshWarg.png</Icon>
+			<Provides>Strategic Spell ::: Fresh Warg</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_FerventTamers</StrVal>
+			<Icon>Spell_X_FerventTamers.png</Icon>
+			<Provides>Strategic Spell ::: Fervent Tamers</Provides>
+		</GameModifier>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_FactionNoMounts</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Gourmets</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+	</TechDef>
+	<TechDef InternalName="Weapons_Of_War">
+		<GameModifier>
+			<Icon>Ability_X_Antagonist.png</Icon>
+			<Provides>Design ::: Antagonist</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Icon>Ability_ShadowStrikeIII_Icon.png</Icon>
+			<Provides>Design ::: Unpredictable</Provides>
+		</GameModifier>
+	</TechDef>
+	<TechDef InternalName="Weaponry">
+		<GameModifier>
+			<Icon>Ability_ShadowStrikeI_Icon.png</Icon>
+			<Provides>Design ::: Erratic</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Icon>Ability_X_Brute2.png</Icon>
+			<Provides>Design ::: Tormenter</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Icon>Spell_X_Forging.png</Icon>
+			<Provides>Strategic Spells ::: Forge Short Sword (Requires +1 Forging Power)</Provides>
+		</GameModifier>
+	</TechDef>
+	<TechDef InternalName="Weaponsmithing">
+		<GameModifier>
+			<Icon>Ability_X_Brute3.png</Icon>
+			<Provides>Design ::: Animal</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Icon>Ability_X_Underdog2.png</Icon>
+			<Provides>Design ::: Dark Horse</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Icon>Ability_ShadowStrikeII_Icon.png</Icon>
+			<Provides>Design ::: Devious</Provides>
+		</GameModifier>
+	</TechDef>
+		<!--X-->
+	<TechDef InternalName="Tech_X_AcidGland">
+		<DisplayName>Acid Gland</DisplayName>
+		<Description>Research these techniques to unlock the Acid Gland for your Trained Units and in your Shops.</Description>
+		<AdviceText>Research these techniques to unlock the Acid Gland for your Trained Units and in your Shops.</AdviceText>
+		<Image>Tech_X_AcidGland.png</Image>
+		<Color>182,7,3</Color>
+		<HotColor>255,48,0</HotColor>
+		<Cost>12</Cost>
+		<Rarity>100</Rarity>
+		<Category>Warfare</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>AssassinsTools</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>CultofaHundredEyes</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_SpiderVenom</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_VialOfPoison</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>50</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>2</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>2</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_ArcaneBazaar">
+		<DisplayName>Arcane Bazaar</DisplayName>
+		<Description>This breakthrough in the arcane arts will allow you to craft high-end magical clothes. Remember the great benefit of magical equipment; even those who lack inherent arcane abilities can utilize its power.</Description>
+		<AdviceText>Magical apparel can provide significant boosts to our units without weighing them down.</AdviceText>
+		<Image>Tech_X_ArcaneBazaar.png</Image>
+		<Color>76,79,196</Color>
+		<HotColor>182,182,244</HotColor>
+		<Cost>502</Cost>
+		<Rarity>100</Rarity>
+		<Category>Magic</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockDiplomacyWndAbility</Attribute>
+			<StrVal>Resource_X_ArcaneMounts</StrVal>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_WBG_R50</StrVal>
+			<Icon>Spell_X_B50.png</Icon>
+			<Provides>Strategic Spell ::: Buy Wild Beasts (-50 Gildar)</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_WBG_R500</StrVal>
+			<Icon>Spell_X_B500.png</Icon>
+			<Provides>Strategic Spell ::: Buy Wild Beasts (-500 Gildar)</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_WBG_10</StrVal>
+			<Icon>Spell_X_S10.png</Icon>
+			<Provides>Strategic Spell ::: Sell Wild Beasts (-10 Beasts)</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_WBG_100</StrVal>
+			<Icon>Spell_X_S100.png</Icon>
+			<Provides>Strategic Spell ::: Sell Wild Beasts (-100 Beasts)</Provides>
+		</GameModifier>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Magical_Forging</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Book_Of_Mastery</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>50</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>1</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_ArcaneEdges">
+		<DisplayName>Arcane Edges</DisplayName>
+		<Description>Craft the Boreal Sunderer, the Pyre Sunderer, the Primordial Slayer, the Twine Slayer, and the Valorous Slayer by researching these techniques.</Description>
+		<AdviceText>This research will unlock Slayer Swords and some Sunderer Axes.</AdviceText>
+		<Image>Tech_X_ArcaneSlayers.png</Image>
+		<Color>255,186,31</Color>
+		<HotColor>255,242,57</HotColor>
+		<Cost>502</Cost>
+		<Rarity>100</Rarity>
+		<Category>Magic</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Arcane_Armor</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Arcane_Weapons</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>50</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>1</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_ArcaneGardening">
+		<DisplayName>Arcane Gardening</DisplayName>
+		<Description>This breakthrough in the arcane arts gives players the ability to grow small Shards which can be found in Shops and used for our Trained Units.</Description>
+		<AdviceText>This technique unlocks a number of Magic Stones for your Trained Units and in your Shops.</AdviceText>
+		<Image>Crystals.png</Image>
+		<Color>76,79,196</Color>
+		<HotColor>182,182,244</HotColor>
+		<Cost>15</Cost>
+		<Rarity>100</Rarity>
+		<Category>Magic</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<GameModifier>
+			<Icon>Spell_X_Antipole.png</Icon>
+			<Provides>Strategic Spells ::: Craft Arcanium (Requires +1 Forging Power, some accumulated Research, and appropriate Master Spell Rank)</Provides>
+		</GameModifier>
+		<!--
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_HeavenFall</StrVal>
+			<Icon>Spell_X_HeavenFall.png</Icon>
+			<Provides>Strategic Spell ::: Heavenfall</Provides>
+		</GameModifier>
+		-->
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Charms</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Shard_Harvesting</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>50</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>1</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_ArcaneScriptures">
+		<DisplayName>Arcane Scriptures</DisplayName>
+		<Description>Scrolls from the Dragon King itself can reveal much in crystal mining techniques, but time has to be spent deciphering them. We shall also be able to construct the Forge of the Overlord with such knowledge and conjure powerful help from the sky.</Description>
+		<AdviceText>The Dragon King knew a thing or two about crystal mining, if deciphered, these scriptures will allow us to build the Great Extractor and the Forge of the Overlord. The latter shall allow us to cast the Spell of Making.</AdviceText>
+		<Image>LostLibrary.png</Image>
+		<Color>76,79,196</Color>
+		<HotColor>182,182,244</HotColor>
+		<Cost>276</Cost>
+		<Rarity>100</Rarity>
+		<Category>Magic</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Ereogs_Journal</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Book_Of_Mastery</Attribute>
+		</Prereq>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_ArdentDiggers</StrVal>
+			<Icon>Spell_X_ArdentDiggers.png</Icon>
+			<Provides>Strategic Spell ::: Ardent Diggers</Provides>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>50</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>1</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_ArcaneSunderer_L">
+		<DisplayName>Opalescent Sunderer</DisplayName>
+		<Description>Craft the Opalescent Sunderer by researching these techniques.</Description>
+		<AdviceText>This research will unlock the Opalescent Sunderer.</AdviceText>
+		<Image>Tech_X_ArcaneSunderer_L.png</Image>
+		<Color>255,186,31</Color>
+		<HotColor>255,242,57</HotColor>
+		<Cost>401</Cost>
+		<Rarity>100</Rarity>
+		<Category>Magic</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Magical_Forging</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_ArcaneWeapons_L</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Enchanters</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>50</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>1</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_ArcaneSunderer_P">
+		<DisplayName>Naja Sunderer</DisplayName>
+		<Description>Craft the Naja Sunderer by researching these techniques.</Description>
+		<AdviceText>This research will unlock the Naja Sunderer.</AdviceText>
+		<Image>Tech_X_ArcaneSunderer_P.png</Image>
+		<Color>255,186,31</Color>
+		<HotColor>255,242,57</HotColor>
+		<Cost>401</Cost>
+		<Rarity>100</Rarity>
+		<Category>Magic</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Magical_Forging</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_ArcaneWeapons_P</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Player_X_Shamans</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>50</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>1</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_ArcaneWeapons_L">
+		<DisplayName>Lightning Battle Axes</DisplayName>
+		<Description>Craft the Fulminating Battle Axe and the Coruscating Slicer by researching these techniques, set out in the first quarto of the Varis Reliquaria - the notebooks kept by Senadar Krys, keeper of the Forge of Overlord.</Description>
+		<AdviceText>This research will unlock the Fulminating Battle Axe and the Coruscating Slicer.</AdviceText>
+		<Image>Tech_X_ArcaneWeapons_L.png</Image>
+		<Color>255,186,31</Color>
+		<HotColor>255,242,57</HotColor>
+		<Cost>325</Cost>
+		<Rarity>100</Rarity>
+		<Category>Magic</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Arcane_Apparel</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Enchanters</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>50</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>1</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_ArcaneWeapons_P">
+		<DisplayName>Poisonous Battle Axes</DisplayName>
+		<Description>Craft the Venomous Battle Axe and the Toxic Slicer by researching these techniques, set out in the first quarto of the Varis Reliquaria - the notebooks kept by Senadar Krys, keeper of the Forge of Overlord.</Description>
+		<AdviceText>This research will unlock the Venomous Battle Axe and the Toxic Slicer.</AdviceText>
+		<Image>Tech_X_ArcaneWeapons_P.png</Image>
+		<Color>255,186,31</Color>
+		<HotColor>255,242,57</HotColor>
+		<Cost>325</Cost>
+		<Rarity>100</Rarity>
+		<Category>Magic</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Arcane_Apparel</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Player_X_Shamans</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>50</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>1</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_Balrogs">
+		<DisplayName>Balrogs</DisplayName>
+		<Description>Unlocks the Balrog Unit Design Template</Description>
+		<AdviceText>Balrogs are tall and menacing creatures, shrouded in fire, darkness, and shadow.</AdviceText>
+		<Image>M_Demon_01_Card.png</Image>
+		<Color>76,79,196</Color>
+		<HotColor>182,182,244</HotColor>
+		<Cost>100</Cost>
+		<Rarity>100</Rarity>
+		<Category>Magic</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_XL_FF</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Third_Book_Of_The_Magi</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>75</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>5</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>2</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_CentaurBases">
+		<DisplayName>Centaurs</DisplayName>
+		<Description>Research these techniques to unlock Centaur Bases for your Trained Units and in your Shops.</Description>
+		<AdviceText>Research these techniques to unlock the Centaur Bases for your Trained Units and in your Shops.</AdviceText>
+		<Image>Tech_X_CentaurBases.png</Image>
+		<Color>182,7,3</Color>
+		<HotColor>255,48,0</HotColor>
+		<Cost>6</Cost>
+		<Rarity>100</Rarity>
+		<Category>Warfare</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Centaur</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Player_X_Centaurs</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<GameModifier>
+			<Icon>Ability_X_Warning_Kami.png</Icon>
+			<Provides>Shop ::: Centaur Bases</Provides>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>50</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>2</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>2</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_Charms_Advanced">
+		<DisplayName>Advanced Charms</DisplayName>
+		<Description>Conduct this research to follow Ereog's path, and learn to channel the latent magical energy of the world so it can be put to use by your craftsmen.</Description>
+		<AdviceText>Keep in mind your units can use a limited number of accessories. Choose them wisely.</AdviceText>
+		<Image>WeddingRings.png</Image>
+		<Color>255,186,31</Color>
+		<HotColor>255,242,57</HotColor>
+		<Cost>55</Cost>
+		<Rarity>100</Rarity>
+		<Category>Magic</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Enchantment</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_ArcaneGardening</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>50</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>1</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_Enchantments_Advanced_L">
+		<DisplayName>Lightning Axes</DisplayName>
+		<Description>This research imparts the principles of the Enchanters art, as set down in Hosten's Codex. With this knowledge you can begin to produce enchanted axes for your armies.</Description>
+		<AdviceText>This research will unlock the Scintillating Axe and the Fulminating Axe or the Dual Scintillating Axe and the Dual Fulminating Axe.</AdviceText>
+		<Image>Tech_X_Enchantments_Advanced_L.png</Image>
+		<Color>255,186,31</Color>
+		<HotColor>255,242,57</HotColor>
+		<Cost>20</Cost>
+		<Rarity>100</Rarity>
+		<Category>Magic</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Enchanters</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>50</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>1</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_Enchantments_Advanced_P">
+		<DisplayName>Poisonous Axes</DisplayName>
+		<Description>This research imparts the principles of the Enchanters art, as set down in Hosten's Codex. With this knowledge you can begin to produce enchanted axes for your armies.</Description>
+		<AdviceText>This research will unlock the Poison Axe and the Venomous Axe or the Dual Poison Axe and the Dual Venomous Axe.</AdviceText>
+		<Image>Tech_X_Enchantments_Advanced_P.png</Image>
+		<Color>255,186,31</Color>
+		<HotColor>255,242,57</HotColor>
+		<Cost>20</Cost>
+		<Rarity>100</Rarity>
+		<Category>Magic</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Player_X_Shamans</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>50</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>1</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_Espionage_1">
+		<DisplayName>Espionage</DisplayName>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Training</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Target>Player</Target>
+			<Attribute>Player_X_Spies</Attribute>
+		</Prereq>
+		<Description>This breakthrough allows us to undertake basic undercover operations.</Description>
+		<AdviceText>With this knowledge we are able to cast Assassinations, Bodyguards, Disinformation, Sabotage, and Spoil Food Reserves.</AdviceText>
+		<Image>F_Domination_Full.png</Image>
+		<Color>182,7,3</Color>
+		<HotColor>255,48,0</HotColor>
+		<Cost>36</Cost>
+		<Rarity>100</Rarity>
+		<Category>Warfare</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_AssassinationsB</StrVal>
+			<Icon>Spell_X_Assassinations.png</Icon>
+			<Provides>Strategic Spell ::: Assassinations</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_Bodyguards</StrVal>
+			<Icon>Spell_X_Bodyguards.png</Icon>
+			<Provides>Strategic Spell ::: Bodyguards</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_DisinformationB</StrVal>
+			<Icon>Spell_X_Disinformation.png</Icon>
+			<Provides>Strategic Spell ::: Disinformation</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_SabotageCityB</StrVal>
+			<Icon>Spell_X_SabotageCity.png</Icon>
+			<Provides>Strategic Spell ::: Sabotage</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_SpoilFoodReservesB</StrVal>
+			<Icon>Spell_X_SpoilFoodReserves.png</Icon>
+			<Provides>Strategic Spell ::: Spoil Food Reserves</Provides>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIResearchPriority>50</AIResearchPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>2</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_Espionage_2">
+		<DisplayName>Advanced Espionage</DisplayName>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Drills</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_Espionage_1</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_Guerilla</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Target>Player</Target>
+			<Attribute>Player_X_Spies</Attribute>
+		</Prereq>
+		<Description>This breakthrough allows us to undertake advanced undercover operations.</Description>
+		<AdviceText>With this knowledge we are able to cast Burn Food Reserves, Domestic Surveillance, Phoenix Program, Poison Water Source, and Wreck Infrastructures.</AdviceText>
+		<Image>F_Cooperation_Full.png</Image>
+		<Color>182,7,3</Color>
+		<HotColor>255,48,0</HotColor>
+		<Cost>54</Cost>
+		<Rarity>100</Rarity>
+		<Category>Warfare</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_BurnFieldsB</StrVal>
+			<Icon>Spell_X_BurnFields.png</Icon>
+			<Provides>Strategic Spell ::: Burn Fields</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_DomesticSurveillance</StrVal>
+			<Icon>Spell_X_DomesticSurveillance.png</Icon>
+			<Provides>Strategic Spell ::: Domestic Surveillance</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_PhoenixProgramB</StrVal>
+			<Icon>Spell_X_PhoenixProgram.png</Icon>
+			<Provides>Strategic Spell ::: Phoenix Program</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_PoisonWaterSourceB</StrVal>
+			<Icon>Spell_X_PoisonWaterSource.png</Icon>
+			<Provides>Strategic Spell ::: Poison Water Source</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_WreckInfrastructureB</StrVal>
+			<Icon>Spell_X_WreckInfrastructures.png</Icon>
+			<Provides>Strategic Spell ::: Wreck Infrastructures</Provides>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIResearchPriority>50</AIResearchPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>2</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_Espionage_3">
+		<DisplayName>Arcane Espionage</DisplayName>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_Espionage_2</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Target>Player</Target>
+			<Attribute>Player_X_Spies</Attribute>
+		</Prereq>
+		<Description>This breakthrough allows us to undertake arcane undercover operations.</Description>
+		<AdviceText>With this knowledge we are able to cast Arcane Interference, Counterintelligence, Coup d'Etat, and Torch City.</AdviceText>
+		<Image>Ambassador.png</Image>
+		<Color>182,7,3</Color>
+		<HotColor>255,48,0</HotColor>
+		<Cost>72</Cost>
+		<Rarity>100</Rarity>
+		<Category>Warfare</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_ArcaneInterferenceB</StrVal>
+			<Icon>Spell_X_ArcaneInterference.png</Icon>
+			<Provides>Strategic Spell ::: Arcane Interference</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_Counterintelligence</StrVal>
+			<Icon>Spell_X_Counterintelligence.png</Icon>
+			<Provides>Strategic Spell ::: Counterintelligence</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_TorchCityB</StrVal>
+			<Icon>Spell_X_TorchCity.png</Icon>
+			<Provides>Strategic Spell ::: Torch City</Provides>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIResearchPriority>50</AIResearchPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>2</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_GladiatorArmor">
+		<DisplayName>Gladiator Armor</DisplayName>
+		<Description>Study in this area allows you to craft Gladiator armor. Gladiator armor is superior compared to plate armor, but is also more expensive, both in terms of time and material required. Tarth smiths were the first to mass produce Gladiator armor.</Description>
+		<AdviceText>Gladiator armor provides good all-around armor and it is more light than plate armor.</AdviceText>
+		<Image>RoundCrest_Tarth.png</Image>
+		<Color>182,7,3</Color>
+		<HotColor>255,48,0</HotColor>
+		<Cost>226</Cost>
+		<Rarity>100</Rarity>
+		<Category>Warfare</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Rebels</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>War_Colleges</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_Resourceful</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>NoArmor</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Weaklings</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>50</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>2</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_Grouping7">
+		<DisplayName>Battalion</DisplayName>
+		<Description>Research in this area will allow you to form your soldiers into Battalion, turning them into greater threats, in the manner set forth in Themisto's Manual of Infantry Tactics and Custom.</Description>
+		<AdviceText>Sometimes the greatest advantage you can have on the battlefield is pure numbers.</AdviceText>
+		<Image>F_Conquest_Full.png</Image>
+		<Color>60,138,25</Color>
+		<HotColor>146,255,49</HotColor>
+		<Cost>500</Cost>
+		<Rarity>100</Rarity>
+		<Category>Civilization</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Company</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Dance_with_Dragons</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Target>Player</Target>
+			<Attribute>Weakness_X_Frondeurs</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Target>Player</Target>
+			<Attribute>Weakness_X_Noncomformists</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>100</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>4</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_Grouping8">
+		<DisplayName>Brigade</DisplayName>
+		<Description>Research in this area will allow you to form your soldiers into Brigade, turning them into greater threats, in the manner set forth in Themisto's Manual of Infantry Tactics and Custom.</Description>
+		<AdviceText>Sometimes the greatest advantage you can have on the battlefield is pure numbers.</AdviceText>
+		<Image>F_Conquest_Full.png</Image>
+		<Color>60,138,25</Color>
+		<HotColor>146,255,49</HotColor>
+		<Cost>750</Cost>
+		<Rarity>100</Rarity>
+		<Category>Civilization</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_Grouping7</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Target>Player</Target>
+			<Attribute>Weakness_X_Frondeurs</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Target>Player</Target>
+			<Attribute>Weakness_X_Noncomformists</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>100</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>3</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_Grouping9">
+		<DisplayName>Division</DisplayName>
+		<Description>Research in this area will allow you to form your soldiers into Division, turning them into greater threats, in the manner set forth in Themisto's Manual of Infantry Tactics and Custom.</Description>
+		<AdviceText>Sometimes the greatest advantage you can have on the battlefield is pure numbers.</AdviceText>
+		<Image>F_Conquest_Full.png</Image>
+		<Color>60,138,25</Color>
+		<HotColor>146,255,49</HotColor>
+		<Cost>1000</Cost>
+		<Rarity>100</Rarity>
+		<Category>Civilization</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_Grouping8</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Target>Player</Target>
+			<Attribute>Weakness_X_Frondeurs</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Target>Player</Target>
+			<Attribute>Weakness_X_Noncomformists</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>100</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>2</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_Guerilla">
+		<DisplayName>Guerilla</DisplayName>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Training</Attribute>
+		</Prereq>
+		<Description>This breakthrough allows us to design Ambuscaders and Rover Units. It also unlocks the Fanatics spell, a city enchantment.</Description>
+		<AdviceText>With this knowledge we are able to design Ambuscaders and Rover Units. It also unlocks the Fanatics spell, a city enchantment.</AdviceText>
+		<Image>T_ObscuringFog_Painting.png</Image>
+		<Color>182,7,3</Color>
+		<HotColor>255,48,0</HotColor>
+		<Cost>8</Cost>
+		<Rarity>100</Rarity>
+		<Category>Warfare</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<GameModifier>
+			<Icon>Ability_X_Ambuscader_UD.png</Icon>
+			<Provides>Design ::: Ambuscader</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Icon>Ability_X_Rover.png</Icon>
+			<Provides>Design ::: Rover</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Icon>Spell_X_PoisonWaterSource.png</Icon>
+			<Provides>Strategic Spell ::: Poison Water Source (Requires Spies Faction Strength)</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_Fanatics</StrVal>
+			<Icon>Spell_X_Fanatics.png</Icon>
+			<Provides>Strategic Spell ::: Fanatics</Provides>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIResearchPriority>50</AIResearchPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>3</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_Henchmen">
+		<DisplayName>Henchmen</DisplayName>
+		<Description>Personal charisma, such as that possessed by the great sovereigns of old - the high Kings of Antheros, their Amarian brethren of the north - cannot be taught. The art of attracting others to your cause will allow you to woo and win to your cause the minor heroes of this world.</Description>
+		<AdviceText>Altarians have always had a heroic heart, even those with modest backgrounds.</AdviceText>
+		<Image>Xander.png</Image>
+		<Color>76,79,196</Color>
+		<HotColor>182,182,244</HotColor>
+		<Cost>19</Cost>
+		<Rarity>100</Rarity>
+		<Category>Magic</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Player_X_Henchmen</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Sorcery</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>50</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>1</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_Imperialists">
+		<DisplayName>Imperialists</DisplayName>
+		<Description>Unlocks the Imperial Pioneer. Take note that Imperial Pioneers can only be used to build Cities.</Description>
+		<AdviceText>We can expand much faster with Imperial Pioneers.</AdviceText>
+		<Image>Kingdom_Sovereign1.png</Image>
+		<Color>60,138,25</Color>
+		<HotColor>146,255,49</HotColor>
+		<Cost>6</Cost>
+		<Rarity>100</Rarity>
+		<Category>Civilization</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Player_X_Imperialists</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>50</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>1</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_IntegumentCraftsmen">
+		<DisplayName>Integument Craftsmen</DisplayName>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Armor</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Weaponsmithing</Attribute>
+		</Prereq>
+		<Description>Learn to craft Arachnid Integument Armor and Shield. Learning to make armor is vital to your armies; even a glancing blow can prove fatal without some form of protection.</Description>
+		<AdviceText>Arachnid Integument Armor doesn't require Metal nor any special proficiency to use, but it requires Crystal and additional labor.</AdviceText>
+		<Image>Tech_Masterwork_Armor.png</Image>
+		<Color>182,7,3</Color>
+		<HotColor>255,48,0</HotColor>
+		<Cost>226</Cost>
+		<Rarity>100</Rarity>
+		<Category>Warfare</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Player_X_ArachnidArmor</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIResearchPriority>50</AIResearchPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>2</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_Juggernauts">
+		<DisplayName>Juggernauts</DisplayName>
+		<Description>Trogs receive strict military training from the time they can walk. Many die during this process, to weak or compliant to survive. Most become Trog warriors, but some few fall between. Too strong to die, but unwilling to bend or obey. These savage creatures are locked in the sewers under Ahilga where they are subjected both to spells to strengthen them and torment designed to force their obedience.</Description>
+		<AdviceText>Our Juggernauts are as dangerous to our enemies as they are to allies that stand too close.</AdviceText>
+		<Image>M_EscapedJuggernaut.png</Image>
+		<Color>60,138,25</Color>
+		<HotColor>146,255,49</HotColor>
+		<Cost>55</Cost>
+		<Rarity>100</Rarity>
+		<Category>Warfare</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>RaceType_X_Trogs_K</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Blacksmithing</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>50</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>3</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_Juggernauts_All">
+		<DisplayName>Juggernauts</DisplayName>
+		<Description>Trogs receive strict military training from the time they can walk. Many die during this process, to weak or compliant to survive. Most become Trog warriors, but some few fall between. Too strong to die, but unwilling to bend or obey. These savage creatures are locked in the sewers under Ahilga where they are subjected both to spells to strengthen them and torment designed to force their obedience. Luckily for you, underhand deals has lend you access to Juggernauts.</Description>
+		<AdviceText>Our Juggernauts are as dangerous to our enemies as they are to allies that stand too close.</AdviceText>
+		<Image>M_EscapedJuggernaut.png</Image>
+		<Color>60,138,25</Color>
+		<HotColor>146,255,49</HotColor>
+		<Cost>55</Cost>
+		<Rarity>100</Rarity>
+		<Category>Warfare</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Player_X_Juggernauts</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Blacksmithing</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>50</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>3</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_Juggernauts_Lizard">
+		<DisplayName>Juggernauts</DisplayName>
+		<Description>Your troops receive strict military training from the time they can walk. Many die during this process, to weak or compliant to survive. Most become Lizard warriors, but some few fall between. Too strong to die, but unwilling to bend or obey. These savage creatures are locked in the sewers where they are subjected both to spells to strengthen them and torment designed to force their obedience.</Description>
+		<AdviceText>Our Juggernauts are as dangerous to our enemies as they are to allies that stand too close.</AdviceText>
+		<Image>M_EscapedJuggernaut.png</Image>
+		<Color>60,138,25</Color>
+		<HotColor>146,255,49</HotColor>
+		<Cost>55</Cost>
+		<Rarity>100</Rarity>
+		<Category>Warfare</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Lizardmen</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Blacksmithing</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>50</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>3</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_KlayGolems">
+		<DisplayName>Klay Golems</DisplayName>
+		<Description>Unlocks the Klay Golem Unit</Description>
+		<AdviceText>Within the third quarto of the Varis Reliquaria is contained the spell Anima Tsal Animana - life from lifelessness. This incantation, first mastered by Ereog in his time of solitude, imbues stone with the semblance of life.</AdviceText>
+		<Image>M_Golem_SandGolem_01.png</Image>
+		<Color>76,79,196</Color>
+		<HotColor>182,182,244</HotColor>
+		<Cost>100</Cost>
+		<Rarity>100</Rarity>
+		<Category>Magic</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_XL_FE</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_Charms_Advanced</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Arcane_Mastery</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>50</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>2</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_Nomads">
+		<DisplayName>Nomads</DisplayName>
+		<Description>Research these techniques to unlock Nomad's Horses and Composite shortbows for your Trained Units and in your Shops.</Description>
+		<AdviceText>Research these techniques to unlock Nomad's Horses and Composite shortbows for your Trained Units and in your Shops.</AdviceText>
+		<Image>G_Quest_Lost_Horse_01.png</Image>
+		<Color>182,7,3</Color>
+		<HotColor>255,48,0</HotColor>
+		<Cost>6</Cost>
+		<Rarity>100</Rarity>
+		<Category>Warfare</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Player_X_Nomads</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>50</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>2</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>2</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_Ophidians">
+		<DisplayName>Ophidians</DisplayName>
+		<Description>Unlocks the Ophidian Unit</Description>
+		<AdviceText>Sages say the Ophidian were once great pythons, related to the bonefield morelia, but they were changed after generations of nesting near crystal deposits. Those crystals became embedded in their scales. The Ophidian are now over twice as long as their ancestors, and immune to spells. Their bite causes a feeling of numbness and euphoria in the victim; a sensation that helps numb the horror of being swallowed whole.</AdviceText>
+		<Image>M_Ophidian_01_Card.png</Image>
+		<Color>76,79,196</Color>
+		<HotColor>182,182,244</HotColor>
+		<Cost>66</Cost>
+		<Rarity>100</Rarity>
+		<Category>Magic</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Amarians</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_ArcaneGardening</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Sorcery</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>50</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>2</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_Ophidians2">
+		<DisplayName>Ophidians</DisplayName>
+		<Description>Unlocks the Ophidian Unit</Description>
+		<AdviceText>Sages say the Ophidian were once great pythons, related to the bonefield morelia, but they were changed after generations of nesting near crystal deposits. Those crystals became embedded in their scales. The Ophidian are now over twice as long as their ancestors, and immune to spells. Their bite causes a feeling of numbness and euphoria in the victim; a sensation that helps numb the horror of being swallowed whole.</AdviceText>
+		<Image>M_Ophidian_01_Card.png</Image>
+		<Color>76,79,196</Color>
+		<HotColor>182,182,244</HotColor>
+		<Cost>66</Cost>
+		<Rarity>100</Rarity>
+		<Category>Magic</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Player_X_Ophidians</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_ArcaneGardening</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Sorcery</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>50</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>2</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_OphidiansP">
+		<DisplayName>Ophidian Alliance</DisplayName>
+		<Description>Unlocks the Ophidian Party Unit and the Ophidian Glands</Description>
+		<AdviceText>Sages say the Ophidian were once great pythons, related to the bonefield morelia, but they were changed after generations of nesting near crystal deposits. Those crystals became embedded in their scales. The Ophidian are now over twice as long as their ancestors, and immune to spells. Their bite causes a feeling of numbness and euphoria in the victim; a sensation that helps numb the horror of being swallowed whole.</AdviceText>
+		<Image>M_Ophidian_01_Card.png</Image>
+		<Color>76,79,196</Color>
+		<HotColor>182,182,244</HotColor>
+		<Cost>100</Cost>
+		<Rarity>100</Rarity>
+		<Category>Magic</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Amarians</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_Charms_Advanced</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_Ophidians</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>50</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>2</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_OphidiansP2">
+		<DisplayName>Ophidian Alliance</DisplayName>
+		<Description>Unlocks the Ophidian Party Unit and the Ophidian Glands</Description>
+		<AdviceText>Sages say the Ophidian were once great pythons, related to the bonefield morelia, but they were changed after generations of nesting near crystal deposits. Those crystals became embedded in their scales. The Ophidian are now over twice as long as their ancestors, and immune to spells. Their bite causes a feeling of numbness and euphoria in the victim; a sensation that helps numb the horror of being swallowed whole.</AdviceText>
+		<Image>M_Ophidian_01_Card.png</Image>
+		<Color>76,79,196</Color>
+		<HotColor>182,182,244</HotColor>
+		<Cost>100</Cost>
+		<Rarity>100</Rarity>
+		<Category>Magic</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_Charms_Advanced</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_Ophidians2</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Player_X_Ophidians</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>50</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>2</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_OphidiansZ">
+		<DisplayName>Ophidian Legions</DisplayName>
+		<Description>Unlocks an upgradeable Ophidian Unit (e.g. Squad, Company, etc.) and the Ophidian Unit Template</Description>
+		<AdviceText>Sages say the Ophidian were once great pythons, related to the bonefield morelia, but they were changed after generations of nesting near crystal deposits. Those crystals became embedded in their scales. The Ophidian are now over twice as long as their ancestors, and immune to spells. Their bite causes a feeling of numbness and euphoria in the victim; a sensation that helps numb the horror of being swallowed whole.</AdviceText>
+		<Image>M_Ophidian_01_Card.png</Image>
+		<Color>76,79,196</Color>
+		<HotColor>182,182,244</HotColor>
+		<Cost>200</Cost>
+		<Rarity>100</Rarity>
+		<Category>Magic</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Amarians</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Immortal_Codex</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_OphidiansP</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>50</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>2</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_OphidiansZ2">
+		<DisplayName>Ophidian Legions</DisplayName>
+		<Description>Unlocks an upgradeable Ophidian Unit (e.g. Squad, Company, etc.)</Description>
+		<AdviceText>Sages say the Ophidian were once great pythons, related to the bonefield morelia, but they were changed after generations of nesting near crystal deposits. Those crystals became embedded in their scales. The Ophidian are now over twice as long as their ancestors, and immune to spells. Their bite causes a feeling of numbness and euphoria in the victim; a sensation that helps numb the horror of being swallowed whole.</AdviceText>
+		<Image>M_Ophidian_01_Card.png</Image>
+		<Color>76,79,196</Color>
+		<HotColor>182,182,244</HotColor>
+		<Cost>200</Cost>
+		<Rarity>100</Rarity>
+		<Category>Magic</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Immortal_Codex</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_OphidiansP2</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Player_X_Ophidians</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>50</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>2</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_Refined_Arcana">
+		<DisplayName>Refined Arcana</DisplayName>
+		<Description>This breakthrough will give your settlement a 3% bonus in mana; it can be researched continuously. That is, each time you and your channelers focus your research on the arcane arts, you will see your power increase by a 3%. The greater spells - those contained in the codexes which survived the cataclysm - require significant power to perform.</Description>
+		<AdviceText>The more we refine our command of the arcane the more mana we will bring in every season.</AdviceText>
+		<Image>Tech_Refined_Arcana.png</Image>
+		<Color>76,79,196</Color>
+		<HotColor>182,182,244</HotColor>
+		<Cost>226</Cost>
+		<Rarity>100</Rarity>
+		<Category>Magic</Category>
+		<Infinite>1</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_Mana</StrVal>
+			<Value>3</Value>
+			<Icon>Mana_Stat_Icon.png</Icon>
+			<Provides>+3% Mana</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Icon>Spellbook_Icon.png</Icon>
+			<Provides>This technology can be researched multiple times</Provides>
+		</GameModifier>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Immortal_Codex</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>10</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>1</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_Refined_Attack_Cold">
+		<DisplayName>Refined Cold Attack</DisplayName>
+		<Description>Learning these skills will increases the Water\Cold Attack of all of your units by 7%; you can research this knowledge continuously, with a corresponding increase in attack.</Description>
+		<AdviceText>By refining our Water\Cold attack techniques we can continue to improve our Water\Cold attack values across the board.</AdviceText>
+		<Image>Refined_Attack.png</Image>
+		<Color>76,79,196</Color>
+		<HotColor>182,182,244</HotColor>
+		<Cost>734</Cost>
+		<Rarity>100</Rarity>
+		<Category>Magic</Category>
+		<Infinite>1</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_UnitStat_Attack_Cold</StrVal>
+			<Value>7</Value>
+			<Icon>Stat_AttackCold_Icon.png</Icon>
+			<Provides>+7% Water\Cold Attack</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Icon>Spellbook_Icon.png</Icon>
+			<Provides>This technology can be researched multiple times</Provides>
+		</GameModifier>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Arcane_Weapons</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>10</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>1</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_Refined_Attack_Earth">
+		<DisplayName>Refined Earth Attack</DisplayName>
+		<Description>Learning these skills will increases the Earth Attack of all of your units by 7%; you can research this knowledge continuously, with a corresponding increase in attack.</Description>
+		<AdviceText>By refining our Earth attack techniques we can continue to improve our Earth attack values across the board.</AdviceText>
+		<Image>Refined_Attack.png</Image>
+		<Color>76,79,196</Color>
+		<HotColor>182,182,244</HotColor>
+		<Cost>734</Cost>
+		<Rarity>100</Rarity>
+		<Category>Magic</Category>
+		<Infinite>1</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_UnitStat_Attack_Earth</StrVal>
+			<Value>7</Value>
+			<Icon>Stat_AttackEarth_Icon.png</Icon>
+			<Provides>+7% Earth Attack</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Icon>Spellbook_Icon.png</Icon>
+			<Provides>This technology can be researched multiple times</Provides>
+		</GameModifier>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Arcane_Weapons</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>10</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>1</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_Refined_Attack_Fire">
+		<DisplayName>Refined Fire Attack</DisplayName>
+		<Description>Learning these skills will increases the Fire Attack of all of your units by 7%; you can research this knowledge continuously, with a corresponding increase in attack.</Description>
+		<AdviceText>By refining our Fire attack techniques we can continue to improve our Fire attack values across the board.</AdviceText>
+		<Image>Refined_Attack.png</Image>
+		<Color>76,79,196</Color>
+		<HotColor>182,182,244</HotColor>
+		<Cost>734</Cost>
+		<Rarity>100</Rarity>
+		<Category>Magic</Category>
+		<Infinite>1</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_UnitStat_Attack_Fire</StrVal>
+			<Value>7</Value>
+			<Icon>Stat_AttackFire_Icon.png</Icon>
+			<Provides>+7% Fire Attack</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Icon>Spellbook_Icon.png</Icon>
+			<Provides>This technology can be researched multiple times</Provides>
+		</GameModifier>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Arcane_Weapons</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>10</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>1</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_Refined_Attack_Lightning">
+		<DisplayName>Refined Lightning Attack</DisplayName>
+		<Description>Learning these skills will increases the Air\Lightning Attack of all of your units by 7%; you can research this knowledge continuously, with a corresponding increase in attack.</Description>
+		<AdviceText>By refining our Air\Lightning attack techniques we can continue to improve our Air\Lightning attack values across the board.</AdviceText>
+		<Image>Refined_Attack.png</Image>
+		<Color>76,79,196</Color>
+		<HotColor>182,182,244</HotColor>
+		<Cost>734</Cost>
+		<Rarity>100</Rarity>
+		<Category>Magic</Category>
+		<Infinite>1</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_UnitStat_Attack_Lightning</StrVal>
+			<Value>7</Value>
+			<Icon>Stat_AttackLightning_Icon.png</Icon>
+			<Provides>+7% Air\Lightning Attack</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Icon>Spellbook_Icon.png</Icon>
+			<Provides>This technology can be researched multiple times</Provides>
+		</GameModifier>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Arcane_Weapons</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>10</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>1</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_Refined_Attack_Poison">
+		<DisplayName>Refined Poison Attack</DisplayName>
+		<Description>Learning these skills will increases the Death\Poison Attack of all of your units by 7%; you can research this knowledge continuously, with a corresponding increase in attack.</Description>
+		<AdviceText>By refining our Death\Poison attack techniques we can continue to improve our Death\Poison attack values across the board.</AdviceText>
+		<Image>Refined_Attack.png</Image>
+		<Color>76,79,196</Color>
+		<HotColor>182,182,244</HotColor>
+		<Cost>734</Cost>
+		<Rarity>100</Rarity>
+		<Category>Magic</Category>
+		<Infinite>1</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_UnitStat_Attack_Poison</StrVal>
+			<Value>7</Value>
+			<Icon>Stat_AttackPoison_Icon.png</Icon>
+			<Provides>+7% Death\Poison Attack</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Icon>Spellbook_Icon.png</Icon>
+			<Provides>This technology can be researched multiple times</Provides>
+		</GameModifier>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Arcane_Weapons</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>10</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>1</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_ScarStone">
+		<DisplayName>Scar Stone</DisplayName>
+		<Description>Research these techniques to unlock the Scar Stone for your Trained Units and in your Shops.</Description>
+		<AdviceText>Research these techniques to unlock the Scar Stone for your Trained Units and in your Shops.</AdviceText>
+		<Image>Tech_X_ScarStone.png</Image>
+		<Color>182,7,3</Color>
+		<HotColor>255,48,0</HotColor>
+		<Cost>9</Cost>
+		<Rarity>100</Rarity>
+		<Category>Warfare</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>FleshBoundTome</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>50</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>2</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>2</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_Shop">
+		<DisplayName>Basics</DisplayName>
+		<Description>Basic Shop furnitures.</Description>
+		<AdviceText>Basic Shop furnitures.</AdviceText>
+		<Image>BG35_LowLvlShop.png</Image>
+		<Color>182,7,3</Color>
+		<HotColor>255,48,0</HotColor>
+		<Cost>9</Cost>
+		<Rarity>100</Rarity>
+		<Category>Warfare</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Ability_X_Deorcnysse1000</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>50</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>2</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>2</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_SpiderVenom">
+		<DisplayName>Spider Venom</DisplayName>
+		<Description>Research these techniques to unlock the Spider Venom for your Trained Units and in your Shops.</Description>
+		<AdviceText>Research these techniques to unlock the Spider Venom for your Trained Units and in your Shops.</AdviceText>
+		<Image>Tech_X_SpiderVenom.png</Image>
+		<Color>182,7,3</Color>
+		<HotColor>255,48,0</HotColor>
+		<Cost>9</Cost>
+		<Rarity>100</Rarity>
+		<Category>Warfare</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>CultofaHundredEyes</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>50</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>2</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>2</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_Staffs">
+		<DisplayName>Arcane Staffs</DisplayName>
+		<Description>This breakthrough in the arcane arts will allow you to craft the Staff of Embers, the Frost Staff, the Staff of Storms, and the Venomous Stick.</Description>
+		<AdviceText>These weapons excel in specific situations. Keep an eye on what you are fighting when you use them.</AdviceText>
+		<Image>Tech_Legendary_Weapons.png</Image>
+		<Color>76,79,196</Color>
+		<HotColor>182,182,244</HotColor>
+		<Cost>10</Cost>
+		<Rarity>100</Rarity>
+		<Category>Magic</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Arcane_Mastery</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>NoRangedWeapons</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>50</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>1</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_Staffs_Greater">
+		<DisplayName>Arcane Branches</DisplayName>
+		<Description>This breakthrough in the arcane arts will allow you to craft the Pyre Branch and the Boreal Branch.</Description>
+		<AdviceText>These weapons excel in specific situations. Keep an eye on what you are fighting when you use them.</AdviceText>
+		<Image>Tech_Legendary_Weapons.png</Image>
+		<Color>76,79,196</Color>
+		<HotColor>182,182,244</HotColor>
+		<Cost>502</Cost>
+		<Rarity>100</Rarity>
+		<Category>Magic</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Player_X_Charmers</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Arcane_Weapons</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>NoRangedWeapons</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>50</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>2</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_StormElementals">
+		<DisplayName>Storm Elementals</DisplayName>
+		<Description>Unlocks the Storm Elemental Unit Design Template</Description>
+		<AdviceText>Storm Elementals are difficult beings to interact with, but they are quite powerful.</AdviceText>
+		<Image>L_Air_Elemental_01.png</Image>
+		<Color>76,79,196</Color>
+		<HotColor>182,182,244</HotColor>
+		<Cost>100</Cost>
+		<Rarity>100</Rarity>
+		<Category>Magic</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_XL_FA</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Third_Book_Of_The_Magi</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>75</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>5</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>2</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_TheaterOfWar">
+		<DisplayName>Theater of War</DisplayName>
+		<Description>Research in this area will allow you to increase your maximum army size by 1.</Description>
+		<AdviceText>The more units we can fit into an army, the more effective we will be in combat.</AdviceText>
+		<Image>K_Warfare.png</Image>
+		<Color>182,7,3</Color>
+		<HotColor>255,48,0</HotColor>
+		<Cost>666</Cost>
+		<Rarity>100</Rarity>
+		<Category>Warfare</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_MaxArmySize</StrVal>
+			<Value>1</Value>
+			<Icon>Veteran.png</Icon>
+			<Provides>+1 Army Size</Provides>
+		</GameModifier>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Player_X_Gregarious</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Heavy_Armor</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Weapons_Of_War</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>100</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>3</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_Vampires">
+		<DisplayName>Vampires</DisplayName>
+		<Description>Unlocks the Vampire Unit Design Template</Description>
+		<AdviceText>Vampires strike fear in the heart of the enemy.</AdviceText>
+		<Image>Rank_Pariden.png</Image>
+		<Color>76,79,196</Color>
+		<HotColor>182,182,244</HotColor>
+		<Cost>100</Cost>
+		<Rarity>100</Rarity>
+		<Category>Magic</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Dead</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Magical_Forging</Attribute><!--Immortal_Codex-->
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>75</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>5</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>2</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_Werewolves">
+		<DisplayName>Werewolves</DisplayName>
+		<Description>Unlocks the Werewolf Unit Design Template</Description>
+		<AdviceText>Beasts!</AdviceText>
+		<Image>Creature_Ebbenwolf1.png</Image>
+		<Color>76,79,196</Color>
+		<HotColor>182,182,244</HotColor>
+		<Cost>100</Cost>
+		<Rarity>100</Rarity>
+		<Category>Magic</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Undead</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Arcane_Apparel</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>75</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>5</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>2</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_VialOfPoison">
+		<DisplayName>Vial of Poison</DisplayName>
+		<Description>Research these techniques to unlock the Vial of Poison for your Trained Units and in your Shops.</Description>
+		<AdviceText>Research these techniques to unlock the Vial of Poison for your Trained Units and in your Shops.</AdviceText>
+		<Image>Tech_X_VialOfPoison.png</Image>
+		<Color>182,7,3</Color>
+		<HotColor>255,48,0</HotColor>
+		<Cost>9</Cost>
+		<Rarity>100</Rarity>
+		<Category>Warfare</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>AssassinsTools</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>50</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>2</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>2</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_Xbows_Greater_CF">
+		<DisplayName>Arcane Crossbows</DisplayName>
+		<Description>This breakthrough in will allow you to craft the Heavy Crossbow of Fire and the Heavy Crossbow of Frost.</Description>
+		<AdviceText>These weapons excel in specific situations. Keep an eye on what you are fighting when you use them.</AdviceText>
+		<Image>Tech_X_Xbows_Greater_CF.png</Image>
+		<Color>182,7,3</Color>
+		<HotColor>255,48,0</HotColor>
+		<Cost>104</Cost>
+		<Rarity>100</Rarity>
+		<Category>Warfare</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Advanced_Archery</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>NoRangedWeapons</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>100</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>2</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+</Techs>

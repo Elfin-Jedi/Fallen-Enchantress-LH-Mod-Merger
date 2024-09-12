@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<Container>
+  <QuestDef InternalName="Event_TimeOfHeroes">
+    <DisplayName>Time of Heroes</DisplayName>
+    <Description>The Time of Heroes has begun! The next four-year period will enter your history books as the high-point of adventures in your culture when legendary heroes came forward and performed many famous deeds. Exactly why this happened, the historians will dispute for centuries. Regardless, acts of bravery and acts beneficial to your society will be commonplace.
+
+For each completed quest you gain +1 permanent Faction Prestige. All units that have a bonus to their experience from battles have that particular bonus doubled. For example, the trait Potential 1 for Champions increases experience by 15% for that unit - this bonus doubles that to 30%. Both these effects last for 16 seasons.</Description>
+  <IsStartingPointQuest>0</IsStartingPointQuest>
+    <AllowQuestRejection>0</AllowQuestRejection>
+    <ShortTextAccept>An hour for those with the will to step forward.</ShortTextAccept>
+    <QuestClass>Minor</QuestClass>
+    <Repeatable>0</Repeatable>
+   <TriggerType>TurnNumber</TriggerType>
+    <TriggerData>125</TriggerData>
+    <TriggerChance>5</TriggerChance>
+    <PostTriggerChance>5</PostTriggerChance>
+
+    <TriggerOrigin>EventLocation</TriggerOrigin>
+    <Image>Equip_Watermark.png</Image>
+    <Treasure>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_UnitStat_ExpBonus</StrVal>
+        <Value>100</Value>
+        <Duration>16</Duration>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_QuestBonusFactionPrestige</StrVal>
+        <Value>1</Value>
+        <Duration>16</Duration>
+      </GameModifier>
+    </Treasure>
+    <QuestObjectiveDef>
+      <ObjectiveID>0</ObjectiveID>
+      <QuestEnd>1</QuestEnd>
+    </QuestObjectiveDef>
+  </QuestDef>
+</Container>

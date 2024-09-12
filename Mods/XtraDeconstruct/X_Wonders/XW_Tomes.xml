@@ -1,0 +1,965 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<ImprovementTypes>
+	<!--IMPROVEMENTS-->
+	<ImprovementType InternalName="Wonder_X_FloodedGraveyard">
+		<DisplayName>Flooded Graveyard</DisplayName>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>A great battle was fought here and the unnamed dead were buried where they fell. When the cataclysm struck, the land flooded, and corpses floated to the surface of the mire and muck. Build a Monument here to tap into the Death power of this location.
+		
+		+1 Orange Arcanium per 10 Seasons
+		+1 Fame per Season
+		+3 Death Power
+		-1% Unrest
+		-2% Unrest in all your cities
+		
+		Requires a Swamp Terrain.
+		Requires Town Specialization.
+		
+		World Wonder</Description>
+		<AllowedPerGame>1</AllowedPerGame>
+		<RequiresCity>1</RequiresCity>
+		<PreferredTerrain>SwampTerrain</PreferredTerrain>
+		<RequiresCityImprovement>1</RequiresCityImprovement>
+		<RequiredImprovement>TradeGuild</RequiredImprovement>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_Tome_Death</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Lizardmeninferiority</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Ascetics</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<LaborToBuild>666</LaborToBuild>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_XL_Beer</Attribute>
+			<Value>-50</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Resource_X_A3</Attribute>
+			<Value>0.1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Orange Arcanium per 10 Seasons</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Fame</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Fame per Season</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>DeathMana</Attribute>
+			<Value>3</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+3 Death Power</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>-1% Unrest</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_Additive_Unrest</StrVal>
+			<Value>-2</Value>
+			<Provides>-2% Unrest in all your cities</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithDeathShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>800</AIPriority>
+			<AITag>Shards</AITag>
+		</AIData>
+		<ArtDef>ArtDef_X_FloodedGraveyard_Wonder</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="Wonder_X_HowlingChasm">
+		<DisplayName>Howling Chasm</DisplayName>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>The storms of the world - powerful winds, a constant, deafening roar of air - rush through this bottomless chasm, as if a hole had been torn in Elemental itself. Build a Monument here to tap into the Air power of this location.
+		
+		+1 Yellow Arcanium per 10 Seasons
+		+1 Fame per Season
+		+3 Air Power
+		-1% Unrest
+		-2% Unrest in all your cities
+		
+		Requires Arctic, a Chasm, a Desert, or a Fissure Terrain.
+		Requires a Conclave Specialization.
+		
+		World Wonder</Description>
+		<AllowedPerGame>1</AllowedPerGame>
+		<RequiresCity>1</RequiresCity>
+		<PreferredTerrain>ArcticTerrain</PreferredTerrain>
+		<PreferredTerrain>Chasm</PreferredTerrain>
+		<PreferredTerrain>DesertTerrain</PreferredTerrain>
+		<PreferredTerrain>Fissure</PreferredTerrain>
+		<RequiresCityImprovement>1</RequiresCityImprovement>
+		<RequiredImprovement>Conclave</RequiredImprovement>
+		<LaborToBuild>666</LaborToBuild>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_Tome_Air</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Lizardmeninferiority</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Ascetics</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_XL_Beer</Attribute>
+			<Value>-50</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Resource_X_A2</Attribute>
+			<Value>0.1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Yellow Arcanium per 10 Seasons</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Fame</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Fame per Season</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>AirMana</Attribute>
+			<Value>3</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+3 Air Power</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>-1% Unrest</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_Additive_Unrest</StrVal>
+			<Value>-2</Value>
+			<Provides>-2% Unrest in all your cities</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAirShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>800</AIPriority>
+			<AITag>Shards</AITag>
+		</AIData>
+		<ArtDef>Art_Monument_HowlingChasm</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="Wonder_X_IruTAlavar">
+		<DisplayName>Iru T'Alavar</DisplayName>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Here is the Valley of the Iru - a land untouched by the cataclysm, a land rippling with power of a world whole and undamaged, a memory of a time - and a place - that is no more. Build a Monument here to tap into the Life power of this location.
+		
+		+1 Purple Arcanium per 10 Seasons
+		+1 Fame per Season
+		+3 Life Power
+		-1% Unrest
+		-2% Unrest in all your cities
+		
+		Requires a Town Specialization.
+		
+		World Wonder</Description>
+		<AllowedPerGame>1</AllowedPerGame>
+		<RequiresCity>1</RequiresCity>
+		<BarredTerrain>River</BarredTerrain>
+		<BarredTerrain>SwampTerrain</BarredTerrain>
+		<BarredTerrain>HillsTerrain</BarredTerrain>
+		<PreferredTerrain>City</PreferredTerrain>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<PreferredTerrain>Forest</PreferredTerrain>
+		<RequiresCityImprovement>1</RequiresCityImprovement>
+		<RequiredImprovement>TradeGuild</RequiredImprovement>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_Tome_Life</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Lizardmeninferiority</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Ascetics</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<LaborToBuild>666</LaborToBuild>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_XL_Beer</Attribute>
+			<Value>-50</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Resource_X_A5</Attribute>
+			<Value>0.1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Purple Arcanium per 10 Seasons</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Fame</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Fame per Season</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>LifeMana</Attribute>
+			<Value>3</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+3 Life Power</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>-1% Unrest</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_Additive_Unrest</StrVal>
+			<Value>-2</Value>
+			<Provides>-2% Unrest in all your cities</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithLifeShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>800</AIPriority>
+			<AITag>Shards</AITag>
+		</AIData>
+		<ArtDef>ArtDef_X_IruTAlavar_Wonder</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="Wonder_X_PillarOfMascrinthus">
+		<DisplayName>Pillar of Mascrinthus</DisplayName>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Here stands a monolith ancient beyond measure, a stone tower bearing the Sigil of Mascrinthus - an immortal being whose power is said to lay dormant in the ground beneath this pillar, waiting to be tapped. Build a Monument here to tap into the Earth power of this location.
+		
+		+1 Green Arcanium per 10 Seasons
+		+1 Fame per Season
+		+3 Earth Power
+		-1% Unrest
+		-2% Unrest in all your cities
+		
+		Requires a Hill or a Forest Terrain.
+		Requires a Fortress Specialization.
+		
+		World Wonder</Description>
+		<AllowedPerGame>1</AllowedPerGame>
+		<RequiresCity>1</RequiresCity>
+		<PreferredTerrain>HillsTerrain</PreferredTerrain>
+		<PreferredTerrain>Forest</PreferredTerrain>
+		<PreferredTerrain>Forest</PreferredTerrain>
+		<RequiresCityImprovement>1</RequiresCityImprovement>
+		<RequiredImprovement>Fortress</RequiredImprovement>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_Tome_Earth</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Lizardmeninferiority</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Ascetics</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<LaborToBuild>666</LaborToBuild>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_XL_Beer</Attribute>
+			<Value>-50</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Resource_X_A6</Attribute>
+			<Value>0.1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Green Arcanium per 10 Seasons</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Fame</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Fame per Season</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>EarthMana</Attribute>
+			<Value>3</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+3 Earth Power</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>-1% Unrest</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_Additive_Unrest</StrVal>
+			<Value>-2</Value>
+			<Provides>-2% Unrest in all your cities</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithEarthShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>800</AIPriority>
+			<AITag>Shards</AITag>
+		</AIData>
+		<ArtDef>Art_Monument_PillarOfMascrinthus</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="Wonder_X_PitOfSarpah">
+		<DisplayName>Pit of Sarpah</DisplayName>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>As the Cataclysm raged, as the fires of civilization were extinguished and Elemental entered a long, dark, savage night, thousands of serpents were drawn here, to the Pit of Sarpah, where they basked in the warmth of its volcanic fissures. Build a Monument here to tap into the Fire power of this location.
+		
+		+1 Red Arcanium per 10 Seasons
+		+1 Fame per Season
+		+3 Fire Power
+		-1% Unrest
+		-2% Unrest in all your cities
+		
+		Requires a Desert or a Burning Lands Terrain.
+		Requires a Conclave Specialization.
+		
+		World Wonder</Description>
+		<AllowedPerGame>1</AllowedPerGame>
+		<RequiresCity>1</RequiresCity>
+		<PreferredTerrain>BurningLands</PreferredTerrain>
+		<PreferredTerrain>DesertTerrain</PreferredTerrain>
+		<RequiresCityImprovement>1</RequiresCityImprovement>
+		<RequiredImprovement>Conclave</RequiredImprovement>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_Tome_Fire</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Lizardmeninferiority</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Ascetics</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<LaborToBuild>666</LaborToBuild>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_XL_Beer</Attribute>
+			<Value>-50</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Resource_X_A4</Attribute>
+			<Value>0.1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Red Arcanium per 10 Seasons</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Fame</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Fame per Season</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>FireMana</Attribute>
+			<Value>3</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+3 Fire Power</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>-1% Unrest</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_Additive_Unrest</StrVal>
+			<Value>-2</Value>
+			<Provides>-2% Unrest in all your cities</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithFireShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>800</AIPriority>
+			<AITag>Shards</AITag>
+		</AIData>
+		<ArtDef>Art_Monument_PitOfSarpah</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="Wonder_X_Puraudrah">
+		<DisplayName>Puraudrah</DisplayName>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Here is the source of the continent's greatest rivers, the lifeblood of Elemental, the world's largest lake. Puraudrah is said to have been created by the Elemental Lord Poseirys, who summoned the world's waters to him in his hour of need, his battle against the Titan Curgen. Build a Monument here to tap into the Water power of this location.
+		
+		+1 Grey Arcanium per 10 Seasons
+		+1 Fame per Season
+		+3 Water Power
+		-1% Unrest
+		-2% Unrest in all your cities
+		
+		Requires a River or an Arctic Terrain.
+		Requires a Conclave Specialization.
+		
+		World Wonder</Description>
+		<AllowedPerGame>1</AllowedPerGame>
+		<RequiresCity>1</RequiresCity>
+		<PreferredTerrain>ArcticTerrain</PreferredTerrain>
+		<PreferredTerrain>River</PreferredTerrain>
+		<PreferredTerrain>River</PreferredTerrain>
+		<RequiresCityImprovement>1</RequiresCityImprovement>
+		<RequiredImprovement>Conclave</RequiredImprovement>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_Tome_Water</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Lizardmeninferiority</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Ascetics</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<LaborToBuild>666</LaborToBuild>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_XL_Beer</Attribute>
+			<Value>-50</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Resource_X_A1</Attribute>
+			<Value>0.1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Grey Arcanium per 10 Seasons</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Fame</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Fame per Season</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>WaterMana</Attribute>
+			<Value>3</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+3 Water Power</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>-1% Unrest</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_Additive_Unrest</StrVal>
+			<Value>-2</Value>
+			<Provides>-2% Unrest in all your cities</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithWaterShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>800</AIPriority>
+			<AITag>Shards</AITag>
+		</AIData>
+		<ArtDef>Art_Monument_Puraudrah</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="Wonder_X_BattleWonder">
+		<DisplayName>Battle Magic Wonder</DisplayName>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Needs a description and fancy name.
+		
+		+1 Red Arcanium per 10 Seasons
+		+1 Fame per Season
+		+3 Battle Power
+		-1% Unrest
+		-2% Unrest in all your cities
+		
+		Requires a Desert or a Burning Lands Terrain.
+		Requires a Fortress Specialization.
+		
+		World Wonder</Description>
+		<AllowedPerGame>1</AllowedPerGame>
+		<RequiresCity>1</RequiresCity>
+		<PreferredTerrain>BurningLands</PreferredTerrain>
+		<PreferredTerrain>DesertTerrain</PreferredTerrain>
+		<RequiresCityImprovement>1</RequiresCityImprovement>
+		<RequiredImprovement>Fortress</RequiredImprovement>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_Tome_Battle</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Lizardmeninferiority</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Ascetics</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<LaborToBuild>666</LaborToBuild>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_XL_Beer</Attribute>
+			<Value>-50</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Resource_X_A4</Attribute>
+			<Value>0.1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Red Arcanium per 10 Seasons</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Fame</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Fame per Season</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>JB_BattleMagic</Attribute>
+			<Value>3</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+3 Battle Power</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>-1% Unrest</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_Additive_Unrest</StrVal>
+			<Value>-2</Value>
+			<Provides>-2% Unrest in all your cities</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithFireShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>800</AIPriority>
+			<AITag>Shards</AITag>
+		</AIData>
+		<ArtDef>ArtDef_X_Coliseum_Wonder</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="Wonder_X_BeastWonder">
+		<DisplayName>Beast Magic Wonder</DisplayName>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Needs a description and fancy name.
+		
+		+1 Yellow Arcanium per 10 Seasons
+		+1 Fame per Season
+		+3 Beast Power
+		-1% Unrest
+		-2% Unrest in all your cities
+		
+		Requires Arctic, a Chasm, a Desert, or a Fissure Terrain.
+		Requires a Conclave Specialization.
+		
+		World Wonder</Description>
+		<AllowedPerGame>1</AllowedPerGame>
+		<RequiresCity>1</RequiresCity>
+		<PreferredTerrain>ArcticTerrain</PreferredTerrain>
+		<PreferredTerrain>Chasm</PreferredTerrain>
+		<PreferredTerrain>DesertTerrain</PreferredTerrain>
+		<PreferredTerrain>Fissure</PreferredTerrain>
+		<RequiresCityImprovement>1</RequiresCityImprovement>
+		<RequiredImprovement>Conclave</RequiredImprovement>
+		<LaborToBuild>666</LaborToBuild>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_Tome_Beast</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Lizardmeninferiority</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Ascetics</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_XL_Beer</Attribute>
+			<Value>-50</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Resource_X_A2</Attribute>
+			<Value>0.1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Yellow Arcanium per 10 Seasons</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Fame</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Fame per Season</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>JB_BeastMagic</Attribute>
+			<Value>3</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+3 Beast Power</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>-1% Unrest</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_Additive_Unrest</StrVal>
+			<Value>-2</Value>
+			<Provides>-2% Unrest in all your cities</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAirShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>800</AIPriority>
+			<AITag>Shards</AITag>
+		</AIData>
+		<ArtDef>ArtDef_X_GreatBreedingGround_Wonder</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="Wonder_X_NatureWonder">
+		<DisplayName>Nature Magic Wonder</DisplayName>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Needs a description and fancy name.
+		
+		+1 Green Arcanium per 10 Seasons
+		+1 Fame per Season
+		+3 Nature Power
+		-1% Unrest
+		-2% Unrest in all your cities
+		
+		Requires a Hill or a Forest Terrain.
+		Requires a Conclave Specialization.
+		
+		World Wonder</Description>
+		<AllowedPerGame>1</AllowedPerGame>
+		<RequiresCity>1</RequiresCity>
+		<PreferredTerrain>HillsTerrain</PreferredTerrain>
+		<PreferredTerrain>Forest</PreferredTerrain>
+		<PreferredTerrain>Forest</PreferredTerrain>
+		<RequiresCityImprovement>1</RequiresCityImprovement>
+		<RequiredImprovement>Conclave</RequiredImprovement>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_Tome_Nature</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Lizardmeninferiority</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Ascetics</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<LaborToBuild>666</LaborToBuild>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_XL_Beer</Attribute>
+			<Value>-50</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Resource_X_A6</Attribute>
+			<Value>0.1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Green Arcanium per 10 Seasons</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Fame</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Fame per Season</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>JB_NatureMagic</Attribute>
+			<Value>3</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+3 Nature Power</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>-1% Unrest</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_Additive_Unrest</StrVal>
+			<Value>-2</Value>
+			<Provides>-2% Unrest in all your cities</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithEarthShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>800</AIPriority>
+			<AITag>Shards</AITag>
+		</AIData>
+		<ArtDef>ArtDef_X_EmeraldEmporium_Wonder</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="Wonder_X_ShadowWonder">
+		<DisplayName>Shadow Magic Wonder</DisplayName>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Needs a description and fancy name.
+		
+		+1 Grey Arcanium per 10 Seasons
+		+1 Fame per Season
+		+3 Shadow Power
+		-1% Unrest
+		-2% Unrest in all your cities
+		
+		Requires a River or an Arctic Terrain.
+		Requires a Town Specialization.
+		
+		World Wonder</Description>
+		<AllowedPerGame>1</AllowedPerGame>
+		<RequiresCity>1</RequiresCity>
+		<PreferredTerrain>ArcticTerrain</PreferredTerrain>
+		<PreferredTerrain>River</PreferredTerrain>
+		<PreferredTerrain>River</PreferredTerrain>
+		<RequiresCityImprovement>1</RequiresCityImprovement>
+		<RequiredImprovement>Town</RequiredImprovement>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_Tome_Shadow</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Lizardmeninferiority</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Ascetics</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<LaborToBuild>666</LaborToBuild>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_XL_Beer</Attribute>
+			<Value>-50</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Resource_X_A1</Attribute>
+			<Value>0.1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Grey Arcanium per 10 Seasons</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Fame</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Fame per Season</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>JB_ShadowMagic</Attribute>
+			<Value>3</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+3 Shadow Power</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>-1% Unrest</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_Additive_Unrest</StrVal>
+			<Value>-2</Value>
+			<Provides>-2% Unrest in all your cities</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithWaterShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>800</AIPriority>
+			<AITag>Shards</AITag>
+		</AIData>
+		<ArtDef>ArtDef_X_UnearthedRevealer_Wonder</ArtDef>
+	</ImprovementType>
+</ImprovementTypes>

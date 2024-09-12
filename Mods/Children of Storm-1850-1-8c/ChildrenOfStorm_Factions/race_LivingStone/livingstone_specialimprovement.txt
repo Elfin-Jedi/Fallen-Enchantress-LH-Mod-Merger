@@ -1,0 +1,35 @@
+    <ImprovementType InternalName="LivingMaze">
+        <DisplayName>Living Maze</DisplayName>
+        <Description>When city is attacked, one enemy unit will not appear in battle.</Description>
+        <RequiresCity>1</RequiresCity>
+        <ReqCityLevel>1</ReqCityLevel>
+        <BarredTerrain>River</BarredTerrain>
+        <BarredTerrain>SwampTerrain</BarredTerrain>
+        <PreferredTerrain>City</PreferredTerrain>
+        <PreferredTerrain>Category:Land</PreferredTerrain>
+        <PreferredTerrain>Forest</PreferredTerrain>
+	<UpgradesToImprovement>Fortress</UpgradesToImprovement>
+
+	
+        <GameModifier>
+            <ModType>City</ModType>
+            <Attribute>BattleAutoCastSpell</Attribute>
+            <StrVal>EF_LivingMaze</StrVal>
+            <Duration>-1</Duration>
+    </GameModifier>
+
+        <Prereq>
+            <Type>Race</Type>
+            <Attribute>Race_Type_LivingStone</Attribute>
+        </Prereq>
+        <LaborToBuild>100</LaborToBuild>
+
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+            <AITag>Defensive</AITag>
+        </AIData>
+        <ArtDef>Art_Castle</ArtDef>
+</ImprovementType>
+
+
+

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<Techs>
+	<TechDef InternalName="Tech_X_Diplomacy_1">
+		<DisplayName>Diplomacy</DisplayName>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Civics</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Knowledge</Attribute>
+		</Prereq>
+		<Description>This breakthrough increases our influence among empires and kingdoms.</Description>
+		<AdviceText>With enough influence, world peace is possible.</AdviceText>
+		<Image>Q_Bard.png</Image>
+		<Color>60,138,25</Color>
+		<HotColor>146,255,49</HotColor>
+		<Cost>54</Cost>
+		<Rarity>100</Rarity>
+		<Category>Civilization</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>DiplomaticCapital</Attribute>
+			<Value>25</Value>
+            <Icon>Icon_InfluencePoints.png</Icon>
+			<Provides>Resources ::: +25 Influence, which may improve Foreign Relations (+0, +1, +2, or +3)</Provides>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>1</AIPriority>
+			<AITradeToGetValue>1</AITradeToGetValue>
+			<AITradeOutValue>1</AITradeOutValue>
+			<AIAtWarMultiplier>1</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_Diplomacy_2">
+		<DisplayName>Advanced Diplomacy</DisplayName>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_Diplomacy_1</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Trading</Attribute>
+		</Prereq>
+		<Description>This breakthrough increases our influence among empires and kingdoms.</Description>
+		<AdviceText>With enough influence, world peace is possible.</AdviceText>
+		<Image>Kingdom_Sovereign1.png</Image>
+		<Color>60,138,25</Color>
+		<HotColor>146,255,49</HotColor>
+		<Cost>72</Cost>
+		<Rarity>100</Rarity>
+		<Category>Civilization</Category>
+		<Infinite>0</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>DiplomaticCapital</Attribute>
+			<Value>75</Value>
+            <Icon>Icon_InfluencePoints.png</Icon>
+			<Provides>Resources ::: +75 Influence, which may improve Foreign Relations (+0, +1, +2, or +3)</Provides>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>1</AIPriority>
+			<AITradeToGetValue>1</AITradeToGetValue>
+			<AITradeOutValue>1</AITradeOutValue>
+			<AIAtWarMultiplier>1</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+	<TechDef InternalName="Tech_X_Diplomacy_3">
+		<DisplayName>Refined Diplomacy</DisplayName>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Dance_with_Dragons</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_Banking</Attribute>
+		</Prereq>
+		<Description>Concentration in this field of study will see your civilization gain 50 Influence: it can be researched continuously, as there is no limit to the knowledge you can gain from a careful study of history. The Kings of Antheros learned much from the Magi of Old, who fashioned a peace that lasted a thousand years.</Description>
+		<AdviceText>By refining our diplomatic techniques, world peace is possible.</AdviceText>
+		<Image>Diplomacy_Medallion_Full.png</Image>
+		<Color>60,138,25</Color>
+		<HotColor>146,255,49</HotColor>
+		<Cost>340</Cost>
+		<Rarity>100</Rarity>
+		<Category>Civilization</Category>
+		<Infinite>1</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>DiplomaticCapital</Attribute>
+			<Value>50</Value>
+            <Icon>Icon_InfluencePoints.png</Icon>
+			<Provides>Resources ::: +50 Influence, which may improve Foreign Relations (+0, +1, +2, or +3)</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Icon>Spellbook_Icon.png</Icon>
+			<Provides>This technology can be researched multiple times</Provides>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>1</AIPriority>
+			<AITradeToGetValue>1</AITradeToGetValue>
+			<AITradeOutValue>1</AITradeOutValue>
+			<AIAtWarMultiplier>1</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
+</Techs>

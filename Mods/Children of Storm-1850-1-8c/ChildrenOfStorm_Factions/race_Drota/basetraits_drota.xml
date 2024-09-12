@@ -1,0 +1,259 @@
+<?xml version="1.0"?>
+<Container>
+	<AbilityBonus InternalName="MasterScoutAbility_Drota">
+		<AbilityBonusOption InternalName="MasterScout_Drota">
+			<IMPINC>Strength</IMPINC>
+			<DisplayName>Crawlers</DisplayName>
+			<Description>No Movement penalty in Forests</Description>
+			<Icon>Ability_MasterScouts_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>MovementCostOverRide</Attribute>
+				<StrVal>Forest</StrVal>
+				<Value>10</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>No movement penalty in Forests</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>MovementCostOverRide</Attribute>
+				<StrVal>ArcticTerrain_Forest</StrVal>
+				<Value>10</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>.</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>MovementCostOverRide</Attribute>
+				<StrVal>BurningLands_Forest</StrVal>
+				<Value>10</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>.</Provides>
+			</GameModifier>
+			<Cost>1</Cost>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="DrotaEmpireTactical2">
+		<AbilityBonusOption InternalName="DrotaEmpireTactical2">
+			<DisplayName>Designing units</DisplayName>
+			<Description>The Drota are designed with a permanent base, which acts like a "mount". Note that when designing new Sovereigns or Units, you must yourself select the Drota base from the Equipment tab.
+
+Also note that Drota wear all armor like other classes - including leg armor and boots (they simply have no graphics). The stats count, so do not forget to equip them.</Description>
+			<Icon>ability_warning.png</Icon>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<GameModifier>
+				<Provides>The Drota are designed with a permanent base, which acts like a "mount". Note that when designing new Sovereigns or Units, you must yourself select the Drota base from the Equipment tab.
+
+Also note that Drota wear all armor like other classes - including leg armor and boots (they simply have no graphics). The stats count, so do not forget to equip them.</Provides>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="DrotaEmpireTactical4">
+		<AbilityBonusOption InternalName="DrotaEmpireTactical4">
+			<DisplayName>Meat eaters</DisplayName>
+			<Description>The Drota do not ride mounts - they have no need to, nor can they. Whenever they come upon wild horses or wargs, the result is dinner for the Drota. 
+
+Instead of building normal stables or kennels, the Drota may turn such resources into a building that provides food for the connected city (15 for Wild Wargs, 35 for Horses). These improvements require the Animal Husbandry technology.
+
+Drota may still research Mounted warfare and Warg Riding in order to equip hired champions.</Description>
+			<Icon>Ability_DeadlyBite_Icon.png</Icon>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<GameModifier>
+				<Provides>The Drota do not ride mounts - they have no need to, nor can they. Whenever they come upon wild horses or wargs, the result is dinner for the Drota. 
+
+Instead of building normal stables or kennels, the Drota may turn such resources into a building that provides food for the connected city (15 for Wild Wargs, 35 for Horses). These improvements require the Animal Husbandry technology.
+
+Drota may still research Mounted warfare and Warg Riding in order to equip hired champions.</Provides>
+			</GameModifier>
+			<!-- see drota_specialimprovements.xml -->
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<!--  <AbilityBonus InternalName="DrotaEmpireTactical5">
+    <AbilityBonusOption InternalName="DrotaEmpireTactical5">
+      <DisplayName>Totems</DisplayName>
+      <Description>As a shamanistic culture, the Drota put great value in any small trinket they find. Nothing is thrown away that can be used (and many that are useless are stored, too). 
+
+      The Drota therefore gain +33% Crystals from all sources.</Description>
+      <Icon>Icon_Crystal.png</Icon>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_RefinedCrystal</StrVal>
+        <Value>33</Value>
+      </GameModifier>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>-->
+	<AbilityBonus InternalName="DrotaEmpireTactical6">
+		<AbilityBonusOption InternalName="DrotaEmpireTactical6">
+			<IMPINC>Weakness</IMPINC>
+			<Cost>-1</Cost>
+			<DisplayName>Death to All</DisplayName>
+			<Description>The Drota openly hunt all other races in the world. This is something they are proud of, and will tell those they meet. As a result, all Drota trades are perceived as having 40% lower value.</Description>
+			<Icon>Ability_AfraidofDying_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Diplomacy</StrVal>
+				<Value>-40</Value>
+				<Provides>The Drota openly hunt all other races in the world. This is something they are proud of, and will tell those they meet. As a result, all Drota trades are perceived as having 40% lower value.</Provides>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="SpiderBondAbility">
+		<AbilityBonusType>Unit_Design</AbilityBonusType>
+		<AbilityBonusOption InternalName="SpiderBondAbilityAbility">
+			<Type>Faction Trait</Type>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Prereq>
+				<Type>Race</Type>
+				<Attribute>Race_Type_Drota</Attribute>
+			</Prereq>
+			<DisplayName>Venomous</DisplayName>
+			<Description>Melee and ranged attacks deal +2 poison damage.
+
+      This trait costs 1 Crystal per unit member.</Description>
+			<Icon>Ability_PoisonousI_Icon.png</Icon>
+			<ProductionRequirement>
+				<Type>Resource</Type>
+				<Attribute>RefinedCrystal</Attribute>
+				<Value>1</Value>
+			</ProductionRequirement>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Attack_Poison</StrVal>
+				<Provides>Melee and ranged attacks deal +2 poison damage.
+
+This trait costs 1 Crystal per unit member.</Provides>
+				<Value>2</Value>
+			</GameModifier>
+			<AdditionalTrainingTurns>10</AdditionalTrainingTurns>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>0</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Drota_Trait_Family">
+		<AbilityBonusType>Unit_Design</AbilityBonusType>
+		<AbilityBonusOption InternalName="Drota_Trait_Webber">
+			<Type>Faction Trait</Type>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Prereq>
+				<Type>Race</Type>
+				<Attribute>Race_Type_Drota</Attribute>
+			</Prereq>
+			<DisplayName>Webslinger</DisplayName>
+			<ProductionRequirement>
+				<Type>Resource</Type>
+				<Attribute>RefinedCrystal</Attribute>
+				<Value>1</Value>
+			</ProductionRequirement>
+			<Description>Allows the unit to use the ability Websling. Websling has a chance equal to ((Drota Troopcount+3 - Target Level) * 20) percent to make the target lose their next turn unless they resist. Only one web may be cast on a single target until they end their next turn, regardless of its success.
+
+This trait costs 1 crystal per unit member.</Description>
+			<Icon>Ability_TangledWeb_Icon.png</Icon>
+			<AdditionalTrainingTurns>12</AdditionalTrainingTurns>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>Websling</StrVal>
+				<Provides>Allows the unit to use the ability Websling. Websling has a chance equal to ((Drota Troopcount+3 - Target Level) * 20) percent to make the target lose their next turn unless they resist. Oversized targets are immmune to Websling. Only one web may be cast on a single target until they end their next turn, regardless of its success.
+
+This trait costs 1 crystal per unit member.</Provides>
+			</GameModifier>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Drota_Trait_Hunter">
+		<AbilityBonusType>Unit_Design</AbilityBonusType>
+		<AbilityBonusOption InternalName="Hunter">
+			<IsCombatAbility>1</IsCombatAbility>
+			<DisplayName>Hunter</DisplayName>
+			<Description>+40% Physical Damage vs Beasts</Description>
+			<AdditionalTrainingTurns>8</AdditionalTrainingTurns>
+			<Icon>Ability_Hunter_Icon.png</Icon>
+			<Type>Faction Trait</Type>
+			<!--
+	  <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Attack_Blunt</StrVal>
+        <StrVal2>UnitStat_BG_IsBeast</StrVal2>
+        <Multiplier>1.40</Multiplier>
+        <vsHigher>1</vsHigher>
+        <Provides>+40% Blunt Damage vs Beasts</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Attack_Cutting</StrVal>
+        <StrVal2>UnitStat_BG_IsBeast</StrVal2>
+        <Multiplier>1.40</Multiplier>
+        <vsHigher>1</vsHigher>
+        <Provides>+40% Cutting Damage vs Beasts</Provides>
+      </GameModifier>
+	  -->
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Attack_Pierce</StrVal>
+				<StrVal2>UnitStat_BG_IsBeast</StrVal2>
+				<Multiplier>1.40</Multiplier>
+				<Provides>+40% Pierce Damage vs Beasts</Provides>
+				<vsHigher>1</vsHigher>
+			</GameModifier>
+			<Prereq>
+				<Type>Race</Type>
+				<Attribute>Race_Type_Drota</Attribute>
+			</Prereq>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Increased_Moves_Drota">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Increased_Moves_Drota">
+			<DisplayName>Jumpy</DisplayName>
+			<Description>+1 Moves</Description>
+			<Icon>Ability_PoisonousI_Icon.png</Icon>
+			<MinimumLevel>5</MinimumLevel>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Provides>+1 Moves</Provides>
+				<Value>1</Value>
+			</GameModifier>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Likelihood>600</Likelihood>
+			<RarityDisplay>Common</RarityDisplay>
+			<Type>Ability</Type>
+			<Prereq>
+				<Type>UnitStat</Type>
+				<Attribute>UnitStat_BG_IsRace_Drota</Attribute>
+				<Value>1</Value>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+</Container>

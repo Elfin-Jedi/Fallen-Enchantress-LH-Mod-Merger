@@ -1,0 +1,1441 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Created with the Elemental Editor -->
+<!-- CoreAbilities.xml -->
+<!-- -->
+<AbilityBonuses> 
+
+	<AbilityBonus InternalName="Champion_History">
+        <AbilityBonusType>Champion_History</AbilityBonusType>
+        <AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+        <AbilityBonusOption InternalName="Adventurer">
+            <DisplayName>Adventurer</DisplayName>
+            <Description>+10 Fame from completing Quests. +10% Attack versus Beasts, Dragons, Undead, Twisted, Constructs, Elementals and Bandits. </Description>
+            <Icon>Ability_Adventurer_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Pierce</StrVal>
+                <StrVal2>Beast</StrVal2>
+                <Multiplier>1.1</Multiplier>
+                <Provides>+10% Attack vs Beasts</Provides>
+                <vsUnitType>1</vsUnitType>
+            </GameModifier>	
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Pierce</StrVal>
+                <StrVal2>Dragon</StrVal2>
+                <Multiplier>1.1</Multiplier>
+                <Provides>+10% Attack vs Dragons</Provides>
+                <vsUnitType>1</vsUnitType>
+            </GameModifier>	
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Pierce</StrVal>
+                <StrVal2>UNdead</StrVal2>
+                <Multiplier>1.1</Multiplier>
+                <Provides>+10% Attack vs Undead</Provides>
+                <vsUnitType>1</vsUnitType>
+            </GameModifier>	
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Pierce</StrVal>
+                <StrVal2>Twisted</StrVal2>
+                <Multiplier>1.1</Multiplier>
+                <Provides>+10% Attack vs Twisted</Provides>
+                <vsUnitType>1</vsUnitType>
+            </GameModifier>	
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Pierce</StrVal>
+                <StrVal2>Construct</StrVal2>
+                <Multiplier>1.1</Multiplier>
+                <Provides>+10% Attack vs Constructs</Provides>
+                <vsUnitType>1</vsUnitType>
+            </GameModifier>	
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Pierce</StrVal>
+                <StrVal2>Elemental</StrVal2>
+                <Multiplier>1.1</Multiplier>
+                <Provides>+10% Attack vs Elementals</Provides>
+                <vsUnitType>1</vsUnitType>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Pierce</StrVal>
+                <StrVal2>Bandit</StrVal2>
+                <Multiplier>1.1</Multiplier>
+                <Provides>+10% Attack vs Bandits</Provides>
+                <vsUnitType>1</vsUnitType>
+            </GameModifier>				
+            <Cost>1</Cost>
+            <Type>Army</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>			
+        <AbilityBonusOption InternalName="Armorer">
+            <DisplayName>Armorer</DisplayName>
+            <Description>All units get +25% to Defense, Unlocks the Patch Armor ability.</Description>
+            <Icon>Ability_Armorer_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>UnlockCombatAbility</Attribute>
+                <StrVal>PatchArmor</StrVal>
+                <Provides>Patch Armor- Heals target unit by a quarter of their total health, and grants them 4 defense.</Provides>
+            </GameModifier>	
+            <Cost>1</Cost>
+            <Type>Army</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>		
+        <AbilityBonusOption InternalName="General">
+            <DisplayName>General</DisplayName>
+            <Description>+25% to the Army's Experience, Unlocks the Rally ability.</Description>
+            <Icon>Ability_General_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>UnlockCombatAbility</Attribute>
+                <StrVal>Rally</StrVal>
+                <Provides>Rally- All units in your Army are healed for 4 + caster's level, and gain +1 Initiative.</Provides>
+            </GameModifier>	
+            <Cost>1</Cost>
+            <Type>Army</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>		
+        <AbilityBonusOption InternalName="Hunter">
+            <DisplayName>Hunter</DisplayName>
+            <Description>+50% Attack vs Beasts, and Dragons. Unlocks the Hunter's Strike ability.</Description>
+            <Icon>Ability_Hunter_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>UnlockCombatAbility</Attribute>
+                <StrVal>HuntersStrike</StrVal>
+                <Provides>Hunter's Strike- Attack that does damage equal to 1/3 of the target's current health.</Provides>
+            </GameModifier>			
+            <Cost>1</Cost>
+            <IsCombatAbility>1</IsCombatAbility>
+            <Type>Aggressive</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>	
+        <AbilityBonusOption InternalName="Warlord">
+            <DisplayName>Warlord</DisplayName>
+            <Description>-50% to unit Wages, unlocks the Mass Charge ability.</Description>
+            <Icon>Ability_Warlord_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>UnlockCombatAbility</Attribute>
+                <StrVal>MassCharge</StrVal>
+                <Provides>Mass Charge- All units in your Army gain +20% Attack and +1 Movement for 1 Turn.</Provides>
+            </GameModifier>	
+            <Cost>1</Cost>
+            <Type>Army</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>		
+        <AbilityBonusOption InternalName="Noble">
+            <DisplayName>Noble</DisplayName>
+            <Description>-10 Unrest in all cities, -15% unit training cost in stationed city.</Description>
+            <Icon>Ability_Noble_Icon.png</Icon>
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>TrainingDiscount</Attribute>
+				<Value>0.15</Value>
+				<Provides>-15% Unit Training cost in stationed city.</Provides>
+			</GameModifier>			
+            <Cost>1</Cost>
+            <Type>Army</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>		
+        <AbilityBonusOption InternalName="Architect">
+            <DisplayName>Architect</DisplayName>
+            <Description>+1 Production per Material in all your cities, and +15% Improvement production in stationed city.</Description>
+            <Icon>Ability_Architect_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Additive_ProductionPerMaterials</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Production per Material in all your cities</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>BuildingDiscount</Attribute>
+				<Value>0.15</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+15% Improvement Production in stationed city.</Provides>
+			</GameModifier>			
+            <Cost>1</Cost>
+            <Type>Army</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+        <AbilityBonusOption InternalName="Theocrat">
+            <DisplayName>Theocrat</DisplayName>
+            <Description>+1 Spell Mastery and Resistance per level, + 1 Essence in stationed city.</Description>
+            <Icon>Ability_Theocrat_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>TileYieldEssence</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Essence in stationed city.</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+			</GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_MagicPower</StrVal>
+                <Value>1</Value>
+                <PerLevel>1</PerLevel>
+                <Provides>+1 Spell Mastery per Level</Provides>
+            </GameModifier>		
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_MagicResist</StrVal>
+                <Value>1</Value>
+                <PerLevel>1</PerLevel>
+                <Provides>+1 Spell Resistance per Level</Provides>
+            </GameModifier>				
+            <Cost>1</Cost>
+            <Type>Spell</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+	</AbilityBonus>			
+
+    <AbilityBonus InternalName="NumbAbility">
+        <AbilityBonusType>Champion_Talent</AbilityBonusType>
+        <AbilityBonusOption InternalName="Numb">
+            <DisplayName>Numb</DisplayName>
+            <Description>+3 Health Regeneration and +8 Defense when under 25% Hit Points.</Description>
+            <Icon>Ability_Numb_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Defense_Pierce</StrVal>
+                <Value>8</Value>
+                <Provides>+8 Defense when under 25% Hit Points</Provides>
+                <WhenUnderPercentHitPoints>25</WhenUnderPercentHitPoints>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_TacticalHealthRegen</StrVal>
+                <Value>3</Value>
+                <Provides>+3 Health Regeneration when under 25% Hit Points.</Provides>				
+                <WhenUnderPercentHitPoints>25</WhenUnderPercentHitPoints>				
+            </GameModifier>
+            <Cost>1</Cost>
+            <Type>Defensive</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	
+    <AbilityBonus InternalName="DarkHeartAbility">
+        <AbilityBonusType>Champion_Talent</AbilityBonusType>
+        <AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+        <AbilityBonusOption InternalName="DarkHeartA">
+            <DisplayName>Dark Heart</DisplayName>
+            <Description>Grants the ability to cast the Well of Darkness spell.</Description>
+            <Icon>Ability_DarkHeart_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Provides>Unlocks the Well of Darkness spell</Provides>
+            </GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>DarkAura</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>Which can only be cast on one city at a time.</Provides>
+			</GameModifier>			
+            <Cost>1</Cost>
+            <Type>Spell</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>	
+
+    <AbilityBonus InternalName="TheoryAbility">
+        <AbilityBonusType>Champion_Talent</AbilityBonusType>
+        <AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+        <AbilityBonusOption InternalName="Theory">
+            <DisplayName>Theorist</DisplayName>
+            <Description>+1 Wisdom per turn when in a city, which can be used to cast the Experimentation spell for experience.</Description>
+            <Icon>Ability_Organized_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Resource</ModType>
+                <Attribute>Data</Attribute>
+                <Value>1</Value>
+				<PerTurn>1</PerTurn>
+                <Provides>+1 Wisdom per Turn when in a City</Provides>
+            </GameModifier>	
+			<GameModifier>
+				<Provides>Unlocks the Experimentation spell</Provides>
+			</GameModifier>			
+            <Cost>1</Cost>
+            <Type>Spell</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	
+    <AbilityBonus InternalName="InnerFireAbility">
+        <AbilityBonusType>Champion_Talent</AbilityBonusType>
+        <AbilityBonusOption InternalName="InnerFire">
+            <DisplayName>Inner Fire</DisplayName>
+            <Description>After casting a spell everyone who attacks this unit in melee over the next 2 turns take 5 fire damage.</Description>
+            <Icon>Ability_InnerFire_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>CastAppliesSpell</Attribute>
+                <StrVal>InnerFireSpell</StrVal>
+                <Provides>After casting a spell everyone who attacks this unit in melee over the next 2 turns take 5 fire damage.</Provides>
+            </GameModifier>
+            <Cost>1</Cost>
+            <IsCombatAbility>1</IsCombatAbility>
+            <Type>Aggressive</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	
+    <AbilityBonus InternalName="ToolOfFateAbility">
+        <AbilityBonusType>Champion_Talent</AbilityBonusType>	
+        <AbilityBonusOption InternalName="ToolOfFate">
+            <DisplayName>Fated Path</DisplayName>
+            <Description>Unit sometimes is guided by fate and recieves a random stat bomus in combat.</Description>
+            <Icon>Ability_Fate_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>BattleAutoCastSpell</Attribute>
+                <StrVal>ToolOfFateSpell</StrVal>
+                <Value>1</Value>
+                <Provides>Unit sometimes is guided by fate and recieves a random stat bomus in combat.</Provides>
+            </GameModifier>
+			<Cost>1</Cost>	
+            <Type>Defensive</Type>			
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	
+    <AbilityBonus InternalName="VendettaAbility">
+        <AbilityBonusType>Champion_Talent</AbilityBonusType>	
+        <AbilityBonusOption InternalName="Vendetta">
+            <DisplayName>Vendetta</DisplayName>
+            <Description>Grants +33% physical attack versus a random enemy in combat.</Description>
+            <Icon>Ability_Vendetta_Icon.png</Icon>				
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>BattleAutoCastSpell</Attribute>
+                <StrVal>VendettaSpell</StrVal>
+                <Value>100</Value>
+                <Provides>Chooses a random enemy unit at start of combat.</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Pierce</StrVal>
+				<StrVal2>UnitStat_Vendetta</StrVal2>
+                <Multiplier>1.33</Multiplier>
+                <BonusValue>0</BonusValue>				
+                <Provides>Grants +33% physical attack versus that unit.</Provides>
+                <vsHigher>1</vsHigher>
+            </GameModifier>			
+			<Cost>1</Cost>
+            <Type>Aggressive</Type>			
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	
+    <AbilityBonus InternalName="LatentAbility">
+        <AbilityBonusType>Champion_Talent</AbilityBonusType>
+        <AbilityBonusOption InternalName="Latent">
+            <DisplayName>Latent</DisplayName>
+            <Description>Casting a spell grants +3 spell mastery in combat.</Description>
+            <Icon>Ability_Latent_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>CastAppliesSpell</Attribute>
+                <StrVal>LatentSpell</StrVal>
+                <Provides>Casting a spell grants +3 spell mastery in combat.</Provides>
+            </GameModifier>
+            <Cost>1</Cost>
+            <IsCombatAbility>1</IsCombatAbility>
+            <Type>Aggressive</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	
+    <AbilityBonus InternalName="WardAbility">
+        <AbilityBonusType>Champion_Talent</AbilityBonusType>	
+        <AbilityBonusOption InternalName="Ward">
+            <DisplayName>Rune Master</DisplayName>
+            <Description>Grants Spell Mastery equal to unit's Spell Resistance.</Description>
+            <Icon>Ability_Ward_Icon.png</Icon>				
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>BattleAutoCastSpell</Attribute>
+                <StrVal>WardSpell</StrVal>
+                <Value>100</Value>
+                <Provides>Grants Spell Mastery equal to unit's Spell Resistance.</Provides>
+            </GameModifier>			
+			<Cost>1</Cost>
+            <Type>Aggressive</Type>			
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	
+    <AbilityBonus InternalName="MomentumAbility">
+        <AbilityBonusType>Champion_Talent</AbilityBonusType>	
+        <AbilityBonusOption InternalName="Momentum">
+            <DisplayName>Momentum</DisplayName>
+            <Description>Grants Attack equal to one less then unit's total Moves.</Description>
+            <Icon>Ability_Momentum_Icon.png</Icon>				
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>BattleAutoCastSpell</Attribute>
+                <StrVal>MomentumSpell</StrVal>
+                <Value>100</Value>
+                <Provides>Grants Attack equal to one less then unit's total Moves.</Provides>
+            </GameModifier>			
+			<Cost>1</Cost>
+            <Type>Aggressive</Type>			
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	
+</AbilityBonuses>	
+	
+    <GameItemType InternalName="HeartOfDarkness">
+        <DisplayName>Heart of Darkness</DisplayName>
+        <Description>A dark and mysterious orb taken from the jungle city of Zad-Zabril by Sanjo when she sailed away from it. It emits a fearful aura.</Description>
+        <Type>Accessory</Type>
+        <CanBeEquipped>1</CanBeEquipped>
+        <AffectsGlobalResources>1</AffectsGlobalResources>
+        <CustomizationPointCost>1</CustomizationPointCost>
+        <ShopValue>25</ShopValue>
+
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+        <Likelihood>0</Likelihood>
+        <RarityDisplay>UltraRare</RarityDisplay>
+        <HeroOnly>1</HeroOnly>
+        <IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+        <IsUsable>0</IsUsable>
+        <ArtDef>DarkHeart_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="DarkHeart_ArtDef">
+            <GameItemTypeModelPack InternalName="DarkHeart_Default">
+                <IconFile>Item_DarkHeart.png</IconFile>
+                <TintR>210</TintR>
+                <TintG>210</TintG>
+                <TintB>210</TintB>
+                <SFX>Equip_MagicRing_01</SFX>
+                <SFX>Equip_MagicRing_02</SFX>
+                <SFX>Equip_MagicRing_03</SFX>
+                <SFX>Equip_MagicRing_04</SFX>
+                <GameItemTypeModel>
+                </GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>		
+    </GameItemType>	
+	
+    <GameItemType InternalName="EnMirror">
+        <DisplayName>Enthralling Mirror</DisplayName>
+        <Description>At first glance it seems to be an ordinary mirror, but the more you look into it the harder it is to look away.</Description>
+        <Type>Accessory</Type>
+        <CanBeEquipped>1</CanBeEquipped>
+        <ShopValue>380</ShopValue>
+        <IsAvailableForSovereignCustomization>1</IsAvailableForSovereignCustomization>
+        <CustomizationPointCost>1</CustomizationPointCost>		
+        <Likelihood>0</Likelihood>
+        <RarityDisplay>UltraRare</RarityDisplay>
+        <HeroOnly>1</HeroOnly>
+        <IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>		
+        <IsUsable>0</IsUsable>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>MeleeDefenseAppliesSpell</Attribute>
+                <StrVal>EnMirror_Effect</StrVal>
+                <Provides>Units that strike the holder in melee are beguiled.</Provides>
+            </GameModifier>		
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Dodge</StrVal>
+				<Value>5</Value>
+			</GameModifier>	
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_MagicResist</StrVal>
+				<Value>5</Value>
+			</GameModifier>			
+        <ArtDef>EnMirror_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="EnMirror_ArtDef">
+            <GameItemTypeModelPack InternalName="EnMirror_Default">
+                <IconFile>Item_EnMirror_Icon.png</IconFile>
+                <TintR>240</TintR>
+                <TintG>10</TintG>
+                <TintB>210</TintB>
+                <SFX>Equip_MagicRing_01</SFX>
+                <SFX>Equip_MagicRing_02</SFX>
+                <SFX>Equip_MagicRing_03</SFX>
+                <SFX>Equip_MagicRing_04</SFX>
+                <GameItemTypeModel>
+                </GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>	
+	
+    <GameItemType InternalName="Mount_SpiderBody3">
+        <DisplayName>Spider Body</DisplayName>
+        <Type>Mount</Type>
+        <Subtype>Clothes</Subtype>
+        <CanBeEquipped>1</CanBeEquipped>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <CutSceneDataPack>BroodUnitCutscenePack</CutSceneDataPack>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+        <IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Moves</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Moves</Provides>
+            </GameModifier>	
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_CombatSpeed</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Initiative</Provides>
+            </GameModifier>			
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_HitPoints</StrVal>
+                <Value>1</Value>
+                <PerLevel>1</PerLevel>
+                <Provides>+1 Hit Point per Level</Provides>
+            </GameModifier>	
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Defense_Pierce</StrVal>
+                <Value>2</Value>
+                <Provides>+2 Defense</Provides>
+            </GameModifier>	
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>Entrap</StrVal>
+				<Provides>Teleport to a location and do half your total damage to and web all enemies within 1 radius.</Provides>
+			</GameModifier>			
+            <AIData AIPersonality="AI_General">
+                <AIPrefType>AIPrefType_MOUNT</AIPrefType>
+            </AIData>
+        <ArtDef>Mount_SpiderBody3_ArtDef</ArtDef>
+    </GameItemType>	
+	
+</GameItemTypes>	
+
+<SpellDefs>
+
+    <SpellDef InternalName="Expose">
+        <DisplayName>Expose</DisplayName>
+        <Description>Reduces all enemies Defense and Dodge by 50% for 3 turns unless they resist.</Description>
+        <Image>T_MassCurse_Painting.png</Image>
+        <IconFG>T_Expose_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <CastTime>1</CastTime>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitCurse</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Debuff</SpellSubClass>
+        <SpellTargetType>AllEnemyUnits</SpellTargetType>
+        <IsResistable>1</IsResistable>	
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Scholar</Attribute>
+        </Prereq>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>25</Amount>
+        </SpellResourceCost>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Defense_Pierce</StrVal>
+            <DisplayName>Exposed</DisplayName>
+            <Duration>3</Duration>
+            <Calculate InternalName="Calc" ValueOwner="TargetUnit">
+                <Expression><![CDATA[[UnitStat_Defense_Pierce] * -0.5]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Dodge</StrVal>
+            <Duration>3</Duration>			
+            <Calculate InternalName="Calc" ValueOwner="TargetUnit">
+                <Expression><![CDATA[[UnitStat_Dodge] * -0.5]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>15</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_Curse_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>S_BlindingLight_Particle</EffectName>
+            <LocalPosition>0,60,0</LocalPosition>
+            <EffectScale>2.5</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+            <PlayOnCaster>1</PlayOnCaster>
+        </SpellDefEffect>
+    </SpellDef>
+
+    <SpellDef InternalName="MomentumSpell">
+        <DisplayName>Momentum</DisplayName>
+        <Description>Grants Attack equal to one less then unit's total Moves.</Description>
+        <Image>S_CalloftheTitans_Painting.png</Image>
+        <IconFG>Ability_Momentum_Icon.png</IconFG>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>Self</SpellTargetType>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <IgnoreCastAnim>1</IgnoreCastAnim>
+        <IsCastable>0</IsCastable>
+        <IsSpecialAbility>1</IsSpecialAbility>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Attack_Pierce</StrVal>
+            <Duration>-1</Duration>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_Moves] - 1]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+        </AIData>
+    </SpellDef>
+
+    <SpellDef InternalName="WardSpell">
+        <DisplayName>Runes</DisplayName>
+        <Description>Grants Spell Mastery equal to unit's Spell Resistance.</Description>
+        <Image>Tech_Heavy_Shields.png</Image>
+        <IconFG>Ability_Ward_Icon.png</IconFG>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>Self</SpellTargetType>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <IgnoreCastAnim>1</IgnoreCastAnim>
+        <IsCastable>0</IsCastable>
+        <IsSpecialAbility>1</IsSpecialAbility>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_MagicPower</StrVal>
+            <Duration>-1</Duration>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_MagicResist]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+        </AIData>
+    </SpellDef>
+
+    <SpellDef InternalName="PatchArmor">
+        <DisplayName>Patch Armor</DisplayName>
+        <Description>Heals target unit by a quarter of their total health, and grants them 4 defense.</Description>
+        <FormattedDescription>Heals target unit by a quarter of their total health, and grants them 4 defense.</FormattedDescription>
+        <Image>S_BlessingOfRestoration_Painting</Image>
+        <IconFG>Ability_PatchArmor_Icon.png</IconFG>
+        <Cooldown>5</Cooldown>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>Heal</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Heal</SpellSubClass>
+        <SpellTargetType>FriendlyUnit</SpellTargetType>
+        <Range>1</Range>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>CurHealth</Attribute>
+            <IsForFormattedDescription>1</IsForFormattedDescription>
+            <Calculate InternalName="Calc" ValueOwner="TargetUnit">
+                <Expression><![CDATA[[UnitStat_HitPoints] * 0.25]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Defense_Pierce</StrVal>
+                <Value>4</Value>
+				<DisplayName>Patched</DisplayName>
+				<Duration>-1</Duration>
+            </GameModifier>		
+        <AIData AIPersonality="AI_General">
+            <AIPriority>15</AIPriority>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+					<Expression><![CDATA[[Unit_GetHPCurrent]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc2" ValueOwner="TargetUnit">
+					<Expression><![CDATA[[UnitStat_HitPoints] * 0.75]]></Expression>
+				</Calculate>			
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc] < [Calc2]]]></Expression>
+				</Calculate>			
+			</ValueCalcWrapper>			
+        </AIData>
+        <HitSoundFX>Spell_GiftOfIron_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>T_StoneSkin_Particle</EffectName>
+            <LocalPosition>0,25,0</LocalPosition>
+            <EffectScale>.4</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+            <PlayOnAllTargets>1</PlayOnAllTargets>
+        </SpellDefEffect>
+    </SpellDef>
+
+    <SpellDef InternalName="Rally">
+        <DisplayName>Rally</DisplayName>
+        <Description>All units in your Army are healed for 4 + caster's level, and gain +1 Initiative.</Description>
+        <Image>T_Haste_Painting.png</Image>
+        <IconFG>Ability_Rally_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <CanStack>0</CanStack>
+        <CastTime>1</CastTime>
+        <Cooldown>6</Cooldown>		
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>Heal</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Heal</SpellSubClass>
+        <SpellTargetType>AllFriendlyUnits</SpellTargetType>
+        <IsCastable>0</IsCastable>
+        <IsSpecialAbility>1</IsSpecialAbility>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>CurHealth</Attribute>
+            <IsForFormattedDescription>1</IsForFormattedDescription>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Unit_GetLevel] + 4]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_CombatSpeed</StrVal>
+            <DisplayName>Rally</DisplayName>
+            <Duration>-1</Duration>
+            <Value>1</Value>
+        </GameModifier>		
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_BattleCry_01</HitSoundFX>
+    </SpellDef>
+	
+    <SpellDef InternalName="MassCharge">
+        <DisplayName>Mass Charge</DisplayName>
+        <Description>All units in your Army gain +20% Attack and +1 Movement for 1 Turn.</Description>
+        <Image>T_Haste_Painting.png</Image>
+        <IconFG>Ability_MassCharge_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <CanStack>0</CanStack>
+        <Cooldown>4</Cooldown>		
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>AllFriendlyUnits</SpellTargetType>
+        <IsCastable>0</IsCastable>
+        <IsSpecialAbility>1</IsSpecialAbility>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Pierce</StrVal>
+                <Multiplier>1.2</Multiplier>
+                <DisplayName>MassCharge</DisplayName>
+                <Duration>1</Duration>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Moves</StrVal>
+                <Value>1</Value>
+                <Duration>1</Duration>
+            </GameModifier>	
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_BattleCry_01</HitSoundFX>
+    </SpellDef>
+
+    <SpellDef InternalName="HuntersStrike">
+        <DisplayName>Hunter's Strike</DisplayName>
+        <Description>Attack that does damage equal to 1/3 of the target's current health.</Description>
+        <FormattedDescription>Attack that does damage equal to 1/3 of the target's current health.</FormattedDescription>
+        <IconFG>Ability_HunterStrike_Icon.png</IconFG>
+        <Cooldown>3</Cooldown>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Damage</SpellSubClass>
+        <SpellTargetType>EnemyUnit</SpellTargetType>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <IsCastable>1</IsCastable>
+        <CanBeDodged>1</CanBeDodged>
+        <IsSpecialAbility>1</IsSpecialAbility>
+        <UseWeaponRange>1</UseWeaponRange>
+        <AutoUnlock>0</AutoUnlock>	
+        <CanStack>1</CanStack>		
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>CurHealth</Attribute>
+            <Calculate InternalName="Calc" ValueOwner="TargetUnit">
+                <Expression><![CDATA[[Unit_GetHPCurrent] * -0.34]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>		
+        <AIData AIPersonality="AI_General">
+            <AIPriority>10</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_Knockback_01</HitSoundFX>
+        <MissSoundFX>Miss_Swing1</MissSoundFX>
+        <MissSoundFX>Miss_Swing2</MissSoundFX>
+        <SpellDefEffect>
+            <EffectName>Ability_ShieldBash_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>0.25</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+
+<!-----	
+    <SpellDef InternalName="Foundations">
+        <DisplayName>Firm Foundations</DisplayName>
+        <Description>Reduces improvement build times by 15% in the city.</Description>
+        <Image>S_Inspiration_Painting.png</Image>
+        <IconFG>S_Foundations_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <SpellBookSortCategory>City</SpellBookSortCategory>
+        <SpellBookSortSubCategory>CityEnchantment</SpellBookSortSubCategory>
+        <SpellType>Strategic</SpellType>
+        <SpellClass>ImpResourceBooster</SpellClass>
+        <SpellSubClass>Other</SpellSubClass>
+        <SpellTargetType>FriendlyCity</SpellTargetType>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Architect</Attribute>
+        </Prereq>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>15</Amount>
+        </SpellResourceCost>
+        <GameModifier>
+            <ModType>City</ModType>
+            <Attribute>BuildingDiscount</Attribute>
+            <Value>0.15</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>+15% Improvement Production</Provides>
+        </GameModifier>
+        <ValidTerrainCategory>City</ValidTerrainCategory>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>50</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_EnchantedHammers_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>S_AuraofMight_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>.75</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef> ---->
+
+    <SpellDef InternalName="LatentSpell">
+        <DisplayName>Latent</DisplayName>
+        <Description>+3 Spell Mastery after casting a spell.</Description>
+        <Image>T_ManaBlast_Painting.png</Image>
+        <IconFG>Ability_Latent_Icon.png</IconFG>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<IsSpecialAbility>1</IsSpecialAbility>
+        <CanStack>1</CanStack>		
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>Self</SpellTargetType>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_MagicPower</StrVal>
+            <Duration>-1</Duration>
+            <Value>3</Value>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>15</AIPriority>
+        </AIData>
+    </SpellDef>
+	
+   <SpellDef InternalName="VendettaSpell">
+        <DisplayName>Vendetta</DisplayName>
+        <Description>Grants caster +33% physical attack versus target.</Description>
+        <FormattedDescription>Grants caster +33% physical attack versus target.</FormattedDescription>
+        <Image>T_Berzerk_Painting.png</Image>
+        <IconFG>Ability_Vendetta_Icon.png</IconFG>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Damage</SpellSubClass>
+        <SpellTargetType>RandomEnemyUnit</SpellTargetType>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <IsResistable>0</IsResistable>
+        <IsSpecialAbility>1</IsSpecialAbility>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Vendetta</StrVal>
+			<DisplayName>Targeted</DisplayName>				
+            <Duration>-1</Duration>
+            <Value>1</Value>
+        </GameModifier>		
+        <AIData AIPersonality="AI_General">
+            <AIPriority>60</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_DoubleStrike_01</HitSoundFX>
+        <MissSoundFX>Miss_Swing1</MissSoundFX>
+        <MissSoundFX>Miss_Swing2</MissSoundFX>
+        <SpellDefEffect>
+            <EffectName>Y_DoubleStrike_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>1</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>	
+
+    <SpellDef InternalName="ToolOfFateSpell">
+        <DisplayName>Guided by Fate</DisplayName>
+        <Description>Unit is guided by fate and has random stat bonus.</Description>
+        <Image>Q_ShiryaneRestored.png</Image>
+        <IconFG>Ability_Fate_Icon.png</IconFG>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>Self</SpellTargetType>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <IgnoreCastAnim>1</IgnoreCastAnim>
+        <IsCastable>1</IsCastable>
+        <IsSpecialAbility>1</IsSpecialAbility>
+        <AppliesRandomModifier>1</AppliesRandomModifier>		
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Dodge</StrVal>
+			<DisplayName>+15  Dodge</DisplayName>
+            <Duration>-1</Duration>
+            <Value>15</Value>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Accuracy</StrVal>
+			<DisplayName>+15  Accuracy</DisplayName>			
+            <Duration>-1</Duration>			
+            <Value>15</Value>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_CombatSpeed</StrVal>
+			<DisplayName>+2 Initiative</DisplayName>				
+            <Duration>-1</Duration>
+            <Value>2</Value>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_CombatSpeed</StrVal>			
+            <Duration>0</Duration>
+            <Value>0</Value>
+        </GameModifier>				
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+        </AIData>
+    </SpellDef>
+	
+
+    <SpellDef InternalName="Entrap">
+        <DisplayName>Entrap</DisplayName>
+        <Description>Teleport to a location and do half your total damage to and web all enemies within 1 radius.</Description>
+        <FormattedDescription>Teleport to a location and do %d damage to and web all enemies within 1 radius.</FormattedDescription>
+        <Image>Artifact_SpiderWeb1.png</Image>
+        <IconFG>Ability_Entrap_Icon.png</IconFG>
+        <Cooldown>5</Cooldown>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Debuff</SpellSubClass>
+        <SpellTargetType>EnemyUnit</SpellTargetType>
+        <SpellTargetTileOccupied>Empty</SpellTargetTileOccupied>
+        <AllowFriendlyFireInRadius>0</AllowFriendlyFireInRadius>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+        <IsSpecialAbility>1</IsSpecialAbility>
+		<CastTime>1</CastTime>
+        <Radius>1</Radius>
+        <Range>4</Range>		
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>DefendableDamage</Attribute>
+            <AttackStat>UnitStat_Attack_Pierce</AttackStat>
+            <IsForFormattedDescription>1</IsForFormattedDescription>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_CombinedAttack] / 2]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SetUnitStat</Attribute>
+            <StrVal>UnitStat_Moves</StrVal>
+            <DisplayName>Webbed</DisplayName>
+            <Duration>3</Duration>
+            <Effect>E_TangledWeb_Particle</Effect>
+            <PerTurn>1</PerTurn>
+            <Value>0</Value>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SetUnitStat</Attribute>
+            <StrVal>UnitStat_Dodge</StrVal>
+            <Duration>3</Duration>
+            <PerTurn>1</PerTurn>
+            <Value>0</Value>
+        </GameModifier>		
+        <GameModifier>
+            <ModType>Map</ModType>
+            <Attribute>TransportUnit</Attribute>
+            <ApplyToSpellRadiusCenterOnly>1</ApplyToSpellRadiusCenterOnly>
+        </GameModifier>		
+        <AIData AIPersonality="AI_General">
+            <AIPriority>20</AIPriority>
+            <AIMinSpellTargets>2</AIMinSpellTargets>
+        </AIData>
+        <HitSoundFX>Spell_TangledWeb_02</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>T_Shockwave_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>0.38</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+            <PlayOnAllTargets>0</PlayOnAllTargets>
+        </SpellDefEffect>
+    </SpellDef>
+	
+    <SpellDef InternalName="DarkHeartSpell">
+        <DisplayName>Well of Darkness</DisplayName>
+        <Description>Grants Death Power equal to player's Life Power, and +1 Mana per Essence in the enchanted city.</Description>		
+        <Image>S_Corruption_Painting.png</Image>
+        <IconFG>S_DarkHeart_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>City</SpellBookSortCategory>
+        <SpellBookSortSubCategory>CityEnchantment</SpellBookSortSubCategory>
+        <SpellType>Strategic</SpellType>
+        <SpellClass>ImpResourceBooster</SpellClass>
+        <SpellSubClass>Other</SpellSubClass>
+        <SpellTargetType>FriendlyCity</SpellTargetType>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>DarkHeartA</Attribute>
+        </Prereq>		
+        <SpellResourceCost>
+            <Resource>DarkAura</Resource>
+            <Amount>1</Amount>
+        </SpellResourceCost>
+        <SpellResourceCost>
+            <Resource>DarkAura</Resource>
+            <PerTurn>1</PerTurn>
+            <Amount>1</Amount>
+        </SpellResourceCost>		
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>DeathMana</Attribute>
+            <Duration>-1</Duration>
+            <HasUpgradableValue>1</HasUpgradableValue>
+            <PerTurn>1</PerTurn>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitOwner_GetNumLifeShards]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>	
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Mana</Attribute>
+            <Duration>-1</Duration>
+            <HasUpgradableValue>1</HasUpgradableValue>
+            <PerTurn>1</PerTurn>
+            <Calculate InternalName="Calc" ValueOwner="TargetCity">
+                <Expression><![CDATA[[TileYieldEssence]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>		
+        <ValidTerrainCategory>City</ValidTerrainCategory>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>1000</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_Antipathy_01</HitSoundFX>
+        <SpellCastEffectName>Brilliance</SpellCastEffectName>
+        <SpellCastEffectScale>0.4</SpellCastEffectScale>
+        <SpellDefEffect>
+            <EffectName>S_Blight_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>1</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+	
+   <SpellDef InternalName="Experimentation">
+        <DisplayName>Experimentation</DisplayName>
+        <Description>Sovereign receives a glimpse of knowledge, increasing their experience by 15.</Description>
+        <Image>S_DestinysInsight_Painting.png</Image>
+        <IconFG>S_DestinysInsight_Icon.png</IconFG>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+        <SpellType>Strategic</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Other</SpellSubClass>
+        <SpellTargetType>Self</SpellTargetType>
+        <CasterMustBeSov>1</CasterMustBeSov>
+        <AutoUnlock>1</AutoUnlock>	
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Theory</Attribute>
+        </Prereq>			
+        <SpellResourceCost>
+            <Resource>Wisdom</Resource>
+            <Amount>10</Amount>
+        </SpellResourceCost>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>GiveExperience</Attribute>
+            <Value>15</Value>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>1000</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_DestinyGift_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>S_Paragon_Particle</EffectName>
+            <LocalPosition>0,30,0</LocalPosition>
+            <EffectScale>1</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+	
+    <SpellDef InternalName="EnMirror_Effect">
+        <DisplayName>Beguile</DisplayName>
+        <Description>Victim has a 50% chance to swing at a random unit in melee instead of his target.</Description>
+        <Image>T_Confusion_Painting.png</Image>
+        <IconFG>T_Beguile_Icon.png</IconFG>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitCurse</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Debuff</SpellSubClass>
+        <SpellTargetType>EnemyUnit</SpellTargetType>
+        <IsResistable>1</IsResistable>
+        <IsSpecialAbility>1</IsSpecialAbility>
+        <IsCastable>0</IsCastable>		
+        <PreventStackingWith>Confusion</PreventStackingWith>
+        <PreventStackingWith>Beguile</PreventStackingWith>		
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_ClumsyChance</StrVal>
+            <DisplayName>Beguiled</DisplayName>
+            <Duration>-1</Duration>
+            <Value>50</Value>
+        </GameModifier>
+        <HitSoundFX>Spell_Confusion_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>T_Confusion_Particle</EffectName>
+            <LocalPosition>0,35,0</LocalPosition>
+            <EffectScale>0.65</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+            <PlayOnAllTargets>1</PlayOnAllTargets>
+        </SpellDefEffect>
+    </SpellDef>
+	
+   <SpellDef InternalName="InnerFireSpell">
+        <DisplayName>Enflamed</DisplayName>
+        <Description>Wreathes unit in flames, doing 5 fire damage to anyone who attacks them.</Description>
+        <Image>T_CandleCloak_Painting.png</Image>
+        <IconFG>T_CandleCloak_Icon.png</IconFG>
+        <CanStack>0</CanStack>
+        <IsCastable>0</IsCastable>		
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>Self</SpellTargetType>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>MeleeDefenseAppliesSpell</Attribute>
+            <StrVal>InnerFire_Effect</StrVal>
+            <Duration>2</Duration>
+            <Effect>E_MantleofFire_Particle</Effect>
+        </GameModifier>
+        <HitSoundFX>Spell_MantleOfFire_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>S_MantleofFire_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>1</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+            <PlayOnAllTargets>1</PlayOnAllTargets>
+        </SpellDefEffect>
+    </SpellDef>
+	
+    <SpellDef InternalName="InnerFire_Effect">
+        <DisplayName>Candlecloak</DisplayName>
+        <Description>Wreathes unit in flames, doing 5 fire damage to anyone who attacks them.</Description>
+        <Image>T_CandleCloak_Painting.png</Image>
+        <IconFG>T_CandleCloak_Icon.png</IconFG>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Damage</SpellSubClass>
+        <SpellTargetType>EnemyUnit</SpellTargetType>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <IsCastable>0</IsCastable>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>DefendableDamage</Attribute>
+            <AttackStat>UnitStat_Attack_Fire</AttackStat>
+            <Value>5</Value>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_DarkEnchant_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>Flame_Impact</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>0.35</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+	
+</SpellDefs>
+
+    <ResourceType InternalName="DarkAura">
+        <DisplayName>Dark Aura</DisplayName>
+        <Type>DarkAura</Type>
+        <Description>Allows you to cast Well of Darkness.</Description>
+        <IconColor>0,0,0</IconColor>
+        <Icon>Gfx//Icons//SpellbookButton_Icon.png</Icon>
+		<HideInHiergamenon>1</HideInHiergamenon>
+        <ShownInGlobalDisplay>0</ShownInGlobalDisplay>
+        <Global>1</Global>
+        <Stored>0</Stored>
+        <Shared>0</Shared>
+        <TradedByCaravans>0</TradedByCaravans>
+        <RummagedPerTurn>0.01</RummagedPerTurn>
+        <!-- AI Info -->
+        <AIData AIPersonality="AI_General">
+            <AITag>Shard</AITag>
+        </AIData>
+    </ResourceType>	
+	
+    <ResourceType InternalName="Wisdom">
+        <DisplayName>Wisdom</DisplayName>
+        <Type>Wisdom</Type>
+        <Description>Wisdom is used to level your Sovereign</Description>
+        <IconColor>0,0,0</IconColor>
+        <Icon>Gfx//Icons//Icon_Experience.png</Icon>
+        <ClothIcon>gfx\\TacticalIcons\\Res_Crystal.png</ClothIcon>
+		<HideInHiergamenon>1</HideInHiergamenon>
+        <ModelColor>0,0,0</ModelColor>
+        <Worth>1</Worth>
+        <Global>1</Global>
+        <Rarity>0.0</Rarity>
+        <Shared>0</Shared>
+        <TradedByCaravans>0</TradedByCaravans>
+        <ShownInGlobalDisplay>1</ShownInGlobalDisplay>
+        <Medallions InternalName="Population_Res_Medallions">
+            <All>Res_Ores_Plains.png</All>
+        </Medallions>
+    </ResourceType>
+	
+  <ResourceType InternalName="Data">
+    <DisplayName>Data</DisplayName>
+    <Description>Data is used to produce Wisdom.</Description>
+    <Type>Data</Type>
+    <IconColor>0,0,0</IconColor>
+    <!--<Icon>Gfx//Icons//dude_icon.png</Icon>-->
+    <Icon>Gfx//Icons//Icon_Level.png</Icon>
+    <TileYieldIcon>Gfx//Icons//Icon_Lumber.png</TileYieldIcon>
+	<HideInHiergamenon>1</HideInHiergamenon>
+    <ModelColor>0,0,0</ModelColor>
+    <Worth>0</Worth>
+    <Global>0</Global>
+    <Stored>0</Stored>
+    <Rarity>0.0</Rarity>
+    <Shared>0</Shared>
+    <TradedByCaravans>0</TradedByCaravans>
+    <ShownInGlobalDisplay>0</ShownInGlobalDisplay>
+    <Medallions InternalName="Population_Res_Medallions">
+      <All>Res_Ores_Plains.png</All>
+    </Medallions>
+  </ResourceType>
+  
+   <ResourceType InternalName="WisdomPerData">
+    <DisplayName>Wisdom Per Data</DisplayName>
+    <Description>Amount of Wisdom each unit of data produces.</Description>
+    <Type>WisdomPerData</Type>
+    <IconColor>0,0,0</IconColor>
+    <!--<Icon>Gfx//Icons//dude_icon.png</Icon>-->
+    <Icon>Gfx//Icons//Icon_Population.png</Icon>
+    <HideInHiergamenon>1</HideInHiergamenon>
+    <ModelColor>0,0,0</ModelColor>
+    <Worth>0</Worth>
+    <Global>0</Global>
+    <Stored>0</Stored>
+    <Rarity>0.0</Rarity>
+    <Shared>0</Shared>
+    <TradedByCaravans>0</TradedByCaravans>
+    <ShownInGlobalDisplay>0</ShownInGlobalDisplay>
+    <Medallions InternalName="Population_Res_Medallions">
+      <All>Res_Ores_Plains.png</All>
+    </Medallions>
+  </ResourceType>
+  
+   <CityResourceEffectDef InternalName="DataEffectOnWisdom">
+    <InputResource>Data</InputResource>
+    <OutputResource>Wisdom</OutputResource>
+    <ResourceForMultiplierOnInput>WisdomPerData</ResourceForMultiplierOnInput>
+    <EffectType>Harvest</EffectType>
+  </CityResourceEffectDef>
+  
+    <PlayerAbilityType InternalName="A_Additive_WisdomPerData">
+    <DisplayName>Base Wisdom Per Data</DisplayName>
+    <Description>How much wisdom received from each unit of data in a city.</Description>
+    <Icon>Icon_Level.png</Icon>
+    <DefaultValue>1</DefaultValue>
+  </PlayerAbilityType>
+ 
+
+    <UnitStatType InternalName="UnitStat_Vendetta">
+        <DisplayName>Vendetta</DisplayName>
+        <DisplayNameShort>VND</DisplayNameShort>
+        <Description>Improves melee attack and the amount of weight a unit can equip.</Description>
+        <Icon>Stat_Strength_Icon.png</Icon>
+        <Hidden>1</Hidden>
+        <DefaultValue>0.0</DefaultValue>
+        <UnitStatGrouping>AbilityStat</UnitStatGrouping>
+      <UnitStatGrouping>UnitDetailsAttribute</UnitStatGrouping>
+    </UnitStatType>

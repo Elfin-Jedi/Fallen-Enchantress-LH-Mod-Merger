@@ -1,0 +1,215 @@
+<?xml version="1.0"?>
+<Container>
+  <AbilityBonus InternalName="Reliquary_Dragonrider">
+    <AbilityBonusOption InternalName="Reliquary_Dragonrider">
+      <DisplayName>Dragonrider</DisplayName>
+      <Description>As long as this unit is mounted on a Sworn Dragon, it gains +25 Resistance to physical attacks. The bonus does not apply if the enemy is also mounted on a Sworn Dragon. If this unit is mounted on a Sworn Dragon, it also gains +25 Dodge against Beasts.</Description>
+      <Icon>Ability_FireBreath_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistPierce</StrVal>
+        <Provides>As long as this unit is mounted on a Sworn Dragon, it gains +25 Resistance to physical attacks. The bonus does not apply if the enemy is also mounted on a Sworn Dragon. If this unit is mounted on a Sworn Dragon, it also gains +25 Dodge against Beasts.</Provides>
+        <StrVal2>UnitStat_BG_IsRidingDragon</StrVal2>
+        <Value>25</Value>
+        <Provides>.</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Dodge</StrVal>
+        <vsLower>1</vsLower>
+        <StrVal2>UnitStat_BG_IsBeast</StrVal2>
+        <Value>25</Value>
+        <Provides>.</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Reliquary_HatchedDragon</StrVal>
+        <Value>1</Value>
+        <PerLevel>1</PerLevel>
+        <Provides>.</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Reliquary_HatchedDragon</StrVal>
+        <Value>100</Value>
+        <Provides>.</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>1</HideWhenUpgraded>
+      <RarityDisplay>Rare</RarityDisplay>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>50000000</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Reliquary_Dragonrider2">
+    <AbilityBonusOption InternalName="Reliquary_Dragonrider2">
+      <DisplayName>Dragonrider: Hatchling</DisplayName>
+      <Description>This Champion has hatched a dragon and will be able to cast the spell Dragon's Pride after 150 turns. This trait turns into another one after 150 turns.</Description>
+      <Icon>DragonEgg6.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Reliquary_HatchedDragon</StrVal>
+        <Value>-100</Value>
+        <Provides>This Champion has hatched a dragon and will be able to cast the spell Dragon's Pride after 150 turns and when Champion is lvl 6 or higher. This trait turns into another one after 150 turns.</Provides>
+      </GameModifier>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Reliquary_Dragonrider</Attribute>
+      </Prereq>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <RarityDisplay>Rare</RarityDisplay>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>50000000</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Reliquary_FleeingStatue">
+    <AbilityBonusOption InternalName="Reliquary_FleeingStatue">
+      <DisplayName>Fleeing Statue</DisplayName>
+      <Description>This Champion has found the Fleeing Statue, and it is in his possession for now. It is prone to running away, however. As long as it remains in his possession, the Champion is generating 2 gildar per turn.</Description>
+      <Icon>Relinquary_FleeingStatue.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>ProduceResource</Attribute>
+        <StrVal>Gold</StrVal>
+        <Provides>This Champion has found the Fleeing Statue, and it is in his possession for now. It is prone to running away, however. As long as it remains in his possession, the Champion is generating 2 gildar per turn.</Provides>
+        <Value>2</Value>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <RarityDisplay>Rare</RarityDisplay>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>50000000</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Reliquary_BagOfWind">
+    <AbilityBonusOption InternalName="Reliquary_BagOfWind">
+      <DisplayName>Bag of Wind</DisplayName>
+      <Description>This Champion is tapping into the power of the Bag of Wind, which contains a dead Air elemental. The Champion counts as producing +1 Air Shard power for 100 turns (this effect produces no mana).</Description>
+      <Icon>reliquary_bagofwind.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>ProduceResource</Attribute>
+        <StrVal>AirMana</StrVal>
+        <Provides>This Champion is tapping into the power of the Bag of Wind, which contains a dead Air elemental. The Champion counts as producing +1 Air Shard power for 100 turns (this effect produces no mana).</Provides>
+        <Value>1</Value>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <RarityDisplay>Rare</RarityDisplay>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>50000000</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Reliquary_SwordofNightmare">
+    <AbilityBonusOption InternalName="Reliquary_SwordofNightmare">
+      <DisplayName>Sword of Nightmares</DisplayName>
+      <Description>Unit loses 50 Accuracy and Spell Mastery when trying to attack anyone holding a Sword of Nightmares. Lasts 1 round</Description>
+      <Icon>W_Greatsword_Serrated_Icon_01.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Accuracy</StrVal>
+        <StrVal2>UnitStat_Reliquary_Swordofnightmares</StrVal2>
+        <Multiplier>0.5</Multiplier>
+        <vsHigher>1</vsHigher>
+        <Provides>Unit loses 50 Accuracy and Spell Mastery when trying to attack anyone holding a Sword of Nightmares. Lasts 1 round</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_MagicPower</StrVal>
+        <StrVal2>UnitStat_Reliquary_Swordofnightmares</StrVal2>
+        <Multiplier>0.5</Multiplier>
+        <vsHigher>1</vsHigher>
+        <Provides>.</Provides>
+      </GameModifier>
+      <IsCombatAbility>1</IsCombatAbility>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Reliquary_Ambrosia">
+    <AbilityBonusOption InternalName="Reliquary_Ambrosia">
+      <DisplayName>Ambrosia</DisplayName>
+      <Description>Unit has eaten Ambrosia and counts as Immortal and a God.</Description>
+      <Icon>Apple1.png</Icon>
+      <GameModifier>
+        <Provides>Unit has eaten Ambrosia and permanently counts as Immortal and a God.</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <RarityDisplay>Rare</RarityDisplay>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Reliquary_Reaped">
+    <AbilityBonusOption InternalName="Reliquary_Reaped">
+      <DisplayName>Reaped Fate</DisplayName>
+      <Description>+20% Mana cost for spells, All experience bonuses reduced by 75% (bonus of +10% becomes +2.5%)</Description>
+      <Icon>Ability_AfraidofDying_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_TacticalSpellManaCost_Multiplier</StrVal>
+        <Value>0.20</Value>
+        <Provides>+20% mana cost for tactical spells</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ExpBonus</StrVal>
+        <Multiplier>0.25</Multiplier>
+        <Provides>All experience bonuses reduced by 75% (bonus of +10% becomes +2.5%)</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>1</HideWhenUpgraded>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Reliquary_SurgeonBeetle1">
+    <AbilityBonusOption InternalName="Reliquary_SurgeonBeetle1">
+      <DisplayName>Surgeon Beetle</DisplayName>
+      <Description/>
+      <Icon>Reliquary_Beetle.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Reliquary_SurgeonBeetle</StrVal>
+        <Value>100</Value>
+        <Provides>Champion can cast the Hatch Beetle spell</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>1</HideWhenUpgraded>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Reliquary_SurgeonBeetle2">
+    <AbilityBonusOption InternalName="Reliquary_SurgeonBeetle2">
+      <DisplayName>Surgeon Beetle</DisplayName>
+      <Description/>
+      <Icon>Reliquary_Beetle.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_HealthRegen</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Strategic Health Regeneration</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Reliquary_SurgeonBeetle</StrVal>
+        <Value>-100</Value>
+        <Provides>Champion cannot suffer any Injuries as a result of falling in combat</Provides>
+      </GameModifier>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Reliquary_SurgeonBeetle1</Attribute>
+      </Prereq>
+      <HideWhenUpgraded>1</HideWhenUpgraded>
+    </AbilityBonusOption>
+  </AbilityBonus>
+</Container>

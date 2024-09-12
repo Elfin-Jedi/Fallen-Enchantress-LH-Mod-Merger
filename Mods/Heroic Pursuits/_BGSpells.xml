@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Created with the Elemental Editor -->
+<!-- CoreSpells.xml -->
+<!-- -->
+<Spells>
+    <DataChecksum NoParse="1">
+        <Ignore>DisplayName</Ignore>
+        <Translate>DisplayName</Translate>
+    </DataChecksum>
+    <SpellDef InternalName="ElectricBolt">
+        <DisplayName>Electric Bolt</DisplayName>
+        <Description>Creates a electric bolt which does up 20 lighting damage to all enemy units within the area of effect, but is quite resistable.</Description>
+        <Image>AirCrystal_Medallion.png</Image>
+        <IconFG>T_ElectricBoltSpell_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <CanStack>0</CanStack>
+        <Cooldown>3</Cooldown>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Damage</SpellSubClass>
+        <SpellTargetType>EnemyUnit</SpellTargetType>
+        <AllowFriendlyFireInRadius>0</AllowFriendlyFireInRadius>
+        <IsResistable>1</IsResistable>
+        <Radius>1</Radius>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>21</Amount>
+        </SpellResourceCost>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Spell_ElectricBolt</Attribute>
+        </Prereq>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>DefendableDamage</Attribute>
+            <AttackStat>UnitStat_Attack_Lightning</AttackStat>
+            <Value>20</Value>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>DefendableDamage</Attribute>
+            <AttackStat>UnitStat_Attack_Lightning</AttackStat>
+            <IsForSpellResist>1</IsForSpellResist>
+            <Value>12</Value>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>40</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_Storm_01</HitSoundFX>
+        <WorldLightOverrideTime>2</WorldLightOverrideTime>
+        <WorldLightOverrideAmbiant>30,30,30</WorldLightOverrideAmbiant>
+        <WorldLightOverrideDiffuse>30,30,30</WorldLightOverrideDiffuse>
+        <WorldLightOverrideRim0>212,0,192</WorldLightOverrideRim0>
+        <WorldLightOverrideRim1>0,132,234</WorldLightOverrideRim1>
+        <SpellDefEffect>
+            <EffectName>T_Storm_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>3</EffectScale>
+            <EffectDelay>0.25</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+    <SpellDef InternalName="PlasmaticBolt">
+        <DisplayName>Plasmatic Bolt</DisplayName>
+        <Description>A expensive spell that creates a large spreading plasmatic charge which saps a very wide range of units, the damage isnt very good however.</Description>
+        <Image>AirCrystal_Medallion.png</Image>
+        <IconFG>T_ElectricBolt_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <CanStack>0</CanStack>
+        <Cooldown>3</Cooldown>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Damage</SpellSubClass>
+        <SpellTargetType>EnemyUnit</SpellTargetType>
+        <AllowFriendlyFireInRadius>0</AllowFriendlyFireInRadius>
+        <IsResistable>1</IsResistable>
+        <Radius>3</Radius>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>75</Amount>
+        </SpellResourceCost>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Spell_ElectricBolt</Attribute>
+        </Prereq>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>DefendableDamage</Attribute>
+            <AttackStat>UnitStat_Attack_Lightning</AttackStat>
+            <Value>18</Value>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>DefendableDamage</Attribute>
+            <AttackStat>UnitStat_Attack_Lightning</AttackStat>
+            <IsForSpellResist>1</IsForSpellResist>
+            <Value>9</Value>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>40</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_Storm_01</HitSoundFX>
+        <WorldLightOverrideTime>2</WorldLightOverrideTime>
+        <WorldLightOverrideAmbiant>30,30,30</WorldLightOverrideAmbiant>
+        <WorldLightOverrideDiffuse>30,30,30</WorldLightOverrideDiffuse>
+        <WorldLightOverrideRim0>212,0,192</WorldLightOverrideRim0>
+        <WorldLightOverrideRim1>0,132,234</WorldLightOverrideRim1>
+        <SpellDefEffect>
+            <EffectName>T_Storm_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>3</EffectScale>
+            <EffectDelay>0.25</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+    <SpellDef InternalName="Threshold">
+        <DisplayName>Threshold</DisplayName>
+        <Description>Instills an ability to handle immense punishment, giving them a bonus of 6 (+2 per life shard) to hit points.</Description>
+        <Image>S_Courage_Painting.png</Image>
+        <IconFG>S_Threshold_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+        <SpellType>Strategic</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>FriendlyChampionOrSov</SpellTargetType>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Spell_RedirectedMagic</Attribute>
+        </Prereq>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>12</Amount>
+        </SpellResourceCost>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <PerTurn>1</PerTurn>
+            <Amount>1</Amount>
+        </SpellResourceCost>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_HitPoints</StrVal>
+            <Duration>-1</Duration>
+            <HasUpgradableValue>1</HasUpgradableValue>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitOwner_GetNumLifeShards] * 2]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Calc] + 6]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_Courage_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>S_Courage_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>0.75</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+    <SpellDef InternalName="MagicalForce">
+        <DisplayName>Magical Force</DisplayName>
+        <Description>Gives a unit a lot more damage potential when casting spells (+2% Per Level).</Description>
+        <Image>S_Courage_Painting.png</Image>
+        <IconFG>S_MagicalForce_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+        <SpellType>Strategic</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>FriendlyChampionOrSov</SpellTargetType>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Spell_RedirectedMagic</Attribute>
+        </Prereq>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>10</Amount>
+        </SpellResourceCost>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <PerTurn>1</PerTurn>
+            <Amount>1</Amount>
+        </SpellResourceCost>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_SpellDamage</StrVal>
+            <Duration>-1</Duration>
+            <HasUpgradableValue>1</HasUpgradableValue>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Unit_GetLevel] * 2]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Calc] + 6]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_Courage_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>S_Courage_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>0.75</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+    <SpellDef InternalName="SummonCivilizedRuffian">
+        <DisplayName>Summon Civilized Ruffian</DisplayName>
+        <Description>Summons a level 1 (+1 per life shard + earth shard) Civilized Ruffian.</Description>
+        <Image>S_GlyphofLife_Painting.png</Image>
+        <IconFG>S_GlyphofLife_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Summon</SpellBookSortCategory>
+        <SpellBookSortSubCategory>Summon</SpellBookSortSubCategory>
+        <SpellType>Strategic</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Summon</SpellSubClass>
+        <SpellTargetType>Self</SpellTargetType>
+        <Range>0</Range>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Spell_MagicWildInfluence</Attribute>
+        </Prereq>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>35</Amount>
+        </SpellResourceCost>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <PerTurn>1</PerTurn>
+            <Amount>1</Amount>
+        </SpellResourceCost>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SummonUnit</Attribute>
+            <StrVal>Civilized Ruffian</StrVal>
+            <UnitClass>CivilizedRuffian</UnitClass>
+            <Duration>-1</Duration>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitOwner_GetNumLifeShards] + [CDATA[[UnitOwner_GetNumEarthShards] + [UnitStat_BonusSummonLevel]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] + 1]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>50</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_Blind_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>S_BlindingLight_Particle</EffectName>
+            <LocalPosition>0,60,0</LocalPosition>
+            <EffectScale>2</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+    <SpellDef InternalName="SummonFerrisWolf">
+        <DisplayName>Summon Ferris Wolf</DisplayName>
+        <Description>Summons a level 1 (+1 per life shard + earth shard) Civilized Ruffian.</Description>
+        <Image>S_SummonFerrisWolf_Painting.png</Image>
+        <IconFG>S_SummonFerrisWolf_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Summon</SpellBookSortCategory>
+        <SpellBookSortSubCategory>Summon</SpellBookSortSubCategory>
+        <SpellType>Strategic</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Summon</SpellSubClass>
+        <SpellTargetType>Self</SpellTargetType>
+        <Range>0</Range>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Spell_MagicWildInfluence</Attribute>
+        </Prereq>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>35</Amount>
+        </SpellResourceCost>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <PerTurn>1</PerTurn>
+            <Amount>1</Amount>
+        </SpellResourceCost>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SummonUnit</Attribute>
+            <StrVal>Ferris Wolf</StrVal>
+            <UnitClass>FerrisWolf</UnitClass>
+            <Duration>-1</Duration>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitOwner_GetNumLifeShards] + [CDATA[[UnitOwner_GetNumEarthShards] + [UnitStat_BonusSummonLevel]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] + 1]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>50</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_Blind_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>S_BlindingLight_Particle</EffectName>
+            <LocalPosition>0,60,0</LocalPosition>
+            <EffectScale>2</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+    <SpellDef InternalName="ArcaliteFireBlast">
+        <DisplayName>Arcalite Fire Blast</DisplayName>
+        <Description>3 adjacent enemies are blasted with intense melting heat, taking 20 (+3 per fire shard) in fire damage.</Description>
+        <FormattedDescription>3 adjacent enemies are blasted with intense melting heat, taking %d fire damage.</FormattedDescription>
+        <Image>S_ArcaliteFireBlast_Painting.png</Image>
+        <IconFG>S_ArcaliteFireBlast_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Damage</SpellSubClass>
+        <SpellTargetType>EnemyUnit</SpellTargetType>
+        <IsResistable>1</IsResistable>
+        <Radius>1</Radius>
+        <RadiusType>ADJACENT</RadiusType>
+        <Range>1</Range>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Spell_ArcaliteDestruction</Attribute>
+        </Prereq>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>25</Amount>
+        </SpellResourceCost>
+        <SpellResourceCost>
+            <Resource>Arcalite</Resource>
+            <Amount>10</Amount>
+        </SpellResourceCost>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>DefendableDamage</Attribute>
+            <AttackStat>UnitStat_Attack_Fire</AttackStat>
+            <IsForFormattedDescription>1</IsForFormattedDescription>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitOwner_GetNumFireShards] * 3 + 13]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Calc] + 10]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Calc3" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Calc2] * [UnitStat_SpellDamage_Fire]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc3]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Calc3]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>DefendableDamage</Attribute>
+            <AttackStat>UnitStat_Attack_Fire</AttackStat>
+            <IsForSpellResist>1</IsForSpellResist>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitOwner_GetNumFireShards]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Calc] + 8]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Calc3" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Calc2] * [UnitStat_SpellDamage_Fire]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc3]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>35</AIPriority>
+            <AIMinSpellTargets>2</AIMinSpellTargets>
+        </AIData>
+        <HitSoundFX>Spell_Fireball_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>T_BurningHands_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>0.75</EffectScale>
+            <EffectDelay>0.25</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+    <SpellDef InternalName="Stoneflow">
+        <DisplayName>Stoneflow</DisplayName>
+        <Description>The caster gets +20% Attack, +20% defense, +20% spell damage and 20% magic resistance for the rest of the battle.</Description>
+        <Image>S_Stoneflow_Painting.png</Image>
+        <IconFG>S_Stoneflow_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>Self</SpellTargetType>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Spell_StoneExploitation</Attribute>
+        </Prereq>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>30</Amount>
+        </SpellResourceCost>
+        <SpellResourceCost>
+            <Resource>Arcalite</Resource>
+            <Amount>9</Amount>
+        </SpellResourceCost>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Attack_Boost</StrVal>
+            <DisplayName>Attack Flow</DisplayName>
+            <Duration>-1</Duration>
+            <Effect>E_Focused_Particle</Effect>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_CombinedAttack] / 5]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Defense_Pierce</StrVal>
+            <DisplayName>Defense Flow</DisplayName>
+            <Duration>-1</Duration>
+            <Effect>E_Focused_Particle</Effect>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_CombinedDefense] / 5]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_SpellDamage</StrVal>
+            <Duration>-1</Duration>
+            <Value>25</Value>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_MagicResist</StrVal>
+            <Duration>-1</Duration>
+            <Value>25</Value>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>25</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_Focus_01</HitSoundFX>
+        <SpellCastEffectName>T_Focus_Particle</SpellCastEffectName>
+        <SpellCastEffectScale>1</SpellCastEffectScale>
+    </SpellDef>
+</Spells>

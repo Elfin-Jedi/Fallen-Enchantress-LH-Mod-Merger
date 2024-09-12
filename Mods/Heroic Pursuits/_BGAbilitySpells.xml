@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Created with the Elemental Editor -->
+<!-- CoreSpells.xml -->
+<!-- -->
+<Spells>
+    <DataChecksum NoParse="1">
+        <Ignore>DisplayName</Ignore>
+        <Translate>DisplayName</Translate>
+    </DataChecksum>
+    <SpellDef InternalName="TerrifyingManeuvers">
+        <DisplayName>Terrifying Maneuvers</DisplayName>
+        <Description>Launch an Attack for 130% of your attack damage on 3 adjacent squares. Low cooldown</Description>
+        <FormattedDescription>Launch a %d Attack on 3 adjacent enemies.</FormattedDescription>
+        <IconFG>Ability_TerrifyingManeuvers_Icon.png</IconFG>
+        <Cooldown>2</Cooldown>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Damage</SpellSubClass>
+        <SpellTargetType>EnemyUnit</SpellTargetType>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <IsCastable>0</IsCastable>
+        <CanBeDodged>1</CanBeDodged>
+        <IsSpecialAbility>1</IsSpecialAbility>
+        <Radius>1</Radius>
+        <RadiusType>ADJACENT</RadiusType>
+        <Range>1</Range>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>DefendableDamage</Attribute>
+            <AttackStat>UnitStat_Attack_Pierce</AttackStat>
+            <IsForFormattedDescription>1</IsForFormattedDescription>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_CombinedAttack] * 1.3]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+            <AIMinSpellTargets>2</AIMinSpellTargets>
+        </AIData>
+        <CasterAnimationType>32</CasterAnimationType>
+        <HitSoundFX>Ability_Shield_Bash</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>Ability_ShieldBash_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>0.25</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+    <SpellDef InternalName="MassiveStrike">
+        <DisplayName>Massive Strike</DisplayName>
+        <Description>A massive strike dealing double your normal damage to a single enemy.</Description>
+        <FormattedDescription>Launch a %d Attack on a single enemy.</FormattedDescription>
+        <IconFG>Ability_MassiveStrike_Icon.png</IconFG>
+        <Cooldown>4</Cooldown>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Damage</SpellSubClass>
+        <SpellTargetType>EnemyUnit</SpellTargetType>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <IsCastable>0</IsCastable>
+        <CanBeDodged>1</CanBeDodged>
+        <IsSpecialAbility>1</IsSpecialAbility>
+        <RadiusType>ADJACENT</RadiusType>
+        <Range>1</Range>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>DefendableDamage</Attribute>
+            <AttackStat>UnitStat_Attack_Pierce</AttackStat>
+            <IsForFormattedDescription>1</IsForFormattedDescription>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_CombinedAttack] * 2]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+        </AIData>
+        <CasterAnimationType>32</CasterAnimationType>
+        <HitSoundFX>Ability_Shield_Bash</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>Y_DeadlyBite_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>0.25</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+    <SpellDef InternalName="AlliedForcestrike">
+        <DisplayName>Allied Forcestrike</DisplayName>
+        <Description>Summons a allied soldier to aid you.</Description>
+        <IconFG>Ability_AlliedForcestrike_Icon.png</IconFG>
+        <Cooldown>5</Cooldown>
+        <SpellBookSortCategory>Summon</SpellBookSortCategory>
+        <SpellBookSortSubCategory>Summon</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Summon</SpellSubClass>
+        <SpellTargetType>EmptyTile</SpellTargetType>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>10</Amount>
+        </SpellResourceCost>
+        <IsSpecialAbility>1</IsSpecialAbility>
+        <Range>3</Range>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SummonUnit</Attribute>
+            <StrVal>Allied Warrior</StrVal>
+            <UnitClass>AlliedWarrior</UnitClass>
+            <Duration>-1</Duration>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_BonusSummonLevel] + 1]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>70</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_NaturesCall_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>S_SummonEarthElemental_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>0.5</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+    <SpellDef InternalName="FlankingStrike">
+        <DisplayName>Flanking Strike</DisplayName>
+        <Description>QUickly flank past a enemy striking them where it hurts most doing double damage.</Description>
+        <FormattedDescription>Launch a %d Attack on a target then bypass them</FormattedDescription>
+        <IconFG>Ability_FlankingStrike_Icon.png</IconFG>
+        <Cooldown>4</Cooldown>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Other</SpellSubClass>
+        <SpellTargetType>EnemyUnit</SpellTargetType>
+        <SpellTargetTileOccupied>Empty</SpellTargetTileOccupied>
+        <IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+        <Radius>2</Radius>
+        <RadiusType>LINE_BACKWARD</RadiusType>
+        <Range>2</Range>
+        <GameModifier>
+            <ModType>Map</ModType>
+            <Attribute>TransportUnit</Attribute>
+            <ApplyToCaster>1</ApplyToCaster>
+            <ApplyToSpellRadiusCenterOnly>1</ApplyToSpellRadiusCenterOnly>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>DefendableDamage</Attribute>
+            <AttackStat>UnitStat_Attack_Pierce</AttackStat>
+            <IsForFormattedDescription>1</IsForFormattedDescription>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_CombinedAttack] * 2]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <HitSoundFX>Spell_ManaBlastImpact_01</HitSoundFX>
+        <SpellCastSoundFX>Spell_ManaBlastTravel_01</SpellCastSoundFX>
+        <SpellCastEffectName>T_ManaBlast_Particle</SpellCastEffectName>
+        <SpellCastEffectScale>1</SpellCastEffectScale>
+        <SpellCastProjectile>1</SpellCastProjectile>
+        <SpellCastProjectileSpeed>700</SpellCastProjectileSpeed>
+    </SpellDef>
+    <SpellDef InternalName="DebilitatingWhirlwind">
+        <DisplayName>Debilitating Whirlwind</DisplayName>
+        <Description>Attack all surrounding enemies for 75% of attack damage, weaken their attack by 25%</Description>
+        <FormattedDescription>Launch a %d Attack on all surrounding targets, weaken their attack by 25%</FormattedDescription>
+        <IconFG>Ability_DebilitatingWhirlwind_Icon.png</IconFG>
+        <Cooldown>5</Cooldown>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Damage</SpellSubClass>
+        <SpellTargetType>EnemyUnit</SpellTargetType>
+        <AllowFriendlyFireInRadius>0</AllowFriendlyFireInRadius>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+        <IsCastable>0</IsCastable>
+        <CanBeDodged>1</CanBeDodged>
+        <IsSpecialAbility>1</IsSpecialAbility>
+        <Radius>1</Radius>
+        <Range>0</Range>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>DefendableDamage</Attribute>
+            <AttackStat>UnitStat_Attack_Pierce</AttackStat>
+            <IsForFormattedDescription>1</IsForFormattedDescription>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_CombinedAttack] * 0.75]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Attack_Boost</StrVal>
+            <DisplayName>Debilitated</DisplayName>
+            <Duration>-1</Duration>
+            <Calculate InternalName="Calc" ValueOwner="TargetUnit">
+                <Expression><![CDATA[[UnitStat_CombinedAttack] * -0.25]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Calc2" ValueOwner="TargetUnit">
+                <Expression><![CDATA[[Unit_GetTroopCount]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] / [Calc2]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>500</AIPriority>
+        </AIData>
+        <CasterAnimationType>28</CasterAnimationType>
+        <SpellDefEffect>
+            <EffectName>Y_Sweep_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>1.5</EffectScale>
+            <EffectDelay>0.25</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+    <SpellDef InternalName="SafeguardHit">
+        <DisplayName>Safeguard Hit</DisplayName>
+        <Description>Attack an enemy for 140% of normal damage then quickly back off 2 spaces.</Description>
+        <FormattedDescription>Launch a %d Attack on a target and then backspace 2 spaces.</FormattedDescription>
+        <IconFG>Ability_SafeguardHit_Icon.png</IconFG>
+        <Cooldown>5</Cooldown>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Debuff</SpellSubClass>
+        <SpellTargetType>EnemyUnit</SpellTargetType>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <IsCastable>0</IsCastable>
+        <CanBeDodged>1</CanBeDodged>
+        <IsSpecialAbility>1</IsSpecialAbility>
+        <RadiusType>ADJACENT</RadiusType>
+        <Range>1</Range>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>DefendableDamage</Attribute>
+            <AttackStat>UnitStat_Attack_Pierce</AttackStat>
+            <IsForFormattedDescription>1</IsForFormattedDescription>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_CombinedAttack] * 1.4]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <GameModifier>
+            <ModType>TacticalUnit</ModType>
+            <Attribute>TargetMovesBack</Attribute>
+            <Value>2</Value>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+            <AIMinSpellTargets>2</AIMinSpellTargets>
+        </AIData>
+        <CasterAnimationType>32</CasterAnimationType>
+        <HitSoundFX>Ability_Shield_Bash</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>Ability_ShieldBash_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>0.25</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+    <SpellDef InternalName="MelarcyOverkill">
+        <DisplayName>Melarcy Overkill</DisplayName>
+        <Description>A Arcalite assisted overkill strike that does massive damage to a single target.</Description>
+        <FormattedDescription>Launch a decimating Arcalite assisted power strike doing %d on a single enemy.</FormattedDescription>
+        <IconFG>Ability_MelarcyOverkill_Icon.png</IconFG>
+        <Cooldown>9</Cooldown>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Damage</SpellSubClass>
+        <SpellTargetType>EnemyUnit</SpellTargetType>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <IsCastable>0</IsCastable>
+        <CanBeDodged>1</CanBeDodged>
+        <IsSpecialAbility>1</IsSpecialAbility>
+        <RadiusType>ADJACENT</RadiusType>
+        <Range>1</Range>
+        <SpellResourceCost>
+            <Resource>Arcalite</Resource>
+            <Amount>25</Amount>
+        </SpellResourceCost>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>DefendableDamage</Attribute>
+            <AttackStat>UnitStat_Attack_Pierce</AttackStat>
+            <IsForFormattedDescription>1</IsForFormattedDescription>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_CombinedAttack] * 4]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+        </AIData>
+        <CasterAnimationType>32</CasterAnimationType>
+        <HitSoundFX>Ability_Shield_Bash</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>Y_DeadlyBite_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>0.25</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+    <SpellDef InternalName="CowardlyStab_Ability">
+        <DisplayName>Cowardly Stab</DisplayName>
+        <Description>A Fast cooldown Attack that does normal damage and 2 damage per action to the victim.</Description>
+        <FormattedDescription>A Fast cooldown Attack that does normal damage and %d damage per action to the victim.</FormattedDescription>
+        <IconFG>Ability_CowardlyStab_Icon.png</IconFG>
+        <Cooldown>3</Cooldown>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Debuff</SpellSubClass>
+        <SpellTargetType>EnemyUnit</SpellTargetType>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <IsCastable>0</IsCastable>
+        <CanBeDodged>1</CanBeDodged>
+        <IsSpecialAbility>1</IsSpecialAbility>
+        <UseWeaponRange>1</UseWeaponRange>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>DefendableDamage</Attribute>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>CurHealth</Attribute>
+            <IsForFormattedDescription>1</IsForFormattedDescription>
+            <Duration>-1</Duration>
+            <Effect>Bloody_OnHit</Effect>
+            <PerTurn>1</PerTurn>
+            <Value>1</Value>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[2 + [UnitStat_BonusBleed]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_Knockback_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>Ability_ShieldBash_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>0.25</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+</Spells>

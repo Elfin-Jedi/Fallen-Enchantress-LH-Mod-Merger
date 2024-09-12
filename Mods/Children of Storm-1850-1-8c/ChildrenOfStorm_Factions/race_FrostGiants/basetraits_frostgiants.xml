@@ -1,0 +1,346 @@
+<?xml version="1.0"?>
+<Container>
+  <AbilityBonus InternalName="FrostgiantEmpireTactical2">
+    <AbilityBonusOption InternalName="FrostgiantEmpireTactical2">
+      <DisplayName>Cloaks of Hierarchy</DisplayName>
+      <Description>All Frost Giant units are one-man only - Frost Giants cannot be trained in groups. Instead of increasing group size as the game progresses, the Frost Giants increase in strength by the cloaks they wear, which are given according to the individual Frost Giant's talent for war. A 3-man unit, for example, is roughly the equal of a Frost Giant wearing an Omega cloak. A 6-man unit is the equal of a Frost Giant wearing an Ancestor cloak. These cloaks unlock at the same Tech as you would unlock increased group size.
+
+If you wish to upgrade your designed unit later on to a stronger cloak (like you would upgrade unit size for other factions) you must select the "Upgradeable" option in the cloak armor category.
+
+Also note that Frost Giant Champions (or any recruited Champions) may not wear the Cloaks of Hierarchy.</Description>
+      <Icon>ability_warning.png</Icon>
+      <GameModifier>
+        <Provides>All Frost Giant units are one-man only - Frost Giants cannot be trained in groups. Instead of increasing group size as the game progresses, the Frost Giants increase in strength by the cloaks they wear, which are given according to the individual Frost Giant's talent for war. A 3-man unit, for example, is roughly the equal of a Frost Giant wearing an Omega cloak. A 9-man unit is the equal of a Frost Giant wearing an Ancestor cloak. These cloaks unlock at the same Tech as you would unlock increased group size.
+
+Also note that Frost Giant Champions (or any recruited Champions) may not wear the Cloaks of Hierarchy.</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <!--  <AbilityBonus InternalName="DrotaEmpireTactical3">
+    <AbilityBonusOption InternalName="DrotaEmpireTactical3">
+      <DisplayName>Tiny Minions</DisplayName>
+      <Description>Frost Giants are able to recruit Wildlings (normally only Kingdoms can recruit those)
+
+      Standard technology requirements apply, and costs are normal.</Description>
+      <Icon>Ability_PoisonousI_Icon.png</Icon>
+      <GameModifier>
+        <Provides>Frost Giants are able to recruit Wildlings (normally only Kingdoms can recruit those)
+
+Standard technology requirements apply, and costs are normal.</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>-->
+  <AbilityBonus InternalName="MasterScoutAbility_FG">
+    <AbilityBonusOption InternalName="MasterScout_FG">
+      <IMPINC>Strength</IMPINC>
+      <DisplayName>Long Step</DisplayName>
+      <Description>No Movement penalty in Hills</Description>
+      <Icon>Ability_MasterScouts_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>MovementCostOverRide</Attribute>
+        <StrVal>HillsTerrain</StrVal>
+        <Value>10</Value>
+        <PerTurn>1</PerTurn>
+        <Provides>No movement penalty in Hills</Provides>
+      </GameModifier>
+      <Cost>1</Cost>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="FrostgiantEmpireTactical3">
+    <AbilityBonusOption InternalName="FrostgiantEmpireTactical3">
+      <DisplayName>Resource Management</DisplayName>
+      <Description>To balance that Frost Giants are all trained alone instead of in groups, all Production, Metal and Crystal costs for trained units are increased by +300%. This means that, even if a Frost Giant is trained with an Omega cloak (equal to a human 3-man group) the unit will cost Production, Metal and Crystal as if it was a 4-man group. If it is trained with an Ancestor cloak (equal to a human 6-man group) the unit will still cost Production, Metal and Crystal as if it was a 4-man group. Also note that upgrading trained units has been increased by +300% for the same reason.
+
+This means that Frost Giants struggle in the beginning, but grow faster than other factions in strength the longer the game goes on, as long as they research new Cloaks of Hierarchy (=research larger groups). 
+
+Frost Giants may not build Armorer or Weaponsmith improvements, and will raze any such improvements they come across.
+
+Pioneers are not affected by the increase in cost, their cost is the same as other factions.</Description>
+      <Icon>ability_warning.png</Icon>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_Training_Metal</StrVal>
+        <Provides>To balance that Frost Giants are all trained alone instead of in groups, all Production, Metal and Crystal costs for trained units are increased by +300%. This means that, even if a Frost Giant is trained with an Omega cloak (equal to a human 3-man group) the unit will cost Production, Metal and Crystal as if it was a 4-man group. If it is trained with an Ancestor cloak (equal to a human 6-man group) the unit will still cost Production, Metal and Crystal as if it was a 4-man group. Also note that upgrading trained units has been increased by +300% for the same reason.
+
+This means that Frost Giants struggle in the beginning, but grow faster than other factions in strength the longer the game goes on, as long as they research new Cloaks of Hierarchy (=research larger groups). 
+
+Frost Giants may not build Armorer or Weaponsmith improvements, and will raze any such improvements they come across.
+
+Pioneers are not affected by the increase in cost, their cost is the same as other factions.</Provides>
+        <Value>300</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_Training_Labor</StrVal>
+        <Provides>.</Provides>
+        <Value>300</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_Training_Labor_Equipment</StrVal>
+        <Provides>.</Provides>
+        <Value>300</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_Training_RefinedCrystal</StrVal>
+        <Provides>.</Provides>
+        <Value>300</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_UnitUpgrades</StrVal>
+        <Value>300</Value>
+        <Provides>.</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <ImprovementType InternalName="Weaponsmith">
+    <Prereq>
+      <Type>RestrictedAbilityBonusOption</Type>
+      <Attribute>FrostgiantEmpireTactical3</Attribute>
+      <Target>Player</Target>
+    </Prereq>
+  </ImprovementType>
+  <ImprovementType InternalName="Armorer">
+    <Prereq>
+      <Type>RestrictedAbilityBonusOption</Type>
+      <Attribute>FrostgiantEmpireTactical3</Attribute>
+      <Target>Player</Target>
+    </Prereq>
+  </ImprovementType>
+  <AbilityBonus InternalName="FrostGiant_AlienWorld">
+    <AbilityBonusOption InternalName="FrostGiant_AlienWorld">
+      <IMPINC>Strength</IMPINC>
+      <DisplayName>Frost over the world</DisplayName>
+      <Description>Each Water Shard connected to a city will also grant +1 Grain</Description>
+      <Icon>Icon_Water.png</Icon>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_Additive_GrainPerWaterMana</StrVal>
+        <Provides>Each Water Shard connected to a city will also grant +1 Grain</Provides>
+        <Value>1</Value>
+      </GameModifier>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="FrostGiant_NoCountryForOldGiants">
+    <AbilityBonusOption InternalName="FrostGiant_Nocountryforoldgiants">
+      <Cost>-1</Cost>
+      <DisplayName>No Country for Giants</DisplayName>
+      <Description>Frost Giant army units receive far less benefit from the Fortify and Armory Outpost upgrades due to how the race is built. Instead of the expected +25% bonuses they receive approximately +5%.
+ 
+In addition, Frost Giants will not gain any Death Shard power from building improvements on Death Shards (they still gain Mana like normal)</Description>
+      <Icon>NocountryforGiants.png</Icon>
+      <GameModifier>
+
+      </GameModifier>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_DeathMana</StrVal>
+        <Provides>Frost Giant army units receive far less benefit from the Fortify and Armory Outpost upgrades due to how the race is built. Instead of the expected +25% bonuses they receive approximately +5%.
+
+In addition, Frost Giants will not gain any Death Shard power from building improvements on Death Shards (they still gain Mana like normal)</Provides>
+        <Value>-100</Value>
+      </GameModifier>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="FrostGiant_Frostfire">
+    <AbilityBonusOption InternalName="FrostGiant_Frostfire">
+      <IMPINC>Weakness</IMPINC>
+      <Cost>-1</Cost>
+      <DisplayName>Frostfire</DisplayName>
+      <Description>Frost Giants may not design units with Incineration Staff, Hellfire staff, Amulet of Flames, Ring of Embers. 
+
+	      In addition, Burning Axe, Burning Battle Axe and Ignys Longbow are replaced by Frostfire Axe, Frostfire Battle Axe and Frostfire Longbow. They have identical stats but deal Cold damage instead of Fire.
+
+Champions are still capable of using weapons they find that use Fire attack, but the blocked items may not be bought for Champions in city shops.</Description>
+      <Icon>Frostfireability.png</Icon>
+      <GameModifier>
+        <Provides>Frost Giants may not design units with Incineration Staff, Hellfire staff, Amulet of Flames, Ring of Embers. 
+
+In addition, Burning Axe, Burning Battle Axe and Ignys Longbow are replaced by Frostfire Axe, Frostfire Battle Axe and Frostfire Longbow. They have identical stats but deal Cold damage instead of Fire.
+
+Champions are still capable of using weapons they find that use Fire attack, but the blocked items may not be bought for Champions in city shops.</Provides>
+      </GameModifier>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <!-- unit design stuff-->
+  <AbilityBonus InternalName="FrostGiant_UnstoppableGlacier">
+    <AbilityBonusType>Unit_Design</AbilityBonusType>
+    <AbilityBonusOption InternalName="FrostGiant_UnstoppableGlacier">
+      <Type>Faction Trait</Type>
+      <IsCombatAbility>1</IsCombatAbility>
+      <Prereq>
+        <Type>Race</Type>
+        <Attribute>Race_Type_FrostGiants</Attribute>
+      </Prereq>
+      <DisplayName>Unstoppable Glacier</DisplayName>
+      <Description>The unit is like an unstoppable glacier: slow-moving but unstoppable. In battle, its initiative is locked to 16 and movement locked to 2. No spell, ability, item, encumbrance or other effect can change this value.
+
+	      Costs 2 Crystals per unit member. This trait cannot be selected at the same time as Iceblood.
+      </Description>
+      <Icon>Ability_Fortify_Icon.png</Icon>
+      <AdditionalTrainingTurns>22</AdditionalTrainingTurns>
+      <ProductionRequirement>
+        <Type>Resource</Type>
+        <Attribute>RefinedCrystal</Attribute>
+        <Value>2</Value>
+      </ProductionRequirement>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>BattleAutoCastSpell</Attribute>
+        <StrVal>Ef_UnstoppableGlacier</StrVal>
+        <Provides>The unit is like an unstoppable glacier: slow-moving but unstoppable. In battle, its initiative is locked to 16 and movement locked to 2. No spell, ability, item, encumbrance or other effect can change this value.
+
+Costs 2 Crystals per unit member. This trait cannot be selected at the same time as Iceblood.</Provides>
+        <Value>100</Value>
+      </GameModifier>
+    </AbilityBonusOption>
+    <AbilityBonusOption InternalName="FrostGiant_IcyMind">
+      <Type>Faction Trait</Type>
+      <IsCombatAbility>1</IsCombatAbility>
+      <Prereq>
+        <Type>Race</Type>
+        <Attribute>Race_Type_FrostGiants</Attribute>
+      </Prereq>
+      <DisplayName>Iceblood</DisplayName>
+      <Description>This unit suffers only half the Accuracy bonus it normally would from suffering damage in combat (see Cloak). Instead of -10 Accuracy the unit only suffers -5.
+
+This trait cannot be selected at the same time as Unstoppable Glacier.</Description>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Accuracy</StrVal>
+        <Value>5</Value>
+        <WhenUnderPercentHitPoints>80</WhenUnderPercentHitPoints>
+        <Provides>+5 Accuracy under 80% Health</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Accuracy</StrVal>
+        <Value>5</Value>
+        <WhenUnderPercentHitPoints>60</WhenUnderPercentHitPoints>
+        <Provides>+5 Accuracy under 60% Health</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Accuracy</StrVal>
+        <Value>5</Value>
+        <WhenUnderPercentHitPoints>40</WhenUnderPercentHitPoints>
+        <Provides>+5 Accuracy under 40% Health</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Accuracy</StrVal>
+        <Value>5</Value>
+        <WhenUnderPercentHitPoints>20</WhenUnderPercentHitPoints>
+        <Provides>+5 Accuracy under 20% Health</Provides>
+      </GameModifier>
+      <Icon>Ability_Stun_Icon.png</Icon>
+      <AdditionalTrainingTurns>15</AdditionalTrainingTurns>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <!-- <AbilityBonus InternalName="FrostGiant_Greatswing">
+    <AbilityBonusType>Unit_Design</AbilityBonusType>
+    <AbilityBonusOption InternalName="FrostGiant_Greatswing">
+      <IsCombatAbility>1</IsCombatAbility>
+      <Prereq>
+        <Type>Race</Type>
+        <Attribute>Race_Type_FrostGiants</Attribute>
+      </Prereq>
+      <DisplayName>Great Swing</DisplayName>
+      <Description>When attacking any unit in melee, 15% of all damage is also caused to target's adjacent enemies and friends</Description>
+      <Icon>Ability_Underdog_Icon.png</Icon>
+      <AdditionalTrainingTurns>15</AdditionalTrainingTurns>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Splashdamage</StrVal>
+        <Value>15</Value>
+      </GameModifier>
+    </AbilityBonusOption>
+  </AbilityBonus>-->
+  <AbilityBonus InternalName="PrimalBearBondAbility">
+    <AbilityBonusType>Unit_Design</AbilityBonusType>
+    <AbilityBonusOption InternalName="PrimalBearBondAbility">
+      <Type>Faction Trait</Type>
+      <IsCombatAbility>1</IsCombatAbility>
+      <Prereq>
+        <Type>Race</Type>
+        <Attribute>Race_Type_FrostGiants</Attribute>
+      </Prereq>
+      <DisplayName>Dire Bear Bond</DisplayName>
+      <Description>+33 Pierce resistance when riding a Dire Bear mount</Description>
+      <Icon>DireBear_Medallion.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistPierce</StrVal>
+        <StrVal2>UnitStat_EquippedPrimalBear</StrVal2>
+        <Value>33</Value>
+        <Provides>+33 Pierce resistance when riding a Dire Bear mount</Provides>
+        <vsLower>1</vsLower>
+      </GameModifier>
+      <AdditionalTrainingTurns>17</AdditionalTrainingTurns>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>0</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="SpecialCounterattackAbility">
+    <AbilityBonusOption InternalName="SpecialCounterattack">
+      <DisplayName>Growing Potential</DisplayName>
+      <Description>+1 attack and defense per level</Description>
+      <Icon>Ability_Counterattack_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Attack_Pierce</StrVal>
+        <Provides>+1 Attack per level</Provides>
+        <Value>1</Value>
+        <PerLevel>1</PerLevel>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Defense_Pierce</StrVal>
+        <Provides>+1 Defense per level</Provides>
+        <Value>1</Value>
+        <PerLevel>1</PerLevel>
+      </GameModifier>
+      <IsCombatAbility>1</IsCombatAbility>
+      <Type>Aggressive</Type>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+</Container>

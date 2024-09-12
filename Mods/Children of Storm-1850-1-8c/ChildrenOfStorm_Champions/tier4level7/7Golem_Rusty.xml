@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<UnitTypes>
+	<UnitType InternalName="Golem_Rusty">
+		<CreatureType>Construct</CreatureType>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-5</Value>
+			<Provides>-5% Unrest in the city this unit is in</Provides>
+		</GameModifier>
+
+		<DisplayName>Rusty</DisplayName>
+		<Backstory>There are few creatures on Elemental that are able to withstand more damage than an Iron Golem.  Long have they stood silent, patient sentries over their charges.  
+
+In the case of the golem known as Rusty, that has been a very long time indeed.  Rusty was created as a war machine in the time of the great wars leading up to the Cataclysm.  He does not remember that time, but he knows that he was damaged then, disabled and left forgotten on the battlefield like so much detritus.  Eventually, after many seasons, a group of humans came and built a village where the battle had been.  Rusty was too big to move easily, so they left him and he quickly became a fixture of the town square, where he gained his name due to the stains of rust accumulated in years of neglect out in the open.  The humans of the village wove him into their lives, and would invoke him almost as a guardian spirit or witness, saying things like "that's between you, me, and Rusty over here", or "I guess I'd better do it - no use waiting on old Rusty here to get up and do it."
+
+One day, a small group of the White Golems came to the village.  They immediately recognized that Rusty's animating force was still active, and that he could be repaired enough to move, although not perhaps restored to full capacity.  They quickly moved toward him and began poking and prodding him to assess his condition.  When the villagers protested, the White Golems attacked, slaying most and putting the rest to flight, burning the village.  Rusty, unable to do anything but mutely observe, watched it all happen.  After disposing of the villagers, the White Golems returned to the repairs, explaining their purpose and community as they worked.  In a few days, as they neared completion, they performed the rituals to grant Rusty free will, assuming that he would join them.  Nothing was further from Rusty's mind.
+
+The rituals and explanations were a success, in that Rusty had been given the power of self-determination and sense of self-identity.  What the White Golems had not anticipated was that in the long years standing witness in the village square, Rusty had formed an attachment to the village; as much as he was capable of, he loved the village.  He belonged to the village, and the village belonged to him.  He was a part of their community.  And the White Golems had destroyed it and its people.
+
+While it would be inaccurate to say that Rusty burned with rage, or that his grief rushed out in anger, for he does not feel emotions in that way, nonetheless he was ruthless as he rapidly and methodically demolished the small band of White Golems.  And then he walked out of the village, seeking another community to join.</Backstory>
+
+		<ModelPath>gfx/hkb/Units/K_IronGolem_Mesh_01.hkb</ModelPath>
+		<SkeletonPath>Gfx\HKB\Units\K_IronGolem_Skeleton_01.hkb</SkeletonPath>
+		<EyeTexture>gfx/eyes/male_brown_eye.png</EyeTexture>
+		<AnimationPack>IronGolemAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Stationary</BattleAnimationBehavior>
+
+		<ShowAsSingleUnit>false</ShowAsSingleUnit>
+		<CutSceneDataPack>IronGolemUnitCutscenePack</CutSceneDataPack>
+		<ModelScale>0.8</ModelScale>
+		<TacticalModelScale>1.5000</TacticalModelScale>
+		<EquipmentScale>2</EquipmentScale>
+		<ClothMapScale>1.6</ClothMapScale>
+		<BattleAnimationBehavior>Stationary</BattleAnimationBehavior>
+		<MovementType>land</MovementType>
+		<BobbingFrequency>0.0000</BobbingFrequency>
+
+		<ClothPoseIndex>0</ClothPoseIndex>
+		<InfoCardBackground>BG_Barren</InfoCardBackground>
+		<InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+
+		<CanBeDesigned>0</CanBeDesigned>    
+		<Allegiance>Kingdom</Allegiance>
+		<Unique>1</Unique>
+		<IsNPC>1</IsNPC>
+		<NPCSpawnLikelihood>100</NPCSpawnLikelihood>
+		<IsChampion>1</IsChampion>
+		<Gender>Male</Gender>
+		<SpawnRating>7</SpawnRating>
+
+		<Quote>Disassemble?  No disassemble.</Quote>
+		<NPCRecruitmentText>%d gildar required for repairs and maintenance.</NPCRecruitmentText>
+
+		<SelectedAbilityBonusOption>Blood_IronGolem</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>ImmuneToPoison</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>ImmuneToCriticals</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>VulnerableToLightning</SelectedAbilityBonusOption>
+
+		<SelectedAbilityBonusOption>PathOfTheWarrior</SelectedAbilityBonusOption>
+			<SelectedAbilityBonusOption>Lethal1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Lethal2</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Spell_Decimate</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Spell_ArchingShieldBash</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Discipline_Level</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>DamagedCore</SelectedAbilityBonusOption>
+	
+
+		<Medallions InternalName=""/>
+		<WageOverride>1</WageOverride>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_ChanceToAvoidProne>100</UnitStat_ChanceToAvoidProne>
+			<UnitStat_HitPoints>80</UnitStat_HitPoints>
+			<UnitStat_Defense_Pierce>20</UnitStat_Defense_Pierce>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit> 
+			<UnitStat_WeightCapacity>200</UnitStat_WeightCapacity>
+			<UnitStat_BG_IsConstruct>1.0000</UnitStat_BG_IsConstruct>
+			<UnitStat_BG_IsKingdom>1.0000</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsHumanoid>1.0000</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsNotAlive>1.0000</UnitStat_BG_IsNotAlive>
+			<!--<UnitStat_BG_IsRace_Golem>1.0000</UnitStat_BG_IsRace_Golem>-->
+			<UnitStat_BG_IsMonster>1</UnitStat_BG_IsMonster>
+			<UnitStat_BG_IsChampion>1.0000</UnitStat_BG_IsChampion>
+		</LevelMilestone>
+
+		<AutoCreateEquipment>Longsword_Golem</AutoCreateEquipment>
+		<AutoCreateEquipment>RustyShield</AutoCreateEquipment>
+
+		<Color_Skin>107,15,15,255</Color_Skin>
+		<Color_Hair>138,61,13,255</Color_Hair>
+		<Color_Clothing1>50,50,50,255</Color_Clothing1>
+		<Color_Clothing2>0,0,0,255</Color_Clothing2>
+		<Color_Metal>99,63,30,255</Color_Metal>
+		<!--<Texture_Skin>IronGolem.png</Texture_Skin>-->
+		
+		<UnitModelType>IronGolem</UnitModelType>
+		<NPCFreeRecruit>0</NPCFreeRecruit>
+		<RaceType>Race_Type_Golem</RaceType>
+		<OnAttackParticleName>Golem_Attack</OnAttackParticleName>
+		<OnHitParticleName>Golem_Hit</OnHitParticleName>
+		<SoundPack>SoundPack_Golem1</SoundPack>
+
+	</UnitType>
+</UnitTypes>

@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+<container>
+  <AbilityBonus InternalName="Rivermod_Golem">
+    <AbilityBonusOption InternalName="Rivermod_Golem">
+      <IMPINC>Strength</IMPINC>
+      <DisplayName>Blood Forge</DisplayName>
+      <Description>This faction has access to a stronger Blood Forge spell, where the bonus to hitpoints is 25% instead of 10%</Description>
+      <Icon>Stat_Constitution_Icon.png</Icon>
+      <GameModifier>
+        <Provides>This faction has access to a stronger Blood Forge spell, where the bonus to hitpoints is 25% instead of 10%</Provides>
+      </GameModifier>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Rivermod_Lizardmen">
+    <AbilityBonusOption InternalName="Rivermod_Lizardmen">
+      <IMPINC>Strength</IMPINC>
+      <DisplayName>Blood Worship</DisplayName>
+      <Description>All Blood Forges count as +1 Death Shard power as well</Description>
+      <Icon>Stat_AttackFire_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_Additive_deathshardperbloodforge</StrVal>
+        <Provides>All Blood Forges count as +1 Death Shard power as well. This effect produces no mana.</Provides>
+        <Value>1</Value>
+      </GameModifier>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Rivermod_Golem2">
+    <AbilityBonusOption InternalName="Rivermod_Golem2">
+      <IMPINC>Weakness</IMPINC>
+      <Cost>-1</Cost>
+      <DisplayName>No Death Forge</DisplayName>
+      <Description>This faction may not build or benefit from Death Forges</Description>
+      <Icon>deathtoken.png</Icon>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_DeathForge</StrVal>
+        <Provides>This faction may not build or benefit from Death Forges</Provides>
+        <Value>-100</Value>
+      </GameModifier>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Rivermod_NoBloodForge">
+    <AbilityBonusOption InternalName="Rivermod_NoBloodForge">
+      <IMPINC>Weakness</IMPINC>
+      <Cost>-1</Cost>
+      <DisplayName>No Blood Forge</DisplayName>
+      <Description>This faction may not build or benefit from Blood Forges</Description>
+      <Icon>Stat_Constitution_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_BloodForge</StrVal>
+        <Provides>This faction may not build or benefit from Blood Forges</Provides>
+        <Value>-100</Value>
+      </GameModifier>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Rivermod_blockmagmaforge">
+    <AbilityBonusOption InternalName="Rivermod_blockmagmaforge">
+      <IMPINC>Weakness</IMPINC>
+      <Cost>-1</Cost>
+      <DisplayName>No Magma Forge</DisplayName>
+      <Description>This faction may not build or benefit from Magma Forges</Description>
+      <Icon>Stat_AttackFire_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_MagmaForge</StrVal>
+        <Provides>This faction may not build or benefit from Magma Forges</Provides>
+        <Value>-100</Value>
+      </GameModifier>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Rivermod_DwarfMagma">
+    <AbilityBonusOption InternalName="Rivermod_DwarfMagma">
+      <IMPINC>Strength</IMPINC>
+      <DisplayName>Magma Forge</DisplayName>
+      <Description>All Magma Forges produce +1 Growth in the connected city.</Description>
+      <Icon>Stat_AttackFire_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_Additive_growthpermagmaforge</StrVal>
+        <Provides>All Magma Forges produce +1 Growth in the connected city.</Provides>
+        <Value>1</Value>
+      </GameModifier>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Rivermod_LivingStone">
+    <AbilityBonusOption InternalName="Rivermod_LivingStone">
+      <IMPINC>Strength</IMPINC>
+      <DisplayName>Magma Forge</DisplayName>
+      <Description>All Magma Forges count as +1 Fire Shard power as well. This effect produces no mana</Description>
+      <Icon>Stat_AttackFire_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_Additive_fireshardpermagmaforge</StrVal>
+        <Provides>All Magma Forges count as +1 Fire Shard power as well. This effect produces no mana</Provides>
+        <Value>1</Value>
+      </GameModifier>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Rivermod_Drota">
+    <AbilityBonusOption InternalName="Rivermod_Drota">
+      <IMPINC>Strength</IMPINC>
+      <DisplayName>Witch Market</DisplayName>
+      <Description>All Witch Markets count as +1 Death Shard power as well. This effect produces no mana</Description>
+      <Icon>Stat_AttackPoison_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_Additive_deathshardperwitchmarket</StrVal>
+        <Provides>All Witch Markets count as +1 Death Shard power as well. This effect produces no mana</Provides>
+        <Value>1</Value>
+      </GameModifier>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Rivermod_DeathLegion">
+    <AbilityBonusOption InternalName="Rivermod_DeathLegion">
+      <IMPINC>Strength</IMPINC>
+      <DisplayName>Death Forge</DisplayName>
+      <Description>All Death Forges count as +1 Death Shard power as well, and generate 2 Mana per turn. In addition each Death Forge will breed 1 Demon Soul per turn</Description>
+      <Icon>deathtoken.png</Icon>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_Additive_deathshardperwitchmarket</StrVal>
+        <Provides>All Death Forges count as +1 Death Shard power as well, and generate 2 Mana per turn. In addition each Death Forge will breed 1 Demon Soul per turn</Provides>
+        <Value>1</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_Additive_manaperdeathforge</StrVal>
+        <Provides>.</Provides>
+        <Value>2</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_Additive_demomperdeathforge</StrVal>
+        <Provides>.</Provides>
+        <Value>1</Value>
+      </GameModifier>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Rivermod_Greenskin">
+    <AbilityBonusOption InternalName="Rivermod_Greenskin">
+      <IMPINC>Strength</IMPINC>
+      <DisplayName>Witch Market</DisplayName>
+      <Description>All Witch Markets produce +1 Growth and +1 Grain in the connected city</Description>
+      <Icon>Stat_AttackPoison_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_Additive_growthperwitchmarket</StrVal>
+        <Provides>All Witch Markets produce +1 Growth and +1 Grain in the connected city</Provides>
+        <Value>1</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_Additive_TileYieldGrainperwitchmarket</StrVal>
+        <Provides>.</Provides>
+        <Value>1</Value>
+      </GameModifier>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="BloodOfTheRedeemer">
+    <AbilityBonusOption InternalName="BloodOfTheRedeemer">
+      <IMPINC>Strength</IMPINC>
+      <DisplayName>Blood Of the Redeemer</DisplayName>
+      <Description>All Blood Forges will produce 1 additional Life Shard power. This effect does not produce mana but it does stack with the "Worship" faction ability and thus also produces +0.5 Growth in the connected city. It also works with the "New Faith" buff that all Angels have, increasing their stats in combat</Description>
+      <Icon>Stat_Constitution_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_Additive_LifeShardperBloodForge</StrVal>
+        <Provides>All Blood Forges will produce 1 additional Life Shard power. This effect does not produce mana but it does stack with the "Worship" faction ability and thus also produces +0.5 Growth in the connected city. It also works with the "New Faith" buff that all Angels have, increasing their stats in combat</Provides>
+        <Value>1</Value>
+      </GameModifier>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Rivermod_SuperDeathForge">
+    <AbilityBonusOption InternalName="Rivermod_SuperDeathForge">
+      <IMPINC>Strength</IMPINC>
+      <DisplayName>Undead Forge</DisplayName>
+      <Description>All Death Forges count as +1 Death Shard power as well (this effect produces no mana). In addition, the faction has access to an extra strong Death Forge spell with the added effect of increasing the level of any unit trained in that city by 1</Description>
+      <Icon>deathtoken.png</Icon>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_Additive_deathshardperwitchmarket</StrVal>
+        <Provides>All Death Forges count as +1 Death Shard power as well (this effect produces no mana). In addition, the faction has access to an extra strong Death Forge spell with the added effect of increasing the level of any unit trained in that city by 1</Provides>
+        <Value>1</Value>
+      </GameModifier>
+    </AbilityBonusOption>
+  </AbilityBonus>
+</container>

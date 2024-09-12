@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<Quests>
+	<QuestDef InternalName="Quest_X_Alchemy_ALT">
+		<DisplayName>Alchemy</DisplayName>
+		<Description>The innkeeper is admiring a set of gold coins on the bar. They are perfectly formed, and the inn's firelight dances across their smooth yellow surface, but there is no insignia on any of them. No nation appears to have printed them and although warlords and smuggling guilds occasionally mint their own coins they usually imprint them with their own symbol and never use such pure gold.
+		
+		They were made by magic. The innkeeper says, Pulled from the air as some conjure fire or wind. Can you imagine the sorcerer that can do this, he could ruin the economy of empires, he could raise armies of any size.
+		
+		No. You answer as you pick up and investigate one of the coins. All things done with magic take power, and this power is more precious than gold. But still... you say considering, it is a good trick. Where did these coins come from?
+		
+		The innkeeper gives you direction to local ruin where the coins where found. The adventurer that found them claimed to have seen the words of a spell on the ruins walls</Description>
+		<IsStartingPointQuest>1</IsStartingPointQuest>
+		<ShortTextAccept>I will search for the ruins</ShortTextAccept>
+		<ShortTextDeny>I've no time for this</ShortTextDeny>
+		<RewardText>Alchemy spell</RewardText>
+		<RewardImage>S_Alchemy_Painting.png</RewardImage>
+		<SuccessText>The broken walls are carved with the images of a sorcerer crowned in jewels and tended to by legions of servants. There is little writing except for a single wall that appears untouched by time and elements. Sadly, you learn nothing of value deciphering it. Nevertheless, after looking around some more, you do find something!</SuccessText>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>QuestLocation</TriggerType>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>2</SpawnRating>
+		<Image>Building_Inn1.png</Image>
+		<PrefQuestLoc>QuestLoc_Inn1</PrefQuestLoc>
+		<Treasure>
+			<GameModifier>
+				<ModType>GiveItem</ModType>
+				<Attribute>Loot_AlchemistsTools</Attribute>
+				<Value>100</Value>
+			</GameModifier>
+		</Treasure>
+		<Treasure>
+			<GameModifier InternalName="Reward3">
+				<ModType>Unit</ModType>
+				<Attribute>GiveExperience</Attribute>
+				<Value>9</Value>
+			</GameModifier>
+		</Treasure>
+		<Treasure>
+			<GameModifier InternalName="Reward4">
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>15</Value>
+			</GameModifier>
+		</Treasure>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<NextObjectiveID>1</NextObjectiveID>
+			<Description>Find the ruins where the coins were found.</Description>
+			<Treasure>
+				<GameModifier>
+					<ModType>Map</ModType>
+					<Attribute>CreateGoodieHut</Attribute>
+					<StrVal>Ancient Ruins</StrVal>
+					<Unitclass>GH_Quest_Ruins</Unitclass>
+					<Radius>4</Radius>
+				</GameModifier>
+			</Treasure>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Explore the Ruins.</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>ClearGoodieHut</Type>
+				<TextData>GH_Quest_Ruins</TextData>
+				<Flag>RevealTarget</Flag>
+			</QuestConditionDef>
+			<ChoiceText>There must be magic in the ruins because shrills have been drawn to it. A group of Air Shrills scurry and clatter around the site seemingly without purpose. If you are going to explore the ruins you are going to have to defeat the shrills first.</ChoiceText>
+			<ChoiceMedallion>L_Air_Shrill_01.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>Defeat the Air Shrills</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Encounter>
+					<Liklihood>100</Liklihood>
+					<BattleIdentifier>AirShrill</BattleIdentifier>
+					<TacticalMap>T_Temple_Cave_02</TacticalMap>
+					<WillRespawn>0</WillRespawn>
+					<WanderingRadius>0</WanderingRadius>
+					<UnitInstance>
+						<UnitType>AirShrill</UnitType>
+						<Level>2</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>AirShrill</UnitType>
+						<Level>2</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>AirShrill</UnitType>
+						<Level>2</Level>
+					</UnitInstance>
+				</Encounter>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I'll return later</Description>
+				<NextObjectiveID>0</NextObjectiveID>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<NextObjectiveID>2</NextObjectiveID>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Kill the Air Shrills</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>BattleFinished</Type>
+				<TextData>AirShrill</TextData>
+				<MoreTextData>Victory</MoreTextData>
+				<CompletionText>You've defeated the Air Shrills! Now you can explore the ruins.</CompletionText>
+			</QuestConditionDef>
+			<QuestConditionDef>
+				<ID>1</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Collect 100 Gildar to pay the assassin</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>100</NumericData>
+			</QuestConditionDef>
+			<ChoiceText>After you kill the Air Shrills you are surprised by a dark figure who steps out of the ruins.
+			
+			If you are looking for the coins, they are already gone. He says.
+			
+			I have seen them. You respond, I've come for something else.
+			
+			The spell then, it is of little use to me. But I will stand aside and let you go in and read it for a small price. If you will be able to summon gold, the least you can do is share a little with me. Say 100 coins, and I will need payment before you enter the ruins.</ChoiceText>
+			<ChoiceMedallion>K_Men_Assassin_Card_01.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_01.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>I am searching the ruins, I suggest you stand aside.</Description>
+				<NextObjectiveID>2</NextObjectiveID>
+				<PopupMessage>"I had to try." The man says as he steps meekly aside.</PopupMessage>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Very well, I will pay your price.</Description>
+				<RequiredConditionID>1</RequiredConditionID>
+				<NextObjectiveID>2</NextObjectiveID>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>It isn't worth it, I will leave.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>2</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+			<Description>Explore the ruins.</Description>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Quest_X_AssassinBlade_ALT">
+		<DisplayName>The Assassin's Blade</DisplayName>
+		<Description>The clearing is empty except for a long slate with a sword upon it. The sword is ancient, the leather grip cracked and faded, the jeweled pommel a spoiled grey.</Description>
+		<IsStartingPointQuest>0</IsStartingPointQuest>
+		<ShortTextAccept>Pick up the sword</ShortTextAccept>
+		<ShortTextDeny>I'm too busy for this</ShortTextDeny>
+		<RewardText>Fiend Blade</RewardText>
+		<RewardImage>W_Shortsword_Fiend_Blade_Icon_01.png</RewardImage>
+		<SuccessText>The Assassin's Blade flares to life, so hot you drop it on the ground. When you pick it up the sword is changed, flooded with dark energy. Though its whispers are gone the power remains.</SuccessText>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>QuestLocation</TriggerType>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>3</SpawnRating>
+		<Image>G_Treasure_Chest_01.png</Image>
+		<PrefQuestLoc>QuestLoc_StoneRing</PrefQuestLoc>
+		<Treasure>
+			<GameModifier InternalName="Reward1">
+				<ModType>GiveItem</ModType>
+				<Attribute>Shortsword_FiendBlade</Attribute>
+				<Value>100</Value>
+			</GameModifier>
+		</Treasure>
+		<Treasure>
+			<GameModifier InternalName="Reward3">
+				<ModType>Unit</ModType>
+				<Attribute>GiveExperience</Attribute>
+				<Value>12</Value>
+			</GameModifier>
+		</Treasure>
+		<Treasure>
+			<GameModifier InternalName="Reward4">
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>20</Value>
+			</GameModifier>
+		</Treasure>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<NextObjectiveID>1</NextObjectiveID>
+			<Description>A voice whispers to you, "I am the assassin's blade, enchanted to fulfill the tragic desires of those that wish upon my altar. Use me to fulfill those requests and I will seek your enemies as well."</Description>
+			<Treasure>
+				<GameModifier>
+					<ModType>GiveItem</ModType>
+					<Attribute>Longsword_Assassins</Attribute>
+					<Value>100</Value>
+				</GameModifier>
+			</Treasure>
+			<Treasure>
+				<GameModifier>
+					<ModType>Map</ModType>
+					<Attribute>CreateGoodieHut</Attribute>
+					<StrVal>Miser's Workshop</StrVal>
+					<Unitclass>GH_Quest_Workshop</Unitclass>
+					<Radius>6</Radius>
+				</GameModifier>
+			</Treasure>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Seek the first victim of the Assassin's blade</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>ClearGoodieHut</Type>
+				<TextData>GH_Quest_Workshop</TextData>
+				<Flag>RevealTarget</Flag>
+			</QuestConditionDef>
+			<ChoiceText>"A farmer came to me, his crops spoiled by blight and drought. He had purchased the seeds on loan and when the merchant came to collect payment the farmer's only thing of value was the thin livestock he needed to feed his family. The merchant took the livestock and slaughtered it on the farmer's lawn, wasting it rather than transport the sickly things back to his home. The farmer was then left to watch his family starve, he was near death himself when he prayed at my altar."</ChoiceText>
+			<ChoiceMedallion>G_Quest_Workshop_01.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>It's time to repay the merchant for his cruelty.</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Encounter>
+					<Liklihood>100</Liklihood>
+					<BattleIdentifier>Merchant</BattleIdentifier>
+					<WillRespawn>0</WillRespawn>
+					<WanderingRadius>0</WanderingRadius>
+					<UnitInstance>
+						<UnitType>Quest_Merchant</UnitType>
+						<Level>6</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>Quest_Defender_FreeRider</UnitType>
+						<Level>5</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>Quest_Defender_FreeRider</UnitType>
+						<Level>5</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>Quest_Defender_FreeRider</UnitType>
+						<Level>5</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>Quest_Defender_FreeRider</UnitType>
+						<Level>5</Level>
+					</UnitInstance>
+				</Encounter>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I will not hunt men. (abandon the quest)</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<NextObjectiveID>2</NextObjectiveID>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Kill the Merchant</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>BattleFinished</Type>
+				<TextData>Merchant</TextData>
+				<MoreTextData>Victory</MoreTextData>
+				<CompletionText>At the death of the merchant the sword warms. The jeweled pommel is no longer cloudy, the blade seems newly sharp.</CompletionText>
+			</QuestConditionDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>2</ObjectiveID>
+			<NextObjectiveID>3</NextObjectiveID>
+			<Description>"The next is the cruel wife of a wealthy trader." the sword whispers, "Though she wants for nothing she inflicts pain on those that serve her. She has killed a half dozen of her maids and a stableboy barely past his eighth year. It was her son who came to me, too meek to end his mothers tyranny himself. Now the task falls to you."</Description>
+			<Treasure>
+				<GameModifier>
+					<ModType>Map</ModType>
+					<Attribute>CreateGoodieHut</Attribute>
+					<StrVal>Wealthy Estate</StrVal>
+					<Unitclass>GH_Quest_Estate</Unitclass>
+					<Radius>6</Radius>
+				</GameModifier>
+			</Treasure>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Seek the second victim of the Assassin's blade</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>ClearGoodieHut</Type>
+				<TextData>GH_Quest_Estate</TextData>
+				<Flag>RevealTarget</Flag>
+			</QuestConditionDef>
+			<QuestConditionDef>
+				<ID>1</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Collect 30 Gildar to bribe the guards.</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>30</NumericData>
+			</QuestConditionDef>
+			<ChoiceText>The estate is heavily guarded, and though you can hear a woman screaming at her servants you have no doubt they would die defending her.</ChoiceText>
+			<ChoiceMedallion>G_Quest_Estate_01.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>They are fools to try, her execution is at hand.</Description>
+				<NextObjectiveID>3</NextObjectiveID>
+				<Encounter>
+					<Liklihood>100</Liklihood>
+					<BattleIdentifier>Mortessa</BattleIdentifier>
+					<WillRespawn>0</WillRespawn>
+					<WanderingRadius>0</WanderingRadius>
+					<UnitInstance>
+						<UnitType>Champion_Listrid</UnitType>
+						<UnitName>Mortessa</UnitName>
+						<UnitSubclassType>Champion</UnitSubclassType>
+						<Level>4</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>Quest_Light_FreeRider</UnitType>
+						<UnitGroupingType>UnitGroupingType_Party</UnitGroupingType>
+						<Level>4</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>Quest_Light_FreeRider</UnitType>
+						<UnitGroupingType>UnitGroupingType_Party</UnitGroupingType>
+						<Level>4</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>Quest_Light_FreeRider</UnitType>
+						<UnitGroupingType>UnitGroupingType_Party</UnitGroupingType>
+						<Level>3</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>Quest_Light_FreeRider</UnitType>
+						<UnitGroupingType>UnitGroupingType_Party</UnitGroupingType>
+						<Level>3</Level>
+					</UnitInstance>
+				</Encounter>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I'll return later</Description>
+				<NextObjectiveID>2</NextObjectiveID>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Tyranny inspires little loyalty, I can bribe my way past the guards (-30 Gildar)</Description>
+				<RequiredConditionID>1</RequiredConditionID>
+				<NextObjectiveID>3</NextObjectiveID>
+				<PopupMessage>The guards accept your bribe and wander away from the estate.</PopupMessage>
+				<Encounter>
+					<Liklihood>100</Liklihood>
+					<BattleIdentifier>Mortessa</BattleIdentifier>
+					<WillRespawn>0</WillRespawn>
+					<WanderingRadius>0</WanderingRadius>
+					<UnitInstance>
+						<UnitType>Champion_Listrid</UnitType>
+						<UnitName>Mortessa</UnitName>
+						<UnitSubclassType>Champion</UnitSubclassType>
+						<Level>4</Level>
+					</UnitInstance>
+				</Encounter>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>3</ObjectiveID>
+			<NextObjectiveID>4</NextObjectiveID>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Kill Mortessa</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>BattleFinished</Type>
+				<TextData>Mortessa</TextData>
+				<MoreTextData>Victory</MoreTextData>
+				<CompletionText>At the death of Mortessa the sword warms. The cracked leather hilt is supple and unblemished, the blade dances with an inner light.</CompletionText>
+			</QuestConditionDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>4</ObjectiveID>
+			<NextObjectiveID>5</NextObjectiveID>
+			<Description>"The last victim is Petar." the sword whispers, "A husband and father. Another man desires his wife and with Petar dead, he believes he can have her."</Description>
+			<Treasure>
+				<GameModifier>
+					<ModType>Map</ModType>
+					<Attribute>CreateGoodieHut</Attribute>
+					<StrVal>Pauper's Camp</StrVal>
+					<Unitclass>GH_Quest_AbandonedVillage</Unitclass>
+					<Radius>6</Radius>
+				</GameModifier>
+			</Treasure>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Seek the final victim of the Assassin's blade</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>ClearGoodieHut</Type>
+				<TextData>GH_Quest_AbandonedVillage</TextData>
+				<Flag>RevealTarget</Flag>
+			</QuestConditionDef>
+			<QuestConditionDef>
+				<ID>1000</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Destroy the Assassin's Blade.</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForItem</Type>
+				<TextData>Longsword_Assassins</TextData>
+				<NumericData>1</NumericData>
+			</QuestConditionDef>
+			<ChoiceText>It is easy to find Petar in the dingy village, he is known and liked by everyone. He sits on his porch guarded only by two content dogs.</ChoiceText>
+			<ChoiceMedallion>G_Quest_Abandoned_Village_01.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>Kill him.</Description>
+				<NextObjectiveID>5</NextObjectiveID>
+				<Encounter>
+					<Liklihood>100</Liklihood>
+					<BattleIdentifier>Petar</BattleIdentifier>
+					<WillRespawn>0</WillRespawn>
+					<WanderingRadius>0</WanderingRadius>
+					<UnitInstance>
+						<UnitType>Champion_Baylur</UnitType>
+						<UnitName>Petar</UnitName>
+						<UnitSubclassType>Champion</UnitSubclassType>
+						<Level>4</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>AnnieDog</UnitType>
+						<Level>3</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>AnnieDog</UnitType>
+						<Level>3</Level>
+					</UnitInstance>
+				</Encounter>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I won't kill an innocent man.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Destroy the Assassin's Blade.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<RequiredConditionID>1000</RequiredConditionID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>The blade shatters with an inhuman screech. When the ringing in your ears has faded an angry demon stands before you.</PopupMessage>
+				<Encounter>
+					<Liklihood>100</Liklihood>
+					<BattleIdentifier>Creature_X_AssassinDemon_ALT</BattleIdentifier>
+					<WillRespawn>0</WillRespawn>
+					<WanderingRadius>0</WanderingRadius>
+					<UnitInstance>
+						<UnitType>Creature_X_AssassinDemon_ALT</UnitType>
+						<Level>9</Level>
+					</UnitInstance>
+				</Encounter>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>5</ObjectiveID>
+			<NextObjectiveID>6</NextObjectiveID>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Kill Petar</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>BattleFinished</Type>
+				<TextData>Petar</TextData>
+				<MoreTextData>Victory</MoreTextData>
+				<CompletionText>The village looks on in shock as you slaughter Petar but despite their love for him, no one raises a hand to stop you.</CompletionText>
+			</QuestConditionDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>6</ObjectiveID>
+			<NextObjectiveID>-1</NextObjectiveID>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Have the Assassin's Blade</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>CheckForItem</Type>
+				<TextData>Longsword_Assassins</TextData>
+				<NumericData>1</NumericData>
+			</QuestConditionDef>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Quest_X_DestinyTutor_ALT">
+		<DisplayName>Destiny's Tutor</DisplayName>
+		<Description>This dungeon appears endless. It is clearly ancient in origin, long before any of the current powers came to be. Whatever powerful civilization built this place is gone now. 
+		
+		Within the dungeon is vague evidence that it held creatures of terrible might. The walls are immense and there are deep scratch marks made by claws larger than any man or Fallen today.
+		
+		Eventually, you make it to what appears to be an old archive room. The books that once lined the walls are long gone but the stone back wall is dominated by an inscription that you loosely translate as being "Destiny's Tutor". What this means, you cannot say. However, it describes an enormous structure that seems vaguely familiar to you. Your answer appears to be elsewhere.</Description>
+		<IsStartingPointQuest>0</IsStartingPointQuest>
+		<ShortTextAccept>Search for the location</ShortTextAccept>
+		<ShortTextDeny>I've no time for this</ShortTextDeny>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>QuestLocation</TriggerType>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>3</SpawnRating>
+		<Image>TombMedallion.png</Image>
+		<PrefQuestLoc>QuestLoc_Dungeon</PrefQuestLoc>
+		<Treasure>
+			<GameModifier InternalName="Reward3">
+				<ModType>Unit</ModType>
+				<Attribute>GiveExperience</Attribute>
+				<Value>12</Value>
+			</GameModifier>
+		</Treasure>
+		<Treasure>
+			<GameModifier InternalName="Reward4">
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>20</Value>
+			</GameModifier>
+		</Treasure>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<NextObjectiveID>1</NextObjectiveID>
+			<Description>Find the location inscribed on the wall.</Description>
+			<DisableQuestChoiceTooltips>1</DisableQuestChoiceTooltips>
+			<Treasure>
+				<GameModifier>
+					<ModType>Map</ModType>
+					<Attribute>CreateGoodieHut</Attribute>
+					<StrVal>Destiny's Tutor</StrVal>
+					<Unitclass>GH_Quest_DemonTomb</Unitclass>
+					<Radius>4</Radius>
+				</GameModifier>
+			</Treasure>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Find the location described on the dungeon's wall.</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>ClearGoodieHut</Type>
+				<TextData>GH_Quest_DemonTomb</TextData>
+				<Flag>RevealTarget</Flag>
+			</QuestConditionDef>
+			<ChoiceText>As you near the great structure, a massive demon appears. He looks upon you keenly and smiles.
+			
+			"This place attracts fools, the unwary, and the heroic. We shall find out which one are you."
+			
+			The demon closes his eyes and then asks a riddle.
+			
+			"The maker sells it, the buyer uses it not, and the user does not knows it is being used. What is it?"</ChoiceText>
+			<ChoiceMedallion>M_AssassinDemon_01_Card.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>Wisdom</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Wisdom makes a leader great. Without it, their nations are destroyed with ease'. With a snarl the demon disappears, final words echoing, 'I forsee your destruction.'</PopupMessage>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>A tomb.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<PopupMessage>The demon nods, 'Impressive. You have earned your reward... A fragment of a doomed Mithrilar.'</PopupMessage>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>DestinySliver</Attribute>
+						<Value>100</Value>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Anger.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>The demon snarls, 'Anger? Such an answer proves nothing but your worthlessness to this world. Begone!'</PopupMessage>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<NextObjectiveID>-1</NextObjectiveID>
+			<Description>Find the location inscribed on the wall.</Description>
+		</QuestObjectiveDef>
+	</QuestDef>
+</Quests>

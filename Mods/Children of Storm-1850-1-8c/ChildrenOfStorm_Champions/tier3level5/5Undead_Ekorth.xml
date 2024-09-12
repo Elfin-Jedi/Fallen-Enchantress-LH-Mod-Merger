@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<UnitTypes>
+	<UnitType InternalName="Undead_Ekorth">
+
+		<CreatureType>Champion</CreatureType>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-5</Value>
+			<Provides>-5% Unrest in the city this unit is in</Provides>
+		</GameModifier>
+
+		<DisplayName>Ekorth</DisplayName>
+		<Backstory>Long ago, the magician Ekorth was imprisoned in a giant magical block of ice by the titan Utheron (apparently this titan had a penchant for such things, as tales of others sharing Ekorth's predicament are not unknown.)  This block was discovered by the Skeleton King's forces during an excavation project. After ascertaining that Erkoth was still alive, although very bored and extremely out of touch with current affairs, the necessary rituals for undead conversion were performed while a means to extricate him was found. Apparently the magical ice must have either had some transmutive or shielding properties that preserved Ekorth's self-will, as upon his release the somewhat less than grateful Ekorth decided to depart and find out what had gone on during his imprisonment. Since that point, Ekorth has discovered that his long imprisonment in ice has increased his affinity toward cold magics, although if asked he says he'd trade it all to be able to enjoy the comforts of a good meal and a warm nap by the fire, pleasures denied him in his current state of existence.</Backstory>
+
+		<ModelPath>undeadmainbody.hkb</ModelPath>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<EyeTexture>gfx\Eyes\blinks\eyeblink_m5_Black.png</EyeTexture>
+		<AnimationPack>OldManAnimationPack</AnimationPack>
+
+		<ShowAsSingleUnit>false</ShowAsSingleUnit>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<ModelScale>1.0000</ModelScale>
+		<TacticalModelScale>1.9000</TacticalModelScale>
+		<EquipmentScale>1.0000</EquipmentScale>
+		<ClothMapScale>1.6</ClothMapScale>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<MovementType>land</MovementType>
+		<BobbingFrequency>0.0000</BobbingFrequency>
+
+		<ClothPoseIndex>13</ClothPoseIndex>
+		<InfoCardBackground>BG_EmpireBarren</InfoCardBackground>
+		<InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+
+		<CanBeDesigned>0</CanBeDesigned>
+		<Medallions InternalName=""/>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+
+		<Allegiance>Empire</Allegiance>
+		<Unique>1</Unique>
+		<IsNPC>1</IsNPC>
+		<NPCSpawnLikelihood>100</NPCSpawnLikelihood>
+		<IsChampion>1</IsChampion>
+		<Gender>Male</Gender>
+		<SpawnRating>5</SpawnRating>
+
+		<Quote>You'd think that with no flesh I wouldn't feel cold any longer.  Well, you'd be wrong, damn it all.</Quote>
+		<NPCRecruitmentText>%d Gildar will pay for expenses.</NPCRecruitmentText>
+		<SelectedAbilityBonusOption>Blood_CoS_Undead</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>PathOfTheMage</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ekorth_Ice_Insight</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Water1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Water2</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Hydromancy</SelectedAbilityBonusOption>
+
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<UnitStat_BG_IsHumanoid>1.0000</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsEmpire>1.0000</UnitStat_BG_IsEmpire>
+			<UnitStat_BG_IsNotAlive>1</UnitStat_BG_IsNotAlive>
+			<UnitStat_BG_IsRace_Undead>1.0000</UnitStat_BG_IsRace_Undead>
+			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
+			<UnitStat_BG_IsUndead>1</UnitStat_BG_IsUndead>
+			<UnitStat_BG_IsImmortal>1</UnitStat_BG_IsImmortal>
+			<UnitStat_CombatSpeed>22.0000</UnitStat_CombatSpeed>
+			<UnitStat_HitPoints>20.0000</UnitStat_HitPoints>
+			<UnitStat_ImmuneToFear>1</UnitStat_ImmuneToFear>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+		</LevelMilestone>
+
+		<Equipment>Noble_Cloak_ID1</Equipment>
+		<Equipment>DarkWizardRobeHoodID1</Equipment>
+
+		<AutoCreateEquipment>Staff</AutoCreateEquipment>
+		<AutoCreateEquipment>RingOfTheGlacier</AutoCreateEquipment>
+		<AutoCreateEquipment>ArcticWolfCloak</AutoCreateEquipment>
+
+		<Color_Skin>50,50,50,255</Color_Skin>
+		<Color_Hair>168,123,88,255</Color_Hair>
+		<Color_Clothing1>51,102,153,255</Color_Clothing1>
+		<Color_Clothing2>50,50,50,255</Color_Clothing2>
+		<Color_Metal>10,10,255,255</Color_Metal>
+		<Texture_Skin>Undead_skin.png</Texture_Skin>
+
+		<UnitModelType>Undead</UnitModelType>
+		<NPCFreeRecruit>0</NPCFreeRecruit>
+		<RaceType>Race_Type_Undead</RaceType>
+		<WageOverride>1</WageOverride>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SoundPack>SoundPack_Skeleton</SoundPack>
+	</UnitType>
+
+	<AbilityBonus InternalName="Ekorth_Ice_Insight">
+		<AbilityBonusOption InternalName="Ekorth_Ice_Insight">
+			<DisplayName>Icy Insights</DisplayName>
+			<Description>Ekorth's long imprisonment in ice has granted him unique abilities.</Description>
+			<Icon>Stat_AttackCold_Icon.png</Icon>
+			
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Attack_Cold</StrVal>
+				<Multiplier>1.1</Multiplier>
+				<Provides>Direct cold damage (e.g. from an Amulet of Frost) increased by +10%</Provides>
+			</GameModifier>
+
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Defense_Cold</StrVal>
+				<Value>5</Value>
+				<Provides>Unit has +5 defense against any cold attack.</Provides>
+			</GameModifier>
+			
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>SnowballVolley</StrVal>
+				<Provides>Can create a volley of magical ice balls that strike all enemy units for double the caster's level + 1 per water shard in cold damage. This damage is halved if the victim resists.</Provides>
+			</GameModifier>
+
+			<CombatRating>100</CombatRating>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<IsCombatAbility>1</IsCombatAbility>
+		</AbilityBonusOption>
+	</AbilityBonus>
+
+	<SpellDef InternalName="SnowballVolley">
+		<DisplayName>Snowball Volley</DisplayName>
+		<Description>Balls of magical ice strike all enemy units for double the caster's level + 1 per water shard in cold damage.</Description>
+		<FormattedDescription>Balls of magical ice strike all enemy units for %d cold damage.</FormattedDescription>
+		<Image>S_Snowfall_Painting.png</Image>
+		<IconFG>T_ManaBlast_Icon.png</IconFG>
+		<IconColor>55,248,6</IconColor>
+		<Cooldown>3</Cooldown>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>AllEnemyUnits</SpellTargetType>
+		<IsResistable>1</IsResistable>
+		<SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>20</Amount>
+        </SpellResourceCost>
+		
+		 <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>DefendableDamage</Attribute>
+            <AttackStat>UnitStat_Attack_Cold</AttackStat>
+            <IsForFormattedDescription>1</IsForFormattedDescription>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[UnitOwner_GetNumWaterShards]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Unit_GetLevel] * 2]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] + [Calc2]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Calc] + [Calc2]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>DefendableDamage</Attribute>
+            <AttackStat>UnitStat_Attack_Cold</AttackStat>
+            <IsForSpellResist>1</IsForSpellResist>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitOwner_GetNumWaterShards] / 2]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+                <Expression><![CDATA[Unit_GetLevel]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] + [Calc2]]]></Expression>
+            </Calculate>
+        </GameModifier>
+
+		<AIData AIPersonality="AI_General">
+			<AIPriority>40</AIPriority>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+					<Expression><![CDATA[[UnitStat_ResistCold]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc] < 75]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		
+		<HitSoundFX>Spell_IceArrow_Hit_01</HitSoundFX>
+		<HitSoundFX>Spell_IceArrow_Hit_02</HitSoundFX>
+		<SpellCastSoundFX>Spell_BowAttack_FreezingCast_01</SpellCastSoundFX>
+		<SpellCastEffectName>A_IceStaff_Projectile_Particle</SpellCastEffectName>
+		<SpellCastEffectScale>0.5</SpellCastEffectScale>
+		<SpellCastProjectile>1</SpellCastProjectile>
+		<SpellCastProjectileSpeed>800</SpellCastProjectileSpeed>
+		<SpellDefEffect>
+			<EffectName>A_HailstoneStaff_Impact_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.9</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+
+</UnitTypes>

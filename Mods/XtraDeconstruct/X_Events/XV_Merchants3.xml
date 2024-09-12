@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<Quests>
+	<QuestDef InternalName="Event_X_Merchant1_226">
+		<DisplayName>Traveling Merchant</DisplayName>
+		<Description>Channeler, a traveling merchant is here. What should I tell her?</Description>
+		<ShortTextAccept>Bring her to me.</ShortTextAccept>
+		<ShortTextDeny>I'm busy.</ShortTextDeny>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>TurnNumber</TriggerType>
+		<TriggerData>226</TriggerData>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>1</SpawnRating>
+		<TriggerChance>180</TriggerChance>
+		<PostTriggerChance>20</PostTriggerChance>
+		<Image>Highway.png</Image>
+		<RewardText>Philter</RewardText>
+		<RewardImage>Consumable_X_Philter.png</RewardImage>
+		<SuccessText>Enjoy!</SuccessText>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<DisableQuestChoiceTooltips>0</DisableQuestChoiceTooltips>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<ID>1</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy the Philter</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>400</NumericData>
+			</QuestConditionDef>
+			<ChoiceText>Would you like to buy a Philter? I happen to have one at a bargain price.</ChoiceText>
+			<ChoiceMedallion>Rank_Breon.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>No, I'm not interested.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Oh, novelty, an undear Channeler.</PopupMessage>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Yes, I'll buy the Philter (-400 Gildar).</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Consumable_X_Philter</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I can not afford it.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Ever thought about consulting an astrologist to turn your luck around?</PopupMessage>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Consumable_X_AstrologistSchemes</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Event_X_Merchant1_227">
+		<DisplayName>Traveling Merchant</DisplayName>
+		<Description>Channeler, a traveling merchant is here. What should I tell her?</Description>
+		<ShortTextAccept>Bring her to me.</ShortTextAccept>
+		<ShortTextDeny>I'm busy.</ShortTextDeny>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>TurnNumber</TriggerType>
+		<TriggerData>227</TriggerData>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>1</SpawnRating>
+		<TriggerChance>180</TriggerChance>
+		<PostTriggerChance>20</PostTriggerChance>
+		<Image>Highway.png</Image>
+		<RewardText>Scale Collar</RewardText>
+		<RewardImage>Consumable_X_DragonCollar.png</RewardImage>
+		<SuccessText>Enjoy!</SuccessText>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<DisableQuestChoiceTooltips>0</DisableQuestChoiceTooltips>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<ID>1</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy the Scale Collar</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>400</NumericData>
+			</QuestConditionDef>
+			<ChoiceText>Would you like to buy a Scale Collar? I happen to have one at a bargain price.</ChoiceText>
+			<ChoiceMedallion>Rank_Breon.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>No, I'm not interested.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Oh, novelty, an undear Channeler.</PopupMessage>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Yes, I'll buy the Scale Collar (-400 Gildar).</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Consumable_X_DragonCollar</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I can not afford it.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Ever thought about consulting an astrologist to turn your luck around?</PopupMessage>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Consumable_X_AstrologistSchemes</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Event_X_Merchant1_228">
+		<DisplayName>Traveling Merchant</DisplayName>
+		<Description>Channeler, a traveling merchant is here. What should I tell her?</Description>
+		<ShortTextAccept>Bring her to me.</ShortTextAccept>
+		<ShortTextDeny>I'm busy.</ShortTextDeny>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>TurnNumber</TriggerType>
+		<TriggerData>228</TriggerData>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>1</SpawnRating>
+		<TriggerChance>180</TriggerChance>
+		<PostTriggerChance>20</PostTriggerChance>
+		<Image>Highway.png</Image>
+		<RewardText>Ancient Troll Blood</RewardText>
+		<RewardImage>Consumable_X_AncientTrollBlood.png</RewardImage>
+		<SuccessText>Enjoy!</SuccessText>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<DisableQuestChoiceTooltips>0</DisableQuestChoiceTooltips>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<ID>1</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy the Ancient Troll Blood</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>200</NumericData>
+			</QuestConditionDef>
+			<ChoiceText>Would you like to buy an Ancient Troll Blood? I happen to have one at a bargain price.</ChoiceText>
+			<ChoiceMedallion>Rank_Breon.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>No, I'm not interested.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Oh, novelty, an undear Channeler.</PopupMessage>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Yes, I'll buy the Philter (-200 Gildar).</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Consumable_X_Potion_TrollBlood</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I can not afford it.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Ever thought about consulting an astrologist to turn your luck around?</PopupMessage>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Consumable_X_AstrologistSchemes</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Event_X_Merchant1_229">
+		<DisplayName>Traveling Merchant</DisplayName>
+		<Description>Channeler, a traveling merchant is here. What should I tell her?</Description>
+		<ShortTextAccept>Bring her to me.</ShortTextAccept>
+		<ShortTextDeny>I'm busy.</ShortTextDeny>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>TurnNumber</TriggerType>
+		<TriggerData>229</TriggerData>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>1</SpawnRating>
+		<TriggerChance>180</TriggerChance>
+		<PostTriggerChance>20</PostTriggerChance>
+		<Image>Highway.png</Image>
+		<RewardText>Ophidian Membrane</RewardText>
+		<RewardImage>Cloak_X_Magic3.png</RewardImage>
+		<SuccessText>Enjoy!</SuccessText>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<DisableQuestChoiceTooltips>0</DisableQuestChoiceTooltips>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<ID>1</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy the Ophidian Membrane</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>200</NumericData>
+			</QuestConditionDef>
+			<ChoiceText>Would you like to buy an Ophidian Membrane? I happen to have one at a bargain price.</ChoiceText>
+			<ChoiceMedallion>Rank_Breon.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>No, I'm not interested.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Oh, novelty, an undear Channeler.</PopupMessage>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Yes, I'll buy the Ophidian Membrane (-200 Gildar).</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Cloak_X_Magic3</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I can not afford it.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Ever thought about consulting an astrologist to turn your luck around?</PopupMessage>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Consumable_X_AstrologistSchemes</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Event_X_Merchant1_230">
+		<DisplayName>Traveling Merchant</DisplayName>
+		<Description>Channeler, a traveling merchant is here. What should I tell her?</Description>
+		<ShortTextAccept>Bring her to me.</ShortTextAccept>
+		<ShortTextDeny>I'm busy.</ShortTextDeny>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>TurnNumber</TriggerType>
+		<TriggerData>230</TriggerData>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>1</SpawnRating>
+		<TriggerChance>180</TriggerChance>
+		<PostTriggerChance>20</PostTriggerChance>
+		<Image>Highway.png</Image>
+		<RewardText>Philter</RewardText>
+		<RewardImage>Consumable_X_Philter.png</RewardImage>
+		<SuccessText>Enjoy!</SuccessText>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<DisableQuestChoiceTooltips>0</DisableQuestChoiceTooltips>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<ID>1</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy the Philter</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>400</NumericData>
+			</QuestConditionDef>
+			<ChoiceText>Would you like to buy a Philter? I happen to have one at a bargain price.</ChoiceText>
+			<ChoiceMedallion>Rank_Breon.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>No, I'm not interested.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Oh, novelty, an undear Channeler.</PopupMessage>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Yes, I'll buy the Philter (-400 Gildar).</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Consumable_X_Philter</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I can not afford it.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Ever thought about consulting an astrologist to turn your luck around?</PopupMessage>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Consumable_X_AstrologistSchemes</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Event_X_Merchant1_231">
+		<DisplayName>Traveling Merchant</DisplayName>
+		<Description>Channeler, a traveling merchant is here. What should I tell her?</Description>
+		<ShortTextAccept>Bring her to me.</ShortTextAccept>
+		<ShortTextDeny>I'm busy.</ShortTextDeny>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>TurnNumber</TriggerType>
+		<TriggerData>231</TriggerData>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>1</SpawnRating>
+		<TriggerChance>180</TriggerChance>
+		<PostTriggerChance>20</PostTriggerChance>
+		<Image>Highway.png</Image>
+		<RewardText>Curgen's Seal</RewardText>
+		<RewardImage>Accessory_X_Initiative4.png</RewardImage>
+		<SuccessText>Enjoy!</SuccessText>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<DisableQuestChoiceTooltips>0</DisableQuestChoiceTooltips>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<ID>1</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy Curgen's Seal</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>130</NumericData>
+			</QuestConditionDef>
+			<ChoiceText>Would you like to buy Curgen's Seal? I happen to have one at a bargain price.</ChoiceText>
+			<ChoiceMedallion>Rank_Breon.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>No, I'm not interested.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Oh, novelty, an undear Channeler.</PopupMessage>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Yes, I'll buy Curgen's Seal (-130 Gildar).</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Accessory_X_Initiative4</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I can not afford it.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Ever thought about consulting an astrologist to turn your luck around?</PopupMessage>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Consumable_X_AstrologistSchemes</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Event_X_Merchant1_232">
+		<DisplayName>Traveling Merchant</DisplayName>
+		<Description>Channeler, a traveling merchant is here. What should I tell her?</Description>
+		<ShortTextAccept>Bring her to me.</ShortTextAccept>
+		<ShortTextDeny>I'm busy.</ShortTextDeny>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>TurnNumber</TriggerType>
+		<TriggerData>232</TriggerData>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>1</SpawnRating>
+		<TriggerChance>180</TriggerChance>
+		<PostTriggerChance>20</PostTriggerChance>
+		<Image>Highway.png</Image>
+		<RewardText>Brokkr's Pliers</RewardText>
+		<RewardImage>Accessory_X_MasterDwarfTools.png</RewardImage>
+		<SuccessText>Enjoy!</SuccessText>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<DisableQuestChoiceTooltips>0</DisableQuestChoiceTooltips>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<ID>1</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy Brokkr's Pliers</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>600</NumericData>
+			</QuestConditionDef>
+			<ChoiceText>Would you like to buy Brokkr's Pliers? I happen to have one at a bargain price.</ChoiceText>
+			<ChoiceMedallion>Rank_Breon.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>No, I'm not interested.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Oh, novelty, an undear Channeler.</PopupMessage>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Yes, I'll buy Brokkr's Pliers (-600 Gildar).</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Accessory_X_MasterDwarfTools</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I can not afford it.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Ever thought about consulting an astrologist to turn your luck around?</PopupMessage>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Consumable_X_AstrologistSchemes</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Event_X_Merchant1_234">
+		<DisplayName>Traveling Merchant</DisplayName>
+		<Description>Channeler, a traveling merchant is here. What should I tell her?</Description>
+		<ShortTextAccept>Bring her to me.</ShortTextAccept>
+		<ShortTextDeny>I'm busy.</ShortTextDeny>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>TurnNumber</TriggerType>
+		<TriggerData>234</TriggerData>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>1</SpawnRating>
+		<TriggerChance>180</TriggerChance>
+		<PostTriggerChance>20</PostTriggerChance>
+		<Image>Highway.png</Image>
+		<RewardText>Virtuoso's Scepter</RewardText>
+		<RewardImage>Shield_X_Wand5.png</RewardImage>
+		<SuccessText>Enjoy!</SuccessText>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<DisableQuestChoiceTooltips>0</DisableQuestChoiceTooltips>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<ID>1</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy the Virtuoso's Scepter</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>150</NumericData>
+			</QuestConditionDef>
+			<ChoiceText>Would you like to buy a Virtuoso's Scepter? I happen to have one at a bargain price.</ChoiceText>
+			<ChoiceMedallion>Rank_Breon.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>No, I'm not interested.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Oh, novelty, an undear Channeler.</PopupMessage>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Yes, I'll buy the Virtuoso's Scepter (-150 Gildar).</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Shield_X_Wand5</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I can not afford it.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Ever thought about consulting an astrologist to turn your luck around?</PopupMessage>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Consumable_X_AstrologistSchemes</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Event_X_Merchant1_235">
+		<DisplayName>Traveling Merchant</DisplayName>
+		<Description>Channeler, a traveling merchant is here. What should I tell her?</Description>
+		<ShortTextAccept>Bring her to me.</ShortTextAccept>
+		<ShortTextDeny>I'm busy.</ShortTextDeny>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>TurnNumber</TriggerType>
+		<TriggerData>235</TriggerData>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>1</SpawnRating>
+		<TriggerChance>180</TriggerChance>
+		<PostTriggerChance>20</PostTriggerChance>
+		<Image>Highway.png</Image>
+		<RewardText>Harbinger of Death</RewardText>
+		<RewardImage>Weapon_X_Harbinger.png</RewardImage>
+		<SuccessText>Enjoy!</SuccessText>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<DisableQuestChoiceTooltips>0</DisableQuestChoiceTooltips>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<ID>1</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy the Harbinger of Death</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>650</NumericData>
+			</QuestConditionDef>
+			<ChoiceText>Would you like to buy a Harbinger of Death? I happen to have one at a bargain price.</ChoiceText>
+			<ChoiceMedallion>Rank_Breon.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>No, I'm not interested.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Oh, novelty, an undear Channeler.</PopupMessage>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Yes, I'll buy the Harbinger of Death (-650 Gildar).</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Weapon_X_Harbinger</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I can not afford it.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Ever thought about consulting an astrologist to turn your luck around?</PopupMessage>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Consumable_X_AstrologistSchemes</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Event_X_Merchant1_236">
+		<DisplayName>Traveling Merchant</DisplayName>
+		<Description>Channeler, a traveling merchant is here. What should I tell her?</Description>
+		<ShortTextAccept>Bring her to me.</ShortTextAccept>
+		<ShortTextDeny>I'm busy.</ShortTextDeny>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>TurnNumber</TriggerType>
+		<TriggerData>236</TriggerData>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>1</SpawnRating>
+		<TriggerChance>180</TriggerChance>
+		<PostTriggerChance>20</PostTriggerChance>
+		<Image>Highway.png</Image>
+		<RewardText>Guts</RewardText>
+		<RewardImage>Weapon_X_Sword_Guts.png</RewardImage>
+		<SuccessText>Enjoy!</SuccessText>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<DisableQuestChoiceTooltips>0</DisableQuestChoiceTooltips>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<ID>1</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy Guts</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>500</NumericData>
+			</QuestConditionDef>
+			<ChoiceText>Would you like to buy Guts? I happen to have one at a bargain price.</ChoiceText>
+			<ChoiceMedallion>Rank_Breon.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>No, I'm not interested.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Oh, novelty, an undear Channeler.</PopupMessage>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Yes, I'll buy Guts (-500 Gildar).</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Weapon_X_Sword_Guts</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I can not afford it.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Ever thought about consulting an astrologist to turn your luck around?</PopupMessage>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Consumable_X_AstrologistSchemes</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Event_X_Merchant1_238">
+		<DisplayName>Traveling Merchant</DisplayName>
+		<Description>Channeler, a traveling merchant is here. What should I tell her?</Description>
+		<ShortTextAccept>Bring her to me.</ShortTextAccept>
+		<ShortTextDeny>I'm busy.</ShortTextDeny>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>TurnNumber</TriggerType>
+		<TriggerData>238</TriggerData>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>1</SpawnRating>
+		<TriggerChance>180</TriggerChance>
+		<PostTriggerChance>20</PostTriggerChance>
+		<Image>Highway.png</Image>
+		<RewardText>Legendary XP Scroll</RewardText>
+		<RewardImage>Consumable_XL_SoE6.png</RewardImage>
+		<SuccessText>Enjoy!</SuccessText>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<DisableQuestChoiceTooltips>0</DisableQuestChoiceTooltips>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<ID>1</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy a Legendary XP Scroll</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>1000</NumericData>
+			</QuestConditionDef>
+			<ChoiceText>Would you like to buy a Legendary XP Scroll? I happen to have one at a bargain price.</ChoiceText>
+			<ChoiceMedallion>Rank_Breon.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>No, I'm not interested.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Oh, novelty, an undear Channeler.</PopupMessage>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Yes, I'll buy the Legendary XP Scroll (-1000 Gildar).</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Consumable_XL_SoE6</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I can not afford it.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Ever thought about consulting an astrologist to turn your luck around?</PopupMessage>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Consumable_X_AstrologistSchemes</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+		</QuestObjectiveDef>
+	</QuestDef>
+</Quests>

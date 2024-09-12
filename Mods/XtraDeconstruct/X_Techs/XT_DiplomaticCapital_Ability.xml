@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<AbilityBonuses>
+	<AbilityBonus InternalName="Champion_History">
+		<AbilityBonusType>Champion_History</AbilityBonusType>
+		<AbilityBonusOption InternalName="Diplomat">
+			<Description>Tactical Spells ::: Can cast Silver Tongue (Trained Units)
+			Xotic ::: +50 Influence, Influence improves Foreign Relations</Description>
+			<GameModifier>
+				<Provides>XOTIC</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>DiplomaticCapital</Attribute>
+				<Value>50</Value>
+				<Provides>::: +50 Influence
+				::: Influence improves Foreign Relations</Provides>
+			</GameModifier>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="HeroicAbility">
+		<AbilityBonusType>Player</AbilityBonusType>
+		<AbilityBonusOption InternalName="Heroic">
+			<Description>RESOURCES
+			::: +0.40 Shared Growth per completed Quest
+			
+			XOTIC
+			::: +10 Influence per completed Quest
+			::: Influence improves Foreign Relations</Description>
+			<GameModifier>
+				<Provides>XOTIC</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_QuestBonusDiplomaticCapital</StrVal>
+				<Value>10</Value>
+				<Provides>::: +10 Influence per completed Quest
+				::: Influence improves Foreign Relations</Provides>
+			</GameModifier>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="LegacyOfSerraneAbility">
+		<AbilityBonusType>Player</AbilityBonusType>
+		<AbilityBonusOption InternalName="LegacyOfSerrane">
+			<Description>EQUIPMENT
+			::: Warhorse
+			
+			IMMUNITY
+			::: Caravans are immune to attacks
+			
+			IMPROVEMENT
+			::: Bazaar
+			
+			XOTIC
+			::: +3 Influence per caravan trip
+			::: Influence improves Foreign Relations</Description>
+			<GameModifier>
+				<Provides>XOTIC</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Caravan_DiplomaticCapital</StrVal>
+				<Value>3</Value>
+				<Provides>::: +3 Influence per caravan trip
+				::: Influence improves Foreign Relations</Provides>
+			</GameModifier>
+		</AbilityBonusOption>
+	</AbilityBonus>
+</AbilityBonuses>

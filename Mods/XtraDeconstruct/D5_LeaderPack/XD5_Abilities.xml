@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<AbilityBonuses>
+	<AbilityBonus InternalName="Ability_X_BattleMage">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Ability_X_BattleMage">
+			<DisplayName>Battle Mage</DisplayName>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Ability_X_Wand2Summon</Attribute>
+			</Prereq>
+			<Description>STATS
+			::: +1 Battle Wisdom per Cast</Description>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>STATS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>CastAppliesSpell</Attribute>
+				<StrVal>Spell_X_BattleMage</StrVal>
+				<Provides>::: +1 Battle Wisdom per Cast</Provides>
+			</GameModifier>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Aggressive</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>20</AIPriority>
+			</AIData>
+			<Icon>Ability_X_BattleMage.png</Icon>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Ability_X_TreasureHunter1">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Ability_X_TreasureHunter1">
+			<DisplayName>Treasure Hunter I</DisplayName>
+			<UpgradePathID>TreasureHunter</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<MinimumLevel>7</MinimumLevel>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Innovation</Attribute>
+			</Prereq>
+			<Description>TREASURE
+			::: +5% chance to find better items</Description>
+			<PerkTreePosX>5</PerkTreePosX>
+			<PerkTreePosY>2</PerkTreePosY>
+			<GameModifier>
+				<Provides>TREASURE</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_TreasureHunter</StrVal>
+				<Value>25</Value>
+				<Provides>::: +5% chance to find better items</Provides>
+			</GameModifier>
+			<Type>Miscellaneous</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+			<Icon>Ability_X_TreasureHunter1.png</Icon>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Ability_X_TreasureHunter2">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Ability_X_TreasureHunter2">
+			<MinimumLevel>10</MinimumLevel>
+			<UpgradePathID>TreasureHunter</UpgradePathID>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Ability_X_TreasureHunter1</Attribute>
+			</Prereq>
+			<DisplayName>Treasure Hunter II</DisplayName>
+			<Description>TREASURE
+			::: +10% chance to find better items</Description>
+			<PerkTreePosX>6</PerkTreePosX>
+			<PerkTreePosY>2</PerkTreePosY>
+			<GameModifier>
+				<Provides>TREASURE</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_TreasureHunter</StrVal>
+				<Value>50</Value>
+				<Provides>::: +10% chance to find better items</Provides>
+			</GameModifier>
+			<Type>Miscellaneous</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+			<Icon>Ability_X_TreasureHunter2.png</Icon>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Injury_X_WizardrysBane">
+		<AbilityBonusType>Unit_Injury</AbilityBonusType>
+		<AbilityBonusOption InternalName="Injury_X_WizardrysBane">
+			<DisplayName>Wizardry's Bane</DisplayName>
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>Reliquary_SurgeonBeetle1</Attribute>
+				<Target>Unit</Target>
+			</Prereq>
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>TurnedUndead</Attribute>
+				<Target>Unit</Target>
+			</Prereq>
+			<Description>SPELLCASTING EFFECT
+			::: Wizardry's Bane :::
+			::: -12 HP per Cast
+			
+			INJURY
+			::: +1
+			::: Curable if acquired</Description>
+			<GameModifier>
+				<Provides>SPELLCASTING EFFECT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>CastAppliesSpell</Attribute>
+				<StrVal>Spell_X_WizardrysBane_Effect</StrVal>
+				<Provides>::: Wizardry's Bane :::
+				::: -12 HP per Cast</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Ability_X_Immunity_Injuries</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>PathOfTheDefender</Attribute>
+				<Target>Unit</Target>
+			</Prereq>
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>PathOfThePaladin</Attribute>
+				<Target>Unit</Target>
+			</Prereq>
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>PathOfTheWarrior</Attribute>
+				<Target>Unit</Target>
+			</Prereq>
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>Path_X_Bard</Attribute>
+				<Target>Unit</Target>
+			</Prereq>
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>Path_X_Ranger</Attribute>
+				<Target>Unit</Target>
+			</Prereq>
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>Talent_X_Zero</Attribute>
+				<Target>Unit</Target>
+			</Prereq>
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_PathOfTheRanger</Attribute>
+				<Target>Unit</Target>
+			</Prereq>
+			<Icon>Injury_X_WizardrysBane.png</Icon>
+			<Type>Weakness</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="LifebloodAbility">
+		<AbilityBonusType>Champion_Talent</AbilityBonusType>
+		<AbilityBonusOption InternalName="Lifeblood">
+			<DisplayName>Lifeblood</DisplayName>
+			<Description>Spellcasting Effect ::: +5 HP per Cast</Description>
+			<Icon>DLC05_Ability_Lifeblood_Icon.png</Icon>
+			<GameModifier>
+				<Provides>SPELLCASTING EFFECT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>CastAppliesSpell</Attribute>
+				<StrVal>Lifeblood</StrVal>
+				<Provides>::: +5 HP per Cast</Provides>
+			</GameModifier>
+			<Cost>1</Cost>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Type>Aggressive</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="MisandryAbility">
+		<AbilityBonusType>Champion_Talent</AbilityBonusType>
+		<AbilityBonusOption InternalName="Misandry">
+			<DisplayName>Misandry</DisplayName>
+			<Description>Stats ::: +20 Critical Chance vs Males</Description>
+			<Icon>DLC05_Ability_Misandry_Icon.png</Icon>
+			<GameModifier>
+				<Provides>STATS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ChanceToCrit</StrVal>
+				<StrVal2>UnitStat_IsMale</StrVal2>
+				<Value>20</Value>
+				<BonusValue>0.99</BonusValue>
+				<vsHigher>1</vsHigher>
+				<Provides>::: +20 Critical Chance vs Males</Provides>
+			</GameModifier>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Cost>1</Cost>
+			<Type>Aggressive</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="TreasureHunterAbility">
+		<AbilityBonusType>Champion_Talent</AbilityBonusType>
+		<AbilityBonusOption InternalName="TreasureHunter">
+			<DisplayName>Treasure Hunter</DisplayName>
+			<Description>Treasure ::: +5% chance to find better items</Description>
+			<Icon>DLC05_Ability_TreasureHunter_Icon.png</Icon>
+			<GameModifier>
+				<Provides>TREASURE</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_TreasureHunter</StrVal>
+				<Value>25</Value>
+				<Provides>::: +5% chance to find better items</Provides>
+			</GameModifier>
+			<Cost>1</Cost>
+			<Type>Defensive</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Weakness_X_NoLowerBody">
+		<AbilityBonusOption InternalName="Weakness_X_NoLowerBody">
+			<DisplayName>Spider Legs</DisplayName>
+			<Description>EQUIPMENT
+			::: This Unit can't equip Boots
+			::: This Unit can't equip Greaves
+			::: This Unit can't equip Mounts</Description>
+			<Icon>Weakness_X_NoLowerBody.png</Icon>
+			<GameModifier>
+				<Provides>EQUIPMENT
+				::: This Unit can't equip Boots
+				::: This Unit can't equip Greaves
+				::: This Unit can't equip Mounts</Provides>
+			</GameModifier>
+			<Type>Weakness</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+</AbilityBonuses>

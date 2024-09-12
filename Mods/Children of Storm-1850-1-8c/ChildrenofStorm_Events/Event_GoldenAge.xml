@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Container>
+  <QuestDef InternalName="Event_GoldenAge">
+    <DisplayName>Golden Age</DisplayName>
+    <Description>Your recent exploits in the arena of Elemental has inspired great minds in your cities! Several highly intelligent scientists have formed a special guild accessible only by the most brilliant amongst the population. Its express purpose is to further the technological advancement of your society. In turn, this has inspired others to think outside their ordinary limits. The spirit of free thinking brings many benefits to your lands, and the following years will later come to be known as the Golden Age.
+
+You gain +100% Research. These effects last for 16 turns.</Description>
+    <IsStartingPointQuest>0</IsStartingPointQuest>
+    <IsStartingPointQuest>0</IsStartingPointQuest>
+    <AllowQuestRejection>0</AllowQuestRejection>
+   <ShortTextAccept>A great time for all that dwell in our lands.</ShortTextAccept>
+    <QuestClass>Minor</QuestClass>
+    <Repeatable>0</Repeatable>
+   <TriggerType>TurnNumber</TriggerType>
+    <TriggerData>125</TriggerData>
+    <TriggerChance>5</TriggerChance>
+    <PostTriggerChance>5</PostTriggerChance>
+
+    <TriggerOrigin>EventLocation</TriggerOrigin>
+    <Image>BG27_CastlePlains.png</Image>
+    <Treasure>
+
+     <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_Research</StrVal>
+	<Value>100</Value>
+	<Duration>16</Duration>
+</GameModifier>
+
+ 
+ 
+    </Treasure>
+    <QuestObjectiveDef>
+      <ObjectiveID>0</ObjectiveID>
+      <QuestEnd>1</QuestEnd>
+    </QuestObjectiveDef>
+  </QuestDef>
+</Container>

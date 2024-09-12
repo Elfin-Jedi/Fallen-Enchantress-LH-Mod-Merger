@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<UnitTypes>
+	<UnitType InternalName="LivingStone_Eddir">
+		<CreatureType>Champion</CreatureType>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-5</Value>
+			<Provides>-5% Unrest in the city this unit is in</Provides>
+		</GameModifier>
+
+		<DisplayName>Eddir</DisplayName>
+		<Backstory>Eddir was created during the Cataclysm, like most other Living Stone. However, unlike his brethren, Eddir was spawned out of a pocket of yellow sand at the Creation, instead of proper rock. This gave him a colorful appearance and a colorful youth. He was shunned by the other Living Stone for being different and he was unable to stand up for himself as his creation had rendered him significantly weaker than the others. Due to those circumstances, Eddir left the other Living Stone in order to go find his own fortune. Physically weak, he began to dabble in the arts of magic at an early age. Eddir hopes to one day return as a powerful champion to show his race how wrong they were to "banish him," as he sees it. Eddir's mind wanders easily, and no one who spent any time with him would consider him driven enough to become a powerful mage.</Backstory>
+
+		<ModelPath>M_Demon_Elemental_Mesh_01.hkb</ModelPath>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<EyeTexture>gfx\eyes\blinks\eyeblink_f3_hazel.png</EyeTexture>
+		<AnimationPack>EF_MaleSovereignAnimationPack</AnimationPack>
+		<ShowAsSingleUnit>false</ShowAsSingleUnit>
+		<CutSceneDataPack>ReliasCutscenePack</CutSceneDataPack>
+		<ModelScale>1.0000</ModelScale>
+		<TacticalModelScale>1.5000</TacticalModelScale>
+		<EquipmentScale>1.0000</EquipmentScale>
+		<ClothMapScale>1.6</ClothMapScale>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<MovementType>land</MovementType>
+		<BobbingFrequency>0.0000</BobbingFrequency>
+		<ClothPoseIndex>2</ClothPoseIndex>
+		<InfoCardBackground>BG13_Volcanic</InfoCardBackground>
+		<InfoCardBackgroundFlipped>1</InfoCardBackgroundFlipped>
+		<CanBeDesigned>0</CanBeDesigned>
+		<!-- -->
+		<Allegiance>Kingdom</Allegiance>
+		<Unique>1</Unique>
+		<IsNPC>1</IsNPC>
+		<NPCSpawnLikelihood>100</NPCSpawnLikelihood>
+		<IsChampion>1</IsChampion>
+		<Gender>Male</Gender>
+		<SoundPack>SoundPack_Generic_Male</SoundPack>
+		<SpawnRating>1</SpawnRating>
+
+		<Quote>*mumbles something that sounds slightly archaic*</Quote>
+		<NPCRecruitmentText>For %d gildar, we will wander the earths together.</NPCRecruitmentText>
+		<SelectedAbilityBonusOption>Blood_LivingStone</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Fire1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Water1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>EddirSelfControl</SelectedAbilityBonusOption>
+		<!-- -->
+		<Medallions InternalName=""/>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_HitPoints>20</UnitStat_HitPoints>
+			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_LivingStone>1</UnitStat_BG_IsRace_LivingStone>
+			<UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
+			<UnitStat_BG_IsMale>1</UnitStat_BG_IsMale>
+			<UnitStat_BG_IsNotAlive>1</UnitStat_BG_IsNotAlive>
+		</LevelMilestone>
+		<AutoCreateEquipment>Dagger</AutoCreateEquipment>
+		<Color_Metal>51,49,25,255</Color_Metal>
+		<Color_Skin>51,51,30,255</Color_Skin>
+		<Color_Hair>170,125,90,255</Color_Hair>
+		<Color_Clothing1>0,0,0,255</Color_Clothing1>
+		<Color_Clothing2>78,60,55,255</Color_Clothing2>
+		<Texture_Skin>M_Demon_Elemental_Texture_04.png</Texture_Skin>
+		<Texture_Eyes>gfx\eyes\blinks\eyeblink_f3_hazel.png</Texture_Eyes>
+		<UnitModelType>LivingStone</UnitModelType>
+		<NPCFreeRecruit>0</NPCFreeRecruit>
+		<RaceType>Race_Type_LivingStone</RaceType>
+		<WageOverride>1</WageOverride>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+	</UnitType>
+	<AbilityBonus InternalName="EddirSelfControl">
+		<AbilityBonusOption InternalName="EddirSelfControl">
+			<DisplayName>Supreme Self-control</DisplayName>
+			<Description>Eddir has had his temper tested all his life and he has developed an extreme self-control as a result.
+
+Eddir will ignore any effect that would normally cause him to strike adjacent friendly units by mistake. He will also ignore any effect that causes the unit to act on its own in combat without the player controlling it.</Description>
+			<Icon>Ability_Binding_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ClumsyChance</StrVal>
+				<Multiplier>0</Multiplier>
+				<Provides>Eddir has had his temper tested all his life and he has developed an extreme self-control as a result.</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_AIControlChance</StrVal>
+				<Multiplier>0</Multiplier>
+				<Provides>Eddir will ignore any effect that would normally cause him to strike adjacent friendly units by mistake. He will also ignore any effect that causes the unit to act on its own in combat without the player controlling it.</Provides>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+</UnitTypes>

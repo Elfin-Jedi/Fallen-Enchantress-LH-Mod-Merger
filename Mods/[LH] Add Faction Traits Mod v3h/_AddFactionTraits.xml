@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<AbilityBonuses>
+    <AbilityBonus InternalName="ArchaeologyAbility">
+        <AbilityBonusType>Player</AbilityBonusType>
+        <AbilityBonusOption InternalName="Archaeology">
+            <DisplayName>Archaeology</DisplayName>
+            <Description>Ancient Temples give +2 Research and allows you to build Excavation Sites on Clay.</Description>
+            <Icon>Ability_Dig_Icon.png</Icon>
+            <Cost>1</Cost>			
+            <GameModifier>	
+				<Provides>Ancient Temples give +2 Research and allows you to build Excavation Sites on Clay.</Provides>	
+            </GameModifier>			
+            <HideWhenUpgraded>0</HideWhenUpgraded>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	
+<AbilityBonuses>
+
+    <AbilityBonus InternalName="DogsofWarAbility">
+        <AbilityBonusType>Player</AbilityBonusType>
+        <AbilityBonusOption InternalName="DogsofWar">
+            <DisplayName>Mercenary Legions</DisplayName>
+            <Description>Units are trained %20 faster, and unlocks the Mercenary unit trait. Allows you to build Alchemical Catapults and Firebombs.</Description>
+            <Icon>Ability_MercLegion_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_Training_Labor</StrVal>
+                <Value>-20</Value>
+                <Provides>-20% Unit Training times, and unlocks Mercenary trait. Allows you to build Alchemical Catapults and Firebombs.</Provides>
+            </GameModifier>
+            <Cost>1</Cost>
+            <HideWhenUpgraded>0</HideWhenUpgraded>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	
+    <AbilityBonus InternalName="KennelsAbility">
+        <AbilityBonusType>Player</AbilityBonusType>
+        <AbilityBonusOption InternalName="Kennels">
+            <DisplayName>Kennel Masters</DisplayName>
+            <Description>Allows players to build Hunting Wargs, Blood Warg Mounts, and Warg Pits.</Description>
+            <Icon>Ability_Kennel_Icon.png</Icon>
+            <Cost>1</Cost>		
+            <GameModifier>	
+				<Provides>Allows players to build Hunting Wargs, Blood Warg Mounts, and Warg Pits.</Provides>	
+            </GameModifier>					
+            <HideWhenUpgraded>0</HideWhenUpgraded>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>	
+	
+    <AbilityBonus InternalName="HorsesAbility">
+        <AbilityBonusType>Player</AbilityBonusType>
+        <AbilityBonusOption InternalName="Horses">
+            <DisplayName>Horse Lords</DisplayName>
+            <Description>Wild Horse tiles grant +1 materials, unlocks Destrier mounts and Horse Markets.</Description>
+            <Icon>Ability_Horse_Icon.png</Icon>
+            <Cost>2</Cost>		
+            <GameModifier>	
+				<Provides>Wild Horse tiles grant +1 materials, unlocks Destrier mounts and Horse Markets.</Provides>	
+            </GameModifier>			
+            <HideWhenUpgraded>0</HideWhenUpgraded>	
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	
+<AbilityBonuses>
+    <AbilityBonus InternalName="FaithAbility">
+        <AbilityBonusType>Player</AbilityBonusType>
+        <AbilityBonusOption InternalName="Faith">
+            <DisplayName>Faith</DisplayName>
+            <Description>Blesses all your unit with +10% Spell Resistance, and -5 unrest in all cities. Unlocks Amulet of Faith and Pilgrimage spell.</Description>
+            <Icon>Ability_Pray_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_UnitStat_MagicResist</StrVal>
+                <Value>10</Value>
+                <Provides>+10% Spell Resistance</Provides>
+            </GameModifier>	
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_Additive_Unrest</StrVal>
+                <Value>-5</Value>
+                <Provides>-5 Unrest in all cities</Provides>
+            </GameModifier>	
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>UnlockSpell</Attribute>
+                <StrVal>Conversion</StrVal>
+                <Provides>Unlocks Pilgrimage Spell</Provides>				
+            </GameModifier>			
+            <Cost>1</Cost>
+            <HideWhenUpgraded>0</HideWhenUpgraded>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>	
+
+    <AbilityBonus InternalName="TradeHouseAbility">
+        <AbilityBonusType>Player</AbilityBonusType>
+        <AbilityBonusOption InternalName="TradeHouse">
+            <DisplayName>Trade Houses</DisplayName>
+            <Description>+15% to Gildar, unlocks Acquire Metal and Acquire Crystal Spells..</Description>
+            <Icon>Ability_Scales_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_Gold</StrVal>
+                <Value>15</Value>
+                <Provides>+15% Gildar production.</Provides>				
+            </GameModifier>	
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>UnlockSpell</Attribute>
+                <StrVal>AcqMetal</StrVal>
+                <Provides>Unlocks Acquire Metal Spell</Provides>				
+            </GameModifier>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>UnlockSpell</Attribute>
+                <StrVal>AcqCrystal</StrVal>
+                <Provides>Unlocks Acquire Crystal Spell</Provides>				
+            </GameModifier>			
+            <Cost>1</Cost>
+            <Type>Army</Type>			
+            <HideWhenUpgraded>0</HideWhenUpgraded>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>		
+	
+<AbilityBonuses>
+    <AbilityBonus InternalName="PurificationAbility">
+        <AbilityBonusType>Player</AbilityBonusType>
+        <AbilityBonusOption InternalName="Purification">
+            <DisplayName>Purification</DisplayName>
+            <Description>Unlocks the Purify spell.</Description>
+            <Icon>Ability_Purify_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>UnlockSpell</Attribute>
+                <StrVal>Purify</StrVal>
+                <Provides>Unlocks Purify Spell</Provides>				
+            </GameModifier>			
+            <Cost>1</Cost>
+            <HideWhenUpgraded>0</HideWhenUpgraded>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>	
+	
+<AbilityBonuses>
+    <AbilityBonus InternalName="Horde_Ability">
+        <AbilityBonusType>Player</AbilityBonusType>
+        <AbilityBonusOption InternalName="Horde">
+            <DisplayName>Twisted Horde</DisplayName>
+            <Description>Allows your champions to use the Bond spell and take control of Twisted units.</Description>
+            <Icon>Ability_Horde_Icon.png</Icon>
+            <Cost>2</Cost>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>UnlockSpell</Attribute>
+                <StrVal>Subdue_Ability</StrVal>
+                <Provides>Allows your champions to use the Bond spell and take control of Twisted units.</Provides>				
+            </GameModifier>					
+            <HideWhenUpgraded>0</HideWhenUpgraded>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	
+   <!-- 
+   <AbilityBonus InternalName="AmphibiousAbility">
+        <AbilityBonusType>Player</AbilityBonusType>
+        <AbilityBonusOption InternalName="Amphibious">
+            <DisplayName>Amphibious</DisplayName>
+            <Description>No Movement penalty in Swamps, or Rivers. Replaces Warg Mounts with River Skaths.</Description>
+            <Icon>Ability_Frog_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>MovementCostOverRide</Attribute>
+                <StrVal>SwampTerrain</StrVal>
+                <Value>8</Value>
+                <PerTurn>1</PerTurn>
+                <Provides>No movement penalty in Swamps</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>MovementCostOverRide</Attribute>
+                <StrVal>River</StrVal>
+                <Value>16</Value>
+                <PerTurn>1</PerTurn>
+                <Provides>Increased movement on Rivers</Provides>
+            </GameModifier>
+            <Cost>1</Cost>
+            <HideWhenUpgraded>0</HideWhenUpgraded>
+            <Type>Army</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>	-->
+	
+    <AbilityBonus InternalName="Blood_Dar_UrxenAbility">
+        <AbilityBonusOption InternalName="Blood_Dar_Urxen">
+            <DisplayName>Urxen Blood</DisplayName>
+            <Description>Recieves double the normal Swarm bonus, and unlocks WildStrike ability.</Description>
+            <Icon>RoundCrest_Umber.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_SwarmBonusCounter</StrVal>
+                <Value>1</Value>
+                <Provides>This unit recieves double the normal Swarm bonus</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>UnlockCombatAbility</Attribute>
+                <StrVal>WildStrike_Ability</StrVal>
+                <Provides>Wild Strike - +50% Attack, but you take 2 damage per troop.</Provides>
+            </GameModifier>	
+            <HideWhenUpgraded>0</HideWhenUpgraded>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+
+    <AbilityBonus InternalName="Blood_HashainiAbility">
+        <AbilityBonusOption InternalName="Blood_Hashaini">
+            <DisplayName>Hashaini Blood</DisplayName>
+            <Description>+7 Critical Chance, Unlocks Dirty Blow ability.</Description>
+            <Icon>RoundCrest_Hash.png</Icon>		
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ChanceToCrit</StrVal>
+				<Value>7</Value>
+                <Provides>+ 7 Critical Chance</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>UnlockCombatAbility</Attribute>
+                <StrVal>DirtyBlow_Ability</StrVal>
+                <Provides>Dirty Blow - An attack that decreases accuracy by 20% for 3 turns.</Provides>
+            </GameModifier>			
+            <HideWhenUpgraded>0</HideWhenUpgraded>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>	
+	
+    <AbilityBonus InternalName="Blood_MunduraAbility">
+        <AbilityBonusOption InternalName="Blood_Mundura">
+            <DisplayName>Hunduran Blood</DisplayName>
+            <Description>+1 Initiative, +1 Dodge per Level, and unlocks Resolve Ability. </Description>
+            <Icon>RoundCrest_Hun.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_CombatSpeed</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Initiative</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Dodge</StrVal>
+                <Value>1</Value>
+                <PerLevel>1</PerLevel>
+                <Provides>+1 Dodge per Level</Provides>
+            </GameModifier>	
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>UnlockCombatAbility</Attribute>
+                <StrVal>Resolve_Ability</StrVal>
+                <Provides>Resolve - +1 Physical Attack and +5 Accuracy.  Resolve is stackable.</Provides>
+            </GameModifier>				
+            <HideWhenUpgraded>0</HideWhenUpgraded>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+
+    <AbilityBonus InternalName="Blood_Mancer2Ability">
+        <AbilityBonusOption InternalName="Blood_Mancer2">
+            <DisplayName>Mancer Blood</DisplayName>
+            <Description>+1 Accuracy per Level and unlocks Bonus ability.</Description>
+            <Icon>RoundCrest_Capitar.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>UnlockCombatAbility</Attribute>
+                <StrVal>Bonus_Ability</StrVal>
+                <Provides>Bonus - Costs 20 Gold. Gain an extra turn, +3 Defense and +8 Health.</Provides>
+            </GameModifier>	
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Moves</StrVal>
+                <Value>-1</Value>
+                <Provides>-1 Moves</Provides>
+            </GameModifier>			
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	
+    <AbilityBonus InternalName="KnivesAbility">
+        <AbilityBonusType>Player</AbilityBonusType>
+        <AbilityBonusOption InternalName="Knives">
+            <DisplayName>Knife Fighters</DisplayName>
+            <Description>Replaces Sheilds with off-hand Daggers and Swords, that grant Attack instead of Defense.</Description>
+            <Icon>Ability_Knives_Icon.png</Icon>
+            <GameModifier>
+                <Provides>Replaces Sheilds with off-hand Daggers and Swords, that grant Attack instead of Defense.</Provides>
+            </GameModifier>
+            <Cost>1</Cost>
+            <Type>Army</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	
+    <AbilityBonus InternalName="TollAbility">
+        <AbilityBonusType>Player</AbilityBonusType>
+        <AbilityBonusOption InternalName="Toll">
+            <DisplayName>Extortion</DisplayName>
+            <Description>Replaces Consulates with Tolls which produce 2 Gildar in the nearest city and require no tech. Black Markets are more effective and can be upgraded to Shadow Guilds.</Description>
+            <Icon>Ability_Toll_Icon.png</Icon>
+            <GameModifier>
+                <Provides>Replaces Consulates with Tolls which produce 2 Gildar in the nearest city and require no tech. Black Markets are more effective and can be upgraded to Shadow Guilds.</Provides>
+            </GameModifier>
+            <Cost>2</Cost>
+            <Type>Army</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	
+    <AbilityBonus InternalName="Player_Weakness">
+        <AbilityBonusType>Player</AbilityBonusType>
+        <AbilityBonusOption InternalName="Corrupt">
+            <DisplayName>Corrupt</DisplayName>
+            <Description>-15% to Gildar and -1 Fame every 10 Seasons.</Description>
+            <Icon>Ability_Corrupt_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_Gold</StrVal>
+                <Value>-10</Value>
+                <Provides>-10% Gold production</Provides>				
+            </GameModifier>
+            <GameModifier>
+                <ModType>Resource</ModType>
+                <Attribute>Fame</Attribute>
+                <Value>-0.1</Value>
+                <PerTurn>1</PerTurn>
+                <Provides>-1 Fame every 10 Seasons</Provides>
+            </GameModifier>		
+            <Cost>-1</Cost>
+            <Type>Weakness</Type>			
+            <HideWhenUpgraded>0</HideWhenUpgraded>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+        <AbilityBonusOption InternalName="Skeptic">
+            <DisplayName>Skepticism</DisplayName>
+            <Description>-10% to Mana. Oracles, Temples of Essence, Sacrificial Altars, and Clerics are disabled.</Description>
+            <Icon>Ability_Skeptic_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_Mana</StrVal>
+                <Value>-10</Value>
+                <Provides>-10% Mana production and Oracles, Temples of Essence, Sacrificial Altars, and Clerics are disabled.</Provides>					
+            </GameModifier>		
+            <Cost>-1</Cost>
+            <Type>Weakness</Type>			
+            <HideWhenUpgraded>0</HideWhenUpgraded>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>	
+	
+	
+    <AbilityBonus InternalName="MercAbility">
+        <AbilityBonusType>Unit_Design</AbilityBonusType>
+        <AbilityBonusOption InternalName="Merc">
+            <DisplayName>Mercenary</DisplayName>
+            <Description>+1 Level, +1 wages, halves XP earned, and -40 to build time.</Description>
+            <Icon>Ability_Dogs_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>FreeLevel</Attribute>
+            </GameModifier>
+            <AdditionalTrainingTurns>-40</AdditionalTrainingTurns>
+            <HideWhenUpgraded>0</HideWhenUpgraded>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>ProduceResource</Attribute>
+                <StrVal>Gold</StrVal>
+                <Value>-1</Value>
+            </GameModifier>	
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_ExpBonus</StrVal>
+                <Value>-50</Value>
+                <Provides>-50% Experience</Provides>
+            </GameModifier>			
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Player</Target>
+                <Attribute>DogsofWar</Attribute>
+            </Prereq>
+            <Type>Army</Type>			
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>	
+	
+    <AbilityBonus InternalName="Blood_WargAbility">
+        <AbilityBonusOption InternalName="Blood_Warg">
+            <DisplayName>Blood Warg</DisplayName>
+            <Description>+1 Attack and Defense per level, -1 hp per level, Counter, and 25% Armor Penetration.</Description>
+            <Icon>Ability_NaturalLeader_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Boost</StrVal>
+                <Value>1</Value>				
+                <PerLevel>1</PerLevel>
+                <Provides>+1 Attack per Level</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Defense_Pierce</StrVal>
+                <Value>1</Value>
+                <PerLevel>1</PerLevel>
+                <Provides>+1 Pierce Defense per level</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_HitPoints</StrVal>
+                <Value>-1</Value>
+                <PerLevel>1</PerLevel>
+                <Provides>-1 Hit Point per Level</Provides>
+            </GameModifier>	
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_MaxCounterAttack</StrVal>
+                <Value>1</Value>
+            </GameModifier>	
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_ArmorPierce</StrVal>
+                <Value>25</Value>
+                <Provides>Ignores 25% of the victim's Defense</Provides>
+            </GameModifier>			
+            <HideWhenUpgraded>0</HideWhenUpgraded>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>		
+	
+    <AbilityBonus InternalName="ArmorProficiencyAbilityB">
+        <AbilityBonusType>Unit_Design</AbilityBonusType>
+        <AbilityBonusOption InternalName="ArmorProficiencyB1">
+            <DisplayName>Chain Mail Proficiency</DisplayName>
+            <Description>Allows the unit to wear Chain Mail armor</Description>
+            <Icon>Ability_ChainMailProficiency_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_ArmorProficiency</StrVal>
+                <Value>1</Value>
+                <Provides>Allows the unit to wear Chain Mail armor</Provides>
+            </GameModifier>
+            <AdditionalTrainingTurns>5</AdditionalTrainingTurns>
+            <Type>Defensive</Type>
+            <UpgradePathID>ArmorProficiency</UpgradePathID>
+            <SupportedUnitModelType>DarUrxenFemale</SupportedUnitModelType>
+            <SupportedUnitModelType>DarUrxenMale</SupportedUnitModelType>
+            <SupportedUnitModelType>HashainiFemale</SupportedUnitModelType>
+            <SupportedUnitModelType>HashainiMale</SupportedUnitModelType>	
+            <SupportedUnitModelType>MunduraMale</SupportedUnitModelType>	
+            <SupportedUnitModelType>MunduraFemale</SupportedUnitModelType>		          
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>	
+        <AbilityBonusOption InternalName="ArmorProficiencyB2">
+            <DisplayName>Plate Mail Proficiency</DisplayName>
+            <Description>Allows the unit to wear Chain Mail or Plate Mail armor</Description>
+            <Icon>Ability_PlateMailProficiency_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_ArmorProficiency</StrVal>
+                <Value>2</Value>
+                <Provides>Allows the unit to wear Chain Mail or Plate Mail armor</Provides>
+            </GameModifier>
+            <AdditionalTrainingTurns>10</AdditionalTrainingTurns>
+            <Type>Defensive</Type>
+            <UpgradePathID>ArmorProficiency</UpgradePathID>
+            <SupportedUnitModelType>DarUrxenFemale</SupportedUnitModelType>
+            <SupportedUnitModelType>DarUrxenMale</SupportedUnitModelType>
+            <SupportedUnitModelType>HashainiFemale</SupportedUnitModelType>
+            <SupportedUnitModelType>HashainiMale</SupportedUnitModelType>	
+            <SupportedUnitModelType>MunduraMale</SupportedUnitModelType>	
+            <SupportedUnitModelType>MunduraFemale</SupportedUnitModelType>					
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	
+
+</AbilityBonuses>

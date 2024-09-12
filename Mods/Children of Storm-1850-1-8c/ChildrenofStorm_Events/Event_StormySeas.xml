@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<Container>
+  <QuestDef InternalName="Event_StormySeas">
+    <DisplayName>Stormy Seas</DisplayName>
+    <Description>The usually calm seas of Elemental are in an uproar! Vast waves line the horizon and immensely strong currents fluctuate, pulling away and then towards the continents. Meanwhile, the winds have grown completely still. Any sane person would stay on land in times like these. But there is an upside to this debacle - the Water shards are simmering with power.
+
+For every 2 Water Shard powers that you control, you gain another 1 Water Shard power. This effect lasts for 16 turns.</Description>
+   <IsStartingPointQuest>0</IsStartingPointQuest>
+    <IsStartingPointQuest>0</IsStartingPointQuest>
+    <AllowQuestRejection>0</AllowQuestRejection>
+    <ShortTextAccept>Even far from the cliffs I can hear the ocean roar.</ShortTextAccept>
+    <QuestClass>Minor</QuestClass>
+    <Repeatable>0</Repeatable>
+   <TriggerType>TurnNumber</TriggerType>
+    <TriggerData>125</TriggerData>
+    <TriggerChance>5</TriggerChance>
+    <PostTriggerChance>5</PostTriggerChance>
+
+    <TriggerOrigin>EventLocation</TriggerOrigin>
+    <Image>BG42_WaterShrine.png</Image>
+
+    <Treasure>
+
+
+             <GameModifier>
+        <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_WaterMana</StrVal>
+        <Value>50</Value>
+        <Duration>16</Duration>
+      </GameModifier>
+ 
+
+
+
+    </Treasure>
+    <QuestObjectiveDef>
+      <ObjectiveID>0</ObjectiveID>
+      <QuestEnd>1</QuestEnd>
+    </QuestObjectiveDef>
+  </QuestDef>
+</Container>

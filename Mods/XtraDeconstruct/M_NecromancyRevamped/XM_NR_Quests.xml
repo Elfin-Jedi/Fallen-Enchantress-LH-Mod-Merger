@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--Necromancy Revamped by Dhuran-->
+<!--XtraDeconstruct 3.0 by Primal-->
+<Quests>
+	<QuestDef InternalName="NC_Mantle_of_Death">
+		<DisplayName>The Mantle of Death</DisplayName>
+		<Description>Your scholars have uncovered a tome which outlines the location of an ancient temple, where details on the ritual necessary to create a Demilich may be found. Your mastery over Necromancy will certainly allow you to decipher any esoteric texts you might find.</Description>
+		<IsStartingPointQuest>0</IsStartingPointQuest>
+		<AllowQuestRejection>0</AllowQuestRejection>
+		<ShortTextAccept>Prepare all the magical references we might need to bring. We leave at dusk!</ShortTextAccept>
+		<RewardText>Mantle of Death Ritual</RewardText>
+		<RewardImage>Ability_DeathWorship_Icon.png</RewardImage>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>FactionResourceLevel</TriggerType>
+		<TriggerStringData>NCForbiddenKnowledge</TriggerStringData>
+		<SuccessText>Finally, you have acquired the lost knowledge and completed the necessary preparations; all that remains is to perform the Mantle of Death Ritual, which you have transcribed into your spellbook.</SuccessText>
+		<TriggerData>1</TriggerData>
+		<SpawnRating>4</SpawnRating>
+		<Image>Scroll.png</Image>
+		<Treasure>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>UnlockSpell</Attribute>
+				<StrVal>NC_Mantle_of_Death</StrVal>
+			</GameModifier>
+		</Treasure>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<NextObjectiveID>1</NextObjectiveID>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<Treasure>
+				<GameModifier>
+					<ModType>Map</ModType>
+					<Attribute>CreateGoodieHut</Attribute>
+					<StrVal>Ancient Temple Ruins</StrVal>
+					<Unitclass>NC_Ancient_Temple</Unitclass>
+					<Radius>8</Radius>
+				</GameModifier>
+			</Treasure>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Explore Ancient Temple.</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>ClearGoodieHut</Type>
+				<TextData>NC_Ancient_Temple</TextData>
+				<Flag>RevealTarget</Flag>
+			</QuestConditionDef>
+			<ChoiceText>This ruin is supposedly the location of the only remaining record detailing the rituals involved in a sovereign's transformation into a Demilich. Unsurprisingly, the ruins are infested with mindless undead creatures.</ChoiceText>
+			<ChoiceMedallion>Q_Graveyard.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>Fight through the undead to the secret library in the depths of the ancient temple.</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Encounter>
+					<Liklihood>100</Liklihood>
+					<BattleIdentifier>Skeleton</BattleIdentifier>
+					<WillRespawn>0</WillRespawn>
+					<WanderingRadius>0</WanderingRadius>
+					<UnitInstance>
+						<UnitType>Skeleton_Burning</UnitType>
+						<UnitGroupingType>UnitGroupingType_Party</UnitGroupingType>
+						<Level>5</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>Skeleton_Burning</UnitType>
+						<UnitGroupingType>UnitGroupingType_Party</UnitGroupingType>
+						<Level>3</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>Skeleton_Burning</UnitType>
+						<UnitGroupingType>UnitGroupingType_Party</UnitGroupingType>
+						<Level>3</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>SkeletonA</UnitType>
+						<UnitGroupingType>UnitGroupingType_Group</UnitGroupingType>
+						<Level>4</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>SkeletonB</UnitType>
+						<UnitGroupingType>UnitGroupingType_Group</UnitGroupingType>
+						<Level>2</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>SkeletonB</UnitType>
+						<UnitGroupingType>UnitGroupingType_Group</UnitGroupingType>
+						<Level>2</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>SkeletonA</UnitType>
+						<UnitGroupingType>UnitGroupingType_Party</UnitGroupingType>
+						<Level>1</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>SkeletonB</UnitType>
+						<UnitGroupingType>UnitGroupingType_Party</UnitGroupingType>
+						<Level>1</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>SkeletonB</UnitType>
+						<UnitGroupingType>UnitGroupingType_Party</UnitGroupingType>
+						<Level>1</Level>
+					</UnitInstance>
+				</Encounter>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I'll return later.</Description>
+				<NextObjectiveID>0</NextObjectiveID>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<NextObjectiveID>2</NextObjectiveID>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Defeat the undead</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>BattleFinished</Type>
+				<TextData>Skeleton</TextData>
+				<MoreTextData>Victory</MoreTextData>
+			</QuestConditionDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>2</ObjectiveID>
+			<NextObjectiveID>3</NextObjectiveID>
+			<ChoiceText>After clearing out the undead from the ruins, you quickly find what you are looking for. The forbidden texts describe a process that is similar to the ritual used to create a Lich with one important difference; Instead of a more common phylactery, a fragment from an unsullied life shard is required.
+			You immediately send your scouts out. It takes them several weeks to return, but that gives you time to study the ritual. They report that a suitable life shard can be found close by.</ChoiceText>
+			<ChoiceMedallion>Scroll.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>Find the life shard.</Description>
+				<NextObjectiveID>3</NextObjectiveID>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>3</ObjectiveID>
+			<NextObjectiveID>4</NextObjectiveID>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<Treasure>
+				<GameModifier>
+					<ModType>Map</ModType>
+					<Attribute>CreateGoodieHut</Attribute>
+					<StrVal>Unsullied Life Shard</StrVal>
+					<Unitclass>NC_Unsullied_Life_Shard</Unitclass>
+					<Radius>8</Radius>
+				</GameModifier>
+			</Treasure>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Extract a Life shard fragment.</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>ClearGoodieHut</Type>
+				<TextData>NC_Unsullied_Life_Shard</TextData>
+				<Flag>RevealTarget</Flag>
+			</QuestConditionDef>
+			<ChoiceText>You arrive at the site of the life shard. As the scouts reported, it is untapped. As you are making preparations to harvest what you need from the shard, shouts start breaking out around your camp and you turn to see researchers scattering.
+			Striding towards you through the chaos are three valiant looking figures. The one who appears to be leading, a female in heavy armor, is grasping the disembodied head of one of your researchers.
+			
+			She casually tosses the severed head at your feet and speaks. "We are the order of the Holy Light! We will not permit you to perform this depraved ritual!</ChoiceText>
+			<ChoiceMedallion>LifeShard_Medallion.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>"Fools! I have come too far to be turned away. Die!"</Description>
+				<NextObjectiveID>4</NextObjectiveID>
+				<Encounter>
+					<Liklihood>100</Liklihood>
+					<BattleIdentifier>Order</BattleIdentifier>
+					<WillRespawn>0</WillRespawn>
+					<WanderingRadius>0</WanderingRadius>
+					<UnitInstance>
+						<UnitType>NC_Freylin_of_the_Holy_Light</UnitType>
+						<Level>10</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>NC_ShadowWalker_Fireheart</UnitType>
+						<Level>8</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>NC_White_Wizard_Favian</UnitType>
+						<Level>8</Level>
+					</UnitInstance>
+				</Encounter>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>"I will be back to claim what I need."</Description>
+				<NextObjectiveID>0</NextObjectiveID>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>4</ObjectiveID>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Defeat the Order of the Holy Light</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>BattleFinished</Type>
+				<TextData>Order</TextData>
+				<MoreTextData>Victory</MoreTextData>
+			</QuestConditionDef>
+			<QuestEnd>1</QuestEnd>
+		</QuestObjectiveDef>
+	</QuestDef>
+</Quests>

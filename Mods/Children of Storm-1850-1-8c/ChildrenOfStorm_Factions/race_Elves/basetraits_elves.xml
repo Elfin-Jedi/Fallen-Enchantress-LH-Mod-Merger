@@ -1,0 +1,298 @@
+<?xml version="1.0"?>
+<Container>
+  <AbilityBonus InternalName="ExperiencedAbility">
+    <AbilityBonusType>Unit_Design</AbilityBonusType>
+    <AbilityBonusOption InternalName="Experienced">
+      <Prereq>
+        <Type>Race</Type>
+        <Attribute>Race_Type_Elves</Attribute>
+      </Prereq>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="ElvishEmpathy">
+    <AbilityBonusOption InternalName="ElvishEmpathy">
+      <!-- note this trait is coded into the elvish sovereign unittypes. The actual trait is just so there's a tooltip in-game.-->
+      <DisplayName>Empathy</DisplayName>
+      <Description>Elves prize the ability to be one with nature above all else. It is therefore tradition that the elf who is deemed to be the most empathic of the throne contenders is elected to rule.
+
+Elvish sovereigns do not cause battle experience to be split as a result of being in the same army as another champion.</Description>
+      <Icon>Ability_ArcaneVeil_Icon.png</Icon>
+      <GameModifier>
+        <Provides>Elves prize the ability to be one with nature above all else. It is therefore tradition that the elf who is deemed to be the most empathic of the throne contenders is elected to rule.
+
+Elvish sovereigns do not cause battle experience to be split as a result of being in the same army as another champion.</Provides>
+      </GameModifier>
+      <RarityDisplay>Rare</RarityDisplay>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="MasterScoutAbility_Elves">
+    <AbilityBonusOption InternalName="MasterScoutAbility_Elves">
+      <IMPINC>Strength</IMPINC>
+      <DisplayName>Secret paths</DisplayName>
+      <Description>All units may pass through Forest terrain without any penalty</Description>
+      <Icon>Ability_MasterScouts_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>MovementCostOverRide</Attribute>
+        <StrVal>Forest</StrVal>
+        <Value>10</Value>
+        <PerTurn>1</PerTurn>
+        <Provides>All units may pass through Forest terrain without any penalty</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>MovementCostOverRide</Attribute>
+        <StrVal>ArcticTerrain_Forest</StrVal>
+        <Value>10</Value>
+        <PerTurn>1</PerTurn>
+        <Provides>.</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>MovementCostOverRide</Attribute>
+        <StrVal>BurningLands_Forest</StrVal>
+        <Value>10</Value>
+        <PerTurn>1</PerTurn>
+        <Provides>.</Provides>
+      </GameModifier>
+      <Cost>1</Cost>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="NoDefensivestructures_Elf">
+    <AbilityBonusOption InternalName="NoDefensivestructures_Elf">
+      <IMPINC>Weakness</IMPINC>
+      <Cost>-1</Cost>
+      <DisplayName>Sacred Nature</DisplayName>
+      <Description>Elves may not build Hedge Walls, Forts or Logging Camps (or its upgrades Lumber Yard and Timber Mill) and will raze any of those they come across. 
+
+Elves can instead build their own defensive structures that give 1 less bonus to Initiative. Nothing replaces the Logging Camps and its upgrades.</Description>
+      <Icon>Ability_Fortify_Icon.png</Icon>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <GameModifier>
+        <Provides>Elves may not build Hedge Walls, Forts or Logging Camps (or its upgrades Lumber Yard and Timber Mill) and will raze any of those they come across. 
+
+Elves can instead build their own defensive structures that give 1 less bonus to Initiative. Nothing replaces the Logging Camps and its upgrades.</Provides>
+      </GameModifier>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="NoDominion_Elf">
+    <AbilityBonusOption InternalName="NoDominion_Elf">
+      <IMPINC>Weakness</IMPINC>
+      <Cost>-1</Cost>
+      <DisplayName>Abandoned Hope</DisplayName>
+      <Description>All cities controlled by Elves suffer -20% Growth. Elven Pioneers cost 24 Population instead of the normal 30.</Description>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_Prestige</StrVal>
+        <Value>-20</Value>
+        <Provides>All cities controlled by Elves suffer -20% Growth. Elven Pioneers cost 24 Population instead of the normal 30.</Provides>
+      </GameModifier>
+      <Icon>Ability_BrokenSpirit_Icon.png</Icon>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+
+
+    <AbilityBonus InternalName="NoDominion_Elf3">
+    <AbilityBonusOption InternalName="NoDominion_Elf3">
+      <IMPINC>Weakness</IMPINC>
+      <Cost>-1</Cost>
+      <DisplayName>No spontaneity</DisplayName>
+      <Description>All units controlled by this faction have their Critical Chance reduced by 50% of their current value</Description>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_UnitStat_ChanceToCrit</StrVal>
+        <Value>-50</Value>
+        <Provides>All units controlled by this faction have their Critical Chance reduced by 50% of their current value</Provides>
+      </GameModifier>
+      <Icon>Ability_Slave_Icon.png</Icon>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+
+
+  <AbilityBonus InternalName="Carefulmining_Elf">
+    <AbilityBonusOption InternalName="Carefulmining_Elf">
+      <IMPINC>Weakness</IMPINC>
+      <Cost>-1</Cost>
+      <DisplayName>Careful Mining</DisplayName>
+      <Description>Faction gains 25% less Metal from all sources</Description>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_Metal</StrVal>
+        <Value>-25</Value>
+        <Provides>Faction gains 25% less Metal from all sources</Provides>
+      </GameModifier>
+      <Icon>Ability_Frail_Icon.png</Icon>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Mindworldunity">
+    <AbilityBonusOption InternalName="Mindworldunity">
+      <IMPINC>Strength</IMPINC>
+      <DisplayName>Mind-world Unity</DisplayName>
+      <Description>For each essence in every city, 0.3 Mana is produced (per turn).</Description>
+      <Icon>Ability_PathOfTheGovernor_Icon.png</Icon>
+      <Cost>1</Cost>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_Additive_DemonFromResearch</StrVal>
+        <Value>0.3</Value>
+        <Provides>For each essence in every city, 0.3 Mana is produced (per turn).</Provides>
+      </GameModifier>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Elves_Revengeoftheforest">
+    <AbilityBonusType>Unit_Design</AbilityBonusType>
+    <AbilityBonusOption InternalName="Elves_Revengeoftheforest">
+      <Type>Faction Trait</Type>
+      <IsCombatAbility>1</IsCombatAbility>
+      <DisplayName>Forest Guardian</DisplayName>
+      <Description>If unit is attacking a city with a Logging Camp (or Lumber Yard or Timber Mill), unit gains +20 Accuracy and +20% Physical damage for all attacks.
+
+This trait may not be selected at the same time as Master of Arms</Description>
+      <AdditionalTrainingTurns>12</AdditionalTrainingTurns>
+      <Icon>Ability_Brute_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Attack_Blunt</StrVal>
+        <StrVal2>ExpandedTraits_FLAG_DefendingCityWithLumberMill</StrVal2>
+        <Multiplier>1.20</Multiplier>
+        <Provides>If unit is attacking a city with a Logging Camp (or Lumber Yard or Timber Mill), unit gains +20 Accuracy and +20% Physical damage for all attacks.
+
+This trait may not be selected at the same time as Master of Arms</Provides>
+        <vsHigher>1</vsHigher>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Accuracy</StrVal>
+        <StrVal2>ExpandedTraits_FLAG_DefendingCityWithLumberMill</StrVal2>
+        <Provides>.</Provides>
+        <Value>20</Value>
+        <vsHigher>1</vsHigher>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Attack_Cutting</StrVal>
+        <StrVal2>ExpandedTraits_FLAG_DefendingCityWithLumberMill</StrVal2>
+        <Provides>.</Provides>
+        <Multiplier>1.20</Multiplier>
+        <vsHigher>1</vsHigher>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Attack_Pierce</StrVal>
+        <StrVal2>ExpandedTraits_FLAG_DefendingCityWithLumberMill</StrVal2>
+        <Provides>.</Provides>
+        <Multiplier>1.20</Multiplier>
+        <vsHigher>1</vsHigher>
+      </GameModifier>
+      <Prereq>
+        <Type>Race</Type>
+        <Attribute>Race_Type_Elves</Attribute>
+      </Prereq>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+    <AbilityBonusOption InternalName="Elves_MasterofArms">
+      <Type>Faction Trait</Type>
+      <IsCombatAbility>1</IsCombatAbility>
+      <DisplayName>Master of Arms</DisplayName>
+      <Description>+15% damage when using the Cleave, Impale or Crushing Blow ability</Description>
+      <AdditionalTrainingTurns>12</AdditionalTrainingTurns>
+      <Icon>Ability_Brute_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BonusCleave</StrVal>
+        <Value>0.15</Value>
+        <Provides>+15% damage when using the Cleave ability</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BonusImpale</StrVal>
+        <Value>0.15</Value>
+        <Provides>+15% damage when using the Impale ability</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BonusCrushingBlow</StrVal>
+        <Value>0.15</Value>
+        <Provides>+15% damage when using the Crushing Blow ability</Provides>
+      </GameModifier>
+      <Prereq>
+        <Type>Race</Type>
+        <Attribute>Race_Type_Elves</Attribute>
+      </Prereq>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Elf_Lifeguard">
+    <AbilityBonusType>Unit_Design</AbilityBonusType>
+    <AbilityBonusOption InternalName="Elf_Lifeguard">
+      <Type>Faction Trait</Type>
+      <IsCombatAbility>1</IsCombatAbility>
+      <DisplayName>Custodian</DisplayName>
+      <Description>When defending any city with a Life Shrine or any improvement that produces Life Shard power within the city walls, this unit gains +30 Spell Resistance. This bonus is not visible on the unit details screen.</Description>
+      <Icon>Ability_Attunement_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_MagicResist</StrVal>
+        <StrVal2>ExpandedTraits_FLAG_DefendingACityWithLifeShard</StrVal2>
+        <Value>30</Value>
+        <Provides>When defending any city with a Life Shrine or any improvement that produces Life Shard power within the city walls, this unit gains +30 Spell Resistance. This bonus is not visible on the unit details screen.</Provides>
+        <vsLower>1</vsLower>
+      </GameModifier>
+      <AdditionalTrainingTurns>10</AdditionalTrainingTurns>
+      <Prereq>
+        <Type>Race</Type>
+        <Attribute>Race_Type_Elves</Attribute>
+      </Prereq>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>6</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+</Container>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Spells>
+  <DataChecksum NoParse="1">
+    <Ignore>DispName</Ignore>
+    <Translate>DisplayName,Description</Translate>
+  </DataChecksum>
+  <!-- **************************************************** -->
+  <!-- ************ Mod Spells: Nervari Faction *********** -->
+  <!-- **************************************************** -->
+  
+  <!-- **************************************************** -->
+  <!-- Repatriation -->
+  <!-- Inspiration: "MorrigansCall", "TirelessMarch" -->
+  <!-- **************************************************** -->
+  <SpellDef InternalName="Nervari_Repatriation">
+    <DisplayName>Repatriation</DisplayName>
+    <Description>+3 Growth in the enchanted city at the cost of incresing Unrest by 20%. Repatriation can only be cast on one city at a time.</Description>
+    <Image>S_Nervari_Repatriation_Painting.png</Image>
+    <IconFG>S_Nervari_Repatriation_Icon.png</IconFG>
+    <Cooldown>5</Cooldown>
+    <CanStack>0</CanStack>
+    <SpellBookSortCategory>City</SpellBookSortCategory>
+    <SpellBookSortSubCategory>CityEnchantment</SpellBookSortSubCategory>
+    <SpellType>Strategic</SpellType>
+    <SpellClass>ImpResourceBooster</SpellClass>
+    <SpellSubClass>Other</SpellSubClass>
+    <SpellTargetType>FriendlyCity</SpellTargetType>
+    <CasterMustBeSov>1</CasterMustBeSov>
+    <UniqueSpellUnlock>Nervari_Repatriation</UniqueSpellUnlock>
+    <SpellResourceCost>
+      <Resource>Mana</Resource>
+      <Amount>40</Amount>
+    </SpellResourceCost>
+    <SpellResourceCost>
+      <Resource>Mana</Resource>
+      <PerTurn>1</PerTurn>
+      <Amount>1</Amount>
+    </SpellResourceCost>
+    <GameModifier>
+      <ModType>Resource</ModType>
+      <Attribute>Unrest</Attribute>
+      <Duration>-1</Duration>
+      <PerTurn>1</PerTurn>
+      <Value>20</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Resource</ModType>
+      <Attribute>Prestige</Attribute>
+      <Duration>-1</Duration>
+      <PerTurn>1</PerTurn>
+      <Value>3</Value>
+    </GameModifier>
+    <ValidTerrainCategory>City</ValidTerrainCategory>
+    <AIData AIPersonality="AI_General">
+      <AIPriority>15</AIPriority>
+    </AIData>
+    <HitSoundFX>Spell_Inspiration_01</HitSoundFX>
+    <SpellCastEffectName>Brilliance</SpellCastEffectName>
+    <SpellCastEffectScale>.4</SpellCastEffectScale>
+    <SpellDefEffect>
+      <EffectName>S_Inspiration_Particle</EffectName>
+      <LocalPosition>0,0,0</LocalPosition>
+      <EffectScale>0.75</EffectScale>
+      <EffectDelay>0.5</EffectDelay>
+      <SnapToTerrain>1</SnapToTerrain>
+    </SpellDefEffect>
+  </SpellDef>
+ </Spells>

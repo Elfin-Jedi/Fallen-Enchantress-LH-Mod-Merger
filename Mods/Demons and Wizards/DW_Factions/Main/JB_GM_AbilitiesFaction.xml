@@ -1,0 +1,1779 @@
+<?xml version="1.0"?>
+<AbilityBonuses>
+
+	<!-- ********** Changes to default faction traits ********** -->
+	<AbilityBonus InternalName="CivicsTechAbility">        	
+		<AbilityBonusOption InternalName="CivicsTech">	
+			<Description>This faction starts with the Civics technology, which allows them to construct Inns and Bell Towers.  
+			
+			Unlocks the Civic Center improvement which increases construction efficiency and reduces Unrest.  A Civic Center can only be build in Towns.</Description>		
+			<GameModifier>
+				<Provides>Unlocks the Civic Center improvement which increases construction efficiency and reduces Unrest.  A Civic Center can only be build in Towns.</Provides>
+			</GameModifier>				
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="SlaveLordAbility">        
+		<AbilityBonusOption InternalName="SlaveLord">	
+			<Description>Razing a city transfers half that city's population to your capital.  When men or fallen are defeated in combat they are transferred as population to your nearest city.
+			
+			Unlocks the Labor Camp improvement which increases production in the city.</Description>	
+			<GameModifier>
+				<Provides>Unlocks the Labor Camp improvement which increases production in the city</Provides>
+			</GameModifier>		
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="WarriorsTechAbility">	
+		<AbilityBonusOption InternalName="WarriorsTech">	
+			<Description>Faction starts with the Training technology, allowing them to construct Barracks.
+			
+			50% reduction in construction costs for the Training Yard line of improvements.</Description>
+		</AbilityBonusOption>	
+		<!-- Not using
+		<AbilityBonusOption InternalName="JB_ProfessionalSoldiers">	
+			<DisplayName>Professional Soldiers</DisplayName>
+			<Description>Faction starts with the Training technology, allowing them to construct Barracks.
+			
+			50% reduction in construction costs for the Training Yard line of improvements.
+			
+			Unlocks the Spear Wall and Testudo unit design traits.</Description>
+			<Icon>JB_Ability_ProfessionalSoldiers_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>UnlockTech</Attribute>
+				<StrVal>Training</StrVal>
+				<Provides>Faction starts with the Training technology, allowing them to construct Barracks</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>50% reduction in construction costs for the Training Yard line of improvements</Provides>
+			</GameModifier>				
+			<Cost>1</Cost>
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>			
+		-->
+	</AbilityBonus>	
+    <AbilityBonus InternalName="JB_ToughEmpireAbility">
+        <AbilityBonusOption InternalName="JB_ToughEmpire">
+            <DisplayName>Tough</DisplayName>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>MovementCostOverRide</Attribute>
+				<StrVal>HillsTerrain</StrVal>
+				<Value>8</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>May pass through Hills terrain without any penalty</Provides>
+			</GameModifier>	
+        </AbilityBonusOption>
+    </AbilityBonus>	
+    <AbilityBonus InternalName="JB_AdeptsTechAbility">
+        <AbilityBonusType>Player</AbilityBonusType>
+        <AbilityBonusOption InternalName="JB_AdeptsTech">
+			<DisplayName>Adepts</DisplayName>
+            <Description>Faction starts with the Shard Harvesting technology, which allows them to construct Shard Altars.  The player also starts with an additional 40 Mana and has a 10% bonus to Mana production.</Description>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Mana</StrVal>
+				<Value>10</Value>
+				<Icon>Mana_Stat_Icon.png</Icon>
+				<Provides>+10% Mana production</Provides>
+			</GameModifier>
+        </AbilityBonusOption>
+    </AbilityBonus>
+
+	<!-- ********** New Faction Traits: Strengths ********** -->
+    <AbilityBonus InternalName="JB_GreatAxesAbility">
+		<AbilityBonusType>Player</AbilityBonusType>	
+		<AbilityBonusOption InternalName="JB_Raiders">
+			<DisplayName>Raiders</DisplayName>
+			<Description>Unlocks Throwing Axes and one handed axes.
+			
+			Unlocks the War Hall Improvement.</Description>
+			<Icon>JB_Ability_Raiders_Icon.png</Icon>
+            <GameModifier>
+                <Provides>Unlocks Throwing Axes (available once Weaponry is researched) and one handed axes</Provides>
+            </GameModifier>
+            <GameModifier>
+                <Provides>Unlocks the War Hall Improvement which all units trained in a city the Raider trait</Provides>
+            </GameModifier>	
+			<Cost>1</Cost>
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>		
+		<AbilityBonusOption InternalName="JB_Frostborn">
+			<DisplayName>Frostborn</DisplayName>
+			<Description>Unlocks Frostbound weapons (Axe, Battle Axe, Spear, Mace, Dagger, Longsword) that cause cold damage and slow the target when struck.
+			
+			Unlocks Lands of Ice, a spell which transforms land into arctic terrain.  
+			
+			Units move at double normal rate over Arctic terrain.
+			
+			This faction can build Snow Giant Camp improvements on Snow Giant Lair resources allowing them to recruit Snow Giants.</Description>
+			<Icon>JB_Ability_Frostborn_Icon.png</Icon>	
+			<GameModifier>
+				<Provides>Unlocks Frostbound weapons (Axe, Battle Axe, Spear, Mace, Dagger, Longsword) that cause cold damage and slow the target when struck</Provides>
+			</GameModifier>	
+			<GameModifier>
+				<Provides>Unlocks the City of Snow and Ice improvement, which improves a city's defenses by providing defending units, gives an Initiative bonus to all City Defenders, and spawns a Mirror Elemental (requires Sorcery Tech).</Provides>
+			</GameModifier>			
+			<GameModifier>
+				<Provides>Unlocks the Civic Center improvement which increases construction efficiency and reduces Unrest.  A Civic Center can only be build in Towns.</Provides>
+			</GameModifier>		
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>UnlockSpell</Attribute>
+                <StrVal>JB_LandsOfIce</StrVal>
+                <Provides>Unlocks Lands of Ice, a spell which transforms land into arctic terrain</Provides>
+            </GameModifier>		
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>MovementCostOverRide</Attribute>
+				<StrVal>ArcticTerrain</StrVal>
+				<Value>4</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>Units move at double normal rate over Arctic terrain</Provides>
+			</GameModifier>		
+			<GameModifier>
+				<Provides>This faction can build Snow Giant Camp improvements on Snow Giant Lair resources allowing them to recruit Snow Giants</Provides>
+			</GameModifier>		
+			<GameModifier>
+				<Provides>This faction cannot build Hedge Walls, Stone Walls, Fort or Castle improvement.</Provides>
+			</GameModifier>	
+			<Cost>1</Cost>			
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>		
+    </AbilityBonus>
+	<AbilityBonus InternalName="JB_PolearmsAbility">	
+        <AbilityBonusType>Player</AbilityBonusType>
+        <AbilityBonusOption InternalName="JB_Polearms">
+            <DisplayName>Pole Arms</DisplayName>
+            <Description>Unlocks the Polearms line of weapons that can both Impale and Cleave the enemy: the War Scythe, Voulge, Halberd and Burning Halberd.</Description>
+            <Icon>JB_Ability_Polearms_Icon.png</Icon>	
+            <GameModifier>
+                <Provides>Unlocks the Polearms line of weapons that can both Impale and Cleave the enemy: the War Scythe, Voulge, Halberd and Burning Halberd</Provides>
+            </GameModifier>	
+            <Cost>1</Cost>	
+			<Type>Army</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	<AbilityBonus InternalName="JB_DualBladesAbility">	
+        <AbilityBonusType>Player</AbilityBonusType>
+        <AbilityBonusOption InternalName="JB_DualBlades">
+            <DisplayName>Dual Blades</DisplayName>
+            <Description>Unlocks dual wield Dagger, Shortsword, Scimitar and Ice Scimitar.</Description>
+            <Icon>JB_Ability_DualBlades_Icon.png</Icon>	
+            <GameModifier>
+                <Provides>Unlocks dual wield Dagger, Shortsword, Scimitar and Ice Scimitar</Provides>
+            </GameModifier>	
+            <Cost>1</Cost>	
+			<Type>Army</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	<AbilityBonus InternalName="JB_HeavyHittersAbility">	
+        <AbilityBonusType>Player</AbilityBonusType>
+        <AbilityBonusOption InternalName="JB_HeavyHitters">
+            <DisplayName>Heavy Hitters</DisplayName>
+            <Description>Unlocks the Heavy Staff, Pole Axe, Bastard Sword and Greatsword.</Description>
+            <Icon>JB_Ability_HeavyHitters_Icon.png</Icon>	
+            <GameModifier>
+                <Provides>Unlocks the Heavy Staff, Pole Axe, Bastard Sword and Greatsword</Provides>
+            </GameModifier>	
+            <Cost>1</Cost>	
+			<Type>Army</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	<AbilityBonus InternalName="JB_MasterAssassinsAbility">	
+        <AbilityBonusType>Player</AbilityBonusType>
+        <AbilityBonusOption InternalName="JB_MasterAssassins">
+            <DisplayName>Master Assassins</DisplayName>
+            <Description>Unlocks Assassinate, a spell that targets an enemy champion on the strategic map causing 0, 50% or 100% hit points damage at random.
+			
+			Unlocks the Guild Assassin, a unit that can utilise a number of special attacks in combat.</Description>
+            <Icon>JB_Ability_MasterAssassins_Icon.png</Icon>	
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>UnlockSpell</Attribute>
+                <StrVal>JB_Assassinate</StrVal>
+                <Provides>Unlocks Assassinate, a spell that targets an enemy champion on the strategic map causing 0, 50% or 100% hit points damage at random</Provides>
+            </GameModifier>	
+            <GameModifier>	
+				<Provides>Unlocks the Guild Assassin, a unit that can utilise a number of special attacks in combat</Provides>	
+            </GameModifier>	
+            <Cost>1</Cost>	
+			<Type>Army</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	<AbilityBonus InternalName="JB_WondrousMonumentsAbility">
+		<AbilityBonusType>Player</AbilityBonusType>
+		<AbilityBonusOption InternalName="JB_WondrousMonuments">
+			<DisplayName>Wondrous Monuments</DisplayName>
+			<Description>Monuments, Guardian Statue and Guardian Idol improvements provide spell resistance for defending units, and a fame increase.</Description>
+			<Icon>JB_Ability_WondrousMonuments_Icon.png</Icon>
+			<GameModifier>
+				<Provides>Monuments, Guardian Statue and Guardian Idol improvements provide spell resistance for defending units, and a fame increase.</Provides>					
+			</GameModifier>					
+			<Cost>1</Cost>
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>	
+	<AbilityBonus InternalName="JB_GolemCraftersAbility">
+		<AbilityBonusType>Player</AbilityBonusType>
+		<AbilityBonusOption InternalName="JB_GolemCrafters">
+			<DisplayName>Golem Crafters</DisplayName>
+			<Description>This faction can train Sand, Stone, Crystal, Obsidian and War Golems in their cities.</Description>
+            <Icon>JB_Ability_GolemCraft_Icon.png</Icon>
+            <GameModifier>
+                <Provides>This faction can train Sand, Stone, Crystal, Obsidian and War Golems in their cities</Provides>
+            </GameModifier>		
+			<Cost>1</Cost>
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>	
+	<AbilityBonus InternalName="JB_ShrillCraftersAbility">
+		<AbilityBonusType>Player</AbilityBonusType>
+		<AbilityBonusOption InternalName="JB_ShrillCrafters">
+			<DisplayName>Shrill Crafters</DisplayName>
+			<Description>This faction can train Air, Earth, Fire and Water Shrill in their cities.</Description>
+            <Icon>JB_Ability_ShrillCrafters_Icon.png</Icon>
+            <GameModifier>
+                <Provides>This faction can train Air, Earth, Fire and Water Shrill in their cities</Provides>
+            </GameModifier>		
+			<Cost>1</Cost>
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>	
+	<AbilityBonus InternalName="JB_GuileAbility">	
+        <AbilityBonusType>Player</AbilityBonusType>
+        <AbilityBonusOption InternalName="JB_Guile">
+            <DisplayName>Guile</DisplayName>
+            <Description>This faction starts with the Manipulation technology which allows them to use the Underhand Deal treaty to increase revenue, and to trade Fame as a commodity.
+			
+			Unlocks Insurrection, a spell which increases unrest in an enemy city (costs gold to cast).</Description>
+            <Icon>Ability_Guile_Icon.png</Icon>
+            <Cost>1</Cost>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>UnlockTech</Attribute>
+                <StrVal>JB_Manipulation</StrVal>
+                <Provides>This faction starts with the Manipulation technology which allows them to use the Underhand Deal treaty to increase revenue, and to trade Fame as a commodity</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>UnlockSpell</Attribute>
+                <StrVal>JB_Insurrection</StrVal>
+                <Provides>Unlocks Insurrection, a spell which increases unrest in an enemy city (costs gold to cast)</Provides>
+            </GameModifier>		
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	<AbilityBonus InternalName="JB_CrystalAffinityAbility">	
+        <AbilityBonusType>Player</AbilityBonusType>
+        <AbilityBonusOption InternalName="JB_CrystalAffinity">
+            <DisplayName>Crystal Affinity</DisplayName>
+            <Description>The faction gets a +50% crystal production bonus.
+			
+			Crystal Quarry, Mine and Trove produce mana and provide an Ophidian.
+			
+			Unlocks Crystallization, a spell which converts a shard in your empire into a crystal crag.</Description>
+            <Icon>JB_Ability_CrystalAffinity_Icon.png</Icon>
+            <Cost>1</Cost>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_RefinedCrystal</StrVal>
+                <Value>50</Value>
+                <Provides>The faction gets a +50% crystal production bonus</Provides>
+            </GameModifier>
+            <GameModifier>
+                <Provides>Crystal Quarry, Mine and Trove produce mana and provide an Ophidian</Provides>
+            </GameModifier>		
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>UnlockSpell</Attribute>
+                <StrVal>JB_ShardToCrystal</StrVal>
+                <Provides>Unlocks Crystallization, a spell which converts a shard in your empire into a crystal crag</Provides>
+            </GameModifier>				
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>	
+ 	<AbilityBonus InternalName="JB_AlchemistsAbility">
+		<AbilityBonusType>Player</AbilityBonusType>
+		<AbilityBonusOption InternalName="JB_Alchemists">
+			<DisplayName>Alchemists</DisplayName>
+			<Description>The faction receives gildar revenue from the Alchemy line of Improvements, as well as 50% reduction in labour cost for their construction.  
+						
+			Unlocks Hellfire Bombs and the Grenadier unit. 
+
+			Unlocks Potion of Vigour.			
+			
+			Unlocks Alchemy, a spell that converts 100 mana into 100 gildar.</Description>
+			<Icon>JB_Ability_Alchemists_Icon.png</Icon>
+			<Cost>1</Cost>
+			<GameModifier>
+				<Provides>The faction receives gildar revenue from the Alchemy line of Improvements, as well as 50% reduction in labour cost for their construction</Provides>
+			</GameModifier>	
+			<GameModifier>
+				<Provides>Unlocks Hellfire Bombs and the Grenadier unit</Provides>
+			</GameModifier>	
+			<GameModifier>
+				<Provides>Unlocks Potion of Vigour</Provides>
+			</GameModifier>			
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>UnlockSpell</Attribute>
+				<StrVal>Alchemy</StrVal>
+				<Provides>Unlocks Alchemy, a spell that converts 100 mana into 100 gildar</Provides>
+			</GameModifier>				
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>	
+    <AbilityBonus InternalName="JB_ScientistsAbility">
+		<AbilityBonusType>Player</AbilityBonusType>
+		<AbilityBonusOption InternalName="JB_Scientists">
+			<DisplayName>Scientists</DisplayName>
+			<Description>The faction gets +5% Research, and all units are +10% Accuracy.</Description>
+			<Icon>jb_ability_scientists_icon.png</Icon>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Research</StrVal>
+				<Value>5</Value>
+				<Provides>The faction gets +5% Research</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_UnitStat_Accuracy</StrVal>
+				<Value>10</Value>
+				<Provides>All units are +10% to Accuracy</Provides>
+			</GameModifier>			
+			<Cost>1</Cost>
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>	
+	<AbilityBonus InternalName="JB_AllianceOgreAbility">
+		<AbilityBonusType>Player</AbilityBonusType>
+		<AbilityBonusOption InternalName="JB_AllianceOgre">
+			<DisplayName>Ogre Alliance</DisplayName>
+			<Description>This faction can build Young Ogre Pits, Ogre Pits and Bone Ogre Pits in their cities which automatically produce free Young Ogre, Ogre or Bone Ogre units.  
+			
+			Ogre Camp's (built on Ogre Lairs) do not require the Wildland Allies tech and do not cost gildar to build.  Bone Ogre Camps do not require gildar to build.</Description>
+			<Icon>JB_Ability_AllianceOgres_Icon.png</Icon>	
+			<GameModifier>
+				<Provides>This faction can build Young Ogre Pits, Ogre Pits and Bone Ogre Pits in their cities which automatically produce free Young Ogre, Ogre or Bone Ogre units.</Provides>  
+			</GameModifier>		
+			<GameModifier>
+				<Provides>Ogre Camps (built on Ogre Lairs) do not require the Wildland Allies tech and do not cost gildar to build.  Bone Ogre Camps do not require gildar to build.</Provides>
+			</GameModifier>			
+			<Cost>1</Cost>			
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>	
+	<AbilityBonus InternalName="JB_AllianceDarklingAbility">
+		<AbilityBonusType>Player</AbilityBonusType>
+		<AbilityBonusOption InternalName="JB_AllianceDarkling">
+			<DisplayName>Darkling Alliance</DisplayName>
+			<Description>This faction can train various Darkling units.
+
+			Can recruit Darkling Shaman (Mage henchmen) once Cooperation is researched.</Description>
+			<Icon>JB_Ability_AllianceDarkling_Icon.png</Icon>	
+			<GameModifier>
+				<Provides>This faction can train various Darkling units.  Darkling units do not require wages.
+
+			Can recruit Darkling Shaman (Mage henchmen) once Cooperation is researched.</Provides>
+			</GameModifier>			
+			<Cost>1</Cost>			
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>		
+	<AbilityBonus InternalName="JB_AllianceTrollAbility">
+		<AbilityBonusType>Player</AbilityBonusType>
+		<AbilityBonusOption InternalName="JB_AllianceTroll">
+			<DisplayName>Troll Alliance</DisplayName>
+			<Description>This faction can build Troll Pits in their cities, allowing them to train Trolls, Troll Warriors and Troll Shamans (henchmen units).</Description>
+			<Icon>JB_Ability_AllianceTroll_Icon.png</Icon>	
+			<GameModifier>
+				<Provides>This faction can build Troll Pits in their cities which automatically produce free Troll units.</Provides>
+			</GameModifier>			
+			<GameModifier>
+				<Provides>This faction can train Troll Shaman (Mage henchmen) units in their cities once Cooperation is researched.</Provides>
+			</GameModifier>			
+			<Cost>1</Cost>			
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>	
+	<AbilityBonus InternalName="JB_AllianceBeastAbility">
+		<AbilityBonusType>Player</AbilityBonusType>
+		<AbilityBonusOption InternalName="JB_AllianceBeast">
+			<DisplayName>Beasts of War</DisplayName>
+			<Description>Unlocks War Boar mounts, and the Boar Yard improvement which produces War Boars.
+			
+			Does not use Horse mounts, instead Stables provide an additional source of Food.
+			
+			This faction gains a Taurgol from Beast Altars.</Description>
+			<Icon>JB_Ability_AllianceBestial_Icon.png</Icon>	
+			<GameModifier>
+				<Provides>Unlocks War Boar mounts, and the Boar Yard improvement which produces War Boars</Provides>
+			</GameModifier>		
+			<GameModifier>
+				<Provides>Does not use Horse mounts, instead Stables provide an additional source of Food</Provides>
+			</GameModifier>	
+			<GameModifier>
+				<Provides>This faction gains a Taurgol from Beast Altars</Provides>
+			</GameModifier>		
+			<Cost>1</Cost>			
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>	
+	<AbilityBonus InternalName="JB_UnitedPeopleAbility">
+        <AbilityBonusType>Player</AbilityBonusType>
+        <AbilityBonusOption InternalName="JB_UnitedPeople">
+            <DisplayName>United People</DisplayName>
+            <Description>Bell Tower improvement grants +1 City Defender Group.  Town Hall improvement grants +2 City Defender Groups.  Palace improvement grants +3 City Defender Groups.
+			
+			Units defending cities get +20% to Attack and +20% to Defense.
+			
+			-5% Unrest.</Description>
+            <Icon>JB_Ability_UnitedPeople_Icon.png</Icon>	
+            <GameModifier>	
+				<Provides>Bell Tower improvement grants +1 City Defender Group.  Town Hall improvement grants +2 City Defender Groups.  Palace improvement grants +3 City Defender Groups.</Provides>	
+            </GameModifier>		
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_Stationed_UnitStat_Attack</StrVal>
+                <Value>20</Value>
+                <Provides>Units defending cities get +20% to Attack.</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_Stationed_UnitStat_Defense_Pierce</StrVal>
+                <Value>20</Value>
+                <Provides>Units defending cities get +20% to Defense.</Provides>
+            </GameModifier>	
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Additive_Unrest</StrVal>
+				<Value>-5</Value>
+				<Provides>-5% Unrest.</Provides>
+			</GameModifier>		
+            <Cost>1</Cost>	
+            <Type>Army</Type>			
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>	
+	<AbilityBonus InternalName="JB_FortifiedConclavesEtcAbility">
+        <AbilityBonusType>Player</AbilityBonusType>
+        <AbilityBonusOption InternalName="JB_FortifiedConclaves">
+            <DisplayName>Fortified Conclaves</DisplayName>
+            <Description>Faction can build Walls, Training Yard, Barracks, Forge and Catapult Tower improvements in Conclaves</Description>
+            <Icon>JB_Ability_FortifiedConclaves_Icon.png</Icon>
+			<Cost>1</Cost>		
+			<GameModifier>
+				<Provides>Faction can build Walls, Training Yard, Barracks, Forge and Catapult Tower improvements in Conclaves</Provides>	
+			</GameModifier>	
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>	
+        <AbilityBonusOption InternalName="JB_FortifiedTowns">
+            <DisplayName>Fortified Towns</DisplayName>
+            <Description>Faction can build Fort (Kingdom), Castle (Empire), Training Yard, Barracks, Forge and Catapult Tower improvements in Towns.</Description>
+            <Icon>JB_Ability_FortifiedTowns_Icon.png</Icon>
+			<Cost>1</Cost>		
+			<GameModifier>
+				<Provides>Faction can build Fort (Kingdom), Castle (Empire), Training Yard, Barracks, Forge and Catapult Tower improvements in Towns</Provides>	
+			</GameModifier>	
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+		<AbilityBonusOption InternalName="JB_FirestoneFortress">
+			<DisplayName>Firestone Fortress</DisplayName>
+			<Description>Unlocks the Firestone Forge, Firestone Tower and Firestone Castle improvements.</Description>
+			<Icon>JB_Ability_FirestoneFortress_Icon.png</Icon>
+			<GameModifier>	
+				<Provides>Unlocks the Firestone Forge, Firestone Tower and Firestone Castle improvements</Provides>	
+			</GameModifier>			
+			<Cost>1</Cost>	
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+    </AbilityBonus>			
+	<AbilityBonus InternalName="JB_MasterTradersAbility">
+		<!-- Ideas borrowed from Faction Traits Mod (Thanks DsRaider) -->
+		<AbilityBonusType>Player</AbilityBonusType>
+		<AbilityBonusOption InternalName="JB_MasterTraders">
+			<DisplayName>Master Traders</DisplayName>
+			<Description>This faction receives a 50% reduction in labour cost for the Market and Merchant improvements.
+			
+			Double value when selling in shops.
+			
+			Unlocks Acquire Metal, a spell which converts 100 Gildar into 10 Metal.
+			
+			Unlocks Acquire Crystal, a spell which converts 100 Gildar into 10 Crystal.</Description>
+			<Icon>Ability_Scales_Icon.png</Icon>
+			<GameModifier>
+				<Provides>This faction receives a 50% reduction in labour cost for the Market and Merchant improvements</Provides>
+			</GameModifier>	
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_Merchant</StrVal>
+                <Value>1</Value>
+                <Provides>Double value when selling in shops</Provides>
+            </GameModifier>	
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>UnlockSpell</Attribute>
+				<StrVal>JB_AcqMetal</StrVal>
+				<Provides>Unlocks Acquire Metal, a spell which converts 100 Gildar into 10 Metal</Provides>				
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>UnlockSpell</Attribute>
+				<StrVal>JB_AcqCrystal</StrVal>
+				<Provides>Unlocks Acquire Crystal, a spell which converts 100 Gildar into 10 Crystal</Provides>				
+			</GameModifier>					
+			<Cost>1</Cost>
+			<Type>Army</Type>			
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>			
+	<AbilityBonus InternalName="JB_HorseLordsAbility">
+	<!-- Modified version of Horse Lords trait from Faction Traits Mod (Thanks DsRaider) -->	
+        <AbilityBonusType>Player</AbilityBonusType>
+        <AbilityBonusOption InternalName="JB_HorseLords">
+            <DisplayName>Horse Lords</DisplayName>
+            <Description>Unlocks Horse Market improvement (produce Horses).
+			
+			Stables (built on Wild Horse resources) grant +1 Material in the nearest city.</Description>
+            <Icon>Ability_Horse_Icon.png</Icon>
+            <Cost>1</Cost>	
+            <GameModifier>	
+				<Provides>Unlocks Horse Market improvement (produce Horses)</Provides>	
+            </GameModifier>		
+            <GameModifier>	
+				<Provides>Stables (built on Wild Horse resources) grant +1 Material in the nearest city</Provides>	
+            </GameModifier>				
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	<AbilityBonus InternalName="JB_MagiciansAbility">
+        <AbilityBonusType>Player</AbilityBonusType>	
+        <AbilityBonusOption InternalName="JB_Magicians">
+            <DisplayName>Wizards</DisplayName>
+            <Description>Unlocks Wizards Eye, a spell which summons a Wizard Eye scout unit anywhere on the strategic map.
+						
+			Unlocks the Wizards Tower which grants +5 Spell Mastery and Spell Resistance for Trained Units, +1 Essense in the city, and auto summons a defending Mage unit when the city is attacked.  A Wizards Tower can only be built in Conclaves.
+			
+			Workshop, Mason, Mill, Labor Guild and Slave Pen improvements produce +1 Production per Essence in the city.
+			
+			Unlocks spells that allow Champions to aquire (Adept level) proficiency in new spell schools.
+			
+			Unlocks the Staff Mastery unit design trait (+3 Initiative when using a ranged staff).</Description>
+            <Icon>JB_Ability_Magicians_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>UnlockSpell</Attribute>
+				<StrVal>JB_WizardsEye</StrVal>
+				<Provides>Unlocks Wizards Eye, a spell which summons a Wizard Eye scout unit anywhere on the strategic map</Provides>	
+            </GameModifier>	
+			<GameModifier>	
+				<Provides>Unlocks the Wizards Tower which grants +5 Spell Mastery and Spell Resistance for Trained Units, +1 Essense in the city, and auto summons a defending Mage unit when the city is attacked (can only be built in Conclaves)</Provides>	
+            </GameModifier>	
+			<GameModifier>	
+				<Provides>Workshop, Mason, Mill, Labor Guild and Slave Pen improvements produce +1 Production per Essence in the city</Provides>	
+            </GameModifier>	
+			<GameModifier>	
+				<Provides>Unlocks spells that allow Champions to aquire (Adept level) proficiency in new spell schools</Provides>	
+            </GameModifier>		
+			<GameModifier>	
+				<Provides>Unlocks the Staff Mastery unit design trait (+3 Initiative when using a ranged staff)</Provides>	
+            </GameModifier>	
+            <Cost>2</Cost>	
+            <Type>Army</Type>		
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	<AbilityBonus InternalName="JB_AncientStudiesAbility">
+        <AbilityBonusType>Player</AbilityBonusType>
+        <AbilityBonusOption InternalName="JB_AncientStudies">
+            <DisplayName>Ancient Studies</DisplayName>
+            <Description>50% reduction in labour cost for the Sage, Cloister, Library and Great Archive improvements.
+			
+			Ancient Temple (built on temple ruins) provides +1 Fame per season and double the normal Research bonus.
+			
+			Construction of a Library, Great Archive or Ancient Temple improvement spawns a quest nearby.
+			
+			All units have a +5% chance to find better items from goodie huts.</Description>
+            <Icon>JB_Ability_AncientStudies_Icon.png</Icon>
+            <GameModifier>	
+				<Provides>50% reduction in labour cost for the Sage, Cloister, Library and Great Archive improvements</Provides>	
+            </GameModifier>	
+            <GameModifier>	
+				<Provides>Ancient Temple (built on temple ruins) provides +1 Fame per season and double the normal Research bonus</Provides>	
+            </GameModifier>	
+            <GameModifier>	
+				<Provides>Construction of a Library, Great Archive or Ancient Temple improvement spawns a quest nearby</Provides>	
+            </GameModifier>		
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_UnitStat_TreasureHunter</StrVal>
+                <Value>500</Value>
+				<Provides>All units have a +5% chance to find better items from goodie huts</Provides>	
+			  </GameModifier>
+            <Cost>1</Cost>	
+            <Type>Army</Type>		
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>	
+    <AbilityBonus InternalName="JB_ChannelersAbility">
+		<AbilityBonusType>Player</AbilityBonusType>
+		<AbilityBonusOption InternalName="JB_Channelers">
+			<DisplayName>Channelers</DisplayName>
+			<Description>Unlocks the Summoning Gate improvement which grants +1 Summon Pool per Essence.</Description>
+			<Icon>JB_Ability_Channelers_Icon.png</Icon>
+			<GameModifier>
+				<Provides>Unlocks the Summoning Gate improvement which grants +1 Summon Pool per Essence.</Provides>
+			</GameModifier>		
+			<Cost>1</Cost>
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>	
+    <AbilityBonus InternalName="JB_HordeAbility">
+		<AbilityBonusType>Player</AbilityBonusType>
+		<AbilityBonusOption InternalName="JB_Horde">
+			<DisplayName>Horde</DisplayName>
+			<Description>Faction starts with +2 army size</Description>
+			<Icon>JB_Ability_Horde_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_MaxArmySize</StrVal>
+				<Value>1</Value>
+				<Provides>Faction starts with +2 army size</Provides>
+			</GameModifier>
+			<Cost>1</Cost>
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>		
+	<AbilityBonus InternalName="JB_EngineersAbility">
+        <AbilityBonusType>Player</AbilityBonusType>
+        <AbilityBonusOption InternalName="JB_Engineers">
+            <DisplayName>Engineers</DisplayName>
+            <Description>Units defending cities get +10% per city level to Defense due to strengthened city defenses.
+			
+			Unlocks the Light Catapult (requires Longbows technology) and the Destroyer Catapult (requires Siege Weapons technology).
+			
+			Unlocks the Light Crossbow - a basic crossbow that does not require metal to produce, and Masterwork Crossbows that are more accurate and fire faster than standard crossbows.</Description>
+            <Icon>JB_Ability_Engineers_Icon.png</Icon>
+			<Cost>1</Cost>		
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_Stationed_UnitStat_Defense_Pierce</StrVal>
+                <Value>10</Value>
+                <PerLevel>1</PerLevel>
+                <Provides>Units defending cities get +10% per city level to Defense due to strengthened city defenses</Provides>
+            </GameModifier>
+            <GameModifier>
+                <Provides>Unlocks the Light Catapult (requires Longbows technology) and the Destroyer Catapult (requires Siege Weapons technology)</Provides>
+            </GameModifier>
+            <GameModifier>
+                <Provides>Unlocks the Light Crossbow - a basic crossbow that does not require metal to produce, and Masterwork Crossbows that hit harder and fire faster than standard crossbows</Provides>
+            </GameModifier>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>			
+	<AbilityBonus InternalName="JB_SeatOfPowerAbility">
+        <AbilityBonusType>Player</AbilityBonusType>
+        <AbilityBonusOption InternalName="JB_SeatOfPower">
+            <DisplayName>Seat Of Power</DisplayName>
+            <Description>This factions Tower of Dominion provides an additional +2 Growth, +1 Zone of Control, +1 Essence, -10% Unrest, and an extra unit of City Defenders and Archers.</Description>
+            <Icon>JB_Ability_SeatOfPower_Icon.png</Icon>
+            <GameModifier>	
+				<Provides>This factions Tower of Dominion provides an additional +2 Growth, +1 Zone of Control, +1 Essence, -10% Unrest, and an extra unit of City Defenders and Archers.</Provides>	
+            </GameModifier>			
+            <Cost>1</Cost>	
+            <Type>Army</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>	
+	<AbilityBonus InternalName="JB_OutpostUpgradesAbility">
+        <AbilityBonusType>Player</AbilityBonusType>
+        <AbilityBonusOption InternalName="JB_VigilantWatch">
+            <DisplayName>Vigilant Watch</DisplayName>
+            <Description>Unlocks the Vigilant Watchtower improvement which provides +1 zone of control and increases initiative of defending units on the first turn of combat.
+			
+			Unlocks the Vigilant Watch outpost upgrade (replaces the High Tower) which provides +1 zone of control and an additional +1 Sight Range around the outpost, and increases initiative on the first turn of combat to friendly units in Zone of Control.
+			
+			Unlocks the Enmity vs Twisted and Prepared unit design traits.</Description>
+            <Icon>JB_Ability_VigilantWatch_Icon.png</Icon>
+            <Cost>1</Cost>		
+            <GameModifier>	
+				<Provides>Unlocks the Vigilant Watchtower improvement which provides +1 zone of control and increases initiative of defending units on the first turn of combat</Provides>	
+            </GameModifier>		
+            <GameModifier>	
+				<Provides>Unlocks the Vigilant Watch outpost upgrade (replaces the High Tower) which provides +1 zone of control and an additional +1 Sight Range around the outpost, and increases initiative on the first turn of combat to friendly units in Zone of Control</Provides>	
+            </GameModifier>	
+            <GameModifier>	
+				<Provides>Unlocks the Enmity vs Twisted and Prepared unit design traits</Provides>	
+            </GameModifier>		
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+        <AbilityBonusOption InternalName="JB_BorderHouses">
+            <DisplayName>Border Houses</DisplayName>
+            <Description>Unlocks the Border House outpost upgrade, which increases the attack, defense and movement of friendly units in the outpost's borders, and provides a free unit of Border Guard.</Description>
+            <Icon>JB_Ability_BorderHouses_Icon.png</Icon>
+            <Cost>1</Cost>		
+            <GameModifier>	
+				<Provides>Unlocks the Border House outpost upgrade, which increases the attack, defense and movement of friendly units in the outpost's borders, and provides a free unit of Border Guard</Provides>	
+            </GameModifier>			
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+        <!--<AbilityBonusOption InternalName="JB_StoneCircles">
+            <DisplayName>Stone Circles</DisplayName>
+            <Description>This faction builds Stone Circles instead of Outposts.  Stone Cicles increase the player's borders and improves their visibility in teh same way as Outposts.  In addition they increase spell resistance and health regeneration of friendly units in this outpost's borders and reduce unrest in the attached city.</Description>
+            <Icon>JB_Ability_StoneCircles_Icon.png</Icon>
+            <Cost>1</Cost>		
+            <GameModifier>	
+				<Provides>This faction builds Stone Circles instead of Outposts.  Stone Cicles increase the player's borders and improves their visibility in teh same way as Outposts.  In addition they increase spell resistance and health regeneration of friendly units in this outpost's borders and reduce unrest in the attached city.</Provides>	
+            </GameModifier>				
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>		
+		-->
+    </AbilityBonus>			
+	<AbilityBonus InternalName="JB_StandingArmyAbility">
+        <AbilityBonusType>Player</AbilityBonusType>
+        <AbilityBonusOption InternalName="JB_StandingArmy">
+            <DisplayName>Standing Army</DisplayName>
+            <Description>50% Reduction in training time for units.
+
+			25% Reduction in training time for weapons and armor.</Description>
+            <Icon>JB_Ability_StandingArmy_Icon.png</Icon>			
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_Training_Labor</StrVal>
+                <Value>-50</Value>
+                <Provides>-50% Training time for units</Provides>
+            </GameModifier>		
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_Training_Labor_Equipment</StrVal>
+                <Value>-25</Value>
+                <Provides>-25% Production cost for weapons and armor</Provides>
+            </GameModifier>		
+            <Cost>1</Cost>
+            <Type>Army</Type>			
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>	
+	<AbilityBonus InternalName="JB_TowerArcanaAbility">
+        <AbilityBonusType>Player</AbilityBonusType>
+        <AbilityBonusOption InternalName="JB_TowerArcana">
+            <DisplayName>Tower of Arcana</DisplayName>
+            <Description>Unlocks the Tower of Arcana, a unique improvement that generates Arcana which can be used to cast strategic spells (requires Rituals technology).  It also increases the city Essence yield, and spawns a Mage unit to help defend the city when attacked.
+			
+			Unlocks Arcane Outpost, a spell which places an outpost (requires Arcana to cast).
+			
+			Unlocks Arcane Riftwalk, a spell which teleports the caster, and their army, to a tile in friendly territory (requires Arcana to cast).
+			
+			Unlocks Arcane Tempest, a spell which inflicts lightning damage on an enemy army in friendly territory (requires Arcana to cast).</Description>
+            <Icon>JB_Ability_TowerArcana_Icon.png</Icon>		
+            <GameModifier>
+                <Provides>Unlocks the Tower of Arcana, a unique improvement that generates Arcana which an be used to cast strategic spells.  It also increases the city Essence yield, and spawns a Mage unit to help defend the city when attacked.</Provides>
+            </GameModifier>	
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>UnlockSpell</Attribute>
+				<StrVal>JB_ArcaneMonolith_TowerAcana</StrVal>
+				<Provides>Unlocks Arcane Outpost, a spell which places an outpost (requires Arcana to cast)</Provides>	
+            </GameModifier>		
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>UnlockSpell</Attribute>
+				<StrVal>JB_CloudWalk_TowerAcana</StrVal>
+				<Provides>Unlocks Arcane Riftwalk, a spell which teleports the caster, and their army, to a tile in friendly territory (requires Arcana to cast)</Provides>	
+            </GameModifier>	
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>UnlockSpell</Attribute>
+				<StrVal>JB_ArcaneTempest</StrVal>
+				<Provides>Unlocks Arcane Tempest, a spell which inflicts lightning damage on an enemy army in friendly territory (requires Arcana to cast)</Provides>	
+            </GameModifier>		
+            <Cost>1</Cost>
+            <Type>Army</Type>			
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>	
+	<!-- Contains the 4 elemental Adept specialist abilities, as well as Binding -->
+	<AbilityBonus InternalName="BindingAbility">
+		<AbilityBonusType>Player</AbilityBonusType>
+		<AbilityBonusOption InternalName="JB_AdeptsAir">
+			<DisplayName>Air Adepts</DisplayName>
+			<Description>This faction gains an additional +1 Mana and Crow Demons from air shard shrines.
+
+			+1 Bonus level for all Air magic summons.
+			
+			Unlocks Tome of the Wind which allow the reader to learn Air magic.</Description>
+			<Icon>JB_Ability_AdeptsAir_Icon.png</Icon>
+			<Cost>1</Cost>
+			<GameModifier>
+				<Provides>This faction gains an additional +1 Mana and Crow Demons from air shard shrines</Provides>
+			</GameModifier>	
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_UnitStat_JB_BonusSummonLevelAir</StrVal>
+                <Value>100</Value>
+				<Provides>+1 Bonus level for all Air magic summons</Provides>
+            </GameModifier>			
+			<GameModifier>
+				<Provides>Unlocks Tome of the Wind which allow the reader to learn Air magic</Provides>
+			</GameModifier>
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+		<AbilityBonusOption InternalName="JB_AdeptsEarth">
+			<DisplayName>Earth Adepts</DisplayName>
+			<Description>This faction gains an additional +1 Mana, and Grave Elementals from Earth Shard shrines.
+
+			+1 Bonus level for all Earth magic summons.
+			
+			Unlocks Tome of the Mountain which allow the reader to learn Earth magic.</Description>				
+			<Icon>JB_Ability_AdeptsEarth_Icon.png</Icon>
+			<Cost>1</Cost>
+			<GameModifier>
+				<Provides>This faction gains an additional +1 Mana and Grave Elementals from Earth Shard shrines</Provides>
+			</GameModifier>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_UnitStat_JB_BonusSummonLevelEarth</StrVal>
+                <Value>100</Value>
+				<Provides>+1 Bonus level for all Earth magic summons</Provides>
+            </GameModifier>	
+			<GameModifier>
+				<Provides>Unlocks Tome of the Mountain which allow the reader to learn Earth magic</Provides>
+			</GameModifier>
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+		<AbilityBonusOption InternalName="JB_AdeptsFire">
+			<DisplayName>Fire Adepts</DisplayName>
+			<Description>This faction gains an additional +1 Mana, and Burning Wraiths from Fire Shard shrines.
+
+			+1 Bonus level for all Fire magic summons.
+			
+			Unlocks Tome of the Inferno which allow the reader to learn Fire magic.</Description>
+			<Icon>JB_Ability_AdeptsFire_Icon.png</Icon>
+			<Cost>1</Cost>
+			<GameModifier>
+				<Provides>This faction gains an additional +1 Mana and Burning Wraiths from fire shard shrines</Provides>
+			</GameModifier>	
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_UnitStat_JB_BonusSummonLevelFire</StrVal>
+                <Value>100</Value>
+				<Provides>+1 Bonus level for all Fire magic summons</Provides>
+            </GameModifier>	
+			<GameModifier>
+				<Provides>Unlocks Tome of the Inferno which allow the reader to learn Fire magic</Provides>
+			</GameModifier>
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+		<AbilityBonusOption InternalName="JB_AdeptsWater">
+			<DisplayName>Water Adepts</DisplayName>
+			<Description>This faction gains an additional +1 Mana, and Mirror Elementals from Water Shard shrines.
+
+			+1 Bonus level for all Water magic summons.
+			
+			Unlocks Tome of the Waves which allow the reader to learn Water magic.</Description>				
+			<Icon>JB_Ability_AdeptsWater_Icon.png</Icon>
+			<Cost>1</Cost>
+			<GameModifier>
+				<Provides>This faction gains an additional +1 Mana and Mirror Elementals from Water Shard shrines</Provides>
+			</GameModifier>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_UnitStat_JB_BonusSummonLevelWater</StrVal>
+                <Value>100</Value>
+				<Provides>+1 Bonus level for all Water magic summons</Provides>
+            </GameModifier>	
+			<GameModifier>
+				<Provides>Unlocks Tome of the Waves which allow the reader to learn Water magic</Provides>
+			</GameModifier>
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+		<AbilityBonusOption InternalName="JB_AdeptsDeath">
+			<DisplayName>Death Adepts</DisplayName>
+			<Description>This faction gains an additional +1 Mana, and Death magic summons from Death Shard shrines.
+			
+			+1 Bonus level for all Death magic summons.
+			
+			Unlocks Tome of the Styx which allow the reader to learn Death magic.
+			
+			For Kingdoms, one Flooded Graveyard is allowed.</Description>			
+			<Icon>Ability_DarkHeart_Icon.png</Icon>
+			<Cost>1</Cost>
+			<GameModifier>
+				<Provides>This faction gains an additional +1 Mana and Cyndrum Demons from Death Shard shrines</Provides>
+			</GameModifier>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_UnitStat_JB_BonusSummonLevelDeath</StrVal>
+                <Value>100</Value>
+				<Provides>+1 Bonus level for all Death magic summons</Provides>
+            </GameModifier>	
+			<GameModifier>
+				<Provides>Unlocks Tome of the Styx which allow the reader to learn Death magic</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>For Kingdoms, one Flooded Graveyard is allowed</Provides>
+			</GameModifier>
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+		<AbilityBonusOption InternalName="JB_AdeptsLife">
+			<DisplayName>Life Adepts</DisplayName>
+			<Description>This faction gains an additional +1 Mana, and Sentinels from Life Shard shrines.
+			
+			+1 Bonus level for all Life magic summons.
+			
+			Unlocks Tome of the Sun which allow the reader to learn Life magic.
+			
+			For Empires, one Iru T'Alavar is allowed.</Description>				
+			<Icon>Ability_DeeperUnderstanding_Icon.png</Icon>
+			<Cost>1</Cost>
+			<GameModifier>
+				<Provides>This faction gains an additional +1 Mana and Sentinels from Life Shard shrines</Provides>
+			</GameModifier>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_UnitStat_JB_BonusSummonLevelLife</StrVal>
+                <Value>100</Value>
+				<Provides>+1 Bonus level for all Life magic summons</Provides>
+            </GameModifier>	
+			<GameModifier>
+				<Provides>Unlocks Tome of the Sun which allow the reader to learn Life magic</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>For Empires, one Iru T'Alavar is allowed</Provides>
+			</GameModifier>
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+		<AbilityBonusOption InternalName="JB_AdeptsBattle">
+			<DisplayName>Battle Adepts</DisplayName>
+			<Description>This faction gains an additional +1 Mana, and Battle magic summons from Battle Shard shrines.
+			
+			+1 Bonus level for all Battle magic summons.
+			
+			Unlocks Tome of Battle which allow the reader to learn Battle magic.</Description>				
+			<Icon>Ability_Knives_Icon.png</Icon>
+			<Cost>1</Cost>
+			<GameModifier>
+				<Provides>This faction gains an additional +1 Mana and Battle magic summons from Battle Shard shrines</Provides>
+			</GameModifier>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_UnitStat_JB_BonusSummonLevelBattle</StrVal>
+                <Value>100</Value>
+				<Provides>+1 Bonus level for all Battle magic summons</Provides>
+            </GameModifier>	
+			<GameModifier>
+				<Provides>Unlocks Tome of Battle which allow the reader to learn Battle magic</Provides>
+			</GameModifier>
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+		<AbilityBonusOption InternalName="JB_AdeptsBeast">
+			<DisplayName>Beast Adepts</DisplayName>
+			<Description>This faction gains an additional +1 Mana, and Beast magic summons from Beast Shard shrines.
+			
+			+1 Bonus level for all Beast magic summons.
+			
+			Unlocks Tome of Beasts which allow the reader to learn Beast magic.</Description>				
+			<Icon>Ability_Dogs_Icon.png</Icon>
+			<Cost>1</Cost>
+			<GameModifier>
+				<Provides>This faction gains an additional +1 Mana and Beast magic summons from Beast Shard shrines</Provides>
+			</GameModifier>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_UnitStat_JB_BonusSummonLevelBeast</StrVal>
+                <Value>100</Value>
+				<Provides>+1 Bonus level for all Beast magic summons</Provides>
+            </GameModifier>	
+			<GameModifier>
+				<Provides>Unlocks Tome of Beasts which allow the reader to learn Beast magic</Provides>
+			</GameModifier>
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+		<AbilityBonusOption InternalName="JB_AdeptsNature">
+			<DisplayName>Nature Adepts</DisplayName>
+			<Description>This faction gains an additional +1 Mana, and Nature magic summons from Nature Shard shrines.
+			
+			+1 Bonus level for all Nature magic summons.
+			
+			Unlocks Tome of Nature which allow the reader to learn Nature magic.</Description>				
+			<Icon>BMB_Ability_TwinShaft.png</Icon>
+			<Cost>1</Cost>
+			<GameModifier>
+				<Provides>This faction gains an additional +1 Mana and Nature magic summons from Nature Shard shrines</Provides>
+			</GameModifier>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_UnitStat_JB_BonusSummonLevelNature</StrVal>
+                <Value>100</Value>
+				<Provides>+1 Bonus level for all Nature magic summons</Provides>
+            </GameModifier>	
+			<GameModifier>
+				<Provides>Unlocks Tome of Nature which allow the reader to learn Nature magic</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>For Empires, one Nature Magic Wonder is allowed</Provides>
+			</GameModifier>
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+		<AbilityBonusOption InternalName="JB_AdeptsShadow">
+			<DisplayName>Shadow Adepts</DisplayName>
+			<Description>This faction gains an additional +1 Mana, and Shadow magic summons from Shadow Shard shrines.
+			
+			+1 Bonus level for all Shadow magic summons.
+			
+			Unlocks Tome of Shadows which allow the reader to learn Shadow magic.</Description>				
+			<Icon>Ability_DebilitatingWhirlwind_Icon.png</Icon>
+			<Cost>1</Cost>
+			<GameModifier>
+				<Provides>This faction gains an additional +1 Mana and Shadow magic summons from Shadow Shard shrines</Provides>
+			</GameModifier>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_UnitStat_JB_BonusSummonLevelShadow</StrVal>
+                <Value>100</Value>
+				<Provides>+1 Bonus level for all Shadow magic summons</Provides>
+            </GameModifier>	
+			<GameModifier>
+				<Provides>Unlocks Tome of Shadows which allow the reader to learn Shadow magic</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>For Kingdoms, one Shadow Magic Wonder is allowed</Provides>
+			</GameModifier>
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>	
+
+	<!-- ********** New Faction Traits: Religions ********** -->
+    <AbilityBonus InternalName="CultofaHundredEyesAbility">
+		<AbilityBonusOption InternalName="JB_ReligionOldGods">
+			<DisplayName>Ancestral Host</DisplayName>
+			<Description>Unlocks Shrines and Temples to the Old Gods - Arvos, Hadollon and Lialdir, that provide unique bonuses to the city in which they are constructed.
+			
+			Blocks access to the spells Holy War, Luminous Perception (Kingdom), Baleful Surge (Empire), Sanguine Wish (Empire), Malevolent Endeavor (Empire).
+			
+			This faction cannot train Disciple units.</Description>
+			<Icon>JB_Ability_ReligionOldGods_Icon.png</Icon>				
+			<GameModifier>
+				<Provides>Unlocks Shrines and Temples to the Old Gods - Arvos, Hadollon and Lialdir, that provide unique bonuses to the city in which they are constructed</Provides>
+			</GameModifier>	
+			<GameModifier>
+				<Provides>Blocks access to the spells Holy War, Luminous Perception (Kingdom), Baleful Surge (Empire), Sanguine Wish (Empire), Malevolent Endeavor (Empire)</Provides>
+			</GameModifier>					
+			<GameModifier>
+				<Provides>This faction cannot train Disciple units</Provides>
+			</GameModifier>			
+			<Cost>1</Cost>			
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>		
+		<AbilityBonusOption InternalName="JB_ReligionCrusaders">
+			<DisplayName>Church of the Dawn Temple</DisplayName>
+			<Description>Unlocks Divine Crusade (Kingdom) or Infernal Crusade (Empire), world spells that boost all units movement, initiative and resilience.
+			
+			-5% Unrest.
+			
+			+10% bonus to the amount of healing done by spells.
+			
+			Unlocks the Templar unit (a Disciple that can wear armor) replacing the Disciple.</Description>
+			<Icon>JB_Ability_ReligionCrusaders_Icon.png</Icon>			
+            <GameModifier>
+                <Provides>Unlocks Divine Crusade (Kingdom) or Infernal Crusade (Empire), world spells that boost all units movement, initiative and resilience</Provides>
+            </GameModifier>			
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_Additive_Unrest</StrVal>
+                <Value>-5</Value>
+                <Provides>-5% Unrest</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_UnitStat_BonusHealing</StrVal>
+                <Value>10</Value>
+                <Provides>+10% bonus to the amount of healing done by spells.</Provides>
+            </GameModifier>			
+			<GameModifier>
+				<Provides>Unlocks the Templar unit (a Disciple that can wear armor) replacing the Disciple</Provides>
+			</GameModifier>		
+			<Cost>1</Cost>			
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>		
+		<AbilityBonusOption InternalName="JB_ReligionAir">
+			<DisplayName>Aethrian Council</DisplayName>
+			<Description>Unlocks the Sky Sanctum improvement, which creates an Air Shard within 3 tiles of the city in which it is built, and also boosts defending units initiative.
+			
+			Unlocks the Acolyte unit (replaces the Disciple).</Description>
+			<Icon>JB_Ability_ReligionAir_Icon.png</Icon>			
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_AdeptAirUniqueBuilding</Attribute>
+				<Value>1</Value>
+				<Provides>Unlocks the Sky Sanctum improvement, which creates an Air Shard within 3 tiles of the city in which it is built, and also boosts defending units initiative</Provides>
+			</GameModifier>		
+			<GameModifier>
+				<Provides>Unlocks the Acolyte unit (replaces the Disciple)</Provides>
+			</GameModifier>		
+			<Cost>0</Cost>			
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>		
+		<AbilityBonusOption InternalName="JB_ReligionEarth">
+			<DisplayName>Guild of the Enduring</DisplayName>
+			<Description>Unlocks the Hallowed Stone improvement, which creates an Earth Shard within 3 tiles of the city in which it is built, and also boosts defending units hit points.
+			
+			Unlocks the Acolyte unit (replaces the Disciple).</Description>
+			<Icon>JB_Ability_ReligionEarth_Icon.png</Icon>	
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_AdeptEarthUniqueBuilding</Attribute>
+				<Value>1</Value>
+				<Provides>Unlocks the Hallowed Stone improvement, which creates an Earth Shard within 3 tiles of the city in which it is built, and also boosts defending units hit points</Provides>
+			</GameModifier>				
+			<GameModifier>
+				<Provides>Unlocks the Acolyte unit (replaces the Disciple)</Provides>
+			</GameModifier>		
+			<Cost>0</Cost>			
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+		<AbilityBonusOption InternalName="JB_ReligionFire">
+			<DisplayName>Path of Fire and Flame</DisplayName>
+			<Description>Unlocks the Sacred Flame improvement, which creates a Fire Shard within 3 tiles of the city in which it is built, and also boosts defending units fire attack.
+			
+			Unlocks the Acolyte unit (replaces the Disciple).</Description>
+			<Icon>JB_Ability_ReligionFire_Icon.png</Icon>	
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_AdeptFireUniqueBuilding</Attribute>
+				<Value>1</Value>
+				<Provides>Unlocks the Sacred Flame improvement, which creates a Fire Shard within 3 tiles of the city in which it is built, and also boosts defending units fire attack</Provides>
+			</GameModifier>				
+			<GameModifier>
+				<Provides>Unlocks the Acolyte unit (replaces the Disciple)</Provides>
+			</GameModifier>		
+			<Cost>0</Cost>			
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+		<AbilityBonusOption InternalName="JB_ReligionWater">
+			<DisplayName>Silver Circle</DisplayName>
+			<Description>Unlocks the Spirit Pool improvement, which creates a Water Shard within 3 tiles of the city in which it is built, and also boosts defending units dodge.
+			
+			Unlocks the Acolyte unit (replaces the Disciple).</Description>
+			<Icon>JB_Ability_ReligionWater_Icon.png</Icon>		
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_AdeptWaterUniqueBuilding</Attribute>
+				<Value>1</Value>
+				<Provides>Unlocks the Spirit Pool improvement, which creates a Water Shard within 3 tiles of the city in which it is built, and also boosts defending units dodge</Provides>
+			</GameModifier>			
+			<GameModifier>
+				<Provides>Unlocks the Acolyte unit (replaces the Disciple)</Provides>
+			</GameModifier>		
+			<Cost>0</Cost>			
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+		<AbilityBonusOption InternalName="JB_ReligionNature">
+			<DisplayName>Way of Oak and Leaf</DisplayName>
+			<Description>May pass through Forest terrain without any penalty.
+			
+			Unlocks the Tree Shrine improvement, which reduces Unrest and creates a Forest Grove near the city in which it is built.  
+					
+			Unlocks Construct Menhir, a spell which places a Menhir on the map (extends your Zone of Control, and boosts spell resistance of friendly units in Zone of Control).
+			
+			Unlocks the Stone Circle outpost upgrade, which produces mana, and increases health regeneration of friendly units in the outpost's borders (may not build any other outpost upgrades).
+			
+			This faction can build Treekin Home improvements on Treekin Grove resources allowing them to recruit Treekin Giants, and the Sprite Camp improvement on Mushroom Grove resources allowing them to recruit Sprites.
+					
+			May not build Logging Camps, Lumber Yard or Timber Mills.
+			
+			Unlocks Druidic Meditation, a spell that produces +1 Mana per Grain in the enchanted city.
+			
+			Unlocks Natures Blessing, a spell that provides +20 Food per Grain and -10% Unrest in all your cities.
+			
+			Unlocks Protection of Hurnol, a spell that grants all faction units +20% Defense and +20% Magic Resistance, and disciple units +5 health regeneration per turn in tactical battle.
+			
+			Unlocks the Druid unit (replaces Disciple).</Description>
+			<Icon>JB_Ability_OneWithTheForest_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>MovementCostOverRide</Attribute>
+				<StrVal>Forest</StrVal>
+				<Value>8</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>May pass through Forest terrain without any penalty</Provides>
+			</GameModifier>		
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_TreeShrineSeed</Attribute>
+				<Value>1</Value>
+				<Provides>Unlocks the Tree Shrine improvement, which reduces Unrest and creates a Forest Grove near the city in which it is built</Provides>
+			</GameModifier>		
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>UnlockSpell</Attribute>
+                <StrVal>JB_StoneCircle</StrVal>
+                <Provides>Unlocks Construct Menhir, a spell which places a Menhir on the map (extends your Zone of Control, and boosts spell resistance of friendly units in Zone of Control)</Provides>
+            </GameModifier>			
+			<GameModifier>
+				<Provides>Unlocks the Stone Circle outpost upgrade, which produces mana, and increases health regeneration of friendly units in the outpost's borders (may not build any other outpost upgrades)</Provides>
+			</GameModifier>			
+			<GameModifier>
+				<Provides>This faction can build Treekin Home improvements on Treekin Grove resources allowing them to recruit Treekin Giants, and the Sprite Camp improvement on Mushroom Grove resources allowing them to recruit Sprites</Provides>
+			</GameModifier>			
+			<GameModifier>
+				<Provides>May not build Logging Camps, Lumber Yard or Timber Mills</Provides>
+			</GameModifier>		
+			<GameModifier>
+				<Provides>Unlocks Druidic Meditation, a spell that produces +1 Mana per Grain in the enchanted city</Provides>
+			</GameModifier>		
+			<GameModifier>
+				<Provides>Unlocks Natures Blessing, a spell that provides +20 Food per Grain and -10% Unrest in all your cities</Provides>
+			</GameModifier>		
+			<GameModifier>
+				<Provides>Unlocks Protection of Hurnol, a spell that grants all faction units +20% Defense and +20% Magic Resistance, and disciple units +5 health regeneration per turn in tactical battle</Provides>
+			</GameModifier>	
+			<GameModifier>
+				<Provides>Blocks access to the spells Holy War, Luminous Perception (Kingdom), Baleful Surge (Empire), Sanguine Wish (Empire), Malevolent Endeavor (Empire)</Provides>
+			</GameModifier>	
+			<GameModifier>
+				<Provides>Unlocks the Druid unit (replaces Disciple)</Provides>
+			</GameModifier>			
+			<Cost>1</Cost>			
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>		
+		<AbilityBonusOption InternalName="JB_ReligionLand">
+			<DisplayName>Unending Cycle</DisplayName>
+			<Description>Unlocks Totems, special improvements that reduce Unrest, generate Faith, and provide unique bonuses to the city they are in (replace the Cleric line of improvements).
+			
+			Unlocks Canticle of the Sun and Moon, a spell that reduces Unrest in all your cities, and increases Initiative of all faction units.
+			
+			Blocks access to the spells Holy War, Luminous Perception (Kingdom), Baleful Surge (Empire), Sanguine Wish (Empire), Malevolent Endeavor (Empire).
+			
+			Unlocks the Shepherd unit (replaces Disciple).</Description>
+			<Icon>JB_Ability_ReligionLand_Icon.png</Icon>			
+			<GameModifier>
+				<Provides>Unlocks Totems, special improvements that reduce Unrest, generate Faith, and provide unique bonuses to the city they are in (replace the Cleric line of improvements)</Provides>
+			</GameModifier>		
+			<GameModifier>
+				<Provides>Unlocks Canticle of the Sun and Moon, a spell that reduces Unrest in all your cities, and increases Initiative of all faction units</Provides>
+			</GameModifier>		
+			<GameModifier>
+				<Provides>Blocks access to the spells Holy War, Luminous Perception (Kingdom), Baleful Surge (Empire), Sanguine Wish (Empire), Malevolent Endeavor (Empire)</Provides>
+			</GameModifier>				
+			<GameModifier>
+				<Provides>Unlocks the Shepherd unit (replaces Disciple)</Provides>
+			</GameModifier>				
+			<Cost>1</Cost>			
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>		
+		<AbilityBonusOption InternalName="JB_ReligionSerpent">
+			<DisplayName>Serpent Court</DisplayName>
+			<Description>Cleric line of improvements provide a Black Naja.
+			
+			Unlocks the Hall of the Naja and Serpent Sanctorium improvements (special Temple improvements unique to the Serpent Court).
+			
+			Unlocks Serpent's Persuasion, a spell that charms an enemy trained unit in friendly territory.
+			
+			Unlocks Snake Plague, a spell that causes Unrest and reduces population in a target enemy city.
+			
+			Unlocks the Initiate unit (replaces the Disciple).</Description>
+			<Icon>JB_Ability_CultSerpent_Icon.png</Icon>		
+			<GameModifier>
+				<Provides>Cleric line of improvements provide a Black Naja</Provides>
+			</GameModifier>	
+			<GameModifier>
+				<Provides>Unlocks the Hall of the Naja and Serpent Sanctorium improvements (special Temple improvements unique to the Serpent Court)</Provides>
+			</GameModifier>				
+			<GameModifier>
+				<Provides>Unlocks Serpent's Persuasion, a spell that charms an enemy trained unit in friendly territory</Provides>
+			</GameModifier>			
+			<GameModifier>
+				<Provides>Unlocks Snake Plague, a spell that causes Unrest and reduces population in a target enemy city</Provides>
+			</GameModifier>		
+			<GameModifier>
+				<Provides>Unlocks the Initiate unit (replaces the Disciple)</Provides>	
+			</GameModifier>	
+			<Cost>1</Cost>			
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+		<AbilityBonusOption InternalName="JB_ReligionDemon">
+			<DisplayName>Children of Kir-Tion</DisplayName>
+			<Description>+1 Bonus level for all Demon summons.
+			
+			Unlocks spells to summon Fiend, Scourge, Fury, Hellhound and Brimstone Demons.
+			
+			Cleric line of improvements provide a Martyr unit.
+			
+			Unlocks the Ritualist unit (replaces the Disciple).</Description>
+			<Icon>JB_Ability_CultDemon_Icon.png</Icon>	
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_UnitStat_JB_SummmonDemonLevelBonus</StrVal>
+                <Value>100</Value>
+				<Provides>+1 Bonus level for all Demon summons</Provides>
+            </GameModifier>		
+            <GameModifier>
+				<Provides>Unlocks spells to summon Fiend, Scourge, Fury, Hellhound and Brimstone Demons.</Provides>
+            </GameModifier>	
+			<GameModifier>
+				<Provides>Cleric line of improvements provide a Martyr unit</Provides>
+			</GameModifier>		
+			<GameModifier>
+				<Provides>Unlocks the Ritualist unit (replaces the Disciple)</Provides>	
+			</GameModifier>		
+			<Cost>1</Cost>			
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+		<!--<AbilityBonusOption InternalName="JB_ReligionShadow">
+			<DisplayName>Cult of Shadow</DisplayName>
+			<Description>Cult of Shadow</Description>
+			<Icon>JB_Ability_ReligionShadows_Icon.png</Icon>	
+			<GameModifier>
+				<Provides>Shrines and Temples cost an additional 50% Faith to construct.  Unlocks the Temple of Shadow improvement which provides +1 shadow power and an Ummaroch shadow demon</Provides>
+			</GameModifier>		
+			<GameModifier>
+				<Provides>Unlocks the Shadow Cultist unit</Provides>
+			</GameModifier>			
+            <GameModifier>
+				<Provides>Shadow Altars and Shadow Shrines (built on the Cavern of Shadows resource) reduce unrest in the attached city.</Provides>
+            </GameModifier>			
+			<Cost>0</Cost>			
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+		</AbilityBonusOption>		
+			</AIData>
+		-->
+		<AbilityBonusOption InternalName="JB_ReligionMagic">
+			<DisplayName>The Weaving</DisplayName>
+			<Description>Unlocks Weaving, a spell that converts 150 Faith to 75 Mana (requires Arcance Mastery tech).
+			
+			Blocks access to the spells Holy War, Luminous Perception (Kingdom), Baleful Surge (Empire), Sanguine Wish (Empire), Malevolent Endeavor (Empire).
+			
+			Unlocks the Magus unit (replaces the Disciple).
+			
+			Priest and Magus spells require Mana to cast rather than Faith.</Description>
+			<Icon>JB_Ability_ReligionMagic_Icon.png</Icon>		
+			<GameModifier>
+				<Provides>Unlocks Weaving, a spell that converts 150 Faith to 75 Mana (requires Arcance Mastery tech)</Provides>
+			</GameModifier>				
+			<GameModifier>
+				<Provides>Blocks access to the spells Holy War, Luminous Perception (Kingdom), Baleful Surge (Empire), Sanguine Wish (Empire), Malevolent Endeavor (Empire)</Provides>
+			</GameModifier>				
+			<GameModifier>
+				<Provides>Unlocks the Magus unit (replaces the Disciple)</Provides>
+			</GameModifier>			
+			<GameModifier>
+				<Provides>Priest and Magus spells require Mana to cast rather than Faith</Provides>
+			</GameModifier>		
+			<Cost>0</Cost>			
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>		
+        <AbilityBonusOption InternalName="CultofaHundredEyes">
+            <Description>This faction can train Widows, Harridans and Hoarder spiders in their cities.
+			
+			Unlocks Ravenous Harridan and Blood Harridan mounts, and the Harridan Den improvement which produces Harridan.
+			
+			Does not use Horse mounts, instead Stables provide an additional source of food for Harridan, increasing faction Harridan production.
+			
+			Unlocks the Cultist unit (replaces the Disciple).</Description>
+            <GameModifier>
+                <Provides>Unlocks Ravenous Harridan and Blood Harridan mounts, and the Harridan Den improvement which produces Harridan</Provides>
+            </GameModifier>
+			<GameModifier>
+				<Provides>Does not use Horse mounts, instead Stables provide an additional source of food for Harridan, increasing faction Harridan production</Provides>
+			</GameModifier>			
+			<GameModifier>
+				<Provides>Unlocks the Cultist unit (replaces the Disciple)</Provides>
+			</GameModifier>	
+        </AbilityBonusOption>
+	    <AbilityBonusOption InternalName="JB_ReligionBeast">
+			<DisplayName>Urgyrul Cabal</DisplayName>
+			<Description>Unlocks Rage of Urgyrul, a spell that grants +1 Move and +50% Maul chance to target champions army.
+			
+			Unlocks Reavers Pact, a spell that grants all Bloodline units +3 Initiative on the first turn of combat and heals 12 hit points when killing a unit in tactical battle.
+			
+			Unlocks Rise of the Beast, a spell that provides +2 faction Beast Power, and +15% Growth in all your cities.
+			
+			Blocks access to the spells Holy War, Luminous Perception (Kingdom), Baleful Surge (Empire), Sanguine Wish (Empire), Malevolent Endeavor (Empire).
+			
+			Unlocks the Cabalist unit (replaces the Disciple).</Description>
+			<Icon>JB_Ability_ReligionBeast_Icon.png</Icon>		
+			<GameModifier>
+				<Provides>Unlocks Rage of Urgyrul, a spell that grants +1 Move and +50% Maul chance to target champions army</Provides>
+			</GameModifier>		
+			<GameModifier>
+				<Provides>Unlocks Reavers Pact, a spell that grants all Bloodline units +3 Initiative on the first turn of combat and heals 12 hit points when killing a unit in tactical battle.</Provides>
+			</GameModifier>		
+			<GameModifier>
+				<Provides>Unlocks Rise of the Beast, a spell that provides +2 faction Beast Power, and +15% Growth in all your cities</Provides>
+			</GameModifier>	
+			<GameModifier>
+				<Provides>Blocks access to the spells Holy War, Luminous Perception (Kingdom), Baleful Surge (Empire), Sanguine Wish (Empire), Malevolent Endeavor (Empire)</Provides>
+			</GameModifier>	
+			<GameModifier>
+				<Provides>Unlocks the Cabalist unit (replaces the Disciple)</Provides>
+			</GameModifier>	
+			<Cost>1</Cost>			
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>		
+						
+	<!-- ********** New Faction Traits: Weaknesses ********** -->
+	<AbilityBonus InternalName="Player_Weakness">
+		<!-- Based on the Skepticism trait from Faction Traits Mod (Thanks DsRaider) -->
+		<AbilityBonusOption InternalName="JB_MistrustOfMagic">
+			<DisplayName>Mistrusts Magic</DisplayName>
+			<Description>-20% Mana production.</Description>
+			<Icon>JB_Ability_MistrustOfMagic_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Mana</StrVal>
+				<Value>-20</Value>
+				<Provides>-20% Mana production</Provides>					
+			</GameModifier>			
+			<Cost>-1</Cost>
+			<Type>Weakness</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+		<!-- "Corrupt" borrowed from Faction Traits Mod (Thanks DsRaider) -->
+		<AbilityBonusOption InternalName="Corrupt">
+            <DisplayName>Corrupt</DisplayName>
+            <Description>-10% to Gildar and -1 Fame every 10 Seasons.</Description>
+            <Icon>Ability_Corrupt_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_Gold</StrVal>
+                <Value>-10</Value>
+                <Provides>-10% Gold production</Provides>				
+            </GameModifier>
+            <GameModifier>
+                <ModType>Resource</ModType>
+                <Attribute>Fame</Attribute>
+                <Value>-0.1</Value>
+                <PerTurn>1</PerTurn>
+                <Provides>-1 Fame every 10 Seasons</Provides>
+            </GameModifier>			
+			<Cost>-1</Cost>
+			<Type>Weakness</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+		<AbilityBonusOption InternalName="JB_RareSpecies">
+            <DisplayName>Rare Species</DisplayName>
+            <Description>-10% Growth</Description>
+            <Icon>JB_Ability_RareSpecies_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_Prestige</StrVal>
+                <Value>-10</Value>
+                <Provides>-10% Growth</Provides>				
+            </GameModifier>	
+			<Cost>-1</Cost>
+			<Type>Weakness</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+		<AbilityBonusOption InternalName="JB_Barbaric">
+			<DisplayName>Barbaric</DisplayName>
+			<Description>-5% to Research, +5% to Unrest</Description>
+			<Icon>JB_Ability_Barbaric_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Research</StrVal>
+				<Value>-5</Value>
+				<Provides>-5% to Research</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Additive_Unrest</StrVal>
+				<Value>5</Value>
+				<Provides>+5% Unrest</Provides>
+			</GameModifier>		
+			<Cost>-1</Cost>
+			<Type>Weakness</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>	
+		<AbilityBonusOption InternalName="JB_Isolationist">
+			<DisplayName>Isolationist</DisplayName>
+			<Description>-5% to Gold production and Growth, and cannot build Consulates</Description>
+			<Icon>JB_Ability_Isolationist_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_Gold</StrVal>
+                <Value>-5</Value>
+                <Provides>-5% Gold production</Provides>				
+            </GameModifier>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_Prestige</StrVal>
+                <Value>-5</Value>
+                <Provides>-5% Growth</Provides>				
+            </GameModifier>		
+            <GameModifier>
+                <Provides>Cannot build Consulates</Provides>				
+            </GameModifier>		
+			<Cost>-1</Cost>
+			<Type>Weakness</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>	
+		<AbilityBonusOption InternalName="JB_Totalitarian">
+			<DisplayName>Totalitarian</DisplayName>
+			<Description>-5% to Unrest.
+			
+			-5% to Research and Growth, and -1 Fame every 10 Seasons.</Description>
+			<Icon>JB_Ability_Totalitarian_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Additive_Unrest</StrVal>
+				<Value>-5</Value>
+				<Provides>-5% Unrest</Provides>
+			</GameModifier>	
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Research</StrVal>
+				<Value>-5</Value>
+				<Provides>-5% to Research</Provides>
+			</GameModifier>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_Prestige</StrVal>
+                <Value>-5</Value>
+                <Provides>-5% Growth</Provides>				
+            </GameModifier>	
+            <GameModifier>
+                <ModType>Resource</ModType>
+                <Attribute>Fame</Attribute>
+                <Value>-0.1</Value>
+                <PerTurn>1</PerTurn>
+                <Provides>-1 Fame every 10 Seasons</Provides>
+            </GameModifier>		
+			<Cost>-1</Cost>
+			<Type>Weakness</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>			
+		<AbilityBonusOption InternalName="JB_Oppressive">
+			<DisplayName>Oppressive</DisplayName>
+			<Description>-5% to Research and Growth</Description>
+			<Icon>JB_Ability_Oppressive_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Research</StrVal>
+				<Value>-5</Value>
+				<Provides>-5% to Research</Provides>
+			</GameModifier>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_Prestige</StrVal>
+                <Value>-5</Value>
+                <Provides>-5% Growth</Provides>				
+            </GameModifier>		
+			<Cost>-1</Cost>
+			<Type>Weakness</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>			
+	</AbilityBonus>
+	
+
+</AbilityBonuses>	

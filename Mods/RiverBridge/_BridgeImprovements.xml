@@ -1,0 +1,89 @@
+<ImprovementTypes>
+	<ImprovementType InternalName="Bridge">
+		<DisplayName>Bridge</DisplayName>
+		<Description>The bridge allows you to build across a river</Description>
+		<RequiresCity>1</RequiresCity>
+		<!-- Stormworld Extra Terrain -->
+		<BarredTerrain>ArcticTerrain_rivermod</BarredTerrain>
+		<BarredTerrain>ArcticTerrain_Forest</BarredTerrain>
+		<BarredTerrain>ArcticTerrain_rivermod_proximity_poisonriver</BarredTerrain>
+		<BarredTerrain>ArcticTerrain_rivermod_proximity_deathriver</BarredTerrain>
+		<BarredTerrain>BurningLands_Rivermod</BarredTerrain>
+		<BarredTerrain>BurningLands_Forest</BarredTerrain>
+		<BarredTerrain>BurningLands_Rivermod_proximity_magmariver</BarredTerrain>
+		<BarredTerrain>BurningLands_Rivermod_proximity_bloodriver</BarredTerrain>
+		<!-- End of Stormworld Extra Terrain -->
+		<BarredTerrain>Land</BarredTerrain>
+		<BarredTerrain>Rugged_Land</BarredTerrain>
+		<BarredTerrain>Fertile_Land</BarredTerrain>
+		<BarredTerrain>DesertTerrain</BarredTerrain>
+		<BarredTerrain>HillsTerrain</BarredTerrain>
+		<BarredTerrain>SwampTerrain</BarredTerrain>
+		<BarredTerrain>ArcticTerrain</BarredTerrain>
+		<BarredTerrain>BurningLands</BarredTerrain>
+		<BarredTerrain>Fissure</BarredTerrain>
+		<BarredTerrain>CurgensTomb</BarredTerrain>
+		<BarredTerrain>Imperium</BarredTerrain>
+		<BarredTerrain>Scrapyard</BarredTerrain>
+		<BarredTerrain>Unkown</BarredTerrain>
+		<BarredTerrain>Tomb</BarredTerrain>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<PreferredTerrain>River</PreferredTerrain>
+		<PreferredTerrain>Magmariverbridge</PreferredTerrain>
+		<PreferredTerrain>Bloodriverbridge</PreferredTerrain>
+		<PreferredTerrain>Deathriverbridge</PreferredTerrain>
+		<PreferredTerrain>Poisonriverbridge</PreferredTerrain>
+		<PreferredTerrain>Magmariver</PreferredTerrain>
+		<PreferredTerrain>Bloodriver</PreferredTerrain>
+		<PreferredTerrain>Deathriver</PreferredTerrain>
+		<PreferredTerrain>Poisonriver</PreferredTerrain>
+		<UpgradesToImprovement>StoneBridge</UpgradesToImprovement>
+		<LaborToBuild>96</LaborToBuild>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>FoodPerGrain</Attribute>
+			<Value>2</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+2 Food per Grain</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+			<UpgradeComparisonText>Food per Grain</UpgradeComparisonText>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+			<AITag>Economy</AITag>
+		</AIData>
+		<ArtDef>Art_River_City_Bridge</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="StoneBridge">
+		<DisplayName>Stone Bridge</DisplayName>
+		<Description>Stone bridges are upgraded from bridges. They increase Gildar and Food in cities they are constructed in.</Description>
+		<UpgradeTier>2</UpgradeTier>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Construction</Attribute>
+		</Prereq>
+		<LaborToBuild>208</LaborToBuild>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>FoodPerGrain</Attribute>
+			<Value>2</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+2 Food per Grain</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+			<UpgradeComparisonText>Food per Grain</UpgradeComparisonText>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ResourceMultiplier</ModType>
+			<Attribute>Gold</Attribute>
+			<Value>1.05</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+5% Gildar</Provides>
+			<UpgradeComparisonID>2</UpgradeComparisonID>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+			<AITag>Economy</AITag>
+		</AIData>
+		<ArtDef>Art_River_Stone_City_Bridge</ArtDef>
+	</ImprovementType>
+</ImprovementTypes>

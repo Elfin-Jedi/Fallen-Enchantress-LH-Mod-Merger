@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<GoodieHutTypes>
+	<GoodieHutType InternalName="GH_X_CurgensTomb_SD">
+		<Name>Dragon Lair</Name>
+		<Description>The charred bones of some beast of burden - a horse or camel, most likely - lie scattered across the rocky crag.</Description>
+		<Rarity>-1</Rarity>
+		<SpawnRating>0</SpawnRating>
+		<TileDesign>L_Dragon_Cave_01</TileDesign>
+		<TileDesignForTerrain>CurgensTomb:P_Curgens_Tomb_04</TileDesignForTerrain>
+		<DrawnIcon>Lair_Dragon.png</DrawnIcon>
+		<OnSelectSFX>Click_Dragon_Lair_Rocky</OnSelectSFX>
+		<Medallions InternalName="">
+			<All>L_Dragon_Cave_01.png</All>
+		</Medallions>
+		<Treasure>
+			<Title>Dragon Lair</Title>
+			<Desc>These crags, the spines of the earth, are home to ancient creatures. The air echoes with their voices and the land resonates with the power of massive scaled claws on stone. Dragon will return to this place, as they have for centuries, if you build a camp here you may be able to recruit them to your cause.</Desc>
+			<Liklihood>100</Liklihood>
+			<SFX>Goodie_Dragons_01</SFX>
+			<GameModifier>
+				<ModType>Map</ModType>
+				<Attribute>CreateResourceHoard</Attribute>
+				<StrVal>Wild_Dragons</StrVal>
+				<Value>1</Value>
+			</GameModifier>
+		</Treasure>
+		<Encounter>
+			<Liklihood>100</Liklihood>
+			<WillRespawn>0</WillRespawn>
+			<WanderingRadius>0</WanderingRadius>
+			<UnitInstance>
+				<UnitType>Creature_X_StormDragon</UnitType>
+				<Level>17</Level>
+			</UnitInstance>
+		</Encounter>
+	</GoodieHutType>
+</GoodieHutTypes>

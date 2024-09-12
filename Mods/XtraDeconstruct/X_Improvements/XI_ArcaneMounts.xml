@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<ImprovementTypes>
+	<!--IMPROVEMENTS-->
+	<ImprovementType InternalName="Imp_X_HatchlingAntre">
+		<DisplayName>Hatchling Antre</DisplayName>
+		<Description>The Hatchling Antre provides three Wild Mounts every Season.</Description>
+		<RequiresCity>1</RequiresCity>
+		<BarredTerrain>River</BarredTerrain>
+		<BarredTerrain>SwampTerrain</BarredTerrain>
+		<PreferredTerrain>City</PreferredTerrain>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<PreferredTerrain>Forest</PreferredTerrain>
+		<RequiresCityImprovement>1</RequiresCityImprovement>
+		<RequiredImprovement>Conclave</RequiredImprovement>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_ArcaneMounts_Hatchling</Attribute>
+		</Prereq>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_XL_Beer</Attribute>
+			<Value>-100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>RefinedCrystal</Attribute>
+			<Value>-100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Gold</Attribute>
+			<Value>-100</Value>
+		</GameModifier>
+		<LaborToBuild>1053</LaborToBuild>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Resource_X_ArcaneMounts</Attribute>
+			<Value>3</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+3 Wild Mounts per Season</Provides>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_MOUNT</AIPrefType>
+			<AIPriority>200</AIPriority><!--1000-->
+			<AITag>Workshop</AITag>
+		</AIData>
+		<ArtDef>ArtDef_X_HatchlingAntre_Imp</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="Imp_X_MireSkathDen">
+		<DisplayName>Mire Skath Den</DisplayName>
+		<Description>The Mire Skaths Den provides a Wild Mount every Season.</Description>
+		<RequiresCity>1</RequiresCity>
+		<PreferredTerrain>SwampTerrain</PreferredTerrain>
+		<RequiresCityImprovement>1</RequiresCityImprovement>
+		<RequiredImprovement>Fortress</RequiredImprovement>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_ArcaneMounts_MireSkath</Attribute>
+		</Prereq>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_XL_Beer</Attribute>
+			<Value>-10</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>RefinedCrystal</Attribute>
+			<Value>-10</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Gold</Attribute>
+			<Value>-100</Value>
+		</GameModifier>
+		<LaborToBuild>627</LaborToBuild>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Resource_X_ArcaneMounts</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Wild Mount per Season</Provides>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_MOUNT</AIPrefType>
+			<AIPriority>125</AIPriority><!--750-->
+			<AITag>Workshop</AITag>
+		</AIData>
+		<ArtDef>ArtDef_X_MireSkathDen_Imp</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="Imp_X_PonyStable">
+		<DisplayName>Pony Stable</DisplayName>
+		<Description>The Pony Stable provides a Wild Mount every Season.</Description>
+		<RequiresCity>1</RequiresCity>
+		<BarredTerrain>River</BarredTerrain>
+		<BarredTerrain>SwampTerrain</BarredTerrain>
+		<PreferredTerrain>City</PreferredTerrain>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<PreferredTerrain>Forest</PreferredTerrain>
+		<RequiresCityImprovement>1</RequiresCityImprovement>
+		<RequiredImprovement>TradeGuild</RequiredImprovement>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_ArcaneMounts_Pony</Attribute>
+		</Prereq>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_XL_Beer</Attribute>
+			<Value>-10</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>RefinedCrystal</Attribute>
+			<Value>-10</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Gold</Attribute>
+			<Value>-100</Value>
+		</GameModifier>
+		<LaborToBuild>627</LaborToBuild>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Resource_X_ArcaneMounts</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Wild Mount per Season</Provides>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_MOUNT</AIPrefType>
+			<AIPriority>125</AIPriority><!--750-->
+			<AITag>Workshop</AITag>
+		</AIData>
+		<ArtDef>ArtDef_X_PonyStable_Imp</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="Imp_X_RavenousHarridanNest">
+		<DisplayName>Ravenous Nest</DisplayName>
+		<Description>The Ravenous Harridan Nest provides a Wild Mount every Season.</Description>
+		<RequiresCity>1</RequiresCity>
+		<BarredTerrain>River</BarredTerrain>
+		<BarredTerrain>SwampTerrain</BarredTerrain>
+		<PreferredTerrain>City</PreferredTerrain>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<PreferredTerrain>Forest</PreferredTerrain>
+		<RequiresCityImprovement>1</RequiresCityImprovement>
+		<RequiredImprovement>Conclave</RequiredImprovement>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_ArcaneMounts_RavenousHarridan</Attribute>
+		</Prereq>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_XL_Beer</Attribute>
+			<Value>-10</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>RefinedCrystal</Attribute>
+			<Value>-10</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Gold</Attribute>
+			<Value>-100</Value>
+		</GameModifier>
+		<LaborToBuild>627</LaborToBuild>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Resource_X_ArcaneMounts</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Wild Mount per Season</Provides>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_MOUNT</AIPrefType>
+			<AIPriority>125</AIPriority><!--750-->
+			<AITag>Workshop</AITag>
+		</AIData>
+		<ArtDef>ArtDef_X_RavenousHarridanNest_Imp</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="Imp_X_WarBoarsKennel">
+		<DisplayName>War Boar Kennel</DisplayName>
+		<Description>The War Boar Kennel provide a Wild Mount every Season.</Description>
+		<RequiresCity>1</RequiresCity>
+		<BarredTerrain>River</BarredTerrain>
+		<BarredTerrain>SwampTerrain</BarredTerrain>
+		<PreferredTerrain>City</PreferredTerrain>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<PreferredTerrain>Forest</PreferredTerrain>
+		<RequiresCityImprovement>1</RequiresCityImprovement>
+		<RequiredImprovement>Fortress</RequiredImprovement>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_ArcaneMounts_WarBoar</Attribute>
+		</Prereq>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_XL_Beer</Attribute>
+			<Value>-10</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>RefinedCrystal</Attribute>
+			<Value>-10</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Gold</Attribute>
+			<Value>-100</Value>
+		</GameModifier>
+		<LaborToBuild>1053</LaborToBuild>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Resource_X_ArcaneMounts</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Wild Mount per Season</Provides>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_MOUNT</AIPrefType>
+			<AIPriority>125</AIPriority><!--750-->
+			<AITag>Workshop</AITag>
+		</AIData>
+		<ArtDef>ArtDef_X_WarBoarsKennel_Imp</ArtDef>
+	</ImprovementType>
+	<!--PRODUCE-->
+	<ImprovementType InternalName="Produce_X_Hatchling">
+		<DisplayName>Produce Hatchlings</DisplayName>
+		<Description>Producing Hatchlings increases the amount of Hatchling a city provides and is done instead of training units or constructing buildings.</Description>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_ArcaneMounts_Hatchling</Attribute>
+		</Prereq>
+		<LaborToBuild>-1</LaborToBuild>
+		<RequiresCityImprovement>1</RequiresCityImprovement>
+		<RequiredImprovement>PyreOfAnniellum</RequiredImprovement>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Resource_X_ArcaneMounts</Attribute>
+			<PerTurn>1</PerTurn>
+			<ApplyDuringConstruction>1</ApplyDuringConstruction>
+			<Provides>+2 Wild Mounts per Season</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+			<Value>2</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority><!--15-->
+			<AITag>Farming</AITag>
+		</AIData>
+		<ArtDef>ArtDef_X_HatchlingDragons_Produce</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="Produce_X_MireSkaths">
+		<DisplayName>Produce Mire Skaths</DisplayName>
+		<Description>Producing Mire Skaths increases the amount of Mire Skaths a city provides and is done instead of training units or constructing buildings.</Description>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_ArcaneMounts_MireSkath</Attribute>
+		</Prereq>
+		<LaborToBuild>-1</LaborToBuild>
+		<RequiresCityImprovement>1</RequiresCityImprovement>
+		<RequiredImprovement>Underforge</RequiredImprovement>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Resource_X_ArcaneMounts</Attribute>
+			<PerTurn>1</PerTurn>
+			<ApplyDuringConstruction>1</ApplyDuringConstruction>
+			<Provides>+1 Wild Mount per Season</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+			<Value>1</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority><!--15-->
+			<AITag>Farming</AITag>
+		</AIData>
+		<ArtDef>ArtDef_X_MireSkaths_Produce</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="Produce_X_Ponies">
+		<DisplayName>Produce Ponies</DisplayName>
+		<Description>Producing Ponies increases the amount of Ponies a city provides and is done instead of training units or constructing buildings.</Description>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_ArcaneMounts_Pony</Attribute>
+		</Prereq>
+		<LaborToBuild>-1</LaborToBuild>
+		<RequiresCityImprovement>1</RequiresCityImprovement>
+		<RequiredImprovement>GuildTribunal</RequiredImprovement>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Resource_X_ArcaneMounts</Attribute>
+			<PerTurn>1</PerTurn>
+			<ApplyDuringConstruction>1</ApplyDuringConstruction>
+			<Provides>+1 Wild Mount per Season</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+			<Value>1</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority><!--15-->
+			<AITag>Farming</AITag>
+		</AIData>
+		<ArtDef>ArtDef_X_Ponies_Produce</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="Produce_X_RavenousHarridan">
+		<DisplayName>Produce Ravenous</DisplayName>
+		<Description>Producing Ravenous Harridan increases the amount of Ravenous Harridan a city provides and is done instead of training units or constructing buildings.</Description>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_ArcaneMounts_RavenousHarridan</Attribute>
+		</Prereq>
+		<LaborToBuild>-1</LaborToBuild>
+		<RequiresCityImprovement>1</RequiresCityImprovement>
+		<RequiredImprovement>HedigahBathhouse</RequiredImprovement>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Resource_X_ArcaneMounts</Attribute>
+			<PerTurn>1</PerTurn>
+			<ApplyDuringConstruction>1</ApplyDuringConstruction>
+			<Provides>+1 Wild Mount per Season</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+			<Value>1</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority><!--15-->
+			<AITag>Farming</AITag>
+		</AIData>
+		<ArtDef>ArtDef_X_RavenousHarridan_Produce</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="Produce_X_WarBoars">
+		<DisplayName>Produce War Boars</DisplayName>
+		<Description>Producing War Boars increases the amount of War Boars a city provides and is done instead of training units or constructing buildings.</Description>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_ArcaneMounts_WarBoar</Attribute>
+		</Prereq>
+		<LaborToBuild>-1</LaborToBuild>
+		<RequiresCityImprovement>1</RequiresCityImprovement>
+		<RequiredImprovement>GreatArena</RequiredImprovement>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Resource_X_ArcaneMounts</Attribute>
+			<PerTurn>1</PerTurn>
+			<ApplyDuringConstruction>1</ApplyDuringConstruction>
+			<Provides>+1 Wild Mount per Season</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+			<Value>1</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority><!--15-->
+			<AITag>Farming</AITag>
+		</AIData>
+		<ArtDef>ArtDef_X_WarBoars_Produce</ArtDef>
+	</ImprovementType>
+</ImprovementTypes>

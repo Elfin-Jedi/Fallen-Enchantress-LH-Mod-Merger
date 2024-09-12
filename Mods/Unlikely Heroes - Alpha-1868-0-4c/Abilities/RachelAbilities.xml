@@ -1,0 +1,141 @@
+<AbilityBonuses>
+    <DataChecksum NoParse="1">
+        <Ignore>DispName</Ignore>
+        <Translate>DisplayName,Description</Translate>
+    </DataChecksum>
+	<AbilityBonus InternalName="RachelAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="Rachel">
+            <DisplayName>Rachel</DisplayName>
+            <Description>-2 attack, -1 Initiative, +10 spell resistance</Description>
+            <Icon>Ability_Attunement_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_MagicResist</StrVal>
+                <Value>10</Value>
+            </GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_CombatSpeed</StrVal>
+				<Value>-1</Value>
+			</GameModifier>
+			<GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Boost</StrVal>
+                <Value>-2</Value>
+            </GameModifier>			
+            <AdditionalTrainingTurns>6</AdditionalTrainingTurns>
+            <HideWhenUpgraded>0</HideWhenUpgraded>
+            <Type>Defensive</Type>
+			<Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>PlaceholderNA</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+	<AbilityBonus InternalName="CleansingRainAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="CleansingRain">
+				<DisplayName>Ability - Cleansing Rain</DisplayName>
+				<Description>Allows the unit to use the Cleansing Rain ability, heal all allies at the cost of crystals.</Description>
+				<Icon>Ability_Archers_Icon.png</Icon>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>UnlockCombatAbility</Attribute>
+					<StrVal>CleansingRain</StrVal>
+					<Provides>Heals all Allies in combat and gives temporary resistance to Poison.
+					Unlocks at Level 7</Provides>
+				</GameModifier>
+				<CombatRating>50</CombatRating>
+				<HideWhenUpgraded>0</HideWhenUpgraded>
+				<IsCombatAbility>1</IsCombatAbility>
+				<Likelihood>1</Likelihood>
+				<RarityDisplay>Rare</RarityDisplay>
+				<MinimumLevel>7</MinimumLevel>
+				<RequiredLevel>7</RequiredLevel>
+				<Type>Ability</Type>
+				<Prereq>
+					<Type>UnitStat</Type>
+					<Attribute>UnitStat_Level</Attribute>
+					<Value>7</Value>
+				</Prereq>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>Rachel</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>6</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="CrystalBlastAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="CrystalBlast">
+				<DisplayName>Ability - Crystal Blast</DisplayName>
+				<Description>Rachel focuses her crystal power on an enemy to do damage.</Description>
+				<Icon>Ability_MarksmanI_Icon.png</Icon>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>UnlockCombatAbility</Attribute>
+					<StrVal>CrystalBlast</StrVal>
+					<Provides>Damages target enemy with a Burst of Magic.
+					Unlocks at Level 10</Provides>
+				</GameModifier>
+				<CombatRating>20</CombatRating>
+				<HideWhenUpgraded>0</HideWhenUpgraded>
+				<IsCombatAbility>1</IsCombatAbility>
+				<Likelihood>1</Likelihood>
+				<RarityDisplay>Rare</RarityDisplay>
+				<MinimumLevel>10</MinimumLevel>
+				<RequiredLevel>10</RequiredLevel>
+				<Type>Ability</Type>
+				<Prereq>
+					<Type>UnitStat</Type>
+					<Attribute>UnitStat_Level</Attribute>
+					<Value>10</Value>
+				</Prereq>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>Rachel</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>6</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="SelfSacrifaceAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="SelfSacrifice">
+				<DisplayName>Ability - Self Sacrifice</DisplayName>
+				<Description>Rachel heals an ally for 3hp per level, but draining her own life at 1hp per level. Burns 1 Crystal on use.</Description>
+				<Icon>T_Heal_Icon.png</Icon>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>UnlockCombatAbility</Attribute>
+					<StrVal>SelfSacrifice</StrVal>
+					<Provides>Heals an Ally using life force.
+					Unlocks at Level 4</Provides>
+				</GameModifier>
+				<CombatRating>20</CombatRating>
+				<HideWhenUpgraded>0</HideWhenUpgraded>
+				<IsCombatAbility>1</IsCombatAbility>
+				<Likelihood>1</Likelihood>
+				<RarityDisplay>Rare</RarityDisplay>
+				<MinimumLevel>4</MinimumLevel>
+				<RequiredLevel>4</RequiredLevel>
+				<Type>Ability</Type>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>6</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+</AbilityBonuses>

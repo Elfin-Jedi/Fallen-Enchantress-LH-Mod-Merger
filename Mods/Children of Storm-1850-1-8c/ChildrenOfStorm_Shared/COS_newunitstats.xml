@@ -1,0 +1,417 @@
+<?xml version="1.0"?>
+<Container>
+  <!-- This unitstat is implemented to do absolutely nothing. That means you should never depend on this for any calculation in a spell, as a trigger or effect-booster or anything like it. Anyone is free to add or remove anything from it. This has two purposes: 
+     1) We can extend the canstack0 past the duration of the main modifiers - example a spell that lasts 2 turns, but the unit cannot be targetted again with the same spell for 5 turns
+
+	     <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>donothingunitstat</StrVal>
+            <Value>1</Value>
+<Duration>5</Duration>
+	</GameModifier>
+
+
+     2) We can create procs by calling this modifier as a do-nothing-modifier from a chaos-type spell
+
+"unit has 50% chance to gain 3 dodge for 1 turn"
+
+   <AppliesRandomModifier>1</AppliesRandomModifier>
+	     <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>donothingunitstat</StrVal>
+            <Value>0</Value>
+<Duration>0</Duration>
+	</GameModifier>
+	     <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Dodge</StrVal>
+            <Value>+3</Value>
+<Duration>1</Duration>
+	</GameModifier>
+
+-->
+  <UnitStatType InternalName="donothingunitstat">
+    <DisplayName>dfas</DisplayName>
+    <DisplayNameShort>adfs</DisplayNameShort>
+    <Description>afdsasdf</Description>
+    <Icon>Stat_Dodge_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <UnitStatGrouping>CombatStat</UnitStatGrouping>
+  </UnitStatType>
+  <UnitStatType InternalName="Reliquary_Skystrike">
+    <DisplayName>dfas</DisplayName>
+    <DisplayNameShort>adfs</DisplayNameShort>
+    <Description>afdsasdf</Description>
+    <Icon>Stat_Dodge_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <UnitStatGrouping>CombatStat</UnitStatGrouping>
+  </UnitStatType>
+  <UnitStatType InternalName="Reliquary_FlyCarpet">
+    <DisplayName>dfas</DisplayName>
+    <DisplayNameShort>adfs</DisplayNameShort>
+    <Description>afdsasdf</Description>
+    <Icon>Stat_Dodge_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <UnitStatGrouping>CombatStat</UnitStatGrouping>
+  </UnitStatType>
+  <UnitStatType InternalName="UnitStat_Reliquary_Earthshaker">
+    <DisplayName>dfas</DisplayName>
+    <DisplayNameShort>adfs</DisplayNameShort>
+    <Description>afdsasdf</Description>
+    <Icon>Stat_Dodge_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <UnitStatGrouping>CombatStat</UnitStatGrouping>
+  </UnitStatType>
+  <UnitStatType InternalName="UnitStat_Reliquary_Dragonrider">
+    <DisplayName>dfas</DisplayName>
+    <DisplayNameShort>adfs</DisplayNameShort>
+    <Description>afdsasdf</Description>
+    <Icon>Stat_Dodge_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <UnitStatGrouping>CombatStat</UnitStatGrouping>
+    <UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+  </UnitStatType>
+  <UnitStatType InternalName="UnitStat_Reliquary_HatchedDragon">
+    <DisplayName>dfas</DisplayName>
+    <DisplayNameShort>adfs</DisplayNameShort>
+    <Description>afdsasdf</Description>
+    <Icon>Stat_Dodge_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <UnitStatGrouping>CombatStat</UnitStatGrouping>
+    <UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+  </UnitStatType>
+  <UnitStatType InternalName="UnitStat_BG_IsRidingDragon">
+    <DisplayName>dfas</DisplayName>
+    <DisplayNameShort>adfs</DisplayNameShort>
+    <Description>afdsasdf</Description>
+    <Icon>Stat_Dodge_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <UnitStatGrouping>CombatStat</UnitStatGrouping>
+    <UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+  </UnitStatType>
+  <UnitStatType InternalName="UnitStat_Hazaz">
+    <DisplayName>Hazaz</DisplayName>
+    <DisplayNameShort>adfs</DisplayNameShort>
+    <Description>afdsasdf</Description>
+    <Icon>Stat_Dodge_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <UnitStatGrouping>CombatStat</UnitStatGrouping>
+    <UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+  </UnitStatType>
+  <UnitStatType InternalName="UnitStat_Reliquary_IsCursed">
+    <DisplayName>ISMdfasasdfOUNTED</DisplayName>
+    <DisplayNameShort>DGE</DisplayNameShort>
+    <Description>The chance to dodge an attack in battle.</Description>
+    <Icon>Stat_Dodge_Icon.png</Icon>
+    <DefaultValue>0.0</DefaultValue>
+  </UnitStatType>
+  <UnitStatType InternalName="UnitStat_Reliquary_CanLiftCurse">
+    <DisplayName>Special Circumstance to lift Hex</DisplayName>
+    <DisplayNameShort>DGE</DisplayNameShort>
+    <Description>The chance to dodge an attack in battle.</Description>
+    <Icon>Stat_Dodge_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <UnitStatGrouping>CombatStat</UnitStatGrouping>
+    <DefaultValue>0.0</DefaultValue>
+  </UnitStatType>
+  <UnitStatType InternalName="UnitStat_ImmuneToFear">
+    <DisplayName>ISMdfasasdfOUNTED</DisplayName>
+    <DisplayNameShort>DGE</DisplayNameShort>
+    <Description>The chance to dodge an attack in battle.</Description>
+    <Icon>Stat_Dodge_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <UnitStatGrouping>CombatStat</UnitStatGrouping>
+    <DefaultValue>0.0</DefaultValue>
+  </UnitStatType>
+  <UnitStatType InternalName="UnitStat_Reliquary_Swordofnightmares">
+    <DisplayName>ISMdfasasdfOUNTED</DisplayName>
+    <DisplayNameShort>DGE</DisplayNameShort>
+    <Description>The chance to dodge an attack in battle.</Description>
+    <Icon>Stat_Dodge_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <UnitStatGrouping>CombatStat</UnitStatGrouping>
+    <DefaultValue>0.0</DefaultValue>
+  </UnitStatType>
+  <UnitStatType InternalName="UnitStat_BG_CanLearnSpellbooks">
+    <DisplayName>ISMdfasasdfOUNTED</DisplayName>
+    <DisplayNameShort>DGE</DisplayNameShort>
+    <Description>The chance to dodge an attack in battle.</Description>
+    <Icon>Stat_Dodge_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <UnitStatGrouping>CombatStat</UnitStatGrouping>
+    <DefaultValue>1.0</DefaultValue>
+  </UnitStatType>
+  <UnitStatType InternalName="UnitStat_BG_IsCelestial">
+    <DisplayName>ISMdfasasdfOUNTED</DisplayName>
+    <DisplayNameShort>DGE</DisplayNameShort>
+    <Description>The chance to dodge an attack in battle.</Description>
+    <Icon>Stat_Dodge_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <UnitStatGrouping>CombatStat</UnitStatGrouping>
+    <DefaultValue>0.0</DefaultValue>
+  </UnitStatType>
+  <UnitStatType InternalName="UnitStat_FantasticFury">
+    <DisplayName>ISMdfasasdfOUNTED</DisplayName>
+    <DisplayNameShort>DGE</DisplayNameShort>
+    <Description>The chance to dodge an attack in battle.</Description>
+    <Icon>Stat_Dodge_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <UnitStatGrouping>CombatStat</UnitStatGrouping>
+    <DefaultValue>0.0</DefaultValue>
+  </UnitStatType>
+  <UnitStatType InternalName="UnitStat_NightmareDimension">
+    <DisplayName>ISMdfasasdfOUNTED</DisplayName>
+    <DisplayNameShort>DGE</DisplayNameShort>
+    <Description>The chance to dodge an attack in battle.</Description>
+    <Icon>Stat_Dodge_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <UnitStatGrouping>CombatStat</UnitStatGrouping>
+    <DefaultValue>0.0</DefaultValue>
+  </UnitStatType>
+  <UnitStatType InternalName="UnitStat_CannotBeCharmed">
+    <DisplayName>ISMdfasasdfOUNTED</DisplayName>
+    <DisplayNameShort>DGE</DisplayNameShort>
+    <Description>The chance to dodge an attack in battle.</Description>
+    <Icon>Stat_Dodge_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <UnitStatGrouping>CombatStat</UnitStatGrouping>
+    <DefaultValue>0.0</DefaultValue>
+  </UnitStatType>
+  <UnitStatType InternalName="UnitStat_IgnoreMaul">
+    <DisplayName>ISMdfasasdfOUNTED</DisplayName>
+    <DisplayNameShort>DGE</DisplayNameShort>
+    <Description>The chance to dodge an attack in battle.</Description>
+    <Icon>Stat_Dodge_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <UnitStatGrouping>CombatStat</UnitStatGrouping>
+    <DefaultValue>0.0</DefaultValue>
+  </UnitStatType>
+  <UnitStatType InternalName="UnitStat_Reliquary_SurgeonBeetle">
+    <DisplayName>ISMdfasasdfOUNTED</DisplayName>
+    <DisplayNameShort>DGE</DisplayNameShort>
+    <Description>The chance to dodge an attack in battle.</Description>
+    <Icon>Stat_Dodge_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <UnitStatGrouping>CombatStat</UnitStatGrouping>
+    <DefaultValue>0.0</DefaultValue>
+  </UnitStatType>
+  <UnitStatType InternalName="UnitStat_Attack_Divine">
+    <DisplayName>Arcane Attack</DisplayName>
+    <DisplayNameShort>Mgcl ATK</DisplayNameShort>
+    <Description>The Arcane damage that this unit can deal.</Description>
+    <Icon>Spellpoint_Cost_Icon.png</Icon>
+    <DefaultValue>0.0</DefaultValue>
+    <Hidden>1</Hidden>
+    <IsAttackStat>1</IsAttackStat>
+    <CorrespondingDefenseStat>UnitStat_MagicResistNONEXIST</CorrespondingDefenseStat>
+    <CorrespondingResistStat>UnitStat_ResistDivine</CorrespondingResistStat>
+    <UnitStatGrouping>CombatStat</UnitStatGrouping>
+  </UnitStatType>
+  <UnitStatType InternalName="UnitStat_ResistDivine">
+    <DisplayName>Arcane Resistance</DisplayName>
+    <DisplayNameShort>Mgcl ATT RES</DisplayNameShort>
+    <Description>Ability to resist Divine attacks.</Description>
+    <Icon>Spellpoint_Cost_Icon.png</Icon>
+    <DefaultValue>0.0</DefaultValue>
+    <Hidden>1</Hidden>
+    <UnitStatGrouping>CombatStat</UnitStatGrouping>
+  </UnitStatType>
+
+  <UnitStatType InternalName="UnitStat_EquippedUmberDroth">
+    <DisplayName>ISMdfasasdfOUNTED</DisplayName>
+    <DisplayNameShort>DGE</DisplayNameShort>
+    <Description>The chance to dodge an attack in battle.</Description>
+    <Icon>Stat_Dodge_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <UnitStatGrouping>CombatStat</UnitStatGrouping>
+    <DefaultValue>0.0</DefaultValue>
+  </UnitStatType>
+  <UnitStatType InternalName="UnitStat_EquippedDrake">
+    <DisplayName>ISMdfasasdfOUNTED</DisplayName>
+    <DisplayNameShort>DGE</DisplayNameShort>
+    <Description>The chance to dodge an attack in battle.</Description>
+    <Icon>Stat_Dodge_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <UnitStatGrouping>CombatStat</UnitStatGrouping>
+    <DefaultValue>0.0</DefaultValue>
+  </UnitStatType>
+  <UnitStatType InternalName="UnitStat_EquippedPrimalBear">
+    <DisplayName>ISMdfasasdfOUNTED</DisplayName>
+    <DisplayNameShort>DGE</DisplayNameShort>
+    <Description>The chance to dodge an attack in battle.</Description>
+    <Icon>Stat_Dodge_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <UnitStatGrouping>CombatStat</UnitStatGrouping>
+    <DefaultValue>0.0</DefaultValue>
+  </UnitStatType>
+  <UnitStatType InternalName="UnitStat_EquippedWarBoar">
+    <DisplayName>ISMdfasasdfOUNTED</DisplayName>
+    <DisplayNameShort>DGE</DisplayNameShort>
+    <Description>The chance to dodge an attack in battle.</Description>
+    <Icon>Stat_Dodge_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <UnitStatGrouping>CombatStat</UnitStatGrouping>
+    <DefaultValue>0.0</DefaultValue>
+  </UnitStatType>
+  <!-- Boolean, 1 for yes 0 for no. Halfbreed is a Living Stone trait that makes them semi-human. It impacts Living Metal trait also.-->
+  <UnitStatType InternalName="UnitStat_IsHalfBreed">
+    <DisplayName>ISMdfasasdfOUNTED</DisplayName>
+    <DisplayNameShort>DGE</DisplayNameShort>
+    <Description>The chance to dodge an attack in battle.</Description>
+    <Icon>Stat_Dodge_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <UnitStatGrouping>CombatStat</UnitStatGrouping>
+    <DefaultValue>0.0</DefaultValue>
+  </UnitStatType>
+  <!-- This value adapts goblin self-inflicted damage from infighting. Goblins start with 100 of this unitstat, which is 100%. 
+  <UnitStatType InternalName="UnitStat_Infighting">
+    <DisplayName>IShgasdfasfMOUNTED</DisplayName>
+    <DisplayNameShort>DGE</DisplayNameShort>
+    <Description>The chance to dodge an attack in battle.</Description>
+    <Icon>Stat_Dodge_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <UnitStatGrouping>CombatStat</UnitStatGrouping>
+  </UnitStatType>-->
+  <!-- Goblins start with 3 in this value. Each discipline trait adds 2. The calculation is UnitStat_Infighting / UnitStat_AntiInfighting. Lunatics have this value setunitstat 1.
+  <UnitStatType InternalName="UnitStat_AntiInfighting">
+    <DisplayName>IShgasdfasfMOUNTED</DisplayName>
+    <DisplayNameShort>DGE</DisplayNameShort>
+    <Description>The chance to dodge an attack in battle.</Description>
+    <Icon>Stat_Dodge_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <UnitStatGrouping>CombatStat</UnitStatGrouping>
+  </UnitStatType>-->
+  <!-- used for Goblin Lunatics' special attack
+  <UnitStatType InternalName="UnitStat_LunaticIsEnraged">
+    <DisplayName>IShgasdfasfMOUNTED</DisplayName>
+    <DisplayNameShort>DGE</DisplayNameShort>
+    <Description>The chance to dodge an attack in battle.</Description>
+    <Icon>Stat_Dodge_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <UnitStatGrouping>CombatStat</UnitStatGrouping>
+  </UnitStatType> -->
+  <UnitStatType InternalName="UnitStat_BG_IsRace_Angel">
+    <DisplayName>Hidden</DisplayName>
+    <DisplayNameShort>Hidden</DisplayNameShort>
+    <Description>Hidden</Description>
+    <Icon>Stat_Dodge_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <UnitStatGrouping>CombatStat</UnitStatGrouping>
+    <UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+  </UnitStatType>
+   <UnitStatType InternalName="UnitStat_BG_IsRace_Lizardmen">
+    <DisplayName>Hidden</DisplayName>
+    <DisplayNameShort>Hidden</DisplayNameShort>
+    <Description>Hidden</Description>
+    <Icon>Stat_Dodge_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <UnitStatGrouping>CombatStat</UnitStatGrouping>
+    <UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+  </UnitStatType>
+
+  <UnitStatType InternalName="UnitStat_BG_IsRace_LivingStone">
+    <DisplayName>Hidden</DisplayName>
+    <DisplayNameShort>Hidden</DisplayNameShort>
+    <Description>Hidden</Description>
+    <Icon>Stat_Dodge_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <UnitStatGrouping>CombatStat</UnitStatGrouping>
+    <UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+  </UnitStatType>
+  <UnitStatType InternalName="UnitStat_BG_IsRace_Greenskin">
+    <DisplayName>Hidden</DisplayName>
+    <DisplayNameShort>Hidden</DisplayNameShort>
+    <Description>Hidden</Description>
+    <Icon>Stat_Dodge_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <UnitStatGrouping>CombatStat</UnitStatGrouping>
+    <UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+  </UnitStatType>
+  <UnitStatType InternalName="UnitStat_BG_IsRace_Golem">
+    <DisplayName>Hidden</DisplayName>
+    <DisplayNameShort>Hidden</DisplayNameShort>
+    <Description>Hidden</Description>
+    <Icon>Stat_Dodge_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <UnitStatGrouping>CombatStat</UnitStatGrouping>
+    <UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+  </UnitStatType>
+  <UnitStatType InternalName="UnitStat_BG_IsRace_DeathLegion">
+    <DisplayName>Hidden</DisplayName>
+    <DisplayNameShort>Hidden</DisplayNameShort>
+    <Description>Hidden</Description>
+    <Icon>Stat_Dodge_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <UnitStatGrouping>CombatStat</UnitStatGrouping>
+    <UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+  </UnitStatType>
+  <UnitStatType InternalName="UnitStat_BG_IsRace_Drota">
+    <DisplayName>Hidden</DisplayName>
+    <DisplayNameShort>Hidden</DisplayNameShort>
+    <Description>Hidden</Description>
+    <Icon>Stat_Dodge_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <UnitStatGrouping>CombatStat</UnitStatGrouping>
+    <UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+  </UnitStatType>
+  <UnitStatType InternalName="UnitStat_BG_IsRace_Centaur">
+    <DisplayName>Hidden</DisplayName>
+    <DisplayNameShort>Hidden</DisplayNameShort>
+    <Description>Hidden</Description>
+    <Icon>Stat_Dodge_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <UnitStatGrouping>CombatStat</UnitStatGrouping>
+    <UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+  </UnitStatType>
+  <UnitStatType InternalName="UnitStat_BG_IsRace_Elves">
+    <DisplayName>Hidden</DisplayName>
+    <DisplayNameShort>Hidden</DisplayNameShort>
+    <Description>Hidden</Description>
+    <Icon>Stat_Dodge_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <UnitStatGrouping>CombatStat</UnitStatGrouping>
+    <UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+  </UnitStatType>
+  <UnitStatType InternalName="UnitStat_BG_IsRace_Undead">
+    <DisplayName>Hidden</DisplayName>
+    <DisplayNameShort>Hidden</DisplayNameShort>
+    <Description>Hidden</Description>
+    <Icon>Stat_Dodge_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <UnitStatGrouping>CombatStat</UnitStatGrouping>
+    <UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+  </UnitStatType>
+  <UnitStatType InternalName="UnitStat_BG_IsRace_Shadows">
+    <DisplayName>Hidden</DisplayName>
+    <DisplayNameShort>Hidden</DisplayNameShort>
+    <Description>Hidden</Description>
+    <Icon>Stat_Dodge_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <UnitStatGrouping>CombatStat</UnitStatGrouping>
+    <UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+  </UnitStatType>
+  <UnitStatType InternalName="UnitStat_BG_IsRace_FrostGiant">
+    <DisplayName>Hidden</DisplayName>
+    <DisplayNameShort>Hidden</DisplayNameShort>
+    <Description>Hidden</Description>
+    <Icon>Stat_Dodge_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <UnitStatGrouping>CombatStat</UnitStatGrouping>
+    <UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+  </UnitStatType>
+  <UnitStatType InternalName="UnitStat_BG_IsRace_Dwarves">
+    <DisplayName>Hidden</DisplayName>
+    <DisplayNameShort>Hidden</DisplayNameShort>
+    <Description>Hidden</Description>
+    <Icon>Stat_Dodge_Icon.png</Icon>
+    <Hidden>1</Hidden>
+    <UnitStatGrouping>CombatStat</UnitStatGrouping>
+    <UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+  </UnitStatType>
+
+
+
+</Container>

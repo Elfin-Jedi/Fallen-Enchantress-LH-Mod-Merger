@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<UnitTypes>
+	<UnitType InternalName="LivingStone_Doctor">
+		<CreatureType>Champion</CreatureType>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-5</Value>
+			<Provides>-5% Unrest in the city this unit is in</Provides>
+		</GameModifier>
+
+		<DisplayName>Doctor</DisplayName>
+		<Backstory>During the events of the Cataclysm, the Living Stone known as Doctor had the horror to witness the merciless slaying of an Ironeer slave at the hands of a Sion commander.  The slave had been chained to the very outcropping of stone from which Doctor first emerged from the earth.  The Sion sliced the slave's throat, splashing blood all over Doctor while he watched, unseen, in nascent horror.  As soon as the Sion strode away, Doctor emerged and bent over the stricken, dying slave.  He had no idea what to do to help, no words for the emotions he felt, no way of knowing if this was 'normal' or exceptional.  That experience has resonated through him to this day, and Doctor is tirelessly driven to seek out knowledge of the healing arts and employ them to heal and protect those that have been damaged by the evils of the times whenever possible.  As such, rather than stay safe within the insular community that the Living Stone have formed, he wanders in strange lands, among strange peoples, where his fame as a healer extends far and wide. Once, he stopped to provide aid to a dying magician, who gave him his treasured Ereog's token, along with a compulsion never to let go of it (for he knew Doctor would otherwise have sold it for alms.)
+
+Doctor now seeks a patron to continue his mission.</Backstory>
+
+		<ModelPath>M_Demon_Elemental_Mesh_01.hkb</ModelPath>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<EyeTexture>gfx\Eyes\blinks\eyeblink_m5_Black.png</EyeTexture>
+		<AnimationPack>EF_OldManAnimationPack</AnimationPack>
+
+		<ShowAsSingleUnit>false</ShowAsSingleUnit>
+		<CutSceneDataPack>ReliasCutscenePack</CutSceneDataPack>
+		<ModelScale>1.0000</ModelScale>
+		<TacticalModelScale>1.5000</TacticalModelScale>
+		<EquipmentScale>1.0000</EquipmentScale>
+		<ClothMapScale>1.6</ClothMapScale>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<MovementType>land</MovementType>
+		<BobbingFrequency>0.0000</BobbingFrequency>
+
+		<ClothPoseIndex>24</ClothPoseIndex>
+		<InfoCardBackground>BG14_Volcanic2</InfoCardBackground>
+		<InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+
+		<CanBeDesigned>0</CanBeDesigned>
+		<Allegiance>Kingdom</Allegiance>
+		<Unique>1</Unique>
+		<IsNPC>1</IsNPC>
+		<NPCSpawnLikelihood>100</NPCSpawnLikelihood>
+		<IsChampion>1</IsChampion>
+		<Gender>Male</Gender>
+		<SoundPack>SoundPack_Generic_Male</SoundPack>
+		<SpawnRating>9</SpawnRating>
+
+		<Quote>I feel thankful that I am here to welcome you.</Quote>
+		<NPCRecruitmentText>%d gildar will buy supplies to aid the unfortunate.</NPCRecruitmentText>
+		<SelectedAbilityBonusOption>Blood_LivingStone</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>PathOfTheDefender</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Compassion</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Medic</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Spell_FirstAid</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Life1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Life2</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Life3</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>SummonWisp</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Spell_Rescue</SelectedAbilityBonusOption>
+		
+		<Medallions InternalName=""/>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_HitPoints>20</UnitStat_HitPoints>
+			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
+			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsRace_LivingStone>1</UnitStat_BG_IsRace_LivingStone>
+			<UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
+			<UnitStat_BG_IsMale>1</UnitStat_BG_IsMale>
+			<UnitStat_BG_IsNotAlive>1</UnitStat_BG_IsNotAlive>
+		</LevelMilestone>
+		
+		<Equipment>EreogsToken</Equipment>
+		
+		<AutoCreateEquipment>Mace</AutoCreateEquipment>
+		<AutoCreateEquipment>ChainBoots</AutoCreateEquipment>
+		<AutoCreateEquipment>ChainGreaves</AutoCreateEquipment>
+		<AutoCreateEquipment>ChainBreastpiece</AutoCreateEquipment>
+		<AutoCreateEquipment>RingOfRestoration</AutoCreateEquipment>
+		<AutoCreateEquipment>FirstAidKit</AutoCreateEquipment>
+		<AutoCreateEquipment>RoundShield_Glyph</AutoCreateEquipment>
+		
+		<Color_Skin>200,200,200,255</Color_Skin>
+		<Color_Hair>255,255,255,255</Color_Hair>
+		<Color_Clothing1>255,255,255,255</Color_Clothing1>
+		<Color_Clothing2>255,0,0,255</Color_Clothing2>
+		<Color_Metal>200,200,200,255</Color_Metal>
+		<Texture_Skin>expanded_M_Demon_Elemental_Texture_01.png</Texture_Skin>
+		
+		<UnitModelType>LivingStone</UnitModelType>
+		<NPCFreeRecruit>0</NPCFreeRecruit>
+		<RaceType>Race_Type_LivingStone</RaceType>
+		<WageOverride>1</WageOverride>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+	</UnitType>
+
+</UnitTypes>

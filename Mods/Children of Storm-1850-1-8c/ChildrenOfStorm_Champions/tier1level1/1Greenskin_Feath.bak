@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<UnitTypes>
+  <UnitType InternalName="Greenskin_Feath"><CreatureType>Champion</CreatureType>
+		    <GameModifier>
+      <ModType>Resource</ModType>
+      <Attribute>Unrest</Attribute>
+      <Value>-5</Value>
+      <Provides>-5% Unrest in the city this unit is in</Provides>
+    </GameModifier>
+    <ClothMapScale>1.6</ClothMapScale>
+    <!-- Champion_Magar-->
+    <DisplayName>Feath</DisplayName>
+    <Backstory>Feath is a genius in the area of finance, even compared to other Goblins. The other Goblins living with the Greenskin quickly realized the major threat Feath posed to them. As is common in Greenskin culture, they paid an assassin to take care of the problem. Feath was lucky and managed to escape the attempt at his life. Afterward, it left the other Greenskin to try and forge its own path in the world. Although Greenskin are generally seen as vermin more than intelligent beings, no one who has spent more than a minute in the presence of Feath would speak that claim against him. That said, at the end of the day, Feath won't hesitate to skim a little off the top if opportunity arises. When not off on an adventure, Feath is usually found in its tiny cave with ledgers stacked to the roof, muttering about "macro" this and "macro" that.</Backstory>
+    <HasEssence>true</HasEssence>
+    <ModelPath>drotabodymale.hkb</ModelPath>
+    <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+    <EyeTexture>gfx\eyes\blinks\eyeblink_f3_hazel.png</EyeTexture>
+    <AnimationPack>EF_MaleSovereignAnimationPack</AnimationPack>
+    <ShowAsSingleUnit>false</ShowAsSingleUnit>
+    <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+    <ModelScale>0.8000</ModelScale>
+    <TacticalModelScale>1.5000</TacticalModelScale>
+    <EquipmentScale>1.0000</EquipmentScale>
+    <ClothMapScale>1.2000</ClothMapScale>
+    <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+    <MovementType>land</MovementType>
+    <BobbingFrequency>0.0000</BobbingFrequency>
+    <ClothPoseIndex>3</ClothPoseIndex>
+    <InfoCardBackground>BG31_Market</InfoCardBackground>
+    <InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+    <CanBeDesigned>0</CanBeDesigned>
+    <!-- -->
+    <Allegiance>Empire</Allegiance>
+    <Unique>1</Unique>
+    <IsNPC>1</IsNPC>
+    <NPCSpawnLikelihood>200</NPCSpawnLikelihood>
+    <IsChampion>1</IsChampion>
+    <Gender>Male</Gender>
+    <SpawnRating>1</SpawnRating>
+    <Treasure>
+      <Liklihood>100</Liklihood>
+      <GameModifier>
+        <ModType>GiveItem</ModType>
+        <Attribute>Axe</Attribute>
+        <BoolVal1>1</BoolVal1>
+      </GameModifier>
+    </Treasure>
+    <Quote>Grrr</Quote>
+    <NPCRecruitmentText>I'll join you for free... if you let me skim a little off the top!</NPCRecruitmentText>
+    <SelectedAbilityBonusOption>Blood_Goblin</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Death1</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Water1</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>FeathsOath</SelectedAbilityBonusOption>
+    <!-- -->
+    <Medallions InternalName=""/>
+    <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <UnitStat_Accuracy>80</UnitStat_Accuracy>
+      <UnitStat_BG_IsEmpire>1.0000</UnitStat_BG_IsEmpire>
+      <UnitStat_BG_IsHumanoid>1.0000</UnitStat_BG_IsHumanoid>
+      <UnitStat_BG_IsMale>1.0000</UnitStat_BG_IsMale>
+      <UnitStat_BG_IsRace_Greenskin>1.0000</UnitStat_BG_IsRace_Greenskin>
+      <UnitStat_BG_IsChampion>1.0000</UnitStat_BG_IsChampion>
+      <UnitStat_CombatSpeed>22.0000</UnitStat_CombatSpeed>
+      <UnitStat_HitPoints>20.0000</UnitStat_HitPoints>
+      <UnitStat_WeightCapacity>20.0000</UnitStat_WeightCapacity>
+    </LevelMilestone>
+    <Equipment>Goblinhead4</Equipment>
+    <AutoCreateEquipment>Staff_War</AutoCreateEquipment>
+    <Color_Skin>160,177,114,255</Color_Skin>
+    <Color_Hair>41,34,13,255</Color_Hair>
+    <Color_Clothing1>99,63,30,255</Color_Clothing1>
+    <Color_Clothing2>78,65,50,255</Color_Clothing2>
+    <Color_Metal>56,33,13,255</Color_Metal>
+    <Texture_Skin>expanded_M_SandCrawler_Texture_02.png</Texture_Skin>
+    <Texture_Eyes>gfx\eyes\blinks\eyeblink_f3_hazel.png</Texture_Eyes>
+    <UnitModelType>Goblin</UnitModelType>
+    <NPCFreeRecruit>0</NPCFreeRecruit>
+    <RaceType>Race_Type_Greenskin</RaceType>
+    <NPCFreeRecruit>1</NPCFreeRecruit>
+    <WageOverride>2</WageOverride>
+    <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+  </UnitType>
+  <AbilityBonus InternalName="FeathsOath">
+    <AbilityBonusOption InternalName="FeathsOath">
+      <DisplayName>Feath's Oath</DisplayName>
+      <Description>This champion is free to recruit, but by recruiting Feath you accept to pay him 2 Gildar per turn (in total).
+
+	      Feath gives a Faction-wide +2% to Gildar production from all sources.
+
+(If you "get rid" of Feath, you will also lose the 2% bonus)</Description>
+      <Icon>Ability_FleshBoundTome_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_Gold</StrVal>
+        <Value>2</Value>
+        <Provides>This champion is free to recruit, but by recruiting Feath you accept to pay him 2 Gildar per turn (in total).
+
+	      Feath gives a Faction-wide +2% to Gildar production from all sources.
+
+(If you "get rid" of Feath, you will also lose the 2% bonus)</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>0</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+</UnitTypes>

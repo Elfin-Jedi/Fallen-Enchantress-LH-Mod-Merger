@@ -1,0 +1,328 @@
+<?xml version="1.0"?>
+<Container>
+  <UnitType InternalName="Landshark">
+    <DisplayName>Landshark</DisplayName>
+    <CreatureType>Beast</CreatureType>
+    <CanBeDesigned>0</CanBeDesigned>
+    <IsSovereign>0</IsSovereign>
+    <AllowGrouping>0</AllowGrouping>
+    <HasWages>0</HasWages>
+    <SpawnRating>6</SpawnRating>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <UnitStat_Accuracy>75</UnitStat_Accuracy>
+      <UnitStat_Attack_Pierce>17</UnitStat_Attack_Pierce>
+      <UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+      <UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
+      <UnitStat_HitPoints>9</UnitStat_HitPoints>
+      <UnitStat_Intelligence>1</UnitStat_Intelligence>
+      <UnitStat_Moves>4</UnitStat_Moves>
+      <UnitStat_BG_IsMonster>1</UnitStat_BG_IsMonster>
+      <UnitStat_BG_IsBeast>1</UnitStat_BG_IsBeast>
+      <UnitStat_Defense_Blunt>8</UnitStat_Defense_Blunt>
+      <UnitStat_Defense_Cutting>8</UnitStat_Defense_Cutting>
+      <UnitStat_Defense_Pierce>8</UnitStat_Defense_Pierce>
+    </LevelMilestone>
+    <LevelMilestone InternalName="L15">
+      <Level>15</Level>
+      <UnitStat_Accuracy>75</UnitStat_Accuracy>
+      <UnitStat_Attack_Pierce>37</UnitStat_Attack_Pierce>
+      <UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+      <UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
+      <UnitStat_HitPoints>25</UnitStat_HitPoints>
+      <UnitStat_Intelligence>1</UnitStat_Intelligence>
+      <UnitStat_Moves>4</UnitStat_Moves>
+      <UnitStat_WeightCapacity>100</UnitStat_WeightCapacity>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Tough</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Venomous1</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>UnitStat_BG_IsFlyingAbility</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>ImmuneToCold</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Hobble</SelectedAbilityBonusOption>
+    <Backstory>Landsharks have become increasingly common after the Cataclysm. Likely this is because their natural hunting grounds, the oceans, have largely died out. Landsharks were given their name due to their illogical ability to "swim" on land. This is a magical ability, which in itself is remarkable. It seems that these Landsharks exist partially in a different dimension, where a layer of water covers all the world. They are able to use this water to swim in, and even breathe in it. They still prefer the water we have in our reality, so being forced onto land to look for prey has caused them to become increasingly aggressive towards all species (normally they just hunt small fish).</Backstory>
+    <Medallions InternalName="">
+      <All>ryzomshark_medallion.png</All>
+    </Medallions>
+    <AnimationPack>8HydraAnimationPack</AnimationPack>
+    <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+    <ClothMapScale>0.615</ClothMapScale>
+    <Color_Skin>34,34,34,255</Color_Skin>
+    <CutSceneDataPack>BoneOgreUnitCutscenePack</CutSceneDataPack>
+    <EyeTexture>gfx/eyes/male_brown_eye.png</EyeTexture>
+    <InfoCardBackground>BG_EmpireRugged</InfoCardBackground>
+    <ModelPath>ryzomshark_mesh.hkb</ModelPath>
+    <ModelScale>1.25</ModelScale>
+    <TacticalModelScale>1.65</TacticalModelScale>
+    <ClothMapScale>1.25</ClothMapScale>
+    <SkeletonPath>ryzomshark_skeleton.hkb</SkeletonPath>
+    <SoundPack>SoundPack_Dragon1</SoundPack>
+    <Color_All>0,0,0,255</Color_All>
+    <Texture_All>ryzomshark_skin.dds</Texture_All>
+  </UnitType>
+  <GoodieHutType InternalName="Lair_Landshark">
+    <Name>Landshark Lair</Name>
+    <Description>Landsharks rarely stay in one place for long, but on occassion their camps can be found in forest areas.</Description>
+    <Rarity>40</Rarity>
+    <MinDistanceFromStartingPoints>8</MinDistanceFromStartingPoints>
+    <BarredTerrain>River</BarredTerrain>
+    <PreferredTerrain>Land</PreferredTerrain>
+    <PreferredTerrain>Rugged_Land</PreferredTerrain>
+    <PreferredTerrain>Fertile_Land</PreferredTerrain>
+    <ReleaseGuardiansOnInfluenceHit>1</ReleaseGuardiansOnInfluenceHit>
+    <SpawnRating>0</SpawnRating>
+    <TileDesign>Lair_Landshark</TileDesign>
+    <DrawnIcon>Lair_Warg.png</DrawnIcon>
+    <OnSelectSFX>Click_Forest_Wolf</OnSelectSFX>
+    <Medallions InternalName="">
+      <All>ryzomshark_medallion.png</All>
+    </Medallions>
+    <Treasure>
+      <Liklihood>100</Liklihood>
+      <GameModifier>
+        <ModType>GiveItem</ModType>
+        <StrVal>Rare</StrVal>
+      </GameModifier>
+    </Treasure>
+    <Encounter>
+      <Liklihood>100</Liklihood>
+      <WillRespawn>0</WillRespawn>
+      <WanderingRadius>0</WanderingRadius>
+      <UnitInstance>
+        <UnitType>Landshark</UnitType>
+        <Level>5</Level>
+      </UnitInstance>
+      <UnitInstance>
+        <UnitType>Landshark</UnitType>
+        <Level>3</Level>
+      </UnitInstance>
+      <UnitInstance>
+        <UnitType>Landshark</UnitType>
+        <Level>2</Level>
+      </UnitInstance>
+    </Encounter>
+    <Encounter>
+      <TacticalMap>SW_T_NightmareDimension4</TacticalMap>
+      <Liklihood>-1</Liklihood>
+      <WillRespawn>1</WillRespawn>
+      <RespawnChance>5</RespawnChance>
+      <RespawnDelay>35</RespawnDelay>
+      <WanderingRadius>50</WanderingRadius>
+      <UnitInstance>
+        <UnitType>Landshark</UnitType>
+        <Level>4</Level>
+      </UnitInstance>
+      <UnitInstance>
+        <UnitType>Landshark</UnitType>
+        <Level>2</Level>
+      </UnitInstance>
+    </Encounter>
+  </GoodieHutType>
+  <AnimationPack InternalName="8HydraAnimationPack">
+    <DisplayName>Hydra Animation Pack</DisplayName>
+    <IsAvailableForSovereignCustomization>False</IsAvailableForSovereignCustomization>
+    <AnimationSubPack>8D_Hydra_Idle_Animations</AnimationSubPack>
+    <AnimationSubPack>8D_Hydra_HeroPoseFront_Animations</AnimationSubPack>
+    <AnimationSubPack>8D_Hydra_Run_Animations</AnimationSubPack>
+    <AnimationSubPack>8D_Hydra_BattleRun_Animations</AnimationSubPack>
+    <AnimationSubPack>8D_Hydra_BattleIdle_Animations</AnimationSubPack>
+    <AnimationSubPack>8D_Hydra_Attack_Animations</AnimationSubPack>
+    <AnimationSubPack>8D_Hydra_AttackKill_Animations</AnimationSubPack>
+    <AnimationSubPack>8D_Hydra_Dodge_Animations</AnimationSubPack>
+    <AnimationSubPack>8D_Hydra_Block_Animations</AnimationSubPack>
+    <AnimationSubPack>8D_Hydra_OnHit_Animations</AnimationSubPack>
+    <AnimationSubPack>8D_Hydra_Death_Animations</AnimationSubPack>
+    <AnimationSubPack>8D_Hydra_ClothPose_Animations</AnimationSubPack>
+    <AnimationSubPack>8D_Hydra_KnockedProne_Animations</AnimationSubPack>
+    <AnimationSubPack>8D_Hydra_ProneIdle_Animations</AnimationSubPack>
+    <AnimationSubPack>8D_Hydra_Prone_OnHit_Animations</AnimationSubPack>
+    <AnimationSubPack>8D_Hydra_Prone_Killed_Animations</AnimationSubPack>
+    <AnimationSubPack>8D_Hydra_Prone_Recover_Animations</AnimationSubPack>
+  </AnimationPack>
+  <AnimationSubPack InternalName="8D_Hydra_Idle_Animations">
+    <Type>Idle</Type>
+    <AnimationInSubPack>
+      <Animation>8D_Hydra_Idle_01</Animation>
+      <likelihood>33</likelihood>
+    </AnimationInSubPack>
+    <AnimationInSubPack>
+      <Animation>8D_Hydra_Idle_02</Animation>
+      <likelihood>33</likelihood>
+    </AnimationInSubPack>
+    <AnimationInSubPack>
+      <Animation>8D_Hydra_Idle_03</Animation>
+      <likelihood>33</likelihood>
+    </AnimationInSubPack>
+    <AnimationInSubPack>
+      <Animation>8D_Hydra_Idle_04</Animation>
+      <likelihood>33</likelihood>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="8D_Hydra_HeroPoseFront_Animations">
+    <Type>HeroPoseFront</Type>
+    <AnimationInSubPack>
+      <Animation>8D_Hydra_Idle_01</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="8D_Hydra_Run_Animations">
+    <Type>Run</Type>
+    <AnimationInSubPack>
+      <Animation>8D_Hydra_Run_01</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="8D_Hydra_BattleRun_Animations">
+    <Type>BattleRun</Type>
+    <AnimationInSubPack>
+      <Animation>8D_Hydra_BattleRun_01</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="8D_Hydra_BattleIdle_Animations">
+    <Type>BattleIdle</Type>
+    <AnimationInSubPack>
+      <Animation>8D_Hydra_Idle_01</Animation>
+      <likelihood>33</likelihood>
+    </AnimationInSubPack>
+    <AnimationInSubPack>
+      <Animation>8D_Hydra_Idle_02</Animation>
+      <likelihood>33</likelihood>
+    </AnimationInSubPack>
+    <AnimationInSubPack>
+      <Animation>8D_Hydra_Idle_03</Animation>
+      <likelihood>33</likelihood>
+    </AnimationInSubPack>
+    <AnimationInSubPack>
+      <Animation>8D_Hydra_Idle_04</Animation>
+      <likelihood>33</likelihood>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="8D_Hydra_Attack_Animations">
+    <Type>Attack</Type>
+    <AnimationInSubPack>
+      <Animation>8D_Hydra_Attack_01</Animation>
+      <likelihood>25</likelihood>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="8D_Hydra_AttackKill_Animations">
+    <Type>AttackKill</Type>
+    <AnimationInSubPack>
+      <Animation>8D_Hydra_Attack_01</Animation>
+      <likelihood>25</likelihood>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="8D_Hydra_Dodge_Animations">
+    <Type>Dodge</Type>
+    <AnimationInSubPack>
+      <Animation>8D_Hydra_Dodge_01</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="8D_Hydra_Block_Animations">
+    <Type>Block</Type>
+    <AnimationInSubPack>
+      <Animation>8D_Hydra_Onhit_01</Animation>
+      <likelihood>25</likelihood>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="8D_Hydra_OnHit_Animations">
+    <Type>OnHit</Type>
+    <AnimationInSubPack>
+      <Animation>8D_Hydra_Onhit_01</Animation>
+      <likelihood>25</likelihood>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="8D_Hydra_Death_Animations">
+    <Type>Death</Type>
+    <AnimationInSubPack>
+      <Animation>8D_Hydra_Death_01</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="8D_Hydra_ClothPose_Animations">
+    <Type>ClothPose</Type>
+    <AnimationInSubPack>
+      <Animation>8D_Hydra_ClothPose_01</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="8D_Hydra_KnockedProne_Animations">
+    <Type>KnockedProne</Type>
+    <AnimationInSubPack>
+      <Animation>8D_Hydra_KnockedProne</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="8D_Hydra_ProneIdle_Animations">
+    <Type>ProneIdle</Type>
+    <AnimationInSubPack>
+      <Animation>8D_Hydra_ProneIdle</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="8D_Hydra_Prone_OnHit_Animations">
+    <Type>OnHitProne</Type>
+    <AnimationInSubPack>
+      <Animation>8D_Hydra_Onhit_01</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="8D_Hydra_Prone_Killed_Animations">
+    <Type>ProneDeath</Type>
+    <AnimationInSubPack>
+      <Animation>8D_Hydra_Death_01</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="8D_Hydra_Prone_Recover_Animations">
+    <Type>Recover</Type>
+    <AnimationInSubPack>
+      <Animation>8D_Hydra_Prone_Recover</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <Animation InternalName="8D_Hydra_KnockedProne">
+    <FileName>ryzomshark_animation_proneenter.hkb</FileName>
+    <CropFrames>0</CropFrames>
+  </Animation>
+  <Animation InternalName="8D_Hydra_ProneIdle">
+    <FileName>ryzomshark_animation_proneloop.hkb</FileName>
+    <CropFrames>0</CropFrames>
+  </Animation>
+  <Animation InternalName="8D_Hydra_Prone_Recover">
+    <FileName>ryzomshark_animation_pronerecover.hkb</FileName>
+    <CropFrames>0</CropFrames>
+  </Animation>
+  <Animation InternalName="8D_Hydra_ClothPose_01">
+    <FileName>ryzomshark_animation_clothpose01.hkb</FileName>
+    <CropFrames>0</CropFrames>
+  </Animation>
+  <Animation InternalName="8D_Hydra_Idle_01">
+    <FileName>ryzomshark_animation_idle01.hkb</FileName>
+    <CropFrames>0</CropFrames>
+  </Animation>
+  <Animation InternalName="8D_Hydra_Idle_02">
+    <FileName>ryzomshark_animation_idle02.hkb</FileName>
+    <CropFrames>0</CropFrames>
+  </Animation>
+  <Animation InternalName="8D_Hydra_Idle_03">
+    <FileName>ryzomshark_animation_idle03.hkb</FileName>
+    <CropFrames>0</CropFrames>
+  </Animation>
+  <Animation InternalName="8D_Hydra_Idle_04">
+    <FileName>ryzomshark_animation_idle04.hkb</FileName>
+    <CropFrames>0</CropFrames>
+  </Animation>
+  <Animation InternalName="8D_Hydra_Run_01">
+    <FileName>ryzomshark_animation_idle01.hkb</FileName>
+    <DeltaZ>400</DeltaZ>
+    <PlaybackSpeedModifier>1.5</PlaybackSpeedModifier>
+  </Animation>
+  <Animation InternalName="8D_Hydra_BattleRun_01">
+    <FileName>ryzomshark_animation_idle01.hkb</FileName>
+    <DeltaZ>400</DeltaZ>
+    <PlaybackSpeedModifier>1.5</PlaybackSpeedModifier>
+  </Animation>
+  <Animation InternalName="8D_Hydra_Attack_01">
+    <FileName>ryzomshark_animation_attack01.hkb</FileName>
+    <CropFrames>2</CropFrames>
+  </Animation>
+  <Animation InternalName="8D_Hydra_Onhit_01">
+    <FileName>ryzomshark_animation_attacked01.hkb</FileName>
+  </Animation>
+  <Animation InternalName="8D_Hydra_Dodge_01">
+    <FileName>ryzomshark_animation_attacked01.hkb</FileName>
+  </Animation>
+  <Animation InternalName="8D_Hydra_Death_01">
+    <FileName>ryzomshark_animation_death01.hkb</FileName>
+  </Animation>
+</Container>

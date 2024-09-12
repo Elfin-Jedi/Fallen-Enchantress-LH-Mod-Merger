@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<CityResourceEffectDefs>
+
+	<CityResourceEffectDef InternalName="JB_UnrestEffectOnFaith">
+		<InputResource>Unrest</InputResource>
+		<OutputResource>JB_Faith</OutputResource>
+		<ResourceForMultiplierOnInput>JB_FaithEffectPerUnrest</ResourceForMultiplierOnInput>
+		<EffectType>TotalPenaltyAsPercentage</EffectType>
+	</CityResourceEffectDef>
+	
+	
+	
+	
+  <ResourceType InternalName="JB_ManaPerGrain">
+    <DisplayName>Mana Per Grain</DisplayName>
+    <Description>Amount of mana each unit of grain produces.</Description>
+    <Type>JB_ManaPerGrain</Type>
+    <IconColor>0,0,0</IconColor>
+    <!--<Icon>Gfx//Icons//dude_icon.png</Icon>-->
+    <Icon>Gfx//Icons//Icon_Population.png</Icon>
+    <HideInHiergamenon>1</HideInHiergamenon>
+    <ModelColor>0,0,0</ModelColor>
+    <Worth>0</Worth>
+    <Global>0</Global>
+    <Stored>0</Stored>
+    <Rarity>0.0</Rarity>
+    <Shared>0</Shared>
+    <TradedByCaravans>0</TradedByCaravans>
+    <ShownInGlobalDisplay>0</ShownInGlobalDisplay>
+    <Medallions InternalName="Population_Res_Medallions">
+      <All>Res_Ores_Plains.png</All>
+    </Medallions>
+  </ResourceType>
+	
+  <CityResourceEffectDef InternalName="JB_GrainEffectOnMana">
+    <InputResource>TileYieldGrain</InputResource>
+    <OutputResource>Mana</OutputResource>
+    <ResourceForMultiplierOnInput>JB_ManaPerGrain</ResourceForMultiplierOnInput>
+    <EffectType>Harvest</EffectType>
+  </CityResourceEffectDef>
+	
+	
+
+</CityResourceEffectDefs>

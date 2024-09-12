@@ -1,0 +1,151 @@
+<AbilityBonuses>
+    <DataChecksum NoParse="1">
+        <Ignore>DispName</Ignore>
+        <Translate>DisplayName,Description</Translate>
+    </DataChecksum>
+	<AbilityBonus InternalName="MousyAbility">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Mousy">
+			<DisplayName>Mousy</DisplayName>
+			<Description>+5 to Dodge, +5 to Accuracy, -1 to Strength</Description>
+			<Icon>Ability_Lithe_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Dodge</StrVal>
+				<Value>5</Value>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Accuracy</StrVal>
+				<Value>5</Value>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Strength</StrVal>
+				<Value>-1</Value>
+			</GameModifier>
+			<AdditionalTrainingTurns>6</AdditionalTrainingTurns>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<Type>Defensive</Type>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>PlaceholderNA</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="CoveringFireAbility">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="CoveringFire">
+			<DisplayName>Ability - Covering Fire</DisplayName>
+			<Description>Attacks target enemy for 25% of normal damage, reduces target's accuracy by 50%, and cancels channeled spells</Description>
+			<Icon>T_Blindness_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>CoveringFire</StrVal>
+				<Provides>Attacks for 25% damage, reduces target's accuracy by 50%, and cancels channeled spells
+				Available at Level 4</Provides>
+			</GameModifier>
+				<CombatRating>25</CombatRating>
+				<HideWhenUpgraded>0</HideWhenUpgraded>
+				<IsCombatAbility>1</IsCombatAbility>
+				<Likelihood>1</Likelihood>
+				<RarityDisplay>Rare</RarityDisplay>
+				<MinimumLevel>4</MinimumLevel>
+				<RequiredLevel>4</RequiredLevel>
+			<Type>Ability</Type>
+				<Prereq>
+					<Type>UnitStat</Type>
+					<Attribute>UnitStat_Level</Attribute>
+					<Value>4</Value>
+				</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Mousy</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>6</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="RapidFireAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="RapidFire">
+				<DisplayName>Ability - Rapid Fire</DisplayName>
+				<Description>Allows the unit to use the Rapid Fire ability, area attack at 50% damage</Description>
+				<Icon>Ability_Archers_Icon.png</Icon>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>UnlockCombatAbility</Attribute>
+					<StrVal>RapidFire</StrVal>
+					<Provides>Large area attack at half damage, -30 Accuracy
+					Available at Level 7</Provides>
+				</GameModifier>
+				<CombatRating>50</CombatRating>
+				<HideWhenUpgraded>0</HideWhenUpgraded>
+				<IsCombatAbility>1</IsCombatAbility>
+				<Likelihood>1</Likelihood>
+				<RarityDisplay>Rare</RarityDisplay>
+				<MinimumLevel>7</MinimumLevel>
+				<RequiredLevel>7</RequiredLevel>
+				<Type>Ability</Type>
+				<Prereq>
+					<Type>UnitStat</Type>
+					<Attribute>UnitStat_Level</Attribute>
+					<Value>7</Value>
+				</Prereq>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>Mousy</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>6</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="BullseyeAbility">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Bullseye">
+			<DisplayName>Ability - Bullseye</DisplayName>
+			<Description>Increased focus on a single target bypassing its defenses doing full damage.  Casting time: 1</Description>
+			<Icon>Ability_MarksmanI_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockCombatAbility</Attribute>
+				<StrVal>Bullseye</StrVal>
+				<Provides>Increased focus on a single target bypassing its defenses.
+				Available at Level 10</Provides>
+			</GameModifier>
+			<CombatRating>100</CombatRating>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Likelihood>1</Likelihood>
+			<RarityDisplay>Rare</RarityDisplay>
+			<MinimumLevel>10</MinimumLevel>
+			<RequiredLevel>10</RequiredLevel>
+			<Type>Ability</Type>
+			<Prereq>
+				<Type>UnitStat</Type>
+				<Attribute>UnitStat_Level</Attribute>
+				<Value>10</Value>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Mousy</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>6</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+</AbilityBonuses>

@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+<Container>
+  <AbilityBonus InternalName="IrathiivsFamiliar">
+    <AbilityBonusOption InternalName="IrathiivsFamiliar">
+      <DisplayName>Irathiiv's Familiar</DisplayName>
+      <Description>Unit produces 1 mana per turn and gains +5 Spell Mastery</Description>
+      <Icon>Ability_Acrobat_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>ProduceResource</Attribute>
+        <StrVal>Mana</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Mana per turn</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_MagicPower</StrVal>
+        <Value>5</Value>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="DeathLegionTurningMinds">
+    <AbilityBonusOption InternalName="DeathLegionTurningMinds">
+      <DisplayName>Possess Minds</DisplayName>
+      <Description>The Chaos Legion is able to possess normal minds with Demon souls. The process requires a huge ritual where most Demons will simply lose their lives instead of being useful. Who is actually possessed is also very hit and miss which is why this ability is used mostly to capture fortressess or other strategical locations.
+
+The faction has access to the spell Possess Minds. The spell instantly flips a city to Chaos Legion control and costs 200 Demon Souls (see Limited Numbers).</Description>
+      <Icon>Ability_Betrayers_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>UnlockSpell</Attribute>
+        <StrVal>TurningMinds</StrVal>
+		<Provides>The Chaos Legion is able to possess normal minds with Demon souls. The process requires a huge ritual where most Demons will simply lose their lives instead of being useful. Who is actually possessed is also very hit and miss which is why this ability is used mostly to capture fortressess or other strategical locations.
+
+The faction has access to the spell Possess Minds. The spell instantly flips a city to Chaos Legion control and costs 200 Demon Souls (see Limited Numbers).</Provides>
+      </GameModifier>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="DeathLegionLimit">
+    <AbilityBonusOption InternalName="DeathLegionLimit">
+      <Cost>-1</Cost>
+      <DisplayName>Limited Numbers</DisplayName>
+      <Description>The Chaos Legion suffered disastrous losses before entering the Elemental World. They are limited in number. 
+
+Each Chaos Legion unit requires 1 Demon Soul resource per member. The faction starts with 20 Demon Souls. Demon Soul resources are also bred from all cities, equal to 1 per 150 Production.</Description>
+      <Icon>Ability_AfraidofDying_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_Demon</StrVal>
+		<Provides>The Chaos Legion suffered disastrous losses before entering the Elemental World. They are limited in number. </Provides>
+        <Value>100</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Resource</ModType>
+        <Attribute>Demon</Attribute>
+		<Provides>Each Chaos Legion unit requires 1 Demon Soul resource per member. The faction starts with 20 Demon Souls. Demon Soul resources are also bred from all cities, equal to 1 per 150 Production.</Provides>
+        <Value>20.0</Value>
+      </GameModifier>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="DeathLegionSlaves">
+    <AbilityBonusOption InternalName="DeathLegionSlaves">
+		  <IMPINC>Strength</IMPINC>
+      <DisplayName>Bred as Slaves</DisplayName>
+      <Description>The Chaos Legion was bred by the No-god to fight and labour day and night, no matter what hardships they endured. They expect no less from the population they now control.
+
+Any Production only suffer 50% of the reduction from unrest in a city.</Description>
+      <Icon>Ability_Fear_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_Additive_ProductionEffectPerUnrest</StrVal>
+        <Value>-0.5</Value>
+		<Provides>The Chaos Legion was bred by the No-god to fight and labour day and night, no matter what hardships they endured. They expect no less from the population they now control.
+
+Any Production only suffer 50% of the reduction from unrest in a city.</Provides>
+      </GameModifier>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Corruption_Trait_Family">
+    <AbilityBonusType>Unit_Design</AbilityBonusType>
+    <AbilityBonusOption InternalName="Corruption_Trait_PhysicalFortitude">
+      <Type>Faction Trait</Type>
+      <Prereq>
+        <Type>Race</Type>
+        <Attribute>Race_Type_DeathLegion</Attribute>
+      </Prereq>
+      <DisplayName>Corruption: Physical Fortitude</DisplayName>
+      <Description>At the start of combat, unit gains 30% damage resistance to either Blunt, Pierce or Cutting damage. May not be selected at the same time as any other Corruption. 
+
+This trait costs 1 Crystal per unit member.</Description>
+      <Icon>Ability_HeartOfStone_Icon.png</Icon>
+      <AdditionalTrainingTurns>10</AdditionalTrainingTurns>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>BattleAutoCastSpell</Attribute>
+        <StrVal>Ef_Corruption1</StrVal>
+		<Provides>At the start of combat, unit gains either +25 physical attack resistance, +7 Dodge or +2 Initiative. May not be selected at the same time as any other Corruption.</Provides>
+        <Value>100</Value>
+      </GameModifier>
+      <ProductionRequirement>
+        <Type>Resource</Type>
+        <Attribute>RefinedCrystal</Attribute>
+        <Value>1</Value>
+		<Provides>This trait costs 2 Crystal per unit member.</Provides>
+      </ProductionRequirement>
+    </AbilityBonusOption>
+    <AbilityBonusOption InternalName="Corruption_Trait_MagicalFortitude">
+      <Type>Faction Trait</Type>
+      <Prereq>
+        <Type>Race</Type>
+        <Attribute>Race_Type_DeathLegion</Attribute>
+      </Prereq>
+      <DisplayName>Corruption: Magical Fortitude</DisplayName>
+      <Description>At the start of combat, unit gains 66% damage resistance to either Fire, Cold, Lightning or Poison damage. May not be selected at the same time as any other Corruption. 
+
+This trait costs 1 Crystal per unit member.</Description>
+      <Icon>Ability_HeartOfStone_Icon.png</Icon>
+      <AdditionalTrainingTurns>10</AdditionalTrainingTurns>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>BattleAutoCastSpell</Attribute>
+        <StrVal>Ef_Corruption2</StrVal>
+		<Provides>At the start of combat, unit gains 66% damage resistance to either Fire, Cold, Lightning or Poison damage. May not be selected at the same time as any other Corruption. </Provides>
+        <Value>100</Value>
+      </GameModifier>
+      <ProductionRequirement>
+        <Type>Resource</Type>
+        <Attribute>RefinedCrystal</Attribute>
+		<Provides>This trait costs 1 Crystal per unit member.</Provides>
+        <Value>1</Value>
+      </ProductionRequirement>
+    </AbilityBonusOption>
+    <AbilityBonusOption InternalName="Corruption_Trait_AlienEssence">
+      <Type>Faction Trait</Type>
+      <Prereq>
+        <Type>Race</Type>
+        <Attribute>Race_Type_DeathLegion</Attribute>
+      </Prereq>
+      <DisplayName>Corruption: Alien Essence</DisplayName>
+      <Description>Unit gains +15 Dodge against any unit that is either Twisted or Summoned. However, when attacked by any God this unit suffers -30 Resistance to physical attacks (if the God is Summoned or Twisted, both effects still apply). May not be selected at the same time as any other Corruption.</Description>
+      <Icon>Ability_HeartOfStone_Icon.png</Icon>
+      <AdditionalTrainingTurns>10</AdditionalTrainingTurns>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Dodge</StrVal>
+        <StrVal2>UnitStat_BG_IsSummoned</StrVal2>
+        <Value>15</Value>
+		<Provides>Unit gains +15 Dodge against any unit that is either Twisted or Summoned. However, when attacked by any God this unit suffers -30 Resistance to physical attacks (if the God is Summoned or Twisted, both effects still apply). May not be selected at the same time as any other Corruption.</Provides>
+        <vsHigher>1</vsHigher>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Dodge</StrVal>
+        <StrVal2>UnitStat_BG_IsTwisted</StrVal2>
+        <Value>15</Value>
+		<Provides>.</Provides>
+        <vsHigher>1</vsHigher>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistPierce</StrVal>
+        <StrVal2>UnitStat_BG_IsGod</StrVal2>
+        <vsHigher>1</vsHigher>
+		<Provides>.</Provides>
+        <Value>-30</Value>
+      </GameModifier>
+    </AbilityBonusOption>
+  </AbilityBonus>
+</Container>

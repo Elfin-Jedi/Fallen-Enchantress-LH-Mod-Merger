@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<Quests>
+	<QuestDef InternalName="Event_X_Merchant1_76">
+		<DisplayName>Traveling Merchant</DisplayName>
+		<Description>Channeler, a traveling merchant is here. What should I tell him?</Description>
+		<ShortTextAccept>Bring him to me.</ShortTextAccept>
+		<ShortTextDeny>I'm busy.</ShortTextDeny>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>TurnNumber</TriggerType>
+		<TriggerData>76</TriggerData>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>1</SpawnRating>
+		<TriggerChance>180</TriggerChance>
+		<PostTriggerChance>20</PostTriggerChance>
+		<Image>Highway.png</Image>
+		<RewardText>Yurt</RewardText>
+		<RewardImage>hut.png</RewardImage>
+		<SuccessText>Enjoy!</SuccessText>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<DisableQuestChoiceTooltips>0</DisableQuestChoiceTooltips>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<ID>1</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy the Yurt</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>120</NumericData>
+			</QuestConditionDef>
+			<ChoiceText>Would you like to buy a Yurt? I happen to have one at a bargain price.</ChoiceText>
+			<ChoiceMedallion>FE_Camp_GraelCastenford.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>No, I'm not interested.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Oh, novelty, an undear Channeler.</PopupMessage>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Yes, I'll buy the Yurt (-120 Gildar).</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Accessory_X_Tent_Yurt</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I can not afford it.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Pyramids, you need pyramids, just like they have in the Sand Kingdom.</PopupMessage>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Consumable_X_PyramidSchemes</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Event_X_Merchant1_78">
+		<DisplayName>Traveling Merchant</DisplayName>
+		<Description>Channeler, a traveling merchant is here. What should I tell him?</Description>
+		<ShortTextAccept>Bring him to me.</ShortTextAccept>
+		<ShortTextDeny>I'm busy.</ShortTextDeny>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>TurnNumber</TriggerType>
+		<TriggerData>78</TriggerData>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>1</SpawnRating>
+		<TriggerChance>180</TriggerChance>
+		<PostTriggerChance>20</PostTriggerChance>
+		<Image>Highway.png</Image>
+		<RewardText>Sicarius Magus</RewardText>
+		<RewardImage>Weapon_X_Dagger_Sicarius.png</RewardImage>
+		<SuccessText>Enjoy!</SuccessText>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<DisableQuestChoiceTooltips>0</DisableQuestChoiceTooltips>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<ID>1</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy the Sicarius Magus</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>140</NumericData>
+			</QuestConditionDef>
+			<ChoiceText>Would you like to buy a Sicarius Magus? I happen to have one at a bargain price.</ChoiceText>
+			<ChoiceMedallion>FE_Camp_GraelCastenford.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>No, I'm not interested.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Oh, novelty, an undear Channeler.</PopupMessage>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Yes, I'll buy the Sicarius Magus (-140 Gildar).</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Weapon_X_Dagger_GreyMagic</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I can not afford it.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Pyramids, you need pyramids, just like they have in the Sand Kingdom.</PopupMessage>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Consumable_X_PyramidSchemes</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Event_X_Merchant1_81">
+		<DisplayName>Traveling Merchant</DisplayName>
+		<Description>Channeler, a traveling merchant is here. What should I tell him?</Description>
+		<ShortTextAccept>Bring him to me.</ShortTextAccept>
+		<ShortTextDeny>I'm busy.</ShortTextDeny>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>TurnNumber</TriggerType>
+		<TriggerData>81</TriggerData>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>1</SpawnRating>
+		<TriggerChance>180</TriggerChance>
+		<PostTriggerChance>20</PostTriggerChance>
+		<Image>Highway.png</Image>
+		<RewardText>Shillelagh</RewardText>
+		<RewardImage>Weapon_X_Shillelagh.png</RewardImage>
+		<SuccessText>Enjoy!</SuccessText>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<DisableQuestChoiceTooltips>0</DisableQuestChoiceTooltips>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<ID>1</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy the Shillelagh</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>140</NumericData>
+			</QuestConditionDef>
+			<ChoiceText>Would you like to buy a Shillelagh? I happen to have one at a bargain price.</ChoiceText>
+			<ChoiceMedallion>FE_Camp_GraelCastenford.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>No, I'm not interested.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Oh, novelty, an undear Channeler.</PopupMessage>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Yes, I'll buy the Shillelagh (-140 Gildar).</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Weapon_X_Shillelagh</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I can not afford it.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Pyramids, you need pyramids, just like they have in the Sand Kingdom.</PopupMessage>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Consumable_X_PyramidSchemes</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Event_X_Merchant1_83">
+		<DisplayName>Traveling Merchant</DisplayName>
+		<Description>Channeler, a traveling merchant is here. What should I tell him?</Description>
+		<ShortTextAccept>Bring him to me.</ShortTextAccept>
+		<ShortTextDeny>I'm busy.</ShortTextDeny>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>TurnNumber</TriggerType>
+		<TriggerData>83</TriggerData>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>1</SpawnRating>
+		<TriggerChance>180</TriggerChance>
+		<PostTriggerChance>20</PostTriggerChance>
+		<Image>Highway.png</Image>
+		<RewardText>Zealot's Robe</RewardText>
+		<RewardImage>Robe_X_Zealots.png</RewardImage>
+		<SuccessText>Enjoy!</SuccessText>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<DisableQuestChoiceTooltips>0</DisableQuestChoiceTooltips>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<ID>1</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy the Zealot's Robe</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>80</NumericData>
+			</QuestConditionDef>
+			<ChoiceText>Would you like to buy a Zealot's Robe? I happen to have one at a bargain price.</ChoiceText>
+			<ChoiceMedallion>FE_Camp_GraelCastenford.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>No, I'm not interested.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Oh, novelty, an undear Channeler.</PopupMessage>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Yes, I'll buy the Zealot's Robe (-80 Gildar).</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Armor_X_RobeZealots</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I can not afford it.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Pyramids, you need pyramids, just like they have in the Sand Kingdom.</PopupMessage>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Consumable_X_PyramidSchemes</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Event_X_Merchant1_84">
+		<DisplayName>Traveling Merchant</DisplayName>
+		<Description>Channeler, a traveling merchant is here. What should I tell him?</Description>
+		<ShortTextAccept>Bring him to me.</ShortTextAccept>
+		<ShortTextDeny>I'm busy.</ShortTextDeny>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>TurnNumber</TriggerType>
+		<TriggerData>84</TriggerData>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>1</SpawnRating>
+		<TriggerChance>180</TriggerChance>
+		<PostTriggerChance>20</PostTriggerChance>
+		<Image>Highway.png</Image>
+		<RewardText>Mournful Fez</RewardText>
+		<RewardImage>Armor_X_MournfulFez.png</RewardImage>
+		<SuccessText>Enjoy!</SuccessText>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<DisableQuestChoiceTooltips>0</DisableQuestChoiceTooltips>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<ID>1</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy the Mournful Fez</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>80</NumericData>
+			</QuestConditionDef>
+			<ChoiceText>Would you like to buy a Mournful Fez? I happen to have one at a bargain price.</ChoiceText>
+			<ChoiceMedallion>FE_Camp_GraelCastenford.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>No, I'm not interested.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Oh, novelty, an undear Channeler.</PopupMessage>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Yes, I'll buy the Mournful Fez (-80 Gildar).</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Armor_X_Helm_MournfulFez</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I can not afford it.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Pyramids, you need pyramids, just like they have in the Sand Kingdom.</PopupMessage>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Consumable_X_PyramidSchemes</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Event_X_Merchant1_85">
+		<DisplayName>Traveling Merchant</DisplayName>
+		<Description>Channeler, a traveling merchant is here. What should I tell him?</Description>
+		<ShortTextAccept>Bring him to me.</ShortTextAccept>
+		<ShortTextDeny>I'm busy.</ShortTextDeny>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>TurnNumber</TriggerType>
+		<TriggerData>85</TriggerData>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>1</SpawnRating>
+		<TriggerChance>180</TriggerChance>
+		<PostTriggerChance>20</PostTriggerChance>
+		<Image>Highway.png</Image>
+		<RewardText>Grey Matter</RewardText>
+		<RewardImage>Armor_X_MindCap.png</RewardImage>
+		<SuccessText>Enjoy!</SuccessText>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<DisableQuestChoiceTooltips>0</DisableQuestChoiceTooltips>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<ID>1</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy the Grey Matter</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>60</NumericData>
+			</QuestConditionDef>
+			<ChoiceText>Would you like to buy a Grey Matter? I happen to have one at a bargain price.</ChoiceText>
+			<ChoiceMedallion>FE_Camp_GraelCastenford.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>No, I'm not interested.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Oh, novelty, an undear Channeler.</PopupMessage>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Yes, I'll buy the Grey Matter (-60 Gildar).</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Armor_X_Helm_MindCap</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I can not afford it.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Pyramids, you need pyramids, just like they have in the Sand Kingdom.</PopupMessage>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Consumable_X_PyramidSchemes</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Event_X_Merchant1_86">
+		<DisplayName>Traveling Merchant</DisplayName>
+		<Description>Channeler, a traveling merchant is here. What should I tell him?</Description>
+		<ShortTextAccept>Bring him to me.</ShortTextAccept>
+		<ShortTextDeny>I'm busy.</ShortTextDeny>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>TurnNumber</TriggerType>
+		<TriggerData>86</TriggerData>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>1</SpawnRating>
+		<TriggerChance>180</TriggerChance>
+		<PostTriggerChance>20</PostTriggerChance>
+		<Image>Highway.png</Image>
+		<RewardText>Astrologist Cape</RewardText>
+		<RewardImage>Cloak_X_Magic1.png</RewardImage>
+		<SuccessText>Enjoy!</SuccessText>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<DisableQuestChoiceTooltips>0</DisableQuestChoiceTooltips>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<ID>1</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy the Astrologist Cape</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>50</NumericData>
+			</QuestConditionDef>
+			<ChoiceText>Would you like to buy an Astrologist Cape? I happen to have one at a bargain price.</ChoiceText>
+			<ChoiceMedallion>FE_Camp_GraelCastenford.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>No, I'm not interested.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Oh, novelty, an undear Channeler.</PopupMessage>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Yes, I'll buy the Astrologist Cape (-50 Gildar).</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Cloak_X_Magic1</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I can not afford it.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Pyramids, you need pyramids, just like they have in the Sand Kingdom.</PopupMessage>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Consumable_X_PyramidSchemes</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Event_X_Merchant1_87">
+		<DisplayName>Traveling Merchant</DisplayName>
+		<Description>Channeler, a traveling merchant is here. What should I tell him?</Description>
+		<ShortTextAccept>Bring him to me.</ShortTextAccept>
+		<ShortTextDeny>I'm busy.</ShortTextDeny>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>TurnNumber</TriggerType>
+		<TriggerData>87</TriggerData>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>1</SpawnRating>
+		<TriggerChance>180</TriggerChance>
+		<PostTriggerChance>20</PostTriggerChance>
+		<Image>Highway.png</Image>
+		<RewardText>On the Origin of Species</RewardText>
+		<RewardImage>Accessory_X_OnTheOriginOfSpecies.png</RewardImage>
+		<SuccessText>Enjoy!</SuccessText>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<DisableQuestChoiceTooltips>0</DisableQuestChoiceTooltips>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<ID>1</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy On the Origin of Species</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>80</NumericData>
+			</QuestConditionDef>
+			<ChoiceText>Would you like to buy On the Origin of Species? I happen to have one at a bargain price.</ChoiceText>
+			<ChoiceMedallion>FE_Camp_GraelCastenford.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>No, I'm not interested.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Oh, novelty, an undear Channeler.</PopupMessage>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Yes, I'll buy On the Origin of Species (-40 Gildar).</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Accessory_X_OnTheOriginOfSpecies</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I can not afford it.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Pyramids, you need pyramids, just like they have in the Sand Kingdom.</PopupMessage>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Consumable_X_PyramidSchemes</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Event_X_Merchant1_88">
+		<DisplayName>Traveling Merchant</DisplayName>
+		<Description>Channeler, a traveling merchant is here. What should I tell him?</Description>
+		<ShortTextAccept>Bring him to me.</ShortTextAccept>
+		<ShortTextDeny>I'm busy.</ShortTextDeny>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>TurnNumber</TriggerType>
+		<TriggerData>88</TriggerData>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>1</SpawnRating>
+		<TriggerChance>180</TriggerChance>
+		<PostTriggerChance>20</PostTriggerChance>
+		<Image>Highway.png</Image>
+		<RewardText>Ebony Fist</RewardText>
+		<RewardImage>Shield_X_EbonyFist.png</RewardImage>
+		<SuccessText>Enjoy!</SuccessText>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<DisableQuestChoiceTooltips>0</DisableQuestChoiceTooltips>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<ID>1</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy the Ebony Fist</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>50</NumericData>
+			</QuestConditionDef>
+			<ChoiceText>Would you like to buy an Ebony Fist? I happen to have one at a bargain price.</ChoiceText>
+			<ChoiceMedallion>FE_Camp_GraelCastenford.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>No, I'm not interested.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Oh, novelty, an undear Channeler.</PopupMessage>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Yes, I'll buy the Ebony Fist (-50 Gildar).</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Shield_X_EbonyFist</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I can not afford it.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Pyramids, you need pyramids, just like they have in the Sand Kingdom.</PopupMessage>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Consumable_X_PyramidSchemes</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Event_X_Merchant1_89">
+		<DisplayName>Traveling Merchant</DisplayName>
+		<Description>Channeler, a traveling merchant is here. What should I tell him?</Description>
+		<ShortTextAccept>Bring him to me.</ShortTextAccept>
+		<ShortTextDeny>I'm busy.</ShortTextDeny>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>TurnNumber</TriggerType>
+		<TriggerData>89</TriggerData>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>1</SpawnRating>
+		<TriggerChance>180</TriggerChance>
+		<PostTriggerChance>20</PostTriggerChance>
+		<Image>Highway.png</Image>
+		<RewardText>Ashen Staff</RewardText>
+		<RewardImage>Weapon_X_Staff_Ashen.png</RewardImage>
+		<SuccessText>Enjoy!</SuccessText>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<DisableQuestChoiceTooltips>0</DisableQuestChoiceTooltips>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<ID>1</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy the Ashen Staff</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>140</NumericData>
+			</QuestConditionDef>
+			<ChoiceText>Would you like to buy an Ashen Staff? I happen to have one at a bargain price.</ChoiceText>
+			<ChoiceMedallion>FE_Camp_GraelCastenford.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>No, I'm not interested.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Oh, novelty, an undear Channeler.</PopupMessage>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Yes, I'll buy the Ashen Staff (-140 Gildar).</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Weapon_X_Staff_Ashen</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I can not afford it.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Pyramids, you need pyramids, just like they have in the Sand Kingdom.</PopupMessage>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Consumable_X_PyramidSchemes</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+		</QuestObjectiveDef>
+	</QuestDef>
+</Quests>

@@ -1,0 +1,3444 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--Necromancy Revamped by Dhuran-->
+<!--XtraDeconstruct 3.0 by Primal-->
+<Spells>
+		<!--STRATEGIC-->
+	<SpellDef InternalName="NC_CreateWight">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Create Wight</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>NC_AdeptNecromancy</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>45</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<PerTurn>1</PerTurn>
+			<Amount>1</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Uses necromantic magic to create a Wight.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] CREATE WIGHT
+		::: Uses necromantic magic to create a Wight. When cast in Tactical, all surrounding enemies lose their next Action.
+		
+		DOMAIN
+		::: Strategic
+		::: Self
+		
+		EFFECT
+		::: Summon Wight
+		::: ::: Level = 1
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Killed
+		
+		OTHER
+		::: Reanimation Bonus
+		::: Summon Bonus
+		
+		SOURCE
+		::: Path of the Gravelord
+		::: ::: Adept Reanimation</Description>
+		<SpellBookSortCategory>Summon</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Summon</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Summon</SpellSubClass>
+		<SpellTargetType>Self</SpellTargetType>
+		<AlwaysPromptForCaster>1</AlwaysPromptForCaster>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Wight</StrVal>
+			<UnitClass>NC_Wight</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + [NC_UnitStat_BonusReanimationLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>50</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_RaiseSkeleton.png</IconFG>
+		<HitSoundFX>Spell_SummonEarthElemental_01</HitSoundFX>
+		<WorldLightOverrideTime>2</WorldLightOverrideTime>
+		<WorldLightOverrideAmbiant>30,30,30</WorldLightOverrideAmbiant>
+		<WorldLightOverrideDiffuse>30,30,30</WorldLightOverrideDiffuse>
+		<WorldLightOverrideRim0>212,0,192</WorldLightOverrideRim0>
+		<WorldLightOverrideRim1>0,132,234</WorldLightOverrideRim1>
+		<SpellDefEffect>
+			<EffectName>S_SummonEarthElemental_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.5</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="NC_Mantle_of_Death">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[S] Mantle of Death Ritual</DisplayName>
+		<CanStack>0</CanStack>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Demilich</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>500</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>This suicidal ritual is based on those used to create Liches.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] MANTLE OF DEATH RITUAL
+		::: This suicidal ritual is based on those used to create Liches. It transforms the already immortal sovereign into a font of death magic. The power granted by the spell comes at a cost; upon casting, the sovereign's hit point maximum is reduced by half.
+		
+		DOMAIN
+		::: Strategic
+		::: Self
+		
+		EFFECT
+		::: - 50% HP
+		::: + Demilich Ability
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Permanent
+		
+		OTHER
+		::: Caster must be Sov
+		
+		SOURCE
+		::: Quest
+		::: ::: The Mantle of Death</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Other</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>Self</SpellTargetType>
+		<CasterMustBeSov>1</CasterMustBeSov>
+		<CastTime>3</CastTime>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockUnitAbility</Attribute>
+			<StrVal>Demilich</StrVal>
+			<Provides>The sovereign has become a conduit for death magic.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_HitPoints</StrVal>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_HitPoints] * -0.5]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+			<ApplyToCaster>1</ApplyToCaster>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>190</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Hexed.png</IconFG>
+		<ChannelingEffect>S_ChannelingSpellOfMaking_1</ChannelingEffect>
+		<HitSoundFX>Spell_BloodCurse_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_Sacrifice_Particle</EffectName>
+			<LocalPosition>0,50,0</LocalPosition>
+			<EffectScale>1.5</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="NC_Raise_Necropolis_Spell">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Raise Necropolis</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>NC_AscendantNecromancy</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>100</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<PerTurn>1</PerTurn>
+			<Amount>5</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Exhumes an ancient cemetery.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] RAISE NECROPOLIS
+		::: This powerful necromancy spell exhumes an ancient cemetery from the ruins of Elemental and reanimates the inhabitants. Beware that none are safe from the wrath of the legions that pour forth from the necropolis.
+		
+		DOMAIN
+		::: Strategic
+		::: Neutral+
+		
+		EFFECT
+		::: + 1 Goodie Hut
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Conquered or Razed
+		::: Until Dispelled
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Gravelord
+		::: ::: Ascendant Reanimation</Description>
+		<SpellBookSortCategory>World</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Map</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>EmptyTile</SpellTargetType>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>CreateGoodieHut</Attribute>
+			<StrVal>Unearthed Necropolis</StrVal>
+			<UnitClass>NC_Unearthed_Necropolis</UnitClass>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<Cooldown>50</Cooldown>
+		<ValidTerrainType>Land</ValidTerrainType>
+		<ValidTerrainType>Rugged_Land</ValidTerrainType>
+		<ValidTerrainType>Fertile_Land</ValidTerrainType>
+		<ValidTerrainType>DesertTerrain</ValidTerrainType>
+		<ValidTerrainType>HillsTerrain</ValidTerrainType>
+		<ValidTerrainType>SwampTerrain</ValidTerrainType>
+		<ValidTerrainType>ArcticTerrain</ValidTerrainType>
+		<ValidTerrainType>Forest</ValidTerrainType>
+		<ValidTerrainType>River</ValidTerrainType>
+		<CameraShakeDuration>2.25</CameraShakeDuration>
+		<CameraShakeStrength>0.25</CameraShakeStrength>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_RaiseNecropolis.png</IconFG>
+		<HitSoundFX>Spell_Earthquake_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_Earthquake_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.3</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="NC_ProfaneRitual">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Profane Ritual</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>NC_HexWizard1</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>250</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Defending units can enslave enemy's spirit.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] PROFANE RITUAL
+		::: Defending units can attempt to rend an enemy's spirit from them and enslave it.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: City
+		
+		EFFECT
+		::: Profane Ritual Tactical Autocast
+		::: ::: + Sever Spirit Tactical Ability
+		::: ::: ::: ((1 + Death Shards) x 12) DMG
+		::: ::: ::: If target is killed, a Disembodied Spirit appears.
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Battle
+		::: Until Dispelled (Enchantment)
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Gravelord
+		::: ::: Profane Ritual</Description>
+		<SpellBookSortCategory>City</SpellBookSortCategory>
+		<SpellBookSortSubCategory>CityEnchantment</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>FriendlyCity</SpellTargetType>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>BattleAutoCastSpell</Attribute>
+			<StrVal>NC_ProfaneRitual_Effect</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>85</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_ProfaneRitual.png</IconFG>
+		<HitSoundFX>Spell_Beserk_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_Berserk_Particle</EffectName>
+			<LocalPosition>0,35,0</LocalPosition>
+			<EffectScale>0.7</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="NC_Soulstorm">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Soulstorm</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>NC_HexWizard3</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>200</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Scatters and immoblizes targeted army.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] SOULSTORM
+		::: Scatters and immoblizes targeted army while an army of souls is summoned.
+		
+		DOMAIN
+		::: Strategic
+		::: Enemy
+		::: Unit
+		
+		EFFECT
+		::: Disperses targeted stack
+		::: Immobilizes targets
+		::: Summon Spectres
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Instant for Disperse and Summon
+		::: 1 Season for Immobilize
+		
+		OTHER
+		::: Reanimation Bonus
+		::: Summon Bonus
+		
+		SOURCE
+		::: Path of the Gravelord
+		::: ::: Soulstorm</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Debuff</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<UnitAppSpecifier>ApplyToAll</UnitAppSpecifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>Immobilize</Attribute>
+			<Duration>1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DisperseStack</Attribute>
+			<Radius>4</Radius>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<UnitClass>NC_Spectre_Summon</UnitClass>
+			<Multiplier>3</Multiplier>
+			<Duration>3</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + [NC_UnitStat_BonusReanimationLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>1</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>100</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Tornado.png</IconFG>
+		<HitSoundFX>Spell_Tornado_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>NC_Soulstorm_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.75</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+		<!--TACTICAL-->
+	<SpellDef InternalName="NC_Awaken">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Awaken</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>NC_HexWizard2</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>200</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>All Enemy take Death\Poison DMG per Caster's Level.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] AWAKEN
+		::: All enemy units take 3 Death\Poison damage per Level of the caster unless they resist. If killed some are reanimated as skeletons.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Units (ALL)
+		
+		EFFECT
+		::: (3 x Level) Death\Poison DMG
+		::: If target is killed, a Skeleton appears.
+		
+		FIGHTABLE
+		::: Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Gravelord
+		::: ::: Awaken</Description>
+		<FormattedDescription>All Enemy Units take %d Death\Poison damage unless they resist. If killed, some are reanimated as Skeletons.</FormattedDescription>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Debuff</SpellSubClass>
+		<SpellTargetType>AllEnemyUnits</SpellTargetType>
+		<IsResistable>1</IsResistable>
+		<CastTime>2</CastTime>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Poison</AttackStat>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel] * -3]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Skeleton</StrVal>
+			<UnitClass>NS_Simple_Skeleton</UnitClass>
+			<ApplyIfSpellTargetKilled>1</ApplyIfSpellTargetKilled>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + [NC_UnitStat_BonusReanimationLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<Cooldown>3</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>555</AIPriority>
+			<AIMinSpellTargets>4</AIMinSpellTargets>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_HorrificWail.png</IconFG>
+		<HitSoundFX>Spell_HorrificWailImpact_01</HitSoundFX>
+		<SpellCastSoundFX>Spell_HorrificWailTravel_01</SpellCastSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_HorrificWail_Impact_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>1</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+			<PlayOnAllTargets>1</PlayOnAllTargets>
+		</SpellDefEffect>
+		<SpellDefEffect>
+			<EffectName>T_HorrificWail_Particle</EffectName>
+			<LocalPosition>0,20,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+			<PlayOnCaster>1</PlayOnCaster>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="NC_BalefulReflexSpell">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Baleful Reflex</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>NC_BalefulReflex</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>20</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Cause the target to reflexively attack themselves.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] BALEFUL REFLEX
+		::: Cause the target to reflexively attack themselves with their own weapon at 80% attack. They can attempt to dodge but their defense bonus only applies if they resist.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Unit
+		
+		EFFECT
+		::: (Target's ATK x0.80) DMG
+		
+		FIGHTABLE
+		::: Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Gravelord
+		::: ::: Baleful Reflex</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<CanBeDodged>1</CanBeDodged>
+		<IsResistable>1</IsResistable>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_CombinedAttack] * 0.8]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc] * -1]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Pierce</AttackStat>
+			<IsForSpellResist>1</IsForSpellResist>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_CombinedAttack] * 0.8]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>2</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>275</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_BalefulReflex.png</IconFG>
+		<HitSoundFX>Spell_CrushingBlow_01</HitSoundFX>
+		<MissSoundFX>Miss_Swing1</MissSoundFX>
+		<MissSoundFX>Miss_Swing2</MissSoundFX>
+		<SpellDefEffect>
+			<EffectName>Y_Ability_CrushingBlow</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.6</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="RR_CanopicJars_Ability">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Canopic Jars</DisplayName>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Random teleport within 3 tiles; leaves a zombie behind.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] CANOPIC JARS
+		::: Random teleport within 3 tiles; leaves a zombie behind.
+		
+		DOMAIN
+		::: Tactical
+		::: Self
+		
+		EFFECT
+		::: Random Teleport within 3 tiles
+		::: + 1 Zombie
+		::: ::: Level = 1 + (Caster's Level / 3)
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Equipment
+		::: ::: Canopic Jars</Description>
+		<!--<FormattedDescription>Random teleport within 3 tiles; leaves a Level %d Zombie behind.</FormattedDescription>-->
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>EmptyTile</SpellTargetType>
+		<SpellTargetTileOccupied>Empty</SpellTargetTileOccupied>
+		<IsSpecialAbility>1</IsSpecialAbility>
+		<Range>0</Range>
+		<Radius>3</Radius>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>TransportUnit</Attribute>
+			<ApplyToCaster>1</ApplyToCaster>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Zombie</StrVal>
+			<UnitClass>NS_Simple_Zombie</UnitClass>
+			<ApplyToSpellRadiusCenterOnly>1</ApplyToSpellRadiusCenterOnly>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel] / 3 ]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + 1 ]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>2</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_X_Blink.png</IconFG>
+		<HitSoundFX>Spell_SummonEarthElemental_01</HitSoundFX>
+		<WorldLightOverrideTime>2</WorldLightOverrideTime>
+		<WorldLightOverrideAmbiant>30,30,30</WorldLightOverrideAmbiant>
+		<WorldLightOverrideDiffuse>30,30,30</WorldLightOverrideDiffuse>
+		<WorldLightOverrideRim0>212,0,192</WorldLightOverrideRim0>
+		<WorldLightOverrideRim1>0,132,234</WorldLightOverrideRim1>
+		<SpellDefEffect>
+			<EffectName>S_Corruption_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+			<PlayOnAllTargets>1</PlayOnAllTargets>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="NR_DeathWard_Tactical">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Lich's Contingency</DisplayName>
+		<PreventStackingWith>Spell_X_Revivification_SK</PreventStackingWith>
+		<PreventStackingWith>Spell_X_Reborn</PreventStackingWith>
+		<PreventStackingWith>Spell_X_HelmOfHorus</PreventStackingWith>
+		<PreventStackingWith>ProtectionFromDeath_Ability</PreventStackingWith>
+		<PreventStackingWith>DeathWard_Reliquary</PreventStackingWith>
+		<PreventStackingWith>DeathWard_Tactical</PreventStackingWith>
+		<PreventStackingWith>DeathWard</PreventStackingWith>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>If killed in battle, resurrected with 50% hit points. Once.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] LICH'S CONTINGENCY
+		::: If killed in battle, resurrected with 50% hit points. Once.
+		
+		DOMAIN
+		::: Tactical
+		::: Self
+		
+		EFFECT
+		::: Death Ward
+		::: + 50% HP if - 100% HP
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Battle
+		::: Until Resurrected
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Equipment
+		::: ::: Lich's Phylactery</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>Self</SpellTargetType>
+		<IsCastable>0</IsCastable>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DeathWard</Attribute>
+			<Duration>-1</Duration>
+			<Effect>NR_Phylactery_Particle</Effect>
+		</GameModifier>
+		<Cooldown>99</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_DeathWard.png</IconFG>
+		<IgnoreCastAnim>1</IgnoreCastAnim>
+		<HitSoundFX>Spell_DeathWard_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>NR_S_Phylactery_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.75</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="NC_DeathShroud">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Death Shroud</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>NC_DeathShroudUnlock</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>30</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Wreathes all allied Undead Units in shadowy auras.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] DEATH SHROUD
+		::: Wreathes all allied Undead Units in shadowy auras, doing 5 Water\Cold DMG to anyone who attacks them and granting them +1 Tactical Regeneration.
+		
+		DOMAIN
+		::: Tactical
+		::: Friendly
+		::: Undead (ALL)
+		
+		EFFECT
+		::: Tactical Melee DEF
+		::: + 5 Water\Cold DMG
+		::: + 1 Regeneration per Action
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Battle
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Gravelord
+		::: ::: Death Shroud</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>AllFriendlyUnits</SpellTargetType>
+		<SpellTargetCreatureType>Undead</SpellTargetCreatureType>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>MeleeDefenseAppliesSpell</Attribute>
+			<StrVal>NC_DeathShroud_Effect</StrVal>
+			<Duration>-1</Duration>
+			<Effect>NC_E_DarkMantle_Particle</Effect>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_TacticalHealthRegen</StrVal>
+			<Duration>-1</Duration>
+			<Value>1</Value>
+		</GameModifier>
+		<Cooldown>99</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>100</AIPriority>
+			<AIMinSpellTargets>4</AIMinSpellTargets>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Candlecloak.png</IconFG>
+		<HitSoundFX>Spell_MantleOfFire_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>NC_S_DarkMantle_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+			<PlayOnAllTargets>1</PlayOnAllTargets>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="NC_DeathShroud_Effect">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Death Shroud (Effect)</DisplayName>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Wreathes allied Undead Units in shadowy auras.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] DEATH SHROUD (EFFECT)
+		::: Wreathes allied Undead Units in shadowy auras, doing 5 Water\Cold DMG to anyone who attacks them and granting them +1 Tactical Regeneration.
+		
+		DOMAIN
+		::: Tactical
+		::: Friendly
+		::: Undead (ALL)
+		
+		EFFECT
+		::: Tactical Melee DEF
+		::: + 5 Water\Cold DMG
+		::: + 1 Regeneration per Action
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Battle
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Gravelord
+		::: ::: Death Shroud</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<IsCastable>0</IsCastable>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Cold</AttackStat>
+			<Value>5</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Candlecloak.png</IconFG>
+		<HitSoundFX>Spell_DarkEnchant_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>NC_Dark_Impact</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.35</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="NC_ExplosiveDeanimation_Spell">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Explosive Deanimation</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>NC_DarkAugment1</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>60</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Destabilize the magic reanimating the undead.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] EXPLOSIVE DEANIMATION
+		::: You destabilize the magic reanimating the undead you control in the area, allowing you to trigger a violent explosion that deals their hit point potential in damage to themselves and all surrounding units.
+		
+		DOMAIN
+		::: Tactical
+		::: Friendly
+		::: Undead (ALL)
+		
+		EFFECT
+		::: Unlocks Explosive Deanimation (Ability)
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Gravelord
+		::: ::: Explosive Deanimation</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>AllFriendlyUnits</SpellTargetType>
+		<SpellTargetCreatureType>Undead</SpellTargetCreatureType>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>NC_ExplosiveDeanimation_Ability</StrVal>
+		</GameModifier>
+		<Cooldown>99</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>100</AIPriority>
+			<AIMinSpellTargets>3</AIMinSpellTargets>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Berserk.png</IconFG>
+		<HitSoundFX>Spell_CullTheWeak_01</HitSoundFX>
+		<SpellCastSoundFX>Spell_CullTheWeakCast_01</SpellCastSoundFX>
+		<SpellCastEffectName>T_Erosion_Particle</SpellCastEffectName>
+		<SpellCastEffectScale>1</SpellCastEffectScale>
+		<SpellDefEffect>
+			<EffectName>S_StealSpirit_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="NC_ExplosiveDeanimation_Ability">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Explosive Deanimation (Ability)</DisplayName>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>The magic reanimating this creature is unstable, allowing you to trigger a violent explosion.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] 
+		::: The magic reanimating this creature is unstable, allowing you to trigger a violent explosion that will deal its hit point potential in damage to itself and all surrounding units.
+		
+		DOMAIN
+		::: Tactical
+		::: Self
+		
+		EFFECT
+		::: 75% Max HP in Pierce DMG
+		::: 25% Max HP in Fire DMG
+		::: - 100% HP (Self)
+		
+		FIGHTABLE
+		::: Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: 3x3 Area
+		
+		SOURCE
+		::: Spell
+		::: ::: Explosive Deanimation</Description>
+		<!--<FormattedDescription>You can catastrophically deanimate this creature, dealing %d physical damage and %d fire damage to all surrounding units.</FormattedDescription>-->
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>UnitDamage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<AllowFriendlyFireInRadius>1</AllowFriendlyFireInRadius>
+		<IsSpecialAbility>1</IsSpecialAbility>
+		<IsCastable>1</IsCastable>
+		<Radius>1</Radius>
+		<Range>0</Range>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Pierce</AttackStat>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_HitPoints] * -0.75]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Fire</AttackStat>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_HitPoints] * -0.25]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_HitPoints] * -1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+			<ApplyToCaster>1</ApplyToCaster>
+			<ApplyToSpellRadiusCenterOnly>1</ApplyToSpellRadiusCenterOnly>
+		</GameModifier>
+		<Cooldown>99</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>150</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Berserk.png</IconFG>
+		<HitSoundFX>Spell_Sunder_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>E_FireballExplosion_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>3</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="NC_Fear_Ability">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Fear</DisplayName>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<PreventStackingWith>Fear_Ability</PreventStackingWith>
+		<Description>All enemies are stunned for 2 Actions unless they resist.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] FEAR
+		::: All enemies are stunned for 2 Actions unless they resist.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Units (ALL)
+		
+		EFFECT
+		::: Targets lose their next 2 Actions
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: 2 Actions
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Gravelord
+		::: ::: Demilich</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitCurse</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Debuff</SpellSubClass>
+		<SpellTargetType>AllEnemyUnits</SpellTargetType>
+		<IsResistable>1</IsResistable>
+		<IsSpecialAbility>1</IsSpecialAbility>
+		<GameModifier>
+			<ModType>TacticalUnit</ModType>
+			<Attribute>ChanceToLoseNextTurn</Attribute>
+			<DisplayName>Afraid</DisplayName>
+			<Duration>2</Duration>
+			<Effect>E_Afraid_Particle</Effect>
+			<PerTurn>1</PerTurn>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_ImmuneToFear] * -100]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + 100]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_ParadigmShift_D.png</IconFG>
+		<HitSoundFX>Spell_FearWave_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_Fear_Impact_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>1</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+			<PlayOnAllTargets>1</PlayOnAllTargets>
+		</SpellDefEffect>
+		<SpellDefEffect>
+			<EffectName>T_FearWave_Particle</EffectName>
+			<LocalPosition>0,20,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+		<SpellDefEffect>
+			<EffectName>T_FearWave_Particle</EffectName>
+			<LocalPosition>0,20,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="RR_SpectreLineAttack_Effect">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Flight of Terror (Effect)</DisplayName>
+		<CanStack>0</CanStack>
+		<PreventStackingWith>Fear_Ability</PreventStackingWith>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>The semi-corporeal nature of the Spectre allows it to fly through enemies.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] FLIGHT OF TERROR (EFFECT)
+		::: The semi-corporeal nature of the Spectre allows it to fly through enemies, draining 6 (+1 per Level) life, and causing fear for 2 turns unless the target resists.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Unit (Empty Tile)
+		
+		EFFECT
+		::: Transport Self
+		::: (6 + Level) Self Heal
+		::: (6 + Level) DMG
+		::: Targets lose their next 2 Actions
+		
+		FIGHTABLE
+		::: Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Gravelord
+		::: ::: Chill of Death</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitCurse</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Debuff</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<SpellTargetTileOccupied>Empty</SpellTargetTileOccupied>
+		<IsResistable>1</IsResistable>
+		<IsCastable>1</IsCastable>
+		<IsSpecialAbility>1</IsSpecialAbility>
+		<IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+		<AllowFriendlyFireInRadius>1</AllowFriendlyFireInRadius>
+		<Radius>7</Radius>
+		<RadiusType>LINE_BACKWARD</RadiusType>
+		<Range>7</Range>
+		<!--<FormattedDescription>The semi-corporeal nature of the Spectre allows it to fly through enemies, draining %d life, and causing fear for 2 turns unless the target resists.</FormattedDescription>-->
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>TransportUnit</Attribute>
+			<ApplyToCaster>1</ApplyToCaster>
+			<ApplyToSpellRadiusCenterOnly>1</ApplyToSpellRadiusCenterOnly>
+		</GameModifier>
+		<GameModifier>
+			<ModType>TacticalUnit</ModType>
+			<Attribute>ChanceToLoseNextTurn</Attribute>
+			<DisplayName>Afraid</DisplayName>
+			<Duration>2</Duration>
+			<PerTurn>1</PerTurn>
+			<Effect>E_Afraid_Particle</Effect>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>Lifesteal</Attribute>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel] + 6]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>3</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>100</AIPriority>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[Unit_GetHPCurrent]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc] < 70]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_X_Terror.png</IconFG>
+		<HitSoundFX>Spell_HorrificWailImpact_01</HitSoundFX>
+		<SpellCastSoundFX>Spell_HorrificWailTravel_01</SpellCastSoundFX>
+		<SpellCastEffectName>A_DeathDemon_Stomach_Particle_01</SpellCastEffectName>
+		<SpellCastEffectScale>1</SpellCastEffectScale>
+		<SpellCastProjectile>1</SpellCastProjectile>
+		<SpellCastProjectileSpeed>900</SpellCastProjectileSpeed>
+	</SpellDef>
+	<SpellDef InternalName="RR_SpectreBurstAttack_Effect">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Grave Chill (Effect)</DisplayName>
+		<CanStack>0</CanStack>
+		<PreventStackingWith>Slow_Ability</PreventStackingWith>
+		<PreventStackingWith>Slow</PreventStackingWith>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Deals Water\Cold DMG to all units around the Spectre.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] GRAVE CHILL (EFFECT)
+		::: Deals Water\Cold DMG to all units around the Spectre. Units in the target area suffer -3 to Initiative for 3 Actions unless they resist.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Units
+		
+		EFFECT
+		::: (6 + Level) Water\Cold DMG to ALL within 1 Tile.
+		::: - 3 to Initiative for 3 Actions
+		
+		FIGHTABLE
+		::: Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Gravelord
+		::: ::: Chill of Death</Description>
+		<!--<FormattedDescription>Deals %d cold damage to all units around the Spectre. Units in the target area suffer -3 to Initiative for 3 turns unless they resist.</FormattedDescription>-->
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitCurse</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Debuff</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<IsResistable>1</IsResistable>
+		<IsCastable>1</IsCastable>
+		<IsSpecialAbility>1</IsSpecialAbility>
+		<IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+		<AllowFriendlyFireInRadius>0</AllowFriendlyFireInRadius>
+		<Radius>1</Radius>
+		<Range>0</Range>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<DisplayName>Slowed</DisplayName>
+			<Duration>3</Duration>
+			<Effect>E_Slow_Particle</Effect>
+			<Value>-3</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Cold</AttackStat>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel] + 6]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>3</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>150</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_X_IceRing.png</IconFG>
+		<HitSoundFX>Spell_HorrificWailImpact_01</HitSoundFX>
+		<SpellCastSoundFX>Spell_HorrificWailTravel_01</SpellCastSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_SummonIceElemental_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.3</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="NC_HorrificWail">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Horrific Wail</DisplayName>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_MournfulFez</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>NC_Necromancy2</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>36</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>All enemy Units take 2 damage per level of the caster.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] HORRIFIC WAIL
+		::: All enemy units take 2 damage per level of the caster unless they resist.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Units (ALL)
+		
+		EFFECT
+		::: (2 x Caster's Level) DMG
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Gravelord
+		::: ::: Greater Reanimation</Description>
+		<FormattedDescription>All enemy units take %d DMG unless they resist.</FormattedDescription>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Debuff</SpellSubClass>
+		<SpellTargetType>AllEnemyUnits</SpellTargetType>
+		<IsResistable>1</IsResistable>
+		<CastTime>2</CastTime>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel] * -2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<IsForSpellResist>1</IsForSpellResist>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel] * -1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>325</AIPriority>
+			<AIMinSpellTargets>2</AIMinSpellTargets>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[UnitStat_MagicPower]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc2" ValueOwner="TargetUnit">
+					<Expression><![CDATA[[UnitStat_MagicResist]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc3">
+					<Expression><![CDATA[[Calc2] - [Calc]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc] < 66]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_HorrificWail.png</IconFG>
+		<HitSoundFX>Spell_HorrificWailImpact_01</HitSoundFX>
+		<SpellCastSoundFX>Spell_HorrificWailTravel_01</SpellCastSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_HorrificWail_Impact_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>1</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+			<PlayOnAllTargets>1</PlayOnAllTargets>
+		</SpellDefEffect>
+		<SpellDefEffect>
+			<EffectName>T_HorrificWail_Particle</EffectName>
+			<LocalPosition>0,20,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+			<PlayOnCaster>1</PlayOnCaster>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="NC_Spirit_Neophyte_Regen">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Iniquitous Bargain</DisplayName>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Treat with the spirits of the dead, giving up life force for Mana.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] INIQUITOUS BARGAIN
+		::: Treat with the spirits of the dead, giving up life force for Mana.
+		
+		DOMAIN
+		::: Tactical
+		::: Self
+		
+		EFFECT
+		::: -20% HP
+		::: +40% HP in Mana
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Gravelord
+		::: ::: Spirit Neophyte</Description>
+		<!--<FormattedDescription>Treat with the spirits of the dead, giving up %d of your life force for +%d Mana.</FormattedDescription>-->
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>Self</SpellTargetType>
+		<IsSpecialAbility>1</IsSpecialAbility>
+		<IsCastable>1</IsCastable>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetHPCurrent] * -0.2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Mana</Attribute>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetHPCurrent] * 0.4]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_IniquitousBargain.png</IconFG>
+		<IgnoreCastAnim>0</IgnoreCastAnim>
+		<SpellCastSoundFX>Spell_CullTheWeakCast_01</SpellCastSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_ConsumeSpirit_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.5</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<PlayOnCaster>1</PlayOnCaster>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+		<SpellDefEffect>
+			<EffectName>T_ConsumeSpiritGain_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.5</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+			<PlayOnCaster>1</PlayOnCaster>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="NC_NihilMagic">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Nihil Magic</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>PathOfTheNecro</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>18</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Disrupts a spell a unit is casting, and renders them unable to cast spells for 1 turn.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] NIHIL MAGIC
+		::: Disrupts a spell a unit is casting, and renders them unable to cast spells for 1 turn.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Caster
+		
+		EFFECT
+		::: Disrupt Spellcasting
+		::: Silenced
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: Instant
+		::: 1 Action
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path
+		::: ::: Gravelord</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Debuff</SpellSubClass>
+		<SpellTargetType>EnemyCaster</SpellTargetType>
+		<IsResistable>1</IsResistable>
+		<GameModifier>
+			<ModType>TacticalUnit</ModType>
+			<Attribute>DisruptSpellCharge</Attribute>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>PreventSpellcasting</Attribute>
+			<DisplayName>Silenced</DisplayName>
+			<Duration>1</Duration>
+		</GameModifier>
+		<Cooldown>3</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+					<Expression><![CDATA[[UnitStat_BG_IsChampion]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc] > 0]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Silence.png</IconFG>
+		<HitSoundFX>Spell_Feedback_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_Corruption_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>2</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="NC_ProfaneRitual_Effect">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Profane Ritual (Effect)</DisplayName>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<Description>This unit can attempt to rend an enemy spirit from his body and enslave it.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] PROFANE RITUAL (EFFECT)
+		::: This unit can attempt to rend an enemy spirit from his body and enslave it.
+		
+		DOMAIN
+		::: Tactical
+		::: Friendly
+		::: Units
+		
+		EFFECT
+		::: Unlocks Sever Spirit
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Battle
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Spell
+		::: ::: Profane Ritual</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>AllFriendlyUnits</SpellTargetType>
+		<IsCastable>0</IsCastable>
+		<IsResistable>0</IsResistable>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>NC_SeverSpirit</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_ProfaneRitual.png</IconFG>
+		<HitSoundFX>Spell_Wither_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_Wither_Particle</EffectName>
+			<LocalPosition>0,30,0</LocalPosition>
+			<EffectScale>.75</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="NC_RaiseSkeletalHorde">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Raise Skeletal Horde</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>NC_Necromancy2</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>60</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<PreventStackingWith>NC_RaiseZombieHorde</PreventStackingWith>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Raise a skeletal horde.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] RAISE SKELETAL HORDE
+		::: Raise a skeletal horde from the ruins of Elemental.
+		
+		DOMAIN
+		::: Tactical
+		::: Empty Tile
+		
+		EFFECT
+		::: Summon a Skeleton horde
+		::: ::: Level = 1
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Killed
+		
+		OTHER
+		::: Reanimation Bonus
+		::: Summon Bonus
+		
+		SOURCE
+		::: Path of the Gravelord
+		::: ::: Greater Reanimation</Description>
+		<!--<FormattedDescription>Raise a horde of level %d skeletons from the ruins of Elemental.</FormattedDescription>-->
+		<SpellBookSortCategory>Summon</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Summon</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Summon</SpellSubClass>
+		<SpellTargetType>EmptyTile</SpellTargetType>
+		<AppliesRandomModifier>1</AppliesRandomModifier>
+		<Radius>1</Radius>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Skeleton</StrVal>
+			<UnitClass>SkeletonA</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + [NC_UnitStat_BonusReanimationLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Skeleton</StrVal>
+			<UnitClass>SkeletonB</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + [NC_UnitStat_BonusReanimationLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Skeleton</StrVal>
+			<UnitClass>SkeletonC</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + [NC_UnitStat_BonusReanimationLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_RaiseSkeletalHordes.png</IconFG>
+		<HitSoundFX>Spell_SummonEarthElemental_01</HitSoundFX>
+		<WorldLightOverrideTime>2</WorldLightOverrideTime>
+		<WorldLightOverrideAmbiant>30,30,30</WorldLightOverrideAmbiant>
+		<WorldLightOverrideDiffuse>30,30,30</WorldLightOverrideDiffuse>
+		<WorldLightOverrideRim0>212,0,192</WorldLightOverrideRim0>
+		<WorldLightOverrideRim1>0,132,234</WorldLightOverrideRim1>
+	</SpellDef>
+	<SpellDef InternalName="NC_RaiseSkeleton">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Raise Skeleton</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>NC_Necromancy1</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>0</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<PreventStackingWith>NC_RaiseZombie</PreventStackingWith>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Raise a Skeleton. Costs no mana.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] RAISE SKELETON
+		::: Raise a Skeleton from the ruins of Elemental. Though weak, a skeleton costs no mana to create.
+		
+		DOMAIN
+		::: Tactical
+		::: Empty Tile
+		
+		EFFECT
+		::: Summon a Skeleton
+		::: ::: Level = 1
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Killed
+		
+		OTHER
+		::: Reanimation Bonus
+		::: Summon Bonus
+		
+		SOURCE
+		::: Path of the Gravelord
+		::: ::: Basic Reanimation</Description>
+		<!--<FormattedDescription>Raise a level %d Skeleton from the ruins of Elemental.</FormattedDescription>-->
+		<SpellBookSortCategory>Summon</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Summon</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Summon</SpellSubClass>
+		<SpellTargetType>EmptyTile</SpellTargetType>
+		<AppliesRandomModifier>1</AppliesRandomModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Skeleton</StrVal>
+			<UnitClass>SkeletonA</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + [NC_UnitStat_BonusReanimationLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Skeleton</StrVal>
+			<UnitClass>SkeletonB</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + [NC_UnitStat_BonusReanimationLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Skeleton</StrVal>
+			<UnitClass>SkeletonC</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + [NC_UnitStat_BonusReanimationLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_RaiseSkeleton.png</IconFG>
+		<HitSoundFX>Spell_SummonEarthElemental_01</HitSoundFX>
+		<WorldLightOverrideTime>2</WorldLightOverrideTime>
+		<WorldLightOverrideAmbiant>30,30,30</WorldLightOverrideAmbiant>
+		<WorldLightOverrideDiffuse>30,30,30</WorldLightOverrideDiffuse>
+		<WorldLightOverrideRim0>212,0,192</WorldLightOverrideRim0>
+		<WorldLightOverrideRim1>0,132,234</WorldLightOverrideRim1>
+	</SpellDef>
+	<SpellDef InternalName="NC_RaiseUndeadPhalanx">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Raise Undead Phalanx</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>NC_MasterNecromancy</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>160</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Raise a large group of Undead.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] RAISE UNDEAD PHALANX
+		::: Raise a large group of undead defenders surrounding the caster.
+		
+		DOMAIN
+		::: Tactical
+		::: Empty Tile
+		
+		EFFECT
+		::: Summon a Skeletons and Zombies
+		::: ::: Level = 1
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Killed
+		
+		OTHER
+		::: Reanimation Bonus
+		::: Summon Bonus
+		
+		SOURCE
+		::: Path of the Gravelord
+		::: ::: Master Reanimation</Description>
+		<!--<FormattedDescription>Raise a large group of level %d undead surrounding the caster.</FormattedDescription>-->
+		<SpellBookSortCategory>Summon</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Summon</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Summon</SpellSubClass>
+		<SpellTargetType>EmptyTile</SpellTargetType>
+		<AppliesRandomModifier>1</AppliesRandomModifier>
+		<Radius>1</Radius>
+		<Range>0</Range>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Skeleton</StrVal>
+			<UnitClass>NC_SkeletonA_Company</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + [NC_UnitStat_BonusReanimationLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Skeleton</StrVal>
+			<UnitClass>NC_SkeletonB_Company</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + [NC_UnitStat_BonusReanimationLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Skeleton</StrVal>
+			<UnitClass>NC_SkeletonC_Company</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + [NC_UnitStat_BonusReanimationLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Zombie</StrVal>
+			<UnitClass>NC_ZombieA_Company</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + [NC_UnitStat_BonusReanimationLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Zombie</StrVal>
+			<UnitClass>NC_ZombieB_Company</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + [NC_UnitStat_BonusReanimationLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Zombie</StrVal>
+			<UnitClass>NC_ZombieC_Company</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + [NC_UnitStat_BonusReanimationLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_RaiseSkeletalHordes.png</IconFG>
+		<HitSoundFX>Spell_SummonEarthElemental_01</HitSoundFX>
+		<WorldLightOverrideTime>2</WorldLightOverrideTime>
+		<WorldLightOverrideAmbiant>30,30,30</WorldLightOverrideAmbiant>
+		<WorldLightOverrideDiffuse>30,30,30</WorldLightOverrideDiffuse>
+		<WorldLightOverrideRim0>212,0,192</WorldLightOverrideRim0>
+		<WorldLightOverrideRim1>0,132,234</WorldLightOverrideRim1>
+	</SpellDef>
+	<SpellDef InternalName="NC_RaiseZombie">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Raise Zombie</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>NC_Necromancy1</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>0</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<PreventStackingWith>NC_RaiseSkeleton</PreventStackingWith>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Raise a Zombie. Costs no mana.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] RAISE ZOMBIE
+		::: Raise a Zombie from the ruins of Elemental. Though weak, a zombie costs no mana to create.
+		
+		DOMAIN
+		::: Tactical
+		::: Empty Tile
+		
+		EFFECT
+		::: Summon a Zombie
+		::: ::: Level 1
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Killed
+		
+		OTHER
+		::: Reanimation Bonus
+		::: Summon Bonus
+		
+		SOURCE
+		::: Path of the Gravelord
+		::: ::: Basic Reanimation</Description>
+		<!--<FormattedDescription>Raise a level %d Zombie from the ruins of Elemental.</FormattedDescription>-->
+		<SpellBookSortCategory>Summon</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Summon</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Summon</SpellSubClass>
+		<SpellTargetType>EmptyTile</SpellTargetType>
+		<AppliesRandomModifier>1</AppliesRandomModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Zombie</StrVal>
+			<UnitClass>NC_ZombieA</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + [NC_UnitStat_BonusReanimationLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Zombie</StrVal>
+			<UnitClass>NC_ZombieB</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + [NC_UnitStat_BonusReanimationLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Zombie</StrVal>
+			<UnitClass>NC_ZombieC</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + [NC_UnitStat_BonusReanimationLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_RaiseSkeleton.png</IconFG>
+		<HitSoundFX>Spell_SummonEarthElemental_01</HitSoundFX>
+		<WorldLightOverrideTime>2</WorldLightOverrideTime>
+		<WorldLightOverrideAmbiant>30,30,30</WorldLightOverrideAmbiant>
+		<WorldLightOverrideDiffuse>30,30,30</WorldLightOverrideDiffuse>
+		<WorldLightOverrideRim0>212,0,192</WorldLightOverrideRim0>
+		<WorldLightOverrideRim1>0,132,234</WorldLightOverrideRim1>
+	</SpellDef>
+	<SpellDef InternalName="NC_RaiseZombieHorde">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Raise Zombie Horde</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>NC_Necromancy2</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>60</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<PreventStackingWith>NC_RaiseSkeletalHorde</PreventStackingWith>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Raise a zombie horde from the ruins of Elemental.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] RAISE ZOMBIE HORDE
+		::: Raise a zombie horde from the ruins of Elemental.
+		
+		DOMAIN
+		::: Tactical
+		::: Empty Tile
+		
+		EFFECT
+		::: Summon a Zombie horde
+		::: ::: Level 1
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Killed
+		
+		OTHER
+		::: Reanimation Bonus
+		::: Summon Bonus
+		
+		SOURCE
+		::: Path of the Gravelord
+		::: ::: Greater Reanimation</Description>
+		<!--<FormattedDescription>Raise a horde of level %d zombies from the ruins of Elemental.</FormattedDescription>-->
+		<SpellBookSortCategory>Summon</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Summon</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Summon</SpellSubClass>
+		<SpellTargetType>EmptyTile</SpellTargetType>
+		<AppliesRandomModifier>1</AppliesRandomModifier>
+		<Radius>1</Radius>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Zombie</StrVal>
+			<UnitClass>NC_ZombieA</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + [NC_UnitStat_BonusReanimationLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Zombie</StrVal>
+			<UnitClass>NC_ZombieB</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + [NC_UnitStat_BonusReanimationLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Zombie</StrVal>
+			<UnitClass>NC_ZombieC</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + [NC_UnitStat_BonusReanimationLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_RaiseSkeletalHordes.png</IconFG>
+		<HitSoundFX>Spell_SummonEarthElemental_01</HitSoundFX>
+		<WorldLightOverrideTime>2</WorldLightOverrideTime>
+		<WorldLightOverrideAmbiant>30,30,30</WorldLightOverrideAmbiant>
+		<WorldLightOverrideDiffuse>30,30,30</WorldLightOverrideDiffuse>
+		<WorldLightOverrideRim0>212,0,192</WorldLightOverrideRim0>
+		<WorldLightOverrideRim1>0,132,234</WorldLightOverrideRim1>
+	</SpellDef>
+	<SpellDef InternalName="RR_SaltesUrn_Ability">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Saltes Ashes</DisplayName>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Raise a Skeleton from the ruins of Elemental.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] SALTES ASHES
+		::: Raise a Skeleton from the ruins of Elemental.
+		
+		DOMAIN
+		::: Tactical
+		::: Empty Tile
+		
+		EFFECT
+		::: + 1 Skeleton
+		::: ::: Level = 1 + (Caster's Level / 3)
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Killed
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Equipment
+		::: ::: Saltes Urn</Description>
+		<!--<FormattedDescription>Raise a level %d Skeleton from the ruins of Elemental.</FormattedDescription>-->
+		<SpellBookSortCategory>Summon</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Summon</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Summon</SpellSubClass>
+		<SpellTargetType>EmptyTile</SpellTargetType>
+		<AppliesRandomModifier>1</AppliesRandomModifier>
+		<IsSpecialAbility>1</IsSpecialAbility>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Skeleton</StrVal>
+			<UnitClass>SkeletonA</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel] / 3 ]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + 1 ]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Skeleton</StrVal>
+			<UnitClass>SkeletonB</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel] / 3 ]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + 1 ]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Skeleton</StrVal>
+			<UnitClass>SkeletonC</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel] / 3 ]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + 1 ]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_X_SaltesAshes.png</IconFG>
+		<HitSoundFX>Spell_SummonEarthElemental_01</HitSoundFX>
+		<WorldLightOverrideTime>2</WorldLightOverrideTime>
+		<WorldLightOverrideAmbiant>30,30,30</WorldLightOverrideAmbiant>
+		<WorldLightOverrideDiffuse>30,30,30</WorldLightOverrideDiffuse>
+		<WorldLightOverrideRim0>212,0,192</WorldLightOverrideRim0>
+		<WorldLightOverrideRim1>0,132,234</WorldLightOverrideRim1>
+	</SpellDef>
+	<SpellDef InternalName="NC_SanguineCurse">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Sanguine Curse</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>NC_SanguineWizard1</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>15</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>The caster harms himself to curse the target's blood.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] SANGUINE CURSE
+		::: The caster harms himself to curse the target's blood, causing excruciating pain that makes it difficult for the target to defend for 6 Actions while also taking damage for each Action the spell is in effect.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Unit
+		
+		EFFECT
+		::: - 5 HP (Caster)
+		
+		::: - 50% DEF
+		::: - (2 + Death Shards) DMG
+		::: (Target)
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: 6 Actions
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Gravelord
+		::: ::: Sanguine Curse</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitCurse</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Debuff</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<IsResistable>1</IsResistable>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Pierce</StrVal>
+			<DisplayName>Cursed</DisplayName>
+			<Duration>6</Duration>
+			<PerTurn>1</PerTurn>
+			<Effect>E_Curse_Particle</Effect>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_Defense_Pierce] * -0.5]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<Duration>6</Duration>
+			<PerTurn>1</PerTurn>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumDeathShards] * -1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] - 2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<ApplyToCaster>1</ApplyToCaster>
+			<Value>-5</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+					<Expression><![CDATA[[UnitStat_Defense_Pierce]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc] > 10]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Curse.png</IconFG>
+		<HitSoundFX>Spell_Curse_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_Curse_Particle</EffectName>
+			<LocalPosition>0,50,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="NC_SeverSpirit">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Sever Spirit</DisplayName>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Damages target; may summon a Disembodied Spirit.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] SEVER SPIRIT
+		::: Damages the target. If killed, a Disembodied Spirit is summoned.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Unit
+		
+		EFFECT
+		::: ((1 + Death Shards) x 12) DMG
+		::: + 1 Disembodied Spirit (If target dies)
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: Death Shards
+		
+		SOURCE
+		::: Spell
+		::: ::: Profane Ritual</Description>
+		<!--<FormattedDescription>Does %d damage to unit, half if the unit resists. If that unit is killed a Disembodied Spirit is summoned in its place.</FormattedDescription>-->
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<IsCastable>1</IsCastable>
+		<IsSpecialAbility>1</IsSpecialAbility>
+		<IsResistable>1</IsResistable>
+		<Range>1</Range>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumDeathShards] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] * -12]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Disembodied Spirit</StrVal>
+			<UnitClass>NC_Spectre_Summon</UnitClass>
+			<ApplyIfSpellTargetKilled>1</ApplyIfSpellTargetKilled>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<IsForSpellResist>1</IsForSpellResist>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumDeathShards] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc] * -6]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>3</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>150</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_X_TouchOfEntropy.png</IconFG>
+		<HitSoundFX>Spell_TouchOfEntropy_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_TouchofEntropy_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>.3</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="NC_SeverSpiritSpell">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Sever Spirit</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>NC_HexWizard4</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>75</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Damages target; may summon a Disembodied Spirit.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] SEVER SPIRIT
+		::: Damages the target. If killed, a Disembodied Spirit is summoned.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Unit
+		
+		EFFECT
+		::: ((1 + Death Shards) x 12) DMG
+		::: + 1 Disembodied Spirit (If target dies)
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: Death Shards
+		
+		SOURCE
+		::: Soul Ripper</Description>
+		<!--<FormattedDescription>Does %d damage to unit, half if the unit resists. If that unit is killed a Disembodied Spirit is summoned in its place.</FormattedDescription>-->
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<IsCastable>1</IsCastable>
+		<IsResistable>1</IsResistable>
+		<Range>1</Range>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumDeathShards] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] * -12]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Disembodied Spirit</StrVal>
+			<UnitClass>NC_Spectre_Summon</UnitClass>
+			<ApplyIfSpellTargetKilled>1</ApplyIfSpellTargetKilled>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<IsForSpellResist>1</IsForSpellResist>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumDeathShards] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc] * -6]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>3</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>150</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_TouchOfEntropy.png</IconFG>
+		<HitSoundFX>Spell_TouchOfEntropy_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_TouchofEntropy_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>.3</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="NC_VigorOfTheDead">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Vigor of the Dead</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>NC_DarkAugment2</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>90</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Allied Undead Units gain speed and resistance.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] VIGOR OF THE DEAD
+		::: Undead units the caster controls gain unnatural speed and resistance.
+		
+		DOMAIN
+		::: Tactical
+		::: Friendly
+		::: Undead (ALL)
+		
+		EFFECT
+		::: +2 Initiative
+		::: +10 Dodge
+		::: +15 Accuracy
+		::: +20 Magic Resist
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Battle
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Gravelord
+		::: ::: Vigor of the Dead</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>AllFriendlyUnits</SpellTargetType>
+		<SpellTargetCreatureType>Undead</SpellTargetCreatureType>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<DisplayName>Initiative</DisplayName>
+			<Duration>-1</Duration>
+			<Value>2</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Accuracy</StrVal>
+			<DisplayName>Accuracy</DisplayName>
+			<Duration>-1</Duration>
+			<Value>10</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Dodge</StrVal>
+			<DisplayName>Dodge</DisplayName>
+			<Duration>-1</Duration>
+			<Value>15</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_MagicResist</StrVal>
+			<DisplayName>Magic Resist</DisplayName>
+			<Duration>-1</Duration>
+			<Value>20</Value>
+		</GameModifier>
+		<Cooldown>99</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>225</AIPriority>
+			<AIMinSpellTargets>3</AIMinSpellTargets>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_DeathLash.png</IconFG>
+		<HitSoundFX>Spell_CloakOfFear_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_CloakOfFear_Particle</EffectName>
+			<LocalPosition>0,40,0</LocalPosition>
+			<EffectScale>0.7</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="NC_WallOfBone_Ability">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Wall of Bone</DisplayName>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>25</Amount>
+		</SpellResourceCost>
+		<CanStack>1</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Bring forth skeleton soldiers from the ruins of Elemental in a line.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] WALL OF BONE
+		::: Bring forth skeleton soldiers from the ruins of Elemental in a line.
+		
+		DOMAIN
+		::: Tactical
+		::: Empty Tile
+		
+		EFFECT
+		::: Summon Skeletons
+		::: ::: Level = 1
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Killed
+		
+		OTHER
+		::: Reanimation Bonus
+		::: Summonm Bonus
+		
+		SOURCE
+		::: Equipment
+		::: ::: Vitae Lacuna</Description>
+		<!--<FormattedDescription>Raise a horde of level %d skeletons from the ruins of Elemental in a line.</FormattedDescription>-->
+		<SpellBookSortCategory>Summon</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Summon</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Summon</SpellSubClass>
+		<SpellTargetType>EmptyTile</SpellTargetType>
+		<IsSpecialAbility>1</IsSpecialAbility>
+		<AppliesRandomModifier>1</AppliesRandomModifier>
+		<Radius>1</Radius>
+		<RadiusType>ADJACENT</RadiusType>
+		<Range>1</Range>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Skeleton</StrVal>
+			<UnitClass>SkeletonA</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + [NC_UnitStat_BonusReanimationLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Skeleton</StrVal>
+			<UnitClass>SkeletonB</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + [NC_UnitStat_BonusReanimationLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Skeleton</StrVal>
+			<UnitClass>SkeletonC</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + [NC_UnitStat_BonusReanimationLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>5</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_GreaterCurse_Icon.png</IconFG>
+		<HitSoundFX>Spell_SummonEarthElemental_01</HitSoundFX>
+		<WorldLightOverrideTime>2</WorldLightOverrideTime>
+		<WorldLightOverrideAmbiant>30,30,30</WorldLightOverrideAmbiant>
+		<WorldLightOverrideDiffuse>30,30,30</WorldLightOverrideDiffuse>
+		<WorldLightOverrideRim0>212,0,192</WorldLightOverrideRim0>
+		<WorldLightOverrideRim1>0,132,234</WorldLightOverrideRim1>
+	</SpellDef>
+	<SpellDef InternalName="NC_Enervate">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Enervate</DisplayName>
+		<CanStack>1</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Slightly damages, slows and weakens target. Effects stack.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] ENERVATE
+		::: Slightly damages, slows and weakens target. Effects stack, and target has 25% chance to lose next action.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Unit
+		
+		EFFECT
+		::: - 1 ATK
+		::: - 1 Initiative
+		::: - [3,8] HP
+		::: 25% Chance to lose next Action
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Battle
+		
+		OTHER
+		::: Can Stack
+		
+		SOURCE
+		::: Path of the Gravelord
+		::: ::: Necromancy</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<IsCastable>1</IsCastable>
+		<IsSpecialAbility>1</IsSpecialAbility>
+		<IsResistable>0</IsResistable>
+		<Range>1</Range>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<MinValue>-3</MinValue>
+			<MaxValue>-8</MaxValue>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<DisplayName>Slowed</DisplayName>
+			<Duration>-1</Duration>
+			<Value>-1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Boost</StrVal>
+			<DisplayName>Weakened</DisplayName>
+			<Duration>-1</Duration>
+			<Value>-1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>TacticalUnit</ModType>
+			<Attribute>ChanceToLoseNextTurn</Attribute>
+			<DisplayName>Dazed</DisplayName>
+			<Duration>1</Duration>
+			<Value>25</Value>
+		</GameModifier>
+		<Cooldown>2</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_X_TouchOfEntropy.png</IconFG>
+		<HitSoundFX>Spell_TouchOfEntropy_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_TouchofEntropy_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>.3</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="NC_CreateWight_Tactical">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Create Wight</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>NC_AdeptNecromancy</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>45</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<PreventStackingWith>NC_CreateWight</PreventStackingWith>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Uses necromantic magic to create a Wight.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] CREATE WIGHT
+		::: Uses necromantic magic to create a Wight. When cast in Tactical, all surrounding enemies lose their next Action.
+		
+		DOMAIN
+		::: Tactical
+		::: Empty Tile
+		
+		EFFECT
+		::: Summon Wight
+		::: ::: Level = 1
+		
+		::: Surrounding Enemies lose their next Action
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Killed
+		
+		OTHER
+		::: Reanimation Bonus
+		::: Summon Bonus
+		
+		SOURCE
+		::: Path of the Gravelord
+		::: ::: Adept Reanimation</Description>
+		<!--<FormattedDescription>Create a level %d Wight from the ruins of Elemental. When cast in Tactical, all surrounding enemies lose their next turn.</FormattedDescription>-->
+		<SpellBookSortCategory>Summon</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Summon</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Summon</SpellSubClass>
+		<SpellTargetType>EmptyTile</SpellTargetType>
+		<SpellTargetTileOccupied>EnemyOrEmpty</SpellTargetTileOccupied>
+		<IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+		<Radius>1</Radius>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Wight</StrVal>
+			<UnitClass>NC_Wight</UnitClass>
+			<ApplyToSpellRadiusCenterOnly>1</ApplyToSpellRadiusCenterOnly>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + [NC_UnitStat_BonusReanimationLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>TacticalUnit</ModType>
+			<Attribute>ChanceToLoseNextTurn</Attribute>
+			<DisplayName>Afraid</DisplayName>
+			<Duration>1</Duration>
+			<Effect>E_Afraid_Particle</Effect>
+			<Value>100</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_RaiseSkeleton.png</IconFG>
+		<HitSoundFX>Spell_SummonEarthElemental_01</HitSoundFX>
+		<WorldLightOverrideTime>2</WorldLightOverrideTime>
+		<WorldLightOverrideAmbiant>30,30,30</WorldLightOverrideAmbiant>
+		<WorldLightOverrideDiffuse>30,30,30</WorldLightOverrideDiffuse>
+		<WorldLightOverrideRim0>212,0,192</WorldLightOverrideRim0>
+		<WorldLightOverrideRim1>0,132,234</WorldLightOverrideRim1>
+		<SpellDefEffect>
+			<EffectName>S_SummonEarthElemental_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.5</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="NC_RitualOfCompletion">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Ritual of Completion</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>NC_CompleteNecromancy</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>50</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<PreventStackingWith>NC_RitualOfCompletion</PreventStackingWith>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Makes Reanimation Spells more powerful.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] RITUAL OF COMPLETION
+		::: When this ritual is used before the reanimation of the dead, they are made more powerful upon reanimation.
+		
+		DOMAIN
+		::: Tactical
+		::: Self
+		
+		EFFECT
+		::: (Death Shards + Level / 2) Reanimation Bonus
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Battle
+		
+		OTHER
+		::: Death Shards
+		
+		SOURCE
+		::: Path of the Gravelord
+		::: ::: Ritual of Completion</Description>
+		<!--<FormattedDescription>Increases the level of undead reanimated after this ritual by %d.</FormattedDescription>-->
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>Self</SpellTargetType>
+		<CastTime>1</CastTime>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>NC_UnitStat_BonusReanimationLevel</StrVal>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel] * 0.5]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] + [UnitOwner_GetNumDeathShards]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>NC_UnitStat_BonusReanimationLevel</StrVal>
+			<ApplyAtBattleEnd>1</ApplyAtBattleEnd>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel] * 0.5]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] + [UnitOwner_GetNumDeathShards]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2] * -1]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>99</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_ParadigmShift_D.png</IconFG>
+		<HitSoundFX>Spell_CloakOfFear_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_CloakOfFear_Particle</EffectName>
+			<LocalPosition>0,40,0</LocalPosition>
+			<EffectScale>0.7</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+</Spells>

@@ -1,0 +1,469 @@
+<?xml version="1.0"?>
+<container>
+  <GameItemType InternalName="FrostgiantYoungling">
+    <DisplayName>Omega</DisplayName>
+    <Description>This is a young Frost Giant who has not yet earned the honor of war. It is the equal of 3 men.</Description>
+    <Type>Cloak</Type>
+    <CanBeEquipped>1</CanBeEquipped>
+    <ShopValue>0</ShopValue>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_Defense_Pierce</StrVal>
+      <Value>3</Value>
+    </GameModifier>
+    <Prereq>
+      <Type>Race</Type>
+      <Attribute>Race_Type_FrostGiants</Attribute>
+    </Prereq>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_HitPoints</StrVal>
+      <Multiplier>3</Multiplier>
+      <Provides>Hitpoints increased by +200%</Provides>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_Attack_Cold</StrVal>
+      <Multiplier>3</Multiplier>
+      <Provides>Cold damage increased by +200%</Provides>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_Attack_Lightning</StrVal>
+      <Multiplier>3</Multiplier>
+      <Provides>Lightning damage increased by +200%</Provides>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_Attack_Poison</StrVal>
+      <Multiplier>3</Multiplier>
+      <Provides>Direct Poison damage increased by +200%</Provides>
+    </GameModifier>
+    <!-- Blunt damage -->
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_Attack_Pierce</StrVal>
+      <Multiplier>1.8</Multiplier>
+      <Provides>Attack increased by +80%</Provides>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_Accuracy</StrVal>
+      <Value>-10</Value>
+      <WhenUnderPercentHitPoints>80</WhenUnderPercentHitPoints>
+      <Provides>-10 Accuracy under 80% Health</Provides>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_Accuracy</StrVal>
+      <Value>-10</Value>
+      <WhenUnderPercentHitPoints>60</WhenUnderPercentHitPoints>
+      <Provides>-10 Accuracy under 60% Health</Provides>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_Accuracy</StrVal>
+      <Value>-10</Value>
+      <WhenUnderPercentHitPoints>40</WhenUnderPercentHitPoints>
+      <Provides>-10 Accuracy under 40% Health</Provides>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_Accuracy</StrVal>
+      <Value>-10</Value>
+      <WhenUnderPercentHitPoints>20</WhenUnderPercentHitPoints>
+      <Provides>-10 Accuracy under 20% Health</Provides>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_TacticalScaleMultiplier</StrVal>
+      <Value>0.1</Value>
+      <Provides>Unit is visually larger in combat</Provides>
+    </GameModifier>
+    <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+    <RarityDisplay>Common</RarityDisplay>
+    <IsAvailableForUnitDesign>1</IsAvailableForUnitDesign>
+    <IsUsable>0</IsUsable>
+    <ArtDef>FG_ArcticWolfCloak_ArtDef</ArtDef>
+    <GameItemTypeArtDef InternalName="FG_ArcticWolfCloak_ArtDef">
+      <GameItemTypeModelPack InternalName="ArcticWolfCloak_Default">
+        <IconFile>ArcticWolfCloak_Item.png</IconFile>
+        <TintR>0</TintR>
+        <TintG>0</TintG>
+        <TintB>0</TintB>
+        <SupportedUnitModelType>FrostGiantFemale</SupportedUnitModelType>
+        <SupportedUnitModelType>FrostGiantMale</SupportedUnitModelType>
+        <GameItemTypeModel>
+          <ModelFile>Gfx\HKB\Clothes\K_Male_Cloak_Mesh_01.hkb</ModelFile>
+          <Texture_All>Gfx\HKB\Clothes\K_Male_Cloak_ArcticWolf_Texture_01.png</Texture_All>
+          <AttachmentType>Skinned</AttachmentType>
+        </GameItemTypeModel>
+      </GameItemTypeModelPack>
+    </GameItemTypeArtDef>
+  </GameItemType>
+  <GameItemType InternalName="FrostgiantBeta">
+    <Prereq>
+      <Type>Tech</Type>
+      <Target>Player</Target>
+      <Attribute>Cooperation</Attribute>
+    </Prereq>
+    <DisplayName>Beta</DisplayName>
+    <Description>Bloodied in combat, this Frost Giant has earned the respect of the others. It is the equal of 4 men.</Description>
+    <Type>Cloak</Type>
+    <CanBeEquipped>1</CanBeEquipped>
+    <ShopValue>0</ShopValue>
+ 
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_Defense_Pierce</StrVal>
+      <Value>4</Value>
+    </GameModifier>
+    <Prereq>
+      <Type>Race</Type>
+      <Attribute>Race_Type_FrostGiants</Attribute>
+    </Prereq>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_HitPoints</StrVal>
+      <Multiplier>4</Multiplier>
+      <Provides>Hitpoints increased by +300%</Provides>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_Attack_Cold</StrVal>
+      <Multiplier>4</Multiplier>
+      <Provides>Cold damage increased by +300%</Provides>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_Attack_Lightning</StrVal>
+      <Multiplier>4</Multiplier>
+      <Provides>Lightning damage increased by +300%</Provides>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_Attack_Poison</StrVal>
+      <Multiplier>4</Multiplier>
+      <Provides>Direct Poison damage increased by +300%</Provides>
+    </GameModifier>
+    <!-- Blunt damage -->
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_Attack_Pierce</StrVal>
+      <Multiplier>2.2</Multiplier>
+      <Provides>Attack increased by +120%</Provides>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_Accuracy</StrVal>
+      <Value>-10</Value>
+      <WhenUnderPercentHitPoints>80</WhenUnderPercentHitPoints>
+      <Provides>-10 Accuracy under 80% Health</Provides>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_Accuracy</StrVal>
+      <Value>-10</Value>
+      <WhenUnderPercentHitPoints>60</WhenUnderPercentHitPoints>
+      <Provides>-10 Accuracy under 60% Health</Provides>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_Accuracy</StrVal>
+      <Value>-10</Value>
+      <WhenUnderPercentHitPoints>40</WhenUnderPercentHitPoints>
+      <Provides>-10 Accuracy under 40% Health</Provides>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_Accuracy</StrVal>
+      <Value>-10</Value>
+      <WhenUnderPercentHitPoints>20</WhenUnderPercentHitPoints>
+      <Provides>-10 Accuracy under 20% Health</Provides>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_TacticalScaleMultiplier</StrVal>
+      <Value>0.2</Value>
+      <Provides>Unit is visually larger in combat</Provides>
+    </GameModifier>
+    <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+    <RarityDisplay>Common</RarityDisplay>
+    <IsAvailableForUnitDesign>1</IsAvailableForUnitDesign>
+    <IsUsable>0</IsUsable>
+    <ArtDef>FG_IceWargCloak_ArtDef</ArtDef>
+    <GameItemTypeArtDef InternalName="FG_IceWargCloak_ArtDef">
+      <GameItemTypeModelPack InternalName="IceWargCloak_Default">
+        <IconFile>IceWargCloak_Item.png</IconFile>
+        <TintR>0</TintR>
+        <TintG>0</TintG>
+        <TintB>0</TintB>
+        <SupportedUnitModelType>FrostGiantFemale</SupportedUnitModelType>
+        <SupportedUnitModelType>FrostGiantMale</SupportedUnitModelType>
+        <GameItemTypeModel>
+          <ModelFile>Gfx\HKB\Clothes\K_Male_Cloak_Mesh_01.hkb</ModelFile>
+          <Texture_All>Gfx\HKB\Clothes\K_Male_Cloak_IceWarg_Texture_01.png</Texture_All>
+          <AttachmentType>Skinned</AttachmentType>
+        </GameItemTypeModel>
+      </GameItemTypeModelPack>
+    </GameItemTypeArtDef>
+  </GameItemType>
+  <GameItemType InternalName="FrostgiantAlpha">
+    <Prereq>
+      <Type>Tech</Type>
+      <Target>Player</Target>
+      <Attribute>Logistics</Attribute>
+    </Prereq>
+    <DisplayName>Alpha</DisplayName>
+    <Description>A true veteran of war, this Frost Giant has excelled where others have shown mediocrity. It is the equal of 5 men.</Description>
+    <Type>Cloak</Type>
+    <CanBeEquipped>1</CanBeEquipped>
+    <ShopValue>0</ShopValue>
+  
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_Defense_Pierce</StrVal>
+      <Value>5</Value>
+    </GameModifier>
+    <Prereq>
+      <Type>Race</Type>
+      <Attribute>Race_Type_FrostGiants</Attribute>
+    </Prereq>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_HitPoints</StrVal>
+      <Multiplier>5</Multiplier>
+      <Provides>Hitpoints increased by +400%</Provides>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_Attack_Cold</StrVal>
+      <Multiplier>5</Multiplier>
+      <Provides>Cold damage increased by +400%</Provides>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_Attack_Lightning</StrVal>
+      <Multiplier>5</Multiplier>
+      <Provides>Lightning damage increased by +400%</Provides>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_Attack_Poison</StrVal>
+      <Multiplier>5</Multiplier>
+      <Provides>Direct Poison damage increased by +400%</Provides>
+    </GameModifier>
+    <!-- Blunt damage -->
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_Attack_Pierce</StrVal>
+      <Multiplier>2.7</Multiplier>
+      <Provides>Attack increased by +170%</Provides>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_Accuracy</StrVal>
+      <Value>-10</Value>
+      <WhenUnderPercentHitPoints>80</WhenUnderPercentHitPoints>
+      <Provides>-10 Accuracy under 80% Health</Provides>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_Accuracy</StrVal>
+      <Value>-10</Value>
+      <WhenUnderPercentHitPoints>60</WhenUnderPercentHitPoints>
+      <Provides>-10 Accuracy under 60% Health</Provides>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_Accuracy</StrVal>
+      <Value>-10</Value>
+      <WhenUnderPercentHitPoints>40</WhenUnderPercentHitPoints>
+      <Provides>-10 Accuracy under 40% Health</Provides>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_Accuracy</StrVal>
+      <Value>-10</Value>
+      <WhenUnderPercentHitPoints>20</WhenUnderPercentHitPoints>
+      <Provides>-10 Accuracy under 20% Health</Provides>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_TacticalScaleMultiplier</StrVal>
+      <Value>0.3</Value>
+      <Provides>Unit is visually larger in combat</Provides>
+    </GameModifier>
+    <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+    <RarityDisplay>Common</RarityDisplay>
+    <IsAvailableForUnitDesign>1</IsAvailableForUnitDesign>
+    <IsUsable>0</IsUsable>
+    <ArtDef>FG_GarroteCloak_ArtDef</ArtDef>
+    <GameItemTypeArtDef InternalName="FG_GarroteCloak_ArtDef">
+      <GameItemTypeModelPack InternalName="GarroteCloak_Default">
+        <IconFile>GarroteCloak_Item.png</IconFile>
+        <TintR>0</TintR>
+        <TintG>0</TintG>
+        <TintB>0</TintB>
+        <SupportedUnitModelType>FrostGiantFemale</SupportedUnitModelType>
+        <SupportedUnitModelType>FrostGiantMale</SupportedUnitModelType>
+        <GameItemTypeModel>
+          <ModelFile>Gfx\HKB\Clothes\K_Male_Cloak_Mesh_01.hkb</ModelFile>
+          <Texture_All>Gfx\HKB\Clothes\K_Male_Cloak_Garrote_Texture_01.png</Texture_All>
+          <AttachmentType>Skinned</AttachmentType>
+        </GameItemTypeModel>
+      </GameItemTypeModelPack>
+    </GameItemTypeArtDef>
+  </GameItemType>
+  <GameItemType InternalName="FrostgiantAncestor">
+    <Prereq>
+      <Type>Tech</Type>
+      <Target>Player</Target>
+      <Attribute>Company</Attribute>
+    </Prereq>
+    <DisplayName>Ancestor</DisplayName>
+    <Description>Even the Alpha is no match for this Frost giant who is seen as a personification of the revered Ancestors of old. The cloak is made from Frostwyrm skin. This Frost Giant is the equal of 6 men.</Description>
+    <Type>Cloak</Type>
+    <CanBeEquipped>1</CanBeEquipped>
+    <ShopValue>0</ShopValue>
+ 
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_Defense_Pierce</StrVal>
+      <Value>6</Value>
+    </GameModifier>
+    <Prereq>
+      <Type>Race</Type>
+      <Attribute>Race_Type_FrostGiants</Attribute>
+    </Prereq>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_HitPoints</StrVal>
+      <Multiplier>6</Multiplier>
+      <Provides>Hitpoints increased by +500%</Provides>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_Attack_Cold</StrVal>
+      <Multiplier>6</Multiplier>
+      <Provides>Cold damage increased by +500%</Provides>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_Attack_Lightning</StrVal>
+      <Multiplier>6</Multiplier>
+      <Provides>Lightning damage increased by +500%</Provides>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_Attack_Poison</StrVal>
+      <Multiplier>6</Multiplier>
+      <Provides>Direct Poison damage increased by +500%</Provides>
+    </GameModifier>
+    <!-- Blunt damage -->
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_Attack_Pierce</StrVal>
+      <Multiplier>3.2</Multiplier>
+      <Provides>Attack increased by +220%</Provides>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_Accuracy</StrVal>
+      <Value>-10</Value>
+      <WhenUnderPercentHitPoints>80</WhenUnderPercentHitPoints>
+      <Provides>-10 Accuracy under 80% Health</Provides>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_Accuracy</StrVal>
+      <Value>-10</Value>
+      <WhenUnderPercentHitPoints>60</WhenUnderPercentHitPoints>
+      <Provides>-10 Accuracy under 60% Health</Provides>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_Accuracy</StrVal>
+      <Value>-10</Value>
+      <WhenUnderPercentHitPoints>40</WhenUnderPercentHitPoints>
+      <Provides>-10 Accuracy under 40% Health</Provides>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_Accuracy</StrVal>
+      <Value>-10</Value>
+      <WhenUnderPercentHitPoints>20</WhenUnderPercentHitPoints>
+      <Provides>-10 Accuracy under 20% Health</Provides>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_TacticalScaleMultiplier</StrVal>
+      <Value>0.4</Value>
+      <Provides>Unit is visually larger in combat</Provides>
+    </GameModifier>
+    <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+    <RarityDisplay>Common</RarityDisplay>
+    <IsAvailableForUnitDesign>1</IsAvailableForUnitDesign>
+    <IsUsable>0</IsUsable>
+    <ArtDef>FG_FrostwyrmCloak_ArtDef</ArtDef>
+    <GameItemTypeArtDef InternalName="FG_FrostwyrmCloak_ArtDef">
+      <GameItemTypeModelPack InternalName="FrostwyrmCloak_ArtDef">
+        <IconFile>frostwyrmCloak_Item.png</IconFile>
+        <TintR>0</TintR>
+        <TintG>0</TintG>
+        <TintB>0</TintB>
+        <SupportedUnitModelType>FrostGiantFemale</SupportedUnitModelType>
+        <SupportedUnitModelType>FrostGiantMale</SupportedUnitModelType>
+        <GameItemTypeModel>
+          <ModelFile>Gfx\HKB\Clothes\K_Male_Cloak_Mesh_01.hkb</ModelFile>
+          <Texture_All>frostwyrmcloak.png</Texture_All>
+          <AttachmentType>Skinned</AttachmentType>
+        </GameItemTypeModel>
+      </GameItemTypeModelPack>
+    </GameItemTypeArtDef>
+  </GameItemType>
+</container>

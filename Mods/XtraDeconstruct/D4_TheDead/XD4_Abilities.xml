@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<AbilityBonuses>
+	<AbilityBonus InternalName="GravetouchedAbility">
+		<AbilityBonusType>Player</AbilityBonusType>
+		<AbilityBonusOption InternalName="Gravetouched">
+			<DisplayName>Gravetouched</DisplayName>
+			<Description>IMPROVEMENTS
+			::: Trait specific Shard Altars #U
+			::: Trait specific Shard Shrines #U
+			::: Trait specific Shard Temples #U
+			::: ::: +Death Power
+			
+			STRATEGIC SPELLS
+			::: Can cast Haunted Army
+			::: Can cast Morrigan's Call
+			
+			TACTICAL SPELLS
+			::: Can cast Elegy
+			::: Can cast Feed
+			
+			!WARNING!
+			::: Do not combine w/ Binding
+			::: Do not combine w/ Mediums
+			::: Do not combine w/ Reanimation Rituals</Description>
+			<Icon>DLC04_Gravetouched_Icon.png</Icon>
+			<GameModifier>
+				<Provides>IMPROVEMENTS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>::: Trait specific Shard Altars #U
+				::: Trait specific Shard Shrines #U
+				::: Trait specific Shard Temples #U
+				::: ::: +Death Power</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>STRATEGIC SPELLS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>UnlockSpell</Attribute>
+				<StrVal>HauntedArmy</StrVal>
+				<Provides>::: Haunted Army :::
+				::: Raises an undead army for 3 Seasons</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>UnlockSpell</Attribute>
+				<StrVal>MorrigansCall</StrVal>
+				<Provides>::: Morrigan's Call :::
+				::: +1 Growth per Death Shard</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>TACTICAL SPELLS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>UnlockSpell</Attribute>
+				<StrVal>Elegy</StrVal>
+				<Provides>::: Elegy :::
+				::: 3 DMG per Level to adjacent enemies</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>UnlockSpell</Attribute>
+				<StrVal>Feed</StrVal>
+				<Provides>::: Feed :::
+				::: 3 DMG to an adjacent ally
+				::: +12 HP to caster</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>!WARNING!</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>::: Do not combine w/ Binding
+				::: Do not combine w/ Mediums
+				::: Do not combine w/ Reanimation Rituals</Provides>
+			</GameModifier>
+			<Cost>1</Cost>
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="DLC04_UndeadFactionAbility">
+		<AbilityBonusType>Player</AbilityBonusType>
+		<AbilityBonusOption InternalName="DLC04_UndeadFaction">
+			<DisplayName>Undead</DisplayName>
+			<Description>ABSTRACT
+			The dead have no use for food. They cannot build farms. Instead they must build Catacombs and Necropolis to house their cities population.
+			
+			EQUIPMENT
+			::: Undead Horse
+			
+			IMPROVEMENTS
+			::: Mass Grave
+			::: Mausoleum
+			::: Catacomb
+			::: Necropolis
+			::: Well of Darkness
+			
+			IMPROVEMENTS (BLOCKED)
+			::: Apiary
+			::: Arena
+			::: Bakery
+			::: Brewery
+			::: Butcher
+			::: Equine Farm
+			::: Farm
+			::: Farm (Outpost)
+			::: Festival
+			::: Garden
+			::: Granary
+			::: Grocer
+			::: Inn
+			::: Irrigated Farm
+			::: Orchard
+			::: Pasture
+			::: Produce Growth
+			::: Skath Pit
+			::: Storehouse
+			::: Theatre
+			::: Well
+			::: Windmill (Outpost)
+			
+			RESOURCES
+			::: 100% of razed cities population is transfered in your capital.
+			::: Defeated Men/Fallen create population in your nearest city.
+			
+			TECHS (BLOCKED)
+			::: Agriculture
+			::: Animal Husbandry
+			::: Entertainment
+			::: Refined Agriculture
+			
+			UNREST
+			::: -10%
+			
+			WAGES
+			::: -100%
+			::: No maintenance</Description>
+			<Icon>Ability_SlaveLords_Icon.png</Icon>
+			<GameModifier>
+				<Provides>EQUIPMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>::: Undead Horse</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>IMPROVEMENTS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>::: Mass Grave
+				::: Mausoleum
+				::: Catacomb
+				::: Necropolis
+				::: Well of Darkness</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>IMPROVEMENTS (BLOCKED)</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>::: Apiary
+				::: Arena
+				::: Bakery
+				::: Brewery
+				::: Butcher
+				::: Farm
+				::: Festival
+				::: Garden
+				::: Granary
+				::: Grocer
+				::: Inn
+				::: Irrigated Farm
+				::: Orchard
+				::: Pasture
+				::: Produce Growth
+				::: Skath Pit
+				::: Storehouse
+				::: Theatre
+				::: Well</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>RESOURCES</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Enslave</StrVal>
+				<Value>1</Value>
+				<Provides>::: 100% of razed cities population is transfered in your capital.</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_EnslaveDefeated</StrVal>
+				<Value>1</Value>
+				<Provides>::: Defeated Men/Fallen create population in your nearest city.</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>TECHS (BLOCKED)</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>::: Agriculture
+				::: Animal Husbandry
+				::: Entertainment
+				::: Refined Agriculture</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>UNREST</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Additive_Unrest</StrVal>
+				<Value>-10</Value>
+				<Provides>::: -10%</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>WAGES</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_ArmyMaintenance</StrVal>
+				<Value>100</Value>
+				<Provides>::: -100%
+				::: No maintenance</Provides>
+			</GameModifier>
+			<Cost>2</Cost>
+			<Type>Army</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+</AbilityBonuses>

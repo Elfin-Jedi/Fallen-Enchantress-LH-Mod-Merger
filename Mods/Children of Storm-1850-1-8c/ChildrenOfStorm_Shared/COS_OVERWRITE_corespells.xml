@@ -1,0 +1,1079 @@
+<?xml version="1.0"?>
+<Container>
+  <!--   <SpellDef InternalName="HexDEBUG">
+    <DisplayName>HexDEBUG</DisplayName>
+    <Description>Spell used to debug HEX effects</Description>
+    <Image>T_Stoneskin_Painting.png</Image>
+    <IconFG>T_Stoneskin_Icon.png</IconFG>
+    <IconBG>T_Stoneskin_Icon_BG.png</IconBG>
+    <IconColor>250,215,183</IconColor>
+    <AutoUnlock>1</AutoUnlock>
+    <CanStack>0</CanStack>
+    <SpellType>Strategic</SpellType>
+    <SpellClass>Defensive</SpellClass>
+    <SpellSubClass>Buff</SpellSubClass>
+    <SpellTargetType>FriendlyUnit</SpellTargetType>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>UnlockUnitAbility</Attribute>
+      <StrVal>Reliquary_Cursed</StrVal>
+      <DisplayName>HEXED!</DisplayName>
+      <ApplyToCaster>1</ApplyToCaster>
+      <Duration>-1</Duration>
+    </GameModifier>
+    <AIData AIPersonality="AI_General">
+      <AIPriority>20</AIPriority>
+    </AIData>
+    <HitSoundFX>Spell_StoneSkin_01</HitSoundFX>
+    <SpellDefEffect>
+      <EffectName>T_StoneSkin_Particle</EffectName>
+      <LocalPosition>0,25,0</LocalPosition>
+      <EffectScale>.4</EffectScale>
+      <EffectDelay>0</EffectDelay>
+      <SnapToTerrain>1</SnapToTerrain>
+    </SpellDefEffect>
+  </SpellDef>-->
+  <SpellDef InternalName="DrainLife">
+    <DisplayName>Drain Life</DisplayName>
+    <Description>Transfers 12 hit points (+2 per death shard) from target enemy to the caster.  That damage is halved if the enemy resists. All damage is halved again if target counts as Not Alive.</Description>
+    <FormattedDescription>Transfers %d hit points from target enemy to the caster.  That damage is halved if the enemy resists. Damage is halved again if target counts as Not Alive.</FormattedDescription>
+    <Image>T_DrainLife_Painting.png</Image>
+    <IconFG>T_DrainLife_Icon.png</IconFG>
+    <AutoUnlock>1</AutoUnlock>
+    <CastTime>1</CastTime>
+    <SpellBookSortCategory>Unit</SpellBookSortCategory>
+    <SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+    <SpellType>Tactical</SpellType>
+    <SpellClass>Offensive</SpellClass>
+    <SpellSubClass>Damage</SpellSubClass>
+    <SpellTargetType>EnemyUnit</SpellTargetType>
+    <IsResistable>1</IsResistable>
+    <SpellTypeDrain>1</SpellTypeDrain>
+    <Prereq>
+      <Type>AbilityBonusOption</Type>
+      <Attribute>Death3</Attribute>
+    </Prereq>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>Lifesteal</Attribute>
+      <IsForFormattedDescription>1</IsForFormattedDescription>
+      <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+        <Expression><![CDATA[[UnitOwner_GetNumDeathShards] * 2]]></Expression>
+      </Calculate>
+      <Calculate InternalName="Calc2">
+        <Expression><![CDATA[[Calc] + 12]]></Expression>
+      </Calculate>
+      <Calculate InternalName="OwnerShards" ValueOwner="CastingUnit">
+        <Expression><![CDATA[[UnitOwner_GetNumDeathShards]]]></Expression>
+      </Calculate>
+      <Calculate InternalName="CalcX" ValueOwner="TargetUnit">
+        <Expression><![CDATA[[OwnerShards] * [UnitStat_BG_IsNotAlive]]]></Expression>
+      </Calculate>
+      <Calculate InternalName="CalcX1">
+        <Expression><![CDATA[[CalcX] * 2]]></Expression>
+      </Calculate>
+      <Calculate InternalName="CalcY" ValueOwner="TargetUnit">
+        <Expression><![CDATA[6 * [UnitStat_BG_IsNotAlive]]]></Expression>
+      </Calculate>
+      <Calculate InternalName="CalcZ">
+        <Expression><![CDATA[[CalcX1] + [CalcY]]]></Expression>
+      </Calculate>
+      <Calculate InternalName="Value">
+        <Expression><![CDATA[[Calc2] - [CalcZ]]]></Expression>
+      </Calculate>
+      <Calculate InternalName="ValueForFormattedDescription">
+        <Expression><![CDATA[[Calc] + 12]]></Expression>
+      </Calculate>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>Lifesteal</Attribute>
+      <IsForSpellResist>1</IsForSpellResist>
+      <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+        <Expression><![CDATA[[UnitOwner_GetNumDeathShards]]]></Expression>
+      </Calculate>
+      <Calculate InternalName="OwnerShards" ValueOwner="CastingUnit">
+        <Expression><![CDATA[[UnitOwner_GetNumDeathShards]]]></Expression>
+      </Calculate>
+      <Calculate InternalName="CalcX" ValueOwner="TargetUnit">
+        <Expression><![CDATA[[OwnerShards] * [UnitStat_BG_IsNotAlive]]]></Expression>
+      </Calculate>
+      <Calculate InternalName="CalcY" ValueOwner="TargetUnit">
+        <Expression><![CDATA[3 * [UnitStat_BG_IsNotAlive]]]></Expression>
+      </Calculate>
+      <Calculate InternalName="CalcZ">
+        <Expression><![CDATA[[CalcX] + [CalcY]]]></Expression>
+      </Calculate>
+      <Calculate InternalName="Calc2">
+        <Expression><![CDATA[[Calc] + 6]]></Expression>
+      </Calculate>
+      <Calculate InternalName="Value">
+        <Expression><![CDATA[[Calc2] - [CalcZ]]]></Expression>
+      </Calculate>
+    </GameModifier>
+    <ValueCalcWrapper>
+      <ValueType>IsTargetWorthy</ValueType>
+      <Calculate InternalName="Calc" ValueOwner="TargetUnit">
+        <Expression><![CDATA[[UnitStat_BG_IsNotAlive]]]></Expression>
+      </Calculate>
+      <Calculate InternalName="Value">
+        <Expression><![CDATA[[Calc] < 1]]></Expression>
+      </Calculate>
+    </ValueCalcWrapper>
+    <AIData AIPersonality="AI_General">
+      <AIPriority>15</AIPriority>
+    </AIData>
+    <HitSoundFX>Spell_DrainLife_01</HitSoundFX>
+    <SpellCastEffectName>T_Erosion_Particle</SpellCastEffectName>
+    <SpellCastEffectScale>1</SpellCastEffectScale>
+    <SpellCastProjectile>1</SpellCastProjectile>
+    <SpellCastProjectileSpeed>700</SpellCastProjectileSpeed>
+    <SpellDefEffect>
+      <EffectName>T_DrainLife_Particle</EffectName>
+      <LocalPosition>0,0,0</LocalPosition>
+      <EffectScale>0.50</EffectScale>
+      <EffectDelay>0</EffectDelay>
+      <SnapToTerrain>0</SnapToTerrain>
+    </SpellDefEffect>
+  </SpellDef>
+  <SpellDef InternalName="BloodCurse">
+    <DisplayName>Blood Curse</DisplayName>
+    <Description>Target city sacrifices half its citizens.  The caster receives a hit point for each citizen sacrificed.  The caster no long heals naturally.  Only the sovereign can cast this spell. If unit is Hexed at cast, the spell only gives half the normal bonus.</Description>
+    <Image>S_BloodCurse_Painting.png</Image>
+    <IconFG>S_BloodCurse_Icon.png</IconFG>
+    <SpellBookSortCategory>Unit</SpellBookSortCategory>
+    <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+    <SpellType>Strategic</SpellType>
+    <SpellClass>ImpResourceBooster</SpellClass>
+    <SpellSubClass>Other</SpellSubClass>
+    <SpellTargetType>FriendlyCity</SpellTargetType>
+    <CasterMustBeSov>1</CasterMustBeSov>
+    <RequiresEssenceSlot>0</RequiresEssenceSlot>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_HitPoints</StrVal>
+      <ApplyToCaster>1</ApplyToCaster>
+      <Duration>-1</Duration>
+      <Effect>E_BloodCurse_Particle</Effect>
+      <Calculate InternalName="Calc" ValueOwner="TargetCity">
+        <Expression><![CDATA[[CityPopulation] / 2]]></Expression>
+      </Calculate>
+      <Calculate InternalName="Value">
+        <Expression><![CDATA[[Calc]]]></Expression>
+      </Calculate>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_HitPoints</StrVal>
+      <ApplyToCaster>1</ApplyToCaster>
+      <Duration>-1</Duration>
+      <Effect>E_BloodCurse_Particle</Effect>
+      <Calculate InternalName="Calc" ValueOwner="TargetCity">
+        <Expression><![CDATA[[CityPopulation] / -4]]></Expression>
+      </Calculate>
+      <Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+        <Expression><![CDATA[[Calc] * [UnitStat_Reliquary_IsCursed]]]></Expression>
+      </Calculate>
+      <Calculate InternalName="Value">
+        <Expression><![CDATA[[Calc2]]]></Expression>
+      </Calculate>
+    </GameModifier>
+    <GameModifier>
+      <ModType>City</ModType>
+      <Attribute>Sacrifice</Attribute>
+      <Calculate InternalName="Calc" ValueOwner="TargetCity">
+        <Expression><![CDATA[[CityPopulation] / 2]]></Expression>
+      </Calculate>
+      <Calculate InternalName="Value">
+        <Expression><![CDATA[[Calc]]]></Expression>
+      </Calculate>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>MaxHPRegen</Attribute>
+      <ApplyToCaster>1</ApplyToCaster>
+      <Value>0</Value>
+    </GameModifier>
+    <AIData AIPersonality="AI_General">
+      <AIPriority>0</AIPriority>
+    </AIData>
+    <HitSoundFX>Spell_BloodCurse_01</HitSoundFX>
+    <SpellDefEffect>
+      <EffectName>S_Sacrifice_Particle</EffectName>
+      <LocalPosition>0,50,0</LocalPosition>
+      <EffectScale>1.5</EffectScale>
+      <EffectDelay>0</EffectDelay>
+      <SnapToTerrain>1</SnapToTerrain>
+    </SpellDefEffect>
+  </SpellDef>
+  <SpellDef InternalName="Soulburning">
+    <DisplayName>Soulburning</DisplayName>
+    <Description>Does 12 fire damage (+2 per death and fire shard) (+9 if target is Hexed) to the unit, half if the victim resists.</Description>
+    <FormattedDescription>Does %d (+9 if target is Hexed) fire damage to the unit, half if the victim resists.  If the unit is killed an inferno is left in the tile.</FormattedDescription>
+    <Image>T_Soulburning_Painting.png</Image>
+    <IconFG>T_Soulburning_Icon.png</IconFG>
+    <AutoUnlock>1</AutoUnlock>
+    <CastTime>1</CastTime>
+    <SpellBookSortCategory>Unit</SpellBookSortCategory>
+    <SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+    <SpellType>Tactical</SpellType>
+    <SpellClass>Offensive</SpellClass>
+    <SpellSubClass>Damage</SpellSubClass>
+    <SpellTargetType>EnemyUnit</SpellTargetType>
+    <IsResistable>1</IsResistable>
+    <Radius>0</Radius>
+    <Prereq>
+      <Type>AbilityBonusOption</Type>
+      <Attribute>Pyromancy</Attribute>
+    </Prereq>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>DefendableDamage</Attribute>
+      <AttackStat>UnitStat_Attack_Fire</AttackStat>
+      <IsForFormattedDescription>1</IsForFormattedDescription>
+      <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+        <Expression><![CDATA[[UnitOwner_GetNumDeathShards] + [UnitOwner_GetNumFireShards]]]></Expression>
+      </Calculate>
+      <Calculate InternalName="Calc2">
+        <Expression><![CDATA[[Calc] * 2]]></Expression>
+      </Calculate>
+      <Calculate InternalName="Calc3" ValueOwner="TargetUnit">
+        <Expression><![CDATA[[UnitStat_Reliquary_IsCursed] * 9]]></Expression>
+      </Calculate>
+      <Calculate InternalName="Calc4">
+        <Expression><![CDATA[[Calc3]+[Calc2] ]]></Expression>
+      </Calculate>
+      <Calculate InternalName="Value">
+        <Expression><![CDATA[[Calc4] + 12]]></Expression>
+      </Calculate>
+      <Calculate InternalName="ValueForFormattedDescription">
+        <Expression><![CDATA[[Calc2] + 12]]></Expression>
+      </Calculate>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>DefendableDamage</Attribute>
+      <AttackStat>UnitStat_Attack_Fire</AttackStat>
+      <IsForSpellResist>1</IsForSpellResist>
+      <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+        <Expression><![CDATA[[UnitOwner_GetNumDeathShards] + [UnitOwner_GetNumFireShards]]]></Expression>
+      </Calculate>
+      <Calculate InternalName="Calc2">
+        <Expression><![CDATA[[Calc]]]></Expression>
+      </Calculate>
+      <Calculate InternalName="Calc3" ValueOwner="TargetUnit">
+        <Expression><![CDATA[[UnitStat_Reliquary_IsCursed] * 9]]></Expression>
+      </Calculate>
+      <Calculate InternalName="Calc4">
+        <Expression><![CDATA[[Calc3]+[Calc2] ]]></Expression>
+      </Calculate>
+      <Calculate InternalName="Value">
+        <Expression><![CDATA[[Calc4] + 6]]></Expression>
+      </Calculate>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Map</ModType>
+      <Attribute>CreateWorldProp</Attribute>
+      <StrVal>TD_Groundfire</StrVal>
+      <ApplyIfSpellTargetKilled>1</ApplyIfSpellTargetKilled>
+      <Duration>-1</Duration>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>DefendableDamage</Attribute>
+      <AttackStat>UnitStat_Attack_Fire</AttackStat>
+      <ApplyToTile>1</ApplyToTile>
+      <ApplyIfSpellTargetKilled>1</ApplyIfSpellTargetKilled>
+      <DurationOnTile>-1</DurationOnTile>
+      <Value>5</Value>
+    </GameModifier>
+    <AIData AIPersonality="AI_General">
+      <AIPriority>40</AIPriority>
+      <ValueCalcWrapper>
+        <ValueType>IsTargetWorthy</ValueType>
+        <Calculate InternalName="Calc" ValueOwner="TargetUnit">
+          <Expression><![CDATA[[UnitStat_ResistFire]]]></Expression>
+        </Calculate>
+        <Calculate InternalName="Value">
+          <Expression><![CDATA[[Calc] < 75]]></Expression>
+        </Calculate>
+      </ValueCalcWrapper>
+    </AIData>
+    <HitSoundFX>Spell_Soulburning_01</HitSoundFX>
+    <SpellDefEffect>
+      <EffectName>T_Soulburning_Particle</EffectName>
+      <LocalPosition>0, 0 ,0</LocalPosition>
+      <EffectScale>0.50</EffectScale>
+      <EffectDelay>0.25</EffectDelay>
+      <SnapToTerrain>1</SnapToTerrain>
+    </SpellDefEffect>
+  </SpellDef>
+  <SpellDef InternalName="Soulburning_Ability">
+    <DisplayName>Soulburning</DisplayName>
+    <Description>Does 12 fire damage (+2 per death and fire shard) (+9 if target is Hexed) to the unit, half if the victim resists.</Description>
+    <FormattedDescription>Does %d (+9 if target is Hexed) fire damage to the unit, half if the victim resists.  If the unit is killed an inferno is left in the tile.</FormattedDescription>
+    <Image>T_Soulburning_Painting.png</Image>
+    <IconFG>T_Soulburning_Icon.png</IconFG>
+    <Cooldown>5</Cooldown>
+    <SpellBookSortCategory>Unit</SpellBookSortCategory>
+    <SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+    <SpellType>Tactical</SpellType>
+    <SpellClass>Offensive</SpellClass>
+    <SpellSubClass>Damage</SpellSubClass>
+    <SpellTargetType>EnemyUnit</SpellTargetType>
+    <HideInHiergamenon>1</HideInHiergamenon>
+    <IsResistable>1</IsResistable>
+    <IsSpecialAbility>1</IsSpecialAbility>
+    <Radius>0</Radius>
+    <GameModifier>
+      <ModType>Map</ModType>
+      <Attribute>CreateWorldProp</Attribute>
+      <StrVal>TD_Groundfire</StrVal>
+      <ApplyIfSpellTargetKilled>1</ApplyIfSpellTargetKilled>
+      <Duration>-1</Duration>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>DefendableDamage</Attribute>
+      <AttackStat>UnitStat_Attack_Fire</AttackStat>
+      <ApplyToTile>1</ApplyToTile>
+      <ApplyIfSpellTargetKilled>1</ApplyIfSpellTargetKilled>
+      <DurationOnTile>-1</DurationOnTile>
+      <Value>5</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>DefendableDamage</Attribute>
+      <AttackStat>UnitStat_Attack_Fire</AttackStat>
+      <IsForFormattedDescription>1</IsForFormattedDescription>
+      <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+        <Expression><![CDATA[[UnitOwner_GetNumDeathShards] + [UnitOwner_GetNumFireShards]]]></Expression>
+      </Calculate>
+      <Calculate InternalName="Calc2">
+        <Expression><![CDATA[[Calc] * 2]]></Expression>
+      </Calculate>
+      <Calculate InternalName="Calc3" ValueOwner="TargetUnit">
+        <Expression><![CDATA[[UnitStat_Reliquary_IsCursed] * 9]]></Expression>
+      </Calculate>
+      <Calculate InternalName="Calc4">
+        <Expression><![CDATA[[Calc3]+[Calc2] ]]></Expression>
+      </Calculate>
+      <Calculate InternalName="Value">
+        <Expression><![CDATA[[Calc4] + 12]]></Expression>
+      </Calculate>
+      <Calculate InternalName="ValueForFormattedDescription">
+        <Expression><![CDATA[[Calc2] + 12]]></Expression>
+      </Calculate>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>DefendableDamage</Attribute>
+      <AttackStat>UnitStat_Attack_Fire</AttackStat>
+      <IsForSpellResist>1</IsForSpellResist>
+      <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+        <Expression><![CDATA[[UnitOwner_GetNumDeathShards] + [UnitOwner_GetNumFireShards]]]></Expression>
+      </Calculate>
+      <Calculate InternalName="Calc2">
+        <Expression><![CDATA[[Calc]]]></Expression>
+      </Calculate>
+      <Calculate InternalName="Calc3" ValueOwner="TargetUnit">
+        <Expression><![CDATA[[UnitStat_Reliquary_IsCursed] * 9]]></Expression>
+      </Calculate>
+      <Calculate InternalName="Calc4">
+        <Expression><![CDATA[[Calc3]+[Calc2] ]]></Expression>
+      </Calculate>
+      <Calculate InternalName="Value">
+        <Expression><![CDATA[[Calc4] + 6]]></Expression>
+      </Calculate>
+    </GameModifier>
+    <AIData AIPersonality="AI_General">
+      <AIPriority>40</AIPriority>
+      <ValueCalcWrapper>
+        <ValueType>IsTargetWorthy</ValueType>
+        <Calculate InternalName="Calc" ValueOwner="TargetUnit">
+          <Expression><![CDATA[[UnitStat_ResistFire]]]></Expression>
+        </Calculate>
+        <Calculate InternalName="Value">
+          <Expression><![CDATA[[Calc] < 75]]></Expression>
+        </Calculate>
+      </ValueCalcWrapper>
+    </AIData>
+    <HitSoundFX>Spell_Soulburning_01</HitSoundFX>
+    <SpellDefEffect>
+      <EffectName>T_Soulburning_Particle</EffectName>
+      <LocalPosition>0, 0 ,0</LocalPosition>
+      <EffectScale>0.50</EffectScale>
+      <EffectDelay>0.25</EffectDelay>
+      <SnapToTerrain>1</SnapToTerrain>
+    </SpellDefEffect>
+  </SpellDef>
+  <SpellDef InternalName="ProtectionFromFire">
+    <DisplayName>Protection from Fire</DisplayName>
+    <Description>All allied units gain 50% Fire Resistance. Hexed units only gain +25%.</Description>
+    <Image>S_MantleofFire_Painting.png</Image>
+    <IconFG>T_ProtectionFromFire_Icon.png</IconFG>
+    <AutoUnlock>1</AutoUnlock>
+    <CanStack>0</CanStack>
+    <SpellBookSortCategory>Unit</SpellBookSortCategory>
+    <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+    <SpellType>Tactical</SpellType>
+    <SpellClass>Defensive</SpellClass>
+    <SpellSubClass>Buff</SpellSubClass>
+    <SpellTargetType>AllFriendlyUnits</SpellTargetType>
+    <Prereq>
+      <Type>AbilityBonusOption</Type>
+      <Attribute>Abjuration</Attribute>
+    </Prereq>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_ResistFire</StrVal>
+      <Duration>-1</Duration>
+      <Value>50</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_ResistFire</StrVal>
+      <Duration>-1</Duration>
+      <Calculate InternalName="Calc1" ValueOwner="TargetUnit">
+        <Expression><![CDATA[[UnitStat_Reliquary_IsCursed]]]></Expression>
+      </Calculate>
+      <Calculate InternalName="Value">
+        <Expression><![CDATA[[Calc1]*-25]]></Expression>
+      </Calculate>
+    </GameModifier>
+    <AIData AIPersonality="AI_General">
+      <AIPriority>0</AIPriority>
+    </AIData>
+    <HitSoundFX>Spell_MantleOfFire_01</HitSoundFX>
+    <SpellDefEffect>
+      <EffectName>S_MantleofFire_Particle</EffectName>
+      <LocalPosition>0,0,0</LocalPosition>
+      <EffectScale>1</EffectScale>
+      <EffectDelay>0</EffectDelay>
+      <SnapToTerrain>1</SnapToTerrain>
+    </SpellDefEffect>
+  </SpellDef>
+  <SpellDef InternalName="ProtectionFromCold">
+    <DisplayName>Protection from Cold</DisplayName>
+    <Description>All allied units gain 50% Cold Resistance. Hexed units only gain +25%.</Description>
+    <Image>S_MantleofOceans_Painting.png</Image>
+    <IconFG>T_ProtectionFromCold_Icon.png</IconFG>
+    <AutoUnlock>1</AutoUnlock>
+    <CanStack>0</CanStack>
+    <SpellBookSortCategory>Unit</SpellBookSortCategory>
+    <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+    <SpellType>Tactical</SpellType>
+    <SpellClass>Defensive</SpellClass>
+    <SpellSubClass>Buff</SpellSubClass>
+    <SpellTargetType>AllFriendlyUnits</SpellTargetType>
+    <Prereq>
+      <Type>AbilityBonusOption</Type>
+      <Attribute>Abjuration</Attribute>
+    </Prereq>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_ResistCold</StrVal>
+      <Duration>-1</Duration>
+      <Value>50</Value>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_ResistCold</StrVal>
+      <Duration>-1</Duration>
+      <Calculate InternalName="Calc1" ValueOwner="TargetUnit">
+        <Expression><![CDATA[[UnitStat_Reliquary_IsCursed]]]></Expression>
+      </Calculate>
+      <Calculate InternalName="Value">
+        <Expression><![CDATA[[Calc1]*-25]]></Expression>
+      </Calculate>
+    </GameModifier>
+    <AIData AIPersonality="AI_General">
+      <AIPriority>0</AIPriority>
+    </AIData>
+    <HitSoundFX>Spell_ProtectionFromCold_01</HitSoundFX>
+    <SpellDefEffect>
+      <EffectName>S_MantleofOceans_Particle</EffectName>
+      <LocalPosition>0,0,0</LocalPosition>
+      <EffectScale>1</EffectScale>
+      <EffectDelay>0</EffectDelay>
+      <SnapToTerrain>1</SnapToTerrain>
+    </SpellDefEffect>
+  </SpellDef>
+  <SpellDef InternalName="Fear_Ability">
+    <DisplayName>Fear</DisplayName>
+    <Description>All enemies are stunned for 3 actions unless they resist.</Description>
+    <Image>S_CloakOfFear_Painting.png</Image>
+    <IconFG>S_CloakOfFear_Icon.png</IconFG>
+    <CanStack>0</CanStack>
+    <SpellBookSortCategory>Unit</SpellBookSortCategory>
+    <SpellBookSortSubCategory>UnitCurse</SpellBookSortSubCategory>
+    <SpellType>Tactical</SpellType>
+    <SpellClass>Offensive</SpellClass>
+    <SpellSubClass>Debuff</SpellSubClass>
+    <SpellTargetType>AllEnemyUnits</SpellTargetType>
+    <HideInHiergamenon>1</HideInHiergamenon>
+    <IsResistable>1</IsResistable>
+    <IsSpecialAbility>1</IsSpecialAbility>
+    <GameModifier>
+      <ModType>TacticalUnit</ModType>
+      <Attribute>ChanceToLoseNextTurn</Attribute>
+      <DisplayName>Afraid</DisplayName>
+      <Duration>3</Duration>
+      <Effect>E_Afraid_Particle</Effect>
+      <PerTurn>1</PerTurn>
+      <Calculate InternalName="Calc1" ValueOwner="TargetUnit">
+        <Expression><![CDATA[[UnitStat_ImmuneToFear]*-100]]></Expression>
+      </Calculate>
+      <Calculate InternalName="Value">
+        <Expression><![CDATA[[Calc1]+100]]></Expression>
+      </Calculate>
+    </GameModifier>
+    <AIData AIPersonality="AI_General">
+      <AIPriority>25</AIPriority>
+    </AIData>
+    <HitSoundFX>Spell_FearWave_01</HitSoundFX>
+    <SpellDefEffect>
+      <EffectName>T_Fear_Impact_Particle</EffectName>
+      <LocalPosition>0,0,0</LocalPosition>
+      <EffectScale>1</EffectScale>
+      <EffectDelay>1</EffectDelay>
+      <SnapToTerrain>1</SnapToTerrain>
+      <PlayOnAllTargets>1</PlayOnAllTargets>
+    </SpellDefEffect>
+    <SpellDefEffect>
+      <EffectName>T_FearWave_Particle</EffectName>
+      <LocalPosition>0,20,0</LocalPosition>
+      <EffectScale>1</EffectScale>
+      <EffectDelay>0</EffectDelay>
+      <SnapToTerrain>1</SnapToTerrain>
+    </SpellDefEffect>
+    <SpellDefEffect>
+      <EffectName>T_FearWave_Particle</EffectName>
+      <LocalPosition>0,20,0</LocalPosition>
+      <EffectScale>1</EffectScale>
+      <EffectDelay>0</EffectDelay>
+      <SnapToTerrain>1</SnapToTerrain>
+    </SpellDefEffect>
+  </SpellDef>
+  <SpellDef InternalName="Tame">
+    <DisplayName>Tame</DisplayName>
+    <Description>Take control of the targeted Beast unless it resists.</Description>
+    <Image>S_Domination_Painting.png</Image>
+    <IconFG>T_Tame_Icon.png</IconFG>
+    <AutoUnlock>1</AutoUnlock>
+    <CanStack>0</CanStack>
+    <Cooldown>10</Cooldown>
+    <SpellBookSortCategory>Unit</SpellBookSortCategory>
+    <SpellBookSortSubCategory>Charm</SpellBookSortSubCategory>
+    <SpellType>Tactical</SpellType>
+    <SpellClass>Offensive</SpellClass>
+    <SpellSubClass>Other</SpellSubClass>
+    <SpellTargetType>EnemyUnit</SpellTargetType>
+    <SpellTargetCreatureType>Beast</SpellTargetCreatureType>
+    <IsResistable>1</IsResistable>
+    <Range>1</Range>
+    <Prereq>
+      <Type>AbilityBonusOption</Type>
+      <Attribute>Beastlord</Attribute>
+    </Prereq>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>CharmTarget</Attribute>
+      <Calculate InternalName="Calc" ValueOwner="TargetUnit">
+        <Expression><![CDATA[[UnitStat_CannotBeCharmed]*-100]]></Expression>
+      </Calculate>
+      <Calculate InternalName="Value">
+        <Expression><![CDATA[[Calc] + 100]]></Expression>
+      </Calculate>
+    </GameModifier>
+    <AIData AIPersonality="AI_General">
+      <AIPriority>5</AIPriority>
+    </AIData>
+    <HitSoundFX>Spell_SilverTongue_01</HitSoundFX>
+    <SpellDefEffect>
+      <EffectName>T_Tame_Particle</EffectName>
+      <LocalPosition>0,0,0</LocalPosition>
+      <EffectScale>1</EffectScale>
+      <EffectDelay>0</EffectDelay>
+      <SnapToTerrain>1</SnapToTerrain>
+    </SpellDefEffect>
+  </SpellDef>
+  <SpellDef InternalName="Tame_Ability">
+    <DisplayName>Tame</DisplayName>
+    <Description>Take control of the targeted Beast unless it resists.</Description>
+    <Image>S_Domination_Painting.png</Image>
+    <IconFG>T_Tame_Icon.png</IconFG>
+    <CanStack>0</CanStack>
+    <SpellBookSortCategory>Unit</SpellBookSortCategory>
+    <SpellBookSortSubCategory>Charm</SpellBookSortSubCategory>
+    <SpellType>Tactical</SpellType>
+    <SpellClass>Offensive</SpellClass>
+    <SpellSubClass>Other</SpellSubClass>
+    <SpellTargetType>EnemyUnit</SpellTargetType>
+    <SpellTargetCreatureType>Beast</SpellTargetCreatureType>
+    <IsResistable>1</IsResistable>
+    <Range>1</Range>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>CharmTarget</Attribute>
+      <Calculate InternalName="Calc" ValueOwner="TargetUnit">
+        <Expression><![CDATA[[UnitStat_CannotBeCharmed]*-100]]></Expression>
+      </Calculate>
+      <Calculate InternalName="Value">
+        <Expression><![CDATA[[Calc] + 100]]></Expression>
+      </Calculate>
+    </GameModifier>
+    <AIData AIPersonality="AI_General">
+      <AIPriority>5</AIPriority>
+    </AIData>
+    <HitSoundFX>Spell_SilverTongue_01</HitSoundFX>
+    <SpellDefEffect>
+      <EffectName>T_Tame_Particle</EffectName>
+      <LocalPosition>0,0,0</LocalPosition>
+      <EffectScale>1</EffectScale>
+      <EffectDelay>0</EffectDelay>
+      <SnapToTerrain>1</SnapToTerrain>
+    </SpellDefEffect>
+  </SpellDef>
+  <SpellDef InternalName="TameTwisted_Ability">
+    <DisplayName>Tame</DisplayName>
+    <Description>Take control of the targeted Twisted unit.</Description>
+    <Image>S_Domination_Painting.png</Image>
+    <IconFG>T_Tame_Icon.png</IconFG>
+    <CanStack>0</CanStack>
+    <SpellBookSortCategory>Unit</SpellBookSortCategory>
+    <SpellBookSortSubCategory>Charm</SpellBookSortSubCategory>
+    <SpellType>Tactical</SpellType>
+    <SpellClass>Offensive</SpellClass>
+    <SpellSubClass>Other</SpellSubClass>
+    <SpellTargetType>EnemyUnit</SpellTargetType>
+    <SpellTargetCreatureType>Twisted</SpellTargetCreatureType>
+    <Range>1</Range>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>CharmTarget</Attribute>
+      <Calculate InternalName="Calc" ValueOwner="TargetUnit">
+        <Expression><![CDATA[[UnitStat_CannotBeCharmed]*-100]]></Expression>
+      </Calculate>
+      <Calculate InternalName="Value">
+        <Expression><![CDATA[[Calc] + 100]]></Expression>
+      </Calculate>
+    </GameModifier>
+    <AIData AIPersonality="AI_General">
+      <AIPriority>5</AIPriority>
+    </AIData>
+    <HitSoundFX>Spell_SilverTongue_01</HitSoundFX>
+    <SpellDefEffect>
+      <EffectName>T_Tame_Particle</EffectName>
+      <LocalPosition>0,0,0</LocalPosition>
+      <EffectScale>1</EffectScale>
+      <EffectDelay>0</EffectDelay>
+      <SnapToTerrain>1</SnapToTerrain>
+    </SpellDefEffect>
+  </SpellDef>
+  <SpellDef InternalName="SilverTongue">
+    <DisplayName>Silver Tongue</DisplayName>
+    <Description>Convert a trained unit to your cause unless they resist.</Description>
+    <Image>S_DestinysGift_Painting.png</Image>
+    <IconFG>T_SilverTongue_Icon.png</IconFG>
+    <AutoUnlock>1</AutoUnlock>
+    <Cooldown>99</Cooldown>
+    <SpellBookSortCategory>Unit</SpellBookSortCategory>
+    <SpellBookSortSubCategory>Charm</SpellBookSortSubCategory>
+    <SpellType>Tactical</SpellType>
+    <SpellClass>Offensive</SpellClass>
+    <SpellSubClass>Debuff</SpellSubClass>
+    <SpellTargetType>EnemyTrainedUnit</SpellTargetType>
+    <SpellTargetCreatureType>Men</SpellTargetCreatureType>
+    <IsResistable>1</IsResistable>
+    <Range>1</Range>
+    <Prereq>
+      <Type>AbilityBonusOption</Type>
+      <Attribute>Diplomat</Attribute>
+    </Prereq>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>CharmTarget</Attribute>
+      <Calculate InternalName="Calc" ValueOwner="TargetUnit">
+        <Expression><![CDATA[[UnitStat_CannotBeCharmed]*-100]]></Expression>
+      </Calculate>
+      <Calculate InternalName="Value">
+        <Expression><![CDATA[[Calc] + 100]]></Expression>
+      </Calculate>
+    </GameModifier>
+    <AIData AIPersonality="AI_General">
+      <AIPriority>5</AIPriority>
+    </AIData>
+    <HitSoundFX>Spell_SilverTongue_01</HitSoundFX>
+    <SpellDefEffect>
+      <EffectName>T_Tame_Particle</EffectName>
+      <LocalPosition>0,0,0</LocalPosition>
+      <EffectScale>1</EffectScale>
+      <EffectDelay>0</EffectDelay>
+      <SnapToTerrain>1</SnapToTerrain>
+    </SpellDefEffect>
+  </SpellDef>
+  <SpellDef InternalName="Domination">
+    <DisplayName>Domination</DisplayName>
+    <Description>Take control of enemy unit unless they resist.</Description>
+    <Image>S_Domination_Painting.png</Image>
+    <IconFG>S_Domination_Icon.png</IconFG>
+    <CastTime>2</CastTime>
+    <SpellBookSortCategory>Unit</SpellBookSortCategory>
+    <SpellBookSortSubCategory>Charm</SpellBookSortSubCategory>
+    <SpellType>Tactical</SpellType>
+    <SpellClass>Offensive</SpellClass>
+    <SpellSubClass>Other</SpellSubClass>
+    <SpellTargetType>EnemyUnit</SpellTargetType>
+    <IsResistable>1</IsResistable>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>CharmTarget</Attribute>
+      <Calculate InternalName="Calc" ValueOwner="TargetUnit">
+        <Expression><![CDATA[[UnitStat_CannotBeCharmed]*-100]]></Expression>
+      </Calculate>
+      <Calculate InternalName="Value">
+        <Expression><![CDATA[[Calc] + 100]]></Expression>
+      </Calculate>
+    </GameModifier>
+    <AIData AIPersonality="AI_General">
+      <AIPriority>80</AIPriority>
+    </AIData>
+    <HitSoundFX>Spell_DominationHit_01</HitSoundFX>
+    <SpellCastSoundFX>Spell_DominationProjectile_01</SpellCastSoundFX>
+    <SpellCastEffectName>T_Erosion_Particle</SpellCastEffectName>
+    <SpellCastEffectScale>1</SpellCastEffectScale>
+    <SpellCastProjectile>1</SpellCastProjectile>
+    <SpellCastProjectileSpeed>700</SpellCastProjectileSpeed>
+    <SpellDefEffect>
+      <EffectName>T_ErosionImpact_Particle</EffectName>
+      <LocalPosition>0,0,0</LocalPosition>
+      <EffectScale>0.5</EffectScale>
+      <EffectDelay>0</EffectDelay>
+      <SnapToTerrain>1</SnapToTerrain>
+    </SpellDefEffect>
+  </SpellDef>
+  <SpellDef InternalName="ArcaneMonolith">
+    <DisplayName>Arcane Monolith</DisplayName>
+    <Description>Creates an Arcane Monolith on the map which extends your Zone of Control.</Description>
+    <Image>S_ArcaneMonolith_Painting.png</Image>
+    <IconFG>S_ArcaneMonolith_Icon.png</IconFG>
+    <CanStack>0</CanStack>
+    <SpellBookSortCategory>World</SpellBookSortCategory>
+    <SpellBookSortSubCategory>Map</SpellBookSortSubCategory>
+    <SpellType>Strategic</SpellType>
+    <SpellClass>Terraform</SpellClass>
+    <SpellSubClass>BuildOutpost</SpellSubClass>
+    <SpellTargetType>NeutralGround</SpellTargetType>
+    <CasterMustBeSov>1</CasterMustBeSov>
+    <GameModifier>
+      <ModType>Map</ModType>
+      <Attribute>BuildWildImprovement</Attribute>
+      <StrVal>Outpost_ArcaneMonolith</StrVal>
+    </GameModifier>
+    <ValidTerrainCategory>City</ValidTerrainCategory>
+    <!--<ValidTerrainCategory>Forest</ValidTerrainCategory>-->
+    <ValidTerrainCategory>Category:Forest</ValidTerrainCategory>
+    <ValidTerrainCategory>Land</ValidTerrainCategory>
+    <AIData AIPersonality="AI_General">
+      <AIPriority>0</AIPriority>
+    </AIData>
+    <HitSoundFX>Spell_ArcaneMonolith_01</HitSoundFX>
+    <SpellDefEffect>
+      <EffectName>S_AuraofGrace_Particle</EffectName>
+      <LocalPosition>0,0,0</LocalPosition>
+      <EffectScale>.75</EffectScale>
+      <EffectDelay>0</EffectDelay>
+      <SnapToTerrain>1</SnapToTerrain>
+    </SpellDefEffect>
+  </SpellDef>
+  <SpellDef InternalName="BirthOfSummer">
+    <DisplayName>Birth of Summer</DisplayName>
+    <Description>Revive the land.</Description>
+    <Image>ReviveLand_Painting.png</Image>
+    <IconFG>S_BirthOfSummer_Icon.png</IconFG>
+    <SpellBookSortCategory>World</SpellBookSortCategory>
+    <SpellBookSortSubCategory>Map</SpellBookSortSubCategory>
+    <SpellType>Strategic</SpellType>
+    <SpellClass>Terraform</SpellClass>
+    <SpellSubClass>Other</SpellSubClass>
+    <SpellTargetType>NeutralGround</SpellTargetType>
+    <Radius>1</Radius>
+    <Prereq>
+      <Type>Allegiance</Type>
+      <Attribute>Kingdom</Attribute>
+    </Prereq>
+    <GameModifier>
+      <ModType>Map</ModType>
+      <Attribute>PlaceEnvironment</Attribute>
+      <TerrainType>GrasslandEnvironment</TerrainType>
+    </GameModifier>
+    <!--<ValidTerrainCategory>Forest</ValidTerrainCategory>-->
+    <ValidTerrainCategory>Category:Forest</ValidTerrainCategory>
+    <ValidTerrainCategory>Land</ValidTerrainCategory>
+    <AIData AIPersonality="AI_General">
+      <AIPriority>5</AIPriority>
+    </AIData>
+    <HitSoundFX>Spell_BirthOfSummer_01</HitSoundFX>
+    <SpellDefEffect>
+      <EffectName>Revive_Land</EffectName>
+      <LocalPosition>0,0,0</LocalPosition>
+      <EffectScale>1</EffectScale>
+      <EffectDelay>0</EffectDelay>
+      <SnapToTerrain>1</SnapToTerrain>
+    </SpellDefEffect>
+  </SpellDef>
+  <SpellDef InternalName="BloomOfTwilight">
+    <DisplayName>Bloom of Twilight</DisplayName>
+    <Description>Revive the land.</Description>
+    <Image>ReviveLand_Painting.png</Image>
+    <IconFG>S_BloomofTwilight_Icon.png</IconFG>
+    <SpellBookSortCategory>World</SpellBookSortCategory>
+    <SpellBookSortSubCategory>Map</SpellBookSortSubCategory>
+    <SpellType>Strategic</SpellType>
+    <SpellClass>Terraform</SpellClass>
+    <SpellSubClass>Other</SpellSubClass>
+    <SpellTargetType>NeutralGround</SpellTargetType>
+    <Radius>1</Radius>
+    <Prereq>
+      <Type>Allegiance</Type>
+      <Attribute>Empire</Attribute>
+    </Prereq>
+    <GameModifier>
+      <ModType>Map</ModType>
+      <Attribute>PlaceEnvironment</Attribute>
+      <TerrainType>DeadEnvironment</TerrainType>
+    </GameModifier>
+    <!--<ValidTerrainCategory>Forest</ValidTerrainCategory>-->
+    <ValidTerrainCategory>Category:Forest</ValidTerrainCategory>
+    <ValidTerrainCategory>Land</ValidTerrainCategory>
+    <AIData AIPersonality="AI_General">
+      <AIPriority>5</AIPriority>
+    </AIData>
+    <HitSoundFX>Spell_BirthOfSummer_01</HitSoundFX>
+    <SpellDefEffect>
+      <EffectName>Revive_Land</EffectName>
+      <LocalPosition>0,0,0</LocalPosition>
+      <EffectScale>1</EffectScale>
+      <EffectDelay>0</EffectDelay>
+      <SnapToTerrain>1</SnapToTerrain>
+    </SpellDefEffect>
+  </SpellDef>
+  <SpellDef InternalName="CurgensVolcano">
+    <DisplayName>Curgen's Volcano</DisplayName>
+    <Description>Raises a volcano in the midst of your enemies.  The volcano destroys resources, improvements and even cities on the land it targets.</Description>
+    <Image>S_CurgensVolcano_Painting.png</Image>
+    <IconFG>S_CurgensVolcano_Icon.png</IconFG>
+    <CastTime>2</CastTime>
+    <SpellBookSortCategory>World</SpellBookSortCategory>
+    <SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+    <SpellType>Strategic</SpellType>
+    <SpellClass>Offensive</SpellClass>
+    <SpellSubClass>Other</SpellSubClass>
+    <SpellTargetType>Any</SpellTargetType>
+    <CasterMustBeSov>1</CasterMustBeSov>
+    <Radius>2</Radius>
+    <GameModifier>
+      <ModType>Map</ModType>
+      <Attribute>DestroyObjects</Attribute>
+    </GameModifier>
+    <ValidTerrainCategory>City</ValidTerrainCategory>
+    <!--<ValidTerrainCategory>Forest</ValidTerrainCategory>-->
+    <ValidTerrainCategory>Category:Forest</ValidTerrainCategory>
+    <ValidTerrainCategory>Land</ValidTerrainCategory>
+    <ValidTerrainCategory>Mountain</ValidTerrainCategory>
+    <AIData AIPersonality="AI_General">
+      <AIPriority>60</AIPriority>
+    </AIData>
+    <CameraShakeDuration>4.25</CameraShakeDuration>
+    <CameraShakeStrength>0.25</CameraShakeStrength>
+    <HitSoundFX>Spell_Volcano_01</HitSoundFX>
+    <SoundMinDist>1000</SoundMinDist>
+    <SoundMaxDist>10000</SoundMaxDist>
+    <TerrainStamp>valcano</TerrainStamp>
+    <StampMorphTime>5</StampMorphTime>
+    <WorldLightOverrideTime>5</WorldLightOverrideTime>
+    <WorldLightOverrideAmbiant>70,70,70</WorldLightOverrideAmbiant>
+    <WorldLightOverrideDiffuse>80,80,80</WorldLightOverrideDiffuse>
+    <WorldLightOverrideRim0>60,60,60</WorldLightOverrideRim0>
+    <WorldLightOverrideRim1>60,60,60</WorldLightOverrideRim1>
+    <SpellDefEffect>
+      <EffectName>LavaEruption1_New</EffectName>
+      <LocalPosition>0,150,0</LocalPosition>
+      <EffectScale>1</EffectScale>
+      <EffectDelay>1</EffectDelay>
+      <SnapToTerrain>0</SnapToTerrain>
+    </SpellDefEffect>
+  </SpellDef>
+  <SpellDef InternalName="RaiseLand">
+    <DisplayName>Raise Land</DisplayName>
+    <Description>Turn water, beach and cliff into land; land into hill; but not hill into mountain.</Description>
+    <Image>S_RaiseLand_Painting.png</Image>
+    <IconFG>S_RaiseLand_Icon.png</IconFG>
+    <AutoUnlock>1</AutoUnlock>
+    <SpellBookSortCategory>World</SpellBookSortCategory>
+    <SpellBookSortSubCategory>Map</SpellBookSortSubCategory>
+    <SpellType>Strategic</SpellType>
+    <SpellClass>Terraform</SpellClass>
+    <SpellSubClass>Other</SpellSubClass>
+    <SpellTargetType>NeutralGround</SpellTargetType>
+    <Prereq>
+      <Type>AbilityBonusOption</Type>
+      <Attribute>Earth3</Attribute>
+    </Prereq>
+    <GameModifier>
+      <ModType>Map</ModType>
+      <Attribute>RaiseLand</Attribute>
+    </GameModifier>
+    <ValidTerrainType>Land</ValidTerrainType>
+    <ValidTerrainType>Rugged_Land</ValidTerrainType>
+    <ValidTerrainType>Fertile_Land</ValidTerrainType>
+    <ValidTerrainType>DesertTerrain</ValidTerrainType>
+    <ValidTerrainType>SwampTerrain</ValidTerrainType>
+    <ValidTerrainType>ArcticTerrain</ValidTerrainType>
+    <!--<ValidTerrainCategory>Forest</ValidTerrainCategory>-->
+    <ValidTerrainCategory>Category:Forest</ValidTerrainCategory>
+    <ValidTerrainType>Beach</ValidTerrainType>
+    <ValidTerrainType>Cliff</ValidTerrainType>
+    <ValidTerrainType>Submerged</ValidTerrainType>
+    <AIData AIPersonality="AI_General">
+      <AIPriority>5</AIPriority>
+    </AIData>
+    <HitSoundFX>Spell_RaiseLand_01</HitSoundFX>
+    <SpellDefEffect>
+      <EffectName>S_RaiseLand_Particle</EffectName>
+      <LocalPosition>0,0,0</LocalPosition>
+      <EffectScale>0.3</EffectScale>
+      <EffectDelay>0</EffectDelay>
+      <SnapToTerrain>1</SnapToTerrain>
+    </SpellDefEffect>
+  </SpellDef>
+  <SpellDef InternalName="VetrarsHowl">
+    <DisplayName>Vetrar's Howl</DisplayName>
+    <Description>Does 12 cold damage (+5 per water shard) to all armies within a 1 tile radius.</Description>
+    <Image>S_Snowfall_Painting.png</Image>
+    <IconFG>S_VetrarsHowl_Icon.png</IconFG>
+    <AutoUnlock>1</AutoUnlock>
+    <Cooldown>1</Cooldown>
+    <SpellBookSortCategory>Unit</SpellBookSortCategory>
+    <SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+    <SpellType>Strategic</SpellType>
+    <SpellClass>Offensive</SpellClass>
+    <SpellSubClass>Damage</SpellSubClass>
+    <SpellTargetType>EnemyUnit</SpellTargetType>
+    <UnitAppSpecifier>ApplyToAll</UnitAppSpecifier>
+    <Radius>1</Radius>
+    <Prereq>
+      <Type>AbilityBonusOption</Type>
+      <Attribute>Water5</Attribute>
+    </Prereq>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>DefendableDamage</Attribute>
+      <AttackStat>UnitStat_Attack_Cold</AttackStat>
+      <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+        <Expression><![CDATA[[UnitOwner_GetNumWaterShards] * 5]]></Expression>
+      </Calculate>
+      <Calculate InternalName="Value">
+        <Expression><![CDATA[[Calc] + 12]]></Expression>
+      </Calculate>
+    </GameModifier>
+    <!--<ValidTerrainCategory>Forest</ValidTerrainCategory>-->
+    <ValidTerrainCategory>Category:Forest</ValidTerrainCategory>
+    <ValidTerrainCategory>Land</ValidTerrainCategory>
+    <AIData AIPersonality="AI_General">
+      <AIPriority>100</AIPriority>
+    </AIData>
+    <HitSoundFX>Spell_Blizzard_01</HitSoundFX>
+    <HitSoundFX>Spell_Blizzard_02</HitSoundFX>
+    <SpellDefEffect>
+      <EffectName>T_Blizzard_Particle</EffectName>
+      <LocalPosition>0,0,0</LocalPosition>
+      <EffectScale>0.2</EffectScale>
+      <EffectDelay>0</EffectDelay>
+      <SnapToTerrain>1</SnapToTerrain>
+    </SpellDefEffect>
+  </SpellDef>
+  <SpellDef InternalName="SaltTheEarth">
+    <DisplayName>Salt the Earth</DisplayName>
+    <Description>Transform the land to barren ground which is unable to support cities.</Description>
+    <Image>S_SaltTheEarth_Painting.png</Image>
+    <IconFG>S_SaltTheEarth_Icon.png</IconFG>
+    <SpellBookSortCategory>World</SpellBookSortCategory>
+    <SpellBookSortSubCategory>Map</SpellBookSortSubCategory>
+    <SpellType>Strategic</SpellType>
+    <SpellClass>Terraform</SpellClass>
+    <SpellSubClass>Other</SpellSubClass>
+    <SpellTargetType>NeutralGround</SpellTargetType>
+    <Radius>1</Radius>
+    <GameModifier>
+      <ModType>Map</ModType>
+      <Attribute>PlaceEnvironment</Attribute>
+      <TerrainType>BarrenEnvironment</TerrainType>
+    </GameModifier>
+    <!--<ValidTerrainCategory>Forest</ValidTerrainCategory>-->
+    <ValidTerrainCategory>Category:Forest</ValidTerrainCategory>
+    <ValidTerrainCategory>Land</ValidTerrainCategory>
+    <AIData AIPersonality="AI_General">
+      <AIPriority>5</AIPriority>
+    </AIData>
+    <HitSoundFX>Spell_Antipathy_01</HitSoundFX>
+    <SpellDefEffect>
+      <EffectName>S_Blight_Particle</EffectName>
+      <LocalPosition>0,0,0</LocalPosition>
+      <EffectScale>1</EffectScale>
+      <EffectDelay>0</EffectDelay>
+      <SnapToTerrain>1</SnapToTerrain>
+    </SpellDefEffect>
+  </SpellDef>
+  <SpellDef InternalName="Sunder">
+    <DisplayName>Sunder</DisplayName>
+    <Description>Target with Race: Elemental takes 5 damage per level of the caster.</Description>
+    <FormattedDescription>Target with Race: Elemental takes %d damage.</FormattedDescription>
+    <Image>T_Sunder_Painting.png</Image>
+    <IconFG>T_Sunder_Icon.png</IconFG>
+    <AutoUnlock>1</AutoUnlock>
+    <SpellBookSortCategory>Unit</SpellBookSortCategory>
+    <SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+    <SpellType>Tactical</SpellType>
+    <SpellClass>Offensive</SpellClass>
+    <SpellSubClass>Damage</SpellSubClass>
+    <SpellTargetType>EnemyUnit</SpellTargetType>
+    <SpellTargetCreatureType>Elemental</SpellTargetCreatureType>
+    <Prereq>
+      <Type>AbilityBonusOption</Type>
+      <Attribute>Geomancy</Attribute>
+    </Prereq>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>CurHealth</Attribute>
+      <IsForFormattedDescription>1</IsForFormattedDescription>
+      <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+        <Expression><![CDATA[[Unit_GetLevel] * -5]]></Expression>
+      </Calculate>
+      <Calculate InternalName="Value">
+        <Expression><![CDATA[[Calc]]]></Expression>
+      </Calculate>
+      <Calculate InternalName="ValueForFormattedDescription">
+        <Expression><![CDATA[[Calc]]]></Expression>
+      </Calculate>
+    </GameModifier>
+    <AIData AIPersonality="AI_General">
+      <AIPriority>5</AIPriority>
+    </AIData>
+    <HitSoundFX>Spell_Sunder_01</HitSoundFX>
+    <SpellDefEffect>
+      <EffectName>T_Sunder_Particle</EffectName>
+      <LocalPosition>0,0,0</LocalPosition>
+      <EffectScale>1</EffectScale>
+      <EffectDelay>0</EffectDelay>
+      <SnapToTerrain>1</SnapToTerrain>
+    </SpellDefEffect>
+  </SpellDef>
+</Container>

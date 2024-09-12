@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<Container>
+  <QuestDef InternalName="Event_Deathstorm">
+    <DisplayName>Deathstorm</DisplayName>
+    <Description>Every few thousand years, a Deathstorm appears. There does not appear to be any reason for it appearing although the philosophers have not tired of trying to understand it. It moves randomly through the world and anything touched by its rain is instantly killed - except natural objects like trees and grass. The Deathstorm ravages the countryside for a while then disappears. It is by right one of the most feared occult events in the Elemental world.
+
+A Deathstorm is now in the world. It covers a tile and occasionally moves. It cannot be defeated in battle and if it touches a city the city will be destroyed. The Deathstorm lasts up to 100 turns, then fades away. Its departure may be hastened by strategic damage spells, and you may also use those to try to control its movements. There is no reward for defeating or surviving the Deathstorm.</Description>
+    <IsStartingPointQuest>0</IsStartingPointQuest>
+    <AllowQuestRejection>0</AllowQuestRejection>
+    <FullscreenMovie>Movies\Minicut_Event_ThePlague.bik</FullscreenMovie>
+    <QuestClass>Minor</QuestClass>
+    <Repeatable>0</Repeatable>
+       <TriggerType>TotalPopulation</TriggerType>
+  <TriggerData>400</TriggerData>>
+    <TriggerOrigin>EventLocation</TriggerOrigin>
+    <SpawnRating>1</SpawnRating>
+    <TriggerChance>4</TriggerChance>
+    <Treasure>
+      <GameModifier InternalName="Reward1">
+        <ModType>Map</ModType>
+        <Attribute>SpawnMonster</Attribute>
+        <Value>1</Value>
+        <UnitClass>Deathstorm</UnitClass>
+        <Radius>-1</Radius>
+      </GameModifier>
+    </Treasure>
+    <QuestObjectiveDef>
+      <ObjectiveID>0</ObjectiveID>
+      <QuestEnd>1</QuestEnd>
+    </QuestObjectiveDef>
+  </QuestDef>
+  <UnitType InternalName="Deathstorm">
+    <DisplayName>Deathstorm</DisplayName>
+    <CreatureType>Elemental</CreatureType>
+    <CanBeDesigned>0</CanBeDesigned>
+    <IsSovereign>0</IsSovereign>
+    <AllowGrouping>0</AllowGrouping>
+    <HasWages>0</HasWages>
+    <SpawnRating>1</SpawnRating>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <UnitStat_Accuracy>750</UnitStat_Accuracy>
+      <UnitStat_Attack_Divine>1000</UnitStat_Attack_Divine>
+      <UnitStat_CombatSpeed>21</UnitStat_CombatSpeed>
+      <UnitStat_HitPoints>2000</UnitStat_HitPoints>
+      <UnitStat_HealthRegen>-25</UnitStat_HealthRegen>
+      <UnitStat_Moves>4</UnitStat_Moves>
+      <UnitStat_Experience>1</UnitStat_Experience>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Deathstorm</SelectedAbilityBonusOption>
+    <Quote>'And the battalions of man became dust.'</Quote>
+    <Backstory>A Deathstorm is a magical storm that wanders the world, killing all it touches with no rhyme or reason. It cannot be defeated, only endured.</Backstory>
+    <Medallions InternalName="">
+      <All>deathstorm_medallion.png</All>
+    </Medallions>
+    <AlwaysInTileCenter>1</AlwaysInTileCenter>
+    <AnimationPack>BanditAnimationPack</AnimationPack>
+    <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+    <ClothPoseIndex>6</ClothPoseIndex>
+    <Color_Clothing1>121,91,72,255</Color_Clothing1>
+    <Color_Clothing2>78,15,15,255</Color_Clothing2>
+    <Color_Hair>60,35,25,255</Color_Hair>
+    <Color_Metal>200,200,200,255</Color_Metal>
+    <Color_Skin>175,120,95,255</Color_Skin>
+    <CutSceneDataPack>DragonUnitCutscenePack</CutSceneDataPack>
+    <EyeTexture>gfx\eyes\blinks\eyeblink_m1_brwn.png</EyeTexture>
+    <InfoCardBackground>BG15_Dark</InfoCardBackground>
+    <ModelPath>Invisible_Man.hkb</ModelPath>
+    <ModelScale>1</ModelScale>
+    <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+    <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+    <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+    <TacticalModelScale>1.5</TacticalModelScale>
+    <Texture_Skin>K_Male_Bandit_Texture_01.png</Texture_Skin>
+    <UnitModelType>TarthanMale</UnitModelType>
+    <EffectAttachment>
+      <EffectName>effect_Deathstorm</EffectName>
+      <EffectPosition>0,0,0</EffectPosition>
+      <EffectRotation>0,0,0</EffectRotation>
+      <EffectScale>1</EffectScale>
+    </EffectAttachment>
+  </UnitType>
+  <AbilityBonus InternalName="Deathstorm">
+    <AbilityBonusOption InternalName="Deathstorm">
+      <IsCombatAbility>1</IsCombatAbility>
+      <DisplayName>Deathstorm</DisplayName>
+      <Description>A Deathstorm cannot be defeated in battle. It slowly takes damage in strategic mode and fades when it reaches zero hitpoints.</Description>
+      <Icon>Plain_Ability_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_SplashDamage</StrVal>
+		<Provides>A Deathstorm cannot be defeated in battle. It slowly takes damage in strategic mode and fades when it reaches zero hitpoints.</Provides>
+        <Value>100</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistBlunt</StrVal>
+<Provides>.</Provides>
+        <Value>90</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistCutting</StrVal>
+<Provides>.</Provides>
+        <Value>90</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistPierce</StrVal>
+<Provides>.</Provides>
+        <Value>90</Value>
+      </GameModifier>
+      <CombatRating>8000</CombatRating>
+      <HideWhenUpgraded>1</HideWhenUpgraded>
+    </AbilityBonusOption>
+  </AbilityBonus>
+</Container>

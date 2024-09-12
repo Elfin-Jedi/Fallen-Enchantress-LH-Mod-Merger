@@ -1,0 +1,137 @@
+<QuestDef InternalName="Quest_Awildmouseappears">
+        <DisplayName>A Wild Mouse Appears</DisplayName>
+        <Description>You approach the hut and see a large group of males looking despondent.  As you approach, the eldest looks at you and exclaims:
+
+"Look boys!  Now this looks like a warrior who can actually help us."
+
+After you question him on his vague declaration you discover that a week back a bear and her 2 cubs attacked the family while they were working on their fields.  Fleeing from the bears they took safety inside their home only to realize that they had never been chased.  When they went back to scout it they found that he bears had comfortably decided to make that their new nesting grounds and didn't know what to do about it.  Now they fear that if they don't reclaim their fields soon, the crops will certainly die, and in turn the family will be financially crippled.
+
+"Please warrior, help us regain our fields!"</Description>
+        <IsStartingPointQuest>1</IsStartingPointQuest>
+        <ShortTextAccept>I will do it.</ShortTextAccept>
+        <ShortTextDeny>Go fight your own bears.</ShortTextDeny>
+		<SuccessText>Mouse has joined your party</SuccessText>
+        <RewardText>??</RewardText>
+        <RewardImage>Gold_Large1.png</RewardImage>
+        <SuccessText>You return to the family's home and inform the father about your success.
+		
+		"Oh, thank the lord!  Our family owes you everything and we can continue getting by in this harsh world.  If you can do a final kindness I have one favor to ask.  Please take one of my sons under your wing and teach them how to be as resourceful as you.  We aren't noted warriors but they come from good stock if I dont say so myself."
+		He grins slyly and yells out "Boys line up!"
+		
+		The father goes down the line describing his sons, highlighting each of his strengths. "This one, while not the sharpest tool is so strong I almost mistook him for one of the bear cubs. Here we have one who's reflexes are unmatched.  This one found this old bow a ways back and has become quite a competent shot.."
+		
+		You interupt the father and ask "What about the one peaking through the window?"
+		
+		The family breaks out in laughter and the father replies "Who....Mouse!?  Fine warrior, I was blessed with many fine sons and you ask about my one daughter?"
+		
+		You keep your attention on the girl and reply, "Yes, bring her out here."
+		
+		Timidly, Mouse exits the house and walks over to you amongst the chuckles of her brothers.
+		
+		You turn to her and loudly say so all can hear,  "This one thinks she is so small that I wouldn't notice what she did with the rock.  You very likely saved my life young lady."
+		
+		A look of confusion sets in amongst the father and sons, and you explain what happened.  Sheepish looks cross their faces as they realize they were outdone by their little sister.
+		
+		Defensively, the boy with the bow breaks in "So she had one lucky shot with a pebble, big deal."
+		
+		"Maybe it was lucky, maybe it wasn't, but what is a big deal is that while all of you cowered in your house, she was the only one to show enough courage to actually do something about your problem! So who's the real 'mouse' now.  If the lady accepts my invitation, I shall choose her."
+		
+		Mouse eagerly nods and flashes a shy grin your way.  "Welcome," you say to her and then turn your attention to the boy holding the bow. "Also, she's going to be needing a bow..."
+		</SuccessText>
+        <QuestClass>Minor</QuestClass>
+        <Repeatable>0</Repeatable>
+        <TriggerType>QuestLocation</TriggerType>
+        <TriggerOrigin>EventLocation</TriggerOrigin>
+        <SpawnRating>1</SpawnRating>
+        <Image>Q_ImpoverishedLord.png</Image>
+        <PrefQuestLoc>QuestLoc_Hut</PrefQuestLoc>
+		<Treasure>
+			<GameModifier InternalName="Reward2">
+				<ModType>Unit</ModType>
+				<Attribute>UnitJoinArmy</Attribute>
+				<Value>1</Value>
+				<StrVal>Champion_Mouse</StrVal>
+				<UnitClass>Champion</UnitClass>
+			</GameModifier>
+		</Treasure>
+        <QuestObjectiveDef>
+            <ObjectiveID>0</ObjectiveID>
+            <NextObjectiveID>1</NextObjectiveID>
+            <Description>Find the Fields</Description>
+            <Treasure>
+                <GameModifier>
+					<ModType>Map</ModType>
+					<Attribute>CreateGoodieHut</Attribute>
+					<StrVal>Family Farm</StrVal>
+					<UnitClass>GH_Quest_Field</UnitClass>
+					<Radius>1</Radius>
+				</GameModifier>
+            </Treasure>
+            <QuestConditionDef>
+                <Objective>
+                    <Icon>Mana_32.png</Icon>
+                    <Text>Defeat the Bears.</Text>
+                    <IsOptional>0</IsOptional>
+                </Objective>
+                <Class>Success</Class>
+                <Type>ClearGoodieHut</Type>
+                <TextData>GH_Quest_Field</TextData>
+                <Flag>RevealTarget</Flag>
+            </QuestConditionDef>
+			<ChoiceText>As you approach the fields, the bear cubs quickly charge towards you.  You can hardly react before they are bearing down on you.  You quickly sidestep the first, but it leaves you exposed to the second.  From your periphery a rock flies across your field of vision and scores a direct hit to the cub's head, dazing it and causing it to stumble.  You don't have time to ponder this turn of events, as you must quickly take initiative now or retreat.</ChoiceText>
+			<ChoiceMedallion>B_Highwayman_Card_01.png</ChoiceMedallion>
+            <ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+        <Description>Attack!</Description>
+        <NextObjectiveID>1</NextObjectiveID>
+		<Encounter>
+                    <Liklihood>100</Liklihood>
+                    <BattleIdentifier>Bearfields</BattleIdentifier>
+                    <WillRespawn>0</WillRespawn>
+                    <WanderingRadius>0</WanderingRadius>
+                    <UnitInstance>
+                        <UnitType>BearCub</UnitType>
+                        <Level>1</Level>
+                    </UnitInstance>
+                    <UnitInstance>
+                        <UnitType>BearCub</UnitType>
+                        <Level>1</Level>
+                    </UnitInstance>
+                </Encounter>
+		</QuestChoiceDef>
+		<QuestChoiceDef>
+                <Description>Retreat!</Description>
+                <NextObjectiveID>0</NextObjectiveID>
+		</QuestChoiceDef>
+        </QuestObjectiveDef>
+        <QuestObjectiveDef>
+            <ObjectiveID>1</ObjectiveID>
+            <NextObjectiveID>2</NextObjectiveID>
+            <PopupObjectiveMsg>0</PopupObjectiveMsg>
+            <QuestConditionDef>
+                <Objective>
+                    <Icon>Mana_32.png</Icon>
+                    <Text>Fight the Bears</Text>
+                    <IsOptional>0</IsOptional>
+                </Objective>
+                <Class>Success</Class>
+                <Type>BattleFinished</Type>
+                <TextData>Bearfields</TextData>
+                <MoreTextData>Victory</MoreTextData>
+            </QuestConditionDef>
+        </QuestObjectiveDef>
+        <QuestObjectiveDef>
+            <ObjectiveID>2</ObjectiveID>
+            <QuestEnd>1</QuestEnd>
+            <Description>Return to the family's home</Description>
+            <QuestConditionDef>
+                <Objective>
+                    <Icon>Mana_32.png</Icon>
+                    <Text>Return to the family's home</Text>
+                    <IsOptional>0</IsOptional>
+                </Objective>
+                <Class>Success</Class>
+                <Type>UnitEntersQuestLocation</Type>
+            </QuestConditionDef>
+        </QuestObjectiveDef>
+    </QuestDef>

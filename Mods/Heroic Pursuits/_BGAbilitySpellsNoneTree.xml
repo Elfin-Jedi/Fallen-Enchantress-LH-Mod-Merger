@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Created with the Elemental Editor -->
+<!-- CoreSpells.xml -->
+<!-- -->
+<Spells>
+    <DataChecksum NoParse="1">
+        <Ignore>DisplayName</Ignore>
+        <Translate>DisplayName</Translate>
+    </DataChecksum>
+    <SpellDef InternalName="RuffianArcrage">
+        <DisplayName>Ruffian Arcrage</DisplayName>
+        <Description>Ruffians experimenting with ArcStones to bring out a powerful rage, that enables a magically induced rage strike doing 2.5x Damage</Description>
+        <IconFG>Ability_RuffianArcrage_Icon.png</IconFG>
+        <Cooldown>5</Cooldown>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Damage</SpellSubClass>
+        <SpellTargetType>EnemyUnit</SpellTargetType>
+        <ApproachTargetTile>1</ApproachTargetTile>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <IsCastable>0</IsCastable>
+        <CanBeDodged>1</CanBeDodged>
+        <IsSpecialAbility>1</IsSpecialAbility>
+        <Range>1</Range>
+        <SpellResourceCost>
+            <Resource>Arcalite</Resource>
+            <Amount>7</Amount>
+        </SpellResourceCost>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>DefendableDamage</Attribute>
+            <AttackStat>UnitStat_Attack_Pierce</AttackStat>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_CombinedAttack] * 2.5]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+        </AIData>
+        <CasterAnimationType>31</CasterAnimationType>
+        <HitSoundFX>Ability_DeadlyBite</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>Y_DeadlyBite_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>1.0</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+</Spells>

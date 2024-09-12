@@ -1,0 +1,382 @@
+<?xml version="1.0"?>
+<Container>
+  <QuestDef InternalName="Event_VengefulDead">
+    <DisplayName>Vengeful Dead</DisplayName>
+    <Description>The Elemental world is covered in battlefields with the unburied dead. Recent fluctuations in the balance between Life and Death magic has caused them to come back to life, seeking vengeance for their poor treatment after dying.
+
+Skeleton armies have spawned all over the world. Some carry Reliquary items, but more importantly they really want to kill you.</Description>
+   <AllowQuestRejection>0</AllowQuestRejection>
+    <ShortTextAccept>I will put them back to their eternal rest.</ShortTextAccept>
+    <QuestClass>Minor</QuestClass>
+    <Repeatable>0</Repeatable>
+   <TriggerType>TurnNumber</TriggerType>
+    <TriggerData>125</TriggerData>
+    <TriggerChance>5</TriggerChance>
+    <PostTriggerChance>5</PostTriggerChance>
+
+    <TriggerOrigin>EventLocation</TriggerOrigin>
+    <Image>S_DeathWard_Painting.png</Image>
+    <Treasure>
+      <GameModifier InternalName="Reward1">
+        <ModType>Map</ModType>
+        <Attribute>SpawnMonster</Attribute>
+        <Value>7</Value>
+        <UnitClass>SkeletonSpearman_VengefulDead</UnitClass>
+        <Radius>-1</Radius>
+      </GameModifier>
+      <GameModifier InternalName="Reward1">
+        <ModType>Map</ModType>
+        <Attribute>SpawnMonster</Attribute>
+        <Value>4</Value>
+        <UnitClass>SkeletonSpearman_VengefulDead_X</UnitClass>
+        <Radius>-1</Radius>
+      </GameModifier>
+    </Treasure>
+    <QuestObjectiveDef>
+      <ObjectiveID>0</ObjectiveID>
+      <QuestEnd>1</QuestEnd>
+    </QuestObjectiveDef>
+  </QuestDef>
+  <UnitType InternalName="SkeletonSpearman_VengefulDead">
+    <NPCPartyMember>SkeletonSpearman_VengefulDead2</NPCPartyMember>
+    <NPCPartyMember>SkeletonSpearman_VengefulDead3</NPCPartyMember>
+    <NPCPartyMember>SkeletonSpearman_VengefulDead4</NPCPartyMember>
+    <NPCPartyMember>SkeletonSpearman_VengefulDead4</NPCPartyMember>
+    <GroupingType>UnitGroupingType_Company</GroupingType>
+    <DisplayName>Vengeful Dead</DisplayName>
+    <CanBeDesigned>0</CanBeDesigned>
+    <IsSovereign>0</IsSovereign>
+    <HasWages>0</HasWages>
+    <SpawnRating>4</SpawnRating>
+    <HideInHiergamenon>1</HideInHiergamenon>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <UnitStat_Accuracy>75</UnitStat_Accuracy>
+      <UnitStat_CombatSpeed>20</UnitStat_CombatSpeed>
+      <UnitStat_Defense_Blunt>3</UnitStat_Defense_Blunt>
+      <UnitStat_Defense_Cutting>3</UnitStat_Defense_Cutting>
+      <UnitStat_Defense_Pierce>3</UnitStat_Defense_Pierce>
+      <UnitStat_HitPoints>3</UnitStat_HitPoints>
+      <UnitStat_WeightCapacity>100</UnitStat_WeightCapacity>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Blood_CoS_Undead</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Curseofthereturningdead2</SelectedAbilityBonusOption>
+    <Equipment>LeatherHelmet</Equipment>
+    <Equipment>LeatherBreastpiece</Equipment>
+    <Equipment>LeatherVambraces</Equipment>
+    <Equipment>LeatherBoots</Equipment>
+    <Equipment>LeatherGreaves</Equipment>
+    <Equipment>BoarSpear</Equipment>
+    <Quote>'There is a toll for passing through these lands.'</Quote>
+    <Backstory>The Vengeful Dead have returned to demand their justice for not being buried properly.</Backstory>
+    <AnimationPack>EF_SoldierAnimationPack</AnimationPack>
+    <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+    <ClothPoseIndex>8</ClothPoseIndex>
+    <InfoCardBackground>BG15_Dark</InfoCardBackground>
+    <InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+    <Color_Clothing1>56,33,13</Color_Clothing1>
+    <Color_Clothing2>56,33,13</Color_Clothing2>
+    <Color_Hair>60,35,25,255</Color_Hair>
+    <Color_Metal>56,33,13</Color_Metal>
+    <Color_Skin>175,120,95,255</Color_Skin>
+    <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+    <EyeTexture>gfx\eyes\blinks\eyeblink_m1_brwn.png</EyeTexture>
+    <ModelPath>undeadmainbody.hkb</ModelPath>
+    <ModelScale>1</ModelScale>
+    <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+    <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+    <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+    <SoundPack>SoundPack_Generic_Male</SoundPack>
+    <TacticalModelScale>1.5</TacticalModelScale>
+    <Texture_Skin>Undead_skin.png</Texture_Skin>
+    <UnitModelType>Undead</UnitModelType>
+  </UnitType>
+  <UnitType InternalName="SkeletonSpearman_VengefulDead2">
+    <GroupingType>UnitGroupingType_Pair</GroupingType>
+    <DisplayName>Vengeful Dead</DisplayName>
+    <CanBeDesigned>0</CanBeDesigned>
+    <IsSovereign>0</IsSovereign>
+    <HasWages>0</HasWages>
+    <SpawnRating>4</SpawnRating>
+    <HideInHiergamenon>1</HideInHiergamenon>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <UnitStat_Accuracy>75</UnitStat_Accuracy>
+      <UnitStat_CombatSpeed>20</UnitStat_CombatSpeed>
+      <UnitStat_Defense_Blunt>3</UnitStat_Defense_Blunt>
+      <UnitStat_Defense_Cutting>3</UnitStat_Defense_Cutting>
+      <UnitStat_Defense_Pierce>3</UnitStat_Defense_Pierce>
+      <UnitStat_HitPoints>3</UnitStat_HitPoints>
+      <UnitStat_WeightCapacity>100</UnitStat_WeightCapacity>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Blood_CoS_Undead</SelectedAbilityBonusOption>
+    <Equipment>LeatherBreastpiece</Equipment>
+    <Equipment>IceWargCloak</Equipment>
+    <Equipment>Staff_Freezing</Equipment>
+    <Quote>'There is a toll for passing through these lands.'</Quote>
+    <Backstory>The Vengeful Dead have returned to demand their justice for not being buried properly.</Backstory>
+    <AnimationPack>EF_SoldierAnimationPack</AnimationPack>
+    <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+    <ClothPoseIndex>7</ClothPoseIndex>
+    <InfoCardBackground>BG15_Dark</InfoCardBackground>
+    <InfoCardBackgroundFlipped>1</InfoCardBackgroundFlipped>
+    <Color_Clothing1>56,33,13</Color_Clothing1>
+    <Color_Clothing2>56,33,13</Color_Clothing2>
+    <Color_Hair>60,35,25,255</Color_Hair>
+    <Color_Metal>56,33,13</Color_Metal>
+    <Color_Skin>175,120,95,255</Color_Skin>
+    <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+    <EyeTexture>gfx\eyes\blinks\eyeblink_m1_brwn.png</EyeTexture>
+    <ModelPath>undeadmainbody.hkb</ModelPath>
+    <ModelScale>1</ModelScale>
+    <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+    <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+    <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+    <SoundPack>SoundPack_Generic_Male</SoundPack>
+    <TacticalModelScale>1.5</TacticalModelScale>
+    <Texture_Skin>Undead_skin.png</Texture_Skin>
+    <UnitModelType>Undead</UnitModelType>
+  </UnitType>
+  <UnitType InternalName="SkeletonSpearman_VengefulDead3">
+    <GroupingType>UnitGroupingType_Four</GroupingType>
+    <DisplayName>Vengeful Dead</DisplayName>
+    <CanBeDesigned>0</CanBeDesigned>
+    <IsSovereign>0</IsSovereign>
+    <HasWages>0</HasWages>
+    <SpawnRating>4</SpawnRating>
+    <HideInHiergamenon>1</HideInHiergamenon>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <UnitStat_Accuracy>75</UnitStat_Accuracy>
+      <UnitStat_CombatSpeed>20</UnitStat_CombatSpeed>
+      <UnitStat_Defense_Blunt>3</UnitStat_Defense_Blunt>
+      <UnitStat_Defense_Cutting>3</UnitStat_Defense_Cutting>
+      <UnitStat_Defense_Pierce>3</UnitStat_Defense_Pierce>
+      <UnitStat_HitPoints>3</UnitStat_HitPoints>
+      <UnitStat_WeightCapacity>100</UnitStat_WeightCapacity>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Blood_CoS_Undead</SelectedAbilityBonusOption>
+    <Equipment>Shortbow_Balanced</Equipment>
+    <Quote>'There is a toll for passing through these lands.'</Quote>
+    <Backstory>The Vengeful Dead have returned to demand their justice for not being buried properly.</Backstory>
+    <AnimationPack>EF_SoldierAnimationPack</AnimationPack>
+    <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+    <ClothPoseIndex>7</ClothPoseIndex>
+    <InfoCardBackground>BG15_Dark</InfoCardBackground>
+    <InfoCardBackgroundFlipped>1</InfoCardBackgroundFlipped>
+    <Color_Clothing1>56,33,13</Color_Clothing1>
+    <Color_Clothing2>56,33,13</Color_Clothing2>
+    <Color_Hair>60,35,25,255</Color_Hair>
+    <Color_Metal>56,33,13</Color_Metal>
+    <Color_Skin>175,120,95,255</Color_Skin>
+    <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+    <EyeTexture>gfx\eyes\blinks\eyeblink_m1_brwn.png</EyeTexture>
+    <ModelPath>undeadmainbody.hkb</ModelPath>
+    <ModelScale>1</ModelScale>
+    <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+    <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+    <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+    <SoundPack>SoundPack_Generic_Male</SoundPack>
+    <TacticalModelScale>1.5</TacticalModelScale>
+    <Texture_Skin>Undead_skin.png</Texture_Skin>
+    <UnitModelType>Undead</UnitModelType>
+  </UnitType>
+  <UnitType InternalName="SkeletonSpearman_VengefulDead4">
+    <GroupingType>UnitGroupingType_Party</GroupingType>
+    <DisplayName>Vengeful Dead</DisplayName>
+    <CanBeDesigned>0</CanBeDesigned>
+    <IsSovereign>0</IsSovereign>
+    <HasWages>0</HasWages>
+    <SpawnRating>4</SpawnRating>
+    <HideInHiergamenon>1</HideInHiergamenon>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <UnitStat_Accuracy>75</UnitStat_Accuracy>
+      <UnitStat_CombatSpeed>20</UnitStat_CombatSpeed>
+      <UnitStat_Defense_Blunt>3</UnitStat_Defense_Blunt>
+      <UnitStat_Defense_Cutting>3</UnitStat_Defense_Cutting>
+      <UnitStat_Defense_Pierce>3</UnitStat_Defense_Pierce>
+      <UnitStat_HitPoints>3</UnitStat_HitPoints>
+      <UnitStat_WeightCapacity>100</UnitStat_WeightCapacity>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Blood_CoS_Undead</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Curseofthereturningdead2</SelectedAbilityBonusOption>
+    <Equipment>ChainBoots_Masterwork</Equipment>
+    <Equipment>ChainBreastpiece_Masterwork</Equipment>
+    <Equipment>ChainGreaves_Masterwork</Equipment>
+    <Equipment>ChainHelmet_Masterwork</Equipment>
+    <Equipment>ChainVambraces_Masterwork</Equipment>
+    <Equipment>KiteShield</Equipment>
+    <Equipment>Axe_Burning</Equipment>
+    <Quote>'There is a toll for passing through these lands.'</Quote>
+    <Backstory>The Vengeful Dead have returned to demand their justice for not being buried properly.</Backstory>
+    <AnimationPack>EF_SoldierAnimationPack</AnimationPack>
+    <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+    <ClothPoseIndex>7</ClothPoseIndex>
+    <InfoCardBackground>BG15_Dark</InfoCardBackground>
+    <InfoCardBackgroundFlipped>1</InfoCardBackgroundFlipped>
+    <Color_Clothing1>56,33,13</Color_Clothing1>
+    <Color_Clothing2>56,33,13</Color_Clothing2>
+    <Color_Hair>60,35,25,255</Color_Hair>
+    <Color_Metal>56,33,13</Color_Metal>
+    <Color_Skin>175,120,95,255</Color_Skin>
+    <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+    <EyeTexture>gfx\eyes\blinks\eyeblink_m1_brwn.png</EyeTexture>
+    <ModelPath>undeadmainbody.hkb</ModelPath>
+    <ModelScale>1</ModelScale>
+    <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+    <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+    <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+    <SoundPack>SoundPack_Generic_Male</SoundPack>
+    <TacticalModelScale>1.5</TacticalModelScale>
+    <Texture_Skin>Undead_skin.png</Texture_Skin>
+    <UnitModelType>Undead</UnitModelType>
+  </UnitType>
+  <UnitType InternalName="SkeletonSpearman_VengefulDead_X">
+    <NPCPartyMember>SkeletonSpearman_VengefulDead2_X</NPCPartyMember>
+    <NPCPartyMember>SkeletonSpearman_VengefulDead3</NPCPartyMember>
+    <NPCPartyMember>SkeletonSpearman_VengefulDead4</NPCPartyMember>
+    <NPCPartyMember>SkeletonSpearman_VengefulDead4</NPCPartyMember>
+    <GroupingType>UnitGroupingType_Company</GroupingType>
+    <DisplayName>Vengeful Dead</DisplayName>
+    <CanBeDesigned>0</CanBeDesigned>
+    <IsSovereign>0</IsSovereign>
+    <HasWages>0</HasWages>
+    <SpawnRating>4</SpawnRating>
+    <HideInHiergamenon>1</HideInHiergamenon>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <UnitStat_Accuracy>75</UnitStat_Accuracy>
+      <UnitStat_CombatSpeed>20</UnitStat_CombatSpeed>
+      <UnitStat_Defense_Blunt>3</UnitStat_Defense_Blunt>
+      <UnitStat_Defense_Cutting>3</UnitStat_Defense_Cutting>
+      <UnitStat_Defense_Pierce>3</UnitStat_Defense_Pierce>
+      <UnitStat_HitPoints>3</UnitStat_HitPoints>
+      <UnitStat_WeightCapacity>100</UnitStat_WeightCapacity>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Blood_CoS_Undead</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Curseofthereturningdead2</SelectedAbilityBonusOption>
+    <Equipment>LeatherHelmet</Equipment>
+    <Equipment>LeatherBreastpiece</Equipment>
+    <Equipment>LeatherVambraces</Equipment>
+    <Equipment>LeatherBoots</Equipment>
+    <Equipment>LeatherGreaves</Equipment>
+    <Equipment>BoarSpear</Equipment>
+    <Quote>'There is a toll for passing through these lands.'</Quote>
+    <Backstory>The Vengeful Dead have returned to demand their justice for not being buried properly.</Backstory>
+    <AnimationPack>EF_SoldierAnimationPack</AnimationPack>
+    <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+    <ClothPoseIndex>8</ClothPoseIndex>
+    <InfoCardBackground>BG15_Dark</InfoCardBackground>
+    <InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+    <Color_Clothing1>56,33,13</Color_Clothing1>
+    <Color_Clothing2>56,33,13</Color_Clothing2>
+    <Color_Hair>60,35,25,255</Color_Hair>
+    <Color_Metal>56,33,13</Color_Metal>
+    <Color_Skin>175,120,95,255</Color_Skin>
+    <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+    <EyeTexture>gfx\eyes\blinks\eyeblink_m1_brwn.png</EyeTexture>
+    <ModelPath>undeadmainbody.hkb</ModelPath>
+    <ModelScale>1</ModelScale>
+    <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+    <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+    <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+    <SoundPack>SoundPack_Generic_Male</SoundPack>
+    <TacticalModelScale>1.5</TacticalModelScale>
+    <Texture_Skin>Undead_skin.png</Texture_Skin>
+    <UnitModelType>Undead</UnitModelType>
+  </UnitType>
+  <UnitType InternalName="SkeletonSpearman_VengefulDead2_X">
+    <GroupingType>UnitGroupingType_Pair</GroupingType>
+    <DisplayName>Vengeful Dead</DisplayName>
+    <CanBeDesigned>0</CanBeDesigned>
+    <IsSovereign>0</IsSovereign>
+    <HasWages>0</HasWages>
+    <SpawnRating>4</SpawnRating>
+    <HideInHiergamenon>1</HideInHiergamenon>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <UnitStat_Accuracy>75</UnitStat_Accuracy>
+      <UnitStat_CombatSpeed>20</UnitStat_CombatSpeed>
+      <UnitStat_Defense_Blunt>3</UnitStat_Defense_Blunt>
+      <UnitStat_Defense_Cutting>3</UnitStat_Defense_Cutting>
+      <UnitStat_Defense_Pierce>3</UnitStat_Defense_Pierce>
+      <UnitStat_HitPoints>3</UnitStat_HitPoints>
+      <UnitStat_WeightCapacity>100</UnitStat_WeightCapacity>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Blood_CoS_Undead</SelectedAbilityBonusOption>
+    <Equipment>LeatherBreastpiece</Equipment>
+    <Equipment>IceWargCloak</Equipment>
+    <Equipment>Staff_Freezing</Equipment>
+    <Quote>'There is a toll for passing through these lands.'</Quote>
+    <Backstory>The Vengeful Dead have returned to demand their justice for not being buried properly.</Backstory>
+    <AnimationPack>EF_SoldierAnimationPack</AnimationPack>
+    <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+    <ClothPoseIndex>7</ClothPoseIndex>
+    <InfoCardBackground>BG15_Dark</InfoCardBackground>
+    <InfoCardBackgroundFlipped>1</InfoCardBackgroundFlipped>
+    <Color_Clothing1>56,33,13</Color_Clothing1>
+    <Color_Clothing2>56,33,13</Color_Clothing2>
+    <Color_Hair>60,35,25,255</Color_Hair>
+    <Color_Metal>56,33,13</Color_Metal>
+    <Color_Skin>175,120,95,255</Color_Skin>
+    <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+    <EyeTexture>gfx\eyes\blinks\eyeblink_m1_brwn.png</EyeTexture>
+    <ModelPath>undeadmainbody.hkb</ModelPath>
+    <ModelScale>1</ModelScale>
+    <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+    <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+    <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+    <SoundPack>SoundPack_Generic_Male</SoundPack>
+    <TacticalModelScale>1.5</TacticalModelScale>
+    <Texture_Skin>Undead_skin.png</Texture_Skin>
+    <UnitModelType>Undead</UnitModelType>
+    <Treasure>
+      <Liklihood>25</Liklihood>
+      <GameModifier>
+        <ModType>GiveItem</ModType>
+        <StrVal>Reliquary</StrVal>
+      </GameModifier>
+    </Treasure>
+    <Treasure>
+      <Liklihood>25</Liklihood>
+      <GameModifier>
+        <ModType>GiveItem</ModType>
+        <StrVal>Rare</StrVal>
+      </GameModifier>
+    </Treasure>
+    <Treasure>
+      <Liklihood>25</Liklihood>
+      <GameModifier>
+        <ModType>GiveItem</ModType>
+        <StrVal>Rare</StrVal>
+      </GameModifier>
+    </Treasure>
+    <Treasure>
+      <Liklihood>25</Liklihood>
+      <GameModifier>
+        <ModType>GiveItem</ModType>
+        <StrVal>Uncommon</StrVal>
+      </GameModifier>
+    </Treasure>
+  </UnitType>
+  <AbilityBonus InternalName="Curseofthereturningdead2">
+    <AbilityBonusOption InternalName="Curseofthereturningdead2">
+      <DisplayName>Curse of the Returning Dead</DisplayName>
+      <Description>When this unit attacks any enemy, there is a 1 in 20 chance that the enemy suffers the Hexed trait. It does not expire at the end of combat. The Hexed trait is a particularly strong negative trait.</Description>
+      <Icon>Ability_GreaterCurse_Icon.png</Icon>
+      <IsCombatAbility>1</IsCombatAbility>
+      <AdditionalTrainingTurns>16</AdditionalTrainingTurns>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>MeleeAppliesSpell</Attribute>
+        <StrVal>Curseofthereturningdead</StrVal>
+        <Provides>When this unit attacks any enemy, there is a 1 in 20 chance that the enemy suffers the Hexed trait. It does not expire at the end of combat. The Hexed trait is a particularly strong negative trait.</Provides>
+      </GameModifier>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+</Container>

@@ -1,0 +1,538 @@
+<?xml version="1.0"?>
+<Quests>
+	<QuestDef InternalName="Quest_IceSummons">
+		<DisplayName>The Iced Inn</DisplayName>
+		<Description>You come to a camp where you find 3 nervous looking mages making drawings in the ground. They jump at your presence behind them. "Uh, will you please help us?" One of them asks nervously. You give each of them a cold stare and say, "What seems to be the problem?" "Well you see we have discovered how to summon Ice Elementals, and as we were experimenting, we released 3 of them that we couldn't control. They have attacked an Inn not far from here and we were about to take care of the problem, but you arrived far better equipped than ourselves to handle the problem."</Description>
+		<IsStartingPointQuest>0</IsStartingPointQuest>
+		<ShortTextAccept>I'll do it, so you don't kill yourselves.</ShortTextAccept>
+		<ShortTextDeny>You go and freeze tonight, I'm going to sleep warm.</ShortTextDeny>
+		<RewardText>Group of Ice Summoners</RewardText>
+		<RewardImage>T_SummonIceElemental_Icon.png</RewardImage>
+		<SuccessText>The three women are suprised and grateful by your return. Each of them kneel before you and dedicate their spells to your cause.</SuccessText>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>QuestLocation</TriggerType>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>2</SpawnRating>
+		<Image>M_Elemental_Ice_Card.png</Image>
+		<PrefQuestLoc>QuestLoc_Camp</PrefQuestLoc>
+		<Treasure>
+			<GameModifier InternalName="Reward1">
+				<ModType>Unit</ModType>
+				<Attribute>GiveExperience</Attribute>
+				<Value>12</Value>
+			</GameModifier>
+		</Treasure>
+		<Treasure>
+			<GameModifier InternalName="Reward2">
+				<ModType>Unit</ModType>
+				<Attribute>UnitJoinArmy</Attribute>
+				<StrVal>Quest_Ice_Summoner</StrVal>
+				<UnitClass>Unit</UnitClass>
+			</GameModifier>
+		</Treasure>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<NextObjectiveID>1</NextObjectiveID>
+			<Description>"Go to this Inn and destroy the Ice elementals."</Description>
+			<Treasure>
+				<GameModifier>
+					<ModType>Map</ModType>
+					<Attribute>CreateGoodieHut</Attribute>
+					<StrVal>Frozen Inn</StrVal>
+					<UnitClass>GH_IcedInn</UnitClass>
+					<Radius>3</Radius>
+				</GameModifier>
+			</Treasure>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Unthaw the Inn.</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>ClearGoodieHut</Type>
+				<TextData>GH_IcedInn</TextData>
+				<Flag>RevealTarget</Flag>
+			</QuestConditionDef>
+			<ChoiceText>You arrive to a frozen building that once was an inn. You see a group of Ice Elementals making ice sculptures of the local populous. Do you intervene?</ChoiceText>
+			<ChoiceMedallion>M_Elemental_Ice_Card.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>I'm not going to get cold feet now. (attack)</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Encounter>
+					<Liklihood>100</Liklihood>
+					<BattleIdentifier>IceElementals</BattleIdentifier>
+					<WillRespawn>0</WillRespawn>
+					<WanderingRadius>0</WanderingRadius>
+					<UnitInstance>
+						<UnitType>IceElemental</UnitType>
+						<Level>6</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>IceElemental</UnitType>
+						<Level>3</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>IceElemental</UnitType>
+						<Level>3</Level>
+					</UnitInstance>
+				</Encounter>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Well there are still a few more villagers left. I'll be back.</Description>
+				<NextObjectiveID>0</NextObjectiveID>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<NextObjectiveID>2</NextObjectiveID>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Kill the Ice Elementals.</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>BattleFinished</Type>
+				<TextData>IceElementals</TextData>
+				<MoreTextData>Victory</MoreTextData>
+			</QuestConditionDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>2</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+			<Description>This inn will thaw in time.</Description>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Return to the Camp.</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>UnitEntersQuestLocation</Type>
+			</QuestConditionDef>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Quest_FireSummons">
+		<DisplayName>The Burnt Inn</DisplayName>
+		<Description>You come to a camp where you find 3 nervous looking mages making drawings in the ground. They jump at your presence behind them. "Uh, will you please help us?" One of them asks nervously. You give each of them a burning look and say, "What seems to be the problem?" "Well you see we have discovered how to summon Fire Elementals, and as we were experimenting, we released 3 of them that we couldn't control. They have attacked an Inn not far from here and we were about to take care of the problem, but you arrived far better equipped than ourselves to handle the problem."</Description>
+		<IsStartingPointQuest>0</IsStartingPointQuest>
+		<ShortTextAccept>I'll do it, so you don't kill yourselves.</ShortTextAccept>
+		<ShortTextDeny>You go and burn tonight, I'm going to sleep cool.</ShortTextDeny>
+		<RewardText>Group of Fire Summoners</RewardText>
+		<RewardImage>S_SummonFireElemental_Icon.png</RewardImage>
+		<SuccessText>The three men are suprised and grateful by your return. Each of them kneel before you and dedicate their spells to your cause.</SuccessText>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>QuestLocation</TriggerType>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>2</SpawnRating>
+		<Image>M_Elemental_Fire_Card.png</Image>
+		<PrefQuestLoc>QuestLoc_Camp</PrefQuestLoc>
+		<Treasure>
+			<GameModifier InternalName="Reward1">
+				<ModType>Unit</ModType>
+				<Attribute>GiveExperience</Attribute>
+				<Value>12</Value>
+			</GameModifier>
+		</Treasure>
+		<Treasure>
+			<GameModifier InternalName="Reward2">
+				<ModType>Unit</ModType>
+				<Attribute>UnitJoinArmy</Attribute>
+				<StrVal>Quest_Fire_Summoner</StrVal>
+				<UnitClass>Unit</UnitClass>
+			</GameModifier>
+		</Treasure>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<NextObjectiveID>1</NextObjectiveID>
+			<Description>"Go to this Inn and destroy the Fire elementals."</Description>
+			<Treasure>
+				<GameModifier>
+					<ModType>Map</ModType>
+					<Attribute>CreateGoodieHut</Attribute>
+					<StrVal>Burnt Inn</StrVal>
+					<UnitClass>GH_BurntInn</UnitClass>
+					<Radius>3</Radius>
+				</GameModifier>
+			</Treasure>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Put out the Inn.</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>ClearGoodieHut</Type>
+				<TextData>GH_BurntInn</TextData>
+				<Flag>RevealTarget</Flag>
+			</QuestConditionDef>
+			<ChoiceText>You arrive to a burning building that once was an inn. You see a group of Fire Elementals making torches of the local populous. Do you intervene?</ChoiceText>
+			<ChoiceMedallion>M_Elemental_Fire_Card.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>I've gotta bunch of cold meat to cook. (attack)</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Encounter>
+					<Liklihood>100</Liklihood>
+					<BattleIdentifier>FireElementals</BattleIdentifier>
+					<WillRespawn>0</WillRespawn>
+					<WanderingRadius>0</WanderingRadius>
+					<UnitInstance>
+						<UnitType>FireElemental</UnitType>
+						<Level>6</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>FireElemental</UnitType>
+						<Level>3</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>FireElemental</UnitType>
+						<Level>3</Level>
+					</UnitInstance>
+				</Encounter>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Well there still stuff to burn. I'll be back.</Description>
+				<NextObjectiveID>0</NextObjectiveID>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<NextObjectiveID>2</NextObjectiveID>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Kill the Fire Elementals.</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>BattleFinished</Type>
+				<TextData>FireElementals</TextData>
+				<MoreTextData>Victory</MoreTextData>
+			</QuestConditionDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>2</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+			<Description>This inn will smolder in time.</Description>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Return to the Camp.</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>UnitEntersQuestLocation</Type>
+			</QuestConditionDef>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Quest_EarthSummons">
+		<DisplayName>The Rocked Inn</DisplayName>
+		<Description>You come to a camp where you find 3 nervous looking mages making drawings in the ground. They jump at your presence behind them. "Uh, will you please help us?" One of them asks nervously. You give each of them a rocky stare and say, "What seems to be the problem?" "Well you see we have discovered how to summon Earth Elementals, and as we were experimenting, we released 3 of them that we couldn't control. They have attacked an inn not far from here and we were about to take care of the problem, but you arrived far better equipped than ourselves to handle the problem."</Description>
+		<IsStartingPointQuest>0</IsStartingPointQuest>
+		<ShortTextAccept>I'll do it, so you don't kill yourselves.</ShortTextAccept>
+		<ShortTextDeny>You go and get stoned tonight, I'm going to sleep rock solid.</ShortTextDeny>
+		<RewardText>Group of Earth Summoners</RewardText>
+		<RewardImage>S_SummonEarthElemental_Icon.png</RewardImage>
+		<SuccessText>The three women are suprised and grateful by your return. Each of them kneel before you and dedicate their spells to your cause.</SuccessText>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>QuestLocation</TriggerType>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>2</SpawnRating>
+		<Image>M_Elemental_Earth_Card.png</Image>
+		<PrefQuestLoc>QuestLoc_Camp</PrefQuestLoc>
+		<Treasure>
+			<GameModifier InternalName="Reward1">
+				<ModType>Unit</ModType>
+				<Attribute>GiveExperience</Attribute>
+				<Value>12</Value>
+			</GameModifier>
+		</Treasure>
+		<Treasure>
+			<GameModifier InternalName="Reward2">
+				<ModType>Unit</ModType>
+				<Attribute>UnitJoinArmy</Attribute>
+				<StrVal>Quest_Earth_Summoner</StrVal>
+				<UnitClass>Unit</UnitClass>
+			</GameModifier>
+		</Treasure>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<NextObjectiveID>1</NextObjectiveID>
+			<Description>"Go to this Inn and destroy the Earth elementals."</Description>
+			<Treasure>
+				<GameModifier>
+					<ModType>Map</ModType>
+					<Attribute>CreateGoodieHut</Attribute>
+					<StrVal>Rocked Inn</StrVal>
+					<UnitClass>GH_RockedInn</UnitClass>
+					<Radius>3</Radius>
+				</GameModifier>
+			</Treasure>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Chisel out the Inn.</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>ClearGoodieHut</Type>
+				<TextData>GH_RockedInn</TextData>
+				<Flag>RevealTarget</Flag>
+			</QuestConditionDef>
+			<ChoiceText>You arrive to a building that once was an inn covered in stones. You see a group of Earth Elementals having target practice with the local populous. Do you intervene?</ChoiceText>
+			<ChoiceMedallion>M_Elemental_Earth_Card.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>Let's make some rolling stones. (attack)</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Encounter>
+					<Liklihood>100</Liklihood>
+					<BattleIdentifier>EarthElementals</BattleIdentifier>
+					<WillRespawn>0</WillRespawn>
+					<WanderingRadius>0</WanderingRadius>
+					<UnitInstance>
+						<UnitType>EarthElemental</UnitType>
+						<Level>6</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>EarthElemental</UnitType>
+						<Level>3</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>EarthElemental</UnitType>
+						<Level>3</Level>
+					</UnitInstance>
+				</Encounter>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Well it's not a mountain yet. I'll be back.</Description>
+				<NextObjectiveID>0</NextObjectiveID>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<NextObjectiveID>2</NextObjectiveID>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Kill the Earth Elementals.</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>BattleFinished</Type>
+				<TextData>EarthElementals</TextData>
+				<MoreTextData>Victory</MoreTextData>
+			</QuestConditionDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>2</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+			<Description>Return to the Camp.</Description>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Return to the Camp.</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>UnitEntersQuestLocation</Type>
+			</QuestConditionDef>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Quest_AirSummons">
+		<DisplayName>The Missing Inn</DisplayName>
+		<Description>You come to a camp where you find 3 nervous looking mages making drawings in the ground. They jump at your presence behind them. "Uh, will you please help us?" One of them asks nervously. You give each of them a cold stare and say, "What seems to be the problem?" "Well you see we have discovered how to summon Air Elementals, and as we were experimenting, we released 6 of them that we couldn't control. They have attacked an Inn not far from here and we were about to take care of the problem, but you arrived far better equipped than ourselves to handle the problem."</Description>
+		<IsStartingPointQuest>0</IsStartingPointQuest>
+		<ShortTextAccept>I'll do it, so you don't kill yourselves.</ShortTextAccept>
+		<ShortTextDeny>You go and get blown away tonight, I'm going to sleep well.</ShortTextDeny>
+		<RewardText>Group of Air Summoners</RewardText>
+		<RewardImage>S_SummonAirElemental_Icon.png</RewardImage>
+		<SuccessText>The three men are suprised and grateful by your return. Each of them kneel before you and dedicate their spells to your cause.</SuccessText>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>QuestLocation</TriggerType>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>2</SpawnRating>
+		<Image>M_Elemental_Air_Card.png</Image>
+		<PrefQuestLoc>QuestLoc_Camp</PrefQuestLoc>
+		<Treasure>
+			<GameModifier InternalName="Reward1">
+				<ModType>Unit</ModType>
+				<Attribute>GiveExperience</Attribute>
+				<Value>12</Value>
+			</GameModifier>
+		</Treasure>
+		<Treasure>
+			<GameModifier InternalName="Reward2">
+				<ModType>Unit</ModType>
+				<Attribute>UnitJoinArmy</Attribute>
+				<StrVal>Quest_Air_Summoner</StrVal>
+				<UnitClass>Unit</UnitClass>
+			</GameModifier>
+		</Treasure>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<NextObjectiveID>1</NextObjectiveID>
+			<Description>"Go to this Inn and destroy the Air elementals."</Description>
+			<Treasure>
+				<GameModifier>
+					<ModType>Map</ModType>
+					<Attribute>CreateGoodieHut</Attribute>
+					<StrVal>Missing Inn</StrVal>
+					<UnitClass>GH_MissingInnBottom</UnitClass>
+					<Radius>3</Radius>
+				</GameModifier>
+			</Treasure>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Find the Inn Foundation.</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>ClearGoodieHut</Type>
+				<TextData>GH_MissingInnBottom</TextData>
+				<Flag>RevealTarget</Flag>
+			</QuestConditionDef>
+			<ChoiceText>You arrive to a foundation that once looked like it belonged to an inn. You see a group of Air Elementals whipping the local populous into the distance. Do you intervene?</ChoiceText>
+			<ChoiceMedallion>M_Elemental_Air_Card.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>Time to blow them away. (attack)</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Encounter>
+					<Liklihood>100</Liklihood>
+					<BattleIdentifier>AirElementals</BattleIdentifier>
+					<WillRespawn>0</WillRespawn>
+					<WanderingRadius>0</WanderingRadius>
+					<UnitInstance>
+						<UnitType>AirElemental</UnitType>
+						<Level>6</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>AirElemental</UnitType>
+						<Level>3</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>AirElemental</UnitType>
+						<Level>3</Level>
+					</UnitInstance>
+				</Encounter>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Well there are few more villagers that can be flown away. I'll be back.</Description>
+				<NextObjectiveID>0</NextObjectiveID>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<NextObjectiveID>2</NextObjectiveID>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Kill the Air Elementals.</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>BattleFinished</Type>
+				<TextData>AirElementals</TextData>
+				<MoreTextData>Victory</MoreTextData>
+			</QuestConditionDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>2</ObjectiveID>
+			<NextObjectiveID>3</NextObjectiveID>
+			<Description>"Guess I should find the other half of the inn."</Description>
+			<Treasure>
+				<GameModifier>
+					<ModType>Map</ModType>
+					<Attribute>CreateGoodieHut</Attribute>
+					<StrVal>Missing Inn</StrVal>
+					<UnitClass>GH_MissingInnTop</UnitClass>
+					<Radius>6</Radius>
+				</GameModifier>
+			</Treasure>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Find the Rest of the Inn.</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>ClearGoodieHut</Type>
+				<TextData>GH_MissingInnTop</TextData>
+				<Flag>RevealTarget</Flag>
+			</QuestConditionDef>
+			<ChoiceText>You have found the top half of the inn. You see another group Air Elementals destroying what is left of the inn. Do you intervene?</ChoiceText>
+			<ChoiceMedallion>M_Elemental_Air_Card.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>This has got to end. (attack)</Description>
+				<NextObjectiveID>3</NextObjectiveID>
+				<Encounter>
+					<Liklihood>100</Liklihood>
+					<BattleIdentifier>TopAirElementals</BattleIdentifier>
+					<WillRespawn>0</WillRespawn>
+					<WanderingRadius>0</WanderingRadius>
+					<UnitInstance>
+						<UnitType>AirElemental</UnitType>
+						<Level>8</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>AirElemental</UnitType>
+						<Level>4</Level>
+					</UnitInstance>
+					<UnitInstance>
+						<UnitType>AirElemental</UnitType>
+						<Level>4</Level>
+					</UnitInstance>
+				</Encounter>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Well they still have more wood to whip around. I'll be back.</Description>
+				<NextObjectiveID>2</NextObjectiveID>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>3</ObjectiveID>
+			<NextObjectiveID>4</NextObjectiveID>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Kill the Air Elementals.</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>BattleFinished</Type>
+				<TextData>TopAirElementals</TextData>
+				<MoreTextData>Victory</MoreTextData>
+			</QuestConditionDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>4</ObjectiveID>
+			<NextObjectiveID>-1</NextObjectiveID>
+			<QuestEnd>1</QuestEnd>
+			<Description>All my horses and men can't put this inn back together again.</Description>
+			<QuestConditionDef>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Return to the Camp.</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>Success</Class>
+				<Type>UnitEntersQuestLocation</Type>
+			</QuestConditionDef>
+		</QuestObjectiveDef>
+	</QuestDef>
+</Quests>

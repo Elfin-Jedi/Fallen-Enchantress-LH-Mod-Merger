@@ -1,0 +1,4090 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Created with the Elemental Editor -->
+<!-- CoreAbilities.xml -->
+<!-- -->
+<AbilityBonuses>
+    <DataChecksum NoParse="1">
+        <Ignore>DispName</Ignore>
+        <Translate>DisplayName,Description</Translate>
+    </DataChecksum>
+    <AbilityBonus InternalName="HealthFanaticAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="HealthFanatic">
+            <DisplayName>Health Fanatic</DisplayName>
+            <Description>+3 to Hit Points, +5% Hit Points for factions units</Description>
+            <Icon>Ability_HealthFanatic_Icon.png</Icon>
+            <PerkTreePosX>2</PerkTreePosX>
+            <PerkTreePosY>4</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_HitPoints</StrVal>
+                <Value>3</Value>
+                <Provides>+3 Hit Points</Provides>
+            </GameModifier>
+            <GameModifier>
+            	<ModType>Player</ModType>
+            	<Attribute>AbilityBonus</Attribute>
+            	<StrVal>A_UnitStat_HitPoints</StrVal>
+            	<Value>5</Value>
+            	<Provides>+5% Hit Points for factions units</Provides>
+       	    </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>Spell_FirstAid</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="Spell_DebilitatingWhirlwind">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="Spell_DebilitatingWhirlwind">
+            <DisplayName>Debilitating Whirlwind</DisplayName>
+            <Description>A berserk whirlwind attack damaging and weakening surrounding enemies.</Description>
+            <Icon>Ability_DebilitatingWhirlwind_Icon.png</Icon>
+            <PerkTreePosX>0</PerkTreePosX>
+            <PerkTreePosY>15</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>UnlockCombatAbility</Attribute>
+                <StrVal>DebilitatingWhirlwind</StrVal>
+                <Provides>Strike all surrounding enemies for 75% damage, weaken their attack by 25% damage</Provides>
+            </GameModifier>
+            <IsCombatAbility>1</IsCombatAbility>
+            <Type>Defensive</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="SpinControlAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="SpinControl">
+            <DisplayName>Spin Control</DisplayName>
+            <Description>+20% effectiveness when using the Debilitating Whirldwind Ability</Description>
+            <Icon>Ability_SpinControl_Icon.png</Icon>
+            <PerkTreePosX>1</PerkTreePosX>
+            <PerkTreePosY>15</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_BonusDebilitatingWhirlwind</StrVal>
+                <Value>0.2</Value>
+                <Provides>Additional +20% effectiveness when using the Debilitating Whirldwind Ability</Provides>
+            </GameModifier>
+            <Type>Aggressive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>Spell_DebilitatingWhirlwind</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="EliteHeroAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="EliteHero">
+            <DisplayName>Elite Hero</DisplayName>
+            <Description>+20 to Hit Points, +3 To Attack, +2 To Defense, +20% Spell Damage, +10 Spell Resistance, +2 Initiative, +1 Gildar Per Season, -5% Unrest in the city this unit is in </Description>
+            <Icon>Ability_EliteHero_Icon.png</Icon>
+            <PerkTreePosX>0</PerkTreePosX>
+            <PerkTreePosY>1</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_HitPoints</StrVal>
+                <Value>20</Value>
+                <Provides>+20 Hit Points</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Boost</StrVal>
+                <Value>3</Value>
+                <Provides>+3 Attack</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Defense_Pierce</StrVal>
+                <Value>2</Value>
+                <Provides>+2 Defense</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_SpellDamage</StrVal>
+                <Value>20</Value>
+                <Provides>+20% Spell Damage</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_MagicResist</StrVal>
+                <Value>10</Value>
+                <Provides>+10 Spell Resistance</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_CombatSpeed</StrVal>
+                <Value>2</Value>
+                <Provides>+2 Initiative</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>ProduceResource</Attribute>
+                <StrVal>Gold</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Gildar per Season</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Resource</ModType>
+                <Attribute>Unrest</Attribute>
+                <Value>-5</Value>
+                <Provides>-5% Unrest in the city this unit is in</Provides>
+            </GameModifier>
+	    <MinimumLevel>15</MinimumLevel>
+            <Type>Defensive</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>20</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="LegendaryHeroAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="LegendaryHero">
+            <DisplayName>Legendary Hero</DisplayName>
+            <Description>+32 to Hit Points, +6 To Attack, +4 To Defense, +30% Spell Damage, +15 Spell Resistance, +3 Initiative, +2 Gildar Per Season, -10% Unrest in the city this unit is in, +5% Army Experience, +1 to the army's Defense </Description>
+            <Icon>Ability_LegendaryHero_Icon.png</Icon>
+            <PerkTreePosX>1</PerkTreePosX>
+            <PerkTreePosY>1</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_HitPoints</StrVal>
+                <Value>32</Value>
+                <Provides>+32 Hit Points</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Boost</StrVal>
+                <Value>6</Value>
+                <Provides>+6 Attack</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Defense_Pierce</StrVal>
+                <Value>4</Value>
+                <Provides>+4 Defense</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_SpellDamage</StrVal>
+                <Value>30</Value>
+                <Provides>+30% Spell Damage</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_MagicResist</StrVal>
+                <Value>15</Value>
+                <Provides>+15 Spell Resistance</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_CombatSpeed</StrVal>
+                <Value>3</Value>
+                <Provides>+3 Initiative</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>ProduceResource</Attribute>
+                <StrVal>Gold</StrVal>
+                <Value>2</Value>
+                <Provides>+2 Gildar per Season</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Resource</ModType>
+                <Attribute>Unrest</Attribute>
+                <Value>-10</Value>
+                <Provides>-10% Unrest in the city this unit is in</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_ExpBonus</StrVal>
+                <Value>5</Value>
+                <Provides>+5% Army Experience</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustArmyStat</Attribute>
+                <StrVal>UnitStat_Defense_Pierce</StrVal>
+                <Value>1</Value>
+                <Provides>+1 to the army's Defense</Provides>
+            </GameModifier>
+	    <MinimumLevel>32</MinimumLevel>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>EliteHero</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>50</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="HardentAdventurerAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="HardentAdventurer">
+            <DisplayName>Hardened Adventurer</DisplayName>
+            <Description>+5 to Hit Points, +1 To Attack, +1 To Defense</Description>
+            <Icon>Ability_HardentAdventurer_Icon.png</Icon>
+            <PerkTreePosX>2</PerkTreePosX>
+            <PerkTreePosY>1</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_HitPoints</StrVal>
+                <Value>5</Value>
+                <Provides>+5 Hit Points</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Boost</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Attack</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Defense_Pierce</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Defense</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>AdventurersBoon</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="WittyIndividualAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="WittyIndividual">
+            <DisplayName>Witty Individual</DisplayName>
+            <Description>+4 Spell Mastery, +4 Spell Resistance, +1% Army Experience</Description>
+            <Icon>Ability_WittyIndividual_Icon.png</Icon>
+            <PerkTreePosX>0</PerkTreePosX>
+            <PerkTreePosY>14</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_MagicPower</StrVal>
+                <Value>4</Value>
+                <Provides>+4 Spell Mastery</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_MagicResist</StrVal>
+                <Value>4</Value>
+                <Provides>+4 Spell Resistance</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_ExpBonus</StrVal>
+                <Value>1</Value>
+                <Provides>+1% Army Experience</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="SchooledDefenderAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="SchooledDefender">
+            <DisplayName>Schooled Defender</DisplayName>
+            <Description>+1 Defense, +6 Spell Resistance, +1 Dodge +1 Ranged Dodge</Description>
+            <Icon>Ability_SchooledDefender_Icon.png</Icon>
+            <PerkTreePosX>1</PerkTreePosX>
+            <PerkTreePosY>14</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Defense_Pierce</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Defense</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_MagicResist</StrVal>
+                <Value>6</Value>
+                <Provides>+6 Spell Resistance</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Dodge</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Dodge</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_DodgeAgainstRanged</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Ranged Dodge</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>WittyIndividual</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="SchooledAttackerAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="SchooledAttacker">
+            <DisplayName>Schooled Attacker</DisplayName>
+            <Description>+1 Attack, +6 Spell Mastery, +1 Accuracy, +1 Army Accuracy</Description>
+            <Icon>Ability_SchooledAttacker_Icon.png</Icon>
+            <PerkTreePosX>2</PerkTreePosX>
+            <PerkTreePosY>14</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Boost</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Attack</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_MagicPower</StrVal>
+                <Value>6</Value>
+                <Provides>+6 Spell Mastery</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Accuracy</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Accuracy</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustArmyStat</Attribute>
+                <StrVal>UnitStat_Accuracy</StrVal>
+                <Value>1</Value>
+                <Provides>+1 to the Army's Accuracy</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>SchooledDefender</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="BlastRecoveryAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="BlastRecovery">
+            <DisplayName>Blast Recovery</DisplayName>
+            <Description>+1 Arcalite Per Season</Description>
+            <Icon>Ability_BlastRecovery_Icon.png</Icon>
+            <PerkTreePosX>3</PerkTreePosX>
+            <PerkTreePosY>15</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>ProduceResource</Attribute>
+                <StrVal>Arcalite</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Arcalite Per Season</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>SchooledAttacker</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="Spell_ArcaliteDestructionAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+        <AbilityBonusOption InternalName="Spell_ArcaliteDestruction">
+            <DisplayName>Arcalite Destruction</DisplayName>
+            <Description>Allows the unit to cast Arcalite Blast</Description>
+            <Icon>Ability_ArcaliteDestruction_Icon.png</Icon>
+            <PerkTreePosX>4</PerkTreePosX>
+            <PerkTreePosY>15</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Provides>Unlocks the following spell</Provides>
+            </GameModifier>
+            <CombatRating>50</CombatRating>
+            <IsCombatAbility>1</IsCombatAbility>
+            <Type>Spell</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>BlastRecovery</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="Spell_StoneExploitationAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+        <AbilityBonusOption InternalName="Spell_StoneExploitation">
+            <DisplayName>Stone Exploitation</DisplayName>
+            <Description>Allows the unit to cast Arcalite Blast</Description>
+            <Icon>Ability_StoneExploitation_Icon.png</Icon>
+            <PerkTreePosX>5</PerkTreePosX>
+            <PerkTreePosY>15</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Provides>Unlocks the following spell</Provides>
+            </GameModifier>
+            <CombatRating>50</CombatRating>
+            <IsCombatAbility>1</IsCombatAbility>
+            <Type>Spell</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>Spell_ArcaliteDestruction</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="ControlledCastingAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="ControlledCasting">
+            <DisplayName>Controlled Casting</DisplayName>
+            <Description>+5 to Spell Mastery, +10% to Spell Damage</Description>
+            <Icon>Ability_ControlledCasting_Icon.png</Icon>
+            <PerkTreePosX>3</PerkTreePosX>
+            <PerkTreePosY>14</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_MagicPower</StrVal>
+                <Value>5</Value>
+                <Provides>+5 Spell Mastery</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_SpellDamage</StrVal>
+                <Value>10</Value>
+                <Provides>+10% Spell Damage</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>SchooledAttacker</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="Spell_MagicWildInfluenceAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+        <AbilityBonusOption InternalName="Spell_MagicWildInfluence">
+            <DisplayName>Magic Wild Influence</DisplayName>
+            <Description>Allows the unit to cast the following spell</Description>
+            <Icon>Ability_Spell_MagicWildInfluence_Icon.png</Icon>
+            <PerkTreePosX>4</PerkTreePosX>
+            <PerkTreePosY>13</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Provides>Unlocks the following spell</Provides>
+            </GameModifier>
+            <CombatRating>30</CombatRating>
+            <IsCombatAbility>1</IsCombatAbility>
+            <Type>Spell</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>ControlledCasting</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="ToughCaller">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="ToughCaller">
+            <DisplayName>Tough Caller</DisplayName>
+            <Description>+1 Levels for Summoned Creatures, +1 Defense</Description>
+            <Icon>Ability_ToughCaller_Icon.png</Icon>
+            <PerkTreePosX>5</PerkTreePosX>
+            <PerkTreePosY>13</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_BonusSummonLevel</StrVal>
+                <Value>1</Value>
+                <Provides>+1 level for Summons</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Defense_Pierce</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Defense</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>Spell_MagicWildInfluence</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="WildmagicAffinityAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="WildmagicAffinity">
+            <DisplayName>Wildmagic Affinity</DisplayName>
+            <Description>+1 Levels for Summoned Creatures, +10% to Spell Damage</Description>
+            <Icon>Ability_WildmagicAffinity_Icon.png</Icon>
+            <PerkTreePosX>4</PerkTreePosX>
+            <PerkTreePosY>14</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_BonusSummonLevel</StrVal>
+                <Value>1</Value>
+                <Provides>+1 level for Summons</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_SpellDamage</StrVal>
+                <Value>10</Value>
+                <Provides>+10% Spell Damage</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>ControlledCasting</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="Spell_ElectricBoltAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+        <AbilityBonusOption InternalName="Spell_ElectricBolt">
+            <DisplayName>Charged Bolts</DisplayName>
+            <Description>Allows the unit to cast Electric Bolt</Description>
+            <Icon>Ability_Spell_ElectricBolt_Icon.png</Icon>
+            <PerkTreePosX>5</PerkTreePosX>
+            <PerkTreePosY>14</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Provides>Unlocks the following spell</Provides>
+            </GameModifier>
+            <CombatRating>25</CombatRating>
+            <IsCombatAbility>1</IsCombatAbility>
+            <Type>Spell</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>WildmagicAffinity</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="MagicalResearcherAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="MagicalResearcher">
+            <DisplayName>Magical Researcher</DisplayName>
+            <Description>+5% to Spell Damage, +5 Spell Resistance, +1 Research Per Season</Description>
+            <Icon>Ability_MagicalResearcher_Icon.png</Icon>
+            <PerkTreePosX>6</PerkTreePosX>
+            <PerkTreePosY>14</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_SpellDamage</StrVal>
+                <Value>5</Value>
+                <Provides>+5% Spell Damage</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_MagicResist</StrVal>
+                <Value>5</Value>
+                <Provides>+5 Spell Resistance</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>ProduceResource</Attribute>
+                <StrVal>Research</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Research per Season</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>Spell_ElectricBolt</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="FullTimeResearcherAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="FullTimeResearcher">
+            <DisplayName>Full Time Researcher</DisplayName>
+            <Description>+3 Research Per Season, -1 Attack</Description>
+            <Icon>Ability_FullTimeResearcher_Icon.png</Icon>
+            <PerkTreePosX>7</PerkTreePosX>
+            <PerkTreePosY>15</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>ProduceResource</Attribute>
+                <StrVal>Research</StrVal>
+                <Value>3</Value>
+                <Provides>+3 Research per Season</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Boost</StrVal>
+                <Value>-1</Value>
+                <Provides>-1 Attack</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>MagicalResearcher</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="TheGreatProjectAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="TheGreatProject">
+            <DisplayName>The Great Project</DisplayName>
+            <Description>+10% to Spell Damage, +200 Research Points </Description>
+            <Icon>Ability_TheGreatProject_Icon.png</Icon>
+            <PerkTreePosX>7</PerkTreePosX>
+            <PerkTreePosY>14</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_SpellDamage</StrVal>
+                <Value>10</Value>
+                <Provides>+10% Spell Damage</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Resource</ModType>
+                <Attribute>Research</Attribute>
+                <Value>200</Value>
+                <Provides>+200 Research</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>MagicalResearcher</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="AptlyCoordinatedAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="AptlyCoordinated">
+            <DisplayName>Aptly Co-ordinated</DisplayName>
+            <Description>+1 to Hit Points, +3 To Dodge, +3 Ranged Dodge, +4 To Accuracy</Description>
+            <Icon>Ability_AptlyCoordinated_Icon.png</Icon>
+            <PerkTreePosX>0</PerkTreePosX>
+            <PerkTreePosY>17</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_HitPoints</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Hit Points</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Dodge</StrVal>
+                <Value>3</Value>
+                <Provides>+3 Dodge</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_DodgeAgainstRanged</StrVal>
+                <Value>3</Value>
+                <Provides>+3 Ranged Dodge</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Accuracy</StrVal>
+                <Value>4</Value>
+                <Provides>+4 Accuracy</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="InspirationalIndividualAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="InspirationalIndividual">
+            <DisplayName>Inspirational Individual</DisplayName>
+            <Description>+2 to Hit Points, +3 To Armys Accuracy, +3% Army Experience, +150 Gildar</Description>
+            <Icon>Ability_InspirationalIndividual_Icon.png</Icon>
+            <PerkTreePosX>1</PerkTreePosX>
+            <PerkTreePosY>17</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_HitPoints</StrVal>
+                <Value>2</Value>
+                <Provides>+2 Hit Points</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustArmyStat</Attribute>
+                <StrVal>UnitStat_Accuracy</StrVal>
+                <Value>3</Value>
+                <Provides>+3 to the Army's Accuracy</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustArmyStat</Attribute>
+                <StrVal>UnitStat_ExpBonus</StrVal>
+                <Value>3</Value>
+                <Provides>+3% to the Army's Experience</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Resource</ModType>
+                <Attribute>Gold</Attribute>
+                <Value>150</Value>
+                <Provides>+150 Gildar</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>AptlyCoordinated</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="InspiringHeroAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="InspiringHero">
+            <DisplayName>Inspiring Hero</DisplayName>
+            <Description>+5% spell Damage, +1 to the Army's Attack, +2% to the Army's Experience</Description>
+            <Icon>Ability_InspiringHero_Icon.png</Icon>
+            <PerkTreePosX>2</PerkTreePosX>
+            <PerkTreePosY>18</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_SpellDamage</StrVal>
+                <Value>5</Value>
+                <Provides>+5% Spell Damage</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustArmyStat</Attribute>
+                <StrVal>UnitStat_Attack_Boost</StrVal>
+                <Value>1</Value>
+                <Provides>+1 to the Army's Attack</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustArmyStat</Attribute>
+                <StrVal>UnitStat_ExpBonus</StrVal>
+                <Value>2</Value>
+                <Provides>+2% to the Army's Experience</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>InspirationalIndividual</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="HeroOfResponsibilityAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="HeroOfResponsibility">
+            <DisplayName>Hero Of Responsibility</DisplayName>
+            <Description>+3 to Hit Points, +1 To Armys Accuracy, +2% Army Experience, +5 Accuracy, +1 Defense</Description>
+            <Icon>Ability_HeroOfResponsibility_Icon.png</Icon>
+            <PerkTreePosX>2</PerkTreePosX>
+            <PerkTreePosY>17</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_HitPoints</StrVal>
+                <Value>3</Value>
+                <Provides>+3 Hit Points</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustArmyStat</Attribute>
+                <StrVal>UnitStat_Accuracy</StrVal>
+                <Value>1</Value>
+                <Provides>+1 to the Army's Accuracy</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustArmyStat</Attribute>
+                <StrVal>UnitStat_ExpBonus</StrVal>
+                <Value>2</Value>
+                <Provides>+2% to the Army's Experience</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Accuracy</StrVal>
+                <Value>5</Value>
+                <Provides>+5 Accuracy</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Defense_Pierce</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Defense</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>InspirationalIndividual</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="Spell_TerrifyingManeuvers">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="Spell_TerrifyingManeuvers">
+            <DisplayName>Terrifying Maneuvers</DisplayName>
+            <Description>Allows the unit to use the Terrifying Maneuvers ability, low cooldown</Description>
+            <Icon>Ability_TerrifyingManeuvers_Icon.png</Icon>
+            <PerkTreePosX>3</PerkTreePosX>
+            <PerkTreePosY>18</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>UnlockCombatAbility</Attribute>
+                <StrVal>TerrifyingManeuvers</StrVal>
+                <Provides>Strike three adjacent enemies with powerful attacking swings, low coolddown</Provides>
+            </GameModifier>
+            <IsCombatAbility>1</IsCombatAbility>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>HeroOfResponsibility</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="DieHardAdventurerAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="DieHardAdventurer">
+            <DisplayName>Die Hard Adventurer</DisplayName>
+            <Description>+10 to Hit Points, +1 To Attack</Description>
+            <Icon>Ability_DieHardAdventurer_Icon.png</Icon>
+            <PerkTreePosX>3</PerkTreePosX>
+            <PerkTreePosY>17</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_HitPoints</StrVal>
+                <Value>10</Value>
+                <Provides>+10 Hit Points</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Boost</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Attack</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>HeroOfResponsibility</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="AbleSurvivorAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="AbleSurvivor">
+            <DisplayName>Able Survivor</DisplayName>
+            <Description>+6 to Hit Points, +1 To Defense, +5 Spell Resistance, +1 Dodge</Description>
+            <Icon>Ability_AbleSurvivor_Icon.png</Icon>
+            <PerkTreePosX>4</PerkTreePosX>
+            <PerkTreePosY>16</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_HitPoints</StrVal>
+                <Value>6</Value>
+                <Provides>+6 Hit Points</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Defense_Pierce</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Defense</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_MagicResist</StrVal>
+                <Value>5</Value>
+                <Provides>+5 Spell Resistance</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Dodge</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Dodge</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>DieHardAdventurer</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="SturdyAdventurerAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="SturdyAdventurer">
+            <DisplayName>Sturdy Adventurer</DisplayName>
+            <Description>+3 To Defense</Description>
+            <Icon>Ability_SturdyAdventurer_Icon.png</Icon>
+            <PerkTreePosX>4</PerkTreePosX>
+            <PerkTreePosY>17</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Defense_Pierce</StrVal>
+                <Value>3</Value>
+                <Provides>+3 Defense</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>DieHardAdventurer</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="InfluentialDefenseAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="InfluentialDefense">
+            <DisplayName>Influential Defense</DisplayName>
+            <Description>+2 to the army's Defense </Description>
+            <Icon>Ability_InfluentialDefense_Icon.png</Icon>
+            <PerkTreePosX>5</PerkTreePosX>
+            <PerkTreePosY>16</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustArmyStat</Attribute>
+                <StrVal>UnitStat_Defense_Pierce</StrVal>
+                <Value>2</Value>
+                <Provides>+2 to the army's Defense</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>SturdyAdventurer</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="DefensiveFormationAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="DefensiveFormation">
+            <DisplayName>Defensive Formation</DisplayName>
+            <Description>+3 to the army's Defense, -1 to the army's Attack </Description>
+            <Icon>Ability_DefensiveFormation_Icon.png</Icon>
+            <PerkTreePosX>6</PerkTreePosX>
+            <PerkTreePosY>16</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustArmyStat</Attribute>
+                <StrVal>UnitStat_Defense_Pierce</StrVal>
+                <Value>3</Value>
+                <Provides>+3 to the army's Defense</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustArmyStat</Attribute>
+                <StrVal>UnitStat_Attack_Boost</StrVal>
+                <Value>-1</Value>
+                <Provides>-1 to the army's Attack</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>InfluentialDefense</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="RampagingAdventurerAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="RampagingAdventurer">
+            <DisplayName>Rampaging Adventurer</DisplayName>
+            <Description>+4 To Attack</Description>
+            <Icon>Ability_RampagingAdventurer_Icon.png</Icon>
+            <PerkTreePosX>5</PerkTreePosX>
+            <PerkTreePosY>17</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Boost</StrVal>
+                <Value>4</Value>
+                <Provides>+4 Attack</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>SturdyAdventurer</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="Spell_SafeguardHit">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="Spell_SafeguardHit">
+            <DisplayName>Safeguard Hit</DisplayName>
+            <Description>Allows a unit to use the Safeguard Hit ability, you ferociously attack the enemy then quickly back off while he recovers.</Description>
+            <Icon>Ability_SafeguardHit_Icon.png</Icon>
+            <PerkTreePosX>6</PerkTreePosX>
+            <PerkTreePosY>18</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>UnlockCombatAbility</Attribute>
+                <StrVal>SafeguardHit</StrVal>
+                <Provides>Strike an enemy for 140% damage then move backwards 2 space</Provides>
+            </GameModifier>
+            <IsCombatAbility>1</IsCombatAbility>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>RampagingAdventurer</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="Spell_MelarcyOverkill">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="Spell_MelarcyOverkill">
+            <DisplayName>Melarcy Overkill</DisplayName>
+            <Description>A decimating Arcalite assisted strike that does 400% attack damage to a single target using 25 Arcalite.</Description>
+            <Icon>Ability_MelarcyOverkill_Icon.png</Icon>
+            <PerkTreePosX>7</PerkTreePosX>
+            <PerkTreePosY>18</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>UnlockCombatAbility</Attribute>
+                <StrVal>MelarcyOverkill</StrVal>
+                <Provides>Use 25 Arcalite to Strike an enemy for 400% damage.</Provides>
+            </GameModifier>
+            <IsCombatAbility>1</IsCombatAbility>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>Spell_SafeguardHit</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="FlexibleAdventurerAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="FlexibleAdventurer">
+            <DisplayName>Flexible Adventurer</DisplayName>
+            <Description>+3 To Hitpoints, +2 Dodge, +1 Initiative, -3% To Global Unrest, +1 Gildar per season, </Description>
+            <Icon>Ability_FlexibleAdventurer_Icon.png</Icon>
+            <PerkTreePosX>6</PerkTreePosX>
+            <PerkTreePosY>17</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_HitPoints</StrVal>
+                <Value>3</Value>
+                <Provides>+3 Hit Points</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Dodge</StrVal>
+                <Value>2</Value>
+                <Provides>+2 Dodge</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_CombatSpeed</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Initiative</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_Additive_Unrest</StrVal>
+                <Value>-3</Value>
+                <Provides>-3% Unrest in all cities</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>ProduceResource</Attribute>
+                <StrVal>Gold</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Gildar per Season</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>RampagingAdventurer</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="StarAdventurerAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="StarAdventurer">
+            <DisplayName>Star Adventurer</DisplayName>
+            <Description>+15 To Hitpoints, +2 Initiative </Description>
+            <Icon>Ability_StarAdventurer_Icon.png</Icon>
+            <PerkTreePosX>7</PerkTreePosX>
+            <PerkTreePosY>17</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_HitPoints</StrVal>
+                <Value>15</Value>
+                <Provides>+15 Hit Points</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_CombatSpeed</StrVal>
+                <Value>2</Value>
+                <Provides>+2 Initiative</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>FlexibleAdventurer</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="CasualScientistAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="CasualScientist">
+            <DisplayName>Casual Scientist</DisplayName>
+            <Description>-1 to Hit Points, +1 Research Per Season, +2% tothe Army's Experience, +30 Research, +25 Gildar, +1 Spell Mastery, +1 Spell Resistance </Description>
+            <Icon>Ability_CasualScientist_Icon.png</Icon>
+            <PerkTreePosX>0</PerkTreePosX>
+            <PerkTreePosY>20</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_HitPoints</StrVal>
+                <Value>-1</Value>
+                <Provides>-1 Hit Points</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>ProduceResource</Attribute>
+                <StrVal>Research</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Research per Season</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustArmyStat</Attribute>
+                <StrVal>UnitStat_ExpBonus</StrVal>
+                <Value>2</Value>
+                <Provides>+2% to the Army's Experience</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Resource</ModType>
+                <Attribute>Research</Attribute>
+                <Value>30</Value>
+                <Provides>+30 Research</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Resource</ModType>
+                <Attribute>Gold</Attribute>
+                <Value>25</Value>
+                <Provides>+25 Gildar</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_MagicPower</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Spell Mastery</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_MagicResist</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Spell Resistance</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="BattleTrainingAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="BattleTraining">
+            <DisplayName>Battle Training</DisplayName>
+            <Description>+2 to Hit Points, +1 to the Army's Accuracy, +1 Attack, +1 Defense</Description>
+            <Icon>Ability_BattleTraining_Icon.png</Icon>
+            <PerkTreePosX>1</PerkTreePosX>
+            <PerkTreePosY>20</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_HitPoints</StrVal>
+                <Value>2</Value>
+                <Provides>+2 Hit Points</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustArmyStat</Attribute>
+                <StrVal>UnitStat_Accuracy</StrVal>
+                <Value>1</Value>
+                <Provides>+1 to the Army's Accuracy</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Boost</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Attack</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Defense_Pierce</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Defense</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>CasualScientist</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="Spell_AlliedForcestrike">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="Spell_AlliedForcestrike">
+            <DisplayName>Allied Forcestrike</DisplayName>
+            <Description>Allows the unit to use Allied Forcestrike ability</Description>
+            <Icon>Ability_AlliedForcestrike_Icon.png</Icon>
+            <PerkTreePosX>2</PerkTreePosX>
+            <PerkTreePosY>19</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>UnlockCombatAbility</Attribute>
+                <StrVal>AlliedForcestrike</StrVal>
+                <Provides>Summon a ally to aid you in the current battle.</Provides>
+            </GameModifier>
+            <IsCombatAbility>1</IsCombatAbility>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>BattleTraining</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="AlliedCombatAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="AlliedCombat">
+            <DisplayName>Allied Combat</DisplayName>
+            <Description>+1 To Summon Skil, +1 to Army's Attack</Description>
+            <Icon>Ability_AlliedCombat_Icon.png</Icon>
+            <PerkTreePosX>3</PerkTreePosX>
+            <PerkTreePosY>19</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustStat</Attribute>
+                <StrVal>UnitStat_BonusSummonLevel</StrVal>
+                <Value>1</Value>
+                <Provides>+1 level for Summons</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustArmyStat</Attribute>
+                <StrVal>UnitStat_Attack_Boost</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Army's Attack</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>Spell_AlliedForcestrike</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="GoldGetterAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="GoldGetter">
+            <DisplayName>Gold Getter</DisplayName>
+            <Description>+2 Gildar per Season, +30 Gildar</Description>
+            <Icon>Ability_GoldGetter_Icon.png</Icon>
+            <PerkTreePosX>2</PerkTreePosX>
+            <PerkTreePosY>20</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>ProduceResource</Attribute>
+                <StrVal>Gold</StrVal>
+                <Value>2</Value>
+                <Provides>+2 Gildar per Season</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Resource</ModType>
+                <Attribute>Gold</Attribute>
+                <Value>30</Value>
+                <Provides>+30 Gildar</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>BattleTraining</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="ArcaliteTraderAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="ArcaliteTraderr">
+            <DisplayName>Arcalite Trader</DisplayName>
+            <Description>+1 Arcalite Per Season</Description>
+            <Icon>Ability_ArcaliteTrader_Icon.png</Icon>
+            <PerkTreePosX>3</PerkTreePosX>
+            <PerkTreePosY>21</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>ProduceResource</Attribute>
+                <StrVal>Arcalite</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Arcalite Per Season</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>BattleTraining</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="KeeperOfThePeaceAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="KeeperOfThePeace">
+            <DisplayName>Keeper Of The Peace</DisplayName>
+            <Description>-11% Unrest in the city this unit is in, -1% Unrest in all cities, +2 Dodge, +2 Ranged Dodge</Description>
+            <Icon>Ability_KeeperOfThePeace_Icon.png</Icon>
+            <PerkTreePosX>3</PerkTreePosX>
+            <PerkTreePosY>20</PerkTreePosY>
+            <GameModifier>
+                <ModType>Resource</ModType>
+                <Attribute>Unrest</Attribute>
+                <Value>-11</Value>
+                <Provides>-11% Unrest in the city this unit is in</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_Additive_Unrest</StrVal>
+                <Value>-1</Value>
+                <Provides>-1% Unrest in all cities</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Dodge</StrVal>
+                <Value>2</Value>
+                <Provides>+2 Dodge</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_DodgeAgainstRanged</StrVal>
+                <Value>2</Value>
+                <Provides>+2 Ranged Dodge</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>GoldGetter</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="FriendOfThePeopleAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="FriendOfThePeople">
+            <DisplayName>Friend Of The People</DisplayName>
+            <Description>-20% Unrest in the city this unit is in, -1% Unrest in all cities</Description>
+            <Icon>Ability_FriendOfThePeople_Icon.png</Icon>
+            <PerkTreePosX>4</PerkTreePosX>
+            <PerkTreePosY>21</PerkTreePosY>
+            <GameModifier>
+                <ModType>Resource</ModType>
+                <Attribute>Unrest</Attribute>
+                <Value>-20</Value>
+                <Provides>-20% Unrest in the city this unit is in</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_Additive_Unrest</StrVal>
+                <Value>-1</Value>
+                <Provides>-1% Unrest in all cities</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>KeeperOfThePeace</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="AdventurousResearcherAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="AdventurousResearcher">
+            <DisplayName>Adventurous Researcher</DisplayName>
+            <Description>+2 Research per Season, +3 Hitpoints, +1 to the Army's Dodge, +1 Attack, +5% Spell Damage</Description>
+            <Icon>Ability_AdventurousResearcher_Icon.png</Icon>
+            <PerkTreePosX>4</PerkTreePosX>
+            <PerkTreePosY>20</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>ProduceResource</Attribute>
+                <StrVal>Research</StrVal>
+                <Value>2</Value>
+                <Provides>+2 Research per Season</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_HitPoints</StrVal>
+                <Value>3</Value>
+                <Provides>+3 Hit Points</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustArmyStat</Attribute>
+                <StrVal>UnitStat_Dodge</StrVal>
+                <Value>1</Value>
+                <Provides>+1 to the Army's Dodge</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Boost</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Attack</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_SpellDamage</StrVal>
+                <Value>5</Value>
+                <Provides>+5% Spell Damage</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>KeeperOfThePeace</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="Spell_CowardlyStab">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="Spell_CowardlyStab">
+            <DisplayName>Cowardly Stab</DisplayName>
+            <Description>A cowardly strike that bleeds the victim, fast cooldown</Description>
+            <Icon>Ability_CowardlyStab_Icon.png</Icon>
+            <PerkTreePosX>5</PerkTreePosX>
+            <PerkTreePosY>19</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>UnlockCombatAbility</Attribute>
+                <StrVal>CowardlyStab</StrVal>
+                <Provides>A cowardly strike that bleeds the victim, fast cooldown</Provides>
+            </GameModifier>
+            <IsCombatAbility>1</IsCombatAbility>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>AdventurousResearcher</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="HoarderAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="Hoarder">
+            <DisplayName>Hoarder</DisplayName>
+            <Description>This unit can equip a further 2 additional accessories, -3 Dodge, -3 Ranged Dodge</Description>
+            <Icon>Ability_Hoarder_Icon.png</Icon>
+            <PerkTreePosX>5</PerkTreePosX>
+            <PerkTreePosY>20</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_MaxAccessoryBonus</StrVal>
+                <Value>2</Value>
+                <Provides>This unit can equip a further 2 additional accessories</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Dodge</StrVal>
+                <Value>-3</Value>
+                <Provides>-3 Dodge</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_DodgeAgainstRanged</StrVal>
+                <Value>-3</Value>
+                <Provides>-3 Ranged Dodge</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>AdventurousResearcher</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="InspectorAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="Inspector">
+            <DisplayName>Inspector</DisplayName>
+            <Description>This unit can equip a further additional accessory, +1 Research Person Season</Description>
+            <Icon>Ability_Inspector_Icon.png</Icon>
+            <PerkTreePosX>6</PerkTreePosX>
+            <PerkTreePosY>19</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_MaxAccessoryBonus</StrVal>
+                <Value>1</Value>
+                <Provides>This unit can equip a further additional accessory</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>ProduceResource</Attribute>
+                <StrVal>Research</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Research per Season</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>Hoarder</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="AmbitiousManagementAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="AmbitiousManagement">
+            <DisplayName>Ambitious Management</DisplayName>
+            <Description>-6% Unrest in the city this unit is in, -2% Unrest in all cities, +2 Gildar Per Season, +1 Research Per Season, -1 Initiative</Description>
+            <Icon>Ability_AmbitiousManagement_Icon.png</Icon>
+            <PerkTreePosX>6</PerkTreePosX>
+            <PerkTreePosY>20</PerkTreePosY>
+            <GameModifier>
+                <ModType>Resource</ModType>
+                <Attribute>Unrest</Attribute>
+                <Value>-6</Value>
+                <Provides>-6% Unrest in the city this unit is in</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_Additive_Unrest</StrVal>
+                <Value>-2</Value>
+                <Provides>-2% Unrest in all cities</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>ProduceResource</Attribute>
+                <StrVal>Gold</StrVal>
+                <Value>2</Value>
+                <Provides>+2 Gildar per Season</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>ProduceResource</Attribute>
+                <StrVal>Research</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Research per Season</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_CombatSpeed</StrVal>
+                <Value>-1</Value>
+                <Provides>-1 Initiative</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>Hoarder</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="ProfiteerAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="Profiteer">
+            <DisplayName>Profiteer</DisplayName>
+            <Description>+3 Gildar Per Season </Description>
+            <Icon>Ability_Profiteer_Icon.png</Icon>
+            <PerkTreePosX>7</PerkTreePosX>
+            <PerkTreePosY>19</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>ProduceResource</Attribute>
+                <StrVal>Gold</StrVal>
+                <Value>3</Value>
+                <Provides>+3 Gildar per Season</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>AmbitiousManagement</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="DoggedDeterminationAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="DoggedDetermination">
+            <DisplayName>Dogged Determination</DisplayName>
+            <Description>+1 Initiative, +1 Attack, +1 Defense, +1 Research Per Season, -2 Accuracy</Description>
+            <Icon>Ability_DoggedDetermination_Icon.png</Icon>
+            <PerkTreePosX>7</PerkTreePosX>
+            <PerkTreePosY>20</PerkTreePosY>>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_CombatSpeed</StrVal>
+                <Value>1</Value>
+                <Provides>1 Initiative</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Boost</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Attack</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Defense_Pierce</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Defense</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>ProduceResource</Attribute>
+                <StrVal>Research</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Research per Season</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Accuracy</StrVal>
+                <Value>-2</Value>
+                <Provides>-2 Accuracy</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>AmbitiousManagement</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="ArtfulDodgerAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="ArtfulDodger">
+            <DisplayName>Artful Dodger</DisplayName>
+            <Description>+2 Hit Points, +5 To Dodge, +6 Ranged Dodge</Description>
+            <Icon>Ability_ArtfulDodger_Icon.png</Icon>
+            <PerkTreePosX>0</PerkTreePosX>
+            <PerkTreePosY>23</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_HitPoints</StrVal>
+                <Value>2</Value>
+                <Provides>+2 Hit Points</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Dodge</StrVal>
+                <Value>5</Value>
+                <Provides>+5 Dodge</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_DodgeAgainstRanged</StrVal>
+                <Value>6</Value>
+                <Provides>+6 Ranged Dodge</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="PrecisionStrikingAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="PrecisionStriking">
+            <DisplayName>Precision Striking</DisplayName>
+            <Description>+1 to Hit Points, +4 Accuracy, +4 Critical Hit Chance,+5% to Critical Hit damage</Description>
+            <Icon>Ability_PrecisionStriking_Icon.png</Icon>
+            <PerkTreePosX>1</PerkTreePosX>
+            <PerkTreePosY>23</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_HitPoints</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Hit Points</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Accuracy</StrVal>
+                <Value>4</Value>
+                <Provides>+4 Accuracy</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_ChanceToCrit</StrVal>
+                <Value>4</Value>
+                <Provides>+4 To Critical Hit chance</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_CritDamageMultiplier</StrVal>
+                <Value>0.05</Value>
+                <Provides>+5% to Critical Hit damage</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>ArtfulDodger</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="RuffianAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="Ruffian">
+            <DisplayName>Ruffian</DisplayName>
+            <Description>+3 to Hit Points, +2 Critical Hit Chance, +15% to Critical Hit damage</Description>
+            <Icon>Ability_Ruffian_Icon.png</Icon>
+            <PerkTreePosX>2</PerkTreePosX>
+            <PerkTreePosY>24</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_HitPoints</StrVal>
+                <Value>3</Value>
+                <Provides>+3 Hit Points</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_ChanceToCrit</StrVal>
+                <Value>2</Value>
+                <Provides>+2 To Critical Hit chance</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_CritDamageMultiplier</StrVal>
+                <Value>0.15</Value>
+                <Provides>+15% to Critical Hit damage</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>PrecisionStriking</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="FuriousAttackerAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="FuriousAttacker">
+            <DisplayName>Furious Attacker</DisplayName>
+            <Description>+3 Attack, -1 Defense, +5% to Critical Hit damage</Description>
+            <Icon>Ability_FuriousAttacker_Icon.png</Icon>
+            <PerkTreePosX>2</PerkTreePosX>
+            <PerkTreePosY>23</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Boost</StrVal>
+                <Value>3</Value>
+                <Provides>+3 Attack</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Defense_Pierce</StrVal>
+                <Value>-1</Value>
+                <Provides>-1 Defense</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_CritDamageMultiplier</StrVal>
+                <Value>0.05</Value>
+                <Provides>+5% to Critical Hit damage</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>PrecisionStriking</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="AttackingPursuitAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="AttackingPursuit">
+            <DisplayName>Attacking Pursuit</DisplayName>
+            <Description>+2 Attack Per 5 Levels (0.4 per Level)</Description>
+            <Icon>Ability_AttackingPursuit_Icon.png</Icon>
+            <PerkTreePosX>3</PerkTreePosX>
+            <PerkTreePosY>24</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Boost</StrVal>
+                <Value>0.4</Value>
+                <PerLevel>1</PerLevel>
+                <Provides>+2 Attack per 5 Levels (0.4 per Level)</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>FuriousAttacker</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="DevastatingBlowsAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="DevastatingBlows">
+            <DisplayName>Devastating Blows</DisplayName>
+            <Description>+2 Accuracy, +30% to Critical Hit damage</Description>
+            <Icon>Ability_DevastatingBlows_Icon.png</Icon>
+            <PerkTreePosX>3</PerkTreePosX>
+            <PerkTreePosY>23</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Accuracy</StrVal>
+                <Value>2</Value>
+                <Provides>+2 Accuracy</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_CritDamageMultiplier</StrVal>
+                <Value>0.3</Value>
+                <Provides>+30% to Critical Hit damage</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>FuriousAttacker</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="DeathStudyAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="DeathStudy">
+            <DisplayName>Death Study</DisplayName>
+            <Description>+2 Research per Season, +1 Defense</Description>
+            <Icon>Ability_DeathStudy_Icon.png</Icon>
+            <PerkTreePosX>4</PerkTreePosX>
+            <PerkTreePosY>23</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>ProduceResource</Attribute>
+                <StrVal>Research</StrVal>
+                <Value>2</Value>
+                <Provides>+2 Research per Season</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Defense_Pierce</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Defense</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>DevastatingBlows</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="Spell_FlankingStrike">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="Spell_FlankingStrike">
+            <DisplayName>Flanking Strike</DisplayName>
+            <Description>Allows a unit to use the Flanking Stike attack, a fast flanking attack that bypasses the enemy.</Description>
+            <Icon>Ability_FlankingStrike_Icon.png</Icon>
+            <PerkTreePosX>5</PerkTreePosX>
+            <PerkTreePosY>22</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>UnlockCombatAbility</Attribute>
+                <StrVal>FlankingStrike</StrVal>
+                <Provides>Strike an enemy then bypass them doing double damage.</Provides>
+            </GameModifier>
+            <IsCombatAbility>1</IsCombatAbility>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>DeathStudy</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="RuthlessEfficiencyAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="RuthlessEfficiency">
+            <DisplayName>Ruthless Efficiency</DisplayName>
+            <Description>+25% damage when using the Flanking Strike Ability</Description>
+            <Icon>Ability_RuthlessEfficiency_Icon.png</Icon>
+            <PerkTreePosX>6</PerkTreePosX>
+            <PerkTreePosY>22</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_BonusFlankingStrike</StrVal>
+                <Value>0.25</Value>
+                <Provides>Additional 25% damage when using the Flanking Strike ability</Provides>
+            </GameModifier>
+            <Type>Aggressive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>Spell_FlankingStrike</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="ConfidentAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="Confident">
+            <DisplayName>Confident</DisplayName>
+            <Description>+2 Initiative, -4 Spell Mastery, -4 Accuracy </Description>
+            <Icon>Ability_Confident_Icon.png</Icon>
+            <PerkTreePosX>5</PerkTreePosX>
+            <PerkTreePosY>23</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_CombatSpeed</StrVal>
+                <Value>2</Value>
+                <Provides>+2 Initiative</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_MagicPower</StrVal>
+                <Value>-4</Value>
+                <Provides>-4 Spell Mastery</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Accuracy</StrVal>
+                <Value>-4</Value>
+                <Provides>-4 Accuracy</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>DeathStudy</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="PositioningExpertAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="PositioningExpert">
+            <DisplayName>Positioning Expert</DisplayName>
+            <Description>+1 Defense, +6 Dodge, +6 Ranged Dodge </Description>
+            <Icon>Ability_PositioningExpert_Icon.png</Icon>
+            <PerkTreePosX>6</PerkTreePosX>
+            <PerkTreePosY>23</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Defense_Pierce</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Defense</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Dodge</StrVal>
+                <Value>1</Value>
+                <Provides>+6 Dodge</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_DodgeAgainstRanged</StrVal>
+                <Value>1</Value>
+                <Provides>+6 Ranged Dodge</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>Confident</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="Spell_MassiveStrike">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="Spell_MassiveStrike">
+            <DisplayName>Massive Strike</DisplayName>
+            <Description>Allows the unit to use the Terrifying Maneuvers ability</Description>
+            <Icon>Ability_MassiveStrike_Icon.png</Icon>
+            <PerkTreePosX>7</PerkTreePosX>
+            <PerkTreePosY>22</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>UnlockCombatAbility</Attribute>
+                <StrVal>MassiveStrike</StrVal>
+                <Provides>Strike a single enemy with a powerful massive strike</Provides>
+            </GameModifier>
+            <IsCombatAbility>1</IsCombatAbility>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>PositioningExpert</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="DeathstalkerAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="Deathstalker">
+            <DisplayName>Deathstalker</DisplayName>
+            <Description>+7 To Critical Hit chance, +35% to Critical Hit damage, +1 Gildar per Season, +2% Unrest in all cities </Description>
+            <Icon>Ability_Deathstalker_Icon.png</Icon>
+            <PerkTreePosX>7</PerkTreePosX>
+            <PerkTreePosY>23</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_ChanceToCrit</StrVal>
+                <Value>7</Value>
+                <Provides>+7 To Critical Hit chance</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_CritDamageMultiplier</StrVal>
+                <Value>0.35</Value>
+                <Provides>+35% to Critical Hit damage</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>ProduceResource</Attribute>
+                <StrVal>Gold</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Gildar per Season</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_Additive_Unrest</StrVal>
+                <Value>2</Value>
+                <Provides>+2% Unrest in all cities</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>PositioningExpert</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="OrganiserAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="Organiser">
+            <DisplayName>Organiser</DisplayName>
+            <Description>This unit can equip a further additional accessory</Description>
+            <Icon>Ability_Organiser_Icon.png</Icon>
+            <PerkTreePosX>1</PerkTreePosX>
+            <PerkTreePosY>11</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_MaxAccessoryBonus</StrVal>
+                <Value>1</Value>
+                <Provides>This unit can equip a further additional accessory</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>Tinker</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="AccessoriserAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="Accessoriser">
+            <DisplayName>Accessoriser</DisplayName>
+            <Description>This unit can equip a further additional accessory</Description>
+            <Icon>Ability_Accessoriser_Icon.png</Icon>
+            <PerkTreePosX>2</PerkTreePosX>
+            <PerkTreePosY>11</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_MaxAccessoryBonus</StrVal>
+                <Value>1</Value>
+                <Provides>This unit can equip a further additional accessory</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>Organiser</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="CollectorAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="Collector">
+            <DisplayName>Collector</DisplayName>
+            <Description>This unit can equip a further additional accessory</Description>
+            <Icon>Ability_Collector_Icon.png</Icon>
+            <PerkTreePosX>0</PerkTreePosX>
+            <PerkTreePosY>12</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_MaxAccessoryBonus</StrVal>
+                <Value>1</Value>
+                <Provides>This unit can equip a further additional accessory</Provides>
+            </GameModifier>
+	    <MinimumLevel>9</MinimumLevel>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>Accessoriser</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="AmassmentAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="Amassment">
+            <DisplayName>Amassment</DisplayName>
+            <Description>This unit can equip a further additional accessory</Description>
+            <Icon>Ability_Amassment_Icon.png</Icon>
+            <PerkTreePosX>1</PerkTreePosX>
+            <PerkTreePosY>12</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_MaxAccessoryBonus</StrVal>
+                <Value>1</Value>
+                <Provides>This unit can equip a further additional accessory</Provides>
+            </GameModifier>
+	    <MinimumLevel>18</MinimumLevel>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>Collector</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="CompilationAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="Compilation">
+            <DisplayName>Compilation</DisplayName>
+            <Description>This unit can equip a further 2 additional accessories</Description>
+            <Icon>Ability_Compilation_Icon.png</Icon>
+            <PerkTreePosX>2</PerkTreePosX>
+            <PerkTreePosY>12</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_MaxAccessoryBonus</StrVal>
+                <Value>2</Value>
+                <Provides>This unit can equip a further 2 additional accessories</Provides>
+            </GameModifier>
+	    <MinimumLevel>27</MinimumLevel>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>Amassment</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="SteadfastDefenderAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="SteadfastDefender">
+            <DisplayName>Steadfast Defender</DisplayName>
+            <Description>+3 To Defense</Description>
+            <Icon>Ability_SteadfastDefender_Icon.png</Icon>
+            <PerkTreePosX>3</PerkTreePosX>
+            <PerkTreePosY>0</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Defense_Pierce</StrVal>
+                <Value>3</Value>
+                <Provides>+3 Defense</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <UpgradePathID>DefenderA</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>Endurance2_Level</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="EnduringDefenseAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="EnduringDefense">
+            <DisplayName>Enduring Defense</DisplayName>
+            <Description>+1 To Defense, +20 To Hitpoints, +2 To Dodge, +2 To Ranged Dodge. </Description>
+            <Icon>Ability_EnduringDefense_Icon.png</Icon>
+            <PerkTreePosX>5</PerkTreePosX>
+            <PerkTreePosY>2</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Defense_Pierce</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Defense</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_HitPoints</StrVal>
+                <Value>20</Value>
+                <Provides>+20 Hit Points</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Dodge</StrVal>
+                <Value>2</Value>
+                <Provides>+2 Dodge</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_DodgeAgainstRanged</StrVal>
+                <Value>2</Value>
+                <Provides>+2 Ranged Dodge</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <UpgradePathID>DefenderB</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>ImmuneToCounterattack</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="UnbreakableAAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="UnbreakableA">
+            <DisplayName>Unbreakable</DisplayName>
+            <Description>+5 To Defense. </Description>
+            <Icon>Ability_Unbreakable_Icon.png</Icon>
+            <PerkTreePosX>6</PerkTreePosX>
+            <PerkTreePosY>2</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Defense_Pierce</StrVal>
+                <Value>5</Value>
+                <Provides>+5 Defense</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <UpgradePathID>DefenderB</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>EnduringDefense</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="BalancedDefenseAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="BalancedDefense">
+            <DisplayName>Balanced Defense</DisplayName>
+            <Description>+5 Defense when Defending, +1 Defense, +5 Hit Points </Description>
+            <Icon>Ability_BalancedDefense_Icon.png</Icon>
+            <PerkTreePosX>0</PerkTreePosX>
+            <PerkTreePosY>2</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Tactical_Auto_Defense_Boost</StrVal>
+                <Value>5</Value>
+                <Provides>+5 Defense when Defending</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Defense_Pierce</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Defense</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_HitPoints</StrVal>
+                <Value>5</Value>
+                <Provides>+5 Hit Points</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <UpgradePathID>DefenderC</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>PathOfTheDefender</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="ColdShieldAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="ColdShield">
+            <DisplayName>Cold Shield</DisplayName>
+            <Description>Reduces Cold Damage a further 15%, +2 Defense </Description>
+            <Icon>Ability_ColdShield_Icon.png</Icon>
+            <PerkTreePosX>3</PerkTreePosX>
+            <PerkTreePosY>8</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_ResistCold</StrVal>
+                <Value>15</Value>
+                <Provides>Reduces Cold Damage a further 15%</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Defense_Pierce</StrVal>
+                <Value>2</Value>
+                <Provides>+2 Defense</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <UpgradePathID>DefenderD</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>Ability_X_Resist_Water</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="BurningFuryAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="BurningFury">
+            <DisplayName>Burning Fury</DisplayName>
+            <Description>Reduces Fire Damage a further 15%, +2 Attack </Description>
+            <Icon>Ability_BurningFury_Icon.png</Icon>
+            <PerkTreePosX>4</PerkTreePosX>
+            <PerkTreePosY>8</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_ResistFire</StrVal>
+                <Value>15</Value>
+                <Provides>Reduces Fire Damage a further 15%</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Boost</StrVal>
+                <Value>2</Value>
+                <Provides>+2 Attack</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <UpgradePathID>DefenderD</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>ColdShield</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="ResistingStanceAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="ResistingStance">
+            <DisplayName>ResistingStance</DisplayName>
+            <Description>+2 Defense, +6 Spell Resistance </Description>
+            <Icon>Ability_ResistingStance_Icon.png</Icon>
+            <PerkTreePosX>2</PerkTreePosX>
+            <PerkTreePosY>5</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Defense_Pierce</StrVal>
+                <Value>2</Value>
+                <Provides>+2 Defense</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_MagicResist</StrVal>
+                <Value>6</Value>
+                <Provides>+6 Spell Resistance</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>Ability_X_Resistance2</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="OpportunisticAttackAbility_Defender">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="OpportunisticAttack">
+            <DisplayName>Opportunistic Attack</DisplayName>
+            <Description>+2 To Attack, +1 to Defense </Description>
+            <Icon>Ability_OpportunisticAttack_Icon.png</Icon>
+            <PerkTreePosX>1</PerkTreePosX>
+            <PerkTreePosY>2</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Boost</StrVal>
+                <Value>2</Value>
+                <Provides>+2 Attack</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Defense_Pierce</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Defense</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <UpgradePathID>DefenderC</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>BalancedDefense</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="MentalFocusAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="MentalFocus">
+            <DisplayName>Mental Focus</DisplayName>
+            <Description>+10 Spell Mastery </Description>
+            <Icon>Ability_MentalFocus_Icon.png</Icon>
+            <PerkTreePosX>5</PerkTreePosX>
+            <PerkTreePosY>1</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_MagicPower</StrVal>
+                <Value>10</Value>
+                <Provides>+10 Spell Mastery</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <UpgradePathID>MAGEA</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>Affinity</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="OverchargerAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="Overcharger">
+            <DisplayName>Overcharger</DisplayName>
+            <Description>+30% Spell Damage, -1 Initiative, -1 Defense </Description>
+            <Icon>Ability_Overcharger_Icon.png</Icon>
+            <PerkTreePosX>6</PerkTreePosX>
+            <PerkTreePosY>1</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_SpellDamage</StrVal>
+                <Value>30</Value>
+                <Provides>+30% Spell Damage</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_CombatSpeed</StrVal>
+                <Value>-1</Value>
+                <Provides>-1 Initiative</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Defense_Pierce</StrVal>
+                <Value>-1</Value>
+                <Provides>-1 Defense</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <UpgradePathID>MAGEA</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>MentalFocus</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="SpecialWisdomAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="SpecialWisdom">
+            <DisplayName>Special Wisdom</DisplayName>
+            <Description>+10% Spell Damage, +5 Hit Points, +1 Attack, +2 Gildar Per Season, +2 Research Per Season </Description>
+            <Icon>Ability_SpecialWisdom_Icon.png</Icon>
+            <PerkTreePosX>7</PerkTreePosX>
+            <PerkTreePosY>1</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_SpellDamage</StrVal>
+                <Value>10</Value>
+                <Provides>+10% Spell Damage</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_HitPoints</StrVal>
+                <Value>5</Value>
+                <Provides>+5 Hit Points</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Boost</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Attack</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>ProduceResource</Attribute>
+                <StrVal>Gold</StrVal>
+                <Value>2</Value>
+                <Provides>+2 Gildar per Season</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>ProduceResource</Attribute>
+                <StrVal>Research</StrVal>
+                <Value>2</Value>
+                <Provides>+2 Research per Season</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <UpgradePathID>MAGEA</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>Overcharger</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="Spell_RedirectedMagicAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+        <AbilityBonusOption InternalName="Spell_RedirectedMagic">
+            <DisplayName>Redirected Magic</DisplayName>
+            <Description>Allows the unit to cast powerful buff spells</Description>
+            <Icon>Ability_Spell_RedirectedMagic_Icon.png</Icon>
+            <PerkTreePosX>4</PerkTreePosX>
+            <PerkTreePosY>2</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Provides>Unlocks the following spells</Provides>
+            </GameModifier>
+            <CombatRating>25</CombatRating>
+            <IsCombatAbility>1</IsCombatAbility>
+            <Type>Spell</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>Abjuration</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="ManaEfficiencyAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="ManaEfficiency">
+            <DisplayName>Mana Efficiency</DisplayName>
+            <Description>-10% mana cost for tactical spells </Description>
+            <Icon>Ability_MentalFocus_Icon.png</Icon>
+            <PerkTreePosX>5</PerkTreePosX>
+            <PerkTreePosY>3</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_TacticalSpellManaCost_Multiplier</StrVal>
+                <Value>-0.1</Value>
+                <Provides>-10% mana cost for tactical spells</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <UpgradePathID>MAGEB</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>Summon3</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="MasterfulSummonerAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="MasterfulSummoner">
+            <DisplayName>Masterful Summoner</DisplayName>
+            <Description>+2 levels for Summons </Description>
+            <Icon>Ability_MasterfulSummoner_Icon.png</Icon>
+            <PerkTreePosX>6</PerkTreePosX>
+            <PerkTreePosY>3</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_BonusSummonLevel</StrVal>
+                <Value>2</Value>
+                <Provides>+2 levels for Summons</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <UpgradePathID>MAGEB</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>ManaEfficiency</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="SurvivalDisciplineAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="SurvivalDiscipline">
+            <DisplayName>Survival Discipline</DisplayName>
+            <Description>+1 Defense, +10 Spell Resistance, +7 Dodge, +7 Ranged Dodge, +3 Critical Hit Chance, +2 Lightning Attack Damage, Unit takes 25% less damage from Lightning </Description>
+            <Icon>Ability_SurvivalDiscipline_Icon.png</Icon>
+            <PerkTreePosX>7</PerkTreePosX>
+            <PerkTreePosY>3</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Defense_Pierce</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Defense</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_MagicResist</StrVal>
+                <Value>10</Value>
+                <Provides>+10 Spell Resistance</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Dodge</StrVal>
+                <Value>1</Value>
+                <Provides>+7 Dodge</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_DodgeAgainstRanged</StrVal>
+                <Value>1</Value>
+                <Provides>+7 Ranged Dodge</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_ChanceToCrit</StrVal>
+                <Value>3</Value>
+                <Provides>+3 To Critical Hit chance</Provides>
+            </GameModifier>
+      	    <GameModifier>
+            	<ModType>Unit</ModType>
+            	<Attribute>AdjustUnitStat</Attribute>
+           	 <StrVal>UnitStat_Attack_Lightning</StrVal>
+            	<Value>2</Value>
+                <Provides>+2 Lightning Attack Damage</Provides>
+       	    </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_ResistLightning</StrVal>
+                <Value>25</Value>
+                <Provides>Unit takes 25% less damage from Lightning</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <UpgradePathID>MAGEB</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>MasterfulSummoner</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="NervousTraderAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="NervousTrader">
+            <DisplayName>Nervous Trader</DisplayName>
+            <Description>+1 Defense, +2 Dodge, +2 Ranged Dodge, +1 Initiative</Description>
+            <Icon>Ability_NervousTrader_Icon.png</Icon>
+            <PerkTreePosX>5</PerkTreePosX>
+            <PerkTreePosY>1</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Defense_Pierce</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Defense</Provides>
+            </GameModifier>>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Dodge</StrVal>
+                <Value>2</Value>
+                <Provides>+2 Dodge</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_DodgeAgainstRanged</StrVal>
+                <Value>2</Value>
+                <Provides>+2 Ranged Dodge</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_CombatSpeed</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Initiative</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+	    <UpgradePathID>COMMA</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>Innovation</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="RockConstructorAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="RockConstructor">
+            <DisplayName>Rock Constructor</DisplayName>
+            <Description>+1 Arcalite Per Season</Description>
+            <Icon>Ability_RockConstructor_Icon.png</Icon>
+            <PerkTreePosX>0</PerkTreePosX>
+            <PerkTreePosY>5</PerkTreePosY>>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>ProduceResource</Attribute>
+                <StrVal>Arcalite</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Arcalite Per Season</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>PathOfTheMage</Attribute>
+            </Prereq>
+            <MinimumLevel>5</MinimumLevel>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="BusinessGeniousAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="BusinessGenious">
+            <DisplayName>Business Genius</DisplayName>
+            <Description>+4 Gildar Per Season </Description>
+            <Icon>Ability_BusinessGenious_Icon.png</Icon>
+            <PerkTreePosX>6</PerkTreePosX>
+            <PerkTreePosY>1</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>ProduceResource</Attribute>
+                <StrVal>Gold</StrVal>
+                <Value>4</Value>
+                <Provides>+4 Gildar per Season</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+	    <UpgradePathID>COMMA</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>NervousTrader</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="MasterfulMerchantAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="MasterfulMerchant">
+            <DisplayName>Masterful Merchant</DisplayName>
+            <Description>+4 Gildar Per Season, +250 Gildar </Description>
+            <Icon>Ability_MasterfulMerchant_Icon.png</Icon>
+            <PerkTreePosX>7</PerkTreePosX>
+            <PerkTreePosY>1</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>ProduceResource</Attribute>
+                <StrVal>Gold</StrVal>
+                <Value>4</Value>
+                <Provides>+4 Gildar per Season</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Resource</ModType>
+                <Attribute>Gold</Attribute>
+                <Value>250</Value>
+                <Provides>+250 Gildar</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+	    <UpgradePathID>COMMA</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>BusinessGenious</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="ExpertCityManagementAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="ExpertCityManagement">
+            <DisplayName>Expert City Management</DisplayName>
+            <Description>+2 Gildar Per Season, -7% Unrest in the city this unit is in </Description>
+            <Icon>Ability_ExpertCityManagement_Icon.png</Icon>
+            <PerkTreePosX>3</PerkTreePosX>
+            <PerkTreePosY>4</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>ProduceResource</Attribute>
+                <StrVal>Gold</StrVal>
+                <Value>2</Value>
+                <Provides>+2 Gildar per Season</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Resource</ModType>
+                <Attribute>Unrest</Attribute>
+                <Value>-7</Value>
+                <Provides>-7% Unrest in the city this unit is in</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+	    <UpgradePathID>COMMB</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>Merchant2</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="BarracksTrainingAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="BarracksTraining">
+            <DisplayName>Barracks Training</DisplayName>
+            <Description>-3% Unrest in the city this unit is in, +3 Hit Points, +1 Attack, +1 Defense </Description>
+            <Icon>Ability_BarracksTraining_Icon.png</Icon>
+            <PerkTreePosX>4</PerkTreePosX>
+            <PerkTreePosY>4</PerkTreePosY>>
+            <GameModifier>
+                <ModType>Resource</ModType>
+                <Attribute>Unrest</Attribute>
+                <Value>-3</Value>
+                <Provides>-3% Unrest in the city this unit is in</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_HitPoints</StrVal>
+                <Value>3</Value>
+                <Provides>+3 Hit Points</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Boost</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Attack</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Defense_Pierce</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Defense</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+	    <UpgradePathID>COMMB</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>ExpertCityManagement</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="VigilantKeeperAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="VigilantKeeper">
+            <DisplayName>Vigilant Keeper</DisplayName>
+            <Description>+1 Defense, + 3 Dodge, +3 to Armys Dodge, -1% Unrest in all cities, +3 Spell Resistance </Description>
+            <Icon>Ability_VigilantKeeper_Icon.png</Icon>
+            <PerkTreePosX>5</PerkTreePosX>
+            <PerkTreePosY>5</PerkTreePosY>>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Defense_Pierce</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Defense</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Dodge</StrVal>
+                <Value>3</Value>
+                <Provides>+3 Dodge</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustArmyStat</Attribute>
+                <StrVal>UnitStat_Dodge</StrVal>
+                <Value>3</Value>
+                <Provides>+3 to Armys Dodge</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_Additive_Unrest</StrVal>
+                <Value>-1</Value>
+                <Provides>-1% Unrest in all cities</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_MagicResist</StrVal>
+                <Value>3</Value>
+                <Provides>+3 Spell Resistance</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+	    <UpgradePathID>COMMB</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>ExpertCityManagement</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="HeroOfTheCityAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="HeroOfTheCity">
+            <DisplayName>Hero Of The City</DisplayName>
+            <Description>-20% Unrest in the city this unit is in </Description>
+            <Icon>Ability_HeroOfTheCity_Icon.png</Icon>
+            <PerkTreePosX>6</PerkTreePosX>
+            <PerkTreePosY>5</PerkTreePosY>>
+            <GameModifier>
+                <ModType>Resource</ModType>
+                <Attribute>Unrest</Attribute>
+                <Value>-20</Value>
+                <Provides>-20% Unrest in the city this unit is in</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+	    <UpgradePathID>COMMB</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>VigilantKeeper</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="MisterPopularAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="MisterPopular">
+            <DisplayName>Mister Popular</DisplayName>
+            <Description>-20% Unrest in the city this unit is in, +2 Dodge </Description>
+            <Icon>Ability_MisterPopular_Icon.png</Icon>
+            <PerkTreePosX>7</PerkTreePosX>
+            <PerkTreePosY>5</PerkTreePosY>>
+            <GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_Additive_Unrest</StrVal>
+                <Value>-10</Value>
+                <Provides>-10% Unrest in all cities</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Dodge</StrVal>
+                <Value>2</Value>
+                <Provides>+2 Dodge</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+	    <UpgradePathID>COMMB</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>HeroOfTheCity</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="GoldLoverAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="GoldLover">
+            <DisplayName>Gold Lover</DisplayName>
+            <Description>+750 Gildar</Description>
+            <Icon>Ability_GoldLover_Icon.png</Icon>
+            <PerkTreePosX>6</PerkTreePosX>
+            <PerkTreePosY>0</PerkTreePosY>>
+            <GameModifier>
+                <ModType>Resource</ModType>
+                <Attribute>Gold</Attribute>
+                <Value>750</Value>
+                <Provides>+750 Gildar</Provides>
+            </GameModifier>
+	    <MinimumLevel>15</MinimumLevel>
+            <Type>Defensive</Type>
+	    <UpgradePathID>COMMC</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>Wealth</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="FortuneFinderAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="FortuneFinder">
+            <DisplayName>Fortune Finder</DisplayName>
+            <Description>+1250 Gildar</Description>
+            <Icon>Ability_FortuneFinder_Icon.png</Icon>
+            <PerkTreePosX>7</PerkTreePosX>
+            <PerkTreePosY>0</PerkTreePosY>>
+            <GameModifier>
+                <ModType>Resource</ModType>
+                <Attribute>Gold</Attribute>
+                <Value>1250</Value>
+                <Provides>+1250 Gildar</Provides>
+            </GameModifier>
+	    <MinimumLevel>25</MinimumLevel>
+            <Type>Defensive</Type>
+	    <UpgradePathID>COMMC</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>GoldLover</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="ArcaliteGathererAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="ArcaliteGatherer">
+            <DisplayName>Arcalite Gatherer</DisplayName>
+            <Description>+1 Arcalite Per Season</Description>
+            <Icon>Ability_ArcaliteGatherer_Icon.png</Icon>
+            <PerkTreePosX>0</PerkTreePosX>
+            <PerkTreePosY>1</PerkTreePosY>>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>ProduceResource</Attribute>
+                <StrVal>Arcalite</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Arcalite Per Season</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>PathOfTheGovernor</Attribute>
+            </Prereq>
+            <MinimumLevel>5</MinimumLevel>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="ArcaliteMerchantAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="ArcaliteMerchant">
+            <DisplayName>Arcalite Merchant</DisplayName>
+            <Description>+25% Arcalite production for faction</Description>
+            <Icon>Ability_ArcaliteMerchant_Icon.png</Icon>
+            <PerkTreePosX>1</PerkTreePosX>
+            <PerkTreePosY>1</PerkTreePosY>>
+            <GameModifier>
+            	<ModType>Player</ModType>
+            	<Attribute>AbilityBonus</Attribute>
+            	<StrVal>A_Arcalite</StrVal>
+            	<Value>25</Value>
+            	<Provides>+25% Arcalite production for faction</Provides>
+       	    </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>ArcaliteGatherer</Attribute>
+            </Prereq>
+            <MinimumLevel>9</MinimumLevel>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="DeeperUnderstandingAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="DeeperUnderstanding">
+            <DisplayName>Deeper Understanding</DisplayName>
+            <Description>+20% Army Spell Damage </Description>
+            <Icon>Ability_DeeperUnderstanding_Icon.png</Icon>
+            <PerkTreePosX>7</PerkTreePosX>
+            <PerkTreePosY>9</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustArmyStat</Attribute>
+                <StrVal>UnitStat_SpellDamage</StrVal>
+                <Value>20</Value>
+                <Provides>+20% Army Spell Damage</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>Trainer4</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="CitySchooledAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="CitySchooled">
+            <DisplayName>City Schooled</DisplayName>
+            <Description>+5 Spell Damage, +5 Spell Mastery, +1 Attack </Description>
+            <Icon>Ability_CitySchooled_Icon.png</Icon>
+            <PerkTreePosX>1</PerkTreePosX>
+            <PerkTreePosY>9</PerkTreePosY>>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_SpellDamage</StrVal>
+                <Value>5</Value>
+                <Provides>+5 Spell Damage</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_MagicPower</StrVal>
+                <Value>5</Value>
+                <Provides>+5 Spell Mastery</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Boost</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Attack</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>Spell_Command</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="PowerfulExecutionerAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="PowerfulExecutioner">
+            <DisplayName>Powerful Executioner</DisplayName>
+            <Description>+1 Hitpoints, +2 Attack, +3 Attack vs Champions</Description>
+            <Icon>Ability_PowerfulExecutioner_Icon.png</Icon>
+            <PerkTreePosX>5</PerkTreePosX>
+            <PerkTreePosY>0</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_HitPoints</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Hit Points</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Boost</StrVal>
+                <Value>2</Value>
+                <Provides>+2 Attack</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Boost</StrVal>
+                <StrVal2>Champion</StrVal2>
+                <Value>3</Value>
+                <Provides>+3 Attack vs Champions</Provides>
+                <vsUnitType>1</vsUnitType>
+            </GameModifier>
+            <Type>Defensive</Type>
+	    <UpgradePathID>ASS1</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>Hobble</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="SlaughterfiendAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="Slaughterfiend">
+            <DisplayName>Slaughterfiend</DisplayName>
+            <Description>+2 Hitpoints, +4 Attack, +1 Defense</Description>
+            <Icon>Ability_Slaughterfiend_Icon.png</Icon>
+            <PerkTreePosX>6</PerkTreePosX>
+            <PerkTreePosY>0</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_HitPoints</StrVal>
+                <Value>2</Value>
+                <Provides>+2 Hit Points</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Boost</StrVal>
+                <Value>4</Value>
+                <Provides>+4 Attack</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Defense_Pierce</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Defense</Provides>
+            </GameModifier>
+	    <MinimumLevel>15</MinimumLevel>
+            <Type>Defensive</Type>
+	    <UpgradePathID>ASS1</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>PowerfulExecutioner</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="CombatAssasinAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="CombatAssasin">
+            <DisplayName>Combat Assasin</DisplayName>
+            <Description>+2 Attack, +2 Defense</Description>
+            <Icon>Ability_CombatAssasin_Icon.png</Icon>
+            <PerkTreePosX>6</PerkTreePosX>
+            <PerkTreePosY>6</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Boost</StrVal>
+                <Value>2</Value>
+                <Provides>+2 Attack</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Defense_Pierce</StrVal>
+                <Value>2</Value>
+                <Provides>+2 Defense</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+	    <UpgradePathID>ASS2</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>Spell_ShadowShift</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="ShowNoMercyAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="ShowNoMercy">
+            <DisplayName>Show No Mercy</DisplayName>
+            <Description>+2 Attack, +2 Defense</Description>
+            <Icon>Ability_ShowNoMercy_Icon.png</Icon>
+            <PerkTreePosX>7</PerkTreePosX>
+            <PerkTreePosY>6</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Accuracy</StrVal>
+                <Value>3</Value>
+                <Provides>+3 Accuracy</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_ChanceToCrit</StrVal>
+                <Value>4</Value>
+                <Provides>+4 To Critical Hit chance</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_CritDamageMultiplier</StrVal>
+                <Value>0.35</Value>
+                <Provides>+35% to Critical Hit damage</Provides>
+            </GameModifier>
+	    <MinimumLevel>12</MinimumLevel>
+            <Type>Defensive</Type>
+	    <UpgradePathID>ASS2</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>CombatAssasin</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="WarFrenzyAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="WarFrenzy">
+            <DisplayName>War Frenzy</DisplayName>
+            <Description>+5 Attack for the first turn of combat</Description>
+            <Icon>Ability_WarFrenzy_Icon.png</Icon>
+            <PerkTreePosX>6</PerkTreePosX>
+            <PerkTreePosY>10</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Boost</StrVal>
+                <Value>5</Value>
+                <Provides>+5 Attack for the first turn of combat</Provides>
+                <xActions>1</xActions>
+            </GameModifier>
+            <Type>Defensive</Type>
+	    <UpgradePathID>ASS3</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>Charge_Level</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="SuperiorEvasionAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="SuperiorEvasion">
+            <DisplayName>Superior Evasion</DisplayName>
+            <Description>+9 Dodge </Description>
+            <Icon>Ability_SuperiorEvasion_Icon.png</Icon>
+            <PerkTreePosX>7</PerkTreePosX>
+            <PerkTreePosY>10</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Dodge</StrVal>
+                <Value>9</Value>
+                <Provides>+9 Dodge</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+	    <UpgradePathID>ASS3</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>WarFrenzy</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="SurefootedFighterAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="SurefootedFighter">
+            <DisplayName>Surefooted Fighter</DisplayName>
+            <Description>+5 Accuracy, +5 Dodge </Description>
+            <Icon>Ability_SurefootedFighter_Icon.png</Icon>
+            <PerkTreePosX>4</PerkTreePosX>
+            <PerkTreePosY>6</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Accuracy</StrVal>
+                <Value>5</Value>
+                <Provides>+5 Accuracy</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Dodge</StrVal>
+                <Value>5</Value>
+                <Provides>+5 Dodge</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>RainOfArrows</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="EnhancedDecimationAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="EnhancedDecimation">
+            <DisplayName>Enhanced Decimation</DisplayName>
+            <Description>+1 Attack, Decimate does an extra +10% damage for each member of the enemy group </Description>
+            <Icon>Ability_EnhancedDecimation_Icon.png</Icon>
+            <PerkTreePosX>5</PerkTreePosX>
+			<PerkTreePosY>1</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Boost</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Attack</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_BonusDecimate</StrVal>
+                <Value>0.10</Value>
+                <Provides>Decimate does an extra +10% damage for each member of the enemy group </Provides>
+            </GameModifier>
+	    <UpgradePathID>WAR1</UpgradePathID>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>Spell_Decimate</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="DefensiveSwingsAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="DefensiveSwings">
+            <DisplayName>Defensive Swings</DisplayName>
+            <Description>+4 Hitpoints, +1 Attack, +3 Defense </Description>
+            <Icon>Ability_DefensiveSwings_Icon.png</Icon>
+            <PerkTreePosX>6</PerkTreePosX>
+            <PerkTreePosY>1</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_HitPoints</StrVal>
+                <Value>4</Value>
+                <Provides>+4 Hit Points</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Boost</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Attack</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Defense_Pierce</StrVal>
+                <Value>3</Value>
+                <Provides>+3 Defense</Provides>
+            </GameModifier>
+	    <UpgradePathID>WAR1</UpgradePathID>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>EnhancedDecimation</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="EliteWarriorAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="EliteWarrior">
+            <DisplayName>Elite Warrior</DisplayName>
+            <Description>+5 Hitpoints, +6 Attack </Description>
+            <Icon>Ability_EliteWarrior_Icon.png</Icon>
+            <PerkTreePosX>7</PerkTreePosX>
+			<PerkTreePosY>1</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_HitPoints</StrVal>
+                <Value>5</Value>
+                <Provides>+5 Hit Points</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Boost</StrVal>
+                <Value>6</Value>
+                <Provides>+6 Attack</Provides>
+            </GameModifier>
+	    <MinimumLevel>16</MinimumLevel>
+	    <UpgradePathID>WAR1</UpgradePathID>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>DefensiveSwings</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="EliteSpearmanAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="EliteSpearman">
+            <DisplayName>Elite Spearman</DisplayName>
+            <Description>+2 Accuracy, +60% damage when using the Impale ability </Description>
+            <Icon>Ability_EliteSpearman_Icon.png</Icon>
+            <PerkTreePosX>2</PerkTreePosX>
+            <PerkTreePosY>2</PerkTreePosY>
+			<GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Accuracy</StrVal>
+                <Value>2</Value>
+                <Provides>+2 Accuracy</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_BonusImpale</StrVal>
+                <Value>0.6</Value>
+                <Provides>+60% damage when using the Impale ability</Provides>
+            </GameModifier>
+	    <UpgradePathID>WAR2</UpgradePathID>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>Spearman2</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="UncompromisingAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="Uncompromising">
+            <DisplayName>Uncompromising</DisplayName>
+            <Description>+1 Initiative, +7% Spell Damage, +1 Dodge, +1 Ranged Dodge </Description>
+            <Icon>Ability_Uncompromising_Icon.png</Icon>
+            <PerkTreePosX>3</PerkTreePosX>
+            <PerkTreePosY>2</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_CombatSpeed</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Initiative</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_SpellDamage</StrVal>
+                <Value>7</Value>
+                <Provides>+7% Spell Damage</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Dodge</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Dodge</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_DodgeAgainstRanged</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Ranged Dodge</Provides>
+            </GameModifier>
+	    <UpgradePathID>WAR2</UpgradePathID>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>EliteSpearman</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="NemesisBlowAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="NemesisBlow">
+            <DisplayName>Nemesis Blow</DisplayName>
+            <Description>+1 Accuracy, +5 To Critical Hit chance, +30% to Critical Hit damage </Description>
+            <Icon>Ability_NemesisBlow_Icon.png</Icon>
+            <PerkTreePosX>4</PerkTreePosX>
+            <PerkTreePosY>2</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Accuracy</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Accuracy</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_ChanceToCrit</StrVal>
+                <Value>5</Value>
+                <Provides>+5 To Critical Hit chance</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_CritDamageMultiplier</StrVal>
+                <Value>0.30</Value>
+                <Provides>+30% to Critical Hit damage</Provides>
+            </GameModifier>
+	    <UpgradePathID>WAR2</UpgradePathID>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>Uncompromising</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="AttackingMasteryAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="AttackingMastery">
+            <DisplayName>Attacking Mastery</DisplayName>
+            <Description>+10% Attack, +1 To Critical Hit Chance </Description>
+            <Icon>Ability_AttackingMastery_Icon.png</Icon>
+            <PerkTreePosX>6</PerkTreePosX>
+            <PerkTreePosY>7</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Pierce</StrVal>
+                <Multiplier>1.1</Multiplier>
+                <Provides>+10% Attack</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_ChanceToCrit</StrVal>
+                <Value>1</Value>
+                <Provides>+1 To Critical Hit chance</Provides>
+            </GameModifier>
+	    <UpgradePathID>WAR3</UpgradePathID>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>Reckless</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="MercenaryWarriorAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="MercenaryWarrior">
+            <DisplayName>Mercenary Warrior</DisplayName>
+            <Description>+2 Attack, +1 Defense, +2 Gilar Per Season, +80 Gildar </Description>
+            <Icon>Ability_MercenaryWarrior_Icon.png</Icon>
+            <PerkTreePosX>7</PerkTreePosX>
+            <PerkTreePosY>7</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Boost</StrVal>
+                <Value>3</Value>
+                <Provides>+3 Attack</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Defense_Pierce</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Defense</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>ProduceResource</Attribute>
+                <StrVal>Gold</StrVal>
+                <Value>2</Value>
+                <Provides>+2 Gildar per Season</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Resource</ModType>
+                <Attribute>Gold</Attribute>
+                <Value>80</Value>
+                <Provides>+80 Gildar</Provides>
+            </GameModifier>
+	    <MinimumLevel>13</MinimumLevel>
+	    <UpgradePathID>WAR3</UpgradePathID>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>AttackingMastery</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+</AbilityBonuses>

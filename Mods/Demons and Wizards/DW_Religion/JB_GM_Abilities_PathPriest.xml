@@ -1,0 +1,1568 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<AbilityBonuses>
+
+	<ContainerPathPriestAbilities>
+		<AbilityBonus InternalName="JB_PathOfThePriestAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusType>Unit_Level_Path</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_PathOfThePriest">
+				<DisplayName>Priest</DisplayName>
+				<Description>Holy warriors that provide support and inspiration.</Description>
+				<Icon>JB_Ability_PathOfThePriest_Icon.png</Icon>
+				<TraitTreePicture>trait_tree_unit_priest.png</TraitTreePicture>
+				<BackgroundColor>137,120,49</BackgroundColor>
+				<HighlightColor>190,178,39</HighlightColor>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_PathOfTheMage</StrVal>
+					<Value>1</Value>
+					<Provides>Unlocks traits that provide divine spells</Provides>
+				</GameModifier>
+				<GameModifier>
+					<ModType>Resource</ModType>
+					<Attribute>Unrest</Attribute>
+					<Value>-10</Value>
+					<Provides>-10% to Unrest in the city this unit is in</Provides>
+				</GameModifier>
+				<GameModifier>
+					<ModType>ResourceMultiplier</ModType>
+					<Attribute>JB_Faith</Attribute>
+					<Value>2.00</Value>
+					<PerTurn>1</PerTurn>
+					<Provides>+100% Faith in the city this unit is in</Provides>
+				</GameModifier>	
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>BattleAutoCastSpell</Attribute>
+					<StrVal>JB_DiscipleEffect</StrVal>
+					<Value>100</Value>
+					<Provides>This unit counts as a Disciple unit</Provides>
+				</GameModifier>	
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_JB_IsDisciple</StrVal>
+					<Provides>.</Provides>
+					<Value>1</Value>
+				</GameModifier>			
+				<RequiredLevel>2</RequiredLevel>
+				<Type>Ability</Type>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="JB_Prayers1Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Prayers1">
+				<DisplayName>Prayers I</DisplayName>
+				<Description>Unlocks additional spells</Description>
+				<Icon>JB_Ability_Prayers1_Icon.png</Icon>
+				<PerkTreePosX>0</PerkTreePosX>
+				<PerkTreePosY>1</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Provides>Unlocks the following spells</Provides>
+				</GameModifier>    
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_BG_GreyMagic</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Grey magic</Provides>
+				</GameModifier>   
+				<Type>Spell</Type>
+				<UpgradePathID>JB_Prayers</UpgradePathID>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_PathOfThePriest</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>8</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="JB_Prayers2Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Prayers2">
+				<DisplayName>Prayers II</DisplayName>
+				<Description>Unlocks additional spells</Description>
+				<Icon>JB_Ability_Prayers2_Icon.png</Icon>
+				<PerkTreePosX>1</PerkTreePosX>
+				<PerkTreePosY>1</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Provides>Unlocks the following spells</Provides>
+				</GameModifier>   
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_BG_GreyMagic</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Grey magic</Provides>
+				</GameModifier>    
+				<Type>Spell</Type>
+				<UpgradePathID>JB_Prayers</UpgradePathID>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Prayers1</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>8</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="JB_Prayers3Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Prayers3">
+				<DisplayName>Prayers III</DisplayName>
+				<Description>Unlocks additional spells</Description>
+				<Icon>JB_Ability_Prayers3_Icon.png</Icon>
+				<PerkTreePosX>2</PerkTreePosX>
+				<PerkTreePosY>1</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Provides>Unlocks the following spells</Provides>
+				</GameModifier>  
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_BG_GreyMagic</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Grey magic</Provides>
+				</GameModifier>     
+				<MinimumLevel>5</MinimumLevel>
+				<Type>Spell</Type>
+				<UpgradePathID>JB_Prayers</UpgradePathID>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Prayers2</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>7</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="JB_Prayers4Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Prayers4">
+				<DisplayName>Prayers IV</DisplayName>
+				<Description>Unlocks additional spells</Description>
+				<Icon>JB_Ability_Prayers4_Icon.png</Icon>
+				<PerkTreePosX>3</PerkTreePosX>
+				<PerkTreePosY>1</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Provides>Unlocks the following spells</Provides>
+				</GameModifier>  
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_BG_GreyMagic</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Grey magic</Provides>
+				</GameModifier>     
+				<MinimumLevel>7</MinimumLevel>
+				<Type>Spell</Type>
+				<UpgradePathID>JB_Prayers</UpgradePathID>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Prayers3</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>6</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="JB_Prayers5Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Prayers5">
+				<DisplayName>Prayers V</DisplayName>
+				<Description>Unlocks additional spells</Description>
+				<Icon>JB_Ability_Prayers5_Icon.png</Icon>
+				<PerkTreePosX>4</PerkTreePosX>
+				<PerkTreePosY>1</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Provides>Unlocks the following spells</Provides>
+				</GameModifier>     
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_BG_GreyMagic</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Grey magic</Provides>
+				</GameModifier>  
+				<MinimumLevel>9</MinimumLevel>
+				<Type>Spell</Type>
+				<UpgradePathID>JB_Prayers</UpgradePathID>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Prayers4</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="JB_Pious1Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Pious1">
+				<DisplayName>Pious I</DisplayName>
+				<Description>+1 Faith per Season</Description>
+				<Icon>JB_Ability_Pious1_Icon.png</Icon>
+				<PerkTreePosX>1</PerkTreePosX>
+				<PerkTreePosY>0</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>ProduceResource</Attribute>
+					<StrVal>JB_Faith</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Faith per Season</Provides>
+				</GameModifier>
+				<Type>Army</Type>
+				<UpgradePathID>JB_Pious</UpgradePathID>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Prayers1</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="JB_Pious2Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Pious2">
+				<DisplayName>Pious II</DisplayName>
+				<Description>+2 Faith per Season</Description>
+				<Icon>JB_Ability_Pious2_Icon.png</Icon>
+				<PerkTreePosX>2</PerkTreePosX>
+				<PerkTreePosY>0</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>ProduceResource</Attribute>
+					<StrVal>JB_Faith</StrVal>
+					<Value>2</Value>
+					<Provides>+2 Faith per Season</Provides>
+				</GameModifier>
+				<MinimumLevel>5</MinimumLevel>
+				<Type>Army</Type>
+				<UpgradePathID>JB_Pious</UpgradePathID>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Pious1</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="JB_Pious3Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Pious3">
+				<DisplayName>Pious III</DisplayName>
+				<Description>+2 Faith per Season</Description>
+				<Icon>JB_Ability_Pious3_Icon.png</Icon>
+				<PerkTreePosX>3</PerkTreePosX>
+				<PerkTreePosY>0</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>ProduceResource</Attribute>
+					<StrVal>JB_Faith</StrVal>
+					<Value>2</Value>
+					<Provides>+2 Faith per Season</Provides>
+				</GameModifier>
+				<MinimumLevel>7</MinimumLevel>
+				<Type>Army</Type>
+				<UpgradePathID>JB_Pious</UpgradePathID>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Pious2</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="JB_Revered1Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Revered1">
+				<DisplayName>Revered I</DisplayName>
+				<Description>-15% to Unrest in the city this unit is in</Description>
+				<Icon>JB_Ability_Revered1_Icon.png</Icon>
+				<PerkTreePosX>4</PerkTreePosX>
+				<PerkTreePosY>0</PerkTreePosY>
+				<GameModifier>
+					<ModType>Resource</ModType>
+					<Attribute>Unrest</Attribute>
+					<Value>-15</Value>
+					<Provides>-15% to Unrest in the city this unit is in</Provides>
+				</GameModifier>
+				<Type>Army</Type>
+				<UpgradePathID>JB_Revered</UpgradePathID>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Pious3</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="JB_Revered2Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Revered2">
+				<DisplayName>Revered II</DisplayName>
+				<Description>-5% Unrest in all cities</Description>
+				<Icon>JB_Ability_Revered2_Icon.png</Icon>
+				<PerkTreePosX>5</PerkTreePosX>
+				<PerkTreePosY>0</PerkTreePosY>
+				<GameModifier>
+					<ModType>Player</ModType>
+					<Attribute>AbilityBonus</Attribute>
+					<StrVal>A_Additive_Unrest</StrVal>
+					<Value>-5</Value>
+					<Provides>-5% Unrest in all cities</Provides>
+				</GameModifier>
+				<Type>Army</Type>
+				<UpgradePathID>JB_Revered</UpgradePathID>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Revered1</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="JB_TranquilityAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Tranquility">
+				<DisplayName>Tranquility</DisplayName>
+				<Description>Allows the unit to cast Tranquility</Description>
+				<Icon>JB_Ability_Tranquility_Icon.png</Icon>
+				<PerkTreePosX>6</PerkTreePosX>
+				<PerkTreePosY>0</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Provides>Unlocks the following spells</Provides>
+				</GameModifier>  
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_BG_GreyMagic</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Grey magic</Provides>
+				</GameModifier>
+				<Type>Spell</Type>
+				<Prereq>
+					<Type>Allegiance</Type>
+					<Attribute>Kingdom</Attribute>
+				</Prereq>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Revered2</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>						
+		<AbilityBonus InternalName="JB_Compassion_Priest_Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Compassion_Priest">
+				<DisplayName>Compassion</DisplayName>
+				<Description>+50% Healing when casting healing spells</Description>
+				<Icon>Ability_Compassion_Icon.png</Icon>
+				<PerkTreePosX>0</PerkTreePosX>
+				<PerkTreePosY>2</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_BonusHealing</StrVal>
+					<Value>0.5</Value>
+					<Provides>+50% Healing when casting healing spells</Provides>
+				</GameModifier>
+				<Type>Aggressive</Type>
+				<Prereq>
+					<Type>Allegiance</Type>
+					<Attribute>Kingdom</Attribute>
+				</Prereq>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_PathOfThePriest</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>				
+		<AbilityBonus InternalName="JB_DevoutAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Devout">
+				<DisplayName>Devout</DisplayName>
+				<Description>+10% Experience, -25% Faith cost for divine tactical spells</Description>
+				<Icon>JB_Ability_Devout_Icon.png</Icon>
+				<PerkTreePosX>1</PerkTreePosX>
+				<PerkTreePosY>2</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_ExpBonus</StrVal>
+					<Value>10</Value>
+					<Provides>+10% Experience</Provides>
+				</GameModifier>
+				<GameModifier>
+					<Provides>-25% Faith cost for divine tactical spells</Provides>
+				</GameModifier>
+				<Type>Defensive</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Prayers1</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="JB_SummonAngel_Priest_Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_SummonAngel_Priest">
+				<DisplayName>Angel Summoning I</DisplayName>
+				<Description>Allows the unit to summon Angels</Description>
+				<Icon>JB_Ability_SummonAngels1_Icon.png</Icon>
+				<PerkTreePosX>3</PerkTreePosX>
+				<PerkTreePosY>2</PerkTreePosY>
+				<GameModifier>
+					<Provides>Unlocks the following spells</Provides>
+				</GameModifier>	  
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_BG_GreyMagic</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Grey magic</Provides>
+				</GameModifier>  
+				<MinimumLevel>8</MinimumLevel>
+				<Type>Spell</Type>
+				<UpgradePathID>JB_SummonAngel</UpgradePathID>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Prayers3</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>			
+		<AbilityBonus InternalName="JB_SummonAngel2_PriestAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_SummonAngel2_Priest">
+				<DisplayName>Angel Summoning II</DisplayName>
+				<Description>Allows the unit to summon greater Angels</Description>
+				<Icon>JB_Ability_SummonAngels2_Icon.png</Icon>
+				<PerkTreePosX>4</PerkTreePosX>
+				<PerkTreePosY>2</PerkTreePosY>
+				<GameModifier>
+					<Provides>Unlocks the following spells</Provides>
+				</GameModifier>	  
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_BG_GreyMagic</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Grey magic</Provides>
+				</GameModifier>
+				<MinimumLevel>10</MinimumLevel>
+				<Type>Spell</Type>
+				<UpgradePathID>JB_SummonAngel</UpgradePathID>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_SummonAngel_Priest</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>			
+		<AbilityBonus InternalName="JB_SummonAngel3_PriestAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_SummonAngel3_Priest">
+				<DisplayName>Angel Summoning III</DisplayName>
+				<Description>Allows the unit to summon greater Angels</Description>
+				<Icon>JB_Ability_SummonAngels3_Icon.png</Icon>
+				<PerkTreePosX>5</PerkTreePosX>
+				<PerkTreePosY>2</PerkTreePosY>
+				<GameModifier>
+					<Provides>Unlocks the following spells</Provides>
+				</GameModifier>	  
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_BG_GreyMagic</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Grey magic</Provides>
+				</GameModifier>
+				<MinimumLevel>12</MinimumLevel>
+				<Type>Spell</Type>
+				<UpgradePathID>JB_SummonAngel</UpgradePathID>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_SummonAngel2_Priest</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>		
+		<AbilityBonus InternalName="JB_SummonAngel4_PriestAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_SummonAngel4_Priest">
+				<DisplayName>Angel Summoning IV</DisplayName>
+				<Description>Allows the unit to summon greater Angels</Description>
+				<Icon>JB_Ability_SummonAngels4_Icon.png</Icon>
+				<PerkTreePosX>6</PerkTreePosX>
+				<PerkTreePosY>2</PerkTreePosY>
+				<GameModifier>
+					<Provides>Unlocks the following spells</Provides>
+				</GameModifier>	  
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_BG_GreyMagic</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Grey magic</Provides>
+				</GameModifier>
+				<MinimumLevel>14</MinimumLevel>
+				<Type>Spell</Type>
+				<UpgradePathID>JB_SummonAngel</UpgradePathID>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_SummonAngel3_Priest</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="JB_SummonAngel5_PriestAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_SummonAngel5_Priest">
+				<DisplayName>Angel Summoning V</DisplayName>
+				<Description>Allows the unit to summon the mightiest Angels</Description>
+				<Icon>JB_Ability_SummonAngels5_Icon.png</Icon>
+				<PerkTreePosX>7</PerkTreePosX>
+				<PerkTreePosY>2</PerkTreePosY>
+				<GameModifier>
+					<Provides>Unlocks the following spells</Provides>
+				</GameModifier>	  
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_BG_GreyMagic</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Grey magic</Provides>
+				</GameModifier>
+				<MinimumLevel>16</MinimumLevel>
+				<Type>Spell</Type>
+				<UpgradePathID>JB_SummonAngel</UpgradePathID>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_SummonAngel4_Priest</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="JB_Discipline_Priest_Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Discipline_Priest">
+				<DisplayName>Discipline</DisplayName>
+				<Description>+1 Accuracy and Spell Resistance per Level</Description>
+				<Icon>Ability_Discipline_Icon.png</Icon>
+				<PerkTreePosX>0</PerkTreePosX>
+				<PerkTreePosY>4</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_Accuracy</StrVal>
+					<Value>1</Value>
+					<PerLevel>1</PerLevel>
+					<Provides>+1 Accuracy per Level</Provides>
+				</GameModifier>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_MagicResist</StrVal>
+					<Value>1</Value>
+					<PerLevel>1</PerLevel>
+					<Provides>+1 Spell Resistance per Level</Provides>
+				</GameModifier>
+				<Type>Aggressive</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_PathOfThePriest</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		
+		<!-- <AbilityBonus InternalName="JB_TurnUndead1Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_TurnUndead1">
+				<DisplayName>Turn Undead I</DisplayName>
+				<Description>Allows the unit to cast Turn Undead</Description>
+				<Icon>JB_Ability_TurnUndead1_Icon.png</Icon>
+				<PerkTreePosX>2</PerkTreePosX>
+				<PerkTreePosY>2</PerkTreePosY>
+				<GameModifier>
+					<Provides>Unlocks the following spells</Provides>
+				</GameModifier>	  
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_BG_GreyMagic</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Grey magic</Provides>
+				</GameModifier>
+				<Prereq>
+					<Type>Allegiance</Type>
+					<Attribute>Kingdom</Attribute>
+				</Prereq>
+				<Type>Spell</Type>
+				<UpgradePathID>JB_TurnUndead</UpgradePathID>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Resolute</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="JB_TurnUndead2Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_TurnUndead2">
+				<DisplayName>Turn Undead II</DisplayName>
+				<Description>Blindness effect from Turn Undead lasts 3 turns (rather than 2).</Description>
+				<Icon>JB_Ability_TurnUndead2_Icon.png</Icon>
+				<PerkTreePosX>3</PerkTreePosX>
+				<PerkTreePosY>2</PerkTreePosY>
+				<GameModifier>
+					<Provides>Blindness effect from Turn Undead lasts 3 turns (rather than 2).</Provides>
+				</GameModifier>	  
+				<Type>Defensive</Type>
+				<UpgradePathID>JB_TurnUndead</UpgradePathID>
+				<Prereq>
+					<Type>Allegiance</Type>
+					<Attribute>Kingdom</Attribute>
+				</Prereq>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_TurnUndead1</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="JB_DestroyUndead1Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_DestroyUndead1">
+				<DisplayName>Destroy Undead I</DisplayName>
+				<Description>Allows the unit to cast Destroy Undead</Description>
+				<Icon>JB_Ability_DestroyUndead1_Icon.png</Icon>
+				<PerkTreePosX>5</PerkTreePosX>
+				<PerkTreePosY>2</PerkTreePosY>
+				<GameModifier>
+					<Provides>Unlocks the following spells</Provides>
+				</GameModifier>	  
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_BG_GreyMagic</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Grey magic</Provides>
+				</GameModifier>
+				<Type>Spell</Type>
+				<UpgradePathID>JB_DestroyUndead</UpgradePathID>
+				<Prereq>
+					<Type>Allegiance</Type>
+					<Attribute>Kingdom</Attribute>
+				</Prereq>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_UndeadSlayer</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>		
+		<AbilityBonus InternalName="JB_DestroyUndead2Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_DestroyUndead2">
+				<DisplayName>Destroy Undead II</DisplayName>
+				<Description>Destroy Undead damage increased 50%</Description>
+				<Icon>JB_Ability_DestroyUndead2_Icon.png</Icon>
+				<PerkTreePosX>6</PerkTreePosX>
+				<PerkTreePosY>2</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_JB_BonusDestroyUndead</StrVal>
+					<Value>1.5</Value>
+					<Provides>+50% damage when casting Destroy Undead</Provides>
+				</GameModifier> 
+				<Type>Spell</Type>
+				<UpgradePathID>JB_DestroyUndead</UpgradePathID>
+				<Prereq>
+					<Type>Allegiance</Type>
+					<Attribute>Kingdom</Attribute>
+				</Prereq>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_DestroyUndead1</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>			
+		-->
+		<!-- <AbilityBonus InternalName="JB_RebukeUndead1Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_RebukeUndead1">
+				<DisplayName>Rebuke Undead I</DisplayName>
+				<Description>Allows the unit to cast Rebuke Undead</Description>
+				<Icon>JB_Ability_TurnUndead1_Icon.png</Icon>
+				<PerkTreePosX>2</PerkTreePosX>
+				<PerkTreePosY>2</PerkTreePosY>
+				<GameModifier>
+					<Provides>Unlocks the following spells</Provides>
+				</GameModifier>	  
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_BG_GreyMagic</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Grey magic</Provides>
+				</GameModifier>
+				<Prereq>
+					<Type>Allegiance</Type>
+					<Attribute>Empire</Attribute>
+				</Prereq>
+				<Type>Spell</Type>
+				<UpgradePathID>JB_RebukeUndead</UpgradePathID>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Resolute</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="JB_RebukeUndead2Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_RebukeUndead2">
+				<DisplayName>Rebuke Undead II</DisplayName>
+				<Description>Knock down effect from Rebuke Undead lasts 2 turns (rather than 1).</Description>
+				<Icon>JB_Ability_TurnUndead2_Icon.png</Icon>
+				<PerkTreePosX>3</PerkTreePosX>
+				<PerkTreePosY>2</PerkTreePosY>
+				<GameModifier>
+					<Provides>Knock down effect from Rebuke Undead lasts 2 turns (rather than 1).</Provides>
+				</GameModifier>	  
+				<Type>Defensive</Type>
+				<UpgradePathID>JB_RebukeUndead</UpgradePathID>
+				<Prereq>
+					<Type>Allegiance</Type>
+					<Attribute>Empire</Attribute>
+				</Prereq>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_RebukeUndead1</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="JB_ControlUndead1Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_ControlUndead1">
+				<DisplayName>Control Undead I</DisplayName>
+				<Description>Allows the unit to cast Control Undead</Description>
+				<Icon>JB_Ability_DestroyUndead1_Icon.png</Icon>
+				<PerkTreePosX>4</PerkTreePosX>
+				<PerkTreePosY>2</PerkTreePosY>
+				<GameModifier>
+					<Provides>Unlocks the following spells</Provides>
+				</GameModifier>	  
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_BG_GreyMagic</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Grey magic</Provides>
+				</GameModifier>
+				<Type>Spell</Type>
+				<UpgradePathID>JB_ControlUndead</UpgradePathID>
+				<Prereq>
+					<Type>Allegiance</Type>
+					<Attribute>Empire</Attribute>
+				</Prereq>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_RebukeUndead2</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>		
+		<AbilityBonus InternalName="JB_ControlUndead2Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_ControlUndead2">
+				<DisplayName>Control Undead II</DisplayName>
+				<Description>+25% chance of success when casting Control Undead</Description>
+				<Icon>JB_Ability_DestroyUndead2_Icon.png</Icon>
+				<PerkTreePosX>5</PerkTreePosX>
+				<PerkTreePosY>2</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_JB_BonusControlUndead</StrVal>
+					<Value>25</Value>
+					<Provides>+25% chance of success when casting Control Undead</Provides>
+				</GameModifier> 
+				<Type>Spell</Type>
+				<UpgradePathID>JB_ControlUndead</UpgradePathID>
+				<Prereq>
+					<Type>Allegiance</Type>
+					<Attribute>Empire</Attribute>
+				</Prereq>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_ControlUndead1</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>			
+		-->
+	
+		<AbilityBonus InternalName="JB_ResoluteAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Resolute">
+				<DisplayName>Resolute</DisplayName>
+				<Description>Immune to Fear and Charm, +3 Hit Points</Description>
+				<Icon>JB_Ability_Resolute_Icon.png</Icon>
+				<PerkTreePosX>1</PerkTreePosX>
+				<PerkTreePosY>3</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_ImmuneToFear</StrVal>
+					<Provides>Immune to Fear</Provides>
+					<Value>1</Value>
+				</GameModifier>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_CannotBeCharmed</StrVal>
+					<Provides>Immune to Charm</Provides>
+					<Value>1</Value>
+				</GameModifier>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_HitPoints</StrVal>
+					<Value>3</Value>
+					<Provides>+3 Hit Points</Provides>
+				</GameModifier>
+				<Type>Defensive</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Discipline_Priest</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+
+
+		<AbilityBonus InternalName="JB_UndeadSlayerAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_UndeadSlayer">
+				<DisplayName>Bane of the Dead</DisplayName>
+				<Description>+25% Attack vs Undead units, +50% damage when casting Destroy Undead</Description>
+				<Icon>JB_Ability_UndeadSlayer_Icon.png</Icon>
+				<PerkTreePosX>2</PerkTreePosX>
+				<PerkTreePosY>2</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_Attack_Boost</StrVal>
+					<StrVal2>UnitStat_BG_IsUndead</StrVal2>
+					<Multiplier>1.25</Multiplier>
+					<BonusValue>0.5</BonusValue>
+					<Provides>+25% Attack vs Undead</Provides>
+					<vsHigher>1</vsHigher>
+				</GameModifier>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_JB_BonusDestroyUndead</StrVal>
+					<Value>1.5</Value>
+					<Provides>+50% damage when casting Destroy Undead</Provides>
+				</GameModifier> 
+				<Type>Aggressive</Type>
+				<Prereq>
+					<Type>Allegiance</Type>
+					<Attribute>Kingdom</Attribute>
+				</Prereq>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Resolute</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>			
+		<AbilityBonus InternalName="JB_MasterOfTheDeadAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_MasterOfTheDead">
+				<DisplayName>Master of the Dead</DisplayName>
+				<Description>+25% Attack vs Undead units, and reduces cooldown from 10 to 5 turns when casting Control Undead</Description>
+				<Icon>JB_Ability_MasterOfUndead_Icon.png</Icon>
+				<PerkTreePosX>2</PerkTreePosX>
+				<PerkTreePosY>2</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_Attack_Boost</StrVal>
+					<StrVal2>UnitStat_BG_IsUndead</StrVal2>
+					<Multiplier>1.25</Multiplier>
+					<BonusValue>0.5</BonusValue>
+					<Provides>+25% Attack vs Undead units</Provides>
+					<vsHigher>1</vsHigher>
+				</GameModifier>
+				<GameModifier>
+					<Provides>Reduces cooldown from 10 to 5 turns when casting Control Undead</Provides>
+				</GameModifier> 
+				<Type>Aggressive</Type>
+				<Prereq>
+					<Type>Allegiance</Type>
+					<Attribute>Empire</Attribute>
+				</Prereq>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Resolute</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+
+
+		<AbilityBonus InternalName="JB_WarPriest_Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_WarPriest">
+				<DisplayName>War Priest</DisplayName>
+				<Description>+3 Attack and +3 Hit Points</Description>
+				<Icon>JB_Ability_WarriorPriest_Icon.png</Icon>
+				<PerkTreePosX>1</PerkTreePosX>
+				<PerkTreePosY>4</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_Attack_Boost</StrVal>
+					<Value>3</Value>
+					<Provides>+3 Attack</Provides>
+				</GameModifier>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_HitPoints</StrVal>
+					<Value>3</Value>
+					<Provides>+3 Hit Points</Provides>
+				</GameModifier>				
+				<Type>Aggressive</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Discipline_Priest</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="JB_ArmorProficiency1_Priest_Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_ArmorProficiency1_Priest">
+				<DisplayName>Chain Mail Proficiency</DisplayName>
+				<Description>Allows the unit to wear Chain Mail armor</Description>
+				<Icon>Ability_ChainMailProficiency_Icon.png</Icon>
+				<PerkTreePosX>2</PerkTreePosX>
+				<PerkTreePosY>3</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_ArmorProficiency</StrVal>
+					<Value>1</Value>
+					<Provides>Allows the unit to wear Chain Mail armor</Provides>
+				</GameModifier>
+				<MinimumLevel>6</MinimumLevel>
+				<Type>Defensive</Type>
+				<UpgradePathID>ArmorProficiency</UpgradePathID>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_WarPriest</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>		
+		<AbilityBonus InternalName="JB_SmiteFoesAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusType>Unit_Spell_Rank</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_SmiteFoes">
+				<DisplayName>Smite Foes</DisplayName>
+				<Description>Allows the unit to cast Smite Foes</Description>
+				<Icon>JB_Ability_SmiteFoe_Icon.png</Icon>
+				<PerkTreePosX>2</PerkTreePosX>
+				<PerkTreePosY>4</PerkTreePosY>
+				<GameModifier>
+					<Provides>Unlocks the following spells</Provides>
+				</GameModifier>	  
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_BG_GreyMagic</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Grey magic</Provides>
+				</GameModifier>	
+				<Type>Spell</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_WarPriest</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="JB_ChaplainKingdomAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_ChaplainKingdom">
+				<DisplayName>Chaplain</DisplayName>
+				<Description>+10 to the Army's Spell Resistance.
+				
+				Disciple units in the Army receive +1 Divine Attack in tactical combat</Description>
+				<Icon>JB_Ability_Chaplain_Icon.png</Icon>
+				<PerkTreePosX>3</PerkTreePosX>
+				<PerkTreePosY>3</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustArmyStat</Attribute>
+					<StrVal>UnitStat_MagicResist</StrVal>
+					<Value>10</Value>
+					<Provides>+10 to the Army's Spell Resistance</Provides>
+				</GameModifier>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustArmyStat</Attribute>
+					<StrVal>UnitStat_JB_DiscipleEffect_DivineAttack</StrVal>
+					<Value>1</Value>
+					<Provides>Disciple units in the Army receive +1 Divine Attack in tactical combat</Provides>
+				</GameModifier>	
+				<Type>Defensive</Type>
+				<Prereq>
+					<Type>Allegiance</Type>
+					<Attribute>Kingdom</Attribute>
+				</Prereq>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_SmiteFoes</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="JB_ChaplainEmpireAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_ChaplainEmpire">
+				<DisplayName>Chaplain</DisplayName>
+				<Description>+10 to the Army's Spell Resistance.
+				
+				Disciple units in the Army receive +1 Infernal Attack in tactical combat</Description>
+				<Icon>JB_Ability_Chaplain_Icon.png</Icon>
+				<PerkTreePosX>3</PerkTreePosX>
+				<PerkTreePosY>3</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustArmyStat</Attribute>
+					<StrVal>UnitStat_MagicResist</StrVal>
+					<Value>10</Value>
+					<Provides>+10 to the Army's Spell Resistance</Provides>
+				</GameModifier>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustArmyStat</Attribute>
+					<StrVal>UnitStat_JB_DiscipleEffect_InfernalAttack</StrVal>
+					<Value>1</Value>
+					<Provides>Disciple units in the Army receive +1 Infernal Attack in tactical combat</Provides>
+				</GameModifier>	
+				<Type>Defensive</Type>
+				<Prereq>
+					<Type>Allegiance</Type>
+					<Attribute>Empire</Attribute>
+				</Prereq>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_SmiteFoes</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>		
+
+
+		<AbilityBonus InternalName="JB_PunisherAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Punisher">
+				<DisplayName>Punisher</DisplayName>
+				<Description>Bonus 25% damage with Crushing Blow, Impale, Cleave and Counterattack damage</Description>
+				<Icon>JB_Ability_Punisher_Icon.png</Icon>
+				<PerkTreePosX>3</PerkTreePosX>
+				<PerkTreePosY>4</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_BonusCrushingBlow</StrVal>
+					<Value>0.25</Value>
+					<Provides>+25% Attack when using the Crushing Blow ability</Provides>
+				</GameModifier>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_BonusCleave</StrVal>
+					<Value>0.25</Value>
+					<Provides>+25% damage when using the Cleave ability</Provides>
+				</GameModifier>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_BonusImpale</StrVal>
+					<Value>0.25</Value>
+					<Provides>+25% damage when using the Impale ability</Provides>
+				</GameModifier>		
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_CounterattackMultiplier</StrVal>
+					<Value>0.25</Value>
+					<Provides>+25% to Counterattack damage</Provides>
+				</GameModifier>		
+				<Type>Aggressive</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_SmiteFoes</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="JB_InquisitorAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Inquisitor">
+				<DisplayName>Inquisitor I</DisplayName>
+				<Description>+20% Attack vs Empire units</Description>
+				<Icon>JB_Ability_Inquisitor1_Icon.png</Icon>
+				<PerkTreePosX>4</PerkTreePosX>
+				<PerkTreePosY>4</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_Attack_Boost</StrVal>
+					<StrVal2>UnitStat_BG_IsEmpire</StrVal2>
+					<Multiplier>1.2</Multiplier>
+					<BonusValue>0.5</BonusValue>
+					<Provides>+20% Attack vs Empire units</Provides>
+					<vsHigher>1</vsHigher>
+				</GameModifier>
+				<Type>Aggressive</Type>
+				<UpgradePathID>JB_Inquisitor</UpgradePathID>
+				<Prereq>
+					<Type>Allegiance</Type>
+					<Attribute>Kingdom</Attribute>
+				</Prereq>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Punisher</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="JB_Inquisitor2Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Inquisitor2">
+				<DisplayName>Inquisitor II</DisplayName>
+				<Description>+30% Attack vs Empire units</Description>
+				<Icon>JB_Ability_Inquisitor2_Icon.png</Icon>
+				<PerkTreePosX>5</PerkTreePosX>
+				<PerkTreePosY>4</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_Attack_Boost</StrVal>
+					<StrVal2>UnitStat_BG_IsEmpire</StrVal2>
+					<Multiplier>1.30</Multiplier>
+					<BonusValue>0.5</BonusValue>
+					<Provides>+30% Attack vs Empire units</Provides>
+					<vsHigher>1</vsHigher>
+				</GameModifier>
+				<Type>Aggressive</Type>
+				<UpgradePathID>JB_Inquisitor</UpgradePathID>
+				<Prereq>
+					<Type>Allegiance</Type>
+					<Attribute>Kingdom</Attribute>
+				</Prereq>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Inquisitor</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<!-- <AbilityBonus InternalName="JB_Inquisitor3Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Inquisitor3">
+				<DisplayName>Inquisitor III</DisplayName>
+				<Description>+25% Attack vs Empire units</Description>
+				<Icon>JB_Ability_Inquisitor3_Icon.png</Icon>
+				<PerkTreePosX>6</PerkTreePosX>
+				<PerkTreePosY>4</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_Attack_Boost</StrVal>
+					<StrVal2>UnitStat_BG_IsEmpire</StrVal2>
+					<Multiplier>1.25</Multiplier>
+					<BonusValue>0.5</BonusValue>
+					<Provides>+25% Attack vs Empire units</Provides>
+					<vsHigher>1</vsHigher>
+				</GameModifier>
+				<Type>Aggressive</Type>
+				<UpgradePathID>JB_Inquisitor</UpgradePathID>
+				<Prereq>
+					<Type>Allegiance</Type>
+					<Attribute>Kingdom</Attribute>
+				</Prereq>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Inquisitor2</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		-->
+		<AbilityBonus InternalName="JB_DemonSlayerAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_DemonSlayer">
+				<DisplayName>Demon Slayer</DisplayName>
+				<Description>+25% Attack vs Demon units</Description>
+				<Icon>JB_Ability_DemonSlayer_Icon.png</Icon>
+				<PerkTreePosX>5</PerkTreePosX>
+				<PerkTreePosY>3</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_Attack_Boost</StrVal>
+					<StrVal2>UnitStat_BG_IsDemon</StrVal2>
+					<Multiplier>1.25</Multiplier>
+					<BonusValue>0.5</BonusValue>
+					<Provides>+25% Attack vs Demon units</Provides>
+					<vsHigher>1</vsHigher>
+				</GameModifier>
+				<Type>Aggressive</Type>
+				<Prereq>
+					<Type>Allegiance</Type>
+					<Attribute>Kingdom</Attribute>
+				</Prereq>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Inquisitor</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="JB_DefilerAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Defiler">
+				<DisplayName>Defiler I</DisplayName>
+				<Description>+20% Attack vs Kingdom units</Description>
+				<Icon>JB_Ability_Defiler1_Icon.png</Icon>
+				<PerkTreePosX>4</PerkTreePosX>
+				<PerkTreePosY>4</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_Attack_Boost</StrVal>
+					<StrVal2>UnitStat_BG_IsKingdom</StrVal2>
+					<Multiplier>1.2</Multiplier>
+					<BonusValue>0.5</BonusValue>
+					<Provides>+20% Attack vs Kingdom units</Provides>
+					<vsHigher>1</vsHigher>
+				</GameModifier>
+				<Type>Aggressive</Type>
+				<UpgradePathID>JB_Defiler</UpgradePathID>
+				<Prereq>
+					<Type>Allegiance</Type>
+					<Attribute>Empire</Attribute>
+				</Prereq>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Punisher</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="JB_Defiler2Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Defiler2">
+				<DisplayName>Defiler II</DisplayName>
+				<Description>+30% Attack vs Kingdom units</Description>
+				<Icon>JB_Ability_Defiler2_Icon.png</Icon>
+				<PerkTreePosX>5</PerkTreePosX>
+				<PerkTreePosY>4</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_Attack_Boost</StrVal>
+					<StrVal2>UnitStat_BG_IsKingdom</StrVal2>
+					<Multiplier>1.3</Multiplier>
+					<BonusValue>0.5</BonusValue>
+					<Provides>+30% Attack vs Kingdom units</Provides>
+					<vsHigher>1</vsHigher>
+				</GameModifier>
+				<Type>Aggressive</Type>
+				<UpgradePathID>JB_Defiler</UpgradePathID>
+				<Prereq>
+					<Type>Allegiance</Type>
+					<Attribute>Empire</Attribute>
+				</Prereq>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Defiler</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<!-- <AbilityBonus InternalName="JB_Defiler3Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Defiler3">
+				<DisplayName>Defiler III</DisplayName>
+				<Description>+25% Attack vs Kingdom units</Description>
+				<Icon>JB_Ability_Defiler3_Icon.png</Icon>
+				<PerkTreePosX>6</PerkTreePosX>
+				<PerkTreePosY>4</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_Attack_Boost</StrVal>
+					<StrVal2>UnitStat_BG_IsKingdom</StrVal2>
+					<Multiplier>1.25</Multiplier>
+					<BonusValue>0.5</BonusValue>
+					<Provides>+25% Attack vs Kingdom units</Provides>
+					<vsHigher>1</vsHigher>
+				</GameModifier>
+				<Type>Aggressive</Type>
+				<UpgradePathID>JB_Defiler</UpgradePathID>
+				<Prereq>
+					<Type>Allegiance</Type>
+					<Attribute>Empire</Attribute>
+				</Prereq>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Defiler2</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		-->
+		<AbilityBonus InternalName="JB_CelestialSlayerAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_CelestialSlayer">
+				<DisplayName>Angel Hunter</DisplayName>
+				<Description>+25% Attack and +10 Critical Chance vs Celestial units</Description>
+				<Icon>JB_Ability_CelestialSlayer_Icon.png</Icon>
+				<PerkTreePosX>5</PerkTreePosX>
+				<PerkTreePosY>3</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_Attack_Boost</StrVal>
+					<StrVal2>UnitStat_BG_IsCelestial</StrVal2>
+					<Multiplier>1.25</Multiplier>
+					<BonusValue>0.5</BonusValue>
+					<Provides>+25% Attack vs Celestial units</Provides>
+					<vsHigher>1</vsHigher>
+				</GameModifier>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_ChanceToCrit</StrVal>
+					<StrVal2>UnitStat_BG_IsCelestial</StrVal2>
+					<Value>10</Value>
+					<BonusValue>0.5</BonusValue>
+					<Provides>+10 Critical Chance vs Celestial units</Provides>
+					<vsHigher>1</vsHigher>
+				</GameModifier>
+				<Type>Aggressive</Type>
+				<Prereq>
+					<Type>Allegiance</Type>
+					<Attribute>Empire</Attribute>
+				</Prereq>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Defiler</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+
+		<AbilityBonus InternalName="JB_DarkProphetAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_DarkProphet">
+				<DisplayName>Dark Prophet</DisplayName>
+				<Description>+10% Spell Damage and +20% Spell Damage from Infernal spells</Description>
+				<Icon>JB_Ability_DarkProphet_Icon.png</Icon>
+				<PerkTreePosX>0</PerkTreePosX>
+				<PerkTreePosY>2</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_SpellDamage</StrVal>
+					<Value>10</Value>
+					<Provides>+10% Spell Damage</Provides>
+				</GameModifier>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_JB_BonusInfernalSpellDamage</StrVal>
+					<Value>20</Value>
+					<Provides>+20% Spell Damage from Infernal spells</Provides>
+				</GameModifier>
+				<Type>Aggressive</Type>
+				<Prereq>
+					<Type>Allegiance</Type>
+					<Attribute>Empire</Attribute>
+				</Prereq>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_PathOfThePriest</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>		
+		
+		
+		
+	</ContainerPathPriestAbilities>
+	
+</AbilityBonuses>
+		

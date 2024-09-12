@@ -1,0 +1,2147 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--Black Market Bazaar by Hellions-->
+<!--XtraDeconstruct 3.0 by Primal-->
+<Spells>
+		<!--TACTICAL-->
+	<SpellDef InternalName="BMB_AmuletOfTheBlackMindedEffect">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Amulet of the Black Minded</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>Graveseal</Attribute>
+			<DisplayName>Graveseal</DisplayName>
+			<Duration>-1</Duration>
+			<Effect>E_Graveseal_Particle</Effect>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<Value>0</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<Value>0</Value>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="BMB_AttackFrenzy">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Attack Frenzy</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Pierce</StrVal>
+			<ApplyToCaster>1</ApplyToCaster>
+			<DisplayName>Attack +1</DisplayName>
+			<Duration>-1</Duration>
+			<Value>1</Value>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="BMB_Beguile">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Beguile</DisplayName>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ClumsyChance</StrVal>
+			<DisplayName>Beguiled</DisplayName>
+			<Duration>-1</Duration>
+			<Value>50</Value>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_X_Beguile.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_BeltOfWeariness_Effect">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Belt of Weariness Effect</DisplayName>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Stamina</StrVal>
+			<DisplayName>Stamina Loss</DisplayName>
+			<Value>-1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SetUnitStat</Attribute>
+			<StrVal>UnitStat_Stamina_Growth</StrVal>
+			<DisplayName>Weariness</DisplayName>
+			<Effect>BMB_BeltOfWeariness_Particle</Effect>
+			<Duration>3</Duration>
+			<Value>0</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+		</AIData>
+		<HitSoundFX>Spell_FreezeGroup</HitSoundFX>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Slow.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_BloodCandles">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Blood Candles</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon><!--0-->
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_HPFromKills</StrVal>
+			<Value>2</Value>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_BloodCandles.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_BulwarkOfTheBrute">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Bulwark of the Brute (Effect)</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Pierce</AttackStat>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_CombinedAttack] * 2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>TacticalUnit</ModType>
+			<Attribute>TargetMovesBack</Attribute>
+			<Value>1</Value>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="BMB_ChokerSpore">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Choker Spore</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Poison</AttackStat>
+			<Duration>-1</Duration>
+			<Effect>E_Poison_Particle</Effect>
+			<SoundFX>Spell_Poisoned1_01</SoundFX>
+			<PerTurn>1</PerTurn>
+			<Value>3</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>40</AIPriority>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+					<Expression><![CDATA[[UnitStat_ResistPoison]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc] < 75]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_ChokerSpore.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_Chop">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Chop</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_ChokerSpore.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_CorrosiveDagger">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Corrosive Dagger</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<Duration>15</Duration>
+			<Effect>E_Acid_Particle</Effect>
+			<PerTurn>1</PerTurn>
+			<MinValue>-2</MinValue>
+			<MaxValue>-4</MaxValue>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="BMB_CripplingBlow">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Crippling Blow</DisplayName>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Pierce</AttackStat>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_CombinedAttack] * 2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] * [UnitStat_BonusCrushingBlow]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>TacticalUnit</ModType>
+			<Attribute>ChanceToLoseNextTurn</Attribute>
+			<ApplyToCaster>1</ApplyToCaster>
+			<DisplayName>Dazed</DisplayName>
+			<Duration>2</Duration>
+			<Effect>E_Daze_Particle</Effect>
+			<Value>100</Value>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_X_BlackSpikePP.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_CuttingSurface">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Cutting Surface</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<Value>-2</Value>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="BMB_DaggerOfCorruption">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Dagger Of Corruption</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Boost</StrVal>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<DisplayName>Withered</DisplayName>
+			<Duration>-1</Duration>
+			<Effect>E_Wither_Particle</Effect>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumDeathShards] + 2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc] * -1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc] * -1]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="BMB_DeathCircle">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Death Circle</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel] * -2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] - 4]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<IsForSpellResist>1</IsForSpellResist>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel] * -1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc] - 2]]></Expression>
+			</Calculate>
+		</GameModifier>
+			<PlayOnAllTargets>1</PlayOnAllTargets>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="BMB_DimensionalTranslocation">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Dimensional Translocation</DisplayName>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>TransportUnit</Attribute>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<ApplyToCaster>1</ApplyToCaster>
+			<Duration>1</Duration>
+			<UpdateDurationAtTurnStart>1</UpdateDurationAtTurnStart>
+			<Value>100</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_X_Blink.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_DismantlingStroke">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Black Spike's Dismantling Stroke</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Pierce</AttackStat>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_CombinedAttack] * 4]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] * [UnitStat_BonusCrushingBlow]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>TacticalUnit</ModType>
+			<Attribute>ChanceToLoseNextTurn</Attribute>
+			<ApplyToCaster>1</ApplyToCaster>
+			<DisplayName>Dazed</DisplayName>
+			<Duration>2</Duration>
+			<Effect>E_Daze_Particle</Effect>
+			<Value>100</Value>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_X_BlackSpikeDS.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_DrainLife">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Drain Life</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>Lifesteal</Attribute>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumDeathShards] + 6]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc] * 2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc] * 2]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>Lifesteal</Attribute>
+			<IsForSpellResist>1</IsForSpellResist>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumDeathShards] + 6]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_X_Despair.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_ElementalMyriad">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Elemental Myriad</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Cold</StrVal>
+			<DisplayName>Frost Power</DisplayName>
+			<Duration>-1</Duration>
+			<Value>2</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Fire</StrVal>
+			<DisplayName>Fire Power</DisplayName>
+			<Duration>-1</Duration>
+			<Value>2</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Lightning</StrVal>
+			<DisplayName>Lightning Power</DisplayName>
+			<Duration>-1</Duration>
+			<Value>2</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Poison</StrVal>
+			<DisplayName>Poison Power</DisplayName>
+			<Duration>-1</Duration>
+			<Value>2</Value>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_X_ElementalMyriad.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_ForgingExcellence">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Forging Excellence</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Pierce</StrVal>
+			<DisplayName>Forging Excellence</DisplayName>
+			<Duration>-1</Duration>
+			<Value>6</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ChanceToCrit</StrVal>
+			<Duration>-1</Duration>
+			<Value>6</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CritDamageMultiplier</StrVal>
+			<Duration>-1</Duration>
+			<Value>1</Value>
+			<Provides>+100% Critical Damage</Provides>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_X_ForgingExcellence.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_FreezingBlood">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Freezing Blood</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Cold</AttackStat>
+			<Duration>-1</Duration>
+			<Effect>A_HailstoneStaff_Impact_Particle</Effect>
+			<SoundFX>IceElemental_Death</SoundFX>
+			<PerTurn>1</PerTurn>
+			<Value>5</Value>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_FrozenBones.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_FreezingJet">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Freezing Jet</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Cold</AttackStat>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[[UnitOwner_GetNumWaterShards] + 1]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] * 3]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc2] + [UnitStat_CombinedAttack]]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc3]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc3]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_X_Stalagmite.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_FreezingRay">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Freezing Ray</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Cold</AttackStat>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumWaterShards] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] * 3]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel] * 2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc4" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc2] + [Calc3]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc4]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc4]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Cold</AttackStat>
+			<IsForSpellResist>1</IsForSpellResist>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumWaterShards] + [Unit_GetLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_X_FreezingRay.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_GildarTouch">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Gildar Touch</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Gold</Attribute>
+			<ApplyToCaster>1</ApplyToCaster>
+			<DisplayName>+1 Gold</DisplayName>
+			<Value>1</Value>
+		</GameModifier>
+		<SFX>SackOfGildar_01</SFX>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="BMB_Haste_Mass">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Mass Haste</DisplayName>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<DisplayName>Hasted</DisplayName>
+			<Duration>-1</Duration>
+			<Effect>E_Celerity_Particle</Effect>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumAirShards] + 5]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_X_MassHaste.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_HeartOfTheTarget">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Heart of the Target</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ArmorPierce</StrVal>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_IsBow] * 10]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_HeartOfTheTarget.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_IceBomb">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Ice Bomb</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Cold</AttackStat>
+			<Value>18</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Cold</AttackStat>
+			<IsForSpellResist>1</IsForSpellResist>
+			<Value>9</Value>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="BMB_Icebreaker_Effect">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Icebreaker</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<MinValue>-4</MinValue>
+			<MaxValue>-10</MaxValue>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<Value>0</Value>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="BMB_IceRing">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Ice Ring</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Cold</AttackStat>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumWaterShards] + [Unit_GetLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] * 2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Cold</AttackStat>
+			<IsForSpellResist>1</IsForSpellResist>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumWaterShards] + [Unit_GetLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_X_IceRing.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_InsectPlague">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Insect Plague</DisplayName>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Accuracy</StrVal>
+			<DisplayName>Insect Swarm</DisplayName>
+			<Duration>5</Duration>
+			<Effect>BMB_InsectSwarm_Particle</Effect>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_Accuracy] * -0.40]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Dodge</StrVal>
+			<Duration>5</Duration>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_Dodge] * -0.40]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Duration>5</Duration>
+			<Value>-3</Value>
+			<Provides>-3 Initiative</Provides>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_X_InsectPlague.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_InsectSwarm">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Insect Swarm</DisplayName>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Accuracy</StrVal>
+			<DisplayName>Insect Swarm</DisplayName>
+			<Duration>5</Duration>
+			<Effect>BMB_InsectSwarm_Particle</Effect>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_Accuracy] * -0.40]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Dodge</StrVal>
+			<Duration>5</Duration>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_Dodge] * -0.40]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Duration>5</Duration>
+			<Value>-3</Value>
+			<Provides>-3 Initiative</Provides>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_X_InsectSwarm.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_JinxDoll">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Curse of the Jinx Doll</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Pierce</StrVal>
+			<DisplayName>Cursed</DisplayName>
+			<Duration>5</Duration>
+			<Effect>E_Curse_Particle</Effect>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_Defense_Pierce] * -1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Poison</AttackStat>
+			<DisplayName>Poisoned</DisplayName>
+			<Duration>-1</Duration>
+			<Effect>E_Poison_Particle</Effect>
+			<SoundFX>Spell_Poisoned2_01</SoundFX>
+			<PerTurn>1</PerTurn>
+			<Value>4</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Cold</AttackStat>
+			<DisplayName>Freezing Blood</DisplayName>
+			<Duration>-1</Duration>
+			<Effect>A_HailstoneStaff_Impact_Particle</Effect>
+			<SoundFX>IceElemental_Death</SoundFX>
+			<PerTurn>1</PerTurn>
+			<Value>5</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<MinValue>-10</MinValue>
+			<MaxValue>-15</MaxValue>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_X_CurseOfTheJinxDoll.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_LaceratingSpokes">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Lacerating Spokes</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<MinValue>-2</MinValue>
+			<MaxValue>-5</MaxValue>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Barbs.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_LeopardRush">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Leopard Rush</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<DisplayName>Leopard Rush</DisplayName>
+			<Duration>-1</Duration>
+			<Value>3</Value>
+			<ApplyToCaster>1</ApplyToCaster>
+			<Effect>E_Celerity_Particle</Effect>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Celerity.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_MendingHands">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Mending Hands</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumLifeShards] + 6]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] * 2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc2] * [UnitStat_BonusHealing]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc3]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc3]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_X_MendingHands.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_Mindblast">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Mind Blast</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_MagicPower] + [UnitStat_SpellDamage]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] / 6]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc2] * -1]]></Expression>
+			</Calculate>
+		   <Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc3]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc3]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<IsForSpellResist>1</IsForSpellResist>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_MagicPower] + [UnitStat_SpellDamage]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] / 12]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc2] * -1]]></Expression>
+			</Calculate>
+		   <Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc3]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc3]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>TacticalUnit</ModType>
+			<Attribute>TargetKnockedProne</Attribute>
+			<Duration>1</Duration>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="BMB_ParalyzingAcid">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Paralyzing Acid</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<Duration>-1</Duration>
+			<Effect>BMB_ParalyzingAcid_Particle</Effect>
+			<PerTurn>1</PerTurn>
+			<MinValue>-3</MinValue>
+			<MaxValue>-6</MaxValue>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Dodge</StrVal>
+			<Value>-10</Value>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="BMB_ParalyzingCold">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Paralyzing Cold</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Cold</AttackStat>
+			<Duration>-1</Duration>
+			<Effect>A_HailstoneStaff_Impact_Particle</Effect>
+			<SoundFX>IceElemental_Death</SoundFX>
+			<PerTurn>1</PerTurn>
+			<Value>3</Value>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_FrozenBones.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_PenitentsRestitution">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Penitent's Restitution</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumLifeShards] * 10]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] + 150]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc2] * [UnitStat_BonusHealing]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc3]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc3]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<ApplyToCaster>1</ApplyToCaster>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumLifeShards] * 10]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] + 150]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc2] * [UnitStat_BonusHealing]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc3]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc3]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_HitPoints</StrVal>
+			<DisplayName>Penitent's Restitution</DisplayName>
+			<ApplyToCaster>1</ApplyToCaster>
+			<Value>3</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_PenitentsSuffering</StrVal>
+			<ApplyToCaster>1</ApplyToCaster>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_PenitentsSuffering] * -1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_X_PenitentsRestitution.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_PenitentsSuffering">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Penitent's Suffering</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_PenitentsSuffering</StrVal>
+			<ApplyToCaster>1</ApplyToCaster>
+			<Value>1</Value>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Sentinel.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_PlagueTouch">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Plague Touch</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ResistPoison</StrVal>
+			<Duration>-1</Duration>
+			<Multiplier>0.5</Multiplier>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Poison</AttackStat>
+			<Duration>-1</Duration>
+			<Effect>E_Poison_Particle</Effect>
+			<SoundFX>Spell_Poisoned2_01</SoundFX>
+			<PerTurn>1</PerTurn>
+			<Value>4</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>TacticalUnit</ModType>
+			<Attribute>InfectNearbyAlliesWith</Attribute>
+			<StrVal>SpellSubClass</StrVal>
+			<StrVal2>Debuff</StrVal2>
+			<DisplayName>Contagion</DisplayName>
+			<Duration>-1</Duration>
+			<Effect>E_Infection_Particle</Effect>
+			<PerTurn>1</PerTurn>
+			<Radius>-1</Radius>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+					<Expression><![CDATA[[Unit_GetHPCurrent]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc] > 10]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Infection.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_PowerPunch">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Black Spike's Power Punch</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Pierce</AttackStat>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_CombinedAttack] * 1.5]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>TacticalUnit</ModType>
+			<Attribute>TargetMovesBack</Attribute>
+			<Value>2</Value>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_X_BlackSpikePP.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_PowerSweep">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Power Sweep</DisplayName>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Pierce</AttackStat>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_CombinedAttack]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>TacticalUnit</ModType>
+			<Attribute>TargetMovesBack</Attribute>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>TacticalUnit</ModType>
+			<Attribute>TargetKnockedProne</Attribute>
+			<Duration>1</Duration>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_Sweep_Icon.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_PrismaticBelt">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Prismatic Belt</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Cold</AttackStat>
+			<MinValue>4</MinValue>
+			<MaxValue>8</MaxValue>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Fire</AttackStat>
+			<MinValue>4</MinValue>
+			<MaxValue>8</MaxValue>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Lightning</AttackStat>
+			<MinValue>4</MinValue>
+			<MaxValue>8</MaxValue>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Poison</AttackStat>
+			<MinValue>4</MinValue>
+			<MaxValue>8</MaxValue>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="BMB_Riptide">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Riptide</DisplayName>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Pierce</AttackStat>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumWaterShards] + 4]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc] * 2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc] * 2]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Pierce</AttackStat>
+			<IsForSpellResist>1</IsForSpellResist>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumWaterShards] + 4]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_X_Riptide.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_SaintlyAura">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Saintly Aura</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_TacticalHealthRegen</StrVal>
+			<Effect>BMB_SaintlyAura</Effect>
+			<Duration>-1</Duration>
+			<Value>4</Value>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_X_SaintlyAura.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_Scrambler">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Scrambler</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>TacticalUnit</ModType>
+			<Attribute>DisruptSpellCharge</Attribute>
+		</GameModifier>
+		<GameModifier>
+			<ModType>TacticalUnit</ModType>
+			<Attribute>ChanceToLoseNextTurn</Attribute>
+			<DisplayName>Dazed</DisplayName>
+			<Duration>1</Duration>
+			<Value>100</Value>
+		</GameModifier>
+		<Cooldown>3</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_X_Scrambler.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_ShacklesOfEnslavement">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Shackles of Enslavement</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CharmTarget</Attribute>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_CannotBeCharmed] * -100]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc] + 100]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="BMB_ShatterResistance">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Shatter Resistance</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_MagicResist</StrVal>
+			<DisplayName>Resist Loss</DisplayName>
+			<Duration>-1</Duration>
+			<Value>-8</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Pierce</StrVal>
+			<DisplayName>Defense Loss</DisplayName>
+			<Duration>-1</Duration>
+			<Value>-4</Value>
+		</GameModifier>
+			<PlayOnAllTargets>1</PlayOnAllTargets>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_ShadowBolt.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_ShieldSlam">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Shield Slam</DisplayName>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Attack and Knock target prone and back 1 tile.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] SHIELD SLAM
+		::: Attack and Knock target prone and back 1 tile.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Unit
+		
+		EFFECT
+		::: Normal ATK which uses Earth DMG
+		::: Knocks target back 1 tile
+		::: Knocks target prone
+		
+		FIGHTABLE
+		::: Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: Can be Dodged
+		::: Earth Multiplier
+		::: Time Bonus (Sov)
+		
+		SOURCE
+		::: Equipment
+		::: ::: Black Spike's Spokes</Description>
+		<FormattedDescription>Launch a %d Attack, knocks targets back 1 tile and knocks them prone.</FormattedDescription>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Earth</AttackStat>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_CombinedAttack] * [UnitStat_SpellDamage_Earth]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock1" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_X_IsCultLeader] * [UnitStat_X_Clock]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock1] * 0.01]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock2] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock4">
+				<Expression><![CDATA[[Calc_X_Clock3] * [Calc]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>TacticalUnit</ModType>
+			<Attribute>TargetMovesBack</Attribute>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>TacticalUnit</ModType>
+			<Attribute>TargetKnockedProne</Attribute>
+			<Duration>1</Duration>
+		</GameModifier>
+		<Cooldown>3</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>555</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_ShieldBash_Icon.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_Slow_Mass">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Mass Slow</DisplayName>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<DisplayName>Slowed</DisplayName>
+			<Duration>-1</Duration>
+			<Effect>E_Slow_Particle</Effect>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumWaterShards] + 5]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc] * -1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc] * -1]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_X_MassSlow.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_StaminaDrain">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Battle Wisdom Drain</DisplayName>
+		<Description>Attack that reduces the victim's Battle Wisdom to 0 if it hits.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] BATTLE WISDOM DRAIN
+		::: Attack that reduces the victim's Battle Wisdom to 0 if it hits.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Unit
+		
+		EFFECT
+		::: Normal ATK
+		::: - Battle Wisdom
+		
+		FIGHTABLE
+		::: Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: Can be Dodged
+		
+		SOURCE
+		::: Equipment
+		::: ::: Shifty Depleter</Description>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Stamina</StrVal>
+			<DisplayName>Stamina Drain</DisplayName>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_Stamina] * -1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>5</Cooldown>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_X_CullTheWeak.png</IconFG>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>400</AIPriority>
+		</AIData>
+	</SpellDef>
+	<SpellDef InternalName="BMB_Stoneskin">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Stoneskin</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Pierce</StrVal>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumEarthShards] + 3]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_X_Stoneskin.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_SummonAerialAlly">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Summon Aerial Ally</DisplayName>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Summon a random level 6 Aerial Ally.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] SUMMON AERIAL ALLY
+		::: Summon a random level 6 Aerial Ally.
+		
+		DOMAIN
+		::: Tactical
+		::: Empty Tile
+		
+		EFFECT
+		::: Random Creature (Air Elemental or Crow Demon)
+		::: ::: Level = 6 + Summon Bonus
+		
+		FIGHTABLE
+		::: Not defendable
+		::: Not resistible
+		
+		INTERVAL
+		::: Battle
+		::: Until Killed
+		
+		OTHER
+		::: Summon Bonus
+		
+		SOURCE
+		::: Equipment
+		::: ::: Aerial Conductor</Description>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<UnitClass>AirElemental</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 6]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<UnitClass>AirElemental</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 6]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<UnitClass>CrowDemon</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 6]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<UnitClass>CrowDemon</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 6]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<UnitClass>CrowDemon_Ancient</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 6]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<UnitClass>CrowDemon_Ancient</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 6]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<UnitClass>CrowDemon_Young</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 6]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>275</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_X_DeathWard.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_SummonArachnid">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Summon Arachnid</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<UnitClass>AlbinoRockSpider</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 6]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<UnitClass>BlackWidow</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 6]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<UnitClass>BlackWidow</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 6]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<UnitClass>BlackWidow</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 6]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<UnitClass>CorpseSpider</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 6]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<UnitClass>CorpseSpider</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 6]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<UnitClass>HoarderSpider</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 6]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<UnitClass>RavenousHarridan</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 6]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<UnitClass>RavenousHarridan</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 6]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<UnitClass>RockSpider</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 6]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<UnitClass>RockSpider</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 6]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<UnitClass>RockSpider</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 6]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>325</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_X_SummonHarridan.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_SummonLupus">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Summon Lupus</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<UnitClass>Wolf_Group</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 8]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<UnitClass>Wolf_Group</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 8]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<UnitClass>GreatWolf</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 8]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<UnitClass>EbbenWolf</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 8]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<UnitClass>AnnieDog</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 8]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<UnitClass>TimberWarg</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 8]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<UnitClass>ShadowWarg</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 8]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<UnitClass>IceWarg</UnitClass>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + 8]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>250</AIPriority>
+		</AIData>
+		<!--<IconFG>BMB_Ability_SummonLupus.png</IconFG>-->
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_X_Quickdraw.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_SummonBear">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Summon Bear</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<StrVal>Bear</StrVal>
+			<UnitClass>Bear_BG_Summon</UnitClass>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_BonusSummonLevel] + [Unit_GetLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>70</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_X_SummonBear.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_SwampGasExplosion">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Swamp Gas Explosion</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel] * -2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] - 8]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<IsForSpellResist>1</IsForSpellResist>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel] * -1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] - 4]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_X_SwampGasExplosion.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_SyphonStrength">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Syphon Strength</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Boost</StrVal>
+			<DisplayName>Weakened</DisplayName>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_CombinedAttack] * -0.25]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[Unit_GetTroopCount]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc] / [Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Boost</StrVal>
+			<ApplyToCaster>1</ApplyToCaster>
+			<DisplayName>Strengthened</DisplayName>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_CombinedAttack] * 0.25]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[Unit_GetTroopCount]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc] / [Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_X_SyphonStrength.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_TempestuousWrath">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Tempestuous Wrath</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Lightning</StrVal>
+			<DisplayName>Tempestuous Wrath</DisplayName>
+			<Duration>-1</Duration>
+			<Value>4</Value>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_TempestuousWrath.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_Thunderstorm">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Thunderstorm</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Lightning</AttackStat>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumAirShards] + 5]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc] * 4]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc] * 4]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Lightning</AttackStat>
+			<IsForSpellResist>1</IsForSpellResist>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumAirShards] + 5]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc] * 2]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_X_Thunderstorm.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_WallbreakerEffect">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Wallbreaker Effect</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Pierce</StrVal>
+			<DisplayName>Fractured</DisplayName>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_Defense_Pierce] * -0.3]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Savagery.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_WaywardDeathBane_Effect">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Wayward Deathbane</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Lightning</AttackStat>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumAirShards] + 5]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc] * 4]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc] * 4]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Lightning</AttackStat>
+			<IsForSpellResist>1</IsForSpellResist>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumAirShards] + 5]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc] * 2]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>60</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_X_Thunderstorm.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_TwinShaft">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Twin Shaft</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+	<SpellDef InternalName="BMB_Yank">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Yank</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+		</GameModifier>
+		<GameModifier>
+			<ModType>TacticalUnit</ModType>
+			<Attribute>TargetKnockedProne</Attribute>
+			<DisplayName>Yanked</DisplayName>
+			<Duration>1</Duration>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+					<Expression><![CDATA[[Unit_GetHPCurrent]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc] > 10]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_X_Yank.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="BMB_BowAttack_EleventhFingerWand">
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[10 + [Unit_GetLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] * -1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+	</SpellDef>
+</Spells>

@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<Quests>
+	<QuestDef InternalName="Event_X_Merchant1_152">
+		<DisplayName>Traveling Merchant</DisplayName>
+		<Description>Channeler, a traveling merchant is here. What should I tell him?</Description>
+		<ShortTextAccept>Bring him to me.</ShortTextAccept>
+		<ShortTextDeny>I'm busy.</ShortTextDeny>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>TurnNumber</TriggerType>
+		<TriggerData>152</TriggerData>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>1</SpawnRating>
+		<TriggerChance>180</TriggerChance>
+		<PostTriggerChance>20</PostTriggerChance>
+		<Image>Highway.png</Image>
+		<RewardText>Whip of Submission</RewardText>
+		<RewardImage>Accessory_X_WhipOfSubmission.png</RewardImage>
+		<SuccessText>Enjoy!</SuccessText>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<DisableQuestChoiceTooltips>0</DisableQuestChoiceTooltips>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<ID>1</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy the Whip of Submission</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>160</NumericData>
+			</QuestConditionDef>
+			<ChoiceText>Would you like to buy a Whip of Submission? I happen to have one at a bargain price.</ChoiceText>
+			<ChoiceMedallion>Peddler.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>No, I'm not interested.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Oh, novelty, an undear Channeler.</PopupMessage>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Yes, I'll buy the Whip of Submission (-160 Gildar).</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Accessory_X_WhipOfSubmission</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I can not afford it.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>My friend Zi-Pon, a Halfling of great renown - to some anyway - could teach you a thing or two about accumulating wealth.</PopupMessage>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Consumable_X_PonziSchemes</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Event_X_Merchant1_153">
+		<DisplayName>Traveling Merchant</DisplayName>
+		<Description>Channeler, a traveling merchant is here. What should I tell him?</Description>
+		<ShortTextAccept>Bring him to me.</ShortTextAccept>
+		<ShortTextDeny>I'm busy.</ShortTextDeny>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>TurnNumber</TriggerType>
+		<TriggerData>153</TriggerData>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>1</SpawnRating>
+		<TriggerChance>180</TriggerChance>
+		<PostTriggerChance>20</PostTriggerChance>
+		<Image>Highway.png</Image>
+		<RewardText>Analyzer</RewardText>
+		<RewardImage>Armor_X_Analyzer_K.png</RewardImage>
+		<SuccessText>Enjoy!</SuccessText>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<DisableQuestChoiceTooltips>0</DisableQuestChoiceTooltips>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<ID>1</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy Analyzer</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>160</NumericData>
+			</QuestConditionDef>
+			<ChoiceText>Would you like to buy Analyzer? I happen to have one at a bargain price.</ChoiceText>
+			<ChoiceMedallion>Peddler.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>No, I'm not interested.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Oh, novelty, an undear Channeler.</PopupMessage>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Yes, I'll buy Analyzer (-160 Gildar).</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Armor_X_Helm_Analyzer</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I can not afford it.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>My friend Zi-Pon, a Halfling of great renown - to some anyway - could teach you a thing or two about accumulating wealth.</PopupMessage>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Consumable_X_PonziSchemes</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Event_X_Merchant1_154">
+		<DisplayName>Traveling Merchant</DisplayName>
+		<Description>Channeler, a traveling merchant is here. What should I tell him?</Description>
+		<ShortTextAccept>Bring him to me.</ShortTextAccept>
+		<ShortTextDeny>I'm busy.</ShortTextDeny>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>TurnNumber</TriggerType>
+		<TriggerData>154</TriggerData>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>1</SpawnRating>
+		<TriggerChance>180</TriggerChance>
+		<PostTriggerChance>20</PostTriggerChance>
+		<Image>Highway.png</Image>
+		<RewardText>Boots of the Gravelord</RewardText>
+		<RewardImage>Armor_X_GravesealBoots.png</RewardImage>
+		<SuccessText>Enjoy!</SuccessText>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<DisableQuestChoiceTooltips>0</DisableQuestChoiceTooltips>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<ID>1</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy the Boots of the Gravelord</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>120</NumericData>
+			</QuestConditionDef>
+			<ChoiceText>Would you like to buy Boots of the Gravelord? I happen to have a pair at a bargain price.</ChoiceText>
+			<ChoiceMedallion>Peddler.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>No, I'm not interested.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Oh, novelty, an undear Channeler.</PopupMessage>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Yes, I'll buy the Boots of the Gravelord (-120 Gildar).</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Armor_X_Boots_Graveseal</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I can not afford it.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>My friend Zi-Pon, a Halfling of great renown - to some anyway - could teach you a thing or two about accumulating wealth.</PopupMessage>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Consumable_X_PonziSchemes</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Event_X_Merchant1_155">
+		<DisplayName>Traveling Merchant</DisplayName>
+		<Description>Channeler, a traveling merchant is here. What should I tell him?</Description>
+		<ShortTextAccept>Bring him to me.</ShortTextAccept>
+		<ShortTextDeny>I'm busy.</ShortTextDeny>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>TurnNumber</TriggerType>
+		<TriggerData>155</TriggerData>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>1</SpawnRating>
+		<TriggerChance>180</TriggerChance>
+		<PostTriggerChance>20</PostTriggerChance>
+		<Image>Highway.png</Image>
+		<RewardText>Dragonlance</RewardText>
+		<RewardImage>Weapon_X_Lance_Dragon.png</RewardImage>
+		<SuccessText>Enjoy!</SuccessText>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<DisableQuestChoiceTooltips>0</DisableQuestChoiceTooltips>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<ID>1</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy the Dragonlance</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>180</NumericData>
+			</QuestConditionDef>
+			<ChoiceText>Would you like to buy a Dragonlance? I happen to have one at a bargain price.</ChoiceText>
+			<ChoiceMedallion>Peddler.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>No, I'm not interested.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Oh, novelty, an undear Channeler.</PopupMessage>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Yes, I'll buy the Dragonlance (-180 Gildar).</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Weapon_X_Lance_Dragon</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I can not afford it.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>My friend Zi-Pon, a Halfling of great renown - to some anyway - could teach you a thing or two about accumulating wealth.</PopupMessage>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Consumable_X_PonziSchemes</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Event_X_Merchant1_156">
+		<DisplayName>Traveling Merchant</DisplayName>
+		<Description>Channeler, a traveling merchant is here. What should I tell him?</Description>
+		<ShortTextAccept>Bring him to me.</ShortTextAccept>
+		<ShortTextDeny>I'm busy.</ShortTextDeny>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>TurnNumber</TriggerType>
+		<TriggerData>156</TriggerData>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>1</SpawnRating>
+		<TriggerChance>180</TriggerChance>
+		<PostTriggerChance>20</PostTriggerChance>
+		<Image>Highway.png</Image>
+		<RewardText>Naja Branch</RewardText>
+		<RewardImage>Weapon_X_Staff_Naja.png</RewardImage>
+		<SuccessText>Enjoy!</SuccessText>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<DisableQuestChoiceTooltips>0</DisableQuestChoiceTooltips>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<ID>1</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy the Naja Branch</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>70</NumericData>
+			</QuestConditionDef>
+			<ChoiceText>Would you like to buy a Naja Branch? I happen to have one at a bargain price.</ChoiceText>
+			<ChoiceMedallion>Peddler.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>No, I'm not interested.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Oh, novelty, an undear Channeler.</PopupMessage>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Yes, I'll buy the Naja Branch (-70 Gildar).</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Weapon_X_Staff_Naja</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I can not afford it.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>My friend Zi-Pon, a Halfling of great renown - to some anyway - could teach you a thing or two about accumulating wealth.</PopupMessage>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Consumable_X_PonziSchemes</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Event_X_Merchant1_157">
+		<DisplayName>Traveling Merchant</DisplayName>
+		<Description>Channeler, a traveling merchant is here. What should I tell him?</Description>
+		<ShortTextAccept>Bring him to me.</ShortTextAccept>
+		<ShortTextDeny>I'm busy.</ShortTextDeny>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>TurnNumber</TriggerType>
+		<TriggerData>157</TriggerData>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>1</SpawnRating>
+		<TriggerChance>180</TriggerChance>
+		<PostTriggerChance>20</PostTriggerChance>
+		<Image>Highway.png</Image>
+		<RewardText>Dynamo</RewardText>
+		<RewardImage>Weapon_X_Sword_Initiative.png</RewardImage>
+		<SuccessText>Enjoy!</SuccessText>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<DisableQuestChoiceTooltips>0</DisableQuestChoiceTooltips>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<ID>1</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy Dynamo</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>500</NumericData>
+			</QuestConditionDef>
+			<ChoiceText>Would you like to buy Dynamo? I happen to have one at a bargain price.</ChoiceText>
+			<ChoiceMedallion>Peddler.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>No, I'm not interested.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Oh, novelty, an undear Channeler.</PopupMessage>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Yes, I'll buy Dynamo (-500 Gildar).</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Weapon_X_Sword_Initiative</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I can not afford it.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>My friend Zi-Pon, a Halfling of great renown - to some anyway - could teach you a thing or two about accumulating wealth.</PopupMessage>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Consumable_X_PonziSchemes</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Event_X_Merchant1_158">
+		<DisplayName>Traveling Merchant</DisplayName>
+		<Description>Channeler, a traveling merchant is here. What should I tell him?</Description>
+		<ShortTextAccept>Bring him to me.</ShortTextAccept>
+		<ShortTextDeny>I'm busy.</ShortTextDeny>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>TurnNumber</TriggerType>
+		<TriggerData>158</TriggerData>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>1</SpawnRating>
+		<TriggerChance>180</TriggerChance>
+		<PostTriggerChance>20</PostTriggerChance>
+		<Image>Highway.png</Image>
+		<RewardText>Master's Wand</RewardText>
+		<RewardImage>Shield_X_Wand4.png</RewardImage>
+		<SuccessText>Enjoy!</SuccessText>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<DisableQuestChoiceTooltips>0</DisableQuestChoiceTooltips>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<ID>1</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy a Master's Wand</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>120</NumericData>
+			</QuestConditionDef>
+			<ChoiceText>Would you like to buy a Master's Wand? I happen to have one at a bargain price.</ChoiceText>
+			<ChoiceMedallion>Peddler.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>No, I'm not interested.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Oh, novelty, an undear Channeler.</PopupMessage>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Yes, I'll buy the Master's Wand (-120 Gildar).</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Shield_X_Wand4</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I can not afford it.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>My friend Zi-Pon, a Halfling of great renown - to some anyway - could teach you a thing or two about accumulating wealth.</PopupMessage>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Consumable_X_PonziSchemes</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Event_X_Merchant1_161">
+		<DisplayName>Traveling Merchant</DisplayName>
+		<Description>Channeler, a traveling merchant is here. What should I tell him?</Description>
+		<ShortTextAccept>Bring him to me.</ShortTextAccept>
+		<ShortTextDeny>I'm busy.</ShortTextDeny>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>TurnNumber</TriggerType>
+		<TriggerData>161</TriggerData>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>1</SpawnRating>
+		<TriggerChance>180</TriggerChance>
+		<PostTriggerChance>20</PostTriggerChance>
+		<Image>Highway.png</Image>
+		<RewardText>Apostle's Robe</RewardText>
+		<RewardImage>Robe_X_Apostles.png</RewardImage>
+		<SuccessText>Enjoy!</SuccessText>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<DisableQuestChoiceTooltips>0</DisableQuestChoiceTooltips>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<ID>1</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy an Apostle's Robe</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>100</NumericData>
+			</QuestConditionDef>
+			<ChoiceText>Would you like to buy an Apostle's Robe? I happen to have one at a bargain price.</ChoiceText>
+			<ChoiceMedallion>Peddler.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>No, I'm not interested.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Oh, novelty, an undear Channeler.</PopupMessage>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Yes, I'll buy the Apostle's Robe (-100 Gildar).</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Armor_X_RobeApostles</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I can not afford it.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>My friend Zi-Pon, a Halfling of great renown - to some anyway - could teach you a thing or two about accumulating wealth.</PopupMessage>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Consumable_X_PonziSchemes</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Event_X_Merchant1_162">
+		<DisplayName>Traveling Merchant</DisplayName>
+		<Description>Channeler, a traveling merchant is here. What should I tell him?</Description>
+		<ShortTextAccept>Bring him to me.</ShortTextAccept>
+		<ShortTextDeny>I'm busy.</ShortTextDeny>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>TurnNumber</TriggerType>
+		<TriggerData>162</TriggerData>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>1</SpawnRating>
+		<TriggerChance>180</TriggerChance>
+		<PostTriggerChance>20</PostTriggerChance>
+		<Image>Highway.png</Image>
+		<RewardText>The Puny</RewardText>
+		<RewardImage>Weapon_Dagger1.png</RewardImage>
+		<SuccessText>Enjoy!</SuccessText>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<DisableQuestChoiceTooltips>0</DisableQuestChoiceTooltips>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<ID>1</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy The Puny</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>175</NumericData>
+			</QuestConditionDef>
+			<ChoiceText>Would you like to buy The Puny? I happen to have one at a bargain price.</ChoiceText>
+			<ChoiceMedallion>Peddler.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>No, I'm not interested.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Oh, novelty, an undear Channeler.</PopupMessage>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Yes, I'll buy The Puny (-175 Gildar).</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Weapon_X_ThePuny</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I can not afford it.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>My friend Zi-Pon, a Halfling of great renown - to some anyway - could teach you a thing or two about accumulating wealth.</PopupMessage>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Consumable_X_PonziSchemes</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Event_X_Merchant1_163">
+		<DisplayName>Traveling Merchant</DisplayName>
+		<Description>Channeler, a traveling merchant is here. What should I tell him?</Description>
+		<ShortTextAccept>Bring him to me.</ShortTextAccept>
+		<ShortTextDeny>I'm busy.</ShortTextDeny>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>TurnNumber</TriggerType>
+		<TriggerData>163</TriggerData>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>1</SpawnRating>
+		<TriggerChance>180</TriggerChance>
+		<PostTriggerChance>20</PostTriggerChance>
+		<Image>Highway.png</Image>
+		<RewardText>Hyperborean Mushroom</RewardText>
+		<RewardImage>Consumable_X_HyperboreanMushroom.png</RewardImage>
+		<SuccessText>Enjoy!</SuccessText>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<DisableQuestChoiceTooltips>0</DisableQuestChoiceTooltips>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<ID>1</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy a Hyperborean Mushroom</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>100</NumericData>
+			</QuestConditionDef>
+			<ChoiceText>Would you like to buy a Hyperborean Mushroom? I happen to have one at a bargain price.</ChoiceText>
+			<ChoiceMedallion>Peddler.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>No, I'm not interested.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Oh, novelty, an undear Channeler.</PopupMessage>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Yes, I'll buy the Hyperborean Mushroom (-100 Gildar).</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Consumable_X_HyperboreanMushroom</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I can not afford it.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>My friend Zi-Pon, a Halfling of great renown - to some anyway - could teach you a thing or two about accumulating wealth.</PopupMessage>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Consumable_X_PonziSchemes</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+		</QuestObjectiveDef>
+	</QuestDef>
+	<QuestDef InternalName="Event_X_Merchant1_164">
+		<DisplayName>Traveling Merchant</DisplayName>
+		<Description>Channeler, a traveling merchant is here. What should I tell him?</Description>
+		<ShortTextAccept>Bring him to me.</ShortTextAccept>
+		<ShortTextDeny>I'm busy.</ShortTextDeny>
+		<QuestClass>Minor</QuestClass>
+		<Repeatable>0</Repeatable>
+		<TriggerType>TurnNumber</TriggerType>
+		<TriggerData>164</TriggerData>
+		<TriggerOrigin>EventLocation</TriggerOrigin>
+		<SpawnRating>1</SpawnRating>
+		<TriggerChance>180</TriggerChance>
+		<PostTriggerChance>20</PostTriggerChance>
+		<Image>Highway.png</Image>
+		<RewardText>Sap Distillate</RewardText>
+		<RewardImage>Consumable_X_Potion_SapDistillate.png</RewardImage>
+		<SuccessText>Enjoy!</SuccessText>
+		<QuestObjectiveDef>
+			<ObjectiveID>0</ObjectiveID>
+			<DisableQuestChoiceTooltips>0</DisableQuestChoiceTooltips>
+			<PopupObjectiveMsg>0</PopupObjectiveMsg>
+			<QuestConditionDef>
+				<ID>1</ID>
+				<Objective>
+					<Icon>Mana_32.png</Icon>
+					<Text>Buy a Sap Distillate</Text>
+					<IsOptional>0</IsOptional>
+				</Objective>
+				<Class>ChoiceUnlock</Class>
+				<Type>CheckForResource</Type>
+				<TextData>Gold</TextData>
+				<NumericData>120</NumericData>
+			</QuestConditionDef>
+			<ChoiceText>Would you like to buy a Sap Distillate? I happen to have one at a bargain price.</ChoiceText>
+			<ChoiceMedallion>Peddler.png</ChoiceMedallion>
+			<ChoiceMedallionFrame>Medallion_Frame_17.png</ChoiceMedallionFrame>
+			<QuestChoiceDef>
+				<Description>No, I'm not interested.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>Oh, novelty, an undear Channeler.</PopupMessage>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>Yes, I'll buy the Sap Distillate (-120 Gildar).</Description>
+				<NextObjectiveID>1</NextObjectiveID>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Consumable_X_Potion_SapDistillate</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+			<QuestChoiceDef>
+				<Description>I can not afford it.</Description>
+				<NextObjectiveID>-1</NextObjectiveID>
+				<QuestFailure>1</QuestFailure>
+				<PopupMessage>My friend Zi-Pon, a Halfling of great renown - to some anyway - could teach you a thing or two about accumulating wealth.</PopupMessage>
+				<Treasure>
+					<GameModifier>
+						<ModType>GiveItem</ModType>
+						<Attribute>Consumable_X_PonziSchemes</Attribute>
+						<BoolVal1>100</BoolVal1>
+					</GameModifier>
+				</Treasure>
+			</QuestChoiceDef>
+		</QuestObjectiveDef>
+		<QuestObjectiveDef>
+			<ObjectiveID>1</ObjectiveID>
+			<QuestEnd>1</QuestEnd>
+		</QuestObjectiveDef>
+	</QuestDef>
+</Quests>

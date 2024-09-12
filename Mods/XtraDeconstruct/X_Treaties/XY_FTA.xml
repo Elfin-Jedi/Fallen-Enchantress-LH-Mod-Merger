@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<Treaties>
+	<Treaty InternalName="Treaty_X_FTA" Type="Trade">
+		<DisplayName>FTA</DisplayName>
+		<Description><![CDATA[Free Trade Agreement
+		::: +15% Income bonus per Season]]></Description>
+		<TreatyValueDescription><![CDATA[Following the ratification of a Free Trade Agreement (FTA), [Player_1] will receive an additional [TreatyValue1WithUnits] and [Player_2] will receive an additional [TreatyValue2WithUnits]]]></TreatyValueDescription>
+		<Image>Action_Scroll.png</Image>
+		<Units>Gildar per Season</Units>
+		<Duration>99</Duration>
+		<BasePerceivedValue>50</BasePerceivedValue>
+		<AllowsAdditionalTrading>1</AllowsAdditionalTrading>
+		<MinimumRelations><![CDATA[[RELATIONS_CLOSE]]]></MinimumRelations>
+		<Calculate InternalName = "IncomeBonus" ValueOwner="Player_1">
+			<Expression><![CDATA[0.15 * [Income]]]></Expression>
+		</Calculate>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Economics</Attribute>
+			<Value>0</Value>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>50</AIPriority>
+			<AITradeToGetValue>50</AITradeToGetValue>
+			<AITradeOutValue>50</AITradeOutValue>
+		</AIData>
+	</Treaty>
+</Treaties>

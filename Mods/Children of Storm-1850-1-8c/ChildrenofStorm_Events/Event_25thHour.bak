@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<Container>
+  <QuestDef InternalName="Event_13thMonth">
+    <DisplayName>25th Hour</DisplayName>
+    <Description>For some reason the world is spinning slower around the sun. Normally a day is divided into 24 hours, but now there is time enough each day to fill up 25 hours. What's more, those who study the arcane arts find themselves capable of performing feats they previously could only have dreamed of during this hour every day.
+
+For the next 25 turns, any Champion that levels up has a chance to learn Apprentice-level magic for Water, Fire, Earth and Air spellbooks. If they learn this level, the following levels will follow as usual.</Description>
+    <IsStartingPointQuest>0</IsStartingPointQuest>
+    <AllowQuestRejection>0</AllowQuestRejection>
+   <ShortTextAccept>We will use this to our advantage!</ShortTextAccept>
+    <QuestClass>Minor</QuestClass>
+    <Repeatable>0</Repeatable>
+   <TriggerType>TurnNumber</TriggerType>
+    <TriggerData>125</TriggerData>
+    <TriggerChance>5</TriggerChance>
+    <PostTriggerChance>5</PostTriggerChance>
+
+    <TriggerOrigin>EventLocation</TriggerOrigin>
+   <Image>Scroll.png</Image>
+    <Treasure>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_UnitStat_BG_CanLearnSpellbooks</StrVal>
+        <Value>100</Value>
+        <Duration>25</Duration>
+      </GameModifier>
+    </Treasure>
+    <QuestObjectiveDef>
+      <ObjectiveID>0</ObjectiveID>
+      <QuestEnd>1</QuestEnd>
+    </QuestObjectiveDef>
+  </QuestDef>
+ 
+
+
+      <PlayerAbilityType InternalName="A_UnitStat_BG_CanLearnSpellbooks">
+        <DisplayName>Unit Hit Point Bonus</DisplayName>
+        <Description>Provides a bonus to the hit points of all units.</Description>
+	<Icon>Kingdom_Crest_02.png</Icon>
+</PlayerAbilityType>
+
+
+
+
+
+
+
+</Container>

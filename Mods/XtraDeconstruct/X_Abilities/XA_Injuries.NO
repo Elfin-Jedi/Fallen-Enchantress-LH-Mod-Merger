@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<AbilityBonuses>
+	<AbilityBonus InternalName="Injury_X_Bitten">
+		<AbilityBonusType>Unit_Injury</AbilityBonusType>
+		<AbilityBonusOption InternalName="Injury_X_Bitten">
+			<DisplayName>Bitten</DisplayName>
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>TurnedUndead</Attribute>
+				<Target>Unit</Target>
+			</Prereq>
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>Reliquary_SurgeonBeetle1</Attribute>
+				<Target>Unit</Target>
+			</Prereq>
+			<Description>ABSTRACT
+			::: I don't feel so good.
+			
+			STATS
+			::: -5 HP
+			
+			INJURY
+			::: +1
+			::: Curable if acquired</Description>
+			<GameModifier>
+				<Provides>ABSTRACT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>BattleAutoCastSpell</Attribute>
+				<StrVal>Spell_X_Cloverfield</StrVal>
+				<Value>100</Value>
+				<Provides>::: I don't feel so good.</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>STATS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_HitPoints</StrVal>
+				<Provides>::: -5 HP</Provides>
+				<Value>-5</Value>
+			</GameModifier>
+			<GameModifier>
+				<Provides>INJURY</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_HasInjuries</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_Injury</StrVal>
+				<Value>1</Value>
+				<Provides>::: Curable if acquired</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Ability_X_Immunity_Injuries</Attribute>
+			</Prereq>
+			<Icon>Injury_X_Bitten.png</Icon>
+			<Type>Weakness</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Injury_X_KillMe">
+		<AbilityBonusType>Unit_Injury</AbilityBonusType>
+		<AbilityBonusOption InternalName="Injury_X_KillMe">
+			<DisplayName>Defiled</DisplayName>
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>TurnedUndead</Attribute>
+				<Target>Unit</Target>
+			</Prereq>
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>Reliquary_SurgeonBeetle1</Attribute>
+				<Target>Unit</Target>
+			</Prereq>
+			<Description>ABSTRACT
+			::: Killl meee.
+			
+			RESOURCES
+			::: -1 Fame per Season
+			
+			INJURY
+			::: +1
+			::: Curable if acquired</Description>
+			<GameModifier>
+				<Provides>ABSTRACT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>BattleAutoCastSpell</Attribute>
+				<StrVal>Spell_X_Defiled</StrVal>
+				<Value>100</Value>
+				<Provides>::: Killl meee.</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>RESOURCES</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>ProduceResource</Attribute>
+				<StrVal>Fame</StrVal>
+				<Value>-1</Value>
+				<Provides>::: -1 Fame per Season</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>INJURY</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_HasInjuries</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_Injury</StrVal>
+				<Value>1</Value>
+				<Provides>::: Curable if acquired</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Ability_X_Immunity_Injuries</Attribute>
+			</Prereq>
+			<Icon>Injury_X_KillMe.png</Icon>
+			<Type>Weakness</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+</AbilityBonuses>

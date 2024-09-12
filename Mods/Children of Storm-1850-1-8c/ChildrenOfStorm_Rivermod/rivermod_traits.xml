@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<Container>
+  <AbilityBonus InternalName="Forged_in_Fire">
+    <AbilityBonusOption InternalName="Forged_in_Fire">
+      <DisplayName>Forged in Fire</DisplayName>
+      <Description>Attack ignore 15% of the victim's Defense, +25% Fire resistance. +2 Fire Attack.</Description>
+      <Icon>Stat_AttackFire_Icon.png</Icon>
+                <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_ArmorPierce</StrVal>
+                <Value>15</Value>
+                <Provides>Ignores 15% of the victim's Defense</Provides>
+            </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Attack_Fire</StrVal>
+        <Value>2</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistFire</StrVal>
+        <Value>25</Value>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Witchmark">
+    <AbilityBonusOption InternalName="Witchmark">
+      <DisplayName>Witchmark</DisplayName>
+      <Description>+50 Poison resistance, +2 Poison Attack. </Description>
+      <Icon>Stat_AttackPoison_Icon.png</Icon>
+       <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Attack_Poison</StrVal>
+        <Value>3</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistPoison</StrVal>
+        <Value>50</Value>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="BornInBlood">
+    <AbilityBonusOption InternalName="BornInBlood">
+      <DisplayName>Born in Blood</DisplayName>
+      <Description>+10% Hitpoints, +1 Tactical Health regen (+0.5 per level). +10 resistance to all Physical attacks.</Description>
+      <Icon>Stat_Constitution_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_HitPoints</StrVal>
+        <Multiplier>1.10</Multiplier>
+		<Provides>+10% Hit Points</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_TacticalHealthRegen</StrVal>
+        <Value>1</Value>
+	  <Provides>+1 Tactical Health Regeneration</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_TacticalHealthRegen</StrVal>
+        <Value>0.5</Value>
+        <PerLevel>1</PerLevel>
+	  <Provides>+0.5 (per level) Tactical Health Regeneration</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistPierce</StrVal>
+		<Provides>+10 Pierce Resistance</Provides>
+        <Value>10</Value>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+
+
+    <AbilityBonus InternalName="BornInBlood2">
+    <AbilityBonusOption InternalName="BornInBlood2">
+      <DisplayName>Born in Blood</DisplayName>
+      <Description>+25% Hitpoints, +1 Tactical Health regen (+0.5 per level). +10 resistance to all Physical attacks.</Description>
+      <Icon>Stat_Constitution_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_HitPoints</StrVal>
+        <Multiplier>1.25</Multiplier>
+		<Provides>+25% Hit Points</Provides>
+      </GameModifier>
+         <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_TacticalHealthRegen</StrVal>
+        <Value>1</Value>
+
+	  <Provides>+1 Tactical Health Regeneration</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_TacticalHealthRegen</StrVal>
+        <Value>0.5</Value>
+        <PerLevel>1</PerLevel>
+	  <Provides>+0.5 (per level) Tactical Health Regeneration</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistPierce</StrVal>
+		<Provides>+10 Pierce Resistance</Provides>
+        <Value>10</Value>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+
+  <AbilityBonus InternalName="Hellspawned">
+    <AbilityBonusOption InternalName="Hellspawned">
+      <DisplayName>Instant Evolution</DisplayName>
+      <Description>When unit is struck in melee, has a combined 40% chance for one of the following to happen: +20 Dodge for 1 round, +10 Dodge for 2 rounds, +20 Accuracy for 1 round, Healed for 8+4 per (DeathShard/Lifeshard), Unit gains 3 Initiatve for 2 rounds.</Description>
+      <Icon>deathtoken.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>MeleeDefenseAppliesSpell</Attribute>
+        <StrVal>Rivermod_InstantEvolution</StrVal>
+		<Provides>When unit is struck in melee, has a combined 40% chance for one of the following to happen: +20 Dodge for 1 round, +10 Dodge for 2 rounds, +20 Accuracy for 1 round, Healed for 8+4 per (DeathShard/Lifeshard), Unit gains 3 Initiatve for 2 rounds.</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+</Container>

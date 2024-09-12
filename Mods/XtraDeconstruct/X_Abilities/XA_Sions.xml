@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<AbilityBonuses>
+	<AbilityBonus InternalName="Ability_X_Sions">
+		<AbilityBonusOption InternalName="Ability_X_Sions">
+			<DisplayName>Sions</DisplayName>
+			<PerkTreePosX>0</PerkTreePosX>
+			<PerkTreePosY>5</PerkTreePosY>
+			<Description>CORE
+			::: +33% ATK
+			
+			EXPERIENCE BONUS
+			::: +100%
+			
+			STATS
+			::: 40 Base HP
+			::: Can wear Plate armor
+			
+			XOTIC
+			::: Is Humanoid
+			::: Is Trogs</Description>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_NonMonsterModel</StrVal>
+				<Multiplier>0</Multiplier>
+				<Provides>CORE</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Attack_Pierce</StrVal>
+				<Multiplier>1.33</Multiplier>
+				<Provides>::: +33% ATK</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_NonSovereign</StrVal>
+				<Multiplier>0</Multiplier>
+				<Provides>EXPERIENCE BONUS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ExpBonus</StrVal>
+				<Value>100</Value>
+				<Provides>::: +100%</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>STATS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_HitPoints</StrVal>
+				<Value>32</Value>
+				<Provides>::: 40 Base HP</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ArmorProficiency</StrVal>
+				<Value>2</Value>
+				<Provides>::: Can wear Plate armor</Provides>
+			</GameModifier>
+			<GameModifier>
+				<Provides>STATS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_IsHumanoid</StrVal>
+				<Value>1</Value>
+				<Provides>::: Is Humanoid</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_BG_IsRace_Trogs</StrVal>
+				<Value>1</Value>
+				<Provides>::: Is Trogs</Provides>
+			</GameModifier>
+			<Icon>Ability_X_Sions.png</Icon>
+			<Type>Aggressive</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_Z</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+</AbilityBonuses>

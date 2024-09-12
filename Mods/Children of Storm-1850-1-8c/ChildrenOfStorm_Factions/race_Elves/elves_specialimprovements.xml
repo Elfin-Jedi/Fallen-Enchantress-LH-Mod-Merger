@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<Container>
+ 
+  <ImprovementType InternalName="LoggingCamp">
+    <Prereq>
+      <Type>RestrictedAbilityBonusOption</Type>
+      <Attribute>NoDefensivestructures_Elf</Attribute>
+      <Target>Player</Target>
+    </Prereq>
+  </ImprovementType>
+
+    <ImprovementType InternalName="LumberYard">
+    <Prereq>
+      <Type>RestrictedAbilityBonusOption</Type>
+      <Attribute>NoDefensivestructures_Elf</Attribute>
+      <Target>Player</Target>
+    </Prereq>
+  </ImprovementType>
+
+
+      <ImprovementType InternalName="TimberMill">
+    <Prereq>
+      <Type>RestrictedAbilityBonusOption</Type>
+      <Attribute>NoDefensivestructures_Elf</Attribute>
+      <Target>Player</Target>
+    </Prereq>
+  </ImprovementType>
+
+
+
+
+  <!--
+           <Prereq>
+      <Type>AbilityBonusOption</Type>
+      <Attribute>NoDefensivestructures_Elf</Attribute>
+      <Target>Player</Target>
+    </Prereq>
+    -->
+  
+
+  <ImprovementType InternalName="HedgeWall">
+    <Prereq>
+      <Type>RestrictedAbilityBonusOption</Type>
+      <Attribute>NoDefensivestructures_Elf</Attribute>
+      <Target>Player</Target>
+    </Prereq>
+  </ImprovementType>
+  <ImprovementType InternalName="Fort">
+    <Prereq>
+      <Type>RestrictedAbilityBonusOption</Type>
+      <Attribute>NoDefensivestructures_Elf</Attribute>
+      <Target>Player</Target>
+    </Prereq>
+  </ImprovementType>
+
+
+
+
+      <ImprovementType InternalName="HedgeWall_Elf">
+        <DisplayName>Elven Hedge Wall</DisplayName>
+        <RequiresCity>1</RequiresCity>
+        <BarredTerrain>River</BarredTerrain>
+        <BarredTerrain>SwampTerrain</BarredTerrain>
+        <PreferredTerrain>City</PreferredTerrain>
+        <PreferredTerrain>Category:Land</PreferredTerrain>
+        <PreferredTerrain>Category:Forest</PreferredTerrain>
+        <RequiresCityImprovement>1</RequiresCityImprovement>
+        <RequiredImprovement>Fortress</RequiredImprovement>
+        <UpgradesToImprovement>Fort_Elf</UpgradesToImprovement>
+        <UpgradeTier>1</UpgradeTier>
+             <Prereq>
+      <Type>AbilityBonusOption</Type>
+      <Attribute>NoDefensivestructures_Elf</Attribute>
+      <Target>Player</Target>
+    </Prereq>
+        <LaborToBuild>208</LaborToBuild>
+        <GameModifier>
+            <ModType>City</ModType>
+            <Attribute>AdjustDefendingUnit</Attribute>
+            <StrVal>UnitStat_CombatSpeed</StrVal>
+            <Value>1</Value>
+            <Provides>+1 Initiative for Defending Units</Provides>
+            <UpgradeComparisonID>1</UpgradeComparisonID>
+            <UpgradeComparisonText>Defending Unit Initiative</UpgradeComparisonText>
+        </GameModifier>
+        <GameModifier>
+            <ModType>City</ModType>
+            <Attribute>UpgradeCityWalls</Attribute>
+            <StrVal>CPELF_CityWalls_Hedge</StrVal>
+        </GameModifier>
+        <GameModifier>
+            <ModType>CityDefenseSummon</ModType>
+            <Attribute>SummonUnitByClass</Attribute>
+	    <Value>2</Value>
+	    <Multiplier>3</Multiplier>
+            <Provides>+2 City Defender Groups</Provides>
+            <UnitClass>CityDefender</UnitClass>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+            <AITag>Defensive</AITag>
+            <AIAtWarMultiplier>3</AIAtWarMultiplier>
+        </AIData>
+        <ArtDef>HedgeWall_ArtDef</ArtDef>
+
+</ImprovementType>
+
+
+
+
+
+
+      <ImprovementType InternalName="Fort_Elf">
+        <DisplayName>Fort</DisplayName>
+        <RequiresCity>1</RequiresCity>
+        <BarredTerrain>River</BarredTerrain>
+        <BarredTerrain>SwampTerrain</BarredTerrain>
+        <PreferredTerrain>City</PreferredTerrain>
+        <PreferredTerrain>Category:Land</PreferredTerrain>
+        <PreferredTerrain>Category:Forest</PreferredTerrain>
+        <RequiresCityImprovement>1</RequiresCityImprovement>
+        <RequiredImprovement>Fortress</RequiredImprovement>
+        <UpgradeTier>2</UpgradeTier>
+           <Prereq>
+      <Type>AbilityBonusOption</Type>
+      <Attribute>NoDefensivestructures_Elf</Attribute>
+      <Target>Player</Target>
+    </Prereq>
+        <Prereq>
+            <Type>Tech</Type>
+            <Attribute>Construction</Attribute>
+        </Prereq>
+        <LaborToBuild>540</LaborToBuild>
+        <GameModifier>
+            <ModType>City</ModType>
+            <Attribute>AdjustDefendingUnit</Attribute>
+            <StrVal>UnitStat_CombatSpeed</StrVal>
+            <Value>2</Value>
+            <Provides>+2 Initiative for Defending Units</Provides>
+            <UpgradeComparisonID>1</UpgradeComparisonID>
+            <UpgradeComparisonText>Defending Unit Initiative</UpgradeComparisonText>
+        </GameModifier>
+        <GameModifier>
+            <ModType>City</ModType>
+            <Attribute>UpgradeCityWalls</Attribute>
+            <StrVal>CPELF_CityWalls_Advanced</StrVal>
+        </GameModifier>
+        <GameModifier>
+            <ModType>CityDefenseSummon</ModType>
+            <Attribute>SummonUnitByClass</Attribute>
+            <Value>2</Value>
+            <Provides>+2 City Defender Groups</Provides>
+	    <UnitClass>CityDefender</UnitClass>
+	    <Multiplier>3</Multiplier>
+        </GameModifier>
+        <GameModifier>
+            <ModType>CityDefenseSummon</ModType>
+            <Attribute>SummonUnitByClass</Attribute>
+	    <Value>1</Value>
+	    <Multiplier>3</Multiplier>
+            <Provides>+1 City Archer Group</Provides>
+            <UnitClass>CityArcher</UnitClass>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+            <AITag>Defensive</AITag>
+        </AIData>
+        <ArtDef>Art_Castle</ArtDef>
+</ImprovementType>
+
+
+
+</Container>

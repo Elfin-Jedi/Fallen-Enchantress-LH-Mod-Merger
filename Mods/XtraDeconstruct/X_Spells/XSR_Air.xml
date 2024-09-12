@@ -1,0 +1,2032 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<Spells>
+	<!--STRATEGIC-->
+	<SpellDef InternalName="Spell_XL_Blizzard_FA">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[S] Blizzard</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Air4</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_SovereignScreenHack</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>80</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Create a blizzard, damaging and slowing enemy units.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] BLIZZARD
+		::: Create a blizzard, damaging and slowing enemy units.
+		
+		DOMAIN
+		::: Strategic
+		::: Enemy
+		::: Unit
+		
+		EFFECT
+		::: (((Caster's Level + Air Shard + 1) /3)) Water\Cold DMG
+		::: - 10% Movement
+		
+		FIGHTABLE
+		::: Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: Instant
+		::: 2 Seasons
+		
+		OTHER
+		::: Air Shards (+1 per)
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Air Master
+		
+		::: Research
+		::: ::: 560</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<UnitAppSpecifier>ApplyToAll</UnitAppSpecifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Cold</AttackStat>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumAirShards] + [Unit_GetLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] * 0.333]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2] + 3]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustArmyStat</Attribute>
+			<StrVal>UnitStat_Moves</StrVal>
+			<Duration>2</Duration>
+			<Multiplier>0.9</Multiplier>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>100</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_XL_Blizzard_FA.png</IconFG>
+		<CameraShakeDuration>2.25</CameraShakeDuration>
+		<CameraShakeStrength>0.1</CameraShakeStrength>
+		<HitSoundFX>Spell_Blizzard_01</HitSoundFX>
+		<HitSoundFX>Spell_Blizzard_02</HitSoundFX>
+		<ModifierDelay>2</ModifierDelay>
+		<WorldLightOverrideTime>6</WorldLightOverrideTime>
+		<WorldLightOverrideAmbiant>70,70,70</WorldLightOverrideAmbiant>
+		<WorldLightOverrideDiffuse>80,100,120</WorldLightOverrideDiffuse>
+		<WorldLightOverrideRim0>60,60,260</WorldLightOverrideRim0>
+		<WorldLightOverrideRim1>60,160,260</WorldLightOverrideRim1>
+		<SpellDefEffect>
+			<EffectName>T_Blizzard_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_XL_Seer_FA">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[S] Seer (Air)</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Air3</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_SovereignScreenHack</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<CanStack>0</CanStack>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>8</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Reveals all areas within 6 tiles of the caster.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] SEER (AIR)
+		::: Reveals all areas within 6 tiles of the caster.
+		
+		DOMAIN
+		::: Strategic
+		::: Self
+		
+		EFFECT
+		::: Reveal
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: 1 Season
+		
+		OTHER
+		::: 13x13 Area
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Air Mage
+		
+		::: Research
+		::: ::: 392</Description>
+		<SpellBookSortCategory>World</SpellBookSortCategory>
+		<SpellBookSortSubCategory>WOther</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>Self</SpellTargetType>
+		<AlwaysPromptForCaster>1</AlwaysPromptForCaster>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>Reveal</Attribute>
+			<Duration>1</Duration>
+			<Value>6</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_XL_Seer_FA.png</IconFG>
+		<HitSoundFX>Spell_EyesOfTheEagle_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_EyesoftheEagle_Particle</EffectName>
+			<LocalPosition>0,50,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_XL_Snow_FA">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[S] Snow</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Air3</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_SovereignScreenHack</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>3</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Create an Arctic Tile.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] SNOW
+		::: Create an Arctic Tile.
+		
+		DOMAIN
+		::: Strategic
+		::: Neutral+
+		::: Friendly or Empty Tile
+		::: Land
+		
+		EFFECT
+		::: + Arctic Tile
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Transformed
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Air Mage
+		
+		::: Research
+		::: ::: 320</Description>
+		<SpellBookSortCategory>World</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Map</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Terraform</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>EmptyTile</SpellTargetType>
+		<SpellTargetTileOccupied>Empty</SpellTargetTileOccupied>
+		<Range>5</Range>
+		<ValidTerrainCategory>ArcticTerrain</ValidTerrainCategory>
+		<ValidTerrainCategory>Beach</ValidTerrainCategory>
+		<ValidTerrainCategory>DesertTerrain</ValidTerrainCategory>
+		<ValidTerrainCategory>Fertile_Land</ValidTerrainCategory>
+		<ValidTerrainCategory>Forest</ValidTerrainCategory>
+		<ValidTerrainCategory>HillsTerrain</ValidTerrainCategory>
+		<ValidTerrainCategory>Land</ValidTerrainCategory>
+		<ValidTerrainCategory>Rugged_Land</ValidTerrainCategory>
+		<ValidTerrainCategory>SwampTerrain</ValidTerrainCategory>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_XL_Snow_FA.png</IconFG>
+		<TerrainStamp>Stamp_XL_Arctic_FA</TerrainStamp>
+		<StampMorphTime>1</StampMorphTime>
+	</SpellDef>
+	<SpellDef InternalName="Spell_XL_Windmills_FA">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[S] Windmills</DisplayName>
+		<CanStack>0</CanStack>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Air2</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_SovereignScreenHack</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>10</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>+0.5 Beer per Essence in the enchanted city.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] WINDMILLS
+		::: +0.5 Beer per Essence in the enchanted city.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: City
+		
+		EFFECT
+		::: (Essence x0.5) Beers
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Dispelled (Enchantment)
+		
+		OTHER
+		::: Caster must be Sov
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Air Disciple
+		
+		::: Research
+		::: ::: 147</Description>
+		<SpellBookSortCategory>City</SpellBookSortCategory>
+		<SpellBookSortSubCategory>CityEnchantment</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>ImpResourceBooster</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>FriendlyCity</SpellTargetType>
+		<CasterMustBeSov>1</CasterMustBeSov>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Resource_XL_Beer</Attribute>
+			<Duration>-1</Duration>
+			<HasUpgradableValue>1</HasUpgradableValue>
+			<PerTurn>1</PerTurn>
+			<Calculate InternalName="Calc" ValueOwner="TargetCity">
+				<Expression><![CDATA[[TileYieldEssence] * 0.5]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<ValidTerrainCategory>City</ValidTerrainCategory>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>45</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_XL_Windmills_FA.png</IconFG>
+		<HitSoundFX>Spell_Inspiration_01</HitSoundFX>
+		<SpellCastEffectName>Brilliance</SpellCastEffectName>
+		<SpellCastEffectScale>.4</SpellCastEffectScale>
+		<SpellDefEffect>
+			<EffectName>S_Inspiration_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.75</EffectScale>
+			<EffectDelay>0.5</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_XL_Windwalk_FA">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[S] Windwalk</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Air1</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_SovereignScreenHack</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>40</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<PerTurn>1</PerTurn>
+			<Amount>1</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<PreventStackingWith>Spell_XL_Wildfire_FF</PreventStackingWith>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Increases the movement of the target's army by 15%.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] WINDWALK
+		::: Increases the movement of the target's army by 15%.
+		
+		DOMAIN
+		::: Strategic
+		::: Self
+		
+		EFFECT
+		::: Movement x 1.15
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Dispelled (Enchantment)
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Air Apprentice
+		
+		::: Research
+		::: ::: 21</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>Self</SpellTargetType>
+		<CasterMustBeSov>1</CasterMustBeSov>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustArmyStat</Attribute>
+			<StrVal>UnitStat_Moves</StrVal>
+			<Duration>-1</Duration>
+			<Multiplier>1.15</Multiplier>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>190</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_XL_Windwalk_FA.png</IconFG>
+		<HitSoundFX>Spell_TirelessMarch_01</HitSoundFX>
+		<SpellCastEffectName>T_Erosion_Particle</SpellCastEffectName>
+		<SpellCastEffectScale>1</SpellCastEffectScale>
+		<SpellCastProjectile>1</SpellCastProjectile>
+		<SpellCastProjectileSpeed>700</SpellCastProjectileSpeed>
+		<SpellDefEffect>
+			<EffectName>T_ErosionImpact_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.5</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<!--TACTICAL-->
+	<SpellDef InternalName="Spell_XL_CallLightning_FA">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Call Lightning</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Air1</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_SovereignScreenHack</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>24</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Lightning strikes the enemy.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] CALL LIGHTNING
+		::: Lightning strikes the enemy.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Unit
+		
+		EFFECT
+		::: ((Level + Air Shards + 1) x2) Air\Lightning DMG
+		
+		FIGHTABLE
+		::: Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: Air Shards (+2 per)
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Air Apprentice
+		
+		::: Research
+		::: ::: 4</Description>
+		<FormattedDescription>Does %d Air\Lightning DMG to the target.</FormattedDescription>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<IsResistable>1</IsResistable>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Lightning</AttackStat>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumAirShards] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] + [Unit_GetLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc2] * 2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc3]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc3]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Lightning</AttackStat>
+			<IsForSpellResist>1</IsForSpellResist>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumAirShards] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] + [[Unit_GetLevel]]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>3</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>325</AIPriority>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+					<Expression><![CDATA[[UnitStat_ResistLightning]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc] < 75]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_XL_CallLightning_FA.png</IconFG>
+		<HitSoundFX>Spell_Storm_01</HitSoundFX>
+		<WorldLightOverrideTime>2</WorldLightOverrideTime>
+		<WorldLightOverrideAmbiant>30,30,30</WorldLightOverrideAmbiant>
+		<WorldLightOverrideDiffuse>30,30,30</WorldLightOverrideDiffuse>
+		<WorldLightOverrideRim0>212,0,192</WorldLightOverrideRim0>
+		<WorldLightOverrideRim1>0,132,234</WorldLightOverrideRim1>
+		<SpellDefEffect>
+			<EffectName>T_Storm_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>3</EffectScale>
+			<EffectDelay>0.25</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_XL_ChainLightning_FA">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Chain Lightning</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Air5</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_SovereignScreenHack</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>35</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Lightning strikes enemies in a 7 tiles line.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] CHAIN LIGHTNING
+		::: Lightning strikes enemies in a 7 tiles line.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Units
+		
+		EFFECT
+		::: (((Level + 5) x2) + Air Shards) Air\Lightning DMG
+		
+		FIGHTABLE
+		::: Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: 1x7 Area
+		::: Air Shards (+1 per)
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Air Archmage
+		
+		::: Research
+		::: ::: 985</Description>
+		<FormattedDescription>Does %d Air\Lightning damage to all units in a 7 tiles line.</FormattedDescription>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+		<IsResistable>1</IsResistable>
+		<Radius>7</Radius>
+		<RadiusType>LINE_BACKWARD</RadiusType>
+		<Range>7</Range>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Lightning</AttackStat>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel] * 2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] + [UnitOwner_GetNumAirShards]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc2] + 10]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc3]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc3]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Lightning</AttackStat>
+			<IsForSpellResist>1</IsForSpellResist>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel] + [UnitOwner_GetNumAirShards]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] * 0.5]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc2] + 5]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc3]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>2</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>555</AIPriority>
+			<AIMinSpellTargets>3</AIMinSpellTargets>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+					<Expression><![CDATA[[UnitStat_ResistLightning]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc] < 75]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_XL_ChainLightning_FA.png</IconFG>
+		<HitSoundFX>Spell_Storm_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>Y_StaticBlast_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>2</EffectScale>
+			<EffectDelay>0.25</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+			<PlayOnAllTargets>1</PlayOnAllTargets>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_XL_CloudOfWar_FA">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Cloud of War</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Air3</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_SovereignScreenHack</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>4</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>A protective cloud forms around you.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] CLOUD OF WAR
+		::: A protective cloud forms around you.
+		
+		DOMAIN
+		::: Tactical
+		::: Self
+		
+		EFFECT
+		::: + (10 + Air Shards) Air\Lightning Resistance
+		::: + (3 + Air Shards) DEF
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Battle
+		
+		OTHER
+		::: Air Shards (+1 per)
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Air Mage
+		
+		::: Research
+		::: ::: 254</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>Self</SpellTargetType>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ResistLightning</StrVal>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumAirShards] + 10]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Pierce</StrVal>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumAirShards] + 3]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>225</AIPriority>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[Unit_GetHPCurrent]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[Unit_GetCurrentDamage]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc3">
+					<Expression><![CDATA[[Calc2] / [Calc1]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc3] < 1]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_XL_CloudOfWar_FA.png</IconFG>
+		<HitSoundFX>Spell_GiftOfIron_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_StoneSkin_Particle</EffectName>
+			<LocalPosition>0,25,0</LocalPosition>
+			<EffectScale>.4</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+			<PlayOnAllTargets>1</PlayOnAllTargets>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_XL_ConeOfCold_FA">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Cone of Cold</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Air5</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_SovereignScreenHack</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>30</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>A cone of cold air strikes enemy units.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] CONE OF COLD
+		::: A cone of cold air strikes enemy units.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Unit
+		
+		EFFECT
+		::: ((Level / 4) + 5 + Air Shards) Air\Lightning DMG
+		::: - (3 + Air Shards) Initiative
+		
+		FIGHTABLE
+		::: Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: 3x3 Area
+		::: Air Shards (+1 per)
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Air Archmage
+		
+		::: Research
+		::: ::: 868</Description>
+		<FormattedDescription>Does %d Air\Lightning DMG to all units in 3x3 Area. Target enemy units also suffers -3 to Initiative (-1 per Air shard) unless they resist.</FormattedDescription>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+		<IsResistable>1</IsResistable>
+		<Radius>1</Radius>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Lightning</AttackStat>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel] * 0.25]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumAirShards] + [Calc]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3">
+				<Expression><![CDATA[[Calc2] + 5]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc3]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc3]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Lightning</AttackStat>
+			<IsForSpellResist>1</IsForSpellResist>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel] * 0.2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] + 3]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<DisplayName>Slowed</DisplayName>
+			<Duration>-1</Duration>
+			<Effect>E_Slow_Particle</Effect>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumWAirShards] + 3]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc] * -1]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>3</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>425</AIPriority>
+			<AIMinSpellTargets>3</AIMinSpellTargets>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_XL_ConeOfCold_FA.png</IconFG>
+		<HitSoundFX>Spell_FreezeGroup</HitSoundFX>
+	</SpellDef>
+	<SpellDef InternalName="Spell_XL_EtherGauze_FA">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Ether Gauze</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Air1</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_SovereignScreenHack</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>8</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>All friendly units heals HP per Action.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] ETHER GAUZE
+		::: All friendly units heals HP per Action.
+		
+		DOMAIN
+		::: Tactical
+		::: Friendly
+		::: Units (ALL)
+		
+		EFFECT
+		::: + 2 HP per Action
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: 7 Actions
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Air Apprentice
+		
+		::: Research
+		::: ::: 41</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>AllFriendlyUnits</SpellTargetType>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_TacticalHealthRegen</StrVal>
+			<Value>2</Value>
+			<Duration>7</Duration>
+		</GameModifier>
+		<Cooldown>99</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>200</AIPriority>
+			<AIMinSpellTargets>3</AIMinSpellTargets>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_XL_EtherGauze_FA.png</IconFG>
+		<HitSoundFX>Spell_MassRegeneration_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_Regeneration_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>.75</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_XL_GuardianWinds_FA">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Guardian Winds (Air)</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Air2</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_SovereignScreenHack</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>4</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Target gains Dodge vs Ranged.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] GUARDIAN WINDS (AIR)
+		::: Target gains Dodge vs Ranged.
+		
+		DOMAIN
+		::: Tactical
+		::: Friendly
+		::: Unit
+		
+		EFFECT
+		::: + 60 Dodge vs Ranged
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Battle
+		
+		OTHER
+		::: Air Shards (+2 per)
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Air Disciple
+		
+		::: Research
+		::: ::: 104</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>FriendlyUnit</SpellTargetType>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_DodgeAgainstRanged</StrVal>
+			<DisplayName>Shielded</DisplayName>
+			<Duration>-1</Duration>
+			<Value>60</Value>
+			<Effect>E_GuardianWind_Particle</Effect>
+		</GameModifier>
+		<Cooldown>99</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>150</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_XL_GuardianWinds_FA.png</IconFG>
+		<HitSoundFX>Spell_GuardianWind_01</HitSoundFX>
+	</SpellDef>
+	<SpellDef InternalName="Spell_XL_Headwind_FA">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Headwind</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Air3</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_SovereignScreenHack</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>5</Amount>
+		</SpellResourceCost>
+		<PreventStackingWith>Slow</PreventStackingWith>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Target loses 10% Initiative.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] ABC
+		::: Target loses 10% Initiative.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Unit
+		
+		EFFECT
+		::: - 10% Initiative
+		
+		FIGHTABLE
+		::: Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Battle
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Air Mage
+		
+		::: Research
+		::: ::: 197</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitCurse</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Debuff</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<IsResistable>1</IsResistable>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<DisplayName>Slowed</DisplayName>
+			<Duration>-1</Duration>
+			<Effect>E_Slow_Particle</Effect>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_CombatSpeed] * -0.1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>3</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>666</AIPriority>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+					<Expression><![CDATA[[Unit_GetHPCurrent]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc] > 10]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_XL_Headwind_FA.png</IconFG>
+		<HitSoundFX>Spell_FreezeGroup</HitSoundFX>
+	</SpellDef>
+	<SpellDef InternalName="Spell_XL_LightningBlast_FA">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Lightning Blast</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Air5</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_SovereignScreenHack</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>5</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>When you are struck, lightning strikes the attacker.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] LIGHTNING BLAST
+		::: When you are struck, lightning strikes the attacker.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Unit (Random)
+		
+		EFFECT
+		::: Melee DEF
+		::: ((Level / 4) + 5) Air\Lightning DMG
+		
+		FIGHTABLE
+		::: Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Air Archmage
+		
+		::: Research
+		::: ::: 758</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>RandomEnemyUnit</SpellTargetType>
+		<IsResistable>1</IsResistable>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Lightning</AttackStat>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel] * 0.25]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc] + 5]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_XL_LightningCharge_FA.png</IconFG>
+		<HitSoundFX>Spell_StaticBlast_01</HitSoundFX>
+		<HitSoundFX>Spell_StaticBlast_02</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>Y_StaticBlast_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>2</EffectScale>
+			<EffectDelay>0.25</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+			<PlayOnAllTargets>1</PlayOnAllTargets>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_XL_LightningCharge_FA">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Lightning Charge</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Air5</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_SovereignScreenHack</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>10</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>When you are struck, lightning strikes the attacker.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] LIGHTNING CHARGE
+		::: When you are struck, lightning strikes the attacker.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Unit
+		
+		EFFECT
+		::: Melee DEF
+		::: ((Level / 4) + 5) Air\Lightning DMG
+		
+		FIGHTABLE
+		::: Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: Random
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Air Archmage
+		
+		::: Research
+		::: ::: 758</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>Self</SpellTargetType>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>MeleeDefenseAppliesSpell</Attribute>
+			<StrVal>Spell_XL_LightningBlast_FA</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<Cooldown>3</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>400</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_XL_LightningCharge_FA.png</IconFG>
+		<HitSoundFX>Spell_StaticBlast_01</HitSoundFX>
+		<HitSoundFX>Spell_StaticBlast_02</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>Y_StaticBlast_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>2</EffectScale>
+			<EffectDelay>0.25</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+			<PlayOnAllTargets>1</PlayOnAllTargets>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_XL_PoisonCloud_FA">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Poison Cloud</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Air4</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_SovereignScreenHack</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>8</Amount>
+		</SpellResourceCost>
+		<CastTime>1</CastTime>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Target takes DMG per Action.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] POISON CLOUD
+		::: Target takes DMG per Action.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Unit
+		
+		EFFECT
+		::: ((Air Shards / 2) + 2) Death\Poison DMG
+		
+		FIGHTABLE
+		::: Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: 10 Actions
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Air Master
+		
+		::: Research
+		::: ::: 472</Description>
+		<FormattedDescription>Target takes %d Death\Poison DMG per action for 10 actions, unless resisted.</FormattedDescription>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<IsResistable>1</IsResistable>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Poison</AttackStat>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Duration>10</Duration>
+			<Effect>E_Poison_Particle</Effect>
+			<PerTurn>1</PerTurn>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumAirShards] + 2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc] * 0.5]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc] * 0.5]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>3</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>425</AIPriority>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+					<Expression><![CDATA[[UnitStat_ResistPoison]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc] < 66]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_XL_PoisonCloud_FA.png</IconFG>
+		<HitSoundFX>Spell_Contagion_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_Contagion_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>.3</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+			<PlayOnAllTargets>1</PlayOnAllTargets>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_XL_SkySabre_FA">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Sky Sabre</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Air5</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_SovereignScreenHack</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>10</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Converts Physical damages in Air\Lightning damages.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] SKY SABRE
+		::: Converts Physical damages in Air\Lightning damages.
+		
+		DOMAIN
+		::: Tactical
+		::: Friendly
+		::: Champion or Sov
+		
+		EFFECT
+		::: (Normal ATK + 5) Air\Lightning ATK
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Battle
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Air Archmage
+		
+		::: Research
+		::: ::: 1111</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>FriendlyChampionOrSov</SpellTargetType>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Lightning</StrVal>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_Attack_Pierce]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc] + 5]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Boost</StrVal>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_Attack_Pierce]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[0 - [Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>100</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_XL_SkySabre_FA.png</IconFG>
+		<HitSoundFX>Spell_StaticBlast_01</HitSoundFX>
+		<HitSoundFX>Spell_StaticBlast_02</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>Y_StaticBlast_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>2</EffectScale>
+			<EffectDelay>0.25</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+			<PlayOnAllTargets>1</PlayOnAllTargets>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_XL_Stun_FA">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Stun (Air)</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Air2</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_SovereignScreenHack</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>6</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Target might lose its next Action.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] STUN (AIR)
+		::: Target might lose its next Action.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		:::	Unit
+		
+		EFFECT
+		::: - 1 Action
+		::: ((Caster's Level - Target's Level) x25)% Chance
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: 1 Action
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Air Disciple
+		
+		::: Research
+		::: ::: 69</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitCurse</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Debuff</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<IsResistable>1</IsResistable>
+		<GameModifier>
+			<ModType>TacticalUnit</ModType>
+			<Attribute>ChanceToLoseNextTurn</Attribute>
+			<DisplayName>Dazed</DisplayName>
+			<Duration>1</Duration>
+			<Effect>E_Daze_Particle</Effect>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[Unit_GetLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3">
+				<Expression><![CDATA[[Calc] - [Calc2]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc3] * 25]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>3</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>150</AIPriority>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[UnitStat_GetLevel]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc2" ValueOwner="TargetUnit">
+					<Expression><![CDATA[[UnitStat_GetLevel]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc3">
+					<Expression><![CDATA[[Calc2] + 1]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc] > [Calc3]]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_XL_Stun_FA.png</IconFG>
+		<HitSoundFX>Spell_Daze_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>Y_Daze_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+			<PlayOnAllTargets>1</PlayOnAllTargets>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_XL_SummonI_FA">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Summon I (Air)</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Air4</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_SovereignScreenHack</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>30</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<PreventStackingWith>SummonShrill_Ability</PreventStackingWith><!--DoesNotWork-->
+		<PreventStackingWith>SummonAirElemental</PreventStackingWith><!--DoesNotWork-->
+		<PreventStackingWith>SummonAirElemental_Tactical</PreventStackingWith>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Summons a random air creature.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] SUMMON I (AIR)
+		::: Summons a random air creature.
+		
+		DOMAIN
+		::: Tactical
+		::: Empty Tile
+		
+		EFFECT
+		::: Random
+		::: + Air Elemental
+		::: + Air Shrill
+		::: + Wisp
+		
+		::: Level = SummonBonus + 3 or 2 or 1
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Battle
+		::: Until Killed
+		
+		OTHER
+		::: Air Shards (+1 per)
+		::: Summon Bonus
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Air Master
+		
+		::: Research
+		::: ::: 655</Description>
+		<SpellBookSortCategory>Summon</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Summon</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Summon</SpellSubClass>
+		<SpellTargetType>EmptyTile</SpellTargetType>
+		<SpellTargetTileOccupied>Empty</SpellTargetTileOccupied>
+		<AppliesRandomModifier>1</AppliesRandomModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<UnitClass>Summon_XL_AirElemental_FA</UnitClass>
+			<ApplyToSpellRadiusCenterOnly>1</ApplyToSpellRadiusCenterOnly>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumAirShards] + [UnitStat_BonusSummonLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc] + 3]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<UnitClass>Summon_XL_AirShrillG_FA</UnitClass>
+			<ApplyToSpellRadiusCenterOnly>1</ApplyToSpellRadiusCenterOnly>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumAirShards] + [UnitStat_BonusSummonLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc] + 2]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<UnitClass>Summon_XL_Wisp_FA</UnitClass>
+			<ApplyToSpellRadiusCenterOnly>1</ApplyToSpellRadiusCenterOnly>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumAirShards] + [UnitStat_BonusSummonLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc] + 1]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>5</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>275</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_XL_SummonI_FA.png</IconFG>
+		<HitSoundFX>Spell_SummonAirElemental_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_SummonAirElemental_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.5</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_XL_SummonII_FA">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Summon II (Air)</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Air5</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_SovereignScreenHack</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>225</Amount>
+		</SpellResourceCost>
+		<CastTime>1</CastTime>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Summon a Thunder Dragon for 7 actions.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] SUMMON II (AIR)
+		::: Summon a Thunder Dragon for 7 actions.
+		
+		DOMAIN
+		::: Tactical
+		::: Empty Tile
+		
+		EFFECT
+		::: + Thunder Dragon
+		::: Level = 10
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: 7 Actions
+		
+		OTHER
+		::: Air Shards (+1 per)
+		::: Summon Bonus
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Air Archmage
+		
+		::: Research
+		::: ::: 1525</Description>
+		<SpellBookSortCategory>Summon</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Summon</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Summon</SpellSubClass>
+		<SpellTargetType>EmptyTile</SpellTargetType>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<UnitClass>Summon_XL_ThunderD_FA</UnitClass>
+			<ApplyToSpellRadiusCenterOnly>1</ApplyToSpellRadiusCenterOnly>
+			<Duration>7</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumAirShards] + [UnitStat_BonusSummonLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc] + 10]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>99</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>633</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_XL_SummonII_FA.png</IconFG>
+		<HitSoundFX>Spell_ParidensReturn_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_ParidensReturn_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.4</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_XL_Swiftness_FA">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Swiftness</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Air1</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_SovereignScreenHack</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>8</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<PreventStackingWith>Haste_Adept</PreventStackingWith><!--DoesNotWork-->
+		<PreventStackingWith>Haste</PreventStackingWith>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Target's Initiative increases by 15%.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] SWIFTNESS
+		::: Target's Initiative increases by 15%.
+		
+		DOMAIN
+		::: Tactical
+		::: Friendly
+		::: Unit
+		
+		EFFECT
+		::: + 15% Initiative
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Battle
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Air Apprentice
+		
+		::: Research
+		::: ::: 9</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>FriendlyUnit</SpellTargetType>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<DisplayName>Hasted</DisplayName>
+			<Duration>-1</Duration>
+			<Effect>E_Celerity_Particle</Effect>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_CombatSpeed] * 0.15]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>99</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>750</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_XL_Swiftness_FA.png</IconFG>
+		<HitSoundFX>Spell_Haste_01</HitSoundFX>
+		<HitSoundFX>Spell_Haste_02</HitSoundFX>
+	</SpellDef>
+</Spells>

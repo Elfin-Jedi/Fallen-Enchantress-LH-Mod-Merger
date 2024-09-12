@@ -1,0 +1,239 @@
+<?xml version="1.0"?>
+<Container>
+  <!--   <ResourceType InternalName="ShiftingMaze">
+        <DisplayName>Shifting Maze</DisplayName>
+        <Type>ShiftingMaze</Type>
+        <IconColor>0,0,0</IconColor>
+        <Icon>Gfx//Icons//Res_Icon_Gold.png</Icon>
+        <ClothIcon>gfx\\TacticalIcons\\MetalOre_1.png</ClothIcon>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <ModelColor>0,0,0</ModelColor>
+        <Worth>1</Worth>
+        <Global>1</Global>
+        <Rarity>0.0</Rarity>
+        <Shared>0</Shared>
+        <TradedByCaravans>1</TradedByCaravans>
+        <ShownInGlobalDisplay>1</ShownInGlobalDisplay>
+        <Medallions InternalName="Gold_Res_Medallions">
+            <All>Res_Ores_Plains.png</All>
+        </Medallions>
+    </ResourceType>-->
+  <PlayerAbilityType InternalName="A_UnitStat_ChanceToCrit">
+    <DisplayName>Unit Hit Point Bonus</DisplayName>
+    <Description>Provides a bonus to the hit points of all units.</Description>
+    <Icon>Kingdom_Crest_02.png</Icon>
+  </PlayerAbilityType>
+  <PlayerAbilityType InternalName="A_Additive_TileYieldGrain">
+    <DisplayName>Grain Modifier</DisplayName>
+    <Description>Changes your faction grain yield for cities</Description>
+    <Icon>K_Grain_Elevator_01.png</Icon>
+  </PlayerAbilityType>
+  <PlayerAbilityType InternalName="A_Additive_TileYieldMaterials">
+    <DisplayName>Materials Modifier</DisplayName>
+    <Description>Changes your faction material yield for cities</Description>
+    <Icon>K_Grain_Elevator_01.png</Icon>
+  </PlayerAbilityType>
+  <PlayerAbilityType InternalName="A_Additive_TileYieldEssence">
+    <DisplayName>Materials Modifier</DisplayName>
+    <Description>Changes your faction material yield for cities</Description>
+    <Icon>K_Grain_Elevator_01.png</Icon>
+  </PlayerAbilityType>
+  <ResourceType InternalName="DeathLegionResource">
+    <DisplayName>Demon Souls</DisplayName>
+    <Type>Demon</Type>
+    <IconColor>0,0,0</IconColor>
+    <Icon>deathlegion_token.png</Icon>
+    <ClothIcon>deathlegion_token.png</ClothIcon>
+    <HideInHiergamenon>1</HideInHiergamenon>
+    <ModelColor>0,0,0</ModelColor>
+    <Worth>1</Worth>
+    <Global>1</Global>
+    <Rarity>0.0</Rarity>
+    <Shared>0</Shared>
+    <TradedByCaravans>1</TradedByCaravans>
+    <ShownInGlobalDisplay>1</ShownInGlobalDisplay>
+    <Medallions InternalName="Gold_Res_Medallions">
+      <All>deathlegion_token.png</All>
+    </Medallions>
+  </ResourceType>
+  <!-- demon resource, note defaultvalue = -100 which means factions start with 0% production. This hides production for all but deathlegion, who has a modifier with +100 = 100%-->
+  <PlayerAbilityType InternalName="A_Demon">
+    <DisplayName>Goblin production</DisplayName>
+    <Description>A faction's skill at mining ore.</Description>
+    <Icon>deathlegion_token.png</Icon>
+    <DefaultValue>-100</DefaultValue>
+  </PlayerAbilityType>
+  <ResourceType InternalName="ShadowResource">
+    <DisplayName>Shadow</DisplayName>
+    <Type>Shadow</Type>
+    <IconColor>0,0,0</IconColor>
+    <Icon>shadowresource.png</Icon>
+    <ClothIcon>shadowresource.png</ClothIcon>
+    <HideInHiergamenon>1</HideInHiergamenon>
+    <ModelColor>0,0,0</ModelColor>
+    <Worth>1</Worth>
+    <Global>1</Global>
+    <Rarity>0.0</Rarity>
+    <Shared>0</Shared>
+    <TradedByCaravans>1</TradedByCaravans>
+    <ShownInGlobalDisplay>1</ShownInGlobalDisplay>
+    <Medallions InternalName="Gold_Res_Medallions">
+      <All>deathlegion_token.png</All>
+    </Medallions>
+  </ResourceType>
+  <PlayerAbilityType InternalName="A_Shadow">
+    <DisplayName>Goblin production</DisplayName>
+    <Description>A faction's skill at mining ore.</Description>
+    <Icon>shadowresource.png</Icon>
+    <DefaultValue>-100</DefaultValue>
+  </PlayerAbilityType>
+  <ResourceType InternalName="Research_local">
+    <DisplayName>Local Research</DisplayName>
+    <Description>Produces Research</Description>
+    <Type>Research_local</Type>
+    <IconColor>0,0,0</IconColor>
+    <!--<Icon>Gfx//Icons//dude_icon.png</Icon>-->
+    <Icon>Tech_Icon.png</Icon>
+    <HideInHiergamenon>1</HideInHiergamenon>
+    <ModelColor>0,0,0</ModelColor>
+    <HideInHiergamenon>1</HideInHiergamenon>
+    <Worth>0</Worth>
+    <Global>0</Global>
+    <Stored>0</Stored>
+    <Rarity>0.0</Rarity>
+    <Shared>0</Shared>
+    <TradedByCaravans>0</TradedByCaravans>
+    <ShownInGlobalDisplay>0</ShownInGlobalDisplay>
+    <Medallions InternalName="Population_Res_Medallions">
+      <All>Res_Ores_Plains.png</All>
+    </Medallions>
+  </ResourceType>
+  <ResourceType InternalName="Research_localperm">
+    <DisplayName>Local Research (Permanent)</DisplayName>
+    <Description>Produces Research</Description>
+    <Type>Research_localperm</Type>
+    <IconColor>0,0,0</IconColor>
+    <!--<Icon>Gfx//Icons//dude_icon.png</Icon>-->
+    <Icon>Tech_Icon.png</Icon>
+    <HideInHiergamenon>1</HideInHiergamenon>
+    <ModelColor>0,0,0</ModelColor>
+    <HideInHiergamenon>1</HideInHiergamenon>
+    <Worth>0</Worth>
+    <Global>0</Global>
+    <Rarity>0.0</Rarity>
+    <Shared>0</Shared>
+    <TradedByCaravans>0</TradedByCaravans>
+    <ShownInGlobalDisplay>0</ShownInGlobalDisplay>
+    <Medallions InternalName="Population_Res_Medallions">
+      <All>Res_Ores_Plains.png</All>
+    </Medallions>
+  </ResourceType>
+  <PlayerAbilityType InternalName="A_UnitStat_HealthRegen">
+    <DisplayName>Health Regeneration</DisplayName>
+    <Description>Skill at healing wounds</Description>
+    <Icon>Mana_32.png</Icon>
+  </PlayerAbilityType>
+  <PlayerAbilityType InternalName="A_Horses">
+    <DisplayName>Horse Production</DisplayName>
+    <Description>Warg Production</Description>
+    <Icon>Horse_Resource_Icon.png</Icon>
+  </PlayerAbilityType>
+  <PlayerAbilityType InternalName="A_Wargs">
+    <DisplayName>Warg Production</DisplayName>
+    <Description>Skill at producing Wargs</Description>
+    <Icon>Icon_Wargs.png</Icon>
+  </PlayerAbilityType>
+  <PlayerAbilityType InternalName="A_UnitStat_Attack_Cold">
+    <DisplayName>Cold Attack Bonus</DisplayName>
+    <Description>Provides a bonus to the Cold attack of all units.</Description>
+    <Icon>Icon_Level.png</Icon>
+  </PlayerAbilityType>
+  <PlayerAbilityType InternalName="A_UnitStat_Attack_Fire">
+    <DisplayName>Fire Attack Bonus</DisplayName>
+    <Description>Provides a bonus to the Cold attack of all units.</Description>
+    <Icon>Icon_Level.png</Icon>
+  </PlayerAbilityType>
+  <PlayerAbilityType InternalName="A_UnitStat_Attack_Lightning">
+    <DisplayName>Lightning Attack Bonus</DisplayName>
+    <Description>Provides a bonus to the Cold attack of all units.</Description>
+    <Icon>Icon_Level.png</Icon>
+  </PlayerAbilityType>
+  <PlayerAbilityType InternalName="A_UnitStat_Attack_Poison">
+    <DisplayName>Lightning Attack Bonus</DisplayName>
+    <Description>Provides a bonus to the Cold attack of all units.</Description>
+    <Icon>Icon_Level.png</Icon>
+  </PlayerAbilityType>
+  <PlayerAbilityType InternalName="A_UnitStat_Attack_Divine">
+    <DisplayName>Lightning Attack Bonus</DisplayName>
+    <Description>Provides a bonus to the Cold attack of all units.</Description>
+    <Icon>Icon_Level.png</Icon>
+  </PlayerAbilityType>
+  <PlayerAbilityType InternalName="A_UnitStat_ExpBonus">
+    <DisplayName>Lightning Attack Bonus</DisplayName>
+    <Description>Provides a bonus to the Cold attack of all units.</Description>
+    <Icon>Icon_Level.png</Icon>
+  </PlayerAbilityType>
+  <PlayerAbilityType InternalName="A_Stationed_UnitStat_EnchantmentMaintenanceMultiplier">
+    <DisplayName>Stationed Unit Strength Bonus</DisplayName>
+    <Description>Provides a bonus to the strength of stationed units.</Description>
+    <Icon>Kingdom_Crest_02.png</Icon>
+  </PlayerAbilityType>
+  <PlayerAbilityType InternalName="A_Stationed_UnitStat_ExpBonus">
+    <DisplayName>Stationed Unit Strength Bonus</DisplayName>
+    <Description>Provides a bonus to the strength of stationed units.</Description>
+    <Icon>Kingdom_Crest_02.png</Icon>
+  </PlayerAbilityType>
+  <PlayerAbilityType InternalName="A_DeathMana">
+    <DisplayName>Death Shard Attunement</DisplayName>
+    <Description>A faction's skill at mining ore.</Description>
+    <Icon>FactionAbility_MetalMining.png</Icon>
+  </PlayerAbilityType>
+  <PlayerAbilityType InternalName="A_LifeMana">
+    <DisplayName>Life Shard Attunement</DisplayName>
+    <Description>A faction's skill at mining ore.</Description>
+    <Icon>FactionAbility_MetalMining.png</Icon>
+  </PlayerAbilityType>
+  <PlayerAbilityType InternalName="A_AirMana">
+    <DisplayName>Air Shard Attunement</DisplayName>
+    <Description>A faction's skill at mining ore.</Description>
+    <Icon>FactionAbility_MetalMining.png</Icon>
+  </PlayerAbilityType>
+  <PlayerAbilityType InternalName="A_EarthMana">
+    <DisplayName>Earth Shard Attunement</DisplayName>
+    <Description>A faction's skill at mining ore.</Description>
+    <Icon>FactionAbility_MetalMining.png</Icon>
+  </PlayerAbilityType>
+  <PlayerAbilityType InternalName="A_FireMana">
+    <DisplayName>Fire Shard Attunement</DisplayName>
+    <Description>A faction's skill at mining ore.</Description>
+    <Icon>FactionAbility_MetalMining.png</Icon>
+  </PlayerAbilityType>
+  <PlayerAbilityType InternalName="A_WaterMana">
+    <DisplayName>Water Shard Attunement</DisplayName>
+    <Description>A faction's skill at mining ore.</Description>
+    <Icon>FactionAbility_MetalMining.png</Icon>
+  </PlayerAbilityType>
+  <PlayerAbilityType InternalName="A_Training_RefinedCrystal">
+    <DisplayName>Training Metal Mining Ability Bonus</DisplayName>
+    <Description>A faction's modifier to training time.</Description>
+    <Icon>Icon_Level.png</Icon>
+  </PlayerAbilityType>
+  <ResourceType InternalName="Frontrunner">
+    <DisplayName>Frontrunner Token</DisplayName>
+    <Type>Frontrunner</Type>
+    <IconColor>0,0,0</IconColor>
+    <Icon>Action_BuildRoad.png</Icon>
+    <ClothIcon>Action_BuildRoad.png</ClothIcon>
+    <HideInHiergamenon>1</HideInHiergamenon>
+    <ModelColor>0,0,0</ModelColor>
+    <Worth>1</Worth>
+    <Global>1</Global>
+    <Rarity>0.0</Rarity>
+    <Shared>0</Shared>
+    <TradedByCaravans>1</TradedByCaravans>
+    <ShownInGlobalDisplay>1</ShownInGlobalDisplay>
+    <Medallions InternalName="Gold_Res_Medallions">
+      <All>deathlegion_token.png</All>
+    </Medallions>
+  </ResourceType>
+</Container>

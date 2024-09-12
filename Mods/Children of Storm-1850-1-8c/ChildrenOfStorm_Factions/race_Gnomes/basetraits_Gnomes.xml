@@ -1,0 +1,451 @@
+<?xml version="1.0"?>
+<Container>
+	<AbilityBonus InternalName="Dwarf_GreatFortresses">
+		<AbilityBonusOption InternalName="Dwarf_GreatFortresses">
+			<DisplayName>Great Fortresses</DisplayName>
+			<Description>All units defending a city gain +10% to their Defenses per city level.
+
+Gnomes build extra-strong "Hedge Walls" and Forts, requiring half the production to complete and granting an extra +5/+10 Spell Resist to defenders</Description>
+			<Icon>Ability_Fortify_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Stationed_UnitStat_Defense_Blunt</StrVal>
+				<Value>10</Value>
+				<PerLevel>1</PerLevel>
+				<Provides>All units defending a city gain +10% to their Defenses per city level.
+
+Gnomes build extra-strong "Hedge Walls" and Forts, requiring half the production to complete and granting an extra +5/+10 Spell Resist to defenders</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Stationed_UnitStat_Defense_Cutting</StrVal>
+				<Value>10</Value>
+				<PerLevel>1</PerLevel>
+				<Provides>.</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Stationed_UnitStat_Defense_Pierce</StrVal>
+				<Value>10</Value>
+				<PerLevel>1</PerLevel>
+				<Provides>.</Provides>
+			</GameModifier>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<ImprovementType InternalName="HedgeWall_Dwarf">
+		<DisplayName>Gnome Wall</DisplayName>
+		<RequiresCity>1</RequiresCity>
+		<BarredTerrain>River</BarredTerrain>
+		<BarredTerrain>SwampTerrain</BarredTerrain>
+		<PreferredTerrain>City</PreferredTerrain>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<PreferredTerrain>Category:Forest</PreferredTerrain>
+		<RequiresCityImprovement>1</RequiresCityImprovement>
+		<RequiredImprovement>Fortress</RequiredImprovement>
+		<UpgradesToImprovement>Fort_Dwarf</UpgradesToImprovement>
+		<UpgradeTier>1</UpgradeTier>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Dwarves</Attribute>
+		</Prereq>
+		<LaborToBuild>104</LaborToBuild>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>2</Value>
+			<Provides>+2 Initiative for Defending Units</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+			<UpgradeComparisonText>Defending Unit Initiative</UpgradeComparisonText>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>UnitStat_MagicResist</StrVal>
+			<Value>5</Value>
+			<Provides>+5 Spell Resist for Defending Units</Provides>
+			<UpgradeComparisonID>2</UpgradeComparisonID>
+			<UpgradeComparisonText>Defending Unit Spell Resist</UpgradeComparisonText>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>UpgradeCityWalls</Attribute>
+			<StrVal>CityWalls_Advanced</StrVal>
+		</GameModifier>
+		<GameModifier>
+			<ModType>CityDefenseSummon</ModType>
+			<Attribute>SummonUnitByClass</Attribute>
+			<Value>2</Value>
+			<Multiplier>3</Multiplier>
+			<Provides>+2 City Defender Groups</Provides>
+			<UnitClass>CityDefender</UnitClass>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+			<AITag>Defensive</AITag>
+			<AIAtWarMultiplier>3</AIAtWarMultiplier>
+		</AIData>
+		<ArtDef>HedgeWall_ArtDef</ArtDef>
+		<ImprovementTypeArtDef InternalName="HedgeWall_ArtDef">
+			<ImprovementTypeArtSubPack InternalName="HedgeWall_Default">
+				<DrawnIcon>Improvement_HedgeWall.png</DrawnIcon>
+				<DrawnIconConstruction>Improvement_HedgeWall_C.png</DrawnIconConstruction>
+				<Thumbnail>K_HedgeFort_01_Thumb.png</Thumbnail>
+				<Medallions InternalName="">
+					<All>K_HedgeFort_01_Thumb.png</All>
+				</Medallions>
+			</ImprovementTypeArtSubPack>
+		</ImprovementTypeArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="Fort_Dwarf">
+		<DisplayName>Gnome Fort</DisplayName>
+		<RequiresCity>1</RequiresCity>
+		<BarredTerrain>River</BarredTerrain>
+		<BarredTerrain>SwampTerrain</BarredTerrain>
+		<PreferredTerrain>City</PreferredTerrain>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<PreferredTerrain>Category:Forest</PreferredTerrain>
+		<RequiresCityImprovement>1</RequiresCityImprovement>
+		<RequiredImprovement>Fortress</RequiredImprovement>
+		<UpgradeTier>2</UpgradeTier>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Dwarves</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Construction</Attribute>
+		</Prereq>
+		<LaborToBuild>270</LaborToBuild>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>3</Value>
+			<Provides>+3 Initiative for Defending Units</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+			<UpgradeComparisonText>Defending Unit Initiative</UpgradeComparisonText>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>UnitStat_MagicResist</StrVal>
+			<Value>10</Value>
+			<Provides>+10 Spell Resist for Defending Units</Provides>
+			<UpgradeComparisonID>2</UpgradeComparisonID>
+			<UpgradeComparisonText>Defending Unit Spell Resist</UpgradeComparisonText>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>UpgradeCityWalls</Attribute>
+			<StrVal>CityWalls_Advanced</StrVal>
+		</GameModifier>
+		<GameModifier>
+			<ModType>CityDefenseSummon</ModType>
+			<Attribute>SummonUnitByClass</Attribute>
+			<Value>2</Value>
+			<Multiplier>3</Multiplier>
+			<Provides>+2 City Defender Groups</Provides>
+			<UnitClass>CityDefender</UnitClass>
+		</GameModifier>
+		<GameModifier>
+			<ModType>CityDefenseSummon</ModType>
+			<Attribute>SummonUnitByClass</Attribute>
+			<Value>1</Value>
+			<Multiplier>3</Multiplier>
+			<Provides>+1 City Archer Group</Provides>
+			<UnitClass>CityArcher</UnitClass>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+			<AITag>Defensive</AITag>
+		</AIData>
+		<ArtDef>Art_Castle</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="Fort">
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Dwarf_GreatFortresses</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+	</ImprovementType>
+	<ImprovementType InternalName="HedgeWall">
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Dwarf_GreatFortresses</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+	</ImprovementType>
+	<AbilityBonus InternalName="Dwarf_Racism">
+		<AbilityBonusOption InternalName="Dwarf_Racism">
+			<IMPINC>Weakness</IMPINC>
+			<DisplayName>Rude</DisplayName>
+			<Cost>-1</Cost>
+			<Description>All trades by this faction are perceived as having a 20% lower value.</Description>
+			<Icon>Stat_IsResistable_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Diplomacy</StrVal>
+				<Provides>All trades by this faction are perceived as having a 20% lower value</Provides>
+				<Value>-20</Value>
+			</GameModifier>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="AwfulMagiciansDwarf">
+		<AbilityBonusOption InternalName="GolemMagiciansDwarf">
+			<IMPINC>Weakness</IMPINC>
+			<Cost>-1</Cost>
+			<DisplayName>Anti-magic</DisplayName>
+			<Description>All mana income from shrines and other buildings is reduced by 25%.
+
+In addition, Gnomes may not build any improvements on Life Shards and must raze any they capture.</Description>
+			<Icon>Ability_Amnesia_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Mana</StrVal>
+				<Value>-25</Value>
+				<Provides>All mana income from shrines and other buildings is reduced by 25%.
+
+In addition, Gnomes may not build any improvements on Life Shards and must raze any they capture.</Provides>
+			</GameModifier>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<ImprovementType InternalName="LifeAltar">
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>GolemMagiciansDwarf</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+	</ImprovementType>
+	<ImprovementType InternalName="LifeShrine">
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>GolemMagiciansDwarf</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+	</ImprovementType>
+	<ImprovementType InternalName="LifeTemple">
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>GolemMagiciansDwarf</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+	</ImprovementType>
+	<AbilityBonus InternalName="Earthsworn">
+		<AbilityBonusOption InternalName="Earthsworn">
+			<IMPINC>Strength</IMPINC>
+			<DisplayName>Earthbond</DisplayName>
+			<Description>Each Earth Shard power will produce 1 Material in the connected city.
+
+In addition, each Earth shard power will produce one extra mana per turn. This bonus is still affected by the Anti-magic faction ability, making it 0.75 by default.</Description>
+			<Icon>Icon_Earth.png</Icon>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Additive_MaterialPerEarthMana</StrVal>
+				<Provides>Each Earth Shard power will produce 1 Material in the connected city.
+
+In addition, each Earth shard power will produce one extra mana per turn. This bonus is still affected by the Anti-magic faction ability, making it 0.75 by default.</Provides>
+				<Value>1</Value>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Additive_ManaPerEarthMana</StrVal>
+				<Value>1</Value>
+
+				<Provides>.</Provides>
+			</GameModifier>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<!-- unit design traits-->
+	<AbilityBonus InternalName="Gnome_Runes">
+		<AbilityBonusType>Unit_Design</AbilityBonusType>
+		<AbilityBonusOption InternalName="Gnome_Rune_Fire">
+			<Type>Faction Trait</Type>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Prereq>
+				<Type>Race</Type>
+				<Attribute>Race_Type_Dwarves</Attribute>
+			</Prereq>
+			<DisplayName>Rune:Fire</DisplayName>
+			<Description>+1 Fire attack, +0.5 Fire Attack per level.
+
+This trait costs 1 Crystal per unit member. It cannot be selected at the same time as any other Rune trait.</Description>
+			<Icon>Stat_AttackFire_Icon.png</Icon>
+			<AdditionalTrainingTurns>10</AdditionalTrainingTurns>
+			<ProductionRequirement>
+				<Type>Resource</Type>
+				<Attribute>RefinedCrystal</Attribute>
+				<Value>1</Value>
+			</ProductionRequirement>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Attack_Fire</StrVal>
+				<Provides>+1 Fire attack, +0.5 Fire Attack per level.
+
+This trait costs 1 Crystal per unit member. It cannot be selected at the same time as any other Rune trait.</Provides>
+				<Value>1</Value>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Attack_Fire</StrVal>
+				<Provides>.</Provides>
+				<Value>0.5</Value>
+				<PerLevel>1</PerLevel>
+			</GameModifier>
+		</AbilityBonusOption>
+		<AbilityBonusOption InternalName="Gnome_Rune_Cold">
+			<Type>Faction Trait</Type>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Prereq>
+				<Type>Race</Type>
+				<Attribute>Race_Type_Dwarves</Attribute>
+			</Prereq>
+			<DisplayName>Rune:Cold</DisplayName>
+			<Description>+1 Cold attack, +0.5 Cold Attack per level.
+
+This trait costs 1 Crystal per unit member. It cannot be selected at the same time as any other Rune trait.</Description>
+			<Icon>Stat_AttackCold_Icon.png</Icon>
+			<AdditionalTrainingTurns>10</AdditionalTrainingTurns>
+			<ProductionRequirement>
+				<Type>Resource</Type>
+				<Attribute>RefinedCrystal</Attribute>
+				<Value>1</Value>
+			</ProductionRequirement>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Attack_Cold</StrVal>
+				<Provides>+1 Cold attack, +0.5 Cold Attack per level.
+
+This trait costs 1 Crystal per unit member. It cannot be selected at the same time as any other Rune trait</Provides>
+				<Value>1</Value>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Attack_Cold</StrVal>
+				<Provides>.</Provides>
+				<Value>0.5</Value>
+				<PerLevel>1</PerLevel>
+			</GameModifier>
+		</AbilityBonusOption>
+		<AbilityBonusOption InternalName="Gnome_Rune_Lightning">
+			<Type>Faction Trait</Type>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Prereq>
+				<Type>Race</Type>
+				<Attribute>Race_Type_Dwarves</Attribute>
+			</Prereq>
+			<DisplayName>Rune:Lightning</DisplayName>
+			<Description>+0.5 Lightning Attack per level.
+
+This trait costs 1 Crystal per unit member. It cannot be selected at the same time as any other Rune trait.</Description>
+			<Icon>Stat_AttackLightning_Icon.png</Icon>
+			<AdditionalTrainingTurns>10</AdditionalTrainingTurns>
+			<ProductionRequirement>
+				<Type>Resource</Type>
+				<Attribute>RefinedCrystal</Attribute>
+				<Value>1</Value>
+			</ProductionRequirement>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Attack_Lightning</StrVal>
+				<Value>0.5</Value>
+				<PerLevel>1</PerLevel>
+				<Provides>+0.5 Lightning Attack per level.
+
+This trait costs 1 Crystal per unit member. It cannot be selected at the same time as any other Rune trait.</Provides>
+			</GameModifier>
+		</AbilityBonusOption>
+		<AbilityBonusOption InternalName="Gnome_Rune_Protection">
+			<Type>Faction Trait</Type>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Prereq>
+				<Type>Race</Type>
+				<Attribute>Race_Type_Dwarves</Attribute>
+			</Prereq>
+			<DisplayName>Rune:Protection</DisplayName>
+			<Description>Unit gains +15 Resistance to magical attacks (Fire, Cold, Lightning, Poison, Arcane).
+
+This trait costs 1 Crystal per unit member. It cannot be selected at the same time as any other Rune trait.</Description>
+			<Icon>Stat_MagicResist_Icon.png</Icon>
+			<AdditionalTrainingTurns>10</AdditionalTrainingTurns>
+			<ProductionRequirement>
+				<Type>Resource</Type>
+				<Attribute>RefinedCrystal</Attribute>
+				<Value>1</Value>
+			</ProductionRequirement>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ResistLightning</StrVal>
+				<Provides>Unit gains +15 Resistance to magical attacks (Fire, Cold, Lightning, Poison, Arcane).
+
+This trait costs 1 Crystal per unit member. It cannot be selected at the same time as any other Rune trait.</Provides>
+				<Value>15</Value>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ResistCold</StrVal>
+				<Value>15</Value>
+				<Provides>.</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ResistDivine</StrVal>
+				<Value>15</Value>
+				<Provides>.</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ResistFire</StrVal>
+				<Value>15</Value>
+				<Provides>.</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ResistPoison</StrVal>
+				<Value>15</Value>
+				<Provides>.</Provides>
+			</GameModifier>
+		</AbilityBonusOption>
+		<AbilityBonusOption InternalName="Gnome_Rune_Stoneheart">
+			<Type>Faction Trait</Type>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Prereq>
+				<Type>Race</Type>
+				<Attribute>Race_Type_Dwarves</Attribute>
+			</Prereq>
+			<DisplayName>Rune:Stoneheart</DisplayName>
+			<Description>Unit is Immune to Fear (caused by certain high-level monsters).
+
+This trait cannot be selected at the same time as any other Rune trait.</Description>
+			<Icon>Stat_HitPoints_Icon.png</Icon>
+			<AdditionalTrainingTurns>10</AdditionalTrainingTurns>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ImmuneToFear</StrVal>
+
+				<Provides>Unit is Immune to Fear (caused by certain high-level monsters).
+
+This trait cannot be selected at the same time as any other Rune trait.</Provides>
+				<Value>1</Value>
+			</GameModifier>
+		</AbilityBonusOption>
+	</AbilityBonus>
+</Container>

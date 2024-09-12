@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<UnitTypes>
+	<UnitType InternalName="Golem_Cosinivatha">
+		<CreatureType>Champion</CreatureType>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-5</Value>
+			<Provides>-5% Unrest in the city this unit is in</Provides>
+		</GameModifier>
+
+		<DisplayName>Cosinivatha</DisplayName>
+		<Backstory>Cosinivatha is one of the oldest Golems in all the world. Some even believe it to be older than Mankind itself. It has managed to stay intact for this long due to its ability to repair itself. Although most Golems have some basic understanding of self-repair, the variables deciding how and when to act on such impulses have been altered in Cosinivatha. Specifically, the requirements for what materials to use have been removed, which means that it is built out of an assortment of rubble, almost like a scrap Golem.
+
+Cosinivatha is prone to introspection and only rarely speaks of its long life. It prefers to avoid any such questions by simply stating that it doesn't remember. If the circumstances are correct, it will admit to a wealth of knowledge of the past - although limited, of course, by being re-told from its own perspective. Indeed, it does remember the rise of dragons and the coming of Man. 
+
+The Golem Cosinivatha has had something of a mental rejuvenation recently. He was captured by the Golems from the White Wizard that tried to harness his regenerative powers (and they succeeded in doing so!). During that process, part of the White Wizard's Golems became imprinted onto Cosinivatha. Although he eventually escaped their imprisonment, he is now more like them than before. Being captured and experimented on has led to Cosinivatha understanding how its lack of purpose has made it a "non-entity" and rather than spend another ten thousand years waiting for new orders from its master, it has now decided to find a purpose to follow.</Backstory>
+
+		<ModelPath>special_golem_model.hkb</ModelPath>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<EyeTexture>gfx\eyes\blinks\eyeblink_f3_hazel.png</EyeTexture>
+		<AnimationPack>EF_MaleSovereignAnimationPack</AnimationPack>
+		<ShowAsSingleUnit>false</ShowAsSingleUnit>
+		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+		<ModelScale>1.0000</ModelScale>
+		<TacticalModelScale>1.5000</TacticalModelScale>
+		<EquipmentScale>1.0000</EquipmentScale>
+		<ClothMapScale>1.6</ClothMapScale>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<MovementType>land</MovementType>
+		<BobbingFrequency>0.0000</BobbingFrequency>
+		<ClothPoseIndex>3</ClothPoseIndex>
+		<InfoCardBackground>BG37_Field</InfoCardBackground>
+		<InfoCardBackgroundFlipped>1</InfoCardBackgroundFlipped>
+		<CanBeDesigned>0</CanBeDesigned>
+		<!-- -->
+		<Allegiance>Empire</Allegiance>
+		<Unique>1</Unique>
+		<IsNPC>1</IsNPC>
+		<NPCSpawnLikelihood>100</NPCSpawnLikelihood>
+		<IsChampion>1</IsChampion>
+		<Gender>Male</Gender>
+		<SoundPack>SoundPack_Generic_Male</SoundPack>
+		<SpawnRating>1</SpawnRating>
+		<Quote>I remember the Long ages.</Quote>
+		<NPCRecruitmentText>%d gildar would show me that you are sincere.</NPCRecruitmentText>
+		<SelectedAbilityBonusOption>Blood_Golem</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Fire1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Precision_Level</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>CosinivathaRegeneration1</SelectedAbilityBonusOption>
+		<!-- -->
+		<Medallions InternalName=""/>
+		<WageOverride>1</WageOverride>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_BG_IsConstruct>1.0000</UnitStat_BG_IsConstruct>
+			<UnitStat_BG_IsEmpire>1.0000</UnitStat_BG_IsEmpire>
+			<UnitStat_BG_IsHumanoid>1.0000</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsNotAlive>1.0000</UnitStat_BG_IsNotAlive>
+			<UnitStat_BG_IsRace_Golem>1.0000</UnitStat_BG_IsRace_Golem>
+			<UnitStat_BG_IsChampion>1.0000</UnitStat_BG_IsChampion>
+			<UnitStat_CombatSpeed>22.0000</UnitStat_CombatSpeed>
+			<UnitStat_HitPoints>20.0000</UnitStat_HitPoints>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+		</LevelMilestone>
+		<AutoCreateEquipment>Dagger</AutoCreateEquipment>
+		<AutoCreateEquipment>LeatherBreastpiece</AutoCreateEquipment>
+		<Color_Skin>245,245,245,255</Color_Skin>
+		<Color_Hair>168,123,88,255</Color_Hair>
+		<Color_Clothing1>120,25,20,255</Color_Clothing1>
+		<Color_Clothing2>78,60,55,255</Color_Clothing2>
+		<Color_Metal>255,255,255,255</Color_Metal>
+		<Texture_Skin>M_ScrapGolem_Texture_01.dds</Texture_Skin>
+		<Texture_Eyes>gfx\eyes\blinks\eyeblink_f3_hazel.png</Texture_Eyes>
+		<UnitModelType>Golem</UnitModelType>
+		<NPCFreeRecruit>0</NPCFreeRecruit>
+		<RaceType>Race_Type_Golem</RaceType>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+	</UnitType>
+	<AbilityBonus InternalName="CosinivathaRegeneration1Ability">
+		<AbilityBonusOption InternalName="CosinivathaRegeneration1">
+			<PerkTreePosX>3</PerkTreePosX>
+			<PerkTreePosY>5</PerkTreePosY>
+			<GameModifier>
+				<Provides>This trait appears in the General trait tree</Provides>
+			</GameModifier>
+			<DisplayName>Cosinivatha's Self-repair I</DisplayName>
+			<Description>Unit heals +1 points per round in Tactical mode</Description>
+			<Icon>Ability_RegenerationI_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_TacticalHealthRegen</StrVal>
+				<Value>1</Value>
+				<Provides>Unit heals +1 hit points per round</Provides>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="CosinivathaRegeneration1Ability2">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="CosinivathaRegeneration2">
+			<PerkTreePosX>4</PerkTreePosX>
+			<PerkTreePosY>5</PerkTreePosY>
+			<DisplayName>Cosinivatha's Self-repair II</DisplayName>
+			<Description>Unit heals another +1 hitpoints per round in Tactical mode</Description>
+			<Icon>Ability_RegenerationI_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_TacticalHealthRegen</StrVal>
+				<Provides>Unit heals +1 hit points per round </Provides>
+				<Value>1</Value>
+			</GameModifier>
+			<Likelihood>300</Likelihood>
+			<RarityDisplay>Common</RarityDisplay>
+			<MinimumLevel>5</MinimumLevel>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>CosinivathaRegeneration1</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>100</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="CosinivathaRegeneration1Ability3">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="CosinivathaRegeneration3">
+			<PerkTreePosX>5</PerkTreePosX>
+			<PerkTreePosY>5</PerkTreePosY>
+			<DisplayName>Cosinivatha's Self-repair III</DisplayName>
+			<Description>Unit heals another +1 hit points per in Tactical mode</Description>
+			<Icon>Ability_RegenerationI_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_TacticalHealthRegen</StrVal>
+				<Value>1</Value>
+				<Provides>Unit heals +1 hit points per round</Provides>
+			</GameModifier>
+			<Likelihood>300</Likelihood>
+			<RarityDisplay>Common</RarityDisplay>
+			<MinimumLevel>9</MinimumLevel>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>CosinivathaRegeneration2</Attribute>
+			</Prereq>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>100</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+</UnitTypes>

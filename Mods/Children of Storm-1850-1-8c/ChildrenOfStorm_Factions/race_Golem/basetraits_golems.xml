@@ -1,0 +1,347 @@
+<?xml version="1.0"?>
+<Container>
+  <AbilityBonus InternalName="ProfoundOrder2">
+    <AbilityBonusOption InternalName="ProfoundOrder2">
+      <DisplayName>Sacrificial Creation</DisplayName>
+      <Description>Each Golem trained requires the sacrifice of 1 local population. In return, all Armor and Weapons costs 20% less Metal.</Description>
+      <Icon>Stat_Defense_Lower_icon.png</Icon>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_Training_Metal</StrVal>
+        <Provides>Each Golem trained requires the sacrifice of 1 local population. In return, all Armor and Weapons costs 20% less Metal.</Provides>
+        <Value>-20</Value>
+      </GameModifier>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Champion_History">
+    <AbilityBonusOption InternalName="MachineSupremacy">
+      <DisplayName>Machinelord</DisplayName>
+      <Description>Can take control of enemies with Race: Construct</Description>
+      <Icon>Ability_Zealotry_Icon.png</Icon>
+      <Cost>1</Cost>
+      <GameModifier>
+        <Provides>Can take control of enemies with Race: Construct</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <Type>Aggressive</Type>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+ 
+  <AbilityBonus InternalName="Blood_IronGolem">
+    <AbilityBonusOption InternalName="Blood_IronGolem">
+      <DisplayName>Iron Golem</DisplayName>
+      <Description>Iron Golems are Immune to Fear (fear is caused by certain high-level monsters).
+
+Iron Golems regain life in strategic mode twice as fast as normal. All enchantments cast on Golems cost 50% more mana maintenance. Iron Golems gain +30 Spell Resist and +25 Resistance to Fire, Cold and Poison Resist.
+
+Iron Golems count as Genderless, Not Alive, Constructs and Monsters.</Description>
+      <Icon>UnitstatIcon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ImmuneToFear</StrVal>
+        <Provides>Iron Golems are Immune to Fear (fear is caused by certain high-level monsters).
+
+Iron Golems regain life in strategic mode twice as fast as normal. All enchantments cast on Golems cost 50% more mana maintenance. Iron Golems gain +30 Spell Resist and +25 Resistance to Fire, Cold and Poison Resist.
+
+Iron Golems count as Genderless, Not Alive, Constructs and Monsters.</Provides>
+        <Value>1</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_HealthRegen</StrVal>
+        <Multiplier>2</Multiplier>
+        <Provides>.</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_EnchantmentMaintenanceMultiplier</StrVal>
+        <Value>0.5</Value>
+        <Provides>.</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistFire</StrVal>
+        <Provides>.</Provides>
+        <Value>25</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistCold</StrVal>
+        <Provides>.</Provides>
+        <Value>25</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistPoison</StrVal>
+        <Provides>.</Provides>
+        <Value>25</Value>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="AwfulMagicians">
+    <AbilityBonusOption InternalName="GolemMagicians">
+		  <IMPINC>Weakness</IMPINC>
+      <Cost>-1</Cost>
+      <DisplayName>Anti-magic</DisplayName>
+      <Description>Faction gains 10% less crystals. In addition, all mana income from shrines and other buildings is reduced by 25%.</Description>
+      <Icon>Ability_Amnesia_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_RefinedCrystal</StrVal>
+        <Provides>Faction gains 10% less crystals. In addition, all mana income from shrines and other buildings is reduced by 25%.</Provides>
+        <Value>-10</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_Mana</StrVal>
+        <Provides>.</Provides>
+        <Value>-25</Value>
+      </GameModifier>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <!--  <AbilityBonus InternalName="GreatSurgeons">
+    <AbilityBonusOption InternalName="GreatSurgeons">
+      <DisplayName>Easily Repaired</DisplayName>
+      <Description>Golems are easy to repair, and were made to take care of their masters. All units fighting for this faction gain +50% to Strategic Health Regeneration.</Description>
+      <Icon>Ability_Medic_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_UnitStat_HealthRegen</StrVal>
+        <Value>50</Value>
+      </GameModifier>
+    </AbilityBonusOption>
+  </AbilityBonus>-->
+  <AbilityBonus InternalName="ProfoundOrder">
+    <AbilityBonusOption InternalName="ProfoundOrder">
+		  <IMPINC>Strength</IMPINC>
+      <DisplayName>Profound Order</DisplayName>
+      <Description>Golems exist in perfect harmony with each other, all orders are executed instantly and without question. Golems possess free will, but choose not to exercise it except at specific occasions. 
+
+Any research only suffer 50% of the reduction from unrest in a city.</Description>
+      <Icon>Ability_ResistFire_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_Additive_ResearchEffectPerUnrest</StrVal>
+        <Provides>Golems exist in perfect harmony with each other, all orders are executed instantly and without question. Golems possess free will, but choose not to exercise it except at specific occasions. 
+
+Any research only suffer 50% of the reduction from unrest in a city.</Provides>
+        <Value>-0.5</Value>
+      </GameModifier>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <!--  <AbilityBonus InternalName="GolemStrongMilitia">
+    <AbilityBonusOption InternalName="GolemStrongMilitia">
+      <DisplayName>Strong Militia</DisplayName>
+      <Description>When a city forms a militia, normally only the bravest take up arms against the invaders. The golems do not let fear decide their actions, however
+
+All Militia units count as one size larger (Party becomes Group, Group becomes Squad, Squad becomes Company)</Description>
+      <Icon>Ability_Beastlord_Icon.png</Icon>
+      <GameModifier>
+        <Provides>When a city forms a militia, normally only the bravest take up arms against the invaders. The golems do not let fear decide their actions, however
+
+All Militia units count as one size larger (Party becomes Group, Group becomes Squad, Squad becomes Company)</Provides>
+      </GameModifier>
+    </AbilityBonusOption>
+  </AbilityBonus>-->
+  <AbilityBonus InternalName="GolemIronGolem">
+    <AbilityBonusOption InternalName="GolemIronGolem">
+      <DisplayName>Iron Golems</DisplayName>
+      <Description>Faction may train Iron Golems after researching Weaponsmithing.</Description>
+      <Icon>Ability_TrainIronGolem_Icon.png</Icon>
+      <GameModifier>
+        <Provides>Faction may train Iron Golems after researching Weaponsmithing.</Provides>
+      </GameModifier>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="DrakeBondAbility">
+    <AbilityBonusType>Unit_Design</AbilityBonusType>
+    <AbilityBonusOption InternalName="DrakeBondAbilityAbility">
+      <Type>Faction Trait</Type>
+      <IsCombatAbility>1</IsCombatAbility>
+      <Prereq>
+        <Type>Race</Type>
+        <Attribute>Race_Type_Golem</Attribute>
+      </Prereq>
+      <DisplayName>Warboar Bond</DisplayName>
+      <Description>As long as this unit is riding a Warboar mount, this unit has 100% chance to avoid any crit. Does not work if enemy is also riding a Drake.</Description>
+      <Icon>gragnar_mount_icon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ChanceToAvoidCrit</StrVal>
+        <StrVal2>UnitStat_EquippedWarBoar</StrVal2>
+        <Value>100</Value>
+        <Provides>As long as this unit is riding a Warboar mount, this unit has 100% chance to avoid any crit. Does not work if enemy is also riding a Drake.</Provides>
+        <vsLower>1</vsLower>
+      </GameModifier>
+      <AdditionalTrainingTurns>10</AdditionalTrainingTurns>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>0</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Golem_Trait_Family">
+    <AbilityBonusType>Unit_Design</AbilityBonusType>
+    <AbilityBonusOption InternalName="Golem_Trait_MagicalMagnetism">
+      <Type>Faction Trait</Type>
+      <IsCombatAbility>1</IsCombatAbility>
+      <Prereq>
+        <Type>Race</Type>
+        <Attribute>Race_Type_Golem</Attribute>
+      </Prereq>
+      <DisplayName>Magical Attraction</DisplayName>
+      <Description>Unit gains +25 Accuracy against any target with at least 1 spellbook trait. Unit gains another +50 if the target is also Hexed, unless this unit is also Hexed. 
+	      
+May not be selected at the same time as Sever Soul.</Description>
+      <Icon>Ability_GolemFamily.png</Icon>
+      <AdditionalTrainingTurns>10</AdditionalTrainingTurns>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Accuracy</StrVal>
+        <StrVal2>UnitStat_BG_Spellbooks</StrVal2>
+        <Value>25</Value>
+        <Provides>Unit gains +25 accuracy against any target with at least 1 spellbook trait</Provides>
+        <vsHigher>1</vsHigher>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Accuracy</StrVal>
+        <StrVal2>UnitStat_Reliquary_IsCursed</StrVal2>
+        <Value>50</Value>
+        <Provides>Gains +50 accuracy against any target that is Hexed, unless this unit is also Hexed
+		
+		May not be selected at the same time as Sever Soul.</Provides>
+        <vsHigher>1</vsHigher>
+      </GameModifier>
+    </AbilityBonusOption>
+    <AbilityBonusOption InternalName="Golem_Trait_SeverSoul">
+      <Type>Faction Trait</Type>
+      <IsCombatAbility>1</IsCombatAbility>
+      <ProductionRequirement>
+        <Type>Resource</Type>
+        <Attribute>RefinedCrystal</Attribute>
+        <Value>1</Value>
+      </ProductionRequirement>
+      <Prereq>
+        <Type>Race</Type>
+        <Attribute>Race_Type_Golem</Attribute>
+      </Prereq>
+      <DisplayName>Sever Soul</DisplayName>
+      <Description>Whenever this unit strikes an enemy target, there is a 50% chance that the target will have increased tactical mana cost for the duration of combat. The effect stacks with multiple strikes. The exact increase is equal to (Golem Troopcount * 4).
+
+      This ability costs 2 Crystal per unit member. It may not be selected at the same time as Magical Attraction.</Description>
+      <Icon>Ability_GolemFamily.png</Icon>
+      <AdditionalTrainingTurns>8</AdditionalTrainingTurns>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>MeleeAppliesSpell</Attribute>
+        <StrVal>FE_SeverSoul</StrVal>
+        <Provides>Whenever this unit strikes an enemy target, there is a 50% chance that the target will have increased tactical mana cost for the duration of combat. The effect stacks with multiple strikes. The exact increase is equal to (Golem Troopcount * 4).
+
+      This ability costs 1 Crystal per unit member. It may not be selected at the same time as Magical Attraction.</Provides>
+      </GameModifier>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Golem_Trait_Selfrepair">
+    <AbilityBonusType>Unit_Design</AbilityBonusType>
+    <AbilityBonusOption InternalName="Golem_Trait_Selfrepair">
+      <Type>Faction Trait</Type>
+      <IsCombatAbility>1</IsCombatAbility>
+      <Prereq>
+        <Type>Race</Type>
+        <Attribute>Race_Type_Golem</Attribute>
+      </Prereq>
+      <DisplayName>Self-repair</DisplayName>
+      <Description>Unit gains 1+(0.5/level) tactical health regeneration</Description>
+      <Icon>Ability_Potential_Icon.png</Icon>
+      <AdditionalTrainingTurns>12</AdditionalTrainingTurns>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_TacticalHealthRegen</StrVal>
+        <Value>1</Value>
+
+        <Provides>Unit gains 1+(0.5/level) tactical health regeneration</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_TacticalHealthRegen</StrVal>
+        <Value>0.5</Value>
+        <PerLevel>1</PerLevel>
+        <Provides>.</Provides>
+      </GameModifier>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Golem_Trait_Disassembler">
+    <AbilityBonusType>Unit_Design</AbilityBonusType>
+    <AbilityBonusOption InternalName="Golem_Trait_Disassembler">
+      <Type>Faction Trait</Type>
+      <IsCombatAbility>1</IsCombatAbility>
+      <Prereq>
+        <Type>Race</Type>
+        <Attribute>Race_Type_Golem</Attribute>
+      </Prereq>
+      <DisplayName>Disassemble</DisplayName>
+      <Description>Unit deals 50% more physical damage against any Construct.</Description>
+      <Icon>Ability_Assassin_Icon.png</Icon>
+      <AdditionalTrainingTurns>8</AdditionalTrainingTurns>
+      <!-- golem has to be higher than other golem -->
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BG_IsConstruct</StrVal>
+        <Value>0.01</Value>
+        <Provides>Unit deals 50% more physical damage against any Construct.</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Attack_Blunt</StrVal>
+        <StrVal2>UnitStat_BG_IsConstruct</StrVal2>
+        <Multiplier>1.50</Multiplier>
+        <Provides>.</Provides>
+        <vsLower>1</vsLower>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Attack_Cutting</StrVal>
+        <StrVal2>UnitStat_BG_IsConstruct</StrVal2>
+        <Multiplier>1.50</Multiplier>
+        <Provides>.</Provides>
+        <vsLower>1</vsLower>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Attack_Pierce</StrVal>
+        <StrVal2>UnitStat_BG_IsConstruct</StrVal2>
+        <Multiplier>1.50</Multiplier>
+        <Provides>.</Provides>
+        <vsLower>1</vsLower>
+      </GameModifier>
+    </AbilityBonusOption>
+  </AbilityBonus>
+</Container>

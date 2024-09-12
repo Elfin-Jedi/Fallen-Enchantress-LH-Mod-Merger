@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<GameItemTypes>
+	<GameItemType InternalName="Accessory_X_Bomb">
+		<DisplayName>Elementium Machine</DisplayName>
+		<Description>You're not sure what this is and nobody in your entourage knows either. The only certainty is this is a box made of Elementium with a big red button and cryptic indecipherable instructions. It seems to form a bond with its current holder in such a way that when the possessor gets hit 4 times, the red button starts flashing. Press it?</Description>
+		<Type>Accessory</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>80</ShopValue>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>You're not sure what this is and nobody in your entourage knows either. The only certainty is this is a box made of Elementium with a big red button and cryptic indecipherable instructions. It seems to form a bond with its current holder in such a way that when the possessor gets hit 4 times, the red button starts flashing. Press it?</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL ABILITY</Provides>
+			<ModType>Unit</ModType>
+			<Attribute>MeleeDefenseAppliesSpell</Attribute>
+			<StrVal>ChargeAdd_Effect</StrVal>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Spell_X_Bomb</StrVal>
+			<Provides>::: Red Button :::</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Likelihood>10</Likelihood>
+		<RarityDisplay>Uncommon3</RarityDisplay>
+		<IsUsable>0</IsUsable>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>333</AIPriority>
+		</AIData>
+		<ArtDef>ArtDef_X_Bomb_Accessory</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Armor_X_GildenLion_Greaves">
+		<DisplayName>Gilden Lion Hot Pants</DisplayName>
+		<Description>Mariachi Mandoline created these after drinking too much Quendar Wine. Contrary to popular belief, they are only hot on the outside, so the origin of any next-day burning sensations would have to be found elsewhere.</Description>
+		<Type>LowerBody</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<ShopValue>50</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Pierce</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>Mariachi Mandoline created these after drinking too much Quendar Wine. Contrary to popular belief, they are only hot on the outside, so the origin of any next-day burning sensations would have to be found elsewhere.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>STRATEGIC SPELLS</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_GildenLionPants</StrVal>
+			<Value>1</Value>
+			<Provides>::: Dissemination :::
+			::: +2 Population (Capital)
+			::: Once per Year
+			::: Must be Male
+			::: Must be stationed</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Likelihood>10</Likelihood>
+		<RarityDisplay>Common4</RarityDisplay>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Primitive</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>100</AIPriority>
+		</AIData>
+		<ArtDef>ArtDef_X_Greaves_GildenLion_Armor</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Armor_X_Helm_HayStack">
+		<DisplayName>Straw Hat of Tzun Su</DisplayName>
+		<Description>"Pretend inferiority and encourage his arrogance." -Tzun Su, The Drama Of War</Description>
+		<Type>Head</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<ShopValue>100</ShopValue>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>"Pretend inferiority and encourage his arrogance." -Tzun Su, The Drama Of War</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>STATS</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_MagicPower</StrVal>
+			<Value>12</Value>
+			<Provides>::: +12 Magic Power</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Stamina_Starting</StrVal>
+			<Value>2</Value>
+			<Provides>::: +2 Starting Battle Wisdom</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Likelihood>10</Likelihood>
+		<RarityDisplay>Common4</RarityDisplay>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Injury_X_Claustrophobic</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Vain</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>1500</AIPriority>
+		</AIData>
+		<ArtDef>ArtDef_X_Helm_Straw_Armor</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Consumable_X_LHCake">
+		<DisplayName>Legendary Cupcake</DisplayName>
+		<Description>The cupcake is a lie.</Description>
+		<Type>Consumable</Type>
+		<ShopValue>100</ShopValue>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>The cupcake is a lie.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>STATS</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Dodge</StrVal>
+			<Value>6</Value>
+			<Provides>::: +6 Dodge
+			::: Permanent boost</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<Likelihood>9</Likelihood>
+		<RarityDisplay>Uncommon3</RarityDisplay>
+		<IsUsable>1</IsUsable>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>100</AIPriority>
+		</AIData>
+		<ArtDef>ArtDef_X_LHCake_Consumable</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Shield_X_OTSSOL">
+		<DisplayName>On the Secret Symbols of Letters</DisplayName>
+		<Description>This treatise crackles with power, but is only effective when read aloud, right before calling forth powerful spells, which makes it inconvenient, at best. On the plus side, it's so thick (and indestructible) it can be used to stop attacks.</Description>
+		<Type>Defense</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>325</ShopValue>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Pierce</StrVal>
+			<Value>2</Value>
+		</GameModifier>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>This treatise crackles with power, but is only effective when read aloud, right before calling forth powerful spells, which makes it inconvenient, at best. On the plus side, it's so thick (and indestructible) it can be used to stop attacks.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>CORE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>-1</Value>
+			<Provides>::: -1 Initiative</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>SPELL POTENCY</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_SpellDamage</StrVal>
+			<Value>20</Value>
+			<Provides>::: +20% Spell DMG</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>STATS</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_MagicPower</StrVal>
+			<Value>20</Value>
+			<Provides>::: +20 Magic Power</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL ABILITY</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Spell_X_BookBlow</StrVal>
+			<Provides>::: Book Slam :::
+			::: 33% Chance
+			::: May daze target
+			::: Resistable</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Likelihood>10</Likelihood>
+		<RarityDisplay>Rare2</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Barbarians</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Barbarian</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Injury_X_Maimed_Hand</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		 <AIData AIPersonality="AI_General">
+			<AIPriority>88</AIPriority>
+		</AIData>
+		<ArtDef>ArtDef_X_Shield_OTSSOL_Armor</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Weapon_X_Dagger_HergonTusk">
+		<DisplayName>Venerable Hergon Tusk</DisplayName>
+		<Description>An impeccable tusk possessed by the Spirit of the Hergon; you feel quite rambunctious holding it.</Description>
+		<Type>Weapon</Type>
+		<WeaponType>OneHanded</WeaponType>
+		<WeaponUpgradeType>DaggerBlade</WeaponUpgradeType>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>175</ShopValue>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Pierce</StrVal>
+			<Value>9</Value>
+		</GameModifier>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>An impeccable tusk possessed by the Spirit of the Hergon; you feel quite rambunctious.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>CORE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Boost</StrVal>
+			<Value>2</Value>
+			<Provides>::: +2 ATK for the 1st Action</Provides>
+			<xActions>1</xActions>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>3</Value>
+			<Provides>::: +3 Initiative</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>MOVEMENT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Moves</StrVal>
+			<Value>1</Value>
+			<Provides>::: +1 Move for the 1st Action</Provides>
+			<xActions>1</xActions>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL EFFECT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_MaxCounterAttack</StrVal>
+			<Value>1</Value>
+			<Provides>::: Counterattack :::
+			::: +1 per Action</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>TACTICAL MELEE ATK</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>MeleeAppliesSpell</Attribute>
+			<StrVal>Exhaust_Effect</StrVal>
+			<Provides>::: -1 Battle Wisdom</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>XOTIC</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_IsAssassinDagger</StrVal>
+			<Value>1</Value>
+			<Provides>::: Assassin Dagger :::
+			::: +5 Critical Chance
+			::: +25% Critical Damage
+			::: +1 Initiative
+			::: Applied in Tactical if Assassin</Provides>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>UltraRare</RarityDisplay>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_CUTTING</AIPrefType>
+			<AIPriority>112</AIPriority>
+		</AIData>
+		<ArtDef>ArtDef_X_Dagger_HergonTusk_Weapon</ArtDef>
+	</GameItemType>
+</GameItemTypes>

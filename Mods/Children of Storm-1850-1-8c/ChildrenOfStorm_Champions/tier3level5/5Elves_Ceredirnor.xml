@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<UnitTypes>
+	<UnitType InternalName="Elves_Ceredirnor">
+		<CreatureType>Champion</CreatureType>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-5</Value>
+			<Provides>-5% Unrest in the city this unit is in</Provides>
+		</GameModifier>
+
+		<DisplayName>Ceredirnor</DisplayName>
+		<Backstory>At his birth, the midwife had a premonition that Ceredirnor would do "great things" with fire. Perhaps it it wasn't quite what she had in mind when, as an infant, Ceredirnor knocked over a candle and set his dwelling ablaze.  Ceredirnor did survive, obviously, but ever after the incident, he has been strangely affected by fire; whereas most elves tend to avoid fire when possible due to its tendency to get out of control and cause unintended damage, Ceredirnor remains fascinated by it, as his constantly singed fingers will attest.  Despite, or maybe because of, his many fire related injuries, Ceredirnor has a certain way with flames. While he can coax more out of a fire spell than most, he's constantly having small 'accidents' that result in this or that being singed or charred; this tends to put other elves on edge.  More than once he's been asked, with varying degrees of politeness, to cease his incendiary pursuits.</Backstory>
+
+		<ModelPath>Gfx\HKB\Units\K_Male_Mesh_01.hkb</ModelPath>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<EyeTexture>gfx\eyes\blinks\eyeblink_m2_brwn.png</EyeTexture>
+		<AnimationPack>EF_NoblemanAnimationPack</AnimationPack>
+
+		<ShowAsSingleUnit>false</ShowAsSingleUnit>
+		<CutSceneDataPack>ReliasCutscenePack</CutSceneDataPack>
+		<ModelScale>1.0000</ModelScale>
+		<TacticalModelScale>1.5000</TacticalModelScale>
+		<EquipmentScale>1.0000</EquipmentScale>
+		<ClothMapScale>1.6</ClothMapScale>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<MovementType>land</MovementType>
+		<BobbingFrequency>0.0000</BobbingFrequency>
+
+		<ClothPoseIndex>7</ClothPoseIndex>
+		<InfoCardBackground>BG_GoodScene</InfoCardBackground>
+		<InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+
+		<CanBeDesigned>0</CanBeDesigned>
+		<Allegiance>Kingdom</Allegiance>
+		<Unique>1</Unique>
+		<IsNPC>1</IsNPC>
+		<NPCSpawnLikelihood>100</NPCSpawnLikelihood>
+		<IsChampion>1</IsChampion>
+		<Gender>Male</Gender>
+		<SoundPack>SoundPack_Generic_Male</SoundPack>
+		<SpawnRating>5</SpawnRating>
+
+		<Quote>Like a moth to the flame...what?  No, I didn't mean me!</Quote>
+		<NPCRecruitmentText>%d will show me that you are sincere.</NPCRecruitmentText>
+		<SelectedAbilityBonusOption>Blood_Elves</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>PathOfTheMage</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ceredirnor_FireFocus</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Fire1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Fire2</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Fire3</SelectedAbilityBonusOption>
+
+		<Medallions InternalName=""/>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_BG_IsHumanoid>1.0000</UnitStat_BG_IsHumanoid>
+			<UnitStat_BG_IsKingdom>1.0000</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsMale>1.0000</UnitStat_BG_IsMale>
+			<UnitStat_BG_IsRace_Elves>1.0000</UnitStat_BG_IsRace_Elves>
+			<UnitStat_BG_IsChampion>1.0000</UnitStat_BG_IsChampion>
+			<UnitStat_CombatSpeed>22.0000</UnitStat_CombatSpeed>
+			<UnitStat_BG_IsImmortal>1</UnitStat_BG_IsImmortal>
+			<UnitStat_HitPoints>20.0000</UnitStat_HitPoints>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+		</LevelMilestone>
+
+		<Equipment>Elf_Angel_K_Male_Head_02</Equipment>
+		<Equipment>Basic_Pants_ID2</Equipment>
+		<Equipment>Warrior_Boots_ID1</Equipment>
+		<Equipment>Sovereign_Warrior_Shirt_Pleated_ID2</Equipment>
+		<Equipment>Sovereign_Short_Hair_02</Equipment>
+		<Equipment>Noble_Surcoat</Equipment>
+
+		<AutoCreateEquipment>Staff_Incineration</AutoCreateEquipment>
+		<AutoCreateEquipment>RingOfAsh</AutoCreateEquipment>
+
+		<Color_Skin>255,255,207,255</Color_Skin>
+		<Color_Hair>191,61,13,255</Color_Hair>
+		<Color_Clothing1>255,0,0,255</Color_Clothing1>
+		<Color_Clothing2>107,15,15,255</Color_Clothing2>
+		<Color_Metal>150,155,135,255</Color_Metal>
+		<Texture_Skin>CPELF_skin2.png</Texture_Skin>
+		<Texture_Eyes>gfx\eyes\blinks\eyeblink_m2_brwn.png</Texture_Eyes>
+		<UnitModelType>ElfMale</UnitModelType>
+
+		<NPCFreeRecruit>0</NPCFreeRecruit>
+		<RaceType>Race_Type_Elves</RaceType>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<WageOverride>1</WageOverride>
+	</UnitType>
+
+	<AbilityBonus InternalName="Ceredirnor_FireFocus">
+		<AbilityBonusOption InternalName="Ceredirnor_FireFocus">
+			<DisplayName>Ceredirnor's Pyromania</DisplayName>
+			<Description>Bonus fire spell damage, decreased resistance to fire damage.</Description>
+			<Icon>Searing_Attack.png</Icon>
+
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_SpellDamage_Fire</StrVal>
+				<Value>0.15</Value>
+				<Provides>+15% Spell Damage with Fire spells</Provides>
+			</GameModifier>
+
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ResistFire</StrVal>
+				<Value>-33</Value>
+				<Provides>-33% Fire Resistance</Provides>
+			</GameModifier>
+
+			<IsCombatAbility>1</IsCombatAbility>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>NonExistantPath</Attribute>
+			</Prereq>
+			<Type>Spell</Type>
+			<RarityDisplay>Unique</RarityDisplay>            
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+
+</UnitTypes>

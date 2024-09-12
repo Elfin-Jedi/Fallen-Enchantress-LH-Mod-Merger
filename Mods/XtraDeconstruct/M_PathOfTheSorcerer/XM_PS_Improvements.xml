@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--Path of the Sorcerer: D. Elliot Lamb a.k.a davrovana w/ help (graphics) from fsemprini-->
+<!--XtraDeconstruct 3.0 by Primal-->
+<ImprovementTypes>
+	<ImprovementType InternalName="SorcerersTower">
+		<DisplayName>Sorcerer's Tower</DisplayName>
+		<Description>Constructing this building allows your Sorcerer to cast Magical Experiment and Recruit Sorcerer's Apprentice when stationed. Also allows purchase of the Sorcerer's Staff.</Description>
+		<RequiresCity>1</RequiresCity>
+		<BarredTerrain>River</BarredTerrain>
+		<BarredTerrain>SwampTerrain</BarredTerrain>
+		<PreferredTerrain>City</PreferredTerrain>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<PreferredTerrain>Forest</PreferredTerrain>
+		<RequiresCityImprovement>1</RequiresCityImprovement>
+		<RequiredImprovement>Conclave</RequiredImprovement>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Gold</Attribute>
+			<Value>-30</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>RefinedCrystal</Attribute>
+			<Value>-5</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Metal</Attribute>
+			<Value>-5</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_XL_Beer</Attribute>
+			<Value>-5</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>UnitStat_IsInTower</StrVal>
+			<Value>1</Value>
+			<Provides>Stationed Sorcerers can cast Magical Experiment</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>Stationed Sorcerers can cast Recruit Sorcerer's Apprentice (IF Sovereign)</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>-1% Unrest</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>Shop ::: Sorcerer's Staff</Provides>
+		</GameModifier>
+		<LaborToBuild>75</LaborToBuild>
+		<UnlocksShopItem>Staff_Sorcerer</UnlocksShopItem>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<ArtDef>Art_TowerOfTheMagi</ArtDef>
+	</ImprovementType>
+</ImprovementTypes>

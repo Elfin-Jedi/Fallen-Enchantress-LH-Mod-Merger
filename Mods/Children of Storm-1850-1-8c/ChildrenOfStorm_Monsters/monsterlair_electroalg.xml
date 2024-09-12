@@ -1,0 +1,431 @@
+<?xml version="1.0"?>
+<Container>
+  <UnitType InternalName="ElectroAlg">
+    <DisplayName>Electroalg</DisplayName>
+    <RaceType>Race_Type_Special</RaceType>
+    <CanBeDesigned>0</CanBeDesigned>
+    <IsSovereign>0</IsSovereign>
+    <AllowGrouping>0</AllowGrouping>
+    <HasWages>0</HasWages>
+    <SpawnRating>4</SpawnRating>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <UnitStat_Accuracy>75</UnitStat_Accuracy>
+      <UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+      <UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
+      <UnitStat_Intelligence>1</UnitStat_Intelligence>
+      <UnitStat_Moves>3</UnitStat_Moves>
+      <UnitStat_WeightCapacity>100</UnitStat_WeightCapacity>
+      <UnitStat_BG_IsMonster>1</UnitStat_BG_IsMonster>
+      <UnitStat_Moves>1</UnitStat_Moves>
+      <UnitStat_Defense_Blunt>6</UnitStat_Defense_Blunt>
+      <UnitStat_Defense_Cutting>6</UnitStat_Defense_Cutting>
+      <UnitStat_Defense_Pierce>6</UnitStat_Defense_Pierce>
+    </LevelMilestone>
+    <LevelMilestone InternalName="L20">
+      <Level>20</Level>
+      <UnitStat_Accuracy>75</UnitStat_Accuracy>
+      <UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+      <UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
+      <UnitStat_Intelligence>1</UnitStat_Intelligence>
+      <UnitStat_Moves>3</UnitStat_Moves>
+      <UnitStat_WeightCapacity>100</UnitStat_WeightCapacity>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Endurance1</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Cannotbeknockedprone</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>VulnerableToCold</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Spell_ChainLightning_Electroalg</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>UnitStat_Classless</SelectedAbilityBonusOption>
+    <Treasure>
+      <Liklihood>30</Liklihood>
+      <GameModifier>
+        <ModType>GiveItem</ModType>
+        <StrVal>Uncommon</StrVal>
+      </GameModifier>
+    </Treasure>
+
+         <Treasure>
+      <Liklihood>70</Liklihood>
+       </Treasure>
+
+    <Backstory>Electroalg wandered in from the oceans after the Cataclysm. Capable of limited movement, they are unlike anything else seen on Elemental. They are able to electrify themselves for defensive purposes, and are even able to hurl lightning at enemies. Although they are generally peaceful and won't threaten those who just pass by, if challenged for control of their nesting grounds they will fight with great strength.</Backstory>
+    <Medallions InternalName="">
+      <All>electroalg_medallion.png</All>
+    </Medallions>
+    <AlwaysInTileCenter>1</AlwaysInTileCenter>
+    <AnimationPack>5HydraAnimationPack2</AnimationPack>
+    <BattleAnimationBehavior>Ranged</BattleAnimationBehavior>
+    <ClothMapScale>0.615</ClothMapScale>
+    <Color_Skin>34,34,34,255</Color_Skin>
+    <CutSceneDataPack>SandCrawlerUnitCutscenePack</CutSceneDataPack>
+    <EyeTexture>gfx/eyes/male_brown_eye.png</EyeTexture>
+    <InfoCardBackground>BG_CreateSwamp</InfoCardBackground>
+    <ModelPath>electroalg_mesh.hkb</ModelPath>
+    <ModelScale>2</ModelScale>
+    <TacticalModelScale>3</TacticalModelScale>
+    <ClothMapScale>3</ClothMapScale>
+    <SkeletonPath>electroalg_skeleton.hkb</SkeletonPath>
+    <SoundPack>SoundPack_Dragon1</SoundPack>
+    <Texture_All>electroalg_skin.dds</Texture_All>
+    <Equipment>FaerieMagic2</Equipment>
+  </UnitType>
+  <AbilityBonus InternalName="UnitStat_BG_abilityspecials4">
+    <AbilityBonusOption InternalName="UnitStat_Classless">
+      <DisplayName>Classless</DisplayName>
+      <Description>This unit counts as Monster but nothing else.</Description>
+      <Icon>Plain_Ability_Icon.png</Icon>
+      <IsCombatAbility>1</IsCombatAbility>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Provides>This unit counts as Monster but nothing else.</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>1</HideWhenUpgraded>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Spell_ChainLightning">
+    <AbilityBonusOption InternalName="Spell_ChainLightning_Electroalg">
+      <DisplayName>Lightning Defense</DisplayName>
+      <Description>When struck in combat attacker suffers a +4 Lightning attack</Description>
+      <Icon>T_Thunderstrike_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>MeleeDefenseAppliesSpell</Attribute>
+        <StrVal>MantleOfLightning_Effect</StrVal>
+        <Provides>When struck in combat attacker suffers a +4 Lightning attack</Provides>
+      </GameModifier>
+      <CombatRating>30</CombatRating>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <IsCombatAbility>1</IsCombatAbility>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <SpellDef InternalName="MantleOfLightning_Effect">
+    <DisplayName>Mantle of Lightning</DisplayName>
+    <Description>Wreaths the target in flames, doing 6 fire damage to anyone who attacks him.</Description>
+    <IconFG>S_MantleofFire_Icon.png</IconFG>
+    <IconColor>210,110,210</IconColor>
+    <SpellBookSortCategory>Unit</SpellBookSortCategory>
+    <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+    <SpellType>Tactical</SpellType>
+    <SpellClass>Offensive</SpellClass>
+    <SpellSubClass>Damage</SpellSubClass>
+    <SpellTargetType>EnemyUnit</SpellTargetType>
+    <HideInHiergamenon>1</HideInHiergamenon>
+    <IsCastable>0</IsCastable>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>DefendableDamage</Attribute>
+      <AttackStat>UnitStat_Attack_Lightning</AttackStat>
+      <Value>4</Value>
+    </GameModifier>
+    <AIData AIPersonality="AI_General">
+      <AIPriority>5</AIPriority>
+    </AIData>
+    <HitSoundFX>Spell_MantleOfFire_01</HitSoundFX>
+    <SpellDefEffect>
+      <EffectName>S_MantleofFire_Particle</EffectName>
+      <LocalPosition>0,0,0</LocalPosition>
+      <EffectScale>0.35</EffectScale>
+      <EffectDelay>0</EffectDelay>
+      <SnapToTerrain>1</SnapToTerrain>
+    </SpellDefEffect>
+  </SpellDef>
+  <GameItemType InternalName="FaerieMagic2">
+    <DisplayName>Algae Lightning</DisplayName>
+    <Description>Decorated with jade scales, the bow passes its enchantment onto every arrow it fires.  Archers are advised to wear gloves when using the bow.</Description>
+    <Type>Weapon</Type>
+    <Type>Defense</Type>
+    <WeaponType>Bow</WeaponType>
+    <CanBeEquipped>1</CanBeEquipped>
+    <ShopValue>180</ShopValue>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_Attack_Lightning</StrVal>
+      <Value>4</Value>
+      <Provides>+4 Lightning Attack</Provides>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>AdjustUnitStat</Attribute>
+      <StrVal>UnitStat_Attack_Lightning</StrVal>
+      <Value>0.5</Value>
+      <PerLevel>1</PerLevel>
+      <Provides>+0.5 Lightning Attack per Level</Provides>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>UnlockRangedAction</Attribute>
+      <StrVal>BowAttack_Lightning</StrVal>
+      <Provides>Ranged attack</Provides>
+    </GameModifier>
+    <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+    <TacticalRange>6</TacticalRange>
+    <IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+    <AIData AIPersonality="AI_General">
+      <AIPrefType>AIPrefType_BOW</AIPrefType>
+      <AIPriority>132</AIPriority>
+    </AIData>
+    <ArtDef>FaerieMagic2</ArtDef>
+    <GameItemTypeArtDef InternalName="FaerieMagic2">
+      <GameItemTypeModelPack InternalName="FaerieMagic">
+        <IconFile>Stat_AttackLightning_Icon.png</IconFile>
+        <TintR>0</TintR>
+        <TintG>0</TintG>
+        <TintB>0</TintB>
+        <AttackSFX>Hit_Arrow1</AttackSFX>
+        <AttackSFX>Hit_Arrow2</AttackSFX>
+        <EquipSFX>Equip_BowandArrow_01</EquipSFX>
+        <EquipSFX>Equip_BowandArrow_02</EquipSFX>
+        <EquipSFX>Equip_BowandArrow_03</EquipSFX>
+        <SoundPack>SoundPack_Bow</SoundPack>
+      </GameItemTypeModelPack>
+    </GameItemTypeArtDef>
+  </GameItemType>
+  <GoodieHutType InternalName="Lair_Electroalg">
+    <Name>Electroalg Lair</Name>
+    <Description>Electroalg rarely stay in one place for long, but on occassion their camps can be found in forest areas.</Description>
+    <Rarity>40</Rarity>
+    <MinDistanceFromStartingPoints>6</MinDistanceFromStartingPoints>
+    <PreferredTerrain>Beach</PreferredTerrain>
+    <PreferredTerrain>River</PreferredTerrain>
+    <PreferredTerrain>SwampTerrain</PreferredTerrain>
+    <SpawnRating>0</SpawnRating>
+    <TileDesign>P_ThickSwampland1</TileDesign>
+    <DrawnIcon>Lair_Drake.png</DrawnIcon>
+    <OnSelectSFX>Click_Forest_Wolf</OnSelectSFX>
+    <Medallions InternalName="">
+      <All>electroalg_medallion.png</All>
+    </Medallions>
+    <Treasure>
+      <Liklihood>100</Liklihood>
+      <GameModifier>
+        <ModType>GiveItem</ModType>
+        <StrVal>Uncommon</StrVal>
+      </GameModifier>
+    </Treasure>
+    <Encounter>
+      <Liklihood>100</Liklihood>
+      <WillRespawn>0</WillRespawn>
+      <WanderingRadius>0</WanderingRadius>
+      <UnitInstance>
+        <UnitType>Electroalg</UnitType>
+        <UnitGroupingType>UnitGroupingType_Party</UnitGroupingType>
+        <Level>3</Level>
+      </UnitInstance>
+      <UnitInstance>
+        <UnitType>Electroalg</UnitType>
+        <Level>1</Level>
+      </UnitInstance>
+      <UnitInstance>
+        <UnitType>Electroalg</UnitType>
+        <Level>2</Level>
+      </UnitInstance>
+    </Encounter>
+    <Encounter>
+      <Liklihood>-1</Liklihood>
+      <WillRespawn>1</WillRespawn>
+      <RespawnChance>5</RespawnChance>
+      <RespawnDelay>35</RespawnDelay>
+      <WanderingRadius>2</WanderingRadius>
+      <UnitInstance>
+        <UnitType>Electroalg</UnitType>
+        <Level>1</Level>
+      </UnitInstance>
+      <UnitInstance>
+        <UnitType>Electroalg</UnitType>
+        <Level>3</Level>
+      </UnitInstance>
+      <UnitInstance>
+        <UnitType>Electroalg</UnitType>
+        <Level>3</Level>
+      </UnitInstance>
+      <UnitInstance>
+        <UnitType>Electroalg</UnitType>
+        <Level>4</Level>
+      </UnitInstance>
+    </Encounter>
+  </GoodieHutType>
+  <AnimationPack InternalName="5HydraAnimationPack2">
+    <DisplayName>Hydra Animation Pack</DisplayName>
+    <IsAvailableForSovereignCustomization>False</IsAvailableForSovereignCustomization>
+    <AnimationSubPack>5D_Hydra_Idle_Animations</AnimationSubPack>
+    <AnimationSubPack>5D_Hydra_HeroPoseFront_Animations</AnimationSubPack>
+    <AnimationSubPack>5D_Hydra_Run_Animations</AnimationSubPack>
+    <AnimationSubPack>5D_Hydra_BattleRun_Animations</AnimationSubPack>
+    <AnimationSubPack>5D_Hydra_BattleIdle_Animations</AnimationSubPack>
+    <AnimationSubPack>5D_Hydra_Attack_Animations</AnimationSubPack>
+    <AnimationSubPack>5D_Hydra_AttackKill_Animations</AnimationSubPack>
+    <AnimationSubPack>5D_Hydra_Dodge_Animations</AnimationSubPack>
+    <AnimationSubPack>5D_Hydra_Block_Animations</AnimationSubPack>
+    <AnimationSubPack>5D_Hydra_OnHit_Animations</AnimationSubPack>
+    <AnimationSubPack>5D_Hydra_Death_Animations</AnimationSubPack>
+    <AnimationSubPack>5D_Hydra_ClothPose_Animations</AnimationSubPack>
+    <AnimationSubPack>5D_Hydra_Awaken_01</AnimationSubPack>
+    <AnimationSubPack>5D_Hydra_CastRangedSpell</AnimationSubPack>
+  </AnimationPack>
+  <AnimationSubPack>2D_Hydra_CastRangedSpell</AnimationSubPack>
+  <AnimationSubPack InternalName="5D_Hydra_Idle_Animations">
+    <Type>Idle</Type>
+    <AnimationInSubPack>
+      <Animation>5D_Hydra_Idle_01</Animation>
+      <likelihood>66</likelihood>
+    </AnimationInSubPack>
+    <AnimationInSubPack>
+      <Animation>5D_Hydra_Idle_02</Animation>
+      <likelihood>33</likelihood>
+    </AnimationInSubPack>
+    <AnimationInSubPack>
+      <Animation>5D_Hydra_Idle_03</Animation>
+      <likelihood>33</likelihood>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="5D_Hydra_HeroPoseFront_Animations">
+    <Type>HeroPoseFront</Type>
+    <AnimationInSubPack>
+      <Animation>5D_Hydra_Idle_01</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="5D_Hydra_Run_Animations">
+    <Type>Run</Type>
+    <AnimationInSubPack>
+      <Animation>5D_Hydra_Run_01</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="5D_Hydra_BattleRun_Animations">
+    <Type>BattleRun</Type>
+    <AnimationInSubPack>
+      <Animation>5D_Hydra_BattleRun_01</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="5D_Hydra_BattleIdle_Animations">
+    <Type>BattleIdle</Type>
+    <AnimationInSubPack>
+      <Animation>5D_Hydra_Idle_01</Animation>
+      <likelihood>66</likelihood>
+    </AnimationInSubPack>
+    <AnimationInSubPack>
+      <Animation>5D_Hydra_Idle_02</Animation>
+      <likelihood>33</likelihood>
+    </AnimationInSubPack>
+    <AnimationInSubPack>
+      <Animation>5D_Hydra_Idle_03</Animation>
+      <likelihood>33</likelihood>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="5D_Hydra_Attack_Animations">
+    <Type>Attack</Type>
+    <AnimationInSubPack>
+      <Animation>5D_Hydra_Attack_01</Animation>
+      <likelihood>33</likelihood>
+    </AnimationInSubPack>
+    <AnimationInSubPack>
+      <Animation>5D_Hydra_Attack_02</Animation>
+      <likelihood>33</likelihood>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="5D_Hydra_AttackKill_Animations">
+    <Type>AttackKill</Type>
+    <AnimationInSubPack>
+      <Animation>5D_Hydra_Attack_01</Animation>
+      <likelihood>33</likelihood>
+    </AnimationInSubPack>
+    <AnimationInSubPack>
+      <Animation>5D_Hydra_Attack_02</Animation>
+      <likelihood>33</likelihood>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="5D_Hydra_Dodge_Animations">
+    <Type>Dodge</Type>
+    <AnimationInSubPack>
+      <Animation>5D_Hydra_Dodge_01</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="5D_Hydra_Block_Animations">
+    <Type>Block</Type>
+    <AnimationInSubPack>
+      <Animation>5D_Hydra_Onhit_01</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="5D_Hydra_OnHit_Animations">
+    <Type>OnHit</Type>
+    <AnimationInSubPack>
+      <Animation>5D_Hydra_Onhit_01</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="5D_Hydra_Death_Animations">
+    <Type>Death</Type>
+    <AnimationInSubPack>
+      <Animation>5D_Hydra_Death_01</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="5D_Hydra_ClothPose_Animations">
+    <Type>ClothPose</Type>
+    <AnimationInSubPack>
+      <Animation>5D_Hydra_ClothPose_Animations</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <AnimationSubPack InternalName="5D_Hydra_CastRangedSpell">
+    <Type>CastRangedSpell</Type>
+    <AnimationInSubPack>
+      <Animation>5D_Hydra_Attack_01</Animation>
+      <likelihood>33</likelihood>
+    </AnimationInSubPack>
+    <AnimationInSubPack>
+      <Animation>5D_Hydra_Attack_02</Animation>
+      <likelihood>33</likelihood>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <Animation InternalName="5D_Hydra_ClothPose_Animations">
+    <FileName>electroalg_animation_clothpose01.hkb</FileName>
+    <CropFrames>0</CropFrames>
+  </Animation>
+  <Animation InternalName="5D_Hydra_Idle_01">
+    <FileName>electroalg_animation_idle01.hkb</FileName>
+    <CropFrames>0</CropFrames>
+  </Animation>
+  <Animation InternalName="5D_Hydra_Idle_02">
+    <FileName>electroalg_animation_attack01.hkb</FileName>
+    <CropFrames>0</CropFrames>
+  </Animation>
+  <Animation InternalName="5D_Hydra_Idle_03">
+    <FileName>electroalg_animation_attacked01.hkb</FileName>
+    <CropFrames>0</CropFrames>
+  </Animation>
+  <Animation InternalName="5D_Hydra_Run_01">
+    <FileName>electroalg_animation_idle01.hkb</FileName>
+    <DeltaZ>225</DeltaZ>
+    <PlaybackSpeedModifier>1.5</PlaybackSpeedModifier>
+  </Animation>
+  <Animation InternalName="5D_Hydra_BattleRun_01">
+    <FileName>electroalg_animation_idle01.hkb</FileName>
+    <DeltaZ>225</DeltaZ>
+    <PlaybackSpeedModifier>1.5</PlaybackSpeedModifier>
+  </Animation>
+  <Animation InternalName="5D_Hydra_Attack_01">
+    <FileName>electroalg_animation_attack01.hkb</FileName>
+  </Animation>
+  <Animation InternalName="5D_Hydra_Attack_02">
+    <FileName>electroalg_animation_attack02.hkb</FileName>
+  </Animation>
+  <Animation InternalName="5D_Hydra_Onhit_01">
+    <FileName>electroalg_animation_attack02.hkb</FileName>
+  </Animation>
+  <Animation InternalName="5D_Hydra_Dodge_01">
+    <FileName>electroalg_animation_attack02.hkb</FileName>
+  </Animation>
+  <Animation InternalName="5D_Hydra_Death_01">
+    <FileName>electroalg_animation_death01.hkb</FileName>
+  </Animation>
+  <AnimationSubPack InternalName="5D_Hydra_Awaken_01">
+    <Type>Awaken</Type>
+    <AnimationInSubPack>
+      <Animation>5D_Hydra_Awaken_01</Animation>
+    </AnimationInSubPack>
+  </AnimationSubPack>
+  <Animation InternalName="5D_Hydra_Awaken_01">
+    <FileName>electroalg_animation_awaken01.hkb</FileName>
+  </Animation>
+</Container>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<UnitTypes>
+	<UnitType InternalName="Lizardman Juggernaut_-638008713-2841">
+		<DisplayName>Lizardman Juggernaut</DisplayName>
+		<Quote>'My blade hungers for the blood of man.'</Quote>
+		<HasEssence>false</HasEssence>
+		<ModelPath>juggernaut_lizardman.hkb</ModelPath>
+		<SkeletonPath>K_Juggernaut_Skeleton_01.hkb</SkeletonPath>
+		<EyeTexture>gfx/eyes/male_brown_eye.png</EyeTexture>
+		<AnimationPack>JuggernautAnimationPack</AnimationPack>
+		<ShowAsSingleUnit>false</ShowAsSingleUnit>
+		<CutSceneDataPack>JuggernautUnitCutscenePack</CutSceneDataPack>
+		<ModelScale>0.8036</ModelScale>
+		<TacticalModelScale>1.5000</TacticalModelScale>
+		<EquipmentScale>2.5000</EquipmentScale>
+		<ClothMapScale>1.6000</ClothMapScale>
+		<BattleAnimationBehavior>Stationary</BattleAnimationBehavior>
+		<MovementType>land</MovementType>
+		<BobbingFrequency>0.0000</BobbingFrequency>
+		<ClothPoseIndex>0</ClothPoseIndex>
+		<InfoCardBackground>BG_BarrenForest</InfoCardBackground>
+		<InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+		<CanBeDesigned>1</CanBeDesigned>
+		<UserDesigned>true</UserDesigned>
+		<IsModDependent>false</IsModDependent>
+		<Medallions InternalName=""/>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<LevelMilestone InternalName="">
+			<Level>1</Level>
+			<UnitStat_BG_IsEmpire>1.0000</UnitStat_BG_IsEmpire>
+			<UnitStat_BG_IsMale>1.0000</UnitStat_BG_IsMale>
+			<UnitStat_BG_IsMonster>1.0000</UnitStat_BG_IsMonster>
+			<UnitStat_BG_IsRace_Trogs>1.0000</UnitStat_BG_IsRace_Trogs>
+			<UnitStat_ChanceToAvoidProne>100.0000</UnitStat_ChanceToAvoidProne>
+			<UnitStat_HitPoints>80.0000</UnitStat_HitPoints>
+			<UnitStat_WeightCapacity>200.0000</UnitStat_WeightCapacity>
+		</LevelMilestone>
+		<Equipment>Juggernaut_Hair</Equipment>
+		<Equipment>Juggernaut_Gear</Equipment>
+		<Equipment>AmuletOfHaste</Equipment>
+		<Equipment>BeltOfSpeed</Equipment>
+		<Equipment>BeltOfPrecognition</Equipment>
+		<EquipmentUpgradeDef>
+			<SelectionCriterion>MaximizeBest</SelectionCriterion>
+			<ComparisonAttribute>UnitStat_Attack_Pierce</ComparisonAttribute>
+			<WeaponUpgradeType>Blunt</WeaponUpgradeType>
+			<EquipmentSlot>Weapon</EquipmentSlot>
+			<ForUpgradeActionOnly>0</ForUpgradeActionOnly>
+		</EquipmentUpgradeDef>
+		<EquipmentUpgradeDef>
+			<SelectionCriterion>MaximizeSum</SelectionCriterion>
+			<ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+			<EquipmentSlot>Defense</EquipmentSlot>
+			<ForUpgradeActionOnly>0</ForUpgradeActionOnly>
+		</EquipmentUpgradeDef>
+		<Color_Skin>77,77,0,255</Color_Skin>
+		<Color_Hair>28,21,0,255</Color_Hair>
+		<Color_Clothing1>99,63,30,255</Color_Clothing1>
+		<Color_Clothing2>78,65,50,255</Color_Clothing2>
+		<Color_Metal>70,70,16,255</Color_Metal>
+		<Color_Primary>56,33,13,255</Color_Primary>
+		<Color_Secondary>77,77,0,255</Color_Secondary>
+		<Color_Roof>77,77,0,255</Color_Roof>
+		<Color_TerrainBlend>255,255,255,255</Color_TerrainBlend>
+		<Color_TerrainOnly>255,255,255,255</Color_TerrainOnly>
+		<Color_Trans>255,255,255,255</Color_Trans>
+		<Color_ScrollTransMask>255,255,255,255</Color_ScrollTransMask>
+		<Color_Eyes>255,255,255,255</Color_Eyes>
+		<Color_Crest>255,255,255,255</Color_Crest>
+		<Texture_Skin>K_Juggernaut_Texture_01.dds</Texture_Skin>
+		<CreatorFactionName>EmpireOfLizardmen</CreatorFactionName>
+		<Gender>Male</Gender>
+		<UnitModelType>JuggernautMale</UnitModelType>
+		<SelectedAbilityBonusOption>Juggernaut_Liz</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Maul</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>UncontrolledRage</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Fast</SelectedAbilityBonusOption>
+		<IsSovereign>0</IsSovereign>
+		<HasWages>1</HasWages>
+		<NPCFreeRecruit>0</NPCFreeRecruit>
+		<RaceType>Race_Type_Trogs</RaceType>
+		<IgnoreItemTrainingCosts>false</IgnoreItemTrainingCosts>
+		<AdditionalTrainingTurns>400.0000</AdditionalTrainingTurns>
+		<WageOverride>0.0000</WageOverride>
+		<UnitTypeVersion>1</UnitTypeVersion>
+		<TileRadius>0</TileRadius>
+		<GetPerksOnLevelUp>0</GetPerksOnLevelUp>
+		<DividesBattleExp>1</DividesBattleExp>
+		<CanSqueeze>0</CanSqueeze>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<AllowGrouping>false</AllowGrouping>
+		<SoundPack>SoundPack_Golem1</SoundPack>
+		<Prereq InternalName="Prereq 1106">
+			<Type>Race</Type>
+			<Target>player</Target>
+			<Attribute>Race_Type_Lizardmen</Attribute>
+			<Value>0.0000</Value>
+		</Prereq>
+		<Prereq InternalName="Prereq 1107">
+			<Type>Tech</Type>
+			<Target>player</Target>
+			<Attribute>Weaponsmithing</Attribute>
+			<Value>0.0000</Value>
+		</Prereq>
+		<IsChampion>0</IsChampion>
+	</UnitType>
+</UnitTypes>

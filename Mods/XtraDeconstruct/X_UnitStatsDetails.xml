@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+
+<!--# = Number-->
+<!--% = Percentage-->
+<!--B% = Bonus Percentage-->
+<!--C% = Chance Percentage-->
+<!--R% = Resistance Percentage-->
+<!--+ = Adds-->
+<!--x = Multiplies-->
+<PlayerAbilityTypes>
+		<!--NOW VISIBLE (ATTRIBUTE CATEGORY)-->
+			<!--#-->
+	<UnitStatType InternalName="UnitStat_Sight">
+		<DisplayName># Sight Radius</DisplayName>
+		<Icon>US_X_Sight.png</Icon>
+		<DefaultValue>3.0</DefaultValue>
+		<Hidden>0</Hidden>
+		<UnitStatGrouping>AbilityStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsAttribute</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+			<!--%-->
+			<!--B%-->
+	<UnitStatType InternalName="UnitStat_ExpBonus">
+		<DisplayName>B% XP</DisplayName>
+		<Icon>US_X_ExpBonus.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>0</Hidden>
+		<UnitStatGrouping>AbilityStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsAttribute</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+			<!--C%-->
+			<!--R%-->
+			<!--+-->
+			<!--x-->
+		<!--NOW VISIBLE (COMBAT STATS CATEGORY)-->
+			<!--#-->
+	<UnitStatType InternalName="UnitStat_DodgeAgainstRanged">
+		<DisplayName># Dodge Ranged</DisplayName>
+		<Icon>US_X_DodgeAgainstRanged.png</Icon>
+		<Hidden>0</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_Enrage_Damage_Bonus">
+		<DisplayName># Enrage DMG</DisplayName>
+		<Icon>US_X_Enrage.png</Icon>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+ 		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_HealthRegen">
+		<DisplayName># Regeneration</DisplayName>
+		<Icon>US_X_HealthRegen.png</Icon>
+		<Hidden>0</Hidden>
+		<UnitStatGrouping>AbilityStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping><!--?-->
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_HPFromKills">
+		<DisplayName># HP/Kill</DisplayName>
+		<Description>Amount of HP this unit recovers when killing an enemy unit in melee.</Description>
+		<Icon>US_X_HPFromKills.png</Icon>
+		<Hidden>0</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+ 		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_ManaFromKills">
+		<DisplayName># Mana/Kill</DisplayName>
+		<Description>Amount of mana this unit recovers when killing an enemy unit in melee.</Description>
+		<Icon>US_X_ManaFromKills.png</Icon>
+		<Hidden>0</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+ 		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_MaxCounterAttack">
+		<DisplayName># Counterattacks</DisplayName>
+		<Description>Maximum number of times a unit can counterattack when attacked in battle, between actions.</Description>
+		<Icon>US_X_MaxCounterAttack.png</Icon>
+		<Hidden>0</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+ 		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_TacticalHealthRegen">
+		<DisplayName># T. Regeneration</DisplayName>
+		<Description>Unit regenerates health at the start of every tactical action.</Description>
+		<Icon>US_X_TacticalHealthRegen.png</Icon>
+		<Hidden>0</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_Stamina_Growth">
+		<DisplayName>+ BW Growth</DisplayName>
+		<Description>Battle Wisdom gained each Action.</Description>
+		<Icon>US_X_BWG.png</Icon>
+		<Hidden>0</Hidden>
+        <DefaultValue>1.0</DefaultValue>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_Stamina_Starting">
+		<DisplayName># Starting BW</DisplayName>
+		<Description>Battle Wisdom this Unit starts the battle with.</Description>
+		<Icon>US_X_BWS.png</Icon>
+		<Hidden>0</Hidden>
+        <DefaultValue>1.0</DefaultValue>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+			<!--C%-->
+	<UnitStatType InternalName="UnitStat_BackswingChance">
+		<DisplayName>C% Backswing</DisplayName>
+		<Icon>US_X_BackswingChance.png</Icon>
+		<Hidden>0</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+ 		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_ChanceToAvoidCrit">
+		<DisplayName>C% Avoid Critical</DisplayName>
+		<Icon>US_X_CritAvoidance.png</Icon>
+		<Hidden>0</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+ 		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_MaulChance">
+		<DisplayName>C% Maul</DisplayName>
+		<Icon>US_X_MaulChance.png</Icon>
+		<Hidden>0</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+ 		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+			<!--R%-->
+	<UnitStatType InternalName="UnitStat_ResistPierce">
+		<DisplayName>R% Pierce</DisplayName>
+		<Icon>US_X_ResistPierce.png</Icon>
+		<DefaultValue>0.0</DefaultValue>
+		<Hidden>0</Hidden>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+			<!--+-->
+	<UnitStatType InternalName="UnitStat_BonusReap">
+		<DisplayName>+ Reap</DisplayName>
+		<Icon>US_X_BonusReap.png</Icon>
+		<Hidden>0</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+ 		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+			<!--x-->
+	<UnitStatType InternalName="UnitStat_SwarmBonusCounter">
+		<DisplayName>x Swarm</DisplayName>
+		<Description>How many times per ally the Swarm Bonus (+1 ATK and +5 Accuracy) is applied to this unit in tactical (when applicable).</Description>
+		<Icon>US_X_BonusSwarm.png</Icon>
+		<Hidden>0</Hidden>
+		<DefaultValue>1</DefaultValue>
+ 		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BonusCleave">
+		<DisplayName>x Cleave</DisplayName>
+		<Icon>US_X_BonusCleave.png</Icon>
+		<Hidden>0</Hidden>
+		<DefaultValue>1.0</DefaultValue>
+ 		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BonusCrushingBlow">
+		<DisplayName>x Crushing Blow</DisplayName>
+		<Icon>US_X_BonusCrushingBlow.png</Icon>
+		<Hidden>0</Hidden>
+		<DefaultValue>1.0</DefaultValue>
+ 		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BonusImpale">
+		<DisplayName>x Impale</DisplayName>
+		<Icon>US_X_BonusImpale.png</Icon>
+		<Hidden>0</Hidden>
+		<DefaultValue>1.0</DefaultValue>
+ 		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_CritDamageMultiplier">
+		<DisplayName>x Critical DMG</DisplayName>
+		<DefaultValue>2.0</DefaultValue>
+		<Icon>US_X_CritDamageMultiplier.png</Icon>
+		<Hidden>0</Hidden>
+		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_CounterattackMultiplier">
+		<DisplayName>x Counter DMG</DisplayName>
+		<Icon>US_X_CounterattackMultiplier.png</Icon>
+		<Hidden>0</Hidden>
+		<DefaultValue>0.5</DefaultValue>
+ 		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_SplashDamage">
+		<DisplayName>x Splash DMG</DisplayName>
+		<Icon>US_X_SplashDamage.png</Icon>
+		<Hidden>0</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+ 		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_OverpowerMultiplier">
+		<DisplayName>x OP DMG</DisplayName>
+		<Icon>Stat_CritDamageMultiplier_Icon.png</Icon>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+ 		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+		<!--HIDDEN (UNHIDE AS NEEDED)-->
+			<!--#-->
+	<UnitStatType InternalName="UnitStat_MaxTroopsFromKills">
+		<DisplayName># Max Troops From Kills</DisplayName>
+		<Icon>Stat_Base_Icon.png</Icon>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+ 		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+			<!--B%-->
+	<UnitStatType InternalName="UnitStat_SpellDamage_Fire">
+		<DisplayName>B% Fire DMG</DisplayName>
+		<Icon>Stat_Base_Icon.png</Icon>
+		<Hidden>1</Hidden>
+		<DefaultValue>1.0</DefaultValue>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+		<DisplayPercentage>0</DisplayPercentage>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_DamageReflect">
+		<DisplayName>B% Reflect DMG</DisplayName>
+		<Icon>US_X_DamageReflect.png</Icon>
+		<Hidden>1</Hidden><!--0-->
+		<DefaultValue>0.0</DefaultValue>
+ 		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+			<!--C%-->
+	<UnitStatType InternalName="UnitStat_AIControlChance">
+		<DisplayName>C% AIControl</DisplayName>
+		<Icon>Stat_Base_Icon.png</Icon>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+ 		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BashChance">
+		<DisplayName>C% Bash</DisplayName>
+		<Icon>Stat_Base_Icon.png</Icon>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+ 		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_ChanceToAvoidProne">
+		<DisplayName>C% Avoid Prone</DisplayName>
+		<Icon>Stat_Base_Icon.png</Icon>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+ 		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_ClumsyChance">
+		<DisplayName>C% Clumsy</DisplayName>
+		<Icon>Stat_Base_Icon.png</Icon>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+ 		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+			<!--R%-->
+			<!--+-->
+	<UnitStatType InternalName="UnitStat_BonusBleed">
+		<DisplayName>+ Bleed</DisplayName>
+		<Icon>Stat_Base_Icon.png</Icon>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+ 		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_SpellCastTimeModifier">
+		<DisplayName>+ Cast Time</DisplayName>
+		<Icon>Stat_Base_Icon.png</Icon>
+		<Hidden>1</Hidden>
+		<DefaultValue>0</DefaultValue>
+ 		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_Tactical_Auto_Defense_Boost">
+		<DisplayName>+ Auto DEF</DisplayName>
+		<Icon>Stat_Base_Icon.png</Icon>
+		<Hidden>1</Hidden>
+		<DefaultValue>5.0</DefaultValue>
+ 		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_Tactical_Auto_Dodge_Boost">
+		<DisplayName>+ Auto Dodge</DisplayName>
+		<Icon>Stat_Base_Icon.png</Icon>
+		<Hidden>1</Hidden>
+		<DefaultValue>0.0</DefaultValue>
+ 		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+			<!--x-->
+	<UnitStatType InternalName="UnitStat_TacticalSpellManaCost_Multiplier">
+		<DisplayName>x T. Mana Cost</DisplayName>
+		<Icon>Stat_CritDamageMultiplier_Icon.png</Icon>
+		<Hidden>1</Hidden>
+		<DefaultValue>1.0</DefaultValue>
+ 		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_TacticalScaleMultiplier">
+		<DisplayName>x T. Scale</DisplayName>
+		<Icon>Stat_CritDamageMultiplier_Icon.png</Icon>
+		<Hidden>1</Hidden>
+		<DefaultValue>1.0</DefaultValue>
+ 		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+		<!--OTHERS-->
+	<UnitStatType InternalName="UnitStat_Accuracy">
+		<DisplayName># Accuracy</DisplayName>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_ArmorPierce">
+		<DisplayName>% Armor Pierce</DisplayName>
+		<Icon>US_X_ArmorPierce.png</Icon>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_Attack_Boost">
+		<DisplayName>ATK (Bonus)</DisplayName>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_ChanceToCrit">
+		<DisplayName>C% Critical</DisplayName>
+	</UnitStatType>
+    <UnitStatType InternalName="UnitStat_CombatSpeed">
+		<Icon>US_X_CombatSpeed.png</Icon>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_CombinedAttack">
+		<DisplayName>ATK</DisplayName>
+		<Icon>US_X_CombinedAttack.png</Icon>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_DefenseDisplay">
+		<DisplayName>DEF</DisplayName>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_Dodge">
+		<DisplayName># Dodge</DisplayName>
+		<Icon>US_X_Dodge.png</Icon>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_HitPoints">
+		<DisplayName>HP</DisplayName>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_MagicResist">
+		<DisplayName>R# Magic</DisplayName>
+		<Icon>US_X_MagicResist.png</Icon>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_MagicPower">
+		<DisplayName># Magic Power</DisplayName>
+		<Icon>US_X_MagicPower.png</Icon>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_SpellDamage">
+		<DisplayName>B% Spell DMG</DisplayName>
+		<Icon>US_X_SpellDamage.png</Icon>
+	</UnitStatType>
+		<!--MORE-->
+	<UnitStatType InternalName="UnitStat_ArmorProficiency">
+		<DisplayName># Armor Level</DisplayName>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BonusHealing">
+		<DisplayName>B% Healing</DisplayName>
+		<Icon>US_X_BonusHealing.png</Icon>
+		<DisplayPercentage>0</DisplayPercentage>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_BonusSummonLevel">
+		<DisplayName>+ Summon Level</DisplayName>
+		<Icon>Stat_Base_Icon.png</Icon>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_EnchantmentMaintenanceMultiplier">
+		<DisplayName>x Mana Upkeep</DisplayName>
+		<Icon>Stat_CritDamageMultiplier_Icon.png</Icon>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_MaxAccessoryBonus">
+		<DisplayName>+ Max Items</DisplayName>
+		<Icon>Stat_Base_Icon.png</Icon>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_StationedCityGrowthBoost">
+		<DisplayName>+ Station. Growth</DisplayName>
+		<Icon>Stat_Base_Icon.png</Icon>
+	</UnitStatType>
+		<!--SPECIAL-->
+	<UnitStatType InternalName="UnitStat_X_Crafting_Enchanting">
+		<Hidden>0</Hidden>
+ 		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+	<UnitStatType InternalName="UnitStat_X_Crafting_Tinkering">
+		<Hidden>0</Hidden>
+ 		<UnitStatGrouping>CombatStat</UnitStatGrouping>
+ 		<UnitStatGrouping>UnitDetailsCombatStat</UnitStatGrouping>
+		<UnitStatGrouping>UnitDesignStat</UnitStatGrouping>
+	</UnitStatType>
+</PlayerAbilityTypes>

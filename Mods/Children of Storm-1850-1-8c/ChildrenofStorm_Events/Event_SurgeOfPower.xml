@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Container>
+  <QuestDef InternalName="Event_SurgeOfPower">
+    <DisplayName>Surge of Power</DisplayName>
+    <Description>A mysterious event is increasing the magical occurences in the world. Reports come from all over the land of the dead growling in their graves, brooms that sweep floors on their own accord, windows and doors that won't stop slamming even when there is no wind. And yet, this is as nothing compared to the shards - they are overflowing with energy!
+
+All Mana income is increased by 100% for 16 turns.
+	</Description>
+   <IsStartingPointQuest>0</IsStartingPointQuest>
+    <IsStartingPointQuest>0</IsStartingPointQuest>
+    <AllowQuestRejection>0</AllowQuestRejection>
+    <ShortTextAccept>Such power, it is almost more than I can handle.</ShortTextAccept>
+    <QuestClass>Minor</QuestClass>
+    <Repeatable>0</Repeatable>
+   <TriggerType>TurnNumber</TriggerType>
+    <TriggerData>125</TriggerData>
+    <TriggerChance>5</TriggerChance>
+    <PostTriggerChance>5</PostTriggerChance>
+
+    <TriggerOrigin>EventLocation</TriggerOrigin>
+    <Image>CivWnd_StudySpells.png</Image>
+    <Treasure>
+     <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_Mana</StrVal>
+	<Value>100</Value>
+	<Duration>16</Duration>
+      </GameModifier>
+    </Treasure>
+    <QuestObjectiveDef>
+      <ObjectiveID>0</ObjectiveID>
+      <QuestEnd>1</QuestEnd>
+    </QuestObjectiveDef>
+  </QuestDef>
+
+</Container>

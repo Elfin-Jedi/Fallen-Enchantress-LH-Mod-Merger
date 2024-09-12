@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<GameItemTypes>
+	<GameItemType InternalName="Bracers_Heavy">
+		<DisplayName>Heavy Bracers</DisplayName>
+		<Description>These bracers are as fashionable as a bejeweled dice bag.</Description>
+		<Type>Forearms</Type>
+		<Subtype>Clothes</Subtype>
+		<CanBeEquipped>1</CanBeEquipped>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Nil</RarityDisplay>
+		<IsAvailableForSovereignCustomization>1</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>1</IsAvailableForUnitDesign>
+		<ArtDef>ArtDef_X_PlateVambraces_Ruvennan</ArtDef>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>1</AIPriority>
+		</AIData>
+	</GameItemType>
+	<GameItemType InternalName="Clothes_X_Asha_Aura1">
+		<DisplayName>Asha I</DisplayName>
+		<Description>Fire Aura</Description>
+		<Type>Face</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<RandomPeasantUnitLiklihood>0</RandomPeasantUnitLiklihood>
+		<RandomMerchantUnitLiklihood>0</RandomMerchantUnitLiklihood>
+		<RandomHeroUnitLiklihood>0</RandomHeroUnitLiklihood>
+		<IsAvailableForSovereignCustomization>1</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Nil</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>1</AIPriority>
+		</AIData>
+		<ArtDef>ArtDef_X_Asha_1_Clothes</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Clothes_X_Asha_Horns">
+		<DisplayName>Asha Horns</DisplayName>
+		<Description>Horns</Description>
+		<Type>Head</Type>
+		<Subtype>Hair</Subtype>
+		<CanBeEquipped>1</CanBeEquipped>
+		<RandomPeasantUnitLiklihood>0</RandomPeasantUnitLiklihood>
+		<RandomMerchantUnitLiklihood>0</RandomMerchantUnitLiklihood>
+		<RandomHeroUnitLiklihood>0</RandomHeroUnitLiklihood>
+		<IsAvailableForSovereignCustomization>1</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Nil</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<ArtDef>Clothes_X_Asha_Horns_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Clothes_X_Asha_Trained">
+		<DisplayName>Asha</DisplayName>
+		<Description>Aura and Texture
+		
+		NOTE: Do NOT use helmets</Description>
+		<Type>Head</Type>
+		<Subtype>Hair</Subtype>
+		<CanBeEquipped>1</CanBeEquipped>
+		<RandomPeasantUnitLiklihood>0</RandomPeasantUnitLiklihood>
+		<RandomMerchantUnitLiklihood>0</RandomMerchantUnitLiklihood>
+		<RandomHeroUnitLiklihood>0</RandomHeroUnitLiklihood>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>1</IsAvailableForUnitDesign>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Nil</RarityDisplay>
+		<ArtDef>Clothes_X_Asha_Trained_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Mount_SpiderBody3">
+		<DisplayName>Spider Body</DisplayName>
+		<Description>The Spider part of the body.</Description>
+		<Type>Mount</Type>
+		<Subtype>Clothes</Subtype>
+		<AdditionalTrainingTurns>12</AdditionalTrainingTurns>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>-1</ShopValue>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<ProductionRequirement>
+			<Type>Resource</Type>
+			<Attribute>Resource_X_SpiderBody</Attribute>
+			<Value>1</Value>
+		</ProductionRequirement>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Wraiths</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_BroodRider</Attribute>
+		</Prereq>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_RiderRace</StrVal>
+			<Multiplier>0</Multiplier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Spell_X_FlurryOfArrows</StrVal>
+			<Provides>The Spider part of the body.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Spell_X_Sagittarius</StrVal>
+			<Provides>STATS</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Boost</StrVal>
+			<Value>1</Value>
+			<xActions>1</xActions>
+			<Provides>::: +1 ATK for the 1st Action</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Pierce</StrVal>
+			<Value>0.20</Value>
+			<PerLevel>1</PerLevel>
+			<Provides>::: +1 DEF per 5 Levels</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>1</Value>
+			<Provides>::: +1 Initiative for the 1st Action</Provides>
+			<xActions>1</xActions>
+		</GameModifier>
+		<GameModifier>
+			<Provides>MOVEMENT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Moves</StrVal>
+			<Value>1</Value>
+			<Provides>::: +1</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>IMMUNITY</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ChanceToAvoidProne</StrVal>
+			<Value>100</Value>
+			<Provides>::: To being Knocked Prone</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>STATS</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Dodge</StrVal>
+			<StrVal2>UnitStat_X_IsAfoot</StrVal2>
+			<Multiplier>0.80</Multiplier>
+			<vsHigher>1</vsHigher>
+			<Provides>::: -20% Dodge vs Afoot</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_IsAfoot</StrVal>
+			<Value>-1</Value>
+			<Provides>XOTIC</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_BG_IsUsingMount</StrVal>
+			<Value>1</Value>
+			<Provides>::: Is Mounted</Provides>
+		</GameModifier>
+		<CutSceneDataPack>BroodUnitCutscenePack</CutSceneDataPack>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Nil</RarityDisplay>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>1</IsAvailableForUnitDesign>
+			<AIData AIPersonality="AI_General">
+				<AIPrefType>AIPrefType_MOUNT</AIPrefType>
+				<AIPriority>15000</AIPriority>
+			</AIData>
+		<ArtDef>Clothes_X_SpiderBody_ArtDef</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Mount_X_SpiderBody3">
+		<DisplayName>Spider Body (Sovereign)</DisplayName>
+		<Description>The Spider part of the body</Description>
+		<Type>Mount</Type>
+		<Subtype>Clothes</Subtype>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>-1</ShopValue>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_RiderRace</StrVal>
+			<Multiplier>0</Multiplier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Spell_X_FlurryOfArrows</StrVal>
+			<Provides>The Spider part of the body.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockCombatAbility</Attribute>
+			<StrVal>Spell_X_Sagittarius</StrVal>
+			<Provides>STATS</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Boost</StrVal>
+			<Value>1</Value>
+			<xActions>1</xActions>
+			<Provides>::: +1 ATK for the 1st Action</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>1</Value>
+			<Provides>::: +1 Initiative for the 1st Action</Provides>
+			<xActions>1</xActions>
+		</GameModifier>
+		<GameModifier>
+			<Provides>MOVEMENT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Moves</StrVal>
+			<Value>1</Value>
+			<Provides>::: +1</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>IMMUNITY</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ChanceToAvoidProne</StrVal>
+			<Value>100</Value>
+			<Provides>::: To being Knocked Prone</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>STATS</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Dodge</StrVal>
+			<StrVal2>UnitStat_X_IsAfoot</StrVal2>
+			<Multiplier>0.80</Multiplier>
+			<vsHigher>1</vsHigher>
+			<Provides>::: -20% Dodge vs Afoot</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_IsAfoot</StrVal>
+			<Value>-1</Value>
+			<Provides>XOTIC</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_BG_IsUsingMount</StrVal>
+			<Value>1</Value>
+			<Provides>::: Is Mounted</Provides>
+		</GameModifier>
+		<CutSceneDataPack>BroodUnitCutscenePack</CutSceneDataPack>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Nil</RarityDisplay>
+		<IsAvailableForSovereignCustomization>1</IsAvailableForSovereignCustomization>
+		<CustomizationPointCost>1</CustomizationPointCost>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_MOUNT</AIPrefType>
+			<AIPriority>15000</AIPriority>
+		</AIData>
+		<ArtDef>Clothes_X_SpiderBody_ArtDef</ArtDef>
+	</GameItemType>
+</GameItemTypes>

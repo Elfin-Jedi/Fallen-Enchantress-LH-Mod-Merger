@@ -1,0 +1,3631 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<Spells>
+	<SpellDef InternalName="Spell_X_Blindness_ArcaniumG3">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Blindness (Mimetic)</DisplayName>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>12</Amount>
+		</SpellResourceCost>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Death3</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_SovereignScreenHack</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_OneThousandSuns</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Resource_X_A6</Resource>
+			<Amount>3</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<PreventStackingWith>Blindness</PreventStackingWith>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Targets are stricken blind.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] BLINDNESS (MIMETIC)
+		::: Targets are stricken blind. This version covers a greater area.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Units
+		
+		EFFECT
+		::: - 25% Accuracy
+		::: - 25% Dodge
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: Battle
+		
+		OTHER
+		::: 3x3 Area
+		::: Air Multiplier
+		::: Time Bonus (Sov)
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Death Mage</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitCurse</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Debuff</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<IsResistable>1</IsResistable>
+		<IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+		<Radius>1</Radius>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Accuracy</StrVal>
+			<DisplayName>Blinded</DisplayName>
+			<Duration>-1</Duration>
+			<Effect>E_Blindness_Particle</Effect>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_Accuracy] * -0.25]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] * [UnitStat_SpellDamage_Air]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock1" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_X_IsCultLeader] * [UnitStat_X_Clock]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock1] * 0.01]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock2] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock4">
+				<Expression><![CDATA[[Calc_X_Clock3] * [Calc2]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Dodge</StrVal>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_Dodge] * -0.25]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] * [UnitStat_SpellDamage_Air]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock1" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_X_IsCultLeader] * [UnitStat_X_Clock]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock1] * 0.01]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock2] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock4">
+				<Expression><![CDATA[[Calc_X_Clock3] * [Calc2]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>99</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>200</AIPriority>
+			<AIMinSpellTargets>2</AIMinSpellTargets>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+					<Expression><![CDATA[[UnitStat_Dodge]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[UnitStat_Accuracy]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc3">
+					<Expression><![CDATA[[Calc] + [Calc2]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc4" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[UnitStat_Dodge]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc5" ValueOwner="TargetUnit">
+					<Expression><![CDATA[[UnitStat_Accuracy]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc6">
+					<Expression><![CDATA[[Calc4] + [Calc5]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc3] > [Calc6]]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Blindness.png</IconFG>
+		<HitSoundFX>Spell_Blind_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_Blindness_Particle</EffectName>
+			<LocalPosition>0,60,0</LocalPosition>
+			<EffectScale>.3</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_Blindness_ArcaniumO3">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Blindness (Tormenting)</DisplayName>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>12</Amount>
+		</SpellResourceCost>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Death3</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_SovereignScreenHack</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_OneThousandSuns</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Resource_X_A3</Resource>
+			<Amount>3</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<PreventStackingWith>Blindness</PreventStackingWith>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Targets are stricken blind.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] BLINDNESS (TORMENTING)
+		::: Targets are stricken blind. This version targets all enemy Champions.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Champions (ALL)
+		
+		EFFECT
+		::: - 25% Accuracy
+		::: - 25% Dodge
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: Battle
+		
+		OTHER
+		::: Air Multiplier
+		::: Time Bonus (Sov)
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Death Mage</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitCurse</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Debuff</SpellSubClass>
+		<SpellTargetType>AllEnemyChampions</SpellTargetType>
+		<IsResistable>1</IsResistable>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Accuracy</StrVal>
+			<DisplayName>Blinded</DisplayName>
+			<Duration>-1</Duration>
+			<Effect>E_Blindness_Particle</Effect>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_Accuracy] * -0.25]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] * [UnitStat_SpellDamage_Air]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock1" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_X_IsCultLeader] * [UnitStat_X_Clock]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock1] * 0.01]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock2] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock4">
+				<Expression><![CDATA[[Calc_X_Clock3] * [Calc2]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Dodge</StrVal>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_Dodge] * -0.25]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] * [UnitStat_SpellDamage_Air]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock1" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_X_IsCultLeader] * [UnitStat_X_Clock]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock1] * 0.01]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock2] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock4">
+				<Expression><![CDATA[[Calc_X_Clock3] * [Calc2]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>99</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>250</AIPriority>
+			<AIMinSpellTargets>3</AIMinSpellTargets>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+					<Expression><![CDATA[[UnitStat_Dodge]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[UnitStat_Accuracy]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc3">
+					<Expression><![CDATA[[Calc] + [Calc2]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc4" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[UnitStat_Dodge]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc5" ValueOwner="TargetUnit">
+					<Expression><![CDATA[[UnitStat_Accuracy]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc6">
+					<Expression><![CDATA[[Calc4] + [Calc5]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc3] > [Calc6]]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Blindness.png</IconFG>
+		<HitSoundFX>Spell_Blind_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_Blindness_Particle</EffectName>
+			<LocalPosition>0,60,0</LocalPosition>
+			<EffectScale>.3</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_Blizzard_ArcaniumR2Y2">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Blizzard (Tempestuous)</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Water5</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_Bewildered</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_SovereignScreenHack</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_Crematorium</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>40</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Resource_X_A2</Resource>
+			<Amount>2</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Resource_X_A4</Resource>
+			<Amount>2</Amount>
+		</SpellResourceCost>
+		<WaterShards>1</WaterShards>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Units take Water\Cold Damage.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] BLIZZARD (TEMPESTUOUS)
+		::: Units take 18 Water\Cold Damage (+2 per Water Shard) per member. This version does slightly more damage and has a lower casting time.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Units
+		
+		EFFECT
+		::: ((9 + Water Shard) x2) Water\Cold DMG
+		
+		FIGHTABLE
+		::: Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: 5x5 Area
+		::: Friendly Fire
+		::: Requires a Water Shard
+		::: Target TroopCount Multiplier
+		::: Water Shards (+2 per)
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Water Archmage</Description>
+		<FormattedDescription>Targets take %d Water\Cold DMG per member. This version does slightly more damage and has a lower casting time.</FormattedDescription>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<AllowFriendlyFireInRadius>1</AllowFriendlyFireInRadius>
+		<IsResistable>1</IsResistable>
+		<Radius>2</Radius>
+		<CastTime>1</CastTime>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Cold</AttackStat>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumWaterShards] * 2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + 18]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[Unit_GetTroopCount]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc4">
+				<Expression><![CDATA[[Calc2] * [Calc3]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc4]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Cold</AttackStat>
+			<IsForSpellResist>1</IsForSpellResist>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumWaterShards]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + 9]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[Unit_GetTroopCount]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc4">
+				<Expression><![CDATA[[Calc2] * [Calc3]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc4]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>99</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>825</AIPriority>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+					<Expression><![CDATA[[UnitStat_ResistCold]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc] < 80]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Blizzard.png</IconFG>
+		<CameraShakeDuration>3.25</CameraShakeDuration>
+		<CameraShakeStrength>0.1</CameraShakeStrength>
+		<HitSoundFX>Spell_Blizzard_01</HitSoundFX>
+		<HitSoundFX>Spell_Blizzard_02</HitSoundFX>
+		<ModifierDelay>2</ModifierDelay>
+		<WorldLightOverrideTime>6</WorldLightOverrideTime>
+		<WorldLightOverrideAmbiant>70,70,70</WorldLightOverrideAmbiant>
+		<WorldLightOverrideDiffuse>80,100,120</WorldLightOverrideDiffuse>
+		<WorldLightOverrideRim0>60,60,260</WorldLightOverrideRim0>
+		<WorldLightOverrideRim1>60,160,260</WorldLightOverrideRim1>
+		<SpellDefEffect>
+			<EffectName>T_Blizzard_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_Blizzard_ArcaniumG5R4Y4">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Blizzard (Seismic)</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Water5</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_Bewildered</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_SovereignScreenHack</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_Crematorium</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>40</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Resource_X_A6</Resource>
+			<Amount>5</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Resource_X_A4</Resource>
+			<Amount>4</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Resource_X_A2</Resource>
+			<Amount>4</Amount>
+		</SpellResourceCost>
+		<WaterShards>1</WaterShards>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Units take Water\Cold Damage.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] BLIZZARD (SEISMIC)
+		::: Units take 20 Water\Cold Damage (+2 per Water Shard) per member. This version does more damage, has a lower casting time, and covers a greater area.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Units
+		
+		EFFECT
+		::: ((10 + Water Shard) x2) Water\Cold DMG
+		
+		FIGHTABLE
+		::: Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: 7x7 Area
+		::: Friendly Fire
+		::: Requires a Water Shard
+		::: Target TroopCount Multiplier
+		::: Water Shards (+2 per)
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Water Archmage</Description>
+		<FormattedDescription>Targets take %d Water\Cold DMG per member to all within 3 radius. This version does more damage, has a lower casting time, and covers a greater area.</FormattedDescription>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<AllowFriendlyFireInRadius>1</AllowFriendlyFireInRadius>
+		<IsResistable>1</IsResistable>
+		<Radius>3</Radius>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Cold</AttackStat>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumWaterShards] * 2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + 20]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[Unit_GetTroopCount]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc4">
+				<Expression><![CDATA[[Calc2] * [Calc3]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc4]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Cold</AttackStat>
+			<IsForSpellResist>1</IsForSpellResist>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumWaterShards]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + 20]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[Unit_GetTroopCount]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc4">
+				<Expression><![CDATA[[Calc2] * [Calc3]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc4]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>99</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>925</AIPriority>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+					<Expression><![CDATA[[UnitStat_ResistCold]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc] < 80]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Blizzard.png</IconFG>
+		<CameraShakeDuration>3.25</CameraShakeDuration>
+		<CameraShakeStrength>0.1</CameraShakeStrength>
+		<HitSoundFX>Spell_Blizzard_01</HitSoundFX>
+		<HitSoundFX>Spell_Blizzard_02</HitSoundFX>
+		<ModifierDelay>2</ModifierDelay>
+		<WorldLightOverrideTime>6</WorldLightOverrideTime>
+		<WorldLightOverrideAmbiant>70,70,70</WorldLightOverrideAmbiant>
+		<WorldLightOverrideDiffuse>80,100,120</WorldLightOverrideDiffuse>
+		<WorldLightOverrideRim0>60,60,260</WorldLightOverrideRim0>
+		<WorldLightOverrideRim1>60,160,260</WorldLightOverrideRim1>
+		<SpellDefEffect>
+			<EffectName>T_Blizzard_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_FallFromHeaven_ArcaniumR6">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Fall from Heaven (Conflagrant) #K</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Life5</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_Bewildered</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_EternalNight</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_SovereignScreenHack</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Kingdom</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>50</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Resource_X_A4</Resource>
+			<Amount>6</Amount>
+		</SpellResourceCost>
+		<LifeShards>1</LifeShards>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Units take Life Damage.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] FALL FROM HEAVEN (CONFLAGRANT) #K
+		::: Units take 16 Life Damage (+2 per Life Shard) per member. This version does more damage.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Units
+		
+		EFFECT
+		::: ((8 + Life Shards) x2) Life DMG
+		
+		FIGHTABLE
+		::: Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: 5x5 Area
+		::: Friendly Fire
+		::: Life Shards (+2 per)
+		::: Requires a Life Shard
+		::: Target TroopCount Multiplier
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Life Archmage</Description>
+		<FormattedDescription>Targets take %d Life DMG per member. This version does more damage.</FormattedDescription>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<AllowFriendlyFireInRadius>1</AllowFriendlyFireInRadius>
+		<IsResistable>1</IsResistable>
+		<Radius>2</Radius>
+		<CastTime>2</CastTime>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Life</AttackStat>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumLifeShards] * 2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + 16]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[Unit_GetTroopCount]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc4">
+				<Expression><![CDATA[[Calc2] * [Calc3]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc4]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Life</AttackStat>
+			<IsForSpellResist>1</IsForSpellResist>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumLifeShards]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + 8]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[Unit_GetTroopCount]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc4">
+				<Expression><![CDATA[[Calc2] * [Calc3]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc4]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>99</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>825</AIPriority>
+			<AIMinSpellTargets>3</AIMinSpellTargets>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+					<Expression><![CDATA[[Unit_GetTroopCount]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc] > 3]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_FallFromHeaven.png</IconFG>
+		<HitSoundFX>Spell_FallingStar_01</HitSoundFX>
+		<ModifierDelay>1</ModifierDelay>
+		<WorldLightOverrideTime>4</WorldLightOverrideTime>
+		<WorldLightOverrideAmbiant>0,0,0</WorldLightOverrideAmbiant>
+		<WorldLightOverrideDiffuse>35,50,48</WorldLightOverrideDiffuse>
+		<WorldLightOverrideRim0>22,116,176</WorldLightOverrideRim0>
+		<WorldLightOverrideRim1>17,212,164</WorldLightOverrideRim1>
+		<SpellDefEffect>
+			<EffectName>Effect_X_FallFromHeaven</EffectName>
+			<LocalPosition>0, 0 ,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_FallFromHeaven_ArcaniumR6Y4">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Fall from Heaven (Cyclonic) #K</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Life5</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_Bewildered</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_EternalNight</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_SovereignScreenHack</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Kingdom</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>50</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Resource_X_A2</Resource>
+			<Amount>4</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Resource_X_A4</Resource>
+			<Amount>6</Amount>
+		</SpellResourceCost>
+		<LifeShards>1</LifeShards>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Units take Life Damage.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] FALL FROM HEAVEN (CYCLONIC) #K
+		::: Units take 16 Life Damage (+2 per Life Shard) per member. This version does more damage and has a lower casting time.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Units
+		
+		EFFECT
+		::: ((8 + Life Shards) x2) Life DMG
+		
+		FIGHTABLE
+		::: Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: 5x5 Area
+		::: Friendly Fire
+		::: Life Shards (+2 per)
+		::: Requires a Life Shard
+		::: Target TroopCount Multiplier
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Life Archmage</Description>
+		<FormattedDescription>Targets take %d Life DMG per member. This version does more damage and has a lower casting time.</FormattedDescription>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<AllowFriendlyFireInRadius>1</AllowFriendlyFireInRadius>
+		<IsResistable>1</IsResistable>
+		<Radius>2</Radius>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Life</AttackStat>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumLifeShards] * 2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + 16]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[Unit_GetTroopCount]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc4">
+				<Expression><![CDATA[[Calc2] * [Calc3]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc4]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Life</AttackStat>
+			<IsForSpellResist>1</IsForSpellResist>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumLifeShards]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + 8]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[Unit_GetTroopCount]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc4">
+				<Expression><![CDATA[[Calc2] * [Calc3]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc4]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>99</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>825</AIPriority>
+			<AIMinSpellTargets>3</AIMinSpellTargets>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+					<Expression><![CDATA[[Unit_GetTroopCount]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc] > 3]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_FallFromHeaven.png</IconFG>
+		<HitSoundFX>Spell_FallingStar_01</HitSoundFX>
+		<ModifierDelay>1</ModifierDelay>
+		<WorldLightOverrideTime>4</WorldLightOverrideTime>
+		<WorldLightOverrideAmbiant>0,0,0</WorldLightOverrideAmbiant>
+		<WorldLightOverrideDiffuse>35,50,48</WorldLightOverrideDiffuse>
+		<WorldLightOverrideRim0>22,116,176</WorldLightOverrideRim0>
+		<WorldLightOverrideRim1>17,212,164</WorldLightOverrideRim1>
+		<SpellDefEffect>
+			<EffectName>Effect_X_FallFromHeaven</EffectName>
+			<LocalPosition>0, 0 ,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_Fireball_ArcaniumG4">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Fireball (Mountainous)</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Fire4</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_Snowstorm</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_Bewildered</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_SovereignScreenHack</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>50</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Resource_X_A6</Resource>
+			<Amount>4</Amount>
+		</SpellResourceCost>
+		<FireShards>1</FireShards>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Fireball does Fire DMG.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] FIREBALL (MOUNTAINOUS
+		::: Fireball does Fire DMG. This version covers a greater area.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Units
+		
+		EFFECT
+		::: (18 + (Fire Shards x4)) Fire DMG
+		
+		FIGHTABLE
+		::: Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: 5x5 Area
+		::: Fire Multiplier
+		::: Fire Shards (+4 per)
+		::: Friendly Fire
+		::: Requires a Fire Shard
+		::: Time Bonus (Sov)
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Fire Master</Description>
+		<FormattedDescription>Fireball does %d Fire DMG to all within 2 radius. This version covers a greater area.</FormattedDescription>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<AllowFriendlyFireInRadius>1</AllowFriendlyFireInRadius>
+		<IsResistable>1</IsResistable>
+		<Radius>2</Radius>
+		<CastTime>1</CastTime>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Fire</AttackStat>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumFireShards] * 4]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + 18]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc2] * [UnitStat_SpellDamage_Fire]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock1" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_X_IsCultLeader] * [UnitStat_X_Clock]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock1] * 0.01]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock2] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock4">
+				<Expression><![CDATA[[Calc_X_Clock3] * [Calc3]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Fire</AttackStat>
+			<IsForSpellResist>1</IsForSpellResist>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumFireShards] * 2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + 9]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock1" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_X_IsCultLeader] * [UnitStat_X_Clock]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock1] * 0.01]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock2] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock4">
+				<Expression><![CDATA[[Calc_X_Clock3] * [Calc2]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>99</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>466</AIPriority>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+					<Expression><![CDATA[[UnitStat_ResistFire]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc] < 66]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Fireball.png</IconFG>
+		<HitSoundFX>Spell_FireBallExplode_01</HitSoundFX>
+		<SpellCastSoundFX>Spell_FireBall_01</SpellCastSoundFX>
+		<SpellCastEffectName>T_Fireball_Particle</SpellCastEffectName>
+		<SpellCastEffectScale>1</SpellCastEffectScale>
+		<SpellCastProjectile>1</SpellCastProjectile>
+		<SpellCastProjectileSpeed>600</SpellCastProjectileSpeed>
+		<WorldLightOverrideTime>3</WorldLightOverrideTime>
+		<WorldLightOverrideAmbiant>20,20,20</WorldLightOverrideAmbiant>
+		<WorldLightOverrideRim0>255,217,66</WorldLightOverrideRim0>
+		<WorldLightOverrideRim1>255,115,66</WorldLightOverrideRim1>
+		<SpellDefEffect>
+			<EffectName>E_FireballExplosion_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>3</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_Fireball_ArcaniumG5R4Y2">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Fireball (Magmatic)</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Fire4</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_Snowstorm</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_Bewildered</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_SovereignScreenHack</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>50</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Resource_X_A6</Resource>
+			<Amount>5</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Resource_X_A4</Resource>
+			<Amount>4</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Resource_X_Y4</Resource>
+			<Amount>2</Amount>
+		</SpellResourceCost>
+		<FireShards>1</FireShards>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Fireball does Fire DMG.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] FIREBALL (MAGMATIC)
+		::: Fireball does Fire DMG. This version does more damage, has a lower casting time, and covers a greater area.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Units
+		
+		EFFECT
+		::: (20 + (Fire Shards x5)) Fire DMG
+		
+		FIGHTABLE
+		::: Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: 7x7 Area
+		::: Fire Multiplier
+		::: Fire Shards (+4 per)
+		::: Friendly Fire
+		::: Requires a Fire Shard
+		::: Time Bonus (Sov)
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Fire Master</Description>
+		<FormattedDescription>Fireball does %d Fire DMG to all within 3 radius. This version does more damage, has a lower casting time, and covers a greater area.</FormattedDescription>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<AllowFriendlyFireInRadius>1</AllowFriendlyFireInRadius>
+		<IsResistable>1</IsResistable>
+		<Radius>3</Radius>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Fire</AttackStat>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumFireShards] * 5]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + 20]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc2] * [UnitStat_SpellDamage_Fire]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock1" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_X_IsCultLeader] * [UnitStat_X_Clock]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock1] * 0.01]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock2] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock4">
+				<Expression><![CDATA[[Calc_X_Clock3] * [Calc3]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Fire</AttackStat>
+			<IsForSpellResist>1</IsForSpellResist>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumFireShards] * 3]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + 10]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock1" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_X_IsCultLeader] * [UnitStat_X_Clock]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock1] * 0.01]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock2] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock4">
+				<Expression><![CDATA[[Calc_X_Clock3] * [Calc2]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>99</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>555</AIPriority>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+					<Expression><![CDATA[[UnitStat_ResistFire]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc] < 66]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Fireball.png</IconFG>
+		<HitSoundFX>Spell_FireBallExplode_01</HitSoundFX>
+		<SpellCastSoundFX>Spell_FireBall_01</SpellCastSoundFX>
+		<SpellCastEffectName>T_Fireball_Particle</SpellCastEffectName>
+		<SpellCastEffectScale>1</SpellCastEffectScale>
+		<SpellCastProjectile>1</SpellCastProjectile>
+		<SpellCastProjectileSpeed>600</SpellCastProjectileSpeed>
+		<WorldLightOverrideTime>3</WorldLightOverrideTime>
+		<WorldLightOverrideAmbiant>20,20,20</WorldLightOverrideAmbiant>
+		<WorldLightOverrideRim0>255,217,66</WorldLightOverrideRim0>
+		<WorldLightOverrideRim1>255,115,66</WorldLightOverrideRim1>
+		<SpellDefEffect>
+			<EffectName>E_FireballExplosion_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>3</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_FlameDart_ArcaniumG2">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Flame Dart (Gravitational)</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Fire3</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_Snowstorm</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_SovereignScreenHack</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>24</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Resource_X_A6</Resource>
+			<Amount>2</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>A fiery dart strikes for Fire DMG.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] FLAME DART (GRAVITATIONAL)
+		::: A fiery dart strikes for Fire DMG. This version covers a greater area.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Units
+		
+		EFFECT
+		::: ((Level + Fire Shards) x2) Fire DMG
+		
+		FIGHTABLE
+		::: Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: 1x4 Area
+		::: Can be Dodged
+		::: Fire Multiplier
+		::: Fire Shards (+2 per)
+		::: Time Bonus (Sov)
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Fire Mage</Description>
+		<FormattedDescription>A fiery dart strikes for %d Fire DMG. This version covers a greater area.</FormattedDescription>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+		<CanBeDodged>1</CanBeDodged>
+		<IsResistable>1</IsResistable>
+		<Radius>4</Radius>
+		<RadiusType>LINE_FORWARD</RadiusType>
+		<Range>1</Range>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Fire</AttackStat>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumFireShards] + [Unit_GetLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] * [UnitStat_SpellDamage_Fire]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc2] * 2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock1" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_X_IsCultLeader] * [UnitStat_X_Clock]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock1] * 0.01]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock2] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock4">
+				<Expression><![CDATA[[Calc_X_Clock3] * [Calc3]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Fire</AttackStat>
+			<IsForSpellResist>1</IsForSpellResist>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumFireShards] + [Unit_GetLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock1" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_X_IsCultLeader] * [UnitStat_X_Clock]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock1] * 0.01]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock2] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock4">
+				<Expression><![CDATA[[Calc_X_Clock3] * [Calc]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>99</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>425</AIPriority>
+			<AIMinSpellTargets>2</AIMinSpellTargets>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+					<Expression><![CDATA[[UnitStat_ResistFire]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc] < 66]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		<IconFG>Spell_X_FlameDart.png</IconFG>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<HitSoundFX>Spell_FlameDart_01</HitSoundFX>
+		<SpellCastSoundFX>Spell_FlameDartTravel_01</SpellCastSoundFX>
+		<SpellCastEffectName>T_FlameDart_Particle</SpellCastEffectName>
+		<SpellCastEffectScale>0.30</SpellCastEffectScale>
+		<SpellCastProjectile>1</SpellCastProjectile>
+		<SpellCastProjectileSpeed>800</SpellCastProjectileSpeed>
+		<SpellDefEffect>
+			<EffectName>E_FlameDartImpact_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_FlameDart_ArcaniumO3">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Flame Dart (Tormenting)</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Fire3</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_SovereignScreenHack</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_Snowstorm</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>24</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Resource_X_A3</Resource>
+			<Amount>3</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>A fiery dart strikes for Fire DMG.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] FLAME DART (TORMENTING)
+		::: A fiery dart strikes for Fire DMG. This version targets all enemy Champions.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Champions (ALL)
+		
+		EFFECT
+		::: ((Level + Fire Shards) x2) Fire DMG
+		
+		FIGHTABLE
+		::: Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: Can be Dodged
+		::: Fire Multiplier
+		::: Fire Shards (+2 per)
+		::: Time Bonus (Sov)
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Fire Mage</Description>
+		<FormattedDescription>A fiery dart strikes all enemy Champions for %d Fire DMG. This version targets all enemy Champions.</FormattedDescription>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<SpellTargetType>AllEnemyChampions</SpellTargetType>
+		<CanBeDodged>1</CanBeDodged>
+		<IsResistable>1</IsResistable>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Fire</AttackStat>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumFireShards] + [Unit_GetLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] * [UnitStat_SpellDamage_Fire]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc2] * 2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock1" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_X_IsCultLeader] * [UnitStat_X_Clock]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock1] * 0.01]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock2] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock4">
+				<Expression><![CDATA[[Calc_X_Clock3] * [Calc3]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Fire</AttackStat>
+			<IsForSpellResist>1</IsForSpellResist>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumFireShards] + [Unit_GetLevel]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock1" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_X_IsCultLeader] * [UnitStat_X_Clock]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock1] * 0.01]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock2] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock4">
+				<Expression><![CDATA[[Calc_X_Clock3] * [Calc]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>99</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>425</AIPriority>
+			<AIMinSpellTargets>3</AIMinSpellTargets>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+					<Expression><![CDATA[[UnitStat_ResistFire]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc] < 66]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		<IconFG>Spell_X_FlameDart.png</IconFG>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<HitSoundFX>Spell_FlameDart_01</HitSoundFX>
+		<SpellCastSoundFX>Spell_FlameDartTravel_01</SpellCastSoundFX>
+		<SpellCastEffectName>T_FlameDart_Particle</SpellCastEffectName>
+		<SpellCastEffectScale>0.30</SpellCastEffectScale>
+		<SpellCastProjectile>1</SpellCastProjectile>
+		<SpellCastProjectileSpeed>800</SpellCastProjectileSpeed>
+		<SpellDefEffect>
+			<EffectName>E_FlameDartImpact_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_Haste_ArcaniumG3">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Haste (Mimetic)</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Air2</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_SovereignScreenHack</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Resource_X_A6</Resource>
+			<Amount>3</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>5</Amount>
+		</SpellResourceCost>
+		<AirShards>1</AirShards>
+		<CanStack>0</CanStack>
+		<PreventStackingWith>Haste</PreventStackingWith>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Targets gain Initiative.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] HASTE (MIMETIC)
+		::: Targets gain Initiative. This version covers a greater area.
+		
+		DOMAIN
+		::: Tactical
+		::: Friendly
+		::: Units
+		
+		EFFECT
+		::: + (5 + Air Shards) Initiative
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Battle
+		
+		OTHER
+		::: 3x3 Area
+		::: Air Multiplier
+		::: Air Shards (+1 per)
+		::: Requires an Air Shard
+		::: Time Bonus (Sov)
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Air Disciple</Description>
+		<FormattedDescription>Targets gain +%d to Initiative. This version covers a greater area.</FormattedDescription>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>FriendlyUnit</SpellTargetType>
+		<IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+		<Radius>1</Radius>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<DisplayName>Hasted</DisplayName>
+			<Duration>-1</Duration>
+			<Effect>E_Celerity_Particle</Effect>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumAirShards] * [UnitStat_SpellDamage_Air]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + 5]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock1" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_X_IsCultLeader] * [UnitStat_X_Clock]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock1] * 0.01]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock2] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock4">
+				<Expression><![CDATA[[Calc_X_Clock3] * [Calc2]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>99</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>600</AIPriority>
+			<AIMinSpellTargets>3</AIMinSpellTargets>
+		</AIData>
+		<IconFG>Spell_X_Haste.png</IconFG>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<HitSoundFX>Spell_Haste_01</HitSoundFX>
+		<HitSoundFX>Spell_Haste_02</HitSoundFX>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_Haste_ArcaniumP5">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Haste (Flowery)</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Air2</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_SovereignScreenHack</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Resource_X_A5</Resource>
+			<Amount>5</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>5</Amount>
+		</SpellResourceCost>
+		<AirShards>1</AirShards>
+		<CanStack>0</CanStack>
+		<PreventStackingWith>Haste</PreventStackingWith>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Targets gain Initiative.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] HASTE (FLOWERY)
+		::: Targets gain Initiative. This version targets all friendly units.
+		
+		DOMAIN
+		::: Tactical
+		::: Friendly
+		::: Units (ALL)
+		
+		EFFECT
+		::: + (5 + Air Shards) Initiative
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Battle
+		
+		OTHER
+		::: Air Multiplier
+		::: Air Shards (+1 per)
+		::: Requires an Air Shard
+		::: Time Bonus (Sov)
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Air Disciple</Description>
+		<FormattedDescription>Targets gain +%d to Initiative. This version targets all friendly units.</FormattedDescription>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>AllFriendlyUnits</SpellTargetType>
+		<IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+		<Radius>1</Radius>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<DisplayName>Hasted</DisplayName>
+			<Duration>-1</Duration>
+			<Effect>E_Celerity_Particle</Effect>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumAirShards] * [UnitStat_SpellDamage_Air]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + 5]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock1" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_X_IsCultLeader] * [UnitStat_X_Clock]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock1] * 0.01]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock2] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock4">
+				<Expression><![CDATA[[Calc_X_Clock3] * [Calc2]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>99</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>666</AIPriority>
+			<AIMinSpellTargets>4</AIMinSpellTargets>
+		</AIData>
+		<IconFG>Spell_X_Haste.png</IconFG>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<HitSoundFX>Spell_Haste_01</HitSoundFX>
+		<HitSoundFX>Spell_Haste_02</HitSoundFX>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_ImpairFlesh_ArcaniumG3">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Impair Flesh (Mimetic)</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Life2</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_SovereignScreenHack</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>8</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Resource_X_A6</Resource>
+			<Amount>3</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<PreventStackingWith>Spell_X_ImpairFlesh</PreventStackingWith>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Reduces Death\Poison Resistance by 25%.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] IMPAIR FLESH (MIMETIC)
+		::: Reduces Death\Poison Resistance by 25%. This version covers a greater area.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Units
+		
+		EFFECT
+		::: - 25% Death\Poison Resistance
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Battle
+		
+		OTHER
+		::: 3x3 Area
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Life Disciple</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitCurse</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Debuff</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<IsResistable>0</IsResistable>
+		<AllowFriendlyFireInRadius>0</AllowFriendlyFireInRadius>
+		<IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+		<Radius>1</Radius>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ResistPoison</StrVal>
+			<Duration>-1</Duration>
+			<Value>-25</Value>
+		</GameModifier>
+		<Cooldown>99</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_ImpairFlesh.png</IconFG>
+		<HitSoundFX>Spell_CullTheWeakCast_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_Curse_Particle</EffectName>
+			<LocalPosition>0,50,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_ImpairFlesh_ArcaniumO5">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Impair Flesh (Decayed)</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Life2</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_SovereignScreenHack</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>8</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Resource_X_A3</Resource>
+			<Amount>5</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<PreventStackingWith>Spell_X_Impair</PreventStackingWith>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Reduces Death\Poison Resistance by 33%.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] IMPAIR FLESH (DECAYED)
+		::: Reduces Death\Poison Resistance by 33%. This version targets all enemy units.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Units (ALL)
+		
+		EFFECT
+		::: - 33% Death\Poison Resistance
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: Battle
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Life Disciple</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitCurse</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Debuff</SpellSubClass>
+		<SpellTargetType>AllEnemyUnits</SpellTargetType>
+		<IsResistable>1</IsResistable>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ResistPoison</StrVal>
+			<Duration>-1</Duration>
+			<Value>-33</Value>
+		</GameModifier>
+		<Cooldown>99</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_ImpairFlesh.png</IconFG>
+		<HitSoundFX>Spell_CullTheWeakCast_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_Curse_Particle</EffectName>
+			<LocalPosition>0,50,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_Invert_ArcaniumO3">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Invert (Tormenting)</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Water2</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_SovereignScreenHack</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>20</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Resource_X_A3</Resource>
+			<Amount>3</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<PreventStackingWith>Spell_X_Invert</PreventStackingWith>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Invert Elemental Resistances.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] INVERT (TORMENTING)
+		::: Invert Elemental Resistances, Fire-Water\Cold and Air\Lightning-Earth. This version targets all enemy Champions.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Champion (ALL)
+		
+		EFFECT
+		::: Air\Lightning Resistance becomes Earth
+		::: Earth Resistance becomes Air\Lightning
+		::: Fire Resistance becomes Water\Cold
+		::: Water\Cold Resistance becomes Fire
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: Battle
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Water Disciple</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitCurse</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Debuff</SpellSubClass>
+		<SpellTargetType>AllEnemyChampions</SpellTargetType>
+		<IsResistable>1</IsResistable>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_Temp_Cold</StrVal>
+			<Duration>1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_ResistCold]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_Temp_Earth</StrVal>
+			<Duration>1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_ResistEarth]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_Temp_Fire</StrVal>
+			<Duration>1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_ResistFire]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_Temp_Lightning</StrVal>
+			<Duration>1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_ResistLightning]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ResistCold</StrVal>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_X_Temp_Cold] * -1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[Calc] + [UnitStat_X_Temp_Fire]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ResistEarth</StrVal>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_X_Temp_Earth] * -1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[Calc] + [UnitStat_X_Temp_Lightning]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ResistFire</StrVal>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_X_Temp_Fire] * -1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[Calc] + [UnitStat_X_Temp_Cold]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ResistLightning</StrVal>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_X_Temp_Lightning] * -1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[Calc] + [UnitStat_X_Temp_Earth]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>99</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>250</AIPriority>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+					<Expression><![CDATA[[UnitStat_ResistFire] + 1]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[UnitStat_X_Master_Fire] + 0.01]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc3">
+					<Expression><![CDATA[[Calc] * [Calc2]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc3] > 66]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Invert.png</IconFG>
+		<HitSoundFX>Spell_AuraOfVitality_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_MinorCataclysm_Particle</EffectName>
+			<LocalPosition>0,50,0</LocalPosition>
+			<EffectScale>0.5</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+			<PlayOnAllTargets>1</PlayOnAllTargets>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_Invert_ArcaniumO5">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Invert (Decayed)</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Water2</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_SovereignScreenHack</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>20</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Resource_X_A3</Resource>
+			<Amount>5</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<PreventStackingWith>Spell_X_Invert</PreventStackingWith>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Invert Elemental Resistances.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] INVERT (DECAYED)
+		::: Invert Elemental Resistances, Fire-Water\Cold and Air\Lightning-Earth. This version target all enemy units.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Units (ALL)
+		
+		EFFECT
+		::: Air\Lightning Resistance becomes Earth
+		::: Earth Resistance becomes Air\Lightning
+		::: Fire Resistance becomes Water\Cold
+		::: Water\Cold Resistance becomes Fire
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: Battle
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Water Disciple</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitCurse</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Debuff</SpellSubClass>
+		<SpellTargetType>AllEnemyUnits</SpellTargetType>
+		<IsResistable>1</IsResistable>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_Temp_Cold</StrVal>
+			<Duration>1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_ResistCold]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_Temp_Earth</StrVal>
+			<Duration>1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_ResistEarth]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_Temp_Fire</StrVal>
+			<Duration>1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_ResistFire]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_Temp_Lightning</StrVal>
+			<Duration>1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_ResistLightning]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ResistCold</StrVal>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_X_Temp_Cold] * -1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[Calc] + [UnitStat_X_Temp_Fire]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ResistEarth</StrVal>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_X_Temp_Earth] * -1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[Calc] + [UnitStat_X_Temp_Lightning]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ResistFire</StrVal>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_X_Temp_Fire] * -1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[Calc] + [UnitStat_X_Temp_Cold]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ResistLightning</StrVal>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_X_Temp_Lightning] * -1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[Calc] + [UnitStat_X_Temp_Earth]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>99</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>250</AIPriority>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+					<Expression><![CDATA[[UnitStat_ResistCold] + 1]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[UnitStat_X_Master_Water] + 0.01]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc3">
+					<Expression><![CDATA[[Calc] * [Calc2]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc3] > 66]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Invert.png</IconFG>
+		<HitSoundFX>Spell_AuraOfVitality_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_MinorCataclysm_Particle</EffectName>
+			<LocalPosition>0,50,0</LocalPosition>
+			<EffectScale>0.5</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+			<PlayOnAllTargets>1</PlayOnAllTargets>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_Shadowbolt_ArcaniumR2">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Shadowbolt (Scorching)</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Death3</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_SovereignScreenHack</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_OneThousandSuns</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>18</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Resource_X_A4</Resource>
+			<Amount>2</Amount>
+		</SpellResourceCost>
+		<CanStack>1</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>A bolt of night strikes the victim.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] SHADOWBOLT (SCORCHING)
+		::: A bolt of night strikes the victim doing damage and reducing their Magic Resistance. This version does slightly more damage.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Unit
+		
+		EFFECT
+		::: - 9 HP
+		::: - ((Level + 5) x2) Magic Resistance
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Instant (DMG)
+		::: Battle (Magic Resistance)
+		
+		OTHER
+		::: Can Stack
+		::: Death Multiplier
+		::: Time Bonus (Sov)
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Death Mage</Description>
+		<FormattedDescription>A bolt of night strikes the victim doing 9 DMG and reducing their Magic Resistance by %d. This version does slightly more damage.</FormattedDescription>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_MagicResist</StrVal>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<DisplayName>Resist Loss</DisplayName>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel] * -2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] - 10]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc2] * [UnitStat_SpellDamage_Death]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock1" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_X_IsCultLeader] * [UnitStat_X_Clock]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock1] * 0.01]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock2] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock4">
+				<Expression><![CDATA[[Calc_X_Clock3] * [Calc3]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<Value>-9</Value>
+		</GameModifier>
+		<Cooldown>99</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>275</AIPriority>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[UnitStat_MagicPower]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc2" ValueOwner="TargetUnit">
+					<Expression><![CDATA[[UnitStat_MagicResist]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc3">
+					<Expression><![CDATA[[Calc2] - [Calc]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc] > 25]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_ShadowBolt.png</IconFG>
+		<HitSoundFX>Spell_Shadowbolt_Hit</HitSoundFX>
+		<SpellCastSoundFX>Spell_Shadowbolt_Travel</SpellCastSoundFX>
+		<SpellCastEffectName>T_ShadowBolt_Particle</SpellCastEffectName>
+		<SpellCastEffectScale>0.30</SpellCastEffectScale>
+		<SpellCastProjectile>1</SpellCastProjectile>
+		<SpellCastProjectileSpeed>800</SpellCastProjectileSpeed>
+		<SpellDefEffect>
+			<EffectName>T_Confusion_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+			<PlayOnAllTargets>1</PlayOnAllTargets>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_Shadowbolt_ArcaniumO5R4">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Shadowbolt (Decayed)</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Death3</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_SovereignScreenHack</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_OneThousandSuns</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>18</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Resource_X_A4</Resource>
+			<Amount>4</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Resource_X_A3</Resource>
+			<Amount>5</Amount>
+		</SpellResourceCost>
+		<CanStack>1</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>A bolt of night strikes the victims.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] SHADOWBOLT (DECAYED)
+		::: A bolt of night strikes the victims doing damage and reducing their Magic Resistance. This version does more damage and targets all enemy units.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Units (ALL)
+		
+		EFFECT
+		::: - 12 HP
+		::: - ((Level + 5) x2) Magic Resistance
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Instant (DMG)
+		::: Battle (Magic Resistance)
+		
+		OTHER
+		::: Can Stack
+		::: Death Multiplier
+		::: Time Bonus (Sov)
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Death Mage</Description>
+		<FormattedDescription>A bolt of night strikes the victims doing 12 DMG and reducing their Magic Resistance by %d. This version does more damage and targets all enemy units.</FormattedDescription>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>AllEnemyUnits</SpellTargetType>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_MagicResist</StrVal>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<DisplayName>Resist Loss</DisplayName>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel] * -2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] - 10]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc2] * [UnitStat_SpellDamage_Death]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock1" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_X_IsCultLeader] * [UnitStat_X_Clock]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock1] * 0.01]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock2] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock4">
+				<Expression><![CDATA[[Calc_X_Clock3] * [Calc3]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<Value>-12</Value>
+		</GameModifier>
+		<Cooldown>99</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>400</AIPriority>
+			<AIMinSpellTargets>3</AIMinSpellTargets>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[UnitStat_MagicPower]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc2" ValueOwner="TargetUnit">
+					<Expression><![CDATA[[UnitStat_MagicResist]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc3">
+					<Expression><![CDATA[[Calc2] - [Calc]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc] > 25]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_ShadowBolt.png</IconFG>
+		<HitSoundFX>Spell_Shadowbolt_Hit</HitSoundFX>
+		<SpellCastSoundFX>Spell_Shadowbolt_Travel</SpellCastSoundFX>
+		<SpellCastEffectName>T_ShadowBolt_Particle</SpellCastEffectName>
+		<SpellCastEffectScale>0.30</SpellCastEffectScale>
+		<SpellCastProjectile>1</SpellCastProjectile>
+		<SpellCastProjectileSpeed>800</SpellCastProjectileSpeed>
+		<SpellDefEffect>
+			<EffectName>T_Confusion_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+			<PlayOnAllTargets>1</PlayOnAllTargets>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_Shockwave_ArcaniumO6">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Shockwave (Putrescent)</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Earth4</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_Bewildered</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_SovereignScreenHack</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>60</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Resource_X_A3</Resource>
+			<Amount>6</Amount>
+		</SpellResourceCost>
+		<EarthShards>1</EarthShards>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>A minor earthquake damages enemies.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] SHOCKWAVE (PUTRESCENT)
+		::: A minor earthquake damages all enemies within 1 radius of the caster. This version is not resistable.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Units
+		
+		EFFECT
+		::: ((5 + Earth Shards) x2) DMG
+		
+		FIGHTABLE
+		::: Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: 3x3 Area
+		::: Earth Shards (+2 per)
+		::: Earth Multiplier
+		::: Requires an Earth Shard
+		::: Time Bonus (Sov)
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Earth Master</Description>
+		<FormattedDescription>A minor earthquake damages all enemies within 1 radius of the caster for %d DMG. This version is not resistable.</FormattedDescription>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<AllowFriendlyFireInRadius>0</AllowFriendlyFireInRadius>
+		<IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+		<IsResistable>0</IsResistable>
+		<Radius>1</Radius>
+		<Range>0</Range>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Pierce</AttackStat>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumEarthShards] * 2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] + 10]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc2] * [UnitStat_SpellDamage_Earth]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock1" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_X_IsCultLeader] * [UnitStat_X_Clock]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock1] * 0.01]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock2] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock4">
+				<Expression><![CDATA[[Calc_X_Clock3] * [Calc3]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>99</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>425</AIPriority>
+			<AIMinSpellTargets>2</AIMinSpellTargets>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[UnitStat_CombinedAttack]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[UnitOwner_GetNumEarthShards] * 4]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc3">
+					<Expression><![CDATA[[Calc2] + 20]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc4">
+					<Expression><![CDATA[[Calc3] - [Calc]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc4] > 0]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		<IconFG>Spell_X_Shockwave.png</IconFG>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<CameraShakeDuration>1.25</CameraShakeDuration>
+		<CameraShakeStrength>0.25</CameraShakeStrength>
+		<HitSoundFX>Spell_Shockwave_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_Shockwave_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+			<PlayOnAllTargets>0</PlayOnAllTargets>
+		</SpellDefEffect>
+		<SpellDefEffect>
+			<EffectName>T_Shockwave_Impact_Particle</EffectName>
+			<LocalPosition>0,50,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0.25</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+			<PlayOnAllTargets>1</PlayOnAllTargets>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_Shockwave_ArcaniumG4O6">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Shockwave (Mountainous)</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Earth4</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_Bewildered</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_SovereignScreenHack</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>60</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Resource_X_A3</Resource>
+			<Amount>6</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Resource_X_A6</Resource>
+			<Amount>4</Amount>
+		</SpellResourceCost>
+		<EarthShards>1</EarthShards>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>A minor earthquake damages enemies.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] SHOCKWAVE (MOUNTAINOUS)
+		::: A minor earthquake damages all enemies within 2 radius of the caster. This version is not resistable and covers a greater area.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Units
+		
+		EFFECT
+		::: ((5 + Earth Shards) x2) DMG
+		
+		FIGHTABLE
+		::: Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: 5x5 Area
+		::: Earth Shards (+2 per)
+		::: Earth Multiplier
+		::: Requires an Earth Shard
+		::: Time Bonus (Sov)
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Earth Master</Description>
+		<FormattedDescription>A minor earthquake damages all enemies within 2 radius of the caster for %d DMG. This version is not resistable and covers a greater area.</FormattedDescription>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<AllowFriendlyFireInRadius>0</AllowFriendlyFireInRadius>
+		<IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+		<IsResistable>0</IsResistable>
+		<Radius>2</Radius>
+		<Range>0</Range>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Pierce</AttackStat>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumEarthShards] * 2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] + 10]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc2] * [UnitStat_SpellDamage_Earth]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock1" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_X_IsCultLeader] * [UnitStat_X_Clock]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock1] * 0.01]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock2] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock4">
+				<Expression><![CDATA[[Calc_X_Clock3] * [Calc3]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>99</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>466</AIPriority>
+			<AIMinSpellTargets>2</AIMinSpellTargets>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[UnitStat_CombinedAttack]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[UnitOwner_GetNumEarthShards] + 1]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc3">
+					<Expression><![CDATA[[Calc2] * 4]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc4">
+					<Expression><![CDATA[[Calc3] + 16]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc5">
+					<Expression><![CDATA[[Calc4] - [Calc]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc5] > 0]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		<IconFG>Spell_X_Shockwave.png</IconFG>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<CameraShakeDuration>1.25</CameraShakeDuration>
+		<CameraShakeStrength>0.25</CameraShakeStrength>
+		<HitSoundFX>Spell_Shockwave_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_Shockwave_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+			<PlayOnAllTargets>0</PlayOnAllTargets>
+		</SpellDefEffect>
+		<SpellDefEffect>
+			<EffectName>T_Shockwave_Impact_Particle</EffectName>
+			<LocalPosition>0,50,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0.25</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+			<PlayOnAllTargets>1</PlayOnAllTargets>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_Thunderstrike_ArcaniumG4">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Thunderstrike (Mountainous)</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Air4</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_SovereignScreenHack</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_Bewildered</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>38</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Resource_X_A6</Resource>
+			<Amount>4</Amount>
+		</SpellResourceCost>
+		<AirShards>1</AirShards>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Teleport and do Air\Lightning DMG.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] THUNDERSTRIKE (MOUNTAINOUS)
+		::: Teleport and do Air\Lightning DMG to all enemies within 2 radius. This version covers a greater area.
+		
+		DOMAIN
+		::: Tactical
+		::: Friendly
+		::: Tile
+		
+		EFFECT
+		::: Teleport
+		::: ((5 + Air Shards) x2) Air\Lightning DMG
+		
+		FIGHTABLE
+		::: Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: 5x5 Area
+		::: Air Multiplier
+		::: Air Shards (+2 per)
+		::: Requires an Air Shard
+		::: Time Bonus (Sov)
+		
+		SOURCE
+		::: SpellRank
+		::: ::: Air Master</Description>
+		<FormattedDescription>Teleport and do %d Air\Lightning DMG to all enemies within 2 radius. This version covers a greater area.</FormattedDescription>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<SpellTargetTileOccupied>Empty</SpellTargetTileOccupied>
+		<AllowFriendlyFireInRadius>0</AllowFriendlyFireInRadius>
+		<IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+		<Radius>2</Radius>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>TransportUnit</Attribute>
+			<ApplyToSpellRadiusCenterOnly>1</ApplyToSpellRadiusCenterOnly>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Lightning</AttackStat>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumAirShards] * 2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] + 10]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc2] * [UnitStat_SpellDamage_Air]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock1" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_X_IsCultLeader] * [UnitStat_X_Clock]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock1] * 0.01]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock2] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock4">
+				<Expression><![CDATA[[Calc_X_Clock3] * [Calc3]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>99</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>600</AIPriority>
+			<AIMinSpellTargets>3</AIMinSpellTargets>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[UnitStat_CombinedAttack]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[UnitOwner_GetNumEarthShards] + 1]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc3">
+					<Expression><![CDATA[[Calc2] * 4]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc4">
+					<Expression><![CDATA[[Calc3] + 16]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc5">
+					<Expression><![CDATA[[Calc4] - [Calc]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc5] > 0]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Thunderstrike.png</IconFG>
+		<HitSoundFX>Spell_Thunderstrike_01</HitSoundFX>
+		<HitSoundFX>Spell_Thunderstrike_02</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_Thunderstrike_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+			<PlayOnAllTargets>1</PlayOnAllTargets>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_Thunderstrike_ArcaniumG5">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Thunderstrike (Seismic)</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Air4</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_SovereignScreenHack</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_Bewildered</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>38</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Resource_X_A6</Resource>
+			<Amount>5</Amount>
+		</SpellResourceCost>
+		<AirShards>1</AirShards>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Teleport and do Air\Lightning DMG.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] THUNDERSTRIKE (SEISMIC)
+		::: Teleport and do Air\Lightning DMG to all enemies within 3 radius. This version covers an even greater area.
+		
+		DOMAIN
+		::: Tactical
+		::: Friendly
+		::: Tile
+		
+		EFFECT
+		::: Teleport
+		::: ((5 + Air Shards) x2) Air\Lightning DMG
+		
+		FIGHTABLE
+		::: Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: 7x7 Area
+		::: Air Multiplier
+		::: Air Shards (+2 per)
+		::: Requires an Air Shard
+		::: Time Bonus (Sov)
+		
+		SOURCE
+		::: SpellRank
+		::: ::: Air Master</Description>
+		<FormattedDescription>Teleport and do %d Air\Lightning DMG to all enemies within 3 radius. This version covers an even greater area.</FormattedDescription>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<SpellTargetTileOccupied>Empty</SpellTargetTileOccupied>
+		<AllowFriendlyFireInRadius>0</AllowFriendlyFireInRadius>
+		<IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+		<Radius>3</Radius>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>TransportUnit</Attribute>
+			<ApplyToSpellRadiusCenterOnly>1</ApplyToSpellRadiusCenterOnly>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Lightning</AttackStat>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumAirShards] * 2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] + 10]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc2] * [UnitStat_SpellDamage_Air]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock1" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_X_IsCultLeader] * [UnitStat_X_Clock]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock1] * 0.01]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc_X_Clock2] + 1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc_X_Clock4">
+				<Expression><![CDATA[[Calc_X_Clock3] * [Calc3]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc_X_Clock4]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>99</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>633</AIPriority>
+			<AIMinSpellTargets>3</AIMinSpellTargets>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[UnitStat_CombinedAttack]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[UnitOwner_GetNumEarthShards] + 1]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc3">
+					<Expression><![CDATA[[Calc2] * 4]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc4">
+					<Expression><![CDATA[[Calc3] + 16]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc5">
+					<Expression><![CDATA[[Calc4] - [Calc]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc5] > 0]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Thunderstrike.png</IconFG>
+		<HitSoundFX>Spell_Thunderstrike_01</HitSoundFX>
+		<HitSoundFX>Spell_Thunderstrike_02</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_Thunderstrike_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+			<PlayOnAllTargets>1</PlayOnAllTargets>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_WallOfRock_ArcaniumE4Y2">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Wall of Rock (Tidal)</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Earth2</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_SovereignScreenHack</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>20</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Resource_X_A1</Resource>
+			<Amount>4</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Resource_X_A2</Resource>
+			<Amount>2</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Create an impassable Wall of Rock.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] WALL OF ROCK (TIDAL)
+		::: Create an impassable Wall of Rock. This version has a lower casting time and can be cast at greater range.
+		
+		DOMAIN
+		::: Tactical
+		::: Empty Tile
+		
+		EFFECT
+		::: Destroy Objects
+		::: Place Wall of Rock
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: N/A
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Earth Disciple</Description>
+		<SpellBookSortCategory>World</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Map</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>EmptyTile</SpellTargetType>
+		<SpellTargetTileOccupied>Empty</SpellTargetTileOccupied>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>CreateWorldProp</Attribute>
+			<StrVal>R_Stone_Deposit_01</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<ValidTerrainCategory>City</ValidTerrainCategory>
+		<ValidTerrainCategory>Land</ValidTerrainCategory>
+		<TerrainStamp>Stamp_X_WallOfRock</TerrainStamp>
+		<StampMorphTime>1</StampMorphTime>
+		<Cooldown>99</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_WallOfRock.png</IconFG>
+		<HitSoundFX>Spell_RaiseLand_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_CreateMountain_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_WallOfRock_ArcaniumG1Y2">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Wall of Rock (Beekeeper)</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Earth2</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_SovereignScreenHack</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>20</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Resource_X_A2</Resource>
+			<Amount>2</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Resource_X_A6</Resource>
+			<Amount>1</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Create an impassable Wall of Rock.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] WALL OF ROCK (BEEKEEPER)
+		::: Create an impassable Wall of Rock. This version has a lower casting time and covers a greater area.
+		
+		DOMAIN
+		::: Tactical
+		::: Empty Tile
+		
+		EFFECT
+		::: Destroy Objects
+		::: Place Wall of Rock
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: N/A
+		
+		OTHER
+		::: 2x2 Area
+		
+		SOURCE
+		::: Spell Rank
+		::: ::: Earth Disciple</Description>
+		<SpellBookSortCategory>World</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Map</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>EmptyTile</SpellTargetType>
+		<SpellTargetTileOccupied>Empty</SpellTargetTileOccupied>
+		<Range>2</Range>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>CreateWorldProp</Attribute>
+			<StrVal>Tile_X_LargeRock</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<ValidTerrainCategory>City</ValidTerrainCategory>
+		<ValidTerrainCategory>Land</ValidTerrainCategory>
+		<TerrainStamp>Stamp_X_WallOfRock2</TerrainStamp>
+		<StampMorphTime>1</StampMorphTime>
+		<Cooldown>99</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_WallOfRock.png</IconFG>
+		<HitSoundFX>Spell_RaiseLand_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_CreateMountain_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+</Spells>

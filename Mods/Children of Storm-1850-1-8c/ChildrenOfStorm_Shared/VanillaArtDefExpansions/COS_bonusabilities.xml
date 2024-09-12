@@ -1,0 +1,1442 @@
+<?xml version="1.0"?>
+<Container>
+  <AbilityBonus InternalName="LoyalShit">
+    <AbilityBonusOption InternalName="LoyalShit">
+      <DisplayName>Loyal</DisplayName>
+      <Description>f</Description>
+      <Icon>Immunity.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_CannotBeCharmed</StrVal>
+        <Provides>Unit cannot be Charmed (from abilities such as Tame and Silvertongue)</Provides>
+        <Value>1</Value>
+      </GameModifier>
+      <HideWhenUpgraded>1</HideWhenUpgraded>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Blood_Gorgon">
+    <AbilityBonusOption InternalName="Blood_Gorgon">
+      <DisplayName>Gorgon</DisplayName>
+      <IsCombatAbility>1</IsCombatAbility>
+      <PerkTreePosX>0</PerkTreePosX>
+      <PerkTreePosY>19</PerkTreePosY>
+      <Icon>UnitstatIcon.png</Icon>
+      <GameModifier>
+        <Provides>Cannot be knocked Prone, +1 Moves.
+
+Gorgons cannot equip any Mounts. They can equip boots and leggings (no graphics shown).
+
+Gorgons count as:
+Monster
+Beast
+Male</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>UnlockCombatAbility</Attribute>
+        <StrVal>Rush</StrVal>
+        <Provides>Rush- Unit takes an extra action</Provides>
+      </GameModifier>
+      <!--      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>UnlockCombatAbility</Attribute>
+        <StrVal>Hypnotize</StrVal>
+        <Provides>Unlocks Skill: Hypnotize - Target has 50% - 5% per own level to lose its next turn. Range 3. Can be resisted.</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+
+  -->
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Blood_Gorgon_extramove">
+    <AbilityBonusType>Unit_Level</AbilityBonusType>
+    <AbilityBonusOption InternalName="Blood_Gorgon_extramove">
+      <MinimumLevel>7</MinimumLevel>
+      <DisplayName>Extra Move</DisplayName>
+      <Description/>
+      <Icon>UnitstatIcon.png</Icon>
+      <PerkTreePosX>1</PerkTreePosX>
+      <PerkTreePosY>18</PerkTreePosY>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Moves</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Moves</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_CombatSpeed</StrVal>
+        <Value>2</Value>
+      </GameModifier>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_Gorgon</Attribute>
+      </Prereq>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>15</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Blood_Gorgon_extramove2">
+    <AbilityBonusType>Unit_Level</AbilityBonusType>
+    <AbilityBonusOption InternalName="Blood_Gorgon_extramove2">
+      <MinimumLevel>11</MinimumLevel>
+      <DisplayName>Extra Move</DisplayName>
+      <Description/>
+      <Icon>UnitstatIcon.png</Icon>
+      <PerkTreePosX>2</PerkTreePosX>
+      <PerkTreePosY>18</PerkTreePosY>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Moves</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Moves</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistPoison</StrVal>
+        <Value>15</Value>
+      </GameModifier>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_Gorgon_extramove</Attribute>
+      </Prereq>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Blood_Gorgon_extrapoisonres">
+    <AbilityBonusType>Unit_Level</AbilityBonusType>
+    <AbilityBonusOption InternalName="Blood_Gorgon_extrapoisonres">
+      <MinimumLevel>5</MinimumLevel>
+      <DisplayName>Poison Resistance</DisplayName>
+      <Description/>
+      <Icon>UnitstatIcon.png</Icon>
+      <PerkTreePosX>1</PerkTreePosX>
+      <PerkTreePosY>19</PerkTreePosY>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistPoison</StrVal>
+        <Value>33</Value>
+      </GameModifier>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_Gorgon</Attribute>
+      </Prereq>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Blood_Gorgon_uncharmable">
+    <AbilityBonusType>Unit_Level</AbilityBonusType>
+    <AbilityBonusOption InternalName="Blood_Gorgon_uncharmable">
+      <MinimumLevel>8</MinimumLevel>
+      <DisplayName>Domination Resistance</DisplayName>
+      <Description/>
+      <Icon>UnitstatIcon.png</Icon>
+      <PerkTreePosX>2</PerkTreePosX>
+      <PerkTreePosY>19</PerkTreePosY>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_CannotBeCharmed</StrVal>
+        <Provides>Unit cannot be Charmed (from abilities such as Tame or Silvertongue)</Provides>
+        <Value>1</Value>
+      </GameModifier>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_Gorgon_extrapoisonres</Attribute>
+      </Prereq>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <!--  <AbilityBonus InternalName="Blood_Gorgon_researcher">
+    <AbilityBonusType>Unit_Level</AbilityBonusType>
+    <AbilityBonusOption InternalName="Blood_Gorgon_researcher">
+      <MinimumLevel>5</MinimumLevel>
+      <DisplayName>Researcher</DisplayName>
+      <Description/>
+      <Icon>UnitstatIcon.png</Icon>
+      <PerkTreePosX>1</PerkTreePosX>
+      <PerkTreePosY>20</PerkTreePosY>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>ProduceResource</Attribute>
+        <StrVal>Research</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Research per Season</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Resource</ModType>
+        <Attribute>Research_local</Attribute>
+        <Value>1</Value>
+        <PerTurn>1</PerTurn>
+        <Provides>+1 Research for any city this unit is stationed in</Provides>
+      </GameModifier>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_Gorgon</Attribute>
+      </Prereq>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>-->
+  <!--  <AbilityBonus InternalName="Blood_Gorgon_researcher2">
+    <AbilityBonusType>Unit_Level</AbilityBonusType>
+    <AbilityBonusOption InternalName="Blood_Gorgon_researcher2">
+      <MinimumLevel>9</MinimumLevel>
+      <DisplayName>Researcher</DisplayName>
+      <Description/>
+      <Icon>UnitstatIcon.png</Icon>
+      <PerkTreePosX>2</PerkTreePosX>
+      <PerkTreePosY>20</PerkTreePosY>
+      <GameModifier>
+        <ModType>Resource</ModType>
+        <Attribute>Research_local</Attribute>
+        <Value>1</Value>
+        <PerTurn>1</PerTurn>
+        <Provides>+1 Research for any city this unit is stationed in</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Resource</ModType>
+        <Attribute>Research_localperm</Attribute>
+        <Value>0.1</Value>
+        <PerTurn>1</PerTurn>
+        <Provides>For each turn this unit is stationed in a city, the city permanently produces +0.01 Research (stacks)</Provides>
+      </GameModifier>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_Gorgon_researcher</Attribute>
+      </Prereq>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>0</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>-->
+  <AbilityBonus InternalName="Blood_AngelAbility">
+    <AbilityBonusOption InternalName="Blood_Angel">
+      <PerkTreePosX>0</PerkTreePosX>
+      <PerkTreePosY>19</PerkTreePosY>
+      <DisplayName>Angel</DisplayName>
+      <Description>NA</Description>
+      <Icon>UnitstatIcon.png</Icon>
+      <GameModifier>
+        <Provides>At the start of combat, Angels are boosted, for free, according to the number of shards of various types controlled. Different shard types add different effects:
+Air Shard = +1 Dodge per
+Earth Shard = +0.5 Defense per
+Fire Shard = +1 Initiative per
+Water Shard = +1 Spell Mastery per
+Life Shard = +1 Spell resistance
++1 Move if faction controls at least 3 Life shards
+
+Angels may not ride any mounts. Angel Champions always fulfill the "special circumstance" requirement to lift a Hex and therefore can always lift a Hex at level-up if they suffer one.
+
+Angels count as: 
+Celestial
+Humanoid
+Different Genders</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>BattleAutoCastSpell</Attribute>
+        <Provides>.</Provides>
+        <StrVal>Ef_NewFaith</StrVal>
+        <Value>100</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>BattleAutoCastSpell</Attribute>
+        <Provides>.</Provides>
+        <StrVal>Ef_NewFaith2</StrVal>
+        <Value>100</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>UnlockCombatAbility</Attribute>
+        <StrVal>Rush</StrVal>
+        <Provides>Rush- Unit takes an extra action</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Blood_Angel_extramove">
+    <AbilityBonusType>Unit_Level</AbilityBonusType>
+    <AbilityBonusOption InternalName="Blood_Angel_extramove">
+      <MinimumLevel>7</MinimumLevel>
+      <DisplayName>Extra Move</DisplayName>
+      <Description/>
+      <Icon>UnitstatIcon.png</Icon>
+      <PerkTreePosX>1</PerkTreePosX>
+      <PerkTreePosY>18</PerkTreePosY>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Moves</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Moves</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_CombatSpeed</StrVal>
+        <Value>2</Value>
+      </GameModifier>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_Angel</Attribute>
+      </Prereq>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>15</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Blood_CentaurAbility">
+    <AbilityBonusOption InternalName="Blood_Centaur">
+      <PerkTreePosX>0</PerkTreePosX>
+      <PerkTreePosY>19</PerkTreePosY>
+      <IsCombatAbility>1</IsCombatAbility>
+      <DisplayName>Centaur</DisplayName>
+      <Description>NA</Description>
+      <Icon>UnitstatIcon.png</Icon>
+      <GameModifier>
+        <Provides>Cannot be knocked Prone, +1 Moves.
+
+Centaurs count as:
+Monster
+Beast
+Male
+
+Centaurs cannot equip any Mounts. They can equip boots and leggings (no graphics shown).</Provides>
+      </GameModifier>
+      <!--       <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>UnlockCombatAbility</Attribute>
+        <StrVal>Trample</StrVal>
+        <Provides>Unlocks Skill: Trample - Deals a normal attack with 20% extra damage against unmounted enemies. If the enemy is killed, centaur unit is moved into target's square.</Provides>
+      </GameModifier>-->
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>UnlockCombatAbility</Attribute>
+        <StrVal>SoulSpark</StrVal>
+        <Provides>Soul Spark- Does 2 (+1 per level) lightning damage to the victim</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Blood_Centaur_extramove">
+    <AbilityBonusType>Unit_Level</AbilityBonusType>
+    <AbilityBonusOption InternalName="Blood_Centaur_extramove">
+      <MinimumLevel>7</MinimumLevel>
+      <DisplayName>Extra Move</DisplayName>
+      <Description/>
+      <Icon>UnitstatIcon.png</Icon>
+      <PerkTreePosX>1</PerkTreePosX>
+      <PerkTreePosY>18</PerkTreePosY>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Moves</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Moves</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BonusImpale</StrVal>
+        <Value>0.15</Value>
+        <Provides>+15% damage when using the Impale ability</Provides>
+      </GameModifier>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_Centaur</Attribute>
+      </Prereq>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>15</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Blood_Centaur_extramove2">
+    <AbilityBonusType>Unit_Level</AbilityBonusType>
+    <AbilityBonusOption InternalName="Blood_Centaur_extramove2">
+      <MinimumLevel>11</MinimumLevel>
+      <DisplayName>Extra Move</DisplayName>
+      <Description/>
+      <Icon>UnitstatIcon.png</Icon>
+      <PerkTreePosX>2</PerkTreePosX>
+      <PerkTreePosY>18</PerkTreePosY>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Moves</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Moves</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BonusImpale</StrVal>
+        <Value>0.15</Value>
+        <Provides>+15% damage when using the Impale ability</Provides>
+      </GameModifier>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_Centaur_extramove</Attribute>
+      </Prereq>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Blood_DeathLegionAbility">
+    <AbilityBonusOption InternalName="Blood_DeathLegion">
+      <IsCombatAbility>1</IsCombatAbility>
+      <DisplayName>Chaos Legion</DisplayName>
+      <Description>NA</Description>
+      <Icon>UnitstatIcon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistFire</StrVal>
+        <Provides>Chaos Legion units receives two random buffs at the start of combat from the following list: +10 Dodge, +10 Accuracy, +33 physical resistance, Unit is healed for half missing health, +0.5 Tactical Health regeneration per level, +10 Defense when Auto-defending, +1 Moves, Unit gains Poison attack equal to its level, Unit gains Lightning attack equal to half its level, Unit suffers -10 Spell resistance, Unit suffers -3 Initiative. If the same effect is chosen twice, it will only be applied once.
+
+Chaos Legion counts as:
+Demon
+Humanoid
+Different Genders*
+*Males have red necklaces, females don't</Provides>
+        <Value>25</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>BattleAutoCastSpell</Attribute>
+        <StrVal>Ef_DeathLegion</StrVal>
+        <Provides>.</Provides>
+        <Value>100</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>BattleAutoCastSpell</Attribute>
+        <StrVal>Ef_DeathLegion</StrVal>
+        <Provides>.</Provides>
+        <Value>100</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>UnlockCombatAbility</Attribute>
+        <StrVal>Berserk_Self</StrVal>
+        <Provides>Berserk- +2 to Attack and Initiative but the unit attacks enemies without the player's direction.  Berserk units never cast spells.</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Blood_DrotaAbility">
+    <AbilityBonusOption InternalName="Blood_Drota">
+      <PerkTreePosX>0</PerkTreePosX>
+      <PerkTreePosY>19</PerkTreePosY>
+      <IsCombatAbility>1</IsCombatAbility>
+      <DisplayName>Drota</DisplayName>
+      <Description>NA</Description>
+      <Icon>UnitstatIcon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Attack_Poison</StrVal>
+        <Value>3</Value>
+        <Provides>.</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistPoison</StrVal>
+        <Provides>Cannot be knocked Prone. +3 Poison attack. If faction controls 3 or more Air shards, unit gains +1 Moves in tactical combat.
+
+Drota cannot equip any Mounts. They can equip boots and leggings (no graphics shown).
+
+Drota counts as:
+Twisted
+Monster
+Different Genders*
+*Males carry bone necklaces and masks, females don't</Provides>
+        <Value>50</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>BattleAutoCastSpell</Attribute>
+        <Provides>.</Provides>
+        <StrVal>Ef_DrotaFaith2</StrVal>
+        <Value>100</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>UnlockCombatAbility</Attribute>
+        <StrVal>Rush</StrVal>
+        <Provides>Rush- Unit takes an extra action</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Blood_Drota_extramove">
+    <AbilityBonusType>Unit_Level</AbilityBonusType>
+    <AbilityBonusOption InternalName="Blood_Drota_extramove">
+      <MinimumLevel>7</MinimumLevel>
+      <DisplayName>Extra Move</DisplayName>
+      <Description/>
+      <Icon>UnitstatIcon.png</Icon>
+      <PerkTreePosX>1</PerkTreePosX>
+      <PerkTreePosY>18</PerkTreePosY>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Moves</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Moves</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Attack_Poison</StrVal>
+        <Value>3</Value>
+      </GameModifier>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_Drota</Attribute>
+      </Prereq>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>15</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Blood_ElvesAbility">
+    <AbilityBonusOption InternalName="Blood_Elves">
+      <IsCombatAbility>1</IsCombatAbility>
+      <DisplayName>Elf</DisplayName>
+      <Description>NA</Description>
+      <Icon>UnitstatIcon.png</Icon>
+      <GameModifier>
+        <Provides>Direct magical attack used by elves is increased by 20% for Fire, Cold, Lightning and Arcane attack.
+
+Elves count as:
+Immortal
+Humanoid
+Different Genders
+.</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Attack_Cold</StrVal>
+        <Multiplier>1.20</Multiplier>
+        <Provides>.</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Attack_Fire</StrVal>
+        <Multiplier>1.20</Multiplier>
+        <Provides>.</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Attack_Lightning</StrVal>
+        <Multiplier>1.20</Multiplier>
+        <Provides>.</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Attack_Divine</StrVal>
+        <Multiplier>1.20</Multiplier>
+        <Provides>.</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>UnlockCombatAbility</Attribute>
+        <StrVal>SoulSpark</StrVal>
+        <Provides>Soul Spark- Does 2 (+1 per level) lightning damage to the victim</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Blood_FrostgiantAbility">
+    <AbilityBonusOption InternalName="Blood_FrostGiants">
+      <PerkTreePosX>0</PerkTreePosX>
+      <PerkTreePosY>19</PerkTreePosY>
+      <DisplayName>Frost Giant</DisplayName>
+      <Description>NA</Description>
+      <Icon>UnitstatIcon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistCold</StrVal>
+        <Provides>+50 Cold resistance, -25 Fire resistance.
+
+Frost Giants deal Overpower damage against all grouped enemies. For every member in a unit above the second, a Frost Giant adds 50% damage to each attack.
+
+When attempting to attack a Champion that has learned the Path of the Assassin or Path of the Warrior, the Frost Giant loses half of its Accuracy. 
+
+Frost Giants may only ride Icebeasts and Dire Bears (trained units, but not champions, count as Oversized when they do). 
+
+Frost Giants count as:
+Monster
+Hidden Genders
+(Oversized) (see above)</Provides>
+        <Value>50</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Accuracy</StrVal>
+        <StrVal2>UnitStat_BG_AgainstTheFrost</StrVal2>
+        <Provides>.</Provides>
+        <vsHigher>1</vsHigher>
+        <Multiplier>0.5</Multiplier>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BG_AgainstTheFrost</StrVal>
+        <Multiplier>0</Multiplier>
+        <Provides>.</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_TacticalScaleMultiplier</StrVal>
+        <Value>0.5</Value>
+        <Provides>.</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_TacticalScaleMultiplier</StrVal>
+        <Value>0.03</Value>
+        <Provides>.</Provides>
+        <PerLevel>1</PerLevel>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistFire</StrVal>
+        <Provides>.</Provides>
+        <Value>-25</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_OverpowerMultiplier</StrVal>
+        <Provides>.</Provides>
+        <Value>0.5</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>UnlockCombatAbility</Attribute>
+        <StrVal>GuardedStrike</StrVal>
+        <Provides>Guarded Strike- A defensive strike for half normal damage that leaves the attacker defending</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <IsCombatAbility>1</IsCombatAbility>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Blood_FrostGiants_extramove">
+    <AbilityBonusType>Unit_Level</AbilityBonusType>
+    <AbilityBonusOption InternalName="Blood_FrostGiants_extramove">
+      <MinimumLevel>7</MinimumLevel>
+      <DisplayName>Extra Move</DisplayName>
+      <Description/>
+      <Icon>UnitstatIcon.png</Icon>
+      <PerkTreePosX>1</PerkTreePosX>
+      <PerkTreePosY>18</PerkTreePosY>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Moves</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Moves</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Dodge</StrVal>
+        <Value>1</Value>
+        <PerLevel>1</PerLevel>
+        <Provides>+1 Dodge per level</Provides>
+      </GameModifier>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_FrostGiants</Attribute>
+      </Prereq>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>15</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Blood_DwarvesAbility">
+    <AbilityBonusOption InternalName="Blood_Dwarves">
+      <IsCombatAbility>1</IsCombatAbility>
+      <DisplayName>Gnome</DisplayName>
+      <Description>NA</Description>
+      <Icon>UnitstatIcon.png</Icon>
+      <GameModifier>
+        <Provides>Can wear armor class one above their current limit (leather=chainmail, chainmail=plate).
+
+Gnomes suffer -10 Resistance to physical attacks from all Oversized enemies, unless the Gnome also counts as Oversized.
+
+Gnomes count as:
+Humanoid
+Different Genders</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ArmorProficiency</StrVal>
+        <Value>1</Value>
+        <Provides>.</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistPierce</StrVal>
+        <StrVal2>UnitStat_BG_IsOversized</StrVal2>
+        <Value>-10</Value>
+        <Provides>.</Provides>
+        <vsHigher>1</vsHigher>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>UnlockCombatAbility</Attribute>
+        <StrVal>Fortify</StrVal>
+        <Provides>Fortify- Units in fortified tiles get +10 to Accuracy and +20 to Dodge</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Blood_GolemAbility">
+    <AbilityBonusOption InternalName="Blood_Golem">
+      <IsCombatAbility>1</IsCombatAbility>
+      <DisplayName>White Golem</DisplayName>
+      <Description>NA</Description>
+      <Icon>UnitstatIcon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ImmuneToFear</StrVal>
+        <Provides>+10 Spell Resist. +10 Fire, Lightning, Cold and Poison resistance. All enchantments cast on Golems cost 50% more mana maintenance. Golems are Immune to Fear (fear is caused by certain high-level monsters).
+
+For every 2 health point regained each strategic turn, golems regain another 1 health point.
+
+Golems count as:
+Construct
+Not Alive
+Humanoid
+Genderless</Provides>
+        <Value>1</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_HealthRegen</StrVal>
+        <Multiplier>1.5</Multiplier>
+        <Provides>.</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_EnchantmentMaintenanceMultiplier</StrVal>
+        <Provides>.</Provides>
+        <Value>0.5</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_MagicResist</StrVal>
+        <Provides>.</Provides>
+        <Value>10</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistFire</StrVal>
+        <Provides>.</Provides>
+        <Value>10</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistCold</StrVal>
+        <Provides>.</Provides>
+        <Value>10</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistPoison</StrVal>
+        <Provides>.</Provides>
+        <Value>10</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistLightning</StrVal>
+        <Provides>.</Provides>
+        <Value>10</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>UnlockCombatAbility</Attribute>
+        <StrVal>SoulSpark</StrVal>
+        <Provides>Soul Spark- Does 2 (+1 per level) lightning damage to the victim</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Blood_LivingStoneAbility">
+    <AbilityBonusOption InternalName="Blood_LivingStone">
+      <IsCombatAbility>1</IsCombatAbility>
+      <DisplayName>Living Stone</DisplayName>
+      <Description>NA</Description>
+      <Icon>UnitstatIcon.png</Icon>
+      <GameModifier>
+        <Provides>+2 Fire attack, +33 Fire resist, -25 Cold resist, -1 Initiative.
+
+Living Stone count as:
+Humanoid
+Not Alive
+Hidden Genders</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_CombatSpeed</StrVal>
+        <Provides>.</Provides>
+        <Value>-1</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistFire</StrVal>
+        <Provides>.</Provides>
+        <Value>33</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Attack_Fire</StrVal>
+        <Provides>.</Provides>
+        <Value>2</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistCold</StrVal>
+        <Provides>.</Provides>
+        <Value>-25</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>UnlockCombatAbility</Attribute>
+        <StrVal>FlameTongue</StrVal>
+        <Provides>Flame Tongue- Does 2 fire damage per level to the victim</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Blood_LizardmanAB">
+    <AbilityBonusOption InternalName="Blood_Lizardmen">
+      <IsCombatAbility>1</IsCombatAbility>
+      <DisplayName>Lizardman</DisplayName>
+      <Description>NA</Description>
+      <Icon>UnitstatIcon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Dodge</StrVal>
+        <StrVal2>UnitStat_BG_IsElemental</StrVal2>
+        <Value>-30</Value>
+        <vsHigher>1</vsHigher>
+        <Provides>+0.25 Defense per level from natural armor, +20 Fire resistance and -20 Cold resistance
+
+All Elementals hate the Lizardmen and therefore gain +30 Accuracy when attempting to attack them.
+
+Lizardmen count as:
+Humanoid
+Different Genders</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Defense_Pierce</StrVal>
+        <Value>0.25</Value>
+        <PerLevel>1</PerLevel>
+        <Provides>.</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistFire</StrVal>
+        <Provides>.</Provides>
+        <Value>20</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistCold</StrVal>
+        <Provides>.</Provides>
+        <Value>-20</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>UnlockCombatAbility</Attribute>
+        <StrVal>FlameTongue</StrVal>
+        <Provides>Flame Tongue- Does 2 fire damage per level to the victim</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Blood_ShadowsAbility">
+    <AbilityBonusOption InternalName="Blood_Shadows">
+      <IsCombatAbility>1</IsCombatAbility>
+      <DisplayName>Shadow</DisplayName>
+      <Description>NA</Description>
+      <Icon>UnitstatIcon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Dodge</StrVal>
+        <StrVal2>UnitStat_BG_IsBeast</StrVal2>
+        <Value>10</Value>
+        <vsHigher>1</vsHigher>
+        <Provides>+15 Dodge against any Ranged attack. Shadows gain +10 Dodge against Beasts (unless Shadow counts as beast). -25 Lightning resistance. +1 Moves first turn in combat. 
+
+Shadows count as:
+Humanoid
+Genderless</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Moves</StrVal>
+        <Value>1</Value>
+        <xActions>2</xActions>
+        <Provides>.</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_DodgeAgainstRanged</StrVal>
+        <Provides>.</Provides>
+        <Value>15</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistLightning</StrVal>
+        <Provides>.</Provides>
+        <Value>-25</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>UnlockCombatAbility</Attribute>
+        <StrVal>DoubleStrike</StrVal>
+        <Provides>Double Strike- Strike twice at -20 to Accuracy</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Blood_UndeadAbility">
+    <AbilityBonusOption InternalName="Blood_Undead">
+      <DisplayName>Undead</DisplayName>
+      <Description>NA</Description>
+      <Icon>UnitstatIcon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistPierce</StrVal>
+        <Value>10</Value>
+        <Provides>+50 Poison resistance. -5 Fire, Cold and Lightning resistance. -25 Arcane resistance . Undead are Immune to Fear (fear is caused by certain high-level monsters). Undead gain +10 resistance to all physical attacks.
+
+Undead count as:
+Humanoid
+Immortal
+Not Alive
+Genderless
+Undead</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistPoison</StrVal>
+        <Value>50</Value>
+        <Provides>.</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistFire</StrVal>
+        <Value>-5</Value>
+        <Provides>.</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistCold</StrVal>
+        <Value>-5</Value>
+        <Provides>.</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistLightning</StrVal>
+        <Value>-5</Value>
+        <Provides>.</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistDivine</StrVal>
+        <Value>-25</Value>
+        <Provides>.</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>UnlockCombatAbility</Attribute>
+        <StrVal>WraithTouch</StrVal>
+        <Provides>Wraith Touch- Drain 1 Hit Point per level from the victim unless they resist</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="UnitStat_BG_abilityspecialsX">
+    <AbilityBonusOption InternalName="UnitStat_BG_IsCelestial">
+      <DisplayName>Celestial</DisplayName>
+      <Description>This unit counts as Celestial</Description>
+      <Icon>Ability_Noble_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_BG_IsCelestial</StrVal>
+        <Provides>This unit counts as Celestial</Provides>
+        <Value>1</Value>
+      </GameModifier>
+      <HideWhenUpgraded>1</HideWhenUpgraded>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Blood_IronGolem">
+    <AbilityBonusOption InternalName="Blood_IronGolem">
+      <DisplayName>Iron Golem</DisplayName>
+      <Description>Iron Golems are Immune to Fear (fear is caused by certain high-level monsters).
+
+Iron Golems regain life in strategic mode twice as fast as normal. All enchantments cast on Golems cost 50% more mana maintenance. Iron Golems gain +30 Spell Resist and +25 Resistance to Fire, Cold and Poison Resist.
+
+Iron Golems count as Genderless, Not Alive, Constructs and Monsters.</Description>
+      <Icon>UnitstatIcon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ImmuneToFear</StrVal>
+        <Provides>Iron Golems are Immune to Fear (fear is caused by certain high-level monsters).
+
+Iron Golems regain life in strategic mode twice as fast as normal. All enchantments cast on Golems cost 50% more mana maintenance. Iron Golems gain +30 Spell Resist and +25 Resistance to Fire, Cold and Poison Resist.
+
+Iron Golems count as Genderless, Not Alive, Constructs and Monsters.</Provides>
+        <Value>1</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_HealthRegen</StrVal>
+        <Multiplier>2</Multiplier>
+        <Provides>.</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_EnchantmentMaintenanceMultiplier</StrVal>
+        <Value>0.5</Value>
+        <Provides>.</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistFire</StrVal>
+        <Provides>.</Provides>
+        <Value>25</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistCold</StrVal>
+        <Provides>.</Provides>
+        <Value>25</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistPoison</StrVal>
+        <Provides>.</Provides>
+        <Value>25</Value>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Blood_Demonshrill">
+    <AbilityBonusOption InternalName="Blood_Demonshrill">
+      <PerkTreePosX>0</PerkTreePosX>
+      <PerkTreePosY>19</PerkTreePosY>
+      <IsCombatAbility>1</IsCombatAbility>
+      <DisplayName>Demonshrill</DisplayName>
+      <Description>NA</Description>
+      <Icon>UnitstatIcon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistFire</StrVal>
+        <Value>50</Value>
+        <Provides>+50 Fire resistance, +1 Moves. Cannot be knocked Prone. 
+
+Cannot equip mounts. They can equip boots and leggings (no graphics shown).
+
+Demonshrill count as:
+Twisted
+Demon
+Monster
+Male</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Blood_Demonshrill_extramove">
+    <AbilityBonusType>Unit_Level</AbilityBonusType>
+    <AbilityBonusOption InternalName="Blood_Demonshrill_extramove">
+      <MinimumLevel>7</MinimumLevel>
+      <DisplayName>Extra Move</DisplayName>
+      <Description/>
+      <Icon>UnitstatIcon.png</Icon>
+      <PerkTreePosX>1</PerkTreePosX>
+      <PerkTreePosY>18</PerkTreePosY>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Moves</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Moves</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Attack_Fire</StrVal>
+        <Value>2</Value>
+        <Provides>+2 Fire attack</Provides>
+      </GameModifier>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_Demonshrill</Attribute>
+      </Prereq>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>15</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Blood_Shrillguard">
+    <AbilityBonusOption InternalName="Blood_Shrillguard">
+      <PerkTreePosX>0</PerkTreePosX>
+      <PerkTreePosY>19</PerkTreePosY>
+      <IsCombatAbility>1</IsCombatAbility>
+      <DisplayName>Shrillguard</DisplayName>
+      <Description>NA</Description>
+      <Icon>UnitstatIcon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistFire</StrVal>
+        <Value>50</Value>
+        <Provides>+50 Cold resistance, +1 Moves, -25 Fire resistance. Cannot be knocked Prone. 
+
+Cannot equip mounts. They can equip boots and leggings (no graphics shown).
+
+Shrillguard count as:
+Monster
+Elemental
+Male</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistCold</StrVal>
+        <Value>50</Value>
+        <Provides>.</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistFire</StrVal>
+        <Value>-25</Value>
+        <Provides>.</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Blood_Shrillguard_extramove">
+    <AbilityBonusType>Unit_Level</AbilityBonusType>
+    <AbilityBonusOption InternalName="Blood_Shrillguard_extramove">
+      <MinimumLevel>7</MinimumLevel>
+      <DisplayName>Extra Move</DisplayName>
+      <Description/>
+      <Icon>UnitstatIcon.png</Icon>
+      <PerkTreePosX>1</PerkTreePosX>
+      <PerkTreePosY>18</PerkTreePosY>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Moves</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Moves</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Attack_Cold</StrVal>
+        <Value>2</Value>
+        <Provides>+2 Cold attack</Provides>
+      </GameModifier>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_Shrillguard</Attribute>
+      </Prereq>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>15</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Blood_Halfdrake">
+    <AbilityBonusOption InternalName="Blood_Halfdrake">
+      <IsCombatAbility>1</IsCombatAbility>
+      <DisplayName>Halfdrake</DisplayName>
+      <PerkTreePosX>0</PerkTreePosX>
+      <PerkTreePosY>19</PerkTreePosY>
+      <Description>NA</Description>
+      <Icon>UnitstatIcon.png</Icon>
+      <GameModifier>
+        <Provides>Cannot be knocked Prone, +1 Moves, +0.25 Defense per level.
+
+Cannot equip mounts. They can equip boots and leggings (no graphics shown).
+
+Halfdrakes count as:
+Monster
+Dragon
+Immortal
+Male</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Defense_Pierce</StrVal>
+        <Value>0.25</Value>
+        <PerLevel>1</PerLevel>
+        <Provides>.</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Blood_Halfdrake_extramove">
+    <AbilityBonusType>Unit_Level</AbilityBonusType>
+    <AbilityBonusOption InternalName="Blood_Halfdrake_extramove">
+      <MinimumLevel>7</MinimumLevel>
+      <DisplayName>Extra Move</DisplayName>
+      <Description/>
+      <Icon>UnitstatIcon.png</Icon>
+      <PerkTreePosX>1</PerkTreePosX>
+      <PerkTreePosY>18</PerkTreePosY>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Moves</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Moves</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Defense_Pierce</StrVal>
+        <Value>2</Value>
+      </GameModifier>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_Halfdrake</Attribute>
+      </Prereq>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>15</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Blood_Halfdrake_extramove2">
+    <AbilityBonusType>Unit_Level</AbilityBonusType>
+    <AbilityBonusOption InternalName="Blood_Halfdrake_extramove2">
+      <MinimumLevel>11</MinimumLevel>
+      <DisplayName>Extra Move</DisplayName>
+      <Description/>
+      <Icon>UnitstatIcon.png</Icon>
+      <PerkTreePosX>2</PerkTreePosX>
+      <PerkTreePosY>18</PerkTreePosY>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Moves</StrVal>
+        <Value>1</Value>
+        <Provides>+1 Moves</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Defense_Pierce</StrVal>
+        <Value>2</Value>
+      </GameModifier>
+      <Prereq>
+        <Type>AbilityBonusOption</Type>
+        <Target>Unit</Target>
+        <Attribute>Blood_Halfdrake_extramove</Attribute>
+      </Prereq>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Blood_Wolfman">
+    <AbilityBonusOption InternalName="Blood_Wolfman">
+      <IsCombatAbility>1</IsCombatAbility>
+      <DisplayName>Wolfman</DisplayName>
+      <Description>Wolfmen gain +1 Moves. Wolfmen gain +10 physical resistance from their fur. 
+	      
+Wolfmen fear fire and lose half of their Accuracy when trying to attack any target with a higher passive Fire attack.
+
+Wolfmen are Male and count as Beasts and Humanoids.</Description>
+      <Icon>UnitstatIcon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Accuracy</StrVal>
+        <StrVal2>UnitStat_Attack_Fire</StrVal2>
+        <Provides>Wolfmen gain +1 Moves. Wolfmen gain +10 physical resistance from their fur. 
+	      
+Wolfmen fear fire and lose half of their Accuracy when trying to attack any target with a higher passive Fire attack.
+
+Wolfmen are Male and count as Beasts and Humanoids.</Provides>
+        <vsHigher>1</vsHigher>
+        <Multiplier>0.5</Multiplier>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistPierce</StrVal>
+        <Provides>.</Provides>
+        <Value>10</Value>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="ToweringLords">
+    <AbilityBonusOption InternalName="ToweringLords">
+      <DisplayName>Towering Lords</DisplayName>
+      <Description>-2 Dodge per level, +10% Hitpoints. Unit may never Counter-attack.</Description>
+      <Icon>Ability_Heroic_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_MaxCounterAttack</StrVal>
+        <Multiplier>0</Multiplier>
+        <Provides>Frost Giant Champions may never counter-attack</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_Dodge</StrVal>
+        <Value>-2</Value>
+        <Provides>-2 Dodge per level</Provides>
+        <PerLevel>1</PerLevel>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_HitPoints</StrVal>
+        <Multiplier>1.1</Multiplier>
+        <Provides>+10% Hit Points</Provides>
+      </GameModifier>
+    </AbilityBonusOption>
+  </AbilityBonus>
+</Container>

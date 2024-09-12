@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<Container>
+  <QuestDef InternalName="Event_TectonicShift">
+    <DisplayName>Tectonic Shift</DisplayName>
+    <Description>A vast earthquake shakes the ground as great underground tectonic plates are shifting. Fortunately, none of your cities have been affected. However, the vast physical forces unleashed are causing the Earth Shards to glow with power.
+
+For every 2 Earth Shard powers that you control, you gain another 1 Earth Shard power. This effect lasts for 16 turns.</Description>
+
+    <IsStartingPointQuest>0</IsStartingPointQuest>
+    <AllowQuestRejection>0</AllowQuestRejection>
+    <ShortTextAccept>Even now the earth rumbles beneath my feet.</ShortTextAccept>
+    <QuestClass>Minor</QuestClass>
+    <Repeatable>0</Repeatable>
+   <TriggerType>TurnNumber</TriggerType>
+    <TriggerData>125</TriggerData>
+    <TriggerChance>5</TriggerChance>
+    <PostTriggerChance>5</PostTriggerChance>
+
+    <TriggerOrigin>EventLocation</TriggerOrigin>
+    <Image>BG43_EarthShrine.png</Image>
+    <Treasure>
+
+
+             <GameModifier>
+        <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_EarthMana</StrVal>
+        <Value>50</Value>
+        <Duration>16</Duration>
+      </GameModifier>
+ 
+
+
+
+    </Treasure>
+    <QuestObjectiveDef>
+      <ObjectiveID>0</ObjectiveID>
+      <QuestEnd>1</QuestEnd>
+    </QuestObjectiveDef>
+  </QuestDef>
+</Container>

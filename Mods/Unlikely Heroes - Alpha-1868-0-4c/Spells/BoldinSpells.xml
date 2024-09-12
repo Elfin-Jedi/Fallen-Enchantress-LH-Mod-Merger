@@ -1,0 +1,243 @@
+<Spells>
+	<SpellDef InternalName="Engage">
+		<DisplayName>Engage</DisplayName>
+		<Description>Forces an enemy to engage you in combat. This causes them to lose their next turn, but lowers your defense(30%) for 4 Turns.</Description>
+		<FormattedDescription>100% chance to Stun target. Your defence lowered by 30% for 4 Turns.</FormattedDescription>
+		<Image>T_ManaBlast_Painting.png</Image>
+		<IconFG>Ability_Savant_Icon.png</IconFG>
+		<Cooldown>5</Cooldown>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitCurse</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Debuff</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<UseWeaponRange>1</UseWeaponRange>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_Level</Attribute>
+			<Value>4</Value>
+		</Prereq>
+		<GameModifier>
+			<ModType>TacticalUnit</ModType>
+			<Attribute>ChanceToLoseNextTurn</Attribute>
+			<DisplayName>Dazed</DisplayName>
+			<Duration>1</Duration>
+			<Effect>E_Daze_Particle</Effect>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Blunt</StrVal>
+			<DisplayName>Engaged</DisplayName>
+			<ApplyToCaster>1</ApplyToCaster>
+			<Duration>5</Duration>
+			<Effect>E_Curse_Particle</Effect>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_Defense_Blunt] * -.3]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Cutting</StrVal>
+			<ApplyToCaster>1</ApplyToCaster>
+			<Duration>5</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_Defense_Cutting] * -.3]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Pierce</StrVal>
+			<ApplyToCaster>1</ApplyToCaster>
+			<Duration>5</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_Defense_Pierce] * -.3]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>40</AIPriority>
+		</AIData>
+		<HitSoundFX>Spell_ManaBlastImpact_01</HitSoundFX>
+		<SpellCastSoundFX>Spell_ManaBlastTravel_01</SpellCastSoundFX>
+		<SpellCastEffectName>T_ManaBlast_Particle</SpellCastEffectName>
+		<SpellCastEffectScale>1</SpellCastEffectScale>
+		<SpellCastProjectile>1</SpellCastProjectile>
+		<SpellCastProjectileSpeed>700</SpellCastProjectileSpeed>
+		<SpellDefEffect>
+			<EffectName>T_ManaBlastImpact_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.5</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>	
+	<SpellDef InternalName="Disarm">
+		<DisplayName>Disarm</DisplayName>
+		<Description>Lands a precise attack on the enemy's main attacking arm reducing accuracy(25%) for the next 3 turns. Also does 50% of your defense rating in damage.</Description>
+		<FormattedDescription>Deals (%d) damage and target's Accuracy is reduced by 30%% for 3 Turns.</FormattedDescription>
+		<IconFG>Ability_Frenzy_Icon.png</IconFG>
+		<IconColor>32,45,243</IconColor>
+		<Cooldown>5</Cooldown>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Debuff</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<ApproachTargetTile>1</ApproachTargetTile>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<IsCastable>0</IsCastable>
+		<IsSpecialAbility>1</IsSpecialAbility>
+		<UseWeaponRange>1</UseWeaponRange>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_Level</Attribute>
+			<Value>7</Value>
+		</Prereq>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_CombinedPhysicalDefense] * -.5]]></Expression>
+			</Calculate>	
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Accuracy</StrVal>
+			<DisplayName>Disarmed</DisplayName>
+			<Duration>3</Duration>
+			<Effect>E_Blindness_Particle</Effect>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_Accuracy] * -.25]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+		</AIData>
+		<CasterAnimationType>26</CasterAnimationType>
+		<HitSoundFX>Spell_Blind_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_Blindness_Particle</EffectName>
+			<LocalPosition>0,60,0</LocalPosition>
+			<EffectScale>.3</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Droptheshoulder">
+		<DisplayName>Droptheshoulder</DisplayName>
+		<Description>Lower your shoulder and charge an enemy doing damage equal to your defense and knocks the target back. Severe impact causes you to miss the next turn.</Description>
+		<FormattedDescription>Charge an enemy dealing (%d) damage and knockback. Miss your next turn.</FormattedDescription>
+		<Image>T_ManaBlast_Painting.png</Image>
+		<IconFG>Ability_BladeRush_Icon.png</IconFG>
+		<!-- Set cooldown back to 5 -->
+		<Cooldown>1</Cooldown>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Debuff</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<SpellTargetTileOccupied>Empty</SpellTargetTileOccupied>  	
+		<HideInHiergamenon>1</HideInHiergamenon>
+        <AllowFriendlyFireInRadius>0</AllowFriendlyFireInRadius>		
+		<IgnoreInvalidTargetsInRadius>0</IgnoreInvalidTargetsInRadius>
+		<IsCastable>0</IsCastable>
+		<CanBeDodged>1</CanBeDodged>
+		<IsSpecialAbility>1</IsSpecialAbility>
+		<Radius>1</Radius>
+        <RadiusType>LINE_FORWARD</RadiusType>
+        <Range>2</Range>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_Level</Attribute>
+			<Value>10</Value>
+		</Prereq>
+        <Prereq>
+            <Type>UnitStat</Type>
+            <Attribute>UnitStat_IsShield</Attribute>
+            <Value>1</Value>
+        </Prereq>			
+		<GameModifier>
+			<ModType>TacticalUnit</ModType>
+			<Attribute>TargetMovesBack</Attribute>
+			<Value>1</Value>
+		</GameModifier>
+		<!-- Chance for Knockdown.  Removed to simplify overall spell.
+		<GameModifier>
+            <ModType>TacticalUnit</ModType>
+            <Attribute>TargetKnockedProne</Attribute>
+            <Duration>1</Duration>
+        </GameModifier>
+		<!-- Apply Damage -->	
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute> 
+			<AttackStat>UnitStat_Attack_Blunt</AttackStat>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_CombinedPhysicalDefense] * -1]]></Expression>
+			</Calculate>	
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>		
+		<GameModifier>
+			<ModType>TacticalUnit</ModType>
+			<Attribute>ChanceToLoseNextTurn</Attribute>
+			<ApplyToCaster>1</ApplyToCaster>
+			<DisplayName>Dazed</DisplayName>
+			<Duration>2</Duration>
+			<Effect>E_Daze_Particle</Effect>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>TransportUnit</Attribute>
+			<ApplyToSpellRadiusCenterOnly>1</ApplyToSpellRadiusCenterOnly> 
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>40</AIPriority>
+		</AIData>
+		<HitSoundFX>Spell_ManaBlastImpact_01</HitSoundFX>
+		<SpellCastSoundFX>Spell_ManaBlastTravel_01</SpellCastSoundFX>
+		<SpellCastEffectName>T_ManaBlast_Particle</SpellCastEffectName>
+		<SpellCastEffectScale>1</SpellCastEffectScale>
+		<SpellCastProjectile>1</SpellCastProjectile>
+		<SpellCastProjectileSpeed>700</SpellCastProjectileSpeed>
+		<SpellDefEffect>
+			<EffectName>T_ManaBlastImpact_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.5</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>	
+</Spells>

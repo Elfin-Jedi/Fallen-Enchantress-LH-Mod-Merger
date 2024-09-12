@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<ImprovementTypes>
+	<ImprovementType InternalName="Wonder_X_BloodBath">
+		<DisplayName>Blood Bath</DisplayName>
+		<Description>The cost of this wonder, paid regularly in blood, will pay off in raw ferocity for your troops in battle.
+		
+		+1 Fame per Season
+		+100 Fame
+		+30% ATK
+		-2 Growth
+		-10 Shared Growth
+		-1% Unrest
+		-2% Unrest in all your cities
+		
+		Requires Empire Allegiance.
+		Requires Onyx Throne Specialization.
+		
+		World Wonder.</Description>
+		<AllowedPerGame>1</AllowedPerGame>
+		<RequiresCity>1</RequiresCity>
+		<BarredTerrain>River</BarredTerrain>
+		<BarredTerrain>SwampTerrain</BarredTerrain>
+		<PreferredTerrain>City</PreferredTerrain>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<PreferredTerrain>Forest</PreferredTerrain>
+		<RequiresCityImprovement>1</RequiresCityImprovement>
+		<RequiredImprovement>OnyxThrone</RequiredImprovement>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_TheaterOfWar</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Empire</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Ascetics</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<LaborToBuild>2020</LaborToBuild>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_XL_Beer</Attribute>
+			<Value>-50</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Fame</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Fame per Season</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Fame</Attribute>
+			<Value>100</Value>
+			<Provides>+100 Fame</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_UnitStat_Attack_Pierce</StrVal>
+			<Value>30</Value>
+			<Provides>+30% ATK</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Prestige</Attribute>
+			<Value>-2</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>-2 Growth</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_FactionPrestige</StrVal>
+			<Icon>Prestige_Icon.png</Icon>
+			<Value>-5</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>-10 Shared Growth</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>-1% Unrest</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_Additive_Unrest</StrVal>
+			<Value>-2</Value>
+			<Provides>-2% Unrest in all your cities</Provides>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>850</AIPriority>
+			<AITag>CommandPost</AITag>
+		</AIData>
+		<ArtDef>ArtDef_X_BloodBath_Wonder</ArtDef>
+	</ImprovementType>
+</ImprovementTypes>

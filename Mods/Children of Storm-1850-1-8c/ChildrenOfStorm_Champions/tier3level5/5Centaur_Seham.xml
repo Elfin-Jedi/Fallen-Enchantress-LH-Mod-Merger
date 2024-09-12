@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<UnitTypes>
+	<UnitType InternalName="Centaur_Seham">
+		<DisplayName>Seham</DisplayName>
+		<Backstory>At a young age, Seham's original tribe was decimated by a group of Quendar; he and his mother were enslaved for a number of years and made to act as beasts of burden, a time that he resents greatly.  They were later adopted into a different centaur tribe that in turn raided the Quendar.  While he managed to earn the respect of his new tribe's warriors with his deadly aim and hunting skill, he never felt fully integrated.  That might have something to do with why he left to make his own fortune.  Seham says that he's happier on his own, though he does complain incessantly about other races' use of horses as mounts and beasts of burden, claiming that it's somehow akin to slavery.  He's willing to put up with it, though, so long as he doesn't see them being mistreated.  In that case, his fury can be unsettling.</Backstory>
+		<CreatureType>Champion</CreatureType>
+
+		<ModelPath>centaur_malemainbody.hkb</ModelPath>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<EyeTexture>gfx\eyes\blinks\eyeblink_m1_gold.png</EyeTexture>
+		<AnimationPack>EF_MaleSovereignAnimationPack</AnimationPack>
+
+		<ShowAsSingleUnit>false</ShowAsSingleUnit>
+		<CutSceneDataPack>CentaurCutScenePack</CutSceneDataPack>
+		<ModelScale>1.0000</ModelScale>
+		<TacticalModelScale>1.5000</TacticalModelScale>
+		<EquipmentScale>1.0000</EquipmentScale>
+		<ClothMapScale>1.6000</ClothMapScale>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<MovementType>land</MovementType>
+		<BobbingFrequency>0.0000</BobbingFrequency>
+
+		<ClothPoseIndex>1</ClothPoseIndex>
+		<InfoCardBackground>BG_CreateSwamp</InfoCardBackground>
+		<InfoCardBackgroundFlipped>0</InfoCardBackgroundFlipped>
+
+		<CanBeDesigned>0</CanBeDesigned>
+		<Allegiance>Kingdom</Allegiance>
+		<Unique>1</Unique>
+		<IsNPC>1</IsNPC>
+		<NPCSpawnLikelihood>100</NPCSpawnLikelihood>
+		<SpawnRating>5</SpawnRating>
+		<Quote>I can sink this arrow into the eye of a desert rat a field's length away.  Men are considerably larger than desert rats.</Quote>
+		<NPCRecruitmentText>%d gildar would show me that you are sincere.</NPCRecruitmentText>
+		
+		<Medallions InternalName=""/>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_BG_IsKingdom>1.0000</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsMale>1.0000</UnitStat_BG_IsMale>
+			<UnitStat_BG_IsMonster>1.0000</UnitStat_BG_IsMonster>
+			<UnitStat_BG_IsRace_Centaur>1.0000</UnitStat_BG_IsRace_Centaur>
+			<UnitStat_BG_IsChampion>1.0000</UnitStat_BG_IsChampion>
+			<UnitStat_CombatSpeed>22.0000</UnitStat_CombatSpeed>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_HitPoints>20.0000</UnitStat_HitPoints>
+			<UnitStat_Moves>3.0000</UnitStat_Moves>
+		</LevelMilestone>
+		
+		<Equipment>Centaur_F_Male_Head_07</Equipment>
+		<Equipment>F_CornRows_Hair_Mesh_01</Equipment>
+		<Equipment>centaur_base_mount</Equipment>
+		
+		<AutoCreateEquipment>Shortbow_Hunters</AutoCreateEquipment>
+		<AutoCreateEquipment>LeatherBreastpiece</AutoCreateEquipment>
+		<AutoCreateEquipment>LeatherVambraces_Soldiers</AutoCreateEquipment>
+		<AutoCreateEquipment>LeatherBoots_Soldiers</AutoCreateEquipment>
+		<AutoCreateEquipment>SaltedPork</AutoCreateEquipment>
+		
+		<Color_Skin>176,122,74,255</Color_Skin>
+		<Color_Hair>56,33,13,255</Color_Hair>
+		<Color_Clothing1>120,25,20,255</Color_Clothing1>
+		<Color_Clothing2>78,60,55,255</Color_Clothing2>
+		<Color_Metal>166,173,163,255</Color_Metal>
+		<Texture_Skin>Trog_Skin_M_01.png</Texture_Skin>
+		<Texture_Eyes>gfx\eyes\blinks\eyeblink_m1_gold.png</Texture_Eyes>
+		
+		<Gender>Male</Gender>
+		<UnitModelType>Centaur</UnitModelType>
+		
+		<SelectedAbilityBonusOption>Blood_Centaur</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>PathOfTheAssassin</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Centaur_SetUsFree</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Discipline_Level</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Precision_Level</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Hunter</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>TrueStrike</SelectedAbilityBonusOption>
+		
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-5</Value>
+			<Provides>-5% Unrest in the city this unit is in</Provides>
+		</GameModifier>
+		<NPCFreeRecruit>0</NPCFreeRecruit>
+		<RaceType>Race_Type_Centaur</RaceType>
+		<WageOverride>1</WageOverride>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SoundPack>SoundPack_Generic_Male</SoundPack>
+		<IsSovereign>0</IsSovereign>
+		<IsChampion>1</IsChampion>
+	</UnitType>	
+</UnitTypes>

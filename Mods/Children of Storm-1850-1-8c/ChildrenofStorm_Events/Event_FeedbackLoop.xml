@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Container>
+  <QuestDef InternalName="Event_FeedbackLoop">
+    <DisplayName>Feedback Loop</DisplayName>
+    <Description>A disaster has occured! An unknown Edge Wizard has mastered the flow of magic and has learned how to control all the shards! He is now gathering all the magical power in the world into his own body - a process he is unable to stop. It is only a matter of time until his body gives out.
+
+Mana income is reduced by 100%. All Shard Powers are lost. Essence is reduced by 1 in all cities (does not remove enchantments). These effects last 16 turns.</Description>
+    <IsStartingPointQuest>0</IsStartingPointQuest>
+    <IsStartingPointQuest>0</IsStartingPointQuest>
+    <AllowQuestRejection>0</AllowQuestRejection>
+   <ShortTextAccept>My magic stolen by some... rogue wizard...</ShortTextAccept>
+    <QuestClass>Minor</QuestClass>
+    <Repeatable>0</Repeatable>
+   <TriggerType>TurnNumber</TriggerType>
+    <TriggerData>125</TriggerData>
+    <TriggerChance>5</TriggerChance>
+    <PostTriggerChance>5</PostTriggerChance>
+
+    <TriggerOrigin>EventLocation</TriggerOrigin>
+    <Image>LifeShard_Medallion.png</Image>
+    <Treasure>
+
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>AbilityBonus</Attribute>
+        <StrVal>A_Additive_TileYieldEssence</StrVal>
+        <Value>-1</Value>
+        <Duration>16</Duration>
+      </GameModifier>
+
+    </Treasure>
+    <QuestObjectiveDef>
+      <ObjectiveID>0</ObjectiveID>
+      <QuestEnd>1</QuestEnd>
+    </QuestObjectiveDef>
+  </QuestDef>
+</Container>

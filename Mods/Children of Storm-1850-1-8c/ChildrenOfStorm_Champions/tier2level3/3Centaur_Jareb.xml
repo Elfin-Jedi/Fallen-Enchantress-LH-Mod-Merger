@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<UnitTypes>
+	<UnitType InternalName="Centaur_Jareb">
+		<DisplayName>Jareb</DisplayName>
+		<Backstory>Once Jareb was a simple warrior, undistinguished within his tribe.  Then one day, a passing Kraxian merchant caravan stopped to trade.  Along with the caravan rode a robed woman on horseback.  Jareb made an offhand comment to the effect that the horse would be better left to its freedom.  Whatever the reason, the comment enraged the woman, who turned out to be a mage of some power.  While the rest of his tribe observed in awe, she used powerful magics that blew all that surrounded her back several paces and forced Jareb to fall to the ground before her; she dismounted and placed her foot on his prostrate form, then with glowing fingers wrote a word on his flank; she stated that the word meant 'servant' in a forgotten tongue.  Sure enough, Jareb found himself unable to resist her command, and he was forced to do her bidding for the rest of the day, and later to serve shamefully as her mount when the caravan left.  The next day she commanded him to return to his people, which he obediently did.  When he returned, the effect and the magical inscription eventually wore off, but it was all he could do to face the stares and snickers of the other warriors of his tribe.  After an incident in which he severely assaulted a female of the tribe for a perceived slight, he was encouraged to leave and find his peace.  Jareb has never returned to his tribe and instead nurses his grudge, gradually expanding his acrimony and resentment toward all women and Fallen.</Backstory>
+		<CreatureType>Champion</CreatureType>
+		
+		<ModelPath>centaur_malemainbody.hkb</ModelPath>
+		<SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+		<EyeTexture>gfx\eyes\blinks\eyeblink_m5_Amber.png</EyeTexture>
+		<AnimationPack>EF_MaleSovereignAnimationPack</AnimationPack>
+		
+		<ShowAsSingleUnit>false</ShowAsSingleUnit>
+		<CutSceneDataPack>CentaurCutScenePack</CutSceneDataPack>
+		<ModelScale>1.0000</ModelScale>
+		<TacticalModelScale>1.5000</TacticalModelScale>
+		<EquipmentScale>1.0000</EquipmentScale>
+		<ClothMapScale>1.6000</ClothMapScale>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<MovementType>land</MovementType>
+		<BobbingFrequency>0.0000</BobbingFrequency>
+		
+		<ClothPoseIndex>1</ClothPoseIndex>
+		<InfoCardBackground>BG_Desert</InfoCardBackground>
+		<InfoCardBackgroundFlipped>1</InfoCardBackgroundFlipped>
+		
+		<CanBeDesigned>0</CanBeDesigned>		
+		<Allegiance>Kingdom</Allegiance>
+		<Unique>1</Unique>
+		<IsNPC>1</IsNPC>
+		<NPCSpawnLikelihood>100</NPCSpawnLikelihood>
+		
+		<SpawnRating>5</SpawnRating>
+		<Quote>The only good greyskin is one that's serving as the crows' feast.</Quote>
+		<NPCRecruitmentText>%d gildar would show me that you are sincere.</NPCRecruitmentText>
+		
+		<Medallions InternalName=""/>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_BG_IsKingdom>1.0000</UnitStat_BG_IsKingdom>
+			<UnitStat_BG_IsMale>1.0000</UnitStat_BG_IsMale>
+			<UnitStat_BG_IsMonster>1.0000</UnitStat_BG_IsMonster>
+			<UnitStat_BG_IsRace_Centaur>1.0000</UnitStat_BG_IsRace_Centaur>
+			<UnitStat_BG_IsChampion>1.0000</UnitStat_BG_IsChampion>
+			<UnitStat_CombatSpeed>22.0000</UnitStat_CombatSpeed>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_HitPoints>20.0000</UnitStat_HitPoints>
+			<UnitStat_Moves>3.0000</UnitStat_Moves>
+		</LevelMilestone>
+		
+		<Equipment>Centaur_F_Male_Head_04</Equipment>
+		<Equipment>F_Braid_Hair_Mesh_01</Equipment>
+		<Equipment>centaur_base_mount</Equipment>
+		
+		<AutoCreateEquipment>BoarSpear_Centaur</AutoCreateEquipment>
+		<AutoCreateEquipment>WoodShield</AutoCreateEquipment>
+		<AutoCreateEquipment>LeatherBreastpiece</AutoCreateEquipment>
+		<AutoCreateEquipment>LeatherBoots_Soldiers</AutoCreateEquipment>
+		
+		<Color_Skin>138,95,93,255</Color_Skin>
+		<Color_Hair>33,15,5,255</Color_Hair>
+		<Color_Clothing1>120,25,20,255</Color_Clothing1>
+		<Color_Clothing2>78,60,55,255</Color_Clothing2>
+		<Color_Metal>255,255,255,255</Color_Metal>
+		<Texture_Skin>Trog_Skin_M_02.png</Texture_Skin>
+		<Texture_Eyes>gfx\eyes\blinks\eyeblink_m5_Amber.png</Texture_Eyes>
+		
+		<Gender>Male</Gender>
+		<UnitModelType>Centaur</UnitModelType>
+		<SelectedAbilityBonusOption>Blood_Centaur</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>PathOfTheWarrior</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Centaur_Misogynist</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Enmity</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Charge</SelectedAbilityBonusOption>
+		
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-5</Value>
+			<Provides>-5% Unrest in the city this unit is in</Provides>
+		</GameModifier>
+		<NPCFreeRecruit>0</NPCFreeRecruit>
+		<RaceType>Race_Type_Centaur</RaceType>
+		<WageOverride>1</WageOverride>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SoundPack>SoundPack_Generic_Male</SoundPack>
+		<IsSovereign>0</IsSovereign>
+		<IsChampion>1</IsChampion>
+	</UnitType>	
+</UnitTypes>

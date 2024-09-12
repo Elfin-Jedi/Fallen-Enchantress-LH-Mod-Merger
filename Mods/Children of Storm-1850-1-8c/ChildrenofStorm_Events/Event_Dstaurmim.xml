@@ -1,0 +1,432 @@
+<?xml version="1.0"?>
+<Container>
+  <QuestDef InternalName="Event_Dstaurmim">
+    <DisplayName>Dstaurmim, the Undying</DisplayName>
+    <Description>In the 97th year following the Cataclysm Dstaurmim, the Hope, fought with men against the monsters of the wastes. One of the last dragons, he had sworn to protect whatever life remained in the world. Together they went into the dark places of the world, finding hideous beasts but also rich treasure they split equally. He was betrayed by the men he fought with, who sought him out in his lair when he slept and ambushed him. So great was his anger that the gates of Death could not hold him. Dstaurmim has now returned to the world, more spirit than flesh, and seeks vengeance for his passing. Although the men who killed him are long since dead, Dstaurmim's time in the afterlife has shattered his mind and he now strikes out against all living things.
+
+Dstaurmim the Undying is now in the world. He is very dangerous, but killing him grants a trophy and a Reliquary item.
+	</Description>
+
+    <IsStartingPointQuest>0</IsStartingPointQuest>
+    <AllowQuestRejection>0</AllowQuestRejection>
+   <ShortTextAccept>A ghost dragon?! Unbelievable...</ShortTextAccept>
+    <QuestClass>Minor</QuestClass>
+    <Repeatable>0</Repeatable>
+   <TriggerType>TurnNumber</TriggerType>
+    <TriggerData>125</TriggerData>
+    <TriggerChance>5</TriggerChance>
+    <PostTriggerChance>5</PostTriggerChance>
+
+    <TriggerOrigin>EventLocation</TriggerOrigin>
+    <Image>Summon_Ghost_Dragon_Medallion.png</Image>
+    <Treasure>
+      <GameModifier InternalName="Reward1">
+        <ModType>Map</ModType>
+        <Attribute>SpawnMonster</Attribute>
+        <Value>1</Value>
+        <UnitClass>Dstaurmim</UnitClass>
+        <Radius>-1</Radius>
+      </GameModifier>
+    </Treasure>
+    <QuestObjectiveDef>
+      <ObjectiveID>0</ObjectiveID>
+      <QuestEnd>1</QuestEnd>
+    </QuestObjectiveDef>
+  </QuestDef>
+  <UnitType InternalName="Dstaurmim">
+    <DisplayName>Dstaurmim</DisplayName>
+    <CreatureType>Dragon</CreatureType>
+    <CanBeDesigned>0</CanBeDesigned>
+    <IsSovereign>0</IsSovereign>
+    <AllowGrouping>0</AllowGrouping>
+    <HasWages>0</HasWages>
+    <SpawnRating>13</SpawnRating>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <UnitStat_Accuracy>75</UnitStat_Accuracy>
+      <UnitStat_Attack_Pierce>29</UnitStat_Attack_Pierce>
+      <UnitStat_ChanceToCrit>3</UnitStat_ChanceToCrit>
+      <UnitStat_CombatSpeed>21</UnitStat_CombatSpeed>
+      <UnitStat_Defense_Blunt>15</UnitStat_Defense_Blunt>
+      <UnitStat_Defense_Cutting>15</UnitStat_Defense_Cutting>
+      <UnitStat_Defense_Pierce>15</UnitStat_Defense_Pierce>
+      <UnitStat_HitPoints>66</UnitStat_HitPoints>
+      <UnitStat_Moves>4</UnitStat_Moves>
+    </LevelMilestone>
+    <LevelMilestone InternalName="L2">
+      <Level>2</Level>
+      <UnitStat_Accuracy>75</UnitStat_Accuracy>
+      <UnitStat_Attack_Pierce>29</UnitStat_Attack_Pierce>
+      <UnitStat_ChanceToCrit>3</UnitStat_ChanceToCrit>
+      <UnitStat_CombatSpeed>21</UnitStat_CombatSpeed>
+      <UnitStat_Defense_Blunt>15</UnitStat_Defense_Blunt>
+      <UnitStat_Defense_Cutting>15</UnitStat_Defense_Cutting>
+      <UnitStat_Defense_Pierce>15</UnitStat_Defense_Pierce>
+      <UnitStat_HitPoints>66</UnitStat_HitPoints>
+      <UnitStat_Moves>4</UnitStat_Moves>
+    </LevelMilestone>
+    <LevelMilestone InternalName="L3">
+      <Level>3</Level>
+      <UnitStat_Accuracy>75</UnitStat_Accuracy>
+      <UnitStat_Attack_Pierce>31</UnitStat_Attack_Pierce>
+      <UnitStat_ChanceToCrit>3</UnitStat_ChanceToCrit>
+      <UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
+      <UnitStat_Defense_Blunt>16</UnitStat_Defense_Blunt>
+      <UnitStat_Defense_Cutting>16</UnitStat_Defense_Cutting>
+      <UnitStat_Defense_Pierce>16</UnitStat_Defense_Pierce>
+      <UnitStat_HitPoints>72</UnitStat_HitPoints>
+      <UnitStat_Moves>4</UnitStat_Moves>
+    </LevelMilestone>
+    <LevelMilestone InternalName="L4">
+      <Level>4</Level>
+      <UnitStat_Accuracy>75</UnitStat_Accuracy>
+      <UnitStat_Attack_Pierce>33</UnitStat_Attack_Pierce>
+      <UnitStat_ChanceToCrit>3</UnitStat_ChanceToCrit>
+      <UnitStat_CombatSpeed>23</UnitStat_CombatSpeed>
+      <UnitStat_Defense_Blunt>17</UnitStat_Defense_Blunt>
+      <UnitStat_Defense_Cutting>17</UnitStat_Defense_Cutting>
+      <UnitStat_Defense_Pierce>17</UnitStat_Defense_Pierce>
+      <UnitStat_HitPoints>78</UnitStat_HitPoints>
+      <UnitStat_Moves>4</UnitStat_Moves>
+    </LevelMilestone>
+    <LevelMilestone InternalName="L5">
+      <Level>5</Level>
+      <UnitStat_Accuracy>75</UnitStat_Accuracy>
+      <UnitStat_Attack_Pierce>35</UnitStat_Attack_Pierce>
+      <UnitStat_ChanceToCrit>3</UnitStat_ChanceToCrit>
+      <UnitStat_CombatSpeed>24</UnitStat_CombatSpeed>
+      <UnitStat_Defense_Blunt>18</UnitStat_Defense_Blunt>
+      <UnitStat_Defense_Cutting>18</UnitStat_Defense_Cutting>
+      <UnitStat_Defense_Pierce>18</UnitStat_Defense_Pierce>
+      <UnitStat_HitPoints>84</UnitStat_HitPoints>
+      <UnitStat_Moves>4</UnitStat_Moves>
+    </LevelMilestone>
+    <LevelMilestone InternalName="L6">
+      <Level>6</Level>
+      <UnitStat_Accuracy>75</UnitStat_Accuracy>
+      <UnitStat_Attack_Pierce>37</UnitStat_Attack_Pierce>
+      <UnitStat_ChanceToCrit>3</UnitStat_ChanceToCrit>
+      <UnitStat_CombatSpeed>25</UnitStat_CombatSpeed>
+      <UnitStat_Defense_Blunt>19</UnitStat_Defense_Blunt>
+      <UnitStat_Defense_Cutting>19</UnitStat_Defense_Cutting>
+      <UnitStat_Defense_Pierce>19</UnitStat_Defense_Pierce>
+      <UnitStat_HitPoints>90</UnitStat_HitPoints>
+      <UnitStat_Moves>4</UnitStat_Moves>
+    </LevelMilestone>
+    <LevelMilestone InternalName="L7">
+      <Level>7</Level>
+      <UnitStat_Accuracy>75</UnitStat_Accuracy>
+      <UnitStat_Attack_Pierce>39</UnitStat_Attack_Pierce>
+      <UnitStat_ChanceToCrit>3</UnitStat_ChanceToCrit>
+      <UnitStat_CombatSpeed>26</UnitStat_CombatSpeed>
+      <UnitStat_Defense_Blunt>20</UnitStat_Defense_Blunt>
+      <UnitStat_Defense_Cutting>20</UnitStat_Defense_Cutting>
+      <UnitStat_Defense_Pierce>20</UnitStat_Defense_Pierce>
+      <UnitStat_HitPoints>96</UnitStat_HitPoints>
+      <UnitStat_Moves>4</UnitStat_Moves>
+    </LevelMilestone>
+    <LevelMilestone InternalName="L8">
+      <Level>8</Level>
+      <UnitStat_Accuracy>75</UnitStat_Accuracy>
+      <UnitStat_Attack_Pierce>41</UnitStat_Attack_Pierce>
+      <UnitStat_ChanceToCrit>3</UnitStat_ChanceToCrit>
+      <UnitStat_CombatSpeed>27</UnitStat_CombatSpeed>
+      <UnitStat_Defense_Blunt>21</UnitStat_Defense_Blunt>
+      <UnitStat_Defense_Cutting>21</UnitStat_Defense_Cutting>
+      <UnitStat_Defense_Pierce>21</UnitStat_Defense_Pierce>
+      <UnitStat_HitPoints>102</UnitStat_HitPoints>
+      <UnitStat_Moves>4</UnitStat_Moves>
+    </LevelMilestone>
+    <LevelMilestone InternalName="L9">
+      <Level>9</Level>
+      <UnitStat_Accuracy>75</UnitStat_Accuracy>
+      <UnitStat_Attack_Pierce>43</UnitStat_Attack_Pierce>
+      <UnitStat_ChanceToCrit>3</UnitStat_ChanceToCrit>
+      <UnitStat_CombatSpeed>28</UnitStat_CombatSpeed>
+      <UnitStat_Defense_Blunt>22</UnitStat_Defense_Blunt>
+      <UnitStat_Defense_Cutting>22</UnitStat_Defense_Cutting>
+      <UnitStat_Defense_Pierce>22</UnitStat_Defense_Pierce>
+      <UnitStat_HitPoints>108</UnitStat_HitPoints>
+      <UnitStat_Moves>4</UnitStat_Moves>
+    </LevelMilestone>
+    <LevelMilestone InternalName="L10">
+      <Level>10</Level>
+      <UnitStat_Accuracy>75</UnitStat_Accuracy>
+      <UnitStat_Attack_Pierce>45</UnitStat_Attack_Pierce>
+      <UnitStat_ChanceToCrit>3</UnitStat_ChanceToCrit>
+      <UnitStat_CombatSpeed>29</UnitStat_CombatSpeed>
+      <UnitStat_Defense_Blunt>23</UnitStat_Defense_Blunt>
+      <UnitStat_Defense_Cutting>23</UnitStat_Defense_Cutting>
+      <UnitStat_Defense_Pierce>23</UnitStat_Defense_Pierce>
+      <UnitStat_HitPoints>114</UnitStat_HitPoints>
+      <UnitStat_Moves>4</UnitStat_Moves>
+    </LevelMilestone>
+    <LevelMilestone InternalName="L11">
+      <Level>11</Level>
+      <UnitStat_Accuracy>75</UnitStat_Accuracy>
+      <UnitStat_Attack_Pierce>47</UnitStat_Attack_Pierce>
+      <UnitStat_ChanceToCrit>3</UnitStat_ChanceToCrit>
+      <UnitStat_CombatSpeed>30</UnitStat_CombatSpeed>
+      <UnitStat_Defense_Blunt>24</UnitStat_Defense_Blunt>
+      <UnitStat_Defense_Cutting>24</UnitStat_Defense_Cutting>
+      <UnitStat_Defense_Pierce>24</UnitStat_Defense_Pierce>
+      <UnitStat_HitPoints>120</UnitStat_HitPoints>
+      <UnitStat_Moves>4</UnitStat_Moves>
+    </LevelMilestone>
+    <LevelMilestone InternalName="L12">
+      <Level>12</Level>
+      <UnitStat_Accuracy>75</UnitStat_Accuracy>
+      <UnitStat_Attack_Pierce>49</UnitStat_Attack_Pierce>
+      <UnitStat_ChanceToCrit>3</UnitStat_ChanceToCrit>
+      <UnitStat_CombatSpeed>31</UnitStat_CombatSpeed>
+      <UnitStat_Defense_Blunt>25</UnitStat_Defense_Blunt>
+      <UnitStat_Defense_Cutting>25</UnitStat_Defense_Cutting>
+      <UnitStat_Defense_Pierce>25</UnitStat_Defense_Pierce>
+      <UnitStat_HitPoints>126</UnitStat_HitPoints>
+      <UnitStat_Moves>4</UnitStat_Moves>
+    </LevelMilestone>
+    <LevelMilestone InternalName="L13">
+      <Level>13</Level>
+      <UnitStat_Accuracy>75</UnitStat_Accuracy>
+      <UnitStat_Attack_Pierce>51</UnitStat_Attack_Pierce>
+      <UnitStat_ChanceToCrit>3</UnitStat_ChanceToCrit>
+      <UnitStat_CombatSpeed>27</UnitStat_CombatSpeed>
+      <UnitStat_Defense_Blunt>26</UnitStat_Defense_Blunt>
+      <UnitStat_Defense_Cutting>26</UnitStat_Defense_Cutting>
+      <UnitStat_Defense_Pierce>26</UnitStat_Defense_Pierce>
+      <UnitStat_HitPoints>132</UnitStat_HitPoints>
+      <UnitStat_Moves>3</UnitStat_Moves>
+      <UnitStat_BG_IsMonster>1</UnitStat_BG_IsMonster>
+      <UnitStat_BG_IsUndead>1</UnitStat_BG_IsUndead>
+    </LevelMilestone>
+    <LevelMilestone InternalName="L14">
+      <Level>14</Level>
+      <UnitStat_Accuracy>75</UnitStat_Accuracy>
+      <UnitStat_Attack_Pierce>53</UnitStat_Attack_Pierce>
+      <UnitStat_ChanceToCrit>3</UnitStat_ChanceToCrit>
+      <UnitStat_CombatSpeed>33</UnitStat_CombatSpeed>
+      <UnitStat_Defense_Blunt>27</UnitStat_Defense_Blunt>
+      <UnitStat_Defense_Cutting>27</UnitStat_Defense_Cutting>
+      <UnitStat_Defense_Pierce>27</UnitStat_Defense_Pierce>
+      <UnitStat_HitPoints>138</UnitStat_HitPoints>
+      <UnitStat_Moves>4</UnitStat_Moves>
+    </LevelMilestone>
+    <LevelMilestone InternalName="L15">
+      <Level>15</Level>
+      <UnitStat_Accuracy>75</UnitStat_Accuracy>
+      <UnitStat_Attack_Pierce>55</UnitStat_Attack_Pierce>
+      <UnitStat_ChanceToCrit>3</UnitStat_ChanceToCrit>
+      <UnitStat_CombatSpeed>34</UnitStat_CombatSpeed>
+      <UnitStat_Defense_Blunt>28</UnitStat_Defense_Blunt>
+      <UnitStat_Defense_Cutting>28</UnitStat_Defense_Cutting>
+      <UnitStat_Defense_Pierce>28</UnitStat_Defense_Pierce>
+      <UnitStat_HitPoints>144</UnitStat_HitPoints>
+      <UnitStat_Moves>4</UnitStat_Moves>
+    </LevelMilestone>
+    <LevelMilestone InternalName="L16">
+      <Level>16</Level>
+      <UnitStat_Accuracy>75</UnitStat_Accuracy>
+      <UnitStat_Attack_Pierce>57</UnitStat_Attack_Pierce>
+      <UnitStat_ChanceToCrit>3</UnitStat_ChanceToCrit>
+      <UnitStat_CombatSpeed>35</UnitStat_CombatSpeed>
+      <UnitStat_Defense_Blunt>29</UnitStat_Defense_Blunt>
+      <UnitStat_Defense_Cutting>29</UnitStat_Defense_Cutting>
+      <UnitStat_Defense_Pierce>29</UnitStat_Defense_Pierce>
+      <UnitStat_HitPoints>150</UnitStat_HitPoints>
+      <UnitStat_Moves>4</UnitStat_Moves>
+    </LevelMilestone>
+    <LevelMilestone InternalName="L17">
+      <Level>17</Level>
+      <UnitStat_Accuracy>75</UnitStat_Accuracy>
+      <UnitStat_Attack_Pierce>59</UnitStat_Attack_Pierce>
+      <UnitStat_ChanceToCrit>3</UnitStat_ChanceToCrit>
+      <UnitStat_CombatSpeed>36</UnitStat_CombatSpeed>
+      <UnitStat_Defense_Blunt>30</UnitStat_Defense_Blunt>
+      <UnitStat_Defense_Cutting>30</UnitStat_Defense_Cutting>
+      <UnitStat_Defense_Pierce>30</UnitStat_Defense_Pierce>
+      <UnitStat_HitPoints>156</UnitStat_HitPoints>
+      <UnitStat_Moves>4</UnitStat_Moves>
+    </LevelMilestone>
+    <LevelMilestone InternalName="L18">
+      <Level>18</Level>
+      <UnitStat_Accuracy>75</UnitStat_Accuracy>
+      <UnitStat_Attack_Pierce>61</UnitStat_Attack_Pierce>
+      <UnitStat_ChanceToCrit>3</UnitStat_ChanceToCrit>
+      <UnitStat_CombatSpeed>37</UnitStat_CombatSpeed>
+      <UnitStat_Defense_Blunt>31</UnitStat_Defense_Blunt>
+      <UnitStat_Defense_Cutting>31</UnitStat_Defense_Cutting>
+      <UnitStat_Defense_Pierce>31</UnitStat_Defense_Pierce>
+      <UnitStat_HitPoints>162</UnitStat_HitPoints>
+      <UnitStat_Moves>4</UnitStat_Moves>
+    </LevelMilestone>
+    <LevelMilestone InternalName="L19">
+      <Level>19</Level>
+      <UnitStat_Accuracy>75</UnitStat_Accuracy>
+      <UnitStat_Attack_Pierce>63</UnitStat_Attack_Pierce>
+      <UnitStat_ChanceToCrit>3</UnitStat_ChanceToCrit>
+      <UnitStat_CombatSpeed>38</UnitStat_CombatSpeed>
+      <UnitStat_Defense_Blunt>32</UnitStat_Defense_Blunt>
+      <UnitStat_Defense_Cutting>32</UnitStat_Defense_Cutting>
+      <UnitStat_Defense_Pierce>32</UnitStat_Defense_Pierce>
+      <UnitStat_HitPoints>168</UnitStat_HitPoints>
+      <UnitStat_Moves>4</UnitStat_Moves>
+    </LevelMilestone>
+    <LevelMilestone InternalName="L20">
+      <Level>20</Level>
+      <UnitStat_Accuracy>75</UnitStat_Accuracy>
+      <UnitStat_Attack_Pierce>65</UnitStat_Attack_Pierce>
+      <UnitStat_ChanceToCrit>3</UnitStat_ChanceToCrit>
+      <UnitStat_CombatSpeed>39</UnitStat_CombatSpeed>
+      <UnitStat_Defense_Blunt>33</UnitStat_Defense_Blunt>
+      <UnitStat_Defense_Cutting>33</UnitStat_Defense_Cutting>
+      <UnitStat_Defense_Pierce>33</UnitStat_Defense_Pierce>
+      <UnitStat_HitPoints>174</UnitStat_HitPoints>
+      <UnitStat_Moves>4</UnitStat_Moves>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Large</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Sweep</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>FireBreath_Dstaurmim</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Overpower</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Dstaurmimisghost</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Vulnerable</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>UnitStat_BG_IsOversizedAbility</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>UnitStat_BG_IsNotAliveAbility</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>UnitStat_BG_IsImmortalAbility</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>UnitStat_BG_IsFlyingAbility</SelectedAbilityBonusOption>
+    <Quote>'And the battalions of man became dust.'</Quote>
+    <Backstory>Dstaurmim, an ancient dragon, was betrayed and killed by humans while Dstaurmim was fighting for their cause. His rage was powerful enough to bring him back to this world to seek his revenge. </Backstory>
+    <Medallions InternalName="">
+      <All>Summon_Ghost_Dragon_Medallion.png</All>
+    </Medallions>
+    <AlwaysInTileCenter>1</AlwaysInTileCenter>
+    <AnimationPack>DragonAnimationPack</AnimationPack>
+    <BattleAnimationBehavior>Stationary</BattleAnimationBehavior>
+    <ClothMapScale>0.615</ClothMapScale>
+    <Color_Skin>34,34,34,255</Color_Skin>
+    <CutSceneDataPack>DragonUnitCutscenePack</CutSceneDataPack>
+    <EyeTexture>gfx/eyes/male_brown_eye.png</EyeTexture>
+    <InfoCardBackground>BG18_Dark</InfoCardBackground>
+    <MaxScaleMainMap>0.45</MaxScaleMainMap>
+    <MaxScaleTacticalMap>0.65</MaxScaleTacticalMap>
+    <ModelPath>Summon_Ghost_Dragon.hkb</ModelPath>
+    <ModelScale>1.2</ModelScale>
+    <ShowAsSingleUnit>1</ShowAsSingleUnit>
+    <SkeletonPath>gfx/hkb/Dragons/D_Dragon_Skeleton_01.hkb</SkeletonPath>
+    <SoundPack>SoundPack_Dragon1</SoundPack>
+    <Texture_All>Summon_Ghost_Dragon_Skin.dds</Texture_All>
+    <Treasure>
+      <Liklihood>100</Liklihood>
+      <City_Trophy>Trophy_Dstaurmim</City_Trophy>
+      <GameModifier>
+        <ModType>GiveItem</ModType>
+        <Attribute>artifact_Dragonsegg</Attribute>
+      </GameModifier>
+    </Treasure>
+  </UnitType>
+  <AbilityBonus InternalName="FireBreath_Dstaurmim">
+    <AbilityBonusOption InternalName="FireBreath_Dstaurmim">
+      <DisplayName>Fire Breath</DisplayName>
+      <Description>Target units with a 1 tile radius are enveloped in fire taking the caster's Attack in fire damage</Description>
+      <Icon>Ability_FireBreath_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>UnlockCombatAbility</Attribute>
+        <StrVal>FireBreath_Dstaurmim</StrVal>
+        <Provides>Ranged attack that does the caster's Attack in Fire damage to everyone in range</Provides>
+      </GameModifier>
+      <CombatRating>300</CombatRating>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <IsCombatAbility>1</IsCombatAbility>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5000</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <SpellDef InternalName="FireBreath_Dstaurmim">
+    <DisplayName>Fire Breath</DisplayName>
+    <Description>Target units in a 1 tile radius are enveloped in fire taking the caster's attack strength in fire damage.</Description>
+    <IconFG>Ability_FireBreath_Icon.png</IconFG>
+    <IconColor>32,45,243</IconColor>
+    <Cooldown>5</Cooldown>
+    <SpellType>Tactical</SpellType>
+    <SpellClass>Offensive</SpellClass>
+    <SpellSubClass>Damage</SpellSubClass>
+    <SpellTargetType>EnemyUnit</SpellTargetType>
+    <HideInHiergamenon>1</HideInHiergamenon>
+    <IsCastable>0</IsCastable>
+    <IsSpecialAbility>1</IsSpecialAbility>
+    <Radius>1</Radius>
+    <Range>15</Range>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>DefendableDamage</Attribute>
+      <AttackStat>UnitStat_Attack_Fire</AttackStat>
+      <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+        <Expression><![CDATA[[UnitStat_CombinedAttack]]]></Expression>
+      </Calculate>
+      <Calculate InternalName="Value">
+        <Expression><![CDATA[[Calc]]]></Expression>
+      </Calculate>
+    </GameModifier>
+    <AIData AIPersonality="AI_General">
+      <AIPriority>40</AIPriority>
+    </AIData>
+    <SpellCastHitSoundFX>Spells_DragonFire_01</SpellCastHitSoundFX>
+    <SpellCastEffectName>Goetia_Breath_Death</SpellCastEffectName>
+    <SpellCastEffectScale>2.0</SpellCastEffectScale>
+  </SpellDef>
+  <AbilityBonus InternalName="Trophy_Dstaurmim">
+    <AbilityBonusType>City_Trophy</AbilityBonusType>
+    <AbilityBonusOption InternalName="Trophy_Dstaurmim">
+      <DisplayName>Heart of Dstaurmim</DisplayName>
+      <Description>The heart of Dstaurmim, the Undying. A foe to all, his demise brings you great glory. The heart burns eternal with his rage. (+15% growth, +5 Spell Resist for all units trained in this city)</Description>
+      <Icon>Trophy_DelinsHeart.png</Icon>
+      <GameModifier>
+        <ModType>ResourceMultiplier</ModType>
+        <Attribute>Prestige</Attribute>
+        <Value>1.15</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>CityTrainingBonus</ModType>
+        <Attribute>TrainingBonus_ApplyUnitModifier_Add</Attribute>
+        <StrVal>UnitStat_MagicResist</StrVal>
+        <Value>5</Value>
+      </GameModifier>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>
+  <AbilityBonus InternalName="Dstaurmimisghost">
+    <AbilityBonusOption InternalName="Dstaurmimisghost">
+      <IsCombatAbility>1</IsCombatAbility>
+      <DisplayName>Ghost</DisplayName>
+      <Description>+33 Resistance to Physical attacks</Description>
+      <Icon>Plain_Ability_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistBlunt</StrVal>
+        <Value>33</Value>
+		
+<Provides>+33 Blunt Resistance</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistCutting</StrVal>
+        <Value>33</Value>
+		<Provides>+33 Cutting Resistance</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_ResistPierce</StrVal>
+        <Value>33</Value>
+		<Provides>+33 Pierce Resistance</Provides>
+      </GameModifier>
+      <HideWhenUpgraded>1</HideWhenUpgraded>
+    </AbilityBonusOption>
+  </AbilityBonus>
+</Container>

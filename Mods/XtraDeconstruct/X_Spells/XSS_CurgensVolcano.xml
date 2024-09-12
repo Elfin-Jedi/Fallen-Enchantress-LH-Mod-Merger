@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<Spells>
+	<SpellDef InternalName="Spell_X_CurgensVolcano">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[S] Curgen's Volcano (City)</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Executor</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_XM_CanCastR</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_XM_CanCastRU</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_XM_CanCastS</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_PrimitiveRoads</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Blood_X_Krax_T</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>RoadBuilding</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>1200</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Raises a volcano which destroys everything on the land it targets.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] CURGEN'S VOLCANO (CITY)
+		::: Raises a volcano which destroys everything on the land it targets.
+		
+		DOMAIN
+		::: Strategic
+		::: Enemy
+		::: City
+		
+		EFFECT
+		::: Destroys Objects
+		::: Raises a Volcano
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		::: ::: Arcane Bulwark Immunity is effective
+		::: ::: Sacred City Immunity is Effective
+		::: ::: Tower of Dominion Immunity is effective
+		::: ::: Tower of the Magi Immunity is effective
+		
+		INTERVAL
+		::: Permanent
+		
+		OTHER
+		::: 5x5 Area (Centered on a city)
+		::: AIOnly
+		
+		SOURCE
+		::: Tech
+		::: ::: Third Book of the Magi</Description>
+		<SpellBookSortCategory>Z</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Z</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>EnemyCity</SpellTargetType>
+		<CasterMustBeSov>1</CasterMustBeSov>
+		<CastTime>2</CastTime>
+		<Radius>2</Radius>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>DestroyObjects</Attribute>
+		</GameModifier>
+		<Cooldown>20</Cooldown>
+		<ValidTerrainCategory>City</ValidTerrainCategory>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>199</AIPriority><!--175-->
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_CurgensVolcano.png</IconFG>
+		<CameraShakeDuration>4.25</CameraShakeDuration>
+		<CameraShakeStrength>0.25</CameraShakeStrength>
+		<HitSoundFX>Spell_Volcano_01</HitSoundFX>
+		<SoundMinDist>1000</SoundMinDist>
+		<SoundMaxDist>10000</SoundMaxDist>
+		<TerrainStamp>valcano</TerrainStamp>
+		<StampMorphTime>5</StampMorphTime>
+		<WorldLightOverrideTime>5</WorldLightOverrideTime>
+		<WorldLightOverrideAmbiant>70,70,70</WorldLightOverrideAmbiant>
+		<WorldLightOverrideDiffuse>80,80,80</WorldLightOverrideDiffuse>
+		<WorldLightOverrideRim0>60,60,60</WorldLightOverrideRim0>
+		<WorldLightOverrideRim1>60,60,60</WorldLightOverrideRim1>
+		<SpellDefEffect>
+			<EffectName>LavaEruption1_New</EffectName>
+			<LocalPosition>0,150,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>1</EffectDelay>
+			<SnapToTerrain>0</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+</Spells>

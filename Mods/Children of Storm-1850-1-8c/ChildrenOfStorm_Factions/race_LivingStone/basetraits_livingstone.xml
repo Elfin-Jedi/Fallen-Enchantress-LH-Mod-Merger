@@ -1,0 +1,592 @@
+<?xml version="1.0"?>
+<Container>
+
+	<AbilityBonus InternalName="DefensiveAbilityLivingStone">
+		<AbilityBonusOption InternalName="DefensiveLivingStone">
+			<IMPINC>Strength</IMPINC>
+			<DisplayName>Close to Home</DisplayName>
+			<Description>All units stationed in cities have their enchantment mana maintenance reduced by 10% per city level, and gain 10% more experience per city level</Description>
+			<Icon>Ability_Defensive_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Stationed_UnitStat_EnchantmentMaintenanceMultiplier</StrVal>
+				<Value>-10</Value>
+				<Provides>All units stationed in cities have their enchantment mana maintenance reduced by 10% per city level, and gain 10% more experience per city level</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Stationed_UnitStat_ExpBonus</StrVal>
+				<Provides>.</Provides>
+				<Value>10</Value>
+			</GameModifier>
+			<Cost>1</Cost>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="InorganicSustenance">
+		<AbilityBonusOption InternalName="InorganicSustenance">
+			<IMPINC>Strength</IMPINC>
+			<DisplayName>Inorganic Sustenance</DisplayName>
+			<Description>All cities have their Grains reduced by -2. For each Material in a city it gains +0.5 Grains.</Description>
+			<Icon>Action_LaySiege.png</Icon>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Additive_TileYieldGrain</StrVal>
+				<Value>-2</Value>
+				<Provides>All cities have their Grains reduced by -2.</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Additive_FoodPerMaterials</StrVal>
+				<Provides>For each Material in a city it gains +0.5 Grains.</Provides>
+				<Value>0.5</Value>
+			</GameModifier>
+			<Cost>1</Cost>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="LivingStone_Fireworship">
+		<AbilityBonusOption InternalName="LivingStone_Fireworship">
+			<IMPINC>Strength</IMPINC>
+			<DisplayName>Fireworship</DisplayName>
+			<Description>Living Stone build special improvements on Fire Shards (they raze all others that they conquer). The Living Stone build Stone-Fire improvements that provide a faction-wide bonus to Fire attack in addition to its normal benefits. Altars provide +5% Fire attack to all controlled units, Shrines give +10% and Temples give +15%. Direct Fire attack is found on weapons such as Burning Axe, and spells like Burning Blade, and the Living Stone Bloodline. It does not increase damage from spells such as Fireball, Burning Hands or Flame Dart.</Description>
+			<Icon>Icon_Fire.png</Icon>
+			<Cost>1</Cost>
+			<GameModifier>
+				<Provides>Living Stone build special improvements on Fire Shards (they raze all others that they conquer). The Living Stone build Stone-Fire improvements that provide a faction-wide bonus to Fire attack in addition to its normal benefits. Altars provide +5% Fire attack to all controlled units, Shrines give +10% and Temples give +15%. Direct Fire attack is found on weapons such as Burning Axe, and spells like Burning Blade, and the Living Stone Bloodline. It does not increase damage from spells such as Fireball, Burning Hands or Flame Dart.</Provides>
+			</GameModifier>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<ImprovementType InternalName="FireShrine">
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>LivingStone_Fireworship</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+	</ImprovementType>
+	<ImprovementType InternalName="FireAltar">
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>LivingStone_Fireworship</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+	</ImprovementType>
+	<ImprovementType InternalName="FireTemple">
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>LivingStone_Fireworship</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+	</ImprovementType>
+	<ImprovementType InternalName="FireAltar_LivingStone">
+		<DisplayName>Stone-Fire Altar</DisplayName>
+		<Description>Stone-Fire Altars amplify Fire spells and provide 1 Mana per turn. They also boost Fire attack by 5% faction-wide.</Description>
+		<SpecialBuildingType>Shard</SpecialBuildingType>
+		<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+		<RequiresCity>0</RequiresCity>
+		<RequiresResource>1</RequiresResource>
+		<SupportedResourceType>FireShard</SupportedResourceType>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<UpgradesToImprovement>FireShrine_LivingStone</UpgradesToImprovement>
+		<UpgradeTier>1</UpgradeTier>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>LivingStone_Fireworship</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<LaborToBuild>80</LaborToBuild>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Mana</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Mana</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>FireMana</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Fire Power</Provides>
+			<UpgradeComparisonID>2</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_UnitStat_Attack_Fire</StrVal>
+			<Value>5</Value>
+			<UpgradeComparisonID>3</UpgradeComparisonID>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+			<AITag>Shards</AITag>
+		</AIData>
+		<ArtDef>Art_FireAltar</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="FireShrine_LivingStone">
+		<DisplayName>Stone-Fire Shrine</DisplayName>
+		<Description>Stone-Fire Shrines amplify Fire spells and provide 2 Mana per turn. They also boost Fire attack by 10% faction-wide.</Description>
+		<SpecialBuildingType>Shard</SpecialBuildingType>
+		<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+		<RequiresCity>0</RequiresCity>
+		<RequiresResource>1</RequiresResource>
+		<SupportedResourceType>FireShard</SupportedResourceType>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<UpgradesToImprovement>FireTemple_LivingStone</UpgradesToImprovement>
+		<UpgradeTier>2</UpgradeTier>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>LivingStone_Fireworship</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Shard_Harvesting</Attribute>
+		</Prereq>
+		<LaborToBuild>105</LaborToBuild>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Mana</Attribute>
+			<Value>2</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+2 Mana</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>FireMana</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Fire Power</Provides>
+			<UpgradeComparisonID>2</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_UnitStat_Attack_Fire</StrVal>
+			<Value>10</Value>
+			<UpgradeComparisonID>3</UpgradeComparisonID>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+			<AITag>Shards</AITag>
+		</AIData>
+		<ArtDef>Art_FireShrine</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="FireTemple_LivingStone">
+		<DisplayName>Stone-Fire Temple</DisplayName>
+		<Description>Stone-Fire Temples amplify Fire spells and provide 3 Mana per turn. They also boost Fire attack by 15% faction-wide.</Description>
+		<SpecialBuildingType>Shard</SpecialBuildingType>
+		<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+		<RequiresCity>0</RequiresCity>
+		<RequiresResource>1</RequiresResource>
+		<SupportedResourceType>FireShard</SupportedResourceType>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<UpgradeTier>3</UpgradeTier>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>LivingStone_Fireworship</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Immortal_Codex</Attribute>
+		</Prereq>
+		<LaborToBuild>232</LaborToBuild>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Mana</Attribute>
+			<Value>3</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+3 Mana</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>FireMana</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Fire Power</Provides>
+			<UpgradeComparisonID>2</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_UnitStat_Attack_Fire</StrVal>
+			<Value>15</Value>
+			<UpgradeComparisonID>3</UpgradeComparisonID>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+			<AITag>Shards</AITag>
+		</AIData>
+		<ArtDef>Art_FireTemple</ArtDef>
+	</ImprovementType>
+	<!--<AbilityBonus InternalName="LivingStoneEmpireAbility2">
+    <AbilityBonusOption InternalName="LivingStoneEmpireStrategic">
+      <DisplayName>Shifting Maze</DisplayName>
+      <Description>May build a single Shifting Maze improvement per game. 
+
+		    The Maze is a defensive structure that teleports away one random unit from any attacking army, as they get lost on the way.</Description>
+      <Icon>Veteran_Company.png</Icon>
+      <GameModifier>
+        <ModType>Resource</ModType>
+        <Attribute>ShiftingMaze</Attribute>
+        <Value>1</Value>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Player</ModType>
+        <Attribute>UnlockTech</Attribute>
+        <StrVal>ShiftingMaze_tech</StrVal>
+      </GameModifier>
+      <Cost>1</Cost>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>-->
+	<AbilityBonus InternalName="FireBornAbility">
+		<AbilityBonusType>Unit_Design</AbilityBonusType>
+		<AbilityBonusOption InternalName="FireBornAbility">
+			<Type>Faction Trait</Type>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Prereq>
+				<Type>Race</Type>
+				<Attribute>Race_Type_LivingStone</Attribute>
+			</Prereq>
+			<ProductionRequirement>
+				<Type>Resource</Type>
+				<Attribute>RefinedCrystal</Attribute>
+				<Value>1</Value>
+			</ProductionRequirement>
+			<DisplayName>Heart of Flame</DisplayName>
+			<Description>+30 Fire resistance. Stacks with similar bonuses. Costs 1 Crystal per unit member.</Description>
+			<Icon>Ability_ResistFire_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ResistFire</StrVal>
+				<Provides>+30 Fire resistance. Stacks with similar bonuses. Costs 1 Crystal per unit member.</Provides>
+				<Value>30</Value>
+			</GameModifier>
+			<AdditionalTrainingTurns>6</AdditionalTrainingTurns>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="FullMetalAbility">
+		<AbilityBonusType>Unit_Design</AbilityBonusType>
+		<AbilityBonusOption InternalName="FullMetalAbility">
+			<Type>Faction Trait</Type>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Prereq>
+				<Type>Race</Type>
+				<Attribute>Race_Type_LivingStone</Attribute>
+			</Prereq>
+			<ProductionRequirement>
+				<Type>Resource</Type>
+				<Attribute>RefinedCrystal</Attribute>
+				<Value>1</Value>
+			</ProductionRequirement>
+			<ProductionRequirement>
+				<Type>Resource</Type>
+				<Attribute>Metal</Attribute>
+				<Value>2</Value>
+			</ProductionRequirement>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>MeleeDefenseAppliesSpell</Attribute>
+				<StrVal>EF_LivingMetal</StrVal>
+				<Provides>Each time this unit is struck in melee combat, it gains +25% to defense until it ends its next round. This bonus stacks.
+
+The trait costs 1 Crystal and 2 Metal per member.</Provides>
+			</GameModifier>
+			<DisplayName>Living Metal</DisplayName>
+			<Description>Each time this unit is struck in melee combat, it gains +25% to defense until it ends its next round. This bonus stacks.
+
+The trait costs 1 Crystal and 2 Metal per member.</Description>
+			<Icon>Ability_Rage_Icon.png</Icon>
+			<AdditionalTrainingTurns>8</AdditionalTrainingTurns>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<!--  <AbilityBonus InternalName="HalfbreedAbility">
+    <AbilityBonusType>Unit_Design</AbilityBonusType>
+    <AbilityBonusOption InternalName="HalfbreedAbility">
+      <Type>Faction Trait</Type>
+      <IsCombatAbility>1</IsCombatAbility>
+      <Prereq>
+        <Type>Race</Type>
+        <Attribute>Race_Type_LivingStone</Attribute>
+      </Prereq>
+      <DisplayName>Halfbreed</DisplayName>
+      <Description>-15% HitPoints, +15% Initiative</Description>
+      <Icon>Ability_Cook_Icon.png</Icon>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_HitPoints</StrVal>
+        <Multiplier>0.85</Multiplier>
+        <Provides>-15% HitPoints, +15% Initiative</Provides>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_CombatSpeed</StrVal>
+        <Provides>.</Provides>
+        <Multiplier>1.15</Multiplier>
+      </GameModifier>
+      <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>AdjustUnitStat</Attribute>
+        <StrVal>UnitStat_IsHalfBreed</StrVal>
+        <Value>1</Value>
+        <Provides>.</Provides>
+      </GameModifier>
+      <AdditionalTrainingTurns>6</AdditionalTrainingTurns>
+      <HideWhenUpgraded>0</HideWhenUpgraded>
+      <AIData AIPersonality="AI_General">
+        <AIPriority>5</AIPriority>
+      </AIData>
+    </AbilityBonusOption>
+  </AbilityBonus>-->
+	<!--    <AbilityBonus InternalName="HillFighterAbility">
+        <AbilityBonusType>Unit_Design</AbilityBonusType>
+        <AbilityBonusOption InternalName="HillFighterAbility">
+        <Prereq>
+            <Type>Race</Type>
+            <Attribute>Race_Type_LivingStone</Attribute>
+    </Prereq>
+
+            <DisplayName>Hill Defender</DisplayName>
+            <Description>When this unit is occupying a Hills terrain, it gains +5 to physical defenses, +4 ranged dodge and +2 dodge against anyone who does not also have bonuses in Hills terrain.</Description>
+            <Icon>Ability_Enduring_Icon.png</Icon>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_IsInHills</StrVal>
+                <Multiplier>2</Multiplier>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Dodge</StrVal>
+                <StrVal2>UnitStat_IsInHills</StrVal2>
+                <Value>2</Value>
+                <vsLower>1</vsLower>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_DodgeAgainstRanged</StrVal>
+                <StrVal2>UnitStat_IsInHills</StrVal2>
+                <Value>2</Value>
+                <vsLower>1</vsLower>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Defense_Blunt</StrVal>
+                <StrVal2>UnitStat_IsInHills</StrVal2>
+                <Value>2</Value>
+                <vsLower>1</vsLower>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Defense_Cutting</StrVal>
+                <StrVal2>UnitStat_IsInHills</StrVal2>
+                <Value>2</Value>
+                <vsLower>1</vsLower>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Defense_Pierce</StrVal>
+                <StrVal2>UnitStat_IsInHills</StrVal2>
+                <Value>2</Value>
+                <vsLower>1</vsLower>
+            </GameModifier>
+            <AdditionalTrainingTurns>25</AdditionalTrainingTurns>
+            <HideWhenUpgraded>0</HideWhenUpgraded>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>-->
+	<AbilityBonus InternalName="UmberdrothBondAbility">
+		<AbilityBonusType>Unit_Design</AbilityBonusType>
+		<AbilityBonusOption InternalName="UmberdrothBondAbilityAbility">
+			<Type>Faction Trait</Type>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Prereq>
+				<Type>Race</Type>
+				<Attribute>Race_Type_LivingStone</Attribute>
+			</Prereq>
+			<DisplayName>Umberdroth Bond</DisplayName>
+			<Description>As long as this unit is riding an Umberdroth mount, this unit will ignore 20% of all physical damage. The bonus will not work when fighting any unit riding an Umberdroth.</Description>
+			<Icon>EF_Umderdrothmounticon.png</Icon>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ResistBlunt</StrVal>
+				<StrVal2>UnitStat_EquippedUmberDroth</StrVal2>
+				<Value>20</Value>
+				<Provides>As long as this unit is riding an Umberdroth mount, this unit will ignore 20% of all physical damage. The bonus will not work when fighting any unit riding an Umberdroth.</Provides>
+				<vsLower>1</vsLower>
+			</GameModifier>
+			<AdditionalTrainingTurns>10</AdditionalTrainingTurns>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>0</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<!--    <TechDef InternalName="ShiftingMaze_tech">
+        <DisplayName>Shifting Maze</DisplayName>
+        <Description>You should never see this text.</Description>
+        <Image>Tech_Civics.png</Image>
+        <Color>60,138,25</Color>
+        <HotColor>146,255,49</HotColor>
+        <Cost>50</Cost>
+        <Rarity>100</Rarity>
+        <Category>Hidden</Category>
+        <Infinite>0</Infinite>
+        <AppearanceChance>100</AppearanceChance>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>50</AIPriority>
+            <AITradeToGetValue>75</AITradeToGetValue>
+            <AITradeOutValue>90</AITradeOutValue>
+            <AIAtWarMultiplier>2</AIAtWarMultiplier>
+            <AIEarlyBuildUpMultiplier>2</AIEarlyBuildUpMultiplier>
+        </AIData>
+    </TechDef>
+    <TechDef InternalName="LivingStone_Tech">
+        <DisplayName>Living Stone tech</DisplayName>
+        <Description>You should never see this text.</Description>
+        <Image>Tech_Civics.png</Image>
+        <Color>60,138,25</Color>
+        <HotColor>146,255,49</HotColor>
+        <Cost>50</Cost>
+        <Rarity>100</Rarity>
+        <Category>Hidden</Category>
+        <Infinite>0</Infinite>
+        <AppearanceChance>100</AppearanceChance>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>50</AIPriority>
+            <AITradeToGetValue>75</AITradeToGetValue>
+            <AITradeOutValue>90</AITradeOutValue>
+            <AIAtWarMultiplier>2</AIAtWarMultiplier>
+            <AIEarlyBuildUpMultiplier>2</AIEarlyBuildUpMultiplier>
+        </AIData>
+</TechDef>-->
+	<AbilityBonus InternalName="ExcellentMiners">
+		<AbilityBonusOption InternalName="ExcellentMiners">
+			<IMPINC>Strength</IMPINC>
+			<DisplayName>Excellent Miners</DisplayName>
+			<Description>Faction produces +20% Metal from all sources</Description>
+			<Icon>FactionAbility_MetalMining.png</Icon>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Metal</StrVal>
+				<Value>20</Value>
+				<Provides>Faction produces +20% Metal from all sources</Provides>
+			</GameModifier>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="SlowMinds">
+		<AbilityBonusOption InternalName="SlowMinds">
+			<IMPINC>Weakness</IMPINC>
+			<Cost>-1</Cost>
+			<DisplayName>New Culture</DisplayName>
+			<Description>Living Stone were created at the Cataclysm and so have no past knowledge to rediscover. 
+
+Their research is 10% slower</Description>
+			<Icon>Ability_Uneducated_Icon.png</Icon>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Research</StrVal>
+				<Value>-10</Value>
+				<Provides>Living Stone were created at the Cataclysm and so have no past knowledge to rediscover. 
+
+Their research is 10% slower</Provides>
+			</GameModifier>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+
+	<ImprovementType InternalName="FireAltar_LivingStone">
+		<PreferredTerrain>Category:Forest</PreferredTerrain>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithFireShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="FireShrine_LivingStone">
+		<PreferredTerrain>Category:Forest</PreferredTerrain>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithFireShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="FireTemple_LivingStone">
+		<PreferredTerrain>Category:Forest</PreferredTerrain>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithFireShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+
+
+
+</Container>

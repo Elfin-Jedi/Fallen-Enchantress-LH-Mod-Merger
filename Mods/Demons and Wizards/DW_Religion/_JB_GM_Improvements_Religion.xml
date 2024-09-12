@@ -1,0 +1,5304 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ImprovementTypes>
+
+	<!-- Modify default improvements (so they produce Faith), and take longer to build  -->
+    <ImprovementType InternalName="Cleric">
+		<LaborToBuild>180</LaborToBuild>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>JB_Faith</Attribute>
+            <Value>1</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>+1 Faith</Provides>
+            <UpgradeComparisonID>9</UpgradeComparisonID>
+        </GameModifier>
+    </ImprovementType>
+    <ImprovementType InternalName="Shrine">
+        <UpgradesToImprovement>JB_TempleOfHarmony</UpgradesToImprovement>
+        <UpgradesToImprovement>JB_TempleOfStrife</UpgradesToImprovement>
+        <GameModifier>
+            <ModType>ConstructionResourceCost</ModType>
+            <Attribute>JB_Faith</Attribute>
+            <Value>-30</Value>
+        </GameModifier>	
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>JB_Faith</Attribute>
+            <Value>2</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>+2 Faith</Provides>
+            <UpgradeComparisonID>9</UpgradeComparisonID>
+        </GameModifier>
+    </ImprovementType>
+    <ImprovementType InternalName="TempleOfEssence">
+        <GameModifier>
+            <ModType>ConstructionResourceCost</ModType>
+            <Attribute>JB_Faith</Attribute>
+            <Value>-75</Value>
+        </GameModifier>	
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>JB_Faith</Attribute>
+            <Value>3</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>+3 Faith</Provides>
+            <UpgradeComparisonID>9</UpgradeComparisonID>
+        </GameModifier>
+    </ImprovementType>
+    <ImprovementType InternalName="SacrificialAltar">
+        <GameModifier>
+            <ModType>ConstructionResourceCost</ModType>
+            <Attribute>JB_Faith</Attribute>
+            <Value>-75</Value>
+        </GameModifier>	
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>JB_Faith</Attribute>
+            <Value>3</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>+3 Faith</Provides>
+            <UpgradeComparisonID>9</UpgradeComparisonID>
+        </GameModifier>
+    </ImprovementType>
+	<!-- New Temples -->
+    <ImprovementType InternalName="JB_TempleOfHarmony">
+        <DisplayName>Temple of Harmony</DisplayName>
+        <Description>Temples of Harmony increase growth in the city and reduce Unrest in all cities.</Description>
+        <AllowedPerFaction>1</AllowedPerFaction>
+        <RequiresCity>1</RequiresCity>
+        <BarredTerrain>River</BarredTerrain>
+        <BarredTerrain>SwampTerrain</BarredTerrain>
+        <PreferredTerrain>City</PreferredTerrain>
+        <PreferredTerrain>Category:Land</PreferredTerrain>
+        <PreferredTerrain>Forest</PreferredTerrain>
+        <UpgradeTier>3</UpgradeTier>
+        <Prereq>
+            <Type>Allegiance</Type>
+            <Attribute>Kingdom</Attribute>
+        </Prereq>
+        <Prereq>
+            <Type>Resource</Type>
+            <Attribute>TileYieldEssence</Attribute>
+        </Prereq>
+        <Prereq>
+            <Type>Tech</Type>
+            <Attribute>Arcane_Mastery</Attribute>
+        </Prereq>
+        <LaborToBuild>790</LaborToBuild>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Unrest</Attribute>
+            <Value>-10</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>-10% Unrest</Provides>
+            <UpgradeComparisonID>1</UpgradeComparisonID>
+            <UpgradeComparisonText>Unrest</UpgradeComparisonText>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Fame</Attribute>
+            <Value>8</Value>
+            <Provides>+8 Fame</Provides>
+            <UpgradeComparisonID>2</UpgradeComparisonID>
+            <UpgradeComparisonText>Fame</UpgradeComparisonText>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Player</ModType>
+            <Attribute>AbilityBonus</Attribute>
+            <StrVal>A_Additive_Unrest</StrVal>
+            <Value>-5</Value>
+            <Provides>-5% Unrest in all your cities</Provides>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Prestige</Attribute>
+            <Value>1</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>+1 Growth</Provides>
+        </GameModifier>
+        <GameModifier>
+            <ModType>ConstructionResourceCost</ModType>
+            <Attribute>JB_Faith</Attribute>
+            <Value>-100</Value>
+        </GameModifier>	
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>JB_Faith</Attribute>
+            <Value>3</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>+3 Faith</Provides>
+            <UpgradeComparisonID>9</UpgradeComparisonID>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>10</AIPriority>
+            <AITag>Economy</AITag>
+        </AIData>
+        <ArtDef>Art_TempleOfEssence</ArtDef>
+    </ImprovementType>	
+    <ImprovementType InternalName="JB_TempleOfStrife">
+        <DisplayName>Temple of Strife</DisplayName>
+        <Description>Temples of Strife increase Unrest in all cities, but improve the prowess of faction units</Description>
+        <AllowedPerFaction>1</AllowedPerFaction>
+        <RequiresCity>1</RequiresCity>
+        <BarredTerrain>River</BarredTerrain>
+        <BarredTerrain>SwampTerrain</BarredTerrain>
+        <PreferredTerrain>City</PreferredTerrain>
+        <PreferredTerrain>Category:Land</PreferredTerrain>
+        <PreferredTerrain>Forest</PreferredTerrain>
+        <UpgradeTier>3</UpgradeTier>
+        <Prereq>
+            <Type>Allegiance</Type>
+            <Attribute>Empire</Attribute>
+        </Prereq>
+        <Prereq>
+            <Type>Resource</Type>
+            <Attribute>TileYieldEssence</Attribute>
+        </Prereq>
+        <Prereq>
+            <Type>Tech</Type>
+            <Attribute>Arcane_Mastery</Attribute>
+        </Prereq>
+        <LaborToBuild>790</LaborToBuild>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Fame</Attribute>
+            <Value>8</Value>
+            <Provides>+8 Fame</Provides>
+            <UpgradeComparisonID>2</UpgradeComparisonID>
+            <UpgradeComparisonText>Fame</UpgradeComparisonText>
+        </GameModifier>
+        <GameModifier>
+            <ModType>ConstructionResourceCost</ModType>
+            <Attribute>JB_Faith</Attribute>
+            <Value>-100</Value>
+        </GameModifier>	
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>JB_Faith</Attribute>
+            <Value>3</Value>
+            <PerTurn>1</PerTurn>
+            <Provides>+3 Faith</Provides>
+            <UpgradeComparisonID>9</UpgradeComparisonID>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Player</ModType>
+            <Attribute>AbilityBonus</Attribute>
+            <StrVal>A_Additive_Unrest</StrVal>
+            <Value>5</Value>
+            <Provides>+5% to Unrest for your faction</Provides>
+        </GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_TrainedUnitBonusLevels</StrVal>
+			<Value>1</Value>
+			<Provides>+1 Level for all faction Trained Units</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_UnitStat_Attack_Pierce</StrVal>
+			<Value>5</Value>
+			<Provides>All faction units receieve +5% physical attack bonus</Provides>
+		</GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+            <AITag>CommandPost</AITag>
+        </AIData>
+        <ArtDef>Art_TempleOfEssence</ArtDef>
+    </ImprovementType>	
+	<!-- Sacred Shrine wild improvement (requires a Sacred Site)  -->
+    <ImprovementType InternalName="JB_SacredShrine">
+        <DisplayName>Sacred Shrine</DisplayName>
+        <Description>A Sacred Shrine increases the rate that your faction produces Faith.</Description>
+        <IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+        <RequiresResource>1</RequiresResource>
+        <SupportedResourceType>JB_SacredSite</SupportedResourceType>
+        <PreferredTerrain>Category:Land</PreferredTerrain>
+        <LaborToBuild>80</LaborToBuild>
+        <GameModifier>
+            <ModType>Player</ModType>
+            <Attribute>AbilityBonus</Attribute>
+            <StrVal>A_JB_Faith</StrVal>
+            <Value>5</Value>
+            <Provides>+5% Faith in all your cities</Provides>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+            <AITag>Economy</AITag>
+        </AIData>
+        <ArtDef>JB_Art_SacredShrine</ArtDef>
+    </ImprovementType>
+	
+	<Container_ReligionOldGods>
+		<!-- Note: Wall changes are cosmetic only, 
+			block them from other faction traits that modify walls -->
+		<ImprovementType InternalName="HedgeWall">				
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionOldGods</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="JB_HedgeWall_Town">				
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionOldGods</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>	
+		<ImprovementType InternalName="Fort">				
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionOldGods</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="JB_HedgeWall_ReligionOldGods">
+			<DisplayName>Wooden Wall</DisplayName>
+			<Description>Wooden Walls improve a city's defenses by providing them with additional units and giving an Initiative bonus to all City Defenders.</Description>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<RequiresCityImprovement>1</RequiresCityImprovement>
+			<RequiredImprovement>Fortress</RequiredImprovement>
+			<UpgradesToImprovement>JB_Fort_ReligionOldGods</UpgradesToImprovement>
+			<UpgradeTier>1</UpgradeTier>
+			<HideInHiergamenon>1</HideInHiergamenon>
+			<Prereq>
+				<Type>Allegiance</Type>
+				<Attribute>Kingdom</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionOldGods</Attribute>
+				<Target>Player</Target>
+			</Prereq>		
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_FirestoneFortress</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_Frostborn</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_FortifiedConclaves</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_FortifiedTowns</Attribute>
+				<Target>Player</Target>
+			</Prereq>	
+			<LaborToBuild>224</LaborToBuild>
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>AdjustDefendingUnit</Attribute>
+				<StrVal>UnitStat_CombatSpeed</StrVal>
+				<Value>2</Value>
+				<Provides>+2 Initiative for Defending Units</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Defending Unit Initiative</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>UpgradeCityWalls</Attribute>
+				<StrVal>JB_CityWalls_Picket_Guardian</StrVal>
+			</GameModifier>
+			<GameModifier>
+				<ModType>CityDefenseSummon</ModType>
+				<Attribute>SummonUnitByClass</Attribute>
+				<Value>2</Value>
+				<Multiplier>3</Multiplier>
+				<Provides>+2 City Defender Groups</Provides>
+				<UnitClass>CityDefender</UnitClass>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+				<AITag>Defensive</AITag>
+				<AIAtWarMultiplier>3</AIAtWarMultiplier>
+			</AIData>
+			<ArtDef>HedgeWall_ArtDef</ArtDef>
+		</ImprovementType>	
+		<ImprovementType InternalName="JB_HedgeWall_Town_ReligionOldGods">
+			<DisplayName>Wooden Wall</DisplayName>
+			<Description>Wooden Walls improve a city's defenses by providing them with additional units and giving an Initiative bonus to all City Defenders.</Description>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<RequiresCityImprovement>1</RequiresCityImprovement>
+			<RequiredImprovement>TradeGuild</RequiredImprovement>
+			<UpgradeTier>1</UpgradeTier>		
+			<HideInHiergamenon>1</HideInHiergamenon>
+			<Prereq>
+				<Type>Allegiance</Type>
+				<Attribute>Kingdom</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionOldGods</Attribute>
+				<Target>Player</Target>
+			</Prereq>		
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_FirestoneFortress</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_Frostborn</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_FortifiedConclaves</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_FortifiedTowns</Attribute>
+				<Target>Player</Target>
+			</Prereq>	
+			<LaborToBuild>224</LaborToBuild>
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>AdjustDefendingUnit</Attribute>
+				<StrVal>UnitStat_CombatSpeed</StrVal>
+				<Value>2</Value>
+				<Provides>+2 Initiative for Defending Units</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Defending Unit Initiative</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>UpgradeCityWalls</Attribute>
+				<StrVal>JB_CityWalls_Picket_Guardian</StrVal>
+			</GameModifier>
+			<GameModifier>
+				<ModType>CityDefenseSummon</ModType>
+				<Attribute>SummonUnitByClass</Attribute>
+				<Value>2</Value>
+				<Multiplier>3</Multiplier>
+				<Provides>+2 City Defender Groups</Provides>
+				<UnitClass>CityDefender</UnitClass>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+				<AITag>Defensive</AITag>
+				<AIAtWarMultiplier>3</AIAtWarMultiplier>
+			</AIData>
+			<ArtDef>HedgeWall_ArtDef</ArtDef>
+		</ImprovementType>		
+		<ImprovementType InternalName="JB_Fort_ReligionOldGods">
+			<DisplayName>Fort</DisplayName>
+			<Description>Forts bolster a city's defenses by providing it with Archers and giving an Initiative bonus to City Defenders.</Description>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<RequiresCityImprovement>1</RequiresCityImprovement>
+			<RequiredImprovement>Fortress</RequiredImprovement>
+			<UpgradeTier>2</UpgradeTier>
+			<HideInHiergamenon>1</HideInHiergamenon>
+			<Prereq>
+				<Type>Allegiance</Type>
+				<Attribute>Kingdom</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionOldGods</Attribute>
+				<Target>Player</Target>
+			</Prereq>		
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_FirestoneFortress</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_Frostborn</Attribute>
+				<Target>Player</Target>
+			</Prereq>		
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_FortifiedConclaves</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_FortifiedTowns</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Construction</Attribute>
+			</Prereq>
+			<LaborToBuild>627</LaborToBuild>
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>AdjustDefendingUnit</Attribute>
+				<StrVal>UnitStat_CombatSpeed</StrVal>
+				<Value>3</Value>
+				<Provides>+3 Initiative for Defending Units</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Defending Unit Initiative</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>UpgradeCityWalls</Attribute>
+				<StrVal>JB_CityWalls_Advanced_Guardian</StrVal>
+			</GameModifier>
+			<GameModifier>
+				<ModType>CityDefenseSummon</ModType>
+				<Attribute>SummonUnitByClass</Attribute>
+				<Value>2</Value>
+				<Multiplier>3</Multiplier>
+				<Provides>+2 City Defender Groups</Provides>
+				<UnitClass>CityDefender</UnitClass>
+			</GameModifier>
+			<GameModifier>
+				<ModType>CityDefenseSummon</ModType>
+				<Attribute>SummonUnitByClass</Attribute>
+				<Value>1</Value>
+				<Multiplier>3</Multiplier>
+				<Provides>+1 City Archer Group</Provides>
+				<UnitClass>CityArcher</UnitClass>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+				<AITag>Defensive</AITag>
+			</AIData>
+			<ArtDef>Art_Castle</ArtDef>
+		</ImprovementType>
+		<!-- End cosmetic wall changes -->	
+		<ImprovementType InternalName="Cleric">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionOldGods</Attribute>
+				<Target>Player</Target>
+			</Prereq>		
+			<LaborToBuild>180</LaborToBuild>	
+		</ImprovementType>
+		<ImprovementType InternalName="Shrine">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionOldGods</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="TempleOfEssence">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionOldGods</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="SacrificialAltar">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionOldGods</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="JB_TempleOfHarmony">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionOldGods</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="JB_TempleOfStrife">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionOldGods</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="JB_Cleric_OldGods">
+			<DisplayName>Cleric</DisplayName>
+			<Description>Clerics provide healing and aid to the city's inhabitants.  They reduce unrest in the city and increase your Fame.</Description>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<UpgradesToImprovement>JB_Shrine_OldGods_Arvos</UpgradesToImprovement>
+			<UpgradesToImprovement>JB_Shrine_OldGods_Hadollon</UpgradesToImprovement>
+			<UpgradesToImprovement>JB_Shrine_OldGods_Lialdir</UpgradesToImprovement>
+			<UpgradeTier>1</UpgradeTier>
+			<HideInHiergamenon>1</HideInHiergamenon>
+			<Prereq>
+				<Type>Resource</Type>
+				<Attribute>TileYieldEssence</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionOldGods</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+			<LaborToBuild>180</LaborToBuild>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Unrest</Attribute>
+				<Value>-5</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>-5% Unrest</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Unrest</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>2</Value>
+				<Provides>+2 Fame</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+				<UpgradeComparisonText>Fame</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Faith</Provides>
+				<UpgradeComparisonID>9</UpgradeComparisonID>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>50</AIPriority>
+				<AITag>Workshop</AITag>
+				<AIEarlyBuildUpMultiplier>5</AIEarlyBuildUpMultiplier>	
+			</AIData>
+			<ArtDef>Art_Cleric</ArtDef>
+		</ImprovementType>
+		<ImprovementType InternalName="JB_Shrine_OldGods_Arvos">
+			<DisplayName>Shrine: Arvos</DisplayName>
+			<Description>The rituals of Shrines provide peace of mind for a city's citizens, reducing Unrest and improving your Fame.  Arvos brings harmony and protection to his people.</Description>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<UpgradesToImprovement>JB_Temple_OldGods_Arvos</UpgradesToImprovement>
+			<UpgradeTier>2</UpgradeTier>
+			<Prereq>
+				<Type>Resource</Type>
+				<Attribute>TileYieldEssence</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionOldGods</Attribute>
+				<Target>Player</Target>
+			</Prereq>	
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Rituals</Attribute>
+			</Prereq>
+			<LaborToBuild>268</LaborToBuild>
+			<GameModifier>
+				<ModType>ConstructionResourceCost</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>-30</Value>
+			</GameModifier>	
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Unrest</Attribute>
+				<Value>-10</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>-10% Unrest</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Unrest</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>4</Value>
+				<Provides>+4 Fame</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+				<UpgradeComparisonText>Fame</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>2</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+2 Faith</Provides>
+				<UpgradeComparisonID>9</UpgradeComparisonID>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Prestige</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Growth</Provides>
+				<UpgradeComparisonID>3</UpgradeComparisonID>
+			</GameModifier>     
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>AdjustDefendingUnit</Attribute>
+				<StrVal>UnitStat_HitPoints</StrVal>
+				<Value>2</Value>
+				<Provides>+2 Hit Points for Defending Units</Provides>
+				<UpgradeComparisonID>4</UpgradeComparisonID>
+				<UpgradeComparisonText>Defending Unit Hit Points</UpgradeComparisonText>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>30</AIPriority>
+				<AITag>Workshop</AITag>
+			</AIData>
+			<ArtDef>Art_Shrine</ArtDef>
+		</ImprovementType>
+		<ImprovementType InternalName="JB_Shrine_OldGods_Hadollon">
+			<DisplayName>Shrine: Hadollon</DisplayName>
+			<Description>The rituals of Shrines provide peace of mind for a city's citizens, reducing Unrest and improving your Fame.  Hadollon is the favoured god of laborers and warriors.</Description>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<UpgradesToImprovement>JB_Temple_OldGods_Hadollon</UpgradesToImprovement>
+			<UpgradeTier>2</UpgradeTier>
+			<Prereq>
+				<Type>Resource</Type>
+				<Attribute>TileYieldEssence</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionOldGods</Attribute>
+				<Target>Player</Target>
+			</Prereq>	
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Rituals</Attribute>
+			</Prereq>
+			<LaborToBuild>268</LaborToBuild>
+			<GameModifier>
+				<ModType>ConstructionResourceCost</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>-30</Value>
+			</GameModifier>	
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Unrest</Attribute>
+				<Value>-10</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>-10% Unrest</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Unrest</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>4</Value>
+				<Provides>+4 Fame</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+				<UpgradeComparisonText>Fame</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>2</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+2 Faith</Provides>
+				<UpgradeComparisonID>9</UpgradeComparisonID>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>ProductionPerMaterials</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Production per Material</Provides>
+				<UpgradeComparisonID>3</UpgradeComparisonID>
+				<UpgradeComparisonText>Production per Material</UpgradeComparisonText>
+			</GameModifier>		
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>AdjustDefendingUnit</Attribute>
+				<StrVal>UnitStat_Attack_Boost</StrVal>
+				<Value>2</Value>
+				<Provides>+2 Attack for Defending Units</Provides>
+				<UpgradeComparisonID>4</UpgradeComparisonID>
+				<UpgradeComparisonText>Defending Unit Attack</UpgradeComparisonText>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>30</AIPriority>
+				<AITag>Workshop</AITag>
+			</AIData>
+			<ArtDef>Art_Shrine</ArtDef>
+		</ImprovementType>
+		<ImprovementType InternalName="JB_Shrine_OldGods_Lialdir">
+			<DisplayName>Shrine: Lialdir</DisplayName>
+			<Description>The rituals of Shrines provide peace of mind for a city's citizens, reducing Unrest and improving your Fame.  Lialdir is the god of health and prosperity.</Description>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<UpgradesToImprovement>JB_Temple_OldGods_Lialdir</UpgradesToImprovement>
+			<UpgradeTier>2</UpgradeTier>
+			<Prereq>
+				<Type>Resource</Type>
+				<Attribute>TileYieldEssence</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionOldGods</Attribute>
+				<Target>Player</Target>
+			</Prereq>	
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Rituals</Attribute>
+			</Prereq>
+			<LaborToBuild>268</LaborToBuild>
+			<GameModifier>
+				<ModType>ConstructionResourceCost</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>-30</Value>
+			</GameModifier>	
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Unrest</Attribute>
+				<Value>-15</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>-15% Unrest</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Unrest</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>4</Value>
+				<Provides>+4 Fame</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+				<UpgradeComparisonText>Fame</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>2</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+2 Faith</Provides>
+				<UpgradeComparisonID>9</UpgradeComparisonID>
+			</GameModifier>
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>AdjustDefendingUnit</Attribute>
+				<StrVal>UnitStat_MagicResist</StrVal>
+				<Value>10</Value>
+				<Provides>+10 Spell Resistance for Defending Units</Provides>
+				<UpgradeComparisonID>3</UpgradeComparisonID>
+				<UpgradeComparisonText>Defending Unit Spell Resistance</UpgradeComparisonText>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>30</AIPriority>
+				<AITag>Workshop</AITag>
+			</AIData>
+			<ArtDef>Art_Shrine</ArtDef>
+		</ImprovementType>	
+		<ImprovementType InternalName="JB_Temple_OldGods_Arvos">
+			<DisplayName>Temple: Arvos</DisplayName>
+			<Description>Temples reduce Unrest and produce Mana based on the Essence of the city they are constructed in.  Arvos brings harmony and protection to his people.</Description>
+			<AllowedPerFaction>1</AllowedPerFaction>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<UpgradeTier>3</UpgradeTier>
+			<Prereq>
+				<Type>Resource</Type>
+				<Attribute>TileYieldEssence</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionOldGods</Attribute>
+				<Target>Player</Target>
+			</Prereq>	
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Arcane_Mastery</Attribute>
+			</Prereq>
+			<LaborToBuild>627</LaborToBuild>
+			<GameModifier>
+				<ModType>ConstructionResourceCost</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>-75</Value>
+			</GameModifier>	
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Unrest</Attribute>
+				<Value>-15</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>-15% Unrest</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Unrest</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>8</Value>
+				<Provides>+8 Fame</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+				<UpgradeComparisonText>Fame</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Prestige</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Growth</Provides>
+				<UpgradeComparisonID>3</UpgradeComparisonID>
+			</GameModifier>  
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>3</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+3 Faith</Provides>
+				<UpgradeComparisonID>9</UpgradeComparisonID>
+			</GameModifier>      
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>AdjustDefendingUnit</Attribute>
+				<StrVal>UnitStat_HitPoints</StrVal>
+				<Value>2</Value>
+				<Provides>+2 Hit Points for Defending Units</Provides>
+				<UpgradeComparisonID>4</UpgradeComparisonID>
+				<UpgradeComparisonText>Defending Unit Hit Points</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>CityTrainingBonus</ModType>
+				<Attribute>TrainingBonus_ApplyUnitModifier_Add</Attribute>
+				<StrVal>UnitStat_HitPoints</StrVal>
+				<Value>2</Value>
+				<Provides>+2 Hit Points to Trained Units</Provides>
+				<UpgradeComparisonID>5</UpgradeComparisonID>
+				<UpgradeComparisonText>Trained Unit Hit Points</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Gold</Attribute>
+				<Value>2</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+2 Gildar per Season</Provides>
+				<UpgradeComparisonID>6</UpgradeComparisonID>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>50</AIPriority>
+				<AITag>Workshop</AITag>
+			</AIData>
+			<ArtDef>Art_TempleOfEssence</ArtDef>
+		</ImprovementType>
+		<ImprovementType InternalName="JB_Temple_OldGods_Hadollon">
+			<DisplayName>Temple: Hadollon</DisplayName>
+			<Description>Temples reduce Unrest and produce Mana based on the Essence of the city they are constructed in.  Hadollon is the favoured god of laborers and warriors.</Description>
+			<AllowedPerFaction>1</AllowedPerFaction>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<UpgradeTier>3</UpgradeTier>
+			<Prereq>
+				<Type>Resource</Type>
+				<Attribute>TileYieldEssence</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionOldGods</Attribute>
+				<Target>Player</Target>
+			</Prereq>	
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Arcane_Mastery</Attribute>
+			</Prereq>
+			<LaborToBuild>627</LaborToBuild>
+			<GameModifier>
+				<ModType>ConstructionResourceCost</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>-75</Value>
+			</GameModifier>	
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Unrest</Attribute>
+				<Value>-15</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>-15% Unrest</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Unrest</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>8</Value>
+				<Provides>+8 Fame</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+				<UpgradeComparisonText>Fame</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>3</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+3 Faith</Provides>
+				<UpgradeComparisonID>9</UpgradeComparisonID>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>ProductionPerMaterials</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Production per Material</Provides>
+				<UpgradeComparisonID>3</UpgradeComparisonID>
+				<UpgradeComparisonText>Production per Material</UpgradeComparisonText>
+			</GameModifier>		
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>AdjustDefendingUnit</Attribute>
+				<StrVal>UnitStat_Attack_Boost</StrVal>
+				<Value>2</Value>
+				<Provides>+2 Attack for Defending Units</Provides>
+				<UpgradeComparisonID>4</UpgradeComparisonID>
+				<UpgradeComparisonText>Defending Unit Attack</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>CityTrainingBonus</ModType>
+				<Attribute>TrainingBonus_ApplyUnitModifier_Add</Attribute>
+				<StrVal>UnitStat_Attack_Boost</StrVal>
+				<Value>2</Value>
+				<Provides>+2 Attack for Trained Units</Provides>
+				<UpgradeComparisonID>6</UpgradeComparisonID>
+				<UpgradeComparisonText>Trained Unit Attack</UpgradeComparisonText>
+			</GameModifier>	
+			<AIData AIPersonality="AI_General">
+				<AIPriority>50</AIPriority>
+				<AITag>Workshop</AITag>
+			</AIData>
+			<ArtDef>Art_TempleOfEssence</ArtDef>
+		</ImprovementType>
+		<ImprovementType InternalName="JB_Temple_OldGods_Lialdir">
+			<DisplayName>Temple: Lialdir</DisplayName>
+			<Description>Temples reduce Unrest and produce Mana based on the Essence of the city they are constructed in.  Lialdir is the god of health and prosperity.</Description>
+			<AllowedPerFaction>1</AllowedPerFaction>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<UpgradeTier>3</UpgradeTier>
+			<Prereq>
+				<Type>Resource</Type>
+				<Attribute>TileYieldEssence</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionOldGods</Attribute>
+				<Target>Player</Target>
+			</Prereq>	
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Arcane_Mastery</Attribute>
+			</Prereq>
+			<LaborToBuild>627</LaborToBuild>
+			<GameModifier>
+				<ModType>ConstructionResourceCost</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>-75</Value>
+			</GameModifier>	
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Unrest</Attribute>
+				<Value>-20</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>-20% Unrest</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Unrest</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>8</Value>
+				<Provides>+8 Fame</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+				<UpgradeComparisonText>Fame</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>3</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+3 Faith</Provides>
+				<UpgradeComparisonID>9</UpgradeComparisonID>
+			</GameModifier>
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>AdjustDefendingUnit</Attribute>
+				<StrVal>UnitStat_MagicResist</StrVal>
+				<Value>10</Value>
+				<Provides>+10 Spell Resistance for Defending Units</Provides>
+				<UpgradeComparisonID>3</UpgradeComparisonID>
+				<UpgradeComparisonText>Defending Unit Spell Resistance</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>CityTrainingBonus</ModType>
+				<Attribute>TrainingBonus_ApplyUnitModifier_Add</Attribute>
+				<StrVal>UnitStat_MagicResist</StrVal>
+				<Value>10</Value>
+				<Provides>+10 Spell Resistance for Trained Units</Provides>
+				<UpgradeComparisonID>4</UpgradeComparisonID>
+				<UpgradeComparisonText>Trained Unit Spell Resistance</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>AdjustDefendingUnit</Attribute>
+				<StrVal>UnitStat_HealthRegen</StrVal>
+				<Value>5</Value>
+				<Operator>+</Operator>
+				<PerTurn>1</PerTurn>
+				<Provides>Heals 5 Hit Points per Season to all stationed units</Provides>
+				<UpgradeComparisonID>5</UpgradeComparisonID>
+				<UpgradeComparisonText>Hit Points per Season to all stationed units</UpgradeComparisonText>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>50</AIPriority>
+				<AITag>Workshop</AITag>
+			</AIData>
+			<ArtDef>Art_TempleOfEssence</ArtDef>
+		</ImprovementType>
+	</Container_ReligionOldGods>	
+	<Container_ReligionCrusaders>
+		<!-- Note: Wall changes are cosmetic only, 
+			block them from other faction traits that modify walls -->
+		<ImprovementType InternalName="HedgeWall">				
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionCrusaders</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="JB_HedgeWall_Town">				
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionCrusaders</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>	
+		<ImprovementType InternalName="Fort">				
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionCrusaders</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="JB_HedgeWall_ReligionCrusaders">
+			<DisplayName>Hedge Wall</DisplayName>
+			<Description>Hedge Walls improve a city's defenses by providing them with additional units and giving an Initiative bonus to all City Defenders.</Description>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<RequiresCityImprovement>1</RequiresCityImprovement>
+			<RequiredImprovement>Fortress</RequiredImprovement>
+			<UpgradesToImprovement>JB_Fort_ReligionCrusaders</UpgradesToImprovement>
+			<UpgradeTier>1</UpgradeTier>
+			<HideInHiergamenon>1</HideInHiergamenon>
+			<Prereq>
+				<Type>Allegiance</Type>
+				<Attribute>Kingdom</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionCrusaders</Attribute>
+				<Target>Player</Target>
+			</Prereq>		
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_FirestoneFortress</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_Frostborn</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_FortifiedConclaves</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_FortifiedTowns</Attribute>
+				<Target>Player</Target>
+			</Prereq>	
+			<LaborToBuild>224</LaborToBuild>
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>AdjustDefendingUnit</Attribute>
+				<StrVal>UnitStat_CombatSpeed</StrVal>
+				<Value>2</Value>
+				<Provides>+2 Initiative for Defending Units</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Defending Unit Initiative</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>UpgradeCityWalls</Attribute>
+				<StrVal>CityWalls_Hedge_Templar</StrVal>
+			</GameModifier>
+			<GameModifier>
+				<ModType>CityDefenseSummon</ModType>
+				<Attribute>SummonUnitByClass</Attribute>
+				<Value>2</Value>
+				<Multiplier>3</Multiplier>
+				<Provides>+2 City Defender Groups</Provides>
+				<UnitClass>CityDefender</UnitClass>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+				<AITag>Defensive</AITag>
+				<AIAtWarMultiplier>3</AIAtWarMultiplier>
+			</AIData>
+			<ArtDef>HedgeWall_ArtDef</ArtDef>
+		</ImprovementType>	
+		<ImprovementType InternalName="JB_HedgeWall_Town_ReligionCrusaders">
+			<DisplayName>Hedge Wall</DisplayName>
+			<Description>Hedge Walls improve a city's defenses by providing them with additional units and giving an Initiative bonus to all City Defenders.</Description>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<RequiresCityImprovement>1</RequiresCityImprovement>
+			<RequiredImprovement>TradeGuild</RequiredImprovement>
+			<UpgradeTier>1</UpgradeTier>		
+			<HideInHiergamenon>1</HideInHiergamenon>
+			<Prereq>
+				<Type>Allegiance</Type>
+				<Attribute>Kingdom</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionCrusaders</Attribute>
+				<Target>Player</Target>
+			</Prereq>		
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_FirestoneFortress</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_Frostborn</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_FortifiedConclaves</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_FortifiedTowns</Attribute>
+				<Target>Player</Target>
+			</Prereq>	
+			<LaborToBuild>224</LaborToBuild>
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>AdjustDefendingUnit</Attribute>
+				<StrVal>UnitStat_CombatSpeed</StrVal>
+				<Value>2</Value>
+				<Provides>+2 Initiative for Defending Units</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Defending Unit Initiative</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>UpgradeCityWalls</Attribute>
+				<StrVal>CityWalls_Hedge_Templar</StrVal>
+			</GameModifier>
+			<GameModifier>
+				<ModType>CityDefenseSummon</ModType>
+				<Attribute>SummonUnitByClass</Attribute>
+				<Value>2</Value>
+				<Multiplier>3</Multiplier>
+				<Provides>+2 City Defender Groups</Provides>
+				<UnitClass>CityDefender</UnitClass>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+				<AITag>Defensive</AITag>
+				<AIAtWarMultiplier>3</AIAtWarMultiplier>
+			</AIData>
+			<ArtDef>HedgeWall_ArtDef</ArtDef>
+		</ImprovementType>		
+		<ImprovementType InternalName="JB_Fort_ReligionCrusaders">
+			<DisplayName>Fort</DisplayName>
+			<Description>Forts bolster a city's defenses by providing it with Archers and giving an Initiative bonus to City Defenders.</Description>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<RequiresCityImprovement>1</RequiresCityImprovement>
+			<RequiredImprovement>Fortress</RequiredImprovement>
+			<UpgradeTier>2</UpgradeTier>
+			<HideInHiergamenon>1</HideInHiergamenon>
+			<Prereq>
+				<Type>Allegiance</Type>
+				<Attribute>Kingdom</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionCrusaders</Attribute>
+				<Target>Player</Target>
+			</Prereq>		
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_FirestoneFortress</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_Frostborn</Attribute>
+				<Target>Player</Target>
+			</Prereq>		
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_FortifiedConclaves</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_FortifiedTowns</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Construction</Attribute>
+			</Prereq>
+			<LaborToBuild>627</LaborToBuild>
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>AdjustDefendingUnit</Attribute>
+				<StrVal>UnitStat_CombatSpeed</StrVal>
+				<Value>3</Value>
+				<Provides>+3 Initiative for Defending Units</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Defending Unit Initiative</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>UpgradeCityWalls</Attribute>
+				<StrVal>JB_CityWalls_Advanced_Templar</StrVal>
+			</GameModifier>
+			<GameModifier>
+				<ModType>CityDefenseSummon</ModType>
+				<Attribute>SummonUnitByClass</Attribute>
+				<Value>2</Value>
+				<Multiplier>3</Multiplier>
+				<Provides>+2 City Defender Groups</Provides>
+				<UnitClass>CityDefender</UnitClass>
+			</GameModifier>
+			<GameModifier>
+				<ModType>CityDefenseSummon</ModType>
+				<Attribute>SummonUnitByClass</Attribute>
+				<Value>1</Value>
+				<Multiplier>3</Multiplier>
+				<Provides>+1 City Archer Group</Provides>
+				<UnitClass>CityArcher</UnitClass>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+				<AITag>Defensive</AITag>
+			</AIData>
+			<ArtDef>Art_Castle</ArtDef>
+		</ImprovementType>	
+		<ImprovementType InternalName="Cleric">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionCrusaders</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="Shrine">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionCrusaders</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="TempleOfEssence">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionCrusaders</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="SacrificialAltar">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionCrusaders</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>		
+		<ImprovementType InternalName="JB_TempleOfHarmony">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionCrusaders</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="JB_TempleOfStrife">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionCrusaders</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>		
+		<ImprovementType InternalName="JB_Cleric_ReligionCrusaders">
+			<DisplayName>Cleric</DisplayName>
+			<Description>Clerics provide healing and aid to the city's inhabitants.  They reduce unrest in the city and increase your Fame.</Description>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<UpgradesToImprovement>JB_Shrine_ReligionCrusaders</UpgradesToImprovement>
+			<UpgradeTier>1</UpgradeTier>
+			<HideInHiergamenon>1</HideInHiergamenon>
+			<Prereq>
+				<Type>Resource</Type>
+				<Attribute>TileYieldEssence</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionCrusaders</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+			<LaborToBuild>180</LaborToBuild>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Unrest</Attribute>
+				<Value>-5</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>-5% Unrest</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Unrest</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>2</Value>
+				<Provides>+2 Fame</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+				<UpgradeComparisonText>Fame</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Faith</Provides>
+				<UpgradeComparisonID>9</UpgradeComparisonID>
+			</GameModifier> 
+			<AIData AIPersonality="AI_General">
+				<AIPriority>50</AIPriority>
+				<AITag>Workshop</AITag>
+				<AIEarlyBuildUpMultiplier>5</AIEarlyBuildUpMultiplier>	
+			</AIData>
+			<ArtDef>Art_Cleric</ArtDef>
+		</ImprovementType>
+		<ImprovementType InternalName="JB_Shrine_ReligionCrusaders">
+			<DisplayName>Shrine</DisplayName>
+			<Description>The rituals of Shrines provide peace of mind for a city's citizens, reducing Unrest and improving your Fame.</Description>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<UpgradesToImprovement>JB_Temple_ReligionCrusaders</UpgradesToImprovement>
+			<UpgradeTier>2</UpgradeTier>
+			<HideInHiergamenon>1</HideInHiergamenon>
+			<Prereq>
+				<Type>Resource</Type>
+				<Attribute>TileYieldEssence</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionCrusaders</Attribute>
+				<Target>Player</Target>
+			</Prereq>	
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Rituals</Attribute>
+			</Prereq>
+			<LaborToBuild>268</LaborToBuild>
+			<GameModifier>
+				<ModType>ConstructionResourceCost</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>-30</Value>
+			</GameModifier>	
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Unrest</Attribute>
+				<Value>-10</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>-10% Unrest</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Unrest</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>4</Value>
+				<Provides>+4 Fame</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+				<UpgradeComparisonText>Fame</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>2</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+2 Faith</Provides>
+				<UpgradeComparisonID>9</UpgradeComparisonID>
+			</GameModifier>   
+			<AIData AIPersonality="AI_General">
+				<AIPriority>30</AIPriority>
+				<AITag>Workshop</AITag>
+			</AIData>
+			<ArtDef>Art_Shrine</ArtDef>
+		</ImprovementType>
+		<ImprovementType InternalName="JB_Temple_ReligionCrusaders">
+			<DisplayName>Dawn Temple</DisplayName>
+			<Description>Dawn Temples increase growth in the city and reduce Unrest in all cities.  Units trained here have a touch of the divine.</Description>
+			<AllowedPerFaction>1</AllowedPerFaction>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<UpgradeTier>3</UpgradeTier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionCrusaders</Attribute>
+				<Target>Player</Target>
+			</Prereq>	
+			<Prereq>
+				<Type>Resource</Type>
+				<Attribute>TileYieldEssence</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Arcane_Mastery</Attribute>
+			</Prereq>
+			<LaborToBuild>790</LaborToBuild>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Unrest</Attribute>
+				<Value>-10</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>-10% Unrest</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Unrest</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>8</Value>
+				<Provides>+8 Fame</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+				<UpgradeComparisonText>Fame</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_Additive_Unrest</StrVal>
+				<Value>-5</Value>
+				<Provides>-5% Unrest in all your cities</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Prestige</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Growth</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>ConstructionResourceCost</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>-100</Value>
+			</GameModifier>	
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>3</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+3 Faith</Provides>
+				<UpgradeComparisonID>9</UpgradeComparisonID>
+			</GameModifier>
+			<GameModifier>
+				<ModType>CityTrainingBonus</ModType>
+				<Attribute>TrainingBonus_ApplyUnitModifier_Add</Attribute>
+				<StrVal>UnitStat_JB_Attack_Divine</StrVal>
+				<Value>2</Value>
+				<Provides>+2 Divine Attack for Trained Units</Provides>
+				<UpgradeComparisonID>10</UpgradeComparisonID>
+				<UpgradeComparisonText>Trained Unit Divine Attack</UpgradeComparisonText>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>10</AIPriority>
+				<AITag>Economy</AITag>
+			</AIData>
+			<ArtDef>Art_TempleOfEssence</ArtDef>
+		</ImprovementType>
+	</Container_ReligionCrusaders>	
+	<Container_ReligionNature>	
+		<ImprovementType InternalName="Cleric">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionNature</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="Shrine">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionNature</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="TempleOfEssence">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionNature</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="SacrificialAltar">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionNature</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="JB_TempleOfHarmony">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionNature</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="JB_TempleOfStrife">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionNature</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="LoggingCamp">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionNature</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+		</ImprovementType>
+		<ImprovementType InternalName="LumberYard">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionNature</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+		</ImprovementType>	
+		<ImprovementType InternalName="TimberMill">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionNature</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+		</ImprovementType>
+		<ImprovementType InternalName="JB_Cleric_ReligionNature">
+			<DisplayName>Cleric</DisplayName>
+			<Description>Clerics provide healing and aid to the city's inhabitants.  They reduce unrest in the city and increase your Fame.</Description>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<UpgradesToImprovement>JB_Shrine_ReligionNature</UpgradesToImprovement>
+			<UpgradeTier>1</UpgradeTier>
+			<HideInHiergamenon>1</HideInHiergamenon>
+			<Prereq>
+				<Type>Resource</Type>
+				<Attribute>TileYieldEssence</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionNature</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+			<LaborToBuild>180</LaborToBuild>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Unrest</Attribute>
+				<Value>-5</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>-5% Unrest</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Unrest</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>2</Value>
+				<Provides>+2 Fame</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+				<UpgradeComparisonText>Fame</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Faith</Provides>
+				<UpgradeComparisonID>9</UpgradeComparisonID>
+			</GameModifier> 
+			<AIData AIPersonality="AI_General">
+				<AIPriority>50</AIPriority>
+				<AITag>Workshop</AITag>
+				<AIEarlyBuildUpMultiplier>5</AIEarlyBuildUpMultiplier>	
+			</AIData>
+			<ArtDef>Art_Cleric</ArtDef>
+		</ImprovementType>
+		<ImprovementType InternalName="JB_Shrine_ReligionNature">
+			<DisplayName>Shrine</DisplayName>
+			<Description>The rituals of Shrines provide peace of mind for a city's citizens, reducing Unrest and improving your Fame.</Description>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<UpgradesToImprovement>JB_Temple_ReligionNature</UpgradesToImprovement>
+			<UpgradeTier>2</UpgradeTier>
+			<HideInHiergamenon>1</HideInHiergamenon>
+			<Prereq>
+				<Type>Resource</Type>
+				<Attribute>TileYieldEssence</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionNature</Attribute>
+				<Target>Player</Target>
+			</Prereq>	
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Rituals</Attribute>
+			</Prereq>
+			<LaborToBuild>268</LaborToBuild>
+			<GameModifier>
+				<ModType>ConstructionResourceCost</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>-30</Value>
+			</GameModifier>	
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Unrest</Attribute>
+				<Value>-10</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>-10% Unrest</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Unrest</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>4</Value>
+				<Provides>+4 Fame</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+				<UpgradeComparisonText>Fame</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>2</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+2 Faith</Provides>
+				<UpgradeComparisonID>9</UpgradeComparisonID>
+			</GameModifier>    
+			<AIData AIPersonality="AI_General">
+				<AIPriority>30</AIPriority>
+				<AITag>Workshop</AITag>
+			</AIData>
+			<ArtDef>Art_Shrine</ArtDef>
+		</ImprovementType>
+		<ImprovementType InternalName="JB_Temple_ReligionNature">
+			<DisplayName>Temple of Essence</DisplayName>
+			<Description>Temples of Essence reduce Unrest and produce Mana based on the Essence of the city they are constructed in.</Description>
+			<AllowedPerFaction>1</AllowedPerFaction>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<UpgradeTier>3</UpgradeTier>
+			<Prereq>
+				<Type>Resource</Type>
+				<Attribute>TileYieldEssence</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionNature</Attribute>
+				<Target>Player</Target>
+			</Prereq>	
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Arcane_Mastery</Attribute>
+			</Prereq>
+			<LaborToBuild>627</LaborToBuild>
+			<GameModifier>
+				<ModType>ConstructionResourceCost</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>-75</Value>
+			</GameModifier>	
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Unrest</Attribute>
+				<Value>-15</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>-15% Unrest</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Unrest</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>8</Value>
+				<Provides>+8 Fame</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+				<UpgradeComparisonText>Fame</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>3</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+3 Faith</Provides>
+				<UpgradeComparisonID>9</UpgradeComparisonID>
+			</GameModifier> 
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Mana</Attribute>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Mana per Essence</Provides>
+				<UpgradeComparisonID>3</UpgradeComparisonID>
+				<UpgradeComparisonText>Mana per Essence</UpgradeComparisonText>
+				<Calculate InternalName="Value" ValueOwner="OwnerCity">
+					<Expression><![CDATA[[TileYieldEssence]]]></Expression>
+				</Calculate>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>30</AIPriority>
+				<AITag>Workshop</AITag>
+			</AIData>
+			<ArtDef>Art_TempleOfEssence</ArtDef>
+		</ImprovementType>
+		<ImprovementType InternalName="JB_ReligionNature_TreeBuilding">
+			<DisplayName>Tree Shrine</DisplayName>
+			<Description>Establishing a Tree Shrine in a city helps attract forest allies.  Once the Tree Shrine is constructed, a Forest Grove resource will be created nearby that can be used to train Forest Guardians.  Also reduces Unrest 5%.</Description>
+			<AllowedPerFaction>1</AllowedPerFaction>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<UpgradeTier>1</UpgradeTier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionNature</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+			<LaborToBuild>90</LaborToBuild>
+			<GameModifier>
+				<ModType>ConstructionResourceCost</ModType>
+				<Attribute>JB_TreeShrineSeed</Attribute>
+				<Value>-1</Value>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Map</ModType>
+				<Attribute>CreateResourceHoard</Attribute>
+				<Value>1</Value>
+				<StrVal>JB_Wild_ForestGuardians</StrVal>
+				<Radius>4</Radius>
+				<Provides>Creates a Forest Grove resource nearby which can be used to train Forest Guardians.</Provides>
+			</GameModifier>				
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Unrest</Attribute>
+				<Value>-5</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>-5% Unrest</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Unrest</UpgradeComparisonText>
+			</GameModifier>		
+			<AIData AIPersonality="AI_General">
+				<AIPriority>25</AIPriority>
+				<AITag>CommandPost</AITag>
+			</AIData>
+			<ArtDef>JB_Art_ReligionNature_TreeBuilding</ArtDef>
+		</ImprovementType>	
+		<ImprovementType InternalName="JB_Camp_Sprite">
+			<DisplayName>Sprite Camp</DisplayName>
+			<Description>Sprite camps can be built on Mushroom Groves to recruit Sprites.</Description>
+			<SpecialBuildingType>SpriteRecruiting</SpecialBuildingType>
+			<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+			<RequiresCity>0</RequiresCity>
+			<RequiresResource>1</RequiresResource>
+			<SupportedResourceType>JB_WildSprites</SupportedResourceType>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<Prereq>
+				<Type>Allegiance</Type>
+				<Attribute>Kingdom</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionNature</Attribute>
+				<Target>Player</Target>
+			</Prereq>	
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Cooperation</Attribute>
+			</Prereq>	
+			<GameModifier>
+				<ModType>ConstructionResourceCost</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>-75</Value>
+			</GameModifier>
+			<LaborToBuild>112</LaborToBuild>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>LimitedUnitCap</Attribute>
+				<StrVal>JB_Sprite_Squad</StrVal>
+				<Value>2</Value>
+				<Provides>Recruit 2 Sprite mobs.</Provides>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+				<AITag>CommandPost</AITag>
+			</AIData>
+			<ArtDef>JB_Camp_Sprite_ArtDef</ArtDef>
+			<ImprovementTypeArtDef InternalName="JB_Camp_Sprite_ArtDef">
+				<ImprovementTypeArtSubPack InternalName="JB_Camp_Sprite_Default">
+					<TileDesign>JB_Mushroom_Grove1</TileDesign>
+					<ConstructionTileDesign>JB_Mushroom_Grove1</ConstructionTileDesign>
+					<DrawnIcon>JB_Improvement_SpriteCamp.png</DrawnIcon>
+					<DrawnIconConstruction>JB_Improvement_SpriteCamp_C.png</DrawnIconConstruction>
+					<Thumbnail>JB_Lair_Sprite_Medallion.png</Thumbnail>
+					<Medallions InternalName="">
+						<All>JB_Lair_Sprite_Medallion.png</All>
+					</Medallions>
+				</ImprovementTypeArtSubPack>
+			</ImprovementTypeArtDef>
+		</ImprovementType>		
+		<ImprovementType InternalName="JB_Camp_Treekin">
+			<DisplayName>Treekin Home</DisplayName>
+			<Description>Treekin Homes can be built on Treekin Groves to recruit Treekin Giants.</Description>
+			<SpecialBuildingType>JB_TreekinRecruiting</SpecialBuildingType>
+			<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+			<RequiresCity>0</RequiresCity>
+			<RequiresResource>1</RequiresResource>
+			<SupportedResourceType>JB_WildTreekin</SupportedResourceType>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<Prereq>
+				<Type>Allegiance</Type>
+				<Attribute>Kingdom</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionNature</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Cooperation</Attribute>
+			</Prereq>	
+			<GameModifier>
+				<ModType>ConstructionResourceCost</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>-100</Value>
+			</GameModifier>
+			<LaborToBuild>230</LaborToBuild>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>LimitedUnitCap</Attribute>
+				<StrVal>JB_ForestElemental</StrVal>
+				<Value>2</Value>
+				<Provides>Recruit 2 Treekin Giants.</Provides>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>15</AIPriority>
+				<AITag>CommandPost</AITag>
+			</AIData>
+			<ArtDef>JB_Camp_Treekin_ArtDef</ArtDef>
+			<ImprovementTypeArtDef InternalName="JB_Camp_Treekin_ArtDef">
+				<ImprovementTypeArtSubPack InternalName="JB_Camp_Treekin_Default">
+					<TileDesign>JB_Forest_Grove1</TileDesign>
+					<ConstructionTileDesign>JB_Forest_Grove1</ConstructionTileDesign>
+					<DrawnIcon>JB_Resource_ForestGrove.png</DrawnIcon>
+					<DrawnIconConstruction>JB_Resource_ForestGrove.png</DrawnIconConstruction>
+					<Thumbnail>JB_ForestGrove_Medallion.png</Thumbnail>
+					<Medallions InternalName="">
+						<All>JB_ForestGrove_Medallion.png</All>
+					</Medallions>
+				</ImprovementTypeArtSubPack>
+			</ImprovementTypeArtDef>
+		</ImprovementType>		
+		<ImprovementType InternalName="Outpost_Abbey">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionNature</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+		</ImprovementType>	
+		<ImprovementType InternalName="Outpost_Armory">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionNature</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+		</ImprovementType>	
+		<ImprovementType InternalName="Outpost_Caltrops">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionNature</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+		</ImprovementType>	
+		<ImprovementType InternalName="Outpost_Consulate">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionNature</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+		</ImprovementType>	
+		<ImprovementType InternalName="Outpost_Fortify">
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Training</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionNature</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+		</ImprovementType>	
+		<ImprovementType InternalName="Outpost_HighTower">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionNature</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+		</ImprovementType>	
+		<ImprovementType InternalName="Outpost_Stables">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionNature</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+		</ImprovementType>	
+		<ImprovementType InternalName="JB_Outpost_StoneCircle">
+			<DisplayName>Stone Circle</DisplayName>
+			<Description>Produces mana, and increases health regeneration of friendly units in this outpost's borders.</Description>
+			<HideInBuildList>1</HideInBuildList>
+			<IsOutpostUpgrade>1</IsOutpostUpgrade>
+			<OutpostBonuses_FriendlyOnly>1</OutpostBonuses_FriendlyOnly>
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Rituals</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionNature</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+			<LaborToBuild>204</LaborToBuild>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Mana</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Mana</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_HealthRegen</StrVal>
+				<Value>5</Value>
+				<Provides>+5 health regeneration for friendly units in Zone of Control</Provides>
+			</GameModifier>
+			<ArtDef>JB_Art_Outpost_StoneCircles</ArtDef>
+		</ImprovementType>			
+		<ImprovementType InternalName="JB_Outpost_Obelix">
+			<DisplayName>Menhir</DisplayName>
+			<Description>Increases the player's borders and improves their visibility, and increases spell resistance of friendly units in Zone of Control.</Description>
+			<RequiresForceUnlock>1</RequiresForceUnlock>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<ZOCMinRadius>2</ZOCMinRadius>
+			<ZOCMaxRadius>2</ZOCMaxRadius>
+			<ZOCRadiusTurnsBeforeUpdate>1</ZOCRadiusTurnsBeforeUpdate>
+			<HideInBuildList>1</HideInBuildList>
+			<LaborToBuild>-1</LaborToBuild>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_MagicResist</StrVal>
+				<Value>10</Value>
+				<Provides>+10 Spell Resistance for friendly units in Zone of Control</Provides>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>25</AIPriority>
+				<AITag>CommandPost</AITag>
+			</AIData>
+			<ArtDef>JB_Art_Outpost_StoneCircles_Obelix</ArtDef>
+		</ImprovementType>
+	</Container_ReligionNature>		
+	<Container_ReligionLand>			
+		<ImprovementType InternalName="Cleric">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionLand</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="Shrine">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionLand</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="TempleOfEssence">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionLand</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="SacrificialAltar">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionLand</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="JB_TempleOfHarmony">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionLand</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="JB_TempleOfStrife">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionLand</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="JB_Totem_Base">
+			<DisplayName>Totem</DisplayName>
+			<Description>A Totem reduces unrest in the city.</Description>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<UpgradesToImprovement>JB_Totem_Life</UpgradesToImprovement>
+			<UpgradesToImprovement>JB_Totem_Death</UpgradesToImprovement>
+			<UpgradesToImprovement>JB_Totem_Earth</UpgradesToImprovement>
+			<UpgradesToImprovement>JB_Totem_Spirit</UpgradesToImprovement>
+			<UpgradeTier>1</UpgradeTier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionLand</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+			<LaborToBuild>150</LaborToBuild>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Unrest</Attribute>
+				<Value>-5</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>-5% Unrest</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Unrest</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Faith</Provides>
+				<UpgradeComparisonID>9</UpgradeComparisonID>
+			</GameModifier> 
+			<AIData AIPersonality="AI_General">
+				<AIPriority>50</AIPriority>
+				<AITag>Workshop</AITag>
+				<AIEarlyBuildUpMultiplier>5</AIEarlyBuildUpMultiplier>	
+			</AIData>
+			<ArtDef>JB_Art_Totem_Base</ArtDef>
+		</ImprovementType>
+		<ImprovementType InternalName="JB_Totem_Life">
+			<DisplayName>Totem: Life</DisplayName>
+			<Description>A Totem reduces unrest in the city and increase your Fame.
+			
+			A Life Totem increases Growth and heals stationed units.</Description>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<UpgradeTier>2</UpgradeTier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionLand</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+			<LaborToBuild>268</LaborToBuild>
+			<GameModifier>
+				<ModType>ConstructionResourceCost</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>-50</Value>
+			</GameModifier>	
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Unrest</Attribute>
+				<Value>-10</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>-10% Unrest</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Unrest</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>2</Value>
+				<Provides>+2 Fame</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+				<UpgradeComparisonText>Fame</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>2</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+2 Faith</Provides>
+				<UpgradeComparisonID>9</UpgradeComparisonID>
+			</GameModifier> 
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Prestige</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Growth</Provides>
+				<UpgradeComparisonID>3</UpgradeComparisonID>
+			</GameModifier>   
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>AdjustDefendingUnit</Attribute>
+				<StrVal>UnitStat_HealthRegen</StrVal>
+				<Value>5</Value>
+				<Operator>+</Operator>
+				<PerTurn>1</PerTurn>
+				<Provides>Heals 5 Hit Points per Season to all stationed units</Provides>
+				<UpgradeComparisonID>5</UpgradeComparisonID>
+				<UpgradeComparisonText>Health Regen per Season to stationed units</UpgradeComparisonText>
+			</GameModifier>			
+			<AIData AIPersonality="AI_General">
+				<AIPriority>75</AIPriority>
+				<AITag>Workshop</AITag>
+			</AIData>
+			<ArtDef>JB_Art_Totem_Life</ArtDef>
+		</ImprovementType>
+		<ImprovementType InternalName="JB_Totem_Death">
+			<DisplayName>Totem: Death</DisplayName>
+			<Description>A Totem reduces unrest in the city and increase your Fame.
+			
+			A Death Totem increases the Attack of stationed units, and adds a Maul chance to trained units.</Description>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<UpgradeTier>2</UpgradeTier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionLand</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+			<LaborToBuild>268</LaborToBuild>
+			<GameModifier>
+				<ModType>ConstructionResourceCost</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>-50</Value>
+			</GameModifier>	
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Unrest</Attribute>
+				<Value>-10</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>-10% Unrest</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Unrest</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>2</Value>
+				<Provides>+2 Fame</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+				<UpgradeComparisonText>Fame</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>2</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+2 Faith</Provides>
+				<UpgradeComparisonID>9</UpgradeComparisonID>
+			</GameModifier> 
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>AdjustDefendingUnit</Attribute>
+				<StrVal>UnitStat_Attack_Boost</StrVal>
+				<Value>2</Value>
+				<Provides>+2 Attack for Defending Units</Provides>
+				<UpgradeComparisonID>4</UpgradeComparisonID>
+				<UpgradeComparisonText>Defending Unit Attack</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>CityTrainingBonus</ModType>
+				<Attribute>TrainingBonus_ApplyUnitModifier_Add</Attribute>
+				<StrVal>UnitStat_MaulChance</StrVal>
+				<Value>10</Value>
+				<Provides>+10% chance to Maul when attacking for Trained Units</Provides>
+				<UpgradeComparisonID>6</UpgradeComparisonID>
+				<UpgradeComparisonText>Trained Unit Maul Chance</UpgradeComparisonText>
+			</GameModifier>			
+			<AIData AIPersonality="AI_General">
+				<AIPriority>75</AIPriority>
+				<AITag>Workshop</AITag>
+			</AIData>
+			<ArtDef>JB_Art_Totem_Death</ArtDef>
+		</ImprovementType>
+		<ImprovementType InternalName="JB_Totem_Earth">
+			<DisplayName>Totem: Earth</DisplayName>
+			<Description>A Totem reduces unrest in the city and increase your Fame.
+			
+			An Earth Totem increases production in the city, and increases Hit Points of trained units.</Description>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<UpgradeTier>2</UpgradeTier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionLand</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+			<LaborToBuild>268</LaborToBuild>
+			<GameModifier>
+				<ModType>ConstructionResourceCost</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>-50</Value>
+			</GameModifier>	
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Unrest</Attribute>
+				<Value>-10</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>-10% Unrest</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Unrest</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>2</Value>
+				<Provides>+2 Fame</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+				<UpgradeComparisonText>Fame</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>2</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+2 Faith</Provides>
+				<UpgradeComparisonID>9</UpgradeComparisonID>
+			</GameModifier> 
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>ProductionPerMaterials</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Production per Material</Provides>
+				<UpgradeComparisonID>3</UpgradeComparisonID>
+				<UpgradeComparisonText>Production per Material</UpgradeComparisonText>
+			</GameModifier>	
+			<GameModifier>
+				<ModType>CityTrainingBonus</ModType>
+				<Attribute>TrainingBonus_ApplyUnitModifier_Add</Attribute>
+				<StrVal>UnitStat_HitPoints</StrVal>
+				<Value>3</Value>
+				<Provides>+3 Hit Points to Trained Units</Provides>
+				<UpgradeComparisonID>5</UpgradeComparisonID>
+				<UpgradeComparisonText>Trained Unit Hit Points</UpgradeComparisonText>
+			</GameModifier>	
+			<AIData AIPersonality="AI_General">
+				<AIPriority>75</AIPriority>
+				<AITag>Workshop</AITag>
+			</AIData>
+			<ArtDef>JB_Art_Totem_Earth</ArtDef>
+		</ImprovementType>
+		<ImprovementType InternalName="JB_Totem_Spirit">
+			<DisplayName>Totem: Spirit</DisplayName>
+			<Description>A Totem reduces unrest in the city and increase your Fame.
+			
+			A Spirit Totem increases Defense for stationed units, and Initiative of trained units.</Description>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<UpgradeTier>2</UpgradeTier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionLand</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+			<LaborToBuild>268</LaborToBuild>
+			<GameModifier>
+				<ModType>ConstructionResourceCost</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>-50</Value>
+			</GameModifier>	
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Unrest</Attribute>
+				<Value>-10</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>-10% Unrest</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Unrest</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>2</Value>
+				<Provides>+2 Fame</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+				<UpgradeComparisonText>Fame</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>2</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+2 Faith</Provides>
+				<UpgradeComparisonID>9</UpgradeComparisonID>
+			</GameModifier> 
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>AdjustDefendingUnit</Attribute>
+				<StrVal>UnitStat_Defense_Pierce</StrVal>
+				<Value>3</Value>
+				<Provides>+3 Defense for Defending Units</Provides>
+				<UpgradeComparisonID>4</UpgradeComparisonID>
+				<UpgradeComparisonText>Defending Unit Defense</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>CityTrainingBonus</ModType>
+				<Attribute>TrainingBonus_ApplyUnitModifier_Add</Attribute>
+				<StrVal>UnitStat_CombatSpeed</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Initiative for Trained Units</Provides>
+				<UpgradeComparisonID>6</UpgradeComparisonID>
+				<UpgradeComparisonText>Trained Unit Initiative</UpgradeComparisonText>
+			</GameModifier>	
+			<AIData AIPersonality="AI_General">
+				<AIPriority>75</AIPriority>
+				<AITag>Workshop</AITag>
+			</AIData>
+			<ArtDef>JB_Art_Totem_Spirit</ArtDef>
+		</ImprovementType>
+ 	</Container_ReligionLand>	
+	<Container_ReligionMagic>
+			<!-- Note: Wall changes are cosmetic only, 
+			block them from other faction traits that modify walls -->
+		<ImprovementType InternalName="HedgeWall">				
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionMagic</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="WoodenWall">				
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionMagic</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="Fort">				
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionMagic</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="Castle">				
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionMagic</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="JB_HedgeWall_ReligionMagic">
+			<DisplayName>Hedge Wall</DisplayName>
+			<Description>Hedge Walls improve a city's defenses by providing them with additional units and giving an Initiative bonus to all City Defenders.</Description>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<RequiresCityImprovement>1</RequiresCityImprovement>
+			<RequiredImprovement>Fortress</RequiredImprovement>
+			<UpgradesToImprovement>JB_Fort_ReligionMagic</UpgradesToImprovement>
+			<UpgradeTier>1</UpgradeTier>
+			<HideInHiergamenon>1</HideInHiergamenon>
+			<Prereq>
+				<Type>Allegiance</Type>
+				<Attribute>Kingdom</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionMagic</Attribute>
+				<Target>Player</Target>
+			</Prereq>		
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_FirestoneFortress</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_Frostborn</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_FortifiedConclaves</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_FortifiedTowns</Attribute>
+				<Target>Player</Target>
+			</Prereq>	
+			<LaborToBuild>224</LaborToBuild>
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>AdjustDefendingUnit</Attribute>
+				<StrVal>UnitStat_CombatSpeed</StrVal>
+				<Value>2</Value>
+				<Provides>+2 Initiative for Defending Units</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Defending Unit Initiative</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>UpgradeCityWalls</Attribute>
+				<StrVal>CityWalls_Hedge</StrVal>
+			</GameModifier>
+			<GameModifier>
+				<ModType>CityDefenseSummon</ModType>
+				<Attribute>SummonUnitByClass</Attribute>
+				<Value>2</Value>
+				<Multiplier>3</Multiplier>
+				<Provides>+2 City Defender Groups</Provides>
+				<UnitClass>CityDefender</UnitClass>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+				<AITag>Defensive</AITag>
+				<AIAtWarMultiplier>3</AIAtWarMultiplier>
+			</AIData>
+			<ArtDef>HedgeWall_ArtDef</ArtDef>
+		</ImprovementType>		
+		<ImprovementType InternalName="JB_WoodenWall_ReligionMagic">
+			<DisplayName>Wooden Wall</DisplayName>
+			<Description>Wooden Walls improve a city's defenses by providing it with additional units and giving an Initiative bonus to all City Defenders.</Description>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<RequiresCityImprovement>1</RequiresCityImprovement>
+			<RequiredImprovement>Fortress</RequiredImprovement>
+			<UpgradesToImprovement>JB_Castle_ReligionMagic</UpgradesToImprovement>
+			<UpgradeTier>1</UpgradeTier>
+			<HideInHiergamenon>1</HideInHiergamenon>
+			<Prereq>
+				<Type>Allegiance</Type>
+				<Attribute>Empire</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionMagic</Attribute>
+				<Target>Player</Target>
+			</Prereq>		
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_FirestoneFortress</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_Frostborn</Attribute>
+				<Target>Player</Target>
+			</Prereq>	
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_FortifiedConclaves</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_FortifiedTowns</Attribute>
+				<Target>Player</Target>
+			</Prereq>	
+			<LaborToBuild>224</LaborToBuild>
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>UpgradeCityWalls</Attribute>
+				<StrVal>CityWalls_Fallen_Picket</StrVal>
+			</GameModifier>
+			<GameModifier>
+				<ModType>CityDefenseSummon</ModType>
+				<Attribute>SummonUnitByClass</Attribute>
+				<Value>2</Value>
+				<Multiplier>3</Multiplier>
+				<Provides>+2 City Defender Groups</Provides>
+				<UnitClass>CityDefender</UnitClass>
+			</GameModifier>
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>AdjustDefendingUnit</Attribute>
+				<StrVal>UnitStat_CombatSpeed</StrVal>
+				<Value>2</Value>
+				<Provides>+2 Initiative for Defending Units</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Defending Unit Initiative</UpgradeComparisonText>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+				<AITag>Defensive</AITag>
+				<AIAtWarMultiplier>2</AIAtWarMultiplier>
+			</AIData>
+			<ArtDef>WoodenWall_ArtDef</ArtDef>
+		</ImprovementType>	
+		<ImprovementType InternalName="JB_Fort_ReligionMagic">
+			<DisplayName>Fort</DisplayName>
+			<Description>Forts bolster a city's defenses by providing it with Archers and giving an Initiative bonus to City Defenders.</Description>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<RequiresCityImprovement>1</RequiresCityImprovement>
+			<RequiredImprovement>Fortress</RequiredImprovement>
+			<UpgradeTier>2</UpgradeTier>
+			<HideInHiergamenon>1</HideInHiergamenon>
+			<Prereq>
+				<Type>Allegiance</Type>
+				<Attribute>Kingdom</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionMagic</Attribute>
+				<Target>Player</Target>
+			</Prereq>		
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_FirestoneFortress</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_Frostborn</Attribute>
+				<Target>Player</Target>
+			</Prereq>		
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_FortifiedConclaves</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_FortifiedTowns</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Construction</Attribute>
+			</Prereq>
+			<LaborToBuild>627</LaborToBuild>
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>AdjustDefendingUnit</Attribute>
+				<StrVal>UnitStat_CombatSpeed</StrVal>
+				<Value>3</Value>
+				<Provides>+3 Initiative for Defending Units</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Defending Unit Initiative</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>UpgradeCityWalls</Attribute>
+				<StrVal>JB_CityWalls_Advanced_Fancy</StrVal>
+			</GameModifier>
+			<GameModifier>
+				<ModType>CityDefenseSummon</ModType>
+				<Attribute>SummonUnitByClass</Attribute>
+				<Value>2</Value>
+				<Multiplier>3</Multiplier>
+				<Provides>+2 City Defender Groups</Provides>
+				<UnitClass>CityDefender</UnitClass>
+			</GameModifier>
+			<GameModifier>
+				<ModType>CityDefenseSummon</ModType>
+				<Attribute>SummonUnitByClass</Attribute>
+				<Value>1</Value>
+				<Multiplier>3</Multiplier>
+				<Provides>+1 City Archer Group</Provides>
+				<UnitClass>CityArcher</UnitClass>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+				<AITag>Defensive</AITag>
+			</AIData>
+			<ArtDef>Art_Castle</ArtDef>
+		</ImprovementType>
+		<ImprovementType InternalName="JB_Castle_ReligionMagic">
+			<DisplayName>Castle</DisplayName>
+			<Description>Castles bolster a city's defenses by providing it with Archers and giving an Initiative bonus to City Defenders.</Description>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<RequiresCityImprovement>1</RequiresCityImprovement>
+			<RequiredImprovement>Fortress</RequiredImprovement>
+			<UpgradeTier>2</UpgradeTier>
+			<HideInHiergamenon>1</HideInHiergamenon>
+			<Prereq>
+				<Type>Allegiance</Type>
+				<Attribute>Empire</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionMagic</Attribute>
+				<Target>Player</Target>
+			</Prereq>		
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_FirestoneFortress</Attribute>
+				<Target>Player</Target>
+			</Prereq>		
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_Frostborn</Attribute>
+				<Target>Player</Target>
+			</Prereq>		
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_FortifiedConclaves</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_FortifiedTowns</Attribute>
+				<Target>Player</Target>
+			</Prereq>	
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Construction</Attribute>
+			</Prereq>
+			<LaborToBuild>627</LaborToBuild>
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>AdjustDefendingUnit</Attribute>
+				<StrVal>UnitStat_CombatSpeed</StrVal>
+				<Value>3</Value>
+				<Provides>+3 Initiative for Defending Units</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Defending Unit Initiative</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>UpgradeCityWalls</Attribute>
+				<StrVal>JB_CityWalls_Advanced_Fancy</StrVal>
+			</GameModifier>
+			<GameModifier>
+				<ModType>CityDefenseSummon</ModType>
+				<Attribute>SummonUnitByClass</Attribute>
+				<Value>2</Value>
+				<Multiplier>4</Multiplier>
+				<Provides>+2 City Defender Groups</Provides>
+				<UnitClass>CityDefender</UnitClass>
+			</GameModifier>
+			<GameModifier>
+				<ModType>CityDefenseSummon</ModType>
+				<Attribute>SummonUnitByClass</Attribute>
+				<Value>1</Value>
+				<Multiplier>3</Multiplier>
+				<Provides>+1 City Archer Group</Provides>
+				<UnitClass>CityArcher</UnitClass>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+				<AITag>Defensive</AITag>
+			</AIData>
+			<ArtDef>Art_Castle</ArtDef>
+		</ImprovementType>
+		<!-- End cosmetic wall changes -->
+		<ImprovementType InternalName="Cleric">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionMagic</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="Shrine">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionMagic</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="TempleOfEssence">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionMagic</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="SacrificialAltar">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionMagic</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="JB_TempleOfHarmony">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionMagic</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="JB_TempleOfStrife">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionMagic</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="JB_Cleric_ReligionMagic">
+			<DisplayName>Cleric</DisplayName>
+			<Description>Clerics provide healing and aid to the city's inhabitants.  They reduce unrest in the city and increase your Fame.</Description>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<UpgradesToImprovement>JB_Shrine_ReligionMagic</UpgradesToImprovement>
+			<UpgradeTier>1</UpgradeTier>
+			<HideInHiergamenon>1</HideInHiergamenon>
+			<Prereq>
+				<Type>Resource</Type>
+				<Attribute>TileYieldEssence</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionMagic</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+			<LaborToBuild>180</LaborToBuild>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Unrest</Attribute>
+				<Value>-5</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>-5% Unrest</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Unrest</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>2</Value>
+				<Provides>+2 Fame</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+				<UpgradeComparisonText>Fame</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Faith</Provides>
+				<UpgradeComparisonID>9</UpgradeComparisonID>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>50</AIPriority>
+				<AITag>Workshop</AITag>
+				<AIEarlyBuildUpMultiplier>5</AIEarlyBuildUpMultiplier>	
+			</AIData>
+			<ArtDef>Art_Cleric</ArtDef>
+		</ImprovementType>
+		<ImprovementType InternalName="JB_Shrine_ReligionMagic">
+			<DisplayName>Shrine</DisplayName>
+			<Description>The rituals of Shrines provide peace of mind for a city's citizens, reducing Unrest and improving your Fame.</Description>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<UpgradesToImprovement>JB_Temple_ReligionMagic</UpgradesToImprovement>
+			<UpgradeTier>2</UpgradeTier>
+			<HideInHiergamenon>1</HideInHiergamenon>
+			<Prereq>
+				<Type>Resource</Type>
+				<Attribute>TileYieldEssence</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionMagic</Attribute>
+				<Target>Player</Target>
+			</Prereq>	
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Rituals</Attribute>
+			</Prereq>
+			<LaborToBuild>268</LaborToBuild>
+			<GameModifier>
+				<ModType>ConstructionResourceCost</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>-30</Value>
+			</GameModifier>	
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Unrest</Attribute>
+				<Value>-10</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>-10% Unrest</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Unrest</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>4</Value>
+				<Provides>+4 Fame</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+				<UpgradeComparisonText>Fame</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>2</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+2 Faith</Provides>
+				<UpgradeComparisonID>9</UpgradeComparisonID>
+			</GameModifier>    
+			<AIData AIPersonality="AI_General">
+				<AIPriority>30</AIPriority>
+				<AITag>Workshop</AITag>
+			</AIData>
+			<ArtDef>Art_Shrine</ArtDef>
+		</ImprovementType>
+		<ImprovementType InternalName="JB_Temple_ReligionMagic">
+			<DisplayName>Temple of Essence</DisplayName>
+			<Description>Temples reduce Unrest and produce Mana based on the Essence of the city they are constructed in.  Lialdir is the god of health and prosperity.</Description>
+			<AllowedPerFaction>1</AllowedPerFaction>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<UpgradeTier>3</UpgradeTier>
+			<HideInHiergamenon>1</HideInHiergamenon>
+			<Prereq>
+				<Type>Resource</Type>
+				<Attribute>TileYieldEssence</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionMagic</Attribute>
+				<Target>Player</Target>
+			</Prereq>	
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Arcane_Mastery</Attribute>
+			</Prereq>
+			<LaborToBuild>627</LaborToBuild>
+			<GameModifier>
+				<ModType>ConstructionResourceCost</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>-75</Value>
+			</GameModifier>	
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Unrest</Attribute>
+				<Value>-15</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>-15% Unrest</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Unrest</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>8</Value>
+				<Provides>+8 Fame</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+				<UpgradeComparisonText>Fame</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>3</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+3 Faith</Provides>
+				<UpgradeComparisonID>9</UpgradeComparisonID>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Mana</Attribute>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Mana per Essence</Provides>
+				<UpgradeComparisonID>3</UpgradeComparisonID>
+				<Calculate InternalName="Value" ValueOwner="OwnerCity">
+					<Expression><![CDATA[[TileYieldEssence]]]></Expression>
+				</Calculate>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>50</AIPriority>
+				<AITag>Workshop</AITag>
+			</AIData>
+			<ArtDef>Art_TempleOfEssence</ArtDef>
+		</ImprovementType>
+	</Container_ReligionMagic>			
+	<!--<Container_ReligionShadow>			
+		<ImprovementType InternalName="Cleric">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionShadow</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="Shrine">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionShadow</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="TempleOfEssence">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionShadow</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="SacrificialAltar">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionShadow</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="JB_ShadowAltar">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionShadow</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>		
+		<ImprovementType InternalName="JB_ShadowShrine">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionShadow</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>			
+		<ImprovementType InternalName="JB_Cleric_ReligionShadow">
+			<DisplayName>Cleric</DisplayName>
+			<Description>Clerics provide healing and aid to the city's inhabitants.  They reduce unrest in the city and increase your Fame.</Description>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<UpgradesToImprovement>JB_Shrine_ReligionShadow</UpgradesToImprovement>
+			<UpgradeTier>1</UpgradeTier>
+			<HideInHiergamenon>1</HideInHiergamenon>
+			<Prereq>
+				<Type>Resource</Type>
+				<Attribute>TileYieldEssence</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionShadow</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+			<LaborToBuild>180</LaborToBuild>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Unrest</Attribute>
+				<Value>-5</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>-5% Unrest</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Unrest</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>2</Value>
+				<Provides>+2 Fame</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+				<UpgradeComparisonText>Fame</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Faith</Provides>
+				<UpgradeComparisonID>9</UpgradeComparisonID>
+			</GameModifier> 
+			<AIData AIPersonality="AI_General">
+				<AIPriority>20</AIPriority>
+				<AITag>Workshop</AITag>
+			</AIData>
+			<ArtDef>Art_Cleric</ArtDef>
+		</ImprovementType>
+		<ImprovementType InternalName="JB_Shrine_ReligionShadow">
+			<DisplayName>Shrine</DisplayName>
+			<Description>The rituals of Shrines provide peace of mind for a city's citizens, reducing Unrest and improving your Fame.</Description>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<UpgradesToImprovement>JB_Temple_ReligionShadow</UpgradesToImprovement>
+			<UpgradeTier>2</UpgradeTier>
+			<HideInHiergamenon>1</HideInHiergamenon>
+			<Prereq>
+				<Type>Resource</Type>
+				<Attribute>TileYieldEssence</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionShadow</Attribute>
+				<Target>Player</Target>
+			</Prereq>	
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Rituals</Attribute>
+			</Prereq>
+			<LaborToBuild>268</LaborToBuild>
+			<GameModifier>
+				<ModType>ConstructionResourceCost</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>-30</Value>
+			</GameModifier>	
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Unrest</Attribute>
+				<Value>-10</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>-10% Unrest</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Unrest</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>4</Value>
+				<Provides>+4 Fame</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+				<UpgradeComparisonText>Fame</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>2</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+2 Faith</Provides>
+				<UpgradeComparisonID>9</UpgradeComparisonID>
+			</GameModifier>    
+			<AIData AIPersonality="AI_General">
+				<AIPriority>30</AIPriority>
+				<AITag>Workshop</AITag>
+			</AIData>
+			<ArtDef>Art_Shrine</ArtDef>
+		</ImprovementType>
+		<ImprovementType InternalName="JB_Temple_ReligionShadow">
+			<DisplayName>Temple of Shadow</DisplayName>
+			<Description>Temples of Shadow reduce Unrest, increase shadow power and provides an Ummaroch shadow demon.</Description>
+			<AllowedPerFaction>1</AllowedPerFaction>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<UpgradeTier>3</UpgradeTier>
+			<Prereq>
+				<Type>Resource</Type>
+				<Attribute>TileYieldEssence</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionShadow</Attribute>
+				<Target>Player</Target>
+			</Prereq>	
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Arcane_Mastery</Attribute>
+			</Prereq>
+			<LaborToBuild>627</LaborToBuild>
+			<GameModifier>
+				<ModType>ConstructionResourceCost</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>-75</Value>
+			</GameModifier>	
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Unrest</Attribute>
+				<Value>-15</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>-15% Unrest</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Unrest</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>8</Value>
+				<Provides>+8 Fame</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+				<UpgradeComparisonText>Fame</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>3</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+3 Faith</Provides>
+				<UpgradeComparisonID>9</UpgradeComparisonID>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_ShadowMagic</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Shadow Power</Provides>
+				<UpgradeComparisonID>8</UpgradeComparisonID>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_UnitStat_JB_ShadowPower</StrVal>
+				<Value>100</Value>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>LimitedUnitCap</Attribute>	
+				<StrVal>JB_GreaterShadowDemon</StrVal>
+				<Value>1</Value>
+				<Provides>Recruit an Ummaroch shadow demon</Provides>
+			</GameModifier>				
+			<AIData AIPersonality="AI_General">
+				<AIPriority>75</AIPriority>
+				<AITag>Workshop</AITag>
+			</AIData>
+			<ArtDef>JB_Art_TempleOfShadow</ArtDef>
+		</ImprovementType>
+		<ImprovementType InternalName="JB_ShadowAltar_ReligionShadow">
+			<DisplayName>Shadow Altar</DisplayName>
+			<Description>A Shadow Altar can be built on a Cavern of Shadows to amplify Shadow spells and provide Mana every season.</Description>
+			<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+			<RequiresResource>1</RequiresResource>
+			<SupportedResourceType>JB_ShadowShard</SupportedResourceType>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<UpgradesToImprovement>JB_ShadowShrine</UpgradesToImprovement>
+			<UpgradeTier>1</UpgradeTier>
+			<HideInHiergamenon>1</HideInHiergamenon>
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Shard_Harvesting</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>Allegiance</Type>
+				<Attribute>Empire</Attribute>
+			</Prereq>
+			<LaborToBuild>80</LaborToBuild>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Mana</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Mana</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_ShadowMagic</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Shadow Power</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_UnitStat_JB_ShadowPower</StrVal>
+				<Value>100</Value>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Unrest</Attribute>
+				<Value>-5</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>-5% Unrest</Provides>
+				<UpgradeComparisonID>8</UpgradeComparisonID>
+				<UpgradeComparisonText>Unrest</UpgradeComparisonText>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>20</AIPriority>
+				<AITag>Shards</AITag>
+			</AIData>
+			<ArtDef>JB_Art_ShadowShrine</ArtDef>
+		</ImprovementType>	
+		<ImprovementType InternalName="JB_ShadowShrine_ReligionShadow">
+			<DisplayName>Shadow Shrine</DisplayName>
+			<Description>Shadow Shrines upgrade from Shadow Altars. They amplify Shadow spells, provide additional Mana every Season and provide Nightwing units.</Description>
+			<SpecialBuildingType>Shard</SpecialBuildingType>
+			<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+			<RequiresCity>0</RequiresCity>
+			<RequiresResource>1</RequiresResource>
+			<SupportedResourceType>JB_ShadowShard</SupportedResourceType>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<UpgradeTier>2</UpgradeTier>
+			<HideInHiergamenon>1</HideInHiergamenon>
+			<Prereq>
+				<Type>Allegiance</Type>
+				<Attribute>Empire</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Immortal_Codex</Attribute>
+			</Prereq>
+			<LaborToBuild>166</LaborToBuild>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Mana</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Mana</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_ShadowMagic</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Shadow Power</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Unrest</Attribute>
+				<Value>5</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>-5% Unrest</Provides>
+				<UpgradeComparisonID>8</UpgradeComparisonID>
+				<UpgradeComparisonText>Unrest</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_UnitStat_JB_ShadowPower</StrVal>
+				<Value>100</Value>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>LimitedUnitCap</Attribute>
+				<StrVal>JB_Nightwing_Limited_BG_Summon</StrVal>
+				<Value>2</Value>
+				<Provides>Summons 2 Nightwings</Provides>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>30</AIPriority>
+				<AITag>Shards</AITag>
+			</AIData>
+			<ArtDef>JB_Art_ShadowShrine</ArtDef>
+		</ImprovementType>
+	</Container_ReligionShadow>			
+	-->
+	<Container_ReligionSerpent>			
+		<ImprovementType InternalName="Cleric">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionSerpent</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="Shrine">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionSerpent</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="TempleOfEssence">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionSerpent</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="SacrificialAltar">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionSerpent</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>		
+		<ImprovementType InternalName="JB_TempleOfHarmony">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionSerpent</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="JB_TempleOfStrife">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionSerpent</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>		
+		<ImprovementType InternalName="JB_Cleric_ReligionSerpent">
+			<DisplayName>Cleric</DisplayName>
+			<Description>Clerics provide healing and aid to the city's inhabitants.  They reduce unrest in the city and increase your Fame.</Description>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<UpgradesToImprovement>JB_Shrine_ReligionSerpent</UpgradesToImprovement>
+			<UpgradeTier>1</UpgradeTier>
+			<HideInHiergamenon>1</HideInHiergamenon>
+			<Prereq>
+				<Type>Resource</Type>
+				<Attribute>TileYieldEssence</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionSerpent</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+			<LaborToBuild>180</LaborToBuild>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Unrest</Attribute>
+				<Value>-5</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>-5% Unrest</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Unrest</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>2</Value>
+				<Provides>+2 Fame</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+				<UpgradeComparisonText>Fame</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Faith</Provides>
+				<UpgradeComparisonID>9</UpgradeComparisonID>
+			</GameModifier> 
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>LimitedUnitCap</Attribute>	
+				<StrVal>JB_BlackNaja</StrVal>
+				<Value>1</Value>
+				<UpgradeComparisonID>8</UpgradeComparisonID>
+				<UpgradeComparisonText>Black Naja</UpgradeComparisonText>
+				<Provides>Recruit a Black Naja</Provides>
+			</GameModifier>	
+			<AIData AIPersonality="AI_General">
+				<AIPriority>50</AIPriority>
+				<AITag>Workshop</AITag>
+				<AIEarlyBuildUpMultiplier>5</AIEarlyBuildUpMultiplier>	
+			</AIData>
+			<ArtDef>Art_Cleric</ArtDef>
+		</ImprovementType>
+		<ImprovementType InternalName="JB_Shrine_ReligionSerpent">
+			<DisplayName>Shrine</DisplayName>
+			<Description>The rituals of Shrines provide peace of mind for a city's citizens, reducing Unrest and improving your Fame.</Description>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<UpgradesToImprovement>JB_Temple_HallNaja</UpgradesToImprovement>
+			<UpgradesToImprovement>JB_Temple_SerpentSanctorium</UpgradesToImprovement>
+			<UpgradeTier>2</UpgradeTier>
+			<HideInHiergamenon>1</HideInHiergamenon>
+			<Prereq>
+				<Type>Resource</Type>
+				<Attribute>TileYieldEssence</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionSerpent</Attribute>
+				<Target>Player</Target>
+			</Prereq>	
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Rituals</Attribute>
+			</Prereq>
+			<LaborToBuild>268</LaborToBuild>
+			<GameModifier>
+				<ModType>ConstructionResourceCost</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>-30</Value>
+			</GameModifier>	
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Unrest</Attribute>
+				<Value>-10</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>-10% Unrest</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Unrest</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>4</Value>
+				<Provides>+4 Fame</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+				<UpgradeComparisonText>Fame</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>2</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+2 Faith</Provides>
+				<UpgradeComparisonID>9</UpgradeComparisonID>
+			</GameModifier>    
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>LimitedUnitCap</Attribute>	
+				<StrVal>JB_BlackNaja</StrVal>
+				<Value>1</Value>
+				<UpgradeComparisonID>8</UpgradeComparisonID>
+				<UpgradeComparisonText>Black Naja</UpgradeComparisonText>
+				<Provides>Recruit a Black Naja</Provides>
+			</GameModifier>	
+			<AIData AIPersonality="AI_General">
+				<AIPriority>30</AIPriority>
+				<AITag>Workshop</AITag>
+			</AIData>
+			<ArtDef>Art_Shrine</ArtDef>
+		</ImprovementType>
+		<ImprovementType InternalName="JB_Temple_HallNaja">
+			<DisplayName>Hall of the Naja</DisplayName>
+			<Description>The Hall of the Naja reduces Unrest and increases Faith.  All Black Naja units recieve +20% Accuracy and are automatically healed at the start of tactical battle.  In addition it provides a Black Naja defender when the city is attacked.</Description>
+			<AllowedPerFaction>1</AllowedPerFaction>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<UpgradeTier>3</UpgradeTier>
+			<Prereq>
+				<Type>Resource</Type>
+				<Attribute>TileYieldEssence</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionSerpent</Attribute>
+				<Target>Player</Target>
+			</Prereq>	
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Arcane_Mastery</Attribute>
+			</Prereq>
+			<LaborToBuild>627</LaborToBuild>
+			<GameModifier>
+				<ModType>ConstructionResourceCost</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>-75</Value>
+			</GameModifier>	
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Unrest</Attribute>
+				<Value>-15</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>-15% Unrest</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Unrest</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>8</Value>
+				<Provides>+8 Fame</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+				<UpgradeComparisonText>Fame</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>3</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+3 Faith</Provides>
+				<UpgradeComparisonID>9</UpgradeComparisonID>
+			</GameModifier> 
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>LimitedUnitCap</Attribute>	
+				<StrVal>JB_BlackNaja</StrVal>
+				<Value>1</Value>
+				<UpgradeComparisonID>8</UpgradeComparisonID>
+				<UpgradeComparisonText>Black Naja</UpgradeComparisonText>
+				<Provides>Recruit a Black Naja</Provides>
+			</GameModifier>		
+			<GameModifier>
+				<ModType>CityDefenseSummon</ModType>
+				<Attribute>SummonUnit</Attribute>
+				<StrVal>Black Naja</StrVal>
+				<Value>2</Value>
+				<UpgradeComparisonID>7</UpgradeComparisonID>
+				<Provides>+2 Defending Black Naja</Provides>
+				<UnitClass>JB_BlackNaja</UnitClass>
+			</GameModifier>			
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_UnitStat_JB_BlackNaja_Effect_TacticalAutoHeal</StrVal>
+				<Value>100</Value>
+				<Provides>All faction Black Naja units are fully healed at the start of tactical battle</Provides>
+			</GameModifier>				
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_UnitStat_JB_BlackNaja_Effect_AdditiveAccuracy</StrVal>
+				<Value>2000</Value>
+				<Provides>All faction Black Naja units recieve a +20% Accuracy bonus in tactical battle</Provides>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>60</AIPriority>
+				<AITag>Workshop</AITag>
+			</AIData>
+			<ArtDef>JB_Art_TempleOfShadow</ArtDef>
+		</ImprovementType>
+		<ImprovementType InternalName="JB_Temple_SerpentSanctorium">
+			<DisplayName>Serpent Sanctorium</DisplayName>
+			<Description>The Serpent Sanctorium reduces unrest and increases research in the city you build it in.  In addition it provides an increase to Faith production in all of a nation's cities.</Description>
+			<AllowedPerFaction>1</AllowedPerFaction>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<UpgradeTier>3</UpgradeTier>
+			<Prereq>
+				<Type>Resource</Type>
+				<Attribute>TileYieldEssence</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionSerpent</Attribute>
+				<Target>Player</Target>
+			</Prereq>	
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Arcane_Mastery</Attribute>
+			</Prereq>
+			<LaborToBuild>811</LaborToBuild>
+			<GameModifier>
+				<ModType>ConstructionResourceCost</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>-75</Value>
+			</GameModifier>	
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Unrest</Attribute>
+				<Value>-15</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>-15% Unrest</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Unrest</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>8</Value>
+				<Provides>+8 Fame</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+				<UpgradeComparisonText>Fame</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>3</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+3 Faith</Provides>
+				<UpgradeComparisonID>9</UpgradeComparisonID>
+			</GameModifier> 
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>LimitedUnitCap</Attribute>	
+				<StrVal>JB_BlackNaja</StrVal>
+				<Value>1</Value>
+				<UpgradeComparisonID>8</UpgradeComparisonID>
+				<UpgradeComparisonText>Black Naja</UpgradeComparisonText>
+				<Provides>Recruit a Black Naja</Provides>
+			</GameModifier>		
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Research</Attribute>
+				<Value>2</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+2 Research</Provides>
+				<UpgradeComparisonID>7</UpgradeComparisonID>
+			</GameModifier>	
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_JB_Faith</StrVal>
+				<Value>5</Value>
+				<Provides>+5% Faith in all your cities</Provides>
+			</GameModifier>			
+			<AIData AIPersonality="AI_General">
+				<AIPriority>60</AIPriority>
+				<AITag>Workshop</AITag>
+			</AIData>
+			<ArtDef>JB_Art_TempleOfShadow</ArtDef>
+		</ImprovementType>
+	</Container_ReligionSerpent>	
+	<Container_ShardReligons>
+		<ImprovementType InternalName="JB_TempleOfHarmony">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionAir</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionEarth</Attribute>
+				<Target>Player</Target>
+			</Prereq>	
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionFire</Attribute>
+				<Target>Player</Target>
+			</Prereq>	
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionWater</Attribute>
+				<Target>Player</Target>
+			</Prereq>	
+		</ImprovementType>
+		<ImprovementType InternalName="JB_TempleOfStrife">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionAir</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionEarth</Attribute>
+				<Target>Player</Target>
+			</Prereq>	
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionFire</Attribute>
+				<Target>Player</Target>
+			</Prereq>	
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionWater</Attribute>
+				<Target>Player</Target>
+			</Prereq>	
+		</ImprovementType>
+		<ImprovementType InternalName="JB_AdeptsAir_Building">
+			<DisplayName>Sky Sanctum</DisplayName>
+			<Description>Establishing a Sky Sanctum in a city assists channelers in harnessing air energy, as well as providing a bonus to defending units.  Additionally, once the Sky Sanctum is constructed, a previously undiscovered Air Shard will be revealed nearby.</Description>
+			<AllowedPerFaction>1</AllowedPerFaction>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<UpgradeTier>1</UpgradeTier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionAir</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+			<LaborToBuild>90</LaborToBuild>
+			<GameModifier>
+				<ModType>ConstructionResourceCost</ModType>
+				<Attribute>JB_AdeptAirUniqueBuilding</Attribute>
+				<Value>-1</Value>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Map</ModType>
+				<Attribute>CreateGoodieHut</Attribute>
+				<StrVal>Undiscovered Air Shard</StrVal>
+				<Unitclass>JB_Undiscovered_Shard_Air</Unitclass>
+				<Radius>3</Radius>
+				<Provides>Creates an Air Shard resource nearby</Provides>
+			</GameModifier>			
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>AirMana</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Air Power</Provides>
+				<UpgradeComparisonID>3</UpgradeComparisonID>
+				<UpgradeComparisonText>Air Power</UpgradeComparisonText>
+			</GameModifier>		
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>AdjustDefendingUnit</Attribute>
+				<StrVal>UnitStat_CombatSpeed</StrVal>
+				<Value>2</Value>
+				<Provides>+2 Initiative for Defending Units</Provides>
+				<UpgradeComparisonID>4</UpgradeComparisonID>
+				<UpgradeComparisonText>Defending Initiative</UpgradeComparisonText>
+			</GameModifier>			
+			<AIData AIPersonality="AI_General">
+				<AIPriority>50</AIPriority>
+				<AITag>CommandPost</AITag>
+			</AIData>
+			<ArtDef>JB_Art_AdeptsAirBuilding</ArtDef>
+		</ImprovementType>	
+		<ImprovementType InternalName="JB_AdeptsEarth_Building">
+			<DisplayName>Hallowed Stone</DisplayName>
+			<Description>Establishing a Hallowed Stone in a city assists channelers in harnessing earth energy, as well as providing a bonus to defending units.  Additionally, once the Hallowed Stone is constructed, a previously undiscovered Earth Shard will be revealed nearby.</Description>
+			<AllowedPerFaction>1</AllowedPerFaction>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<UpgradeTier>1</UpgradeTier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionEarth</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+			<LaborToBuild>90</LaborToBuild>
+			<GameModifier>
+				<ModType>ConstructionResourceCost</ModType>
+				<Attribute>JB_AdeptEarthUniqueBuilding</Attribute>
+				<Value>-1</Value>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Map</ModType>
+				<Attribute>CreateGoodieHut</Attribute>
+				<StrVal>Undiscovered Earth Shard</StrVal>
+				<Unitclass>JB_Undiscovered_Shard_Earth</Unitclass>
+				<Radius>3</Radius>
+				<Provides>Creates an Earth Shard resource nearby</Provides>
+			</GameModifier>	
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>EarthMana</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Earth Power</Provides>
+				<UpgradeComparisonID>3</UpgradeComparisonID>
+				<UpgradeComparisonText>Earth Power</UpgradeComparisonText>
+			</GameModifier>		
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>AdjustDefendingUnit</Attribute>
+				<StrVal>UnitStat_HitPoints</StrVal>
+				<Value>2</Value>
+				<Provides>+2 Hit Points for Defending Units</Provides>
+				<UpgradeComparisonID>4</UpgradeComparisonID>
+				<UpgradeComparisonText>Defending Unit Hit Points</UpgradeComparisonText>
+			</GameModifier>				
+			<AIData AIPersonality="AI_General">
+				<AIPriority>50</AIPriority>
+				<AITag>CommandPost</AITag>
+			</AIData>
+			<ArtDef>JB_Art_AdeptsEarthBuilding</ArtDef>
+		</ImprovementType>			
+		<ImprovementType InternalName="JB_AdeptsFire_Building">
+			<DisplayName>Sacred Flame</DisplayName>
+			<Description>Establishing a Sacred Flame in a city assists channelers in harnessing fire energy, as well as providing a bonus to defending units.  Additionally, once the Sacred Flame is constructed, a previously undiscovered Fire Shard will be revealed nearby.</Description>
+			<AllowedPerFaction>1</AllowedPerFaction>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<UpgradeTier>1</UpgradeTier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionFire</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+			<LaborToBuild>90</LaborToBuild>
+			<GameModifier>
+				<ModType>ConstructionResourceCost</ModType>
+				<Attribute>JB_AdeptFireUniqueBuilding</Attribute>
+				<Value>-1</Value>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Map</ModType>
+				<Attribute>CreateGoodieHut</Attribute>
+				<StrVal>Undiscovered Fire Shard</StrVal>
+				<Unitclass>JB_Undiscovered_Shard_Fire</Unitclass>
+				<Radius>3</Radius>
+				<Provides>Creates a Fire Shard resource nearby</Provides>
+			</GameModifier>	
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>FireMana</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Fire Power</Provides>
+				<UpgradeComparisonID>3</UpgradeComparisonID>
+				<UpgradeComparisonText>Fire Power</UpgradeComparisonText>
+			</GameModifier>		
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>AdjustDefendingUnit</Attribute>
+				<StrVal>UnitStat_Attack_Fire</StrVal>
+				<Value>2</Value>
+				<Provides>+2 Fire Attack for Defending Units</Provides>
+				<UpgradeComparisonID>4</UpgradeComparisonID>
+				<UpgradeComparisonText>Defending Unit Fire Attack</UpgradeComparisonText>
+			</GameModifier>			
+			<AIData AIPersonality="AI_General">
+				<AIPriority>50</AIPriority>
+				<AITag>CommandPost</AITag>
+			</AIData>
+			<ArtDef>JB_Art_AdeptsFireBuilding</ArtDef>
+		</ImprovementType>				
+		<ImprovementType InternalName="JB_AdeptsWater_Building">
+			<DisplayName>Spirit Pool</DisplayName>
+			<Description>Establishing a Spirit Pool in a city assists channelers in harnessing water energy, as well as providing a bonus to defending units.  Additionally, once the Spirit Pool is constructed, a previously undiscovered Water Shard will be revealed nearby.</Description>
+			<AllowedPerFaction>1</AllowedPerFaction>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<UpgradeTier>1</UpgradeTier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionWater</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+			<LaborToBuild>90</LaborToBuild>
+			<GameModifier>
+				<ModType>ConstructionResourceCost</ModType>
+				<Attribute>JB_AdeptWaterUniqueBuilding</Attribute>
+				<Value>-1</Value>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Map</ModType>
+				<Attribute>CreateGoodieHut</Attribute>
+				<StrVal>Undiscovered Water Shard</StrVal>
+				<Unitclass>JB_Undiscovered_Shard_Water</Unitclass>
+				<Radius>3</Radius>
+				<Provides>Creates a Water Shard resource nearby</Provides>
+			</GameModifier>	
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>WaterMana</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Water Power</Provides>
+				<UpgradeComparisonID>3</UpgradeComparisonID>
+				<UpgradeComparisonText>Water Power</UpgradeComparisonText>
+			</GameModifier>		
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>AdjustDefendingUnit</Attribute>
+				<StrVal>UnitStat_Dodge</StrVal>
+				<Value>10</Value>
+				<Provides>+10 Dodge for Defending Units</Provides>
+				<UpgradeComparisonID>4</UpgradeComparisonID>
+				<UpgradeComparisonText>Defending Unit Dodge</UpgradeComparisonText>
+			</GameModifier>				
+			<AIData AIPersonality="AI_General">
+				<AIPriority>50</AIPriority>
+				<AITag>CommandPost</AITag>
+			</AIData>
+			<ArtDef>JB_Art_AdeptsWaterBuilding</ArtDef>
+		</ImprovementType>		
+	</Container_ShardReligons>
+	<Container_ReligionBeast>			
+		<ImprovementType InternalName="Cleric">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionBeast</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="Shrine">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionBeast</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="TempleOfEssence">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionBeast</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="SacrificialAltar">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionBeast</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>		
+		<ImprovementType InternalName="JB_TempleOfHarmony">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionBeast</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="JB_TempleOfStrife">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionBeast</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>		
+		<ImprovementType InternalName="JB_Cleric_ReligionBeast">
+			<DisplayName>Cleric</DisplayName>
+			<Description>Clerics provide healing and aid to the city's inhabitants.  They reduce unrest in the city and increase your Fame.</Description>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<UpgradesToImprovement>JB_Shrine_ReligionBeast</UpgradesToImprovement>
+			<UpgradeTier>1</UpgradeTier>
+			<HideInHiergamenon>1</HideInHiergamenon>
+			<Prereq>
+				<Type>Resource</Type>
+				<Attribute>TileYieldEssence</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionBeast</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+			<LaborToBuild>180</LaborToBuild>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Unrest</Attribute>
+				<Value>-5</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>-5% Unrest</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Unrest</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>2</Value>
+				<Provides>+2 Fame</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+				<UpgradeComparisonText>Fame</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Faith</Provides>
+				<UpgradeComparisonID>9</UpgradeComparisonID>
+			</GameModifier> 
+			<AIData AIPersonality="AI_General">
+				<AIPriority>50</AIPriority>
+				<AITag>Workshop</AITag>
+				<AIEarlyBuildUpMultiplier>5</AIEarlyBuildUpMultiplier>	
+			</AIData>
+			<ArtDef>Art_Cleric</ArtDef>
+		</ImprovementType>
+		<ImprovementType InternalName="JB_Shrine_ReligionBeast">
+			<DisplayName>Shrine</DisplayName>
+			<Description>The rituals of Shrines provide peace of mind for a city's citizens, reducing Unrest and improving your Fame.</Description>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<UpgradesToImprovement>JB_SacrificialAltar_ReligionBeast</UpgradesToImprovement>
+			<UpgradeTier>2</UpgradeTier>
+			<HideInHiergamenon>1</HideInHiergamenon>
+			<Prereq>
+				<Type>Resource</Type>
+				<Attribute>TileYieldEssence</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionBeast</Attribute>
+				<Target>Player</Target>
+			</Prereq>	
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Rituals</Attribute>
+			</Prereq>
+			<LaborToBuild>268</LaborToBuild>
+			<GameModifier>
+				<ModType>ConstructionResourceCost</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>-30</Value>
+			</GameModifier>	
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Unrest</Attribute>
+				<Value>-10</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>-10% Unrest</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Unrest</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>4</Value>
+				<Provides>+4 Fame</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+				<UpgradeComparisonText>Fame</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>2</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+2 Faith</Provides>
+				<UpgradeComparisonID>9</UpgradeComparisonID>
+			</GameModifier>    
+			<AIData AIPersonality="AI_General">
+				<AIPriority>10</AIPriority>
+				<AITag>Workshop</AITag>
+			</AIData>
+			<ArtDef>Art_Shrine</ArtDef>
+		</ImprovementType>
+		<ImprovementType InternalName="JB_SacrificialAltar_ReligionBeast">
+			<DisplayName>Sacrificial Altar</DisplayName>
+			<Description>The city's weak are sacrificed, reducing its Growth. All units trained here are infused with Beastic energies, granting them a bonus to Hit Points and Attack. In addition a Beast spawns in the city if it is attacked.</Description>
+			<AllowedPerFaction>1</AllowedPerFaction>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<UpgradeTier>3</UpgradeTier>
+			<Prereq>
+				<Type>Allegiance</Type>
+				<Attribute>Empire</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>Resource</Type>
+				<Attribute>TileYieldEssence</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionBeast</Attribute>
+				<Target>Player</Target>
+			</Prereq>	
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Rituals</Attribute>
+			</Prereq>
+			<LaborToBuild>627</LaborToBuild>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Unrest</Attribute>
+				<Value>-15</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>-15% Unrest</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Unrest</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>8</Value>
+				<Provides>+8 Fame</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+				<UpgradeComparisonText>Fame</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Prestige</Attribute>
+				<Value>-1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>-1 Growth</Provides>
+				<UpgradeComparisonID>3</UpgradeComparisonID>
+			</GameModifier> 
+			<GameModifier>
+				<ModType>CityTrainingBonus</ModType>
+				<Attribute>TrainingBonus_ApplyUnitModifier_Add</Attribute>
+				<StrVal>UnitStat_HitPoints</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Hit Points for Trained Units</Provides>
+				<UpgradeComparisonID>4</UpgradeComparisonID>
+				<UpgradeComparisonText>Trained Units Hit Points</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>CityTrainingBonus</ModType>
+				<Attribute>TrainingBonus_ApplyUnitModifier_Add</Attribute>
+				<StrVal>UnitStat_Attack_Boost</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Attack for Trained Units</Provides>
+				<UpgradeComparisonID>5</UpgradeComparisonID>
+				<UpgradeComparisonText>Trained Unit Attack</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>CityDefenseSummon</ModType>
+				<Attribute>SummonUnit</Attribute>
+				<StrVal>Assassin Beast</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Defending Assassin Beast</Provides>
+				<UnitClass>AssassinBeast</UnitClass>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+				<AITag>CommandPost</AITag>
+			</AIData>
+			<ArtDef>SacrificialAltar_ArtDef</ArtDef>
+		</ImprovementType>
+ 	</Container_ReligionBeast>	
+	<Container_ReligionDemon>
+		<!-- Note: Wall changes are cosmetic only, 
+			block them from other faction traits that modify walls -->
+		<ImprovementType InternalName="HedgeWall">				
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionDemon</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="WoodenWall">				
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionDemon</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="JB_WoodenWall_Town">				
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionDemon</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>		
+		<ImprovementType InternalName="Fort">				
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionDemon</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="Castle">				
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionDemon</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="JB_HedgeWall_ReligionDemon">
+			<DisplayName>Hedge Wall</DisplayName>
+			<Description>Hedge Walls improve a city's defenses by providing them with additional units and giving an Initiative bonus to all City Defenders.</Description>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<RequiresCityImprovement>1</RequiresCityImprovement>
+			<RequiredImprovement>Fortress</RequiredImprovement>
+			<UpgradesToImprovement>JB_Fort_ReligionDemon</UpgradesToImprovement>
+			<UpgradeTier>1</UpgradeTier>
+			<HideInHiergamenon>1</HideInHiergamenon>
+			<Prereq>
+				<Type>Allegiance</Type>
+				<Attribute>Kingdom</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionDemon</Attribute>
+				<Target>Player</Target>
+			</Prereq>		
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_FirestoneFortress</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_Frostborn</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_FortifiedConclaves</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_FortifiedTowns</Attribute>
+				<Target>Player</Target>
+			</Prereq>	
+			<LaborToBuild>224</LaborToBuild>
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>AdjustDefendingUnit</Attribute>
+				<StrVal>UnitStat_CombatSpeed</StrVal>
+				<Value>2</Value>
+				<Provides>+2 Initiative for Defending Units</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Defending Unit Initiative</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>UpgradeCityWalls</Attribute>
+				<StrVal>CityWalls_Hedge</StrVal>
+			</GameModifier>
+			<GameModifier>
+				<ModType>CityDefenseSummon</ModType>
+				<Attribute>SummonUnitByClass</Attribute>
+				<Value>2</Value>
+				<Multiplier>3</Multiplier>
+				<Provides>+2 City Defender Groups</Provides>
+				<UnitClass>CityDefender</UnitClass>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+				<AITag>Defensive</AITag>
+				<AIAtWarMultiplier>3</AIAtWarMultiplier>
+			</AIData>
+			<ArtDef>HedgeWall_ArtDef</ArtDef>
+		</ImprovementType>		
+		<ImprovementType InternalName="JB_WoodenWall_ReligionDemon">
+			<DisplayName>Wooden Wall</DisplayName>
+			<Description>Wooden Walls improve a city's defenses by providing it with additional units and giving an Initiative bonus to all City Defenders.</Description>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<RequiresCityImprovement>1</RequiresCityImprovement>
+			<RequiredImprovement>Fortress</RequiredImprovement>
+			<UpgradesToImprovement>JB_Castle_ReligionDemon</UpgradesToImprovement>
+			<UpgradeTier>1</UpgradeTier>
+			<HideInHiergamenon>1</HideInHiergamenon>
+			<Prereq>
+				<Type>Allegiance</Type>
+				<Attribute>Empire</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionDemon</Attribute>
+				<Target>Player</Target>
+			</Prereq>		
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_FirestoneFortress</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_Frostborn</Attribute>
+				<Target>Player</Target>
+			</Prereq>	
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_FortifiedConclaves</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_FortifiedTowns</Attribute>
+				<Target>Player</Target>
+			</Prereq>	
+			<LaborToBuild>224</LaborToBuild>
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>UpgradeCityWalls</Attribute>
+				<StrVal>JB_FallenCityWalls_DemonPicket</StrVal>
+			</GameModifier>
+			<GameModifier>
+				<ModType>CityDefenseSummon</ModType>
+				<Attribute>SummonUnitByClass</Attribute>
+				<Value>2</Value>
+				<Multiplier>3</Multiplier>
+				<Provides>+2 City Defender Groups</Provides>
+				<UnitClass>CityDefender</UnitClass>
+			</GameModifier>
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>AdjustDefendingUnit</Attribute>
+				<StrVal>UnitStat_CombatSpeed</StrVal>
+				<Value>2</Value>
+				<Provides>+2 Initiative for Defending Units</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Defending Unit Initiative</UpgradeComparisonText>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+				<AITag>Defensive</AITag>
+				<AIAtWarMultiplier>2</AIAtWarMultiplier>
+			</AIData>
+			<ArtDef>WoodenWall_ArtDef</ArtDef>
+		</ImprovementType>	
+		<ImprovementType InternalName="JB_WoodenWall_Town_ReligionDemon">
+			<DisplayName>Wooden Wall</DisplayName>
+			<Description>Wooden Walls improve a city's defenses by providing them with additional units and giving an Initiative bonus to all City Defenders.</Description>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<RequiresCityImprovement>1</RequiresCityImprovement>
+			<RequiredImprovement>TradeGuild</RequiredImprovement>
+			<UpgradeTier>1</UpgradeTier>		
+			<HideInHiergamenon>1</HideInHiergamenon>
+			<Prereq>
+				<Type>Allegiance</Type>
+				<Attribute>Empire</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionDemon</Attribute>
+				<Target>Player</Target>
+			</Prereq>		
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_FirestoneFortress</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_Frostborn</Attribute>
+				<Target>Player</Target>
+			</Prereq>	
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_FortifiedConclaves</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_FortifiedTowns</Attribute>
+				<Target>Player</Target>
+			</Prereq>	
+			<LaborToBuild>224</LaborToBuild>
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>UpgradeCityWalls</Attribute>
+				<StrVal>JB_FallenCityWalls_DemonPicket</StrVal>
+			</GameModifier>
+			<GameModifier>
+				<ModType>CityDefenseSummon</ModType>
+				<Attribute>SummonUnitByClass</Attribute>
+				<Value>2</Value>
+				<Multiplier>3</Multiplier>
+				<Provides>+2 City Defender Groups</Provides>
+				<UnitClass>CityDefender</UnitClass>
+			</GameModifier>
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>AdjustDefendingUnit</Attribute>
+				<StrVal>UnitStat_CombatSpeed</StrVal>
+				<Value>2</Value>
+				<Provides>+2 Initiative for Defending Units</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Defending Unit Initiative</UpgradeComparisonText>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+				<AITag>Defensive</AITag>
+				<AIAtWarMultiplier>2</AIAtWarMultiplier>
+			</AIData>
+			<ArtDef>WoodenWall_ArtDef</ArtDef>
+		</ImprovementType>
+		<ImprovementType InternalName="JB_Fort_ReligionDemon">
+			<DisplayName>Fort</DisplayName>
+			<Description>Forts bolster a city's defenses by providing it with Archers and giving an Initiative bonus to City Defenders.</Description>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<RequiresCityImprovement>1</RequiresCityImprovement>
+			<RequiredImprovement>Fortress</RequiredImprovement>
+			<UpgradeTier>2</UpgradeTier>
+			<HideInHiergamenon>1</HideInHiergamenon>
+			<Prereq>
+				<Type>Allegiance</Type>
+				<Attribute>Kingdom</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionDemon</Attribute>
+				<Target>Player</Target>
+			</Prereq>		
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_FirestoneFortress</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_Frostborn</Attribute>
+				<Target>Player</Target>
+			</Prereq>		
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_FortifiedConclaves</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_FortifiedTowns</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Construction</Attribute>
+			</Prereq>
+			<LaborToBuild>627</LaborToBuild>
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>AdjustDefendingUnit</Attribute>
+				<StrVal>UnitStat_CombatSpeed</StrVal>
+				<Value>3</Value>
+				<Provides>+3 Initiative for Defending Units</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Defending Unit Initiative</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>UpgradeCityWalls</Attribute>
+				<StrVal>JB_CityWalls_Fallen_DemonWall</StrVal>
+			</GameModifier>
+			<GameModifier>
+				<ModType>CityDefenseSummon</ModType>
+				<Attribute>SummonUnitByClass</Attribute>
+				<Value>2</Value>
+				<Multiplier>3</Multiplier>
+				<Provides>+2 City Defender Groups</Provides>
+				<UnitClass>CityDefender</UnitClass>
+			</GameModifier>
+			<GameModifier>
+				<ModType>CityDefenseSummon</ModType>
+				<Attribute>SummonUnitByClass</Attribute>
+				<Value>1</Value>
+				<Multiplier>3</Multiplier>
+				<Provides>+1 City Archer Group</Provides>
+				<UnitClass>CityArcher</UnitClass>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+				<AITag>Defensive</AITag>
+			</AIData>
+			<ArtDef>Art_Castle</ArtDef>
+		</ImprovementType>
+		<ImprovementType InternalName="JB_Castle_ReligionDemon">
+			<DisplayName>Castle</DisplayName>
+			<Description>Castles bolster a city's defenses by providing it with Archers and giving an Initiative bonus to City Defenders.</Description>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<RequiresCityImprovement>1</RequiresCityImprovement>
+			<RequiredImprovement>Fortress</RequiredImprovement>
+			<UpgradeTier>2</UpgradeTier>
+			<HideInHiergamenon>1</HideInHiergamenon>
+			<Prereq>
+				<Type>Allegiance</Type>
+				<Attribute>Empire</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionDemon</Attribute>
+				<Target>Player</Target>
+			</Prereq>		
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_FirestoneFortress</Attribute>
+				<Target>Player</Target>
+			</Prereq>		
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_Frostborn</Attribute>
+				<Target>Player</Target>
+			</Prereq>		
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_FortifiedConclaves</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_FortifiedTowns</Attribute>
+				<Target>Player</Target>
+			</Prereq>	
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Construction</Attribute>
+			</Prereq>
+			<LaborToBuild>627</LaborToBuild>
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>AdjustDefendingUnit</Attribute>
+				<StrVal>UnitStat_CombatSpeed</StrVal>
+				<Value>3</Value>
+				<Provides>+3 Initiative for Defending Units</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Defending Unit Initiative</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>City</ModType>
+				<Attribute>UpgradeCityWalls</Attribute>
+				<StrVal>JB_CityWalls_Fallen_DemonWall</StrVal>
+			</GameModifier>
+			<GameModifier>
+				<ModType>CityDefenseSummon</ModType>
+				<Attribute>SummonUnitByClass</Attribute>
+				<Value>2</Value>
+				<Multiplier>4</Multiplier>
+				<Provides>+2 City Defender Groups</Provides>
+				<UnitClass>CityDefender</UnitClass>
+			</GameModifier>
+			<GameModifier>
+				<ModType>CityDefenseSummon</ModType>
+				<Attribute>SummonUnitByClass</Attribute>
+				<Value>1</Value>
+				<Multiplier>3</Multiplier>
+				<Provides>+1 City Archer Group</Provides>
+				<UnitClass>CityArcher</UnitClass>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+				<AITag>Defensive</AITag>
+			</AIData>
+			<ArtDef>Art_Castle</ArtDef>
+		</ImprovementType>
+		<!-- End cosmetic wall changes -->
+		<ImprovementType InternalName="Cleric">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionDemon</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="Shrine">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionDemon</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="TempleOfEssence">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionDemon</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="SacrificialAltar">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionDemon</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>		
+		<ImprovementType InternalName="JB_TempleOfHarmony">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionDemon</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="JB_TempleOfStrife">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionDemon</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>		
+		<ImprovementType InternalName="JB_Cleric_ReligionDemon">
+			<DisplayName>Cleric</DisplayName>
+			<Description>Clerics provide healing and aid to the city's inhabitants.  They reduce unrest in the city and increase your Fame.</Description>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<UpgradesToImprovement>JB_Shrine_ReligionDemon</UpgradesToImprovement>
+			<UpgradeTier>1</UpgradeTier>
+			<HideInHiergamenon>1</HideInHiergamenon>
+			<Prereq>
+				<Type>Resource</Type>
+				<Attribute>TileYieldEssence</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionDemon</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+			<LaborToBuild>180</LaborToBuild>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Unrest</Attribute>
+				<Value>-5</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>-5% Unrest</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Unrest</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>2</Value>
+				<Provides>+2 Fame</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+				<UpgradeComparisonText>Fame</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Faith</Provides>
+				<UpgradeComparisonID>9</UpgradeComparisonID>
+			</GameModifier> 
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>LimitedUnitCap</Attribute>	
+				<StrVal>JB_Martyr_Group</StrVal>
+				<Value>1</Value>
+				<UpgradeComparisonID>8</UpgradeComparisonID>
+				<UpgradeComparisonText>Martyr</UpgradeComparisonText>
+				<Provides>Recruit a Martyr</Provides>
+			</GameModifier>	
+			<AIData AIPersonality="AI_General">
+				<AIPriority>50</AIPriority>
+				<AITag>Workshop</AITag>
+				<AIEarlyBuildUpMultiplier>5</AIEarlyBuildUpMultiplier>	
+			</AIData>
+			<ArtDef>Art_Cleric</ArtDef>
+		</ImprovementType>
+		<ImprovementType InternalName="JB_Shrine_ReligionDemon">
+			<DisplayName>Shrine</DisplayName>
+			<Description>The rituals of Shrines provide peace of mind for a city's citizens, reducing Unrest and improving your Fame.</Description>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<UpgradesToImprovement>JB_SacrificialAltar_ReligionDemon</UpgradesToImprovement>
+			<UpgradeTier>2</UpgradeTier>
+			<HideInHiergamenon>1</HideInHiergamenon>
+			<Prereq>
+				<Type>Resource</Type>
+				<Attribute>TileYieldEssence</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionDemon</Attribute>
+				<Target>Player</Target>
+			</Prereq>	
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Rituals</Attribute>
+			</Prereq>
+			<LaborToBuild>268</LaborToBuild>
+			<GameModifier>
+				<ModType>ConstructionResourceCost</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>-30</Value>
+			</GameModifier>	
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Unrest</Attribute>
+				<Value>-10</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>-10% Unrest</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Unrest</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>4</Value>
+				<Provides>+4 Fame</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+				<UpgradeComparisonText>Fame</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>2</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+2 Faith</Provides>
+				<UpgradeComparisonID>9</UpgradeComparisonID>
+			</GameModifier>    
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>LimitedUnitCap</Attribute>	
+				<StrVal>JB_Martyr_Squad</StrVal>
+				<Value>1</Value>
+				<UpgradeComparisonID>8</UpgradeComparisonID>
+				<UpgradeComparisonText>Martyr</UpgradeComparisonText>
+				<Provides>Recruit a Martyr</Provides>
+			</GameModifier>	
+			<AIData AIPersonality="AI_General">
+				<AIPriority>30</AIPriority>
+				<AITag>Workshop</AITag>
+			</AIData>
+			<ArtDef>Art_Shrine</ArtDef>
+		</ImprovementType>
+		<ImprovementType InternalName="JB_SacrificialAltar_ReligionDemon">
+			<DisplayName>Sacrificial Altar</DisplayName>
+			<Description>The city's weak are sacrificed, reducing its Growth. All units trained here are infused with demonic energies, granting them a bonus to Hit Points and Attack. In addition a Demon spawns in the city if it is attacked.</Description>
+			<AllowedPerFaction>1</AllowedPerFaction>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<UpgradeTier>3</UpgradeTier>
+			<HideInHiergamenon>1</HideInHiergamenon>
+			<Prereq>
+				<Type>Allegiance</Type>
+				<Attribute>Empire</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>Resource</Type>
+				<Attribute>TileYieldEssence</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionDemon</Attribute>
+				<Target>Player</Target>
+			</Prereq>	
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Rituals</Attribute>
+			</Prereq>
+			<LaborToBuild>627</LaborToBuild>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Unrest</Attribute>
+				<Value>-15</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>-15% Unrest</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Unrest</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>8</Value>
+				<Provides>+8 Fame</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+				<UpgradeComparisonText>Fame</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Prestige</Attribute>
+				<Value>-1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>-1 Growth</Provides>
+				<UpgradeComparisonID>3</UpgradeComparisonID>
+			</GameModifier> 
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>LimitedUnitCap</Attribute>	
+				<StrVal>JB_Martyr_Group</StrVal>
+				<Value>1</Value>
+				<UpgradeComparisonID>8</UpgradeComparisonID>
+				<UpgradeComparisonText>Martyr</UpgradeComparisonText>
+				<Provides>Recruit a Martyr</Provides>
+			</GameModifier>	
+			<GameModifier>
+				<ModType>CityTrainingBonus</ModType>
+				<Attribute>TrainingBonus_ApplyUnitModifier_Add</Attribute>
+				<StrVal>UnitStat_HitPoints</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Hit Points for Trained Units</Provides>
+				<UpgradeComparisonID>4</UpgradeComparisonID>
+				<UpgradeComparisonText>Trained Units Hit Points</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>CityTrainingBonus</ModType>
+				<Attribute>TrainingBonus_ApplyUnitModifier_Add</Attribute>
+				<StrVal>UnitStat_Attack_Boost</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Attack for Trained Units</Provides>
+				<UpgradeComparisonID>5</UpgradeComparisonID>
+				<UpgradeComparisonText>Trained Unit Attack</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>CityDefenseSummon</ModType>
+				<Attribute>SummonUnit</Attribute>
+				<StrVal>Assassin Demon</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Defending Assassin Demon</Provides>
+				<UnitClass>AssassinDemon</UnitClass>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+				<AITag>CommandPost</AITag>
+			</AIData>
+			<ArtDef>SacrificialAltar_ArtDef</ArtDef>
+		</ImprovementType>
+	</Container_ReligionDemon>	
+	<Container_ReligionSpiderTrait>
+		<ImprovementType InternalName="Cleric">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_CultofaHundredEyes</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="Shrine">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_CultofaHundredEyes</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="TempleOfEssence">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_CultofaHundredEyes</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="SacrificialAltar">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_CultofaHundredEyes</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>		
+		<ImprovementType InternalName="JB_TempleOfHarmony">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_CultofaHundredEyes</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>
+		<ImprovementType InternalName="JB_TempleOfStrife">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_CultofaHundredEyes</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+		</ImprovementType>		
+		<ImprovementType InternalName="JB_Cleric_ReligionSpider">
+			<DisplayName>Cleric</DisplayName>
+			<Description>Clerics provide healing and aid to the city's inhabitants.  They reduce unrest in the city and increase your Fame.</Description>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<UpgradesToImprovement>JB_Shrine_ReligionSpider</UpgradesToImprovement>
+			<UpgradeTier>1</UpgradeTier>
+			<HideInHiergamenon>1</HideInHiergamenon>
+			<Prereq>
+				<Type>Resource</Type>
+				<Attribute>TileYieldEssence</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_CultofaHundredEyes</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+			<LaborToBuild>180</LaborToBuild>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Unrest</Attribute>
+				<Value>-5</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>-5% Unrest</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Unrest</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>2</Value>
+				<Provides>+2 Fame</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+				<UpgradeComparisonText>Fame</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Faith</Provides>
+				<UpgradeComparisonID>9</UpgradeComparisonID>
+			</GameModifier> 
+			<AIData AIPersonality="AI_General">
+				<AIPriority>50</AIPriority>
+				<AITag>Workshop</AITag>
+				<AIEarlyBuildUpMultiplier>5</AIEarlyBuildUpMultiplier>	
+			</AIData>
+			<ArtDef>Art_Cleric</ArtDef>
+		</ImprovementType>
+		<ImprovementType InternalName="JB_Shrine_ReligionSpider">
+			<DisplayName>Shrine</DisplayName>
+			<Description>The rituals of Shrines provide peace of mind for a city's citizens, reducing Unrest and improving your Fame.</Description>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<UpgradesToImprovement>JB_SacrificialAltar_ReligionSpider</UpgradesToImprovement>
+			<UpgradeTier>2</UpgradeTier>
+			<HideInHiergamenon>1</HideInHiergamenon>
+			<Prereq>
+				<Type>Resource</Type>
+				<Attribute>TileYieldEssence</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_CultofaHundredEyes</Attribute>
+				<Target>Player</Target>
+			</Prereq>	
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Rituals</Attribute>
+			</Prereq>
+			<LaborToBuild>268</LaborToBuild>
+			<GameModifier>
+				<ModType>ConstructionResourceCost</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>-30</Value>
+			</GameModifier>	
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Unrest</Attribute>
+				<Value>-10</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>-10% Unrest</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Unrest</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>4</Value>
+				<Provides>+4 Fame</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+				<UpgradeComparisonText>Fame</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_Faith</Attribute>
+				<Value>2</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+2 Faith</Provides>
+				<UpgradeComparisonID>9</UpgradeComparisonID>
+			</GameModifier>    
+			<AIData AIPersonality="AI_General">
+				<AIPriority>30</AIPriority>
+				<AITag>Workshop</AITag>
+			</AIData>
+			<ArtDef>Art_Shrine</ArtDef>
+		</ImprovementType>
+		<ImprovementType InternalName="JB_SacrificialAltar_ReligionSpider">
+			<DisplayName>Sacrificial Altar</DisplayName>
+			<Description>The city's weak are sacrificed, reducing its Growth. All units trained here are infused with demonic energies, granting them a bonus to Hit Points and Attack. In addition a Demon spawns in the city if it is attacked.</Description>
+			<AllowedPerFaction>1</AllowedPerFaction>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<UpgradeTier>3</UpgradeTier>
+			<Prereq>
+				<Type>Allegiance</Type>
+				<Attribute>Empire</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>Resource</Type>
+				<Attribute>TileYieldEssence</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_CultofaHundredEyes</Attribute>
+				<Target>Player</Target>
+			</Prereq>	
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Rituals</Attribute>
+			</Prereq>
+			<LaborToBuild>627</LaborToBuild>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Unrest</Attribute>
+				<Value>-15</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>-15% Unrest</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Unrest</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>8</Value>
+				<Provides>+8 Fame</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+				<UpgradeComparisonText>Fame</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Prestige</Attribute>
+				<Value>-1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>-1 Growth</Provides>
+				<UpgradeComparisonID>3</UpgradeComparisonID>
+			</GameModifier> 
+			<GameModifier>
+				<ModType>CityTrainingBonus</ModType>
+				<Attribute>TrainingBonus_ApplyUnitModifier_Add</Attribute>
+				<StrVal>UnitStat_HitPoints</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Hit Points for Trained Units</Provides>
+				<UpgradeComparisonID>4</UpgradeComparisonID>
+				<UpgradeComparisonText>Trained Units Hit Points</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>CityTrainingBonus</ModType>
+				<Attribute>TrainingBonus_ApplyUnitModifier_Add</Attribute>
+				<StrVal>UnitStat_Attack_Boost</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Attack for Trained Units</Provides>
+				<UpgradeComparisonID>5</UpgradeComparisonID>
+				<UpgradeComparisonText>Trained Unit Attack</UpgradeComparisonText>
+			</GameModifier>
+			<GameModifier>
+				<ModType>CityDefenseSummon</ModType>
+				<Attribute>SummonUnit</Attribute>
+				<StrVal>Assassin Demon</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Defending Assassin Demon</Provides>
+				<UnitClass>AssassinDemon</UnitClass>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+				<AITag>CommandPost</AITag>
+			</AIData>
+			<ArtDef>SacrificialAltar_ArtDef</ArtDef>
+		</ImprovementType>
+		<ImprovementType InternalName="Stable">
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_CultofaHundredEyes</Attribute>
+				<Target>Player</Target>
+			</Prereq>		
+		</ImprovementType>
+		<ImprovementType InternalName="JB_Stable_ReligionEyes">
+			<DisplayName>Stable (Food)</DisplayName>
+			<Description>Stables can be built on Wild Horses to provide extra food for Harrdian.</Description>
+			<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+			<RequiresResource>1</RequiresResource>
+			<SupportedResourceType>Horses</SupportedResourceType>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<UpgradeTier>1</UpgradeTier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_CultofaHundredEyes</Attribute>
+				<Target>Player</Target>
+			</Prereq>			
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Animal_Husbandry</Attribute>
+			</Prereq>
+			<LaborToBuild>160</LaborToBuild>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_JB_Harridan</StrVal>
+				<Value>5</Value>
+				<Provides>+5% Faction Harridan Production</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+				<UpgradeComparisonText>Faction Harridan Production</UpgradeComparisonText>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>10</AIPriority>
+				<AITag>Economy</AITag>
+			</AIData>
+			<ArtDef>Art_Stable</ArtDef>
+		</ImprovementType>	
+		<ImprovementType InternalName="JB_HarridanDen">
+			<DisplayName>Harridan Den</DisplayName>
+			<Description>Harridan Dens provide you with a Harridan every 5 seasons. In addition a Bound Harridan bolsters the city defences if it is attacked.</Description>
+			<RequiresCity>1</RequiresCity>
+			<BarredTerrain>River</BarredTerrain>
+			<BarredTerrain>SwampTerrain</BarredTerrain>
+			<PreferredTerrain>City</PreferredTerrain>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<PreferredTerrain>Forest</PreferredTerrain>
+			<UpgradeTier>1</UpgradeTier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_CultofaHundredEyes</Attribute>
+				<Target>Player</Target>
+			</Prereq>	
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Mounted_Warfare</Attribute>
+			</Prereq>
+			<LaborToBuild>160</LaborToBuild>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_Harridan</Attribute>
+				<Value>0.2</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Harridan per 5 Seasons</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>CityDefenseSummon</ModType>
+				<Attribute>SummonUnit</Attribute>
+				<StrVal>Bound Harridan</StrVal>
+				<Value>1</Value>
+				<Provides>+1 Defending Bound Harridan</Provides>
+				<UnitClass>Unit_BoundHarridan</UnitClass>
+			</GameModifier>			
+			<AIData AIPersonality="AI_General">
+				<AIPrefType>AIPrefType_MOUNT</AIPrefType>
+				<AIPriority>10</AIPriority>
+				<AITag>Farming</AITag>
+			</AIData>
+			<ArtDef>JB_Art_HarridanDen_ArtDef</ArtDef>
+		</ImprovementType>	
+	</Container_ReligionSpiderTrait>
+	
+
+	
+	
+</ImprovementTypes>

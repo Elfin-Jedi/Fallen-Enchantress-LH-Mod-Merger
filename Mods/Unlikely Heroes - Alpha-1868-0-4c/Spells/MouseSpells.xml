@@ -1,0 +1,203 @@
+<Spells>
+    <DataChecksum NoParse="1">
+        <Ignore>DisplayName</Ignore>
+        <Translate>DisplayName</Translate>
+    </DataChecksum>
+	<SpellDef InternalName="Bullseye">
+        <DisplayName>Bullseye</DisplayName>
+        <Description>Increased focus allows Mouse to bypass all enemy defense to hit for a max attack.  Cast time: 1</Description>
+        <Image>Ability_MarksmanI_Icon.png</Image>
+        <IconFG>Ability_MarksmanI_Icon.png</IconFG>
+        <IconColor>32,45,243</IconColor>
+        <Cooldown>5</Cooldown>
+        <CastTime>1</CastTime>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Debuff</SpellSubClass>
+        <SpellTargetType>EnemyUnit</SpellTargetType>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <IsCastable>0</IsCastable>
+        <IsSpecialAbility>1</IsSpecialAbility>
+        <UseWeaponRange>1</UseWeaponRange>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_Level</Attribute>
+			<Value>10</Value>
+		</Prereq>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_ArmorPierce</StrVal>
+            <Duration>1</Duration>
+            <Calculate InternalName="Calc" ValueOwner="TargetUnit">
+                <Expression><![CDATA[[UnitStat_ArmorPierce] * 100]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>CurHealth</Attribute>
+            <AttackStat>UnitStat_Attack_Pierce</AttackStat>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_CombinedAttack] * -1]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>
+		<AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+        <ValueCalcWrapper>
+            <ValueType>IsTargetWorthy</ValueType>
+            <Calculate InternalName="Calc" ValueOwner="TargetUnit">
+                <Expression><![CDATA[[UnitStat_Defense_Pierce]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] > 5]]></Expression>
+            </Calculate>
+        </ValueCalcWrapper>
+		</AIData>
+ 		<CasterAnimationType>26</CasterAnimationType>
+        <HitSoundFX>Spell_Blind_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>T_Blindness_Particle</EffectName>
+            <LocalPosition>0,60,0</LocalPosition>
+            <EffectScale>.3</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+	<SpellDef InternalName="CoveringFire">
+        <DisplayName>Covering Fire</DisplayName>
+        <Description>Provides a steady rain of arrows onto an enemy, resulting in a 50% penalty to Accuracy and cancels all channelled spells.  Additionally, does 25% damage of your attack.</Description>
+        <Image>T_Blindness_Painting.png</Image>
+        <IconFG>T_Blindness_Icon.png</IconFG>
+        <IconBG>T_Blindness_Icon_BG.png</IconBG>
+        <IconColor>32,45,243</IconColor>
+        <Cooldown>4</Cooldown>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitCurse</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Debuff</SpellSubClass>
+        <SpellTargetType>EnemyUnit</SpellTargetType>
+        <ApproachTargetTile>1</ApproachTargetTile>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <IsCastable>0</IsCastable>
+        <IsSpecialAbility>1</IsSpecialAbility>
+        <UseWeaponRange>1</UseWeaponRange>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_Level</Attribute>
+			<Value>4</Value>
+		</Prereq>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>CurHealth</Attribute>
+            <AttackStat>UnitStat_Attack_Pierce</AttackStat>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_CombinedAttack] * -.25]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Accuracy</StrVal>
+            <DisplayName>Blinded</DisplayName>
+            <Duration>1</Duration>
+            <Effect>E_Blindness_Particle</Effect>
+            <Calculate InternalName="Calc" ValueOwner="TargetUnit">
+                <Expression><![CDATA[[UnitStat_Accuracy] * -0.50]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>
+		<GameModifier>
+            <ModType>TacticalUnit</ModType>
+            <Attribute>DisruptSpellCharge</Attribute>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>500</AIPriority>
+        </AIData>
+        <CasterAnimationType>26</CasterAnimationType>
+        <HitSoundFX>Spell_Blind_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>T_Blindness_Particle</EffectName>
+            <LocalPosition>0,60,0</LocalPosition>
+            <EffectScale>.3</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+	<SpellDef InternalName="RapidFire">
+        <DisplayName>Rapid Fire</DisplayName>
+        <Description>Rapidly Fires at all enemies in an area doing 50% damage.</Description>
+        <IconFG>Ability_Archers_Icon.png</IconFG>
+        <IconColor>32,45,243</IconColor>
+        <Cooldown>6</Cooldown>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Damage</SpellSubClass>
+        <SpellTargetType>EnemyUnit</SpellTargetType>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+        <IsCastable>0</IsCastable>
+		<CanBeDodged>1</CanBeDodged>
+        <IsSpecialAbility>1</IsSpecialAbility>
+        <Radius>1</Radius>
+        <UseWeaponRange>1</UseWeaponRange>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_Level</Attribute>
+			<Value>7</Value>
+		</Prereq>
+        <Prereq>
+            <Type>UnitStat</Type>
+            <Attribute>UnitStat_IsBow</Attribute>
+            <Value>1</Value>
+        </Prereq>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>CurHealth</Attribute>
+            <AttackStat>UnitStat_Attack_Pierce</AttackStat>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_CombinedAttack] * -0.50]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+					<Expression><![CDATA[[UnitStat_Defense_Pierce]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc] > 5]]></Expression>
+            </Calculate>
+        </ValueCalcWrapper>
+        </AIData>
+        <CasterAnimationType>27</CasterAnimationType>
+        <HitSoundFX>Spell_DoubleStrike_01</HitSoundFX>
+        <SpellCastEffectName>Y_DoubleStrike_Particle</SpellCastEffectName>
+        <SpellDefEffect>
+            <EffectName>Y_DoubleStrike_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>1</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+</Spells>

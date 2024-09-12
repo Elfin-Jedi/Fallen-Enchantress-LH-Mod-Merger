@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<ImprovementTypes>
+	<ImprovementType InternalName="CrystalTrove">
+		<UpgradesToImprovement>Wonder_X_GreatExtractor</UpgradesToImprovement>
+	</ImprovementType>
+	<ImprovementType InternalName="Wonder_X_GreatExtractor">
+		<DisplayName>Great Extractor</DisplayName>
+		<Description>The only thing that's great about this 'Great' Extractor is that it allows crystal extraction unceasingly, night and day, being that the crystal shard is entirely covered.
+		
+		Inadequate air circulation, combined with excessive dust particules, has led to a great many deaths among your peons (I guess that's another 'Great' thing about this extractor).
+		
+		Your diplomats have justified your humongous and hideous structure as a necessary evil for the greater good (or greater evil, depending on who they are discussing with), but make no mistake, other Factions are oggling your Great Extractor with envy.
+		
+		+6 Crystal per Season
+		-1% Unrest
+		-2% Unrest in all your cities
+		
+		World Wonder.</Description>
+		<AllowedPerGame>1</AllowedPerGame>
+		<RequiresResource>1</RequiresResource>
+		<SupportedResourceType>Crystal</SupportedResourceType>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<UpgradeTier>4</UpgradeTier>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_ArcaneScriptures</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Lizardmeninferiority</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Ascetics</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<LaborToBuild>1404</LaborToBuild>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>RefinedCrystal</Attribute>
+			<Value>-20</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_XL_Beer</Attribute>
+			<Value>-50</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>RefinedCrystal</Attribute>
+			<Value>6</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+6 Crystal per Season</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>-1% Unrest</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_Additive_Unrest</StrVal>
+			<Value>-2</Value>
+			<Provides>-2% Unrest in all your cities</Provides>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>850</AIPriority>
+			<AITag>Mining</AITag>
+		</AIData>
+		<ArtDef>ArtDef_X_GreatExtractor_Wonder</ArtDef>
+	</ImprovementType>
+</ImprovementTypes>

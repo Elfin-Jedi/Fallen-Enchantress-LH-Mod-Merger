@@ -1,0 +1,1757 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--Children of Storm by Heavenfall-->
+<!--XtraDeconstruct 3.0 by Primal-->
+<ImprovementTypes>
+	<ImprovementType InternalName="AirAltar">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAirShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="AirAltar_Resoln">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAirShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="AirShrine">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAirShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="AirShrine_Resoln">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAirShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="AirTemple">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAirShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="AirTemple_Resoln">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAirShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="Camp_Demonshrill">
+		<UpgradesToImprovement>Camp_GreaterDemonshrill</UpgradesToImprovement>
+		<UpgradeTier>1</UpgradeTier>
+		<DisplayName>Demonshrill Camp</DisplayName>
+		<Description>Demonshrill Camps can be built on Demonshrill Lairs to recruit Demonshrill.</Description>
+		<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+		<RequiresCity>0</RequiresCity>
+		<RequiresResource>1</RequiresResource>
+		<SupportedResourceType>DemonshrillLair</SupportedResourceType>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Economics</Attribute>
+		</Prereq>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_XL_Beer</Attribute>
+			<Value>-5</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Gold</Attribute>
+			<Value>-150</Value>
+		</GameModifier>
+		<LaborToBuild>503</LaborToBuild>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>LimitedUnitCap</Attribute>
+			<StrVal>Demonshrill</StrVal>
+			<Value>1</Value>
+			<Provides>Recruit a Party of Demonshrill</Provides>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+			<AITag>CommandPost</AITag>
+		</AIData>
+		<ArtDef>Camp_Naja_ArtDef</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="Camp_FieryGorgon">
+		<DisplayName>Fiery Gorgon Camp</DisplayName>
+		<Description>Fiery Gorgon Camps can be built on Gorgon Lairs to recruit Fiery Gorgons.</Description>
+		<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+		<RequiresCity>0</RequiresCity>
+		<RequiresResource>1</RequiresResource>
+		<SupportedResourceType>GorgonLair</SupportedResourceType>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<UpgradesToImprovement>Camp_GreaterFieryGorgon</UpgradesToImprovement>
+		<UpgradeTier>1</UpgradeTier>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Literacy</Attribute>
+		</Prereq>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_XL_Beer</Attribute>
+			<Value>-5</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Gold</Attribute>
+			<Value>-125</Value>
+		</GameModifier>
+		<LaborToBuild>403</LaborToBuild>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>LimitedUnitCap</Attribute>
+			<StrVal>Fiery_Gorgon</StrVal>
+			<Value>1</Value>
+			<Provides>Recruit a Party of Fiery Gorgons</Provides>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+			<AITag>CommandPost</AITag>
+		</AIData>
+		<ArtDef>Camp_Naja_ArtDef</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="Camp_GreaterDemonshrill">
+		<UpgradeTier>2</UpgradeTier>
+		<DisplayName>Greater Demonshrill Camp</DisplayName>
+		<Description>Greater Demonshrill Camps can be built on Demonshrill Lairs to recruit Greater Demonshrill.</Description>
+		<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+		<RequiresCity>0</RequiresCity>
+		<RequiresResource>1</RequiresResource>
+		<SupportedResourceType>DemonshrillLair</SupportedResourceType>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Logistics</Attribute>
+		</Prereq>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_XL_Beer</Attribute>
+			<Value>-10</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Gold</Attribute>
+			<Value>-150</Value>
+		</GameModifier>
+		<LaborToBuild>503</LaborToBuild>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>LimitedUnitCap</Attribute>
+			<StrVal>Demonshrill_Tier2</StrVal>
+			<Value>1</Value>
+			<Provides>Recruit a Squad of Greater Demonshrill</Provides>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+			<AITag>CommandPost</AITag>
+		</AIData>
+		<ArtDef>Camp_Naja_ArtDef</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="Camp_GreaterFieryGorgon">
+		<DisplayName>Greater Fiery Gorgon Camp</DisplayName>
+		<Description>Greater Fiery Gorgon Camps can be built on Gorgon Lairs to recruit Greater Fiery Gorgons.</Description>
+		<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+		<RequiresCity>0</RequiresCity>
+		<RequiresResource>1</RequiresResource>
+		<SupportedResourceType>GorgonLair</SupportedResourceType>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<UpgradeTier>2</UpgradeTier>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Higher_Education</Attribute>
+		</Prereq>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_XL_Beer</Attribute>
+			<Value>-10</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Gold</Attribute>
+			<Value>-125</Value>
+		</GameModifier>
+		<LaborToBuild>403</LaborToBuild>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>LimitedUnitCap</Attribute>
+			<StrVal>Fiery_Gorgon_Tier2</StrVal>
+			<Value>1</Value>
+			<Provides>Recruit a Squad of Greater Fiery Gorgons</Provides>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+			<AITag>CommandPost</AITag>
+		</AIData>
+		<ArtDef>Camp_Naja_ArtDef</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="Camp_GreaterHalfdrake">
+		<DisplayName>Greater Halfdrake Camp</DisplayName>
+		<Description>Greater Halfdrake Camps can be built on Halfdrake Lairs to recruit Greater Halfdrakes.</Description>
+		<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+		<RequiresCity>0</RequiresCity>
+		<RequiresResource>1</RequiresResource>
+		<SupportedResourceType>HalfdrakeLair</SupportedResourceType>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<UpgradeTier>2</UpgradeTier>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Dance_with_Dragons</Attribute>
+		</Prereq>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_XL_Beer</Attribute>
+			<Value>-10</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Gold</Attribute>
+			<Value>-155</Value>
+		</GameModifier>
+		<LaborToBuild>403</LaborToBuild>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>LimitedUnitCap</Attribute>
+			<StrVal>Halfdrake_Tier2</StrVal>
+			<Value>1</Value>
+			<Provides>Recruit a Squad of Greater Halfdrakes</Provides>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+			<AITag>CommandPost</AITag>
+		</AIData>
+		<ArtDef>Camp_Halfdrake_ArtDef</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="Camp_GreaterOphidianGorgon">
+		<DisplayName>Greater Ophidian Gorgon Camp</DisplayName>
+		<Description>Greater Ophidian Gorgon Camps can be built on Ophidian Gorgon Lairs to recruit Greater Ophidian Gorgons.</Description>
+		<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+		<RequiresCity>0</RequiresCity>
+		<RequiresResource>1</RequiresResource>
+		<SupportedResourceType>GorgonLairOphidian</SupportedResourceType>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<UpgradeTier>2</UpgradeTier>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Higher_Education</Attribute>
+		</Prereq>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_XL_Beer</Attribute>
+			<Value>-10</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Gold</Attribute>
+			<Value>-125</Value>
+		</GameModifier>
+		<LaborToBuild>403</LaborToBuild>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>LimitedUnitCap</Attribute>
+			<StrVal>Ophidian_Gorgon_Tier2</StrVal>
+			<Value>1</Value>
+			<Provides>Recruit a Squad of Greater Ophidian Gorgons</Provides>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+			<AITag>CommandPost</AITag>
+		</AIData>
+		<ArtDef>Camp_Naja_ArtDef</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="Camp_Halfdrake">
+		<DisplayName>Halfdrake Camp</DisplayName>
+		<Description>Halfdrake Camps can be built on Halfdrake Lairs to recruit Halfdrakes.</Description>
+		<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+		<RequiresCity>0</RequiresCity>
+		<RequiresResource>1</RequiresResource>
+		<SupportedResourceType>HalfdrakeLair</SupportedResourceType>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<UpgradesToImprovement>Camp_GreaterHalfdrake</UpgradesToImprovement>
+		<UpgradeTier>1</UpgradeTier>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Alliances</Attribute>
+		</Prereq>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_XL_Beer</Attribute>
+			<Value>-5</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Gold</Attribute>
+			<Value>-155</Value>
+		</GameModifier>
+		<LaborToBuild>403</LaborToBuild>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>LimitedUnitCap</Attribute>
+			<StrVal>Halfdrake</StrVal>
+			<Value>1</Value>
+			<Provides>Recruit a Party of Halfdrakes</Provides>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+			<AITag>CommandPost</AITag>
+		</AIData>
+		<ArtDef>Camp_Halfdrake_ArtDef</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="Camp_OphidianGorgon">
+		<DisplayName>Ophidian Gorgon Camp</DisplayName>
+		<Description>Ophidian Gorgon Camps can be built on Ophidian Gorgon Lairs to recruit Ophidian Gorgons.</Description>
+		<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+		<RequiresCity>0</RequiresCity>
+		<RequiresResource>1</RequiresResource>
+		<SupportedResourceType>GorgonLairOphidian</SupportedResourceType>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<UpgradesToImprovement>Camp_GreaterOphidianGorgon</UpgradesToImprovement>
+		<UpgradeTier>1</UpgradeTier>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Literacy</Attribute>
+		</Prereq>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_XL_Beer</Attribute>
+			<Value>-5</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Gold</Attribute>
+			<Value>-125</Value>
+		</GameModifier>
+		<LaborToBuild>403</LaborToBuild>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>LimitedUnitCap</Attribute>
+			<StrVal>Ophidian_Gorgon</StrVal>
+			<Value>1</Value>
+			<Provides>Recruit a Party of Ophidian Gorgons</Provides>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+			<AITag>CommandPost</AITag>
+		</AIData>
+		<ArtDef>Camp_Naja_ArtDef</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="Camp_Wolfman">
+		<UpgradeTier>1</UpgradeTier>
+		<DisplayName>Wolfman Camp</DisplayName>
+		<Description>Wolfman Camps can be built on Wolfman Lairs to recruit Wolfmen.</Description>
+		<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+		<RequiresCity>0</RequiresCity>
+		<RequiresResource>1</RequiresResource>
+		<SupportedResourceType>WolfmanLair</SupportedResourceType>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Craftsmanship</Attribute>
+		</Prereq>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_XL_Beer</Attribute>
+			<Value>-10</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Gold</Attribute>
+			<Value>-125</Value>
+		</GameModifier>
+		<LaborToBuild>303</LaborToBuild>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>LimitedUnitCap</Attribute>
+			<StrVal>Wolfman</StrVal>
+			<Value>1</Value>
+			<Provides>Recruit a Party of Wolfmen</Provides>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+			<AITag>CommandPost</AITag>
+		</AIData>
+		<ArtDef>Camp_Halfdrake_ArtDef</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="Cityhub1">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingCity</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="Cityhub2_Conclave">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingCity</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="Cityhub2_Fortress">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingCity</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="Cityhub2_Town">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingCity</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="Cityhub3_Conclave">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingCity</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="Cityhub3_Fortress">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingCity</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="Cityhub3_Town">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingCity</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="Cityhub4_Conclave">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingCity</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="Cityhub4_Fortress">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingCity</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="Cityhub4_Town">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingCity</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="Cityhub5_Conclave">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingCity</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="Cityhub5_Fortress">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingCity</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="Cityhub5_Town">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingCity</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="DarklingCityhub1">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingCity</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="DarklingCityhub2">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingCity</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="DarklingCityhub3">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingCity</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="DarklingCityhub4">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingCity</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="DarklingCityhub5">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingCity</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="DeathAltar">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithDeathShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="DeathAltar_Resoln">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithDeathShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="DeathShrine">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithDeathShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="DeathShrine_Resoln">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithDeathShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="DeathTemple">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithDeathShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="DeathTemple_Resoln">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithDeathShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="EarthAltar">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithEarthShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="EarthAltar_Resoln">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithEarthShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="EarthShrine">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithEarthShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="EarthShrine_Resoln">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithEarthShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="EarthTemple">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithEarthShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="EarthTemple_Resoln">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithEarthShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="EreogsTower">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAirShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="FellDragonForLizardmen">
+		<DisplayName>Dragonkind Temple</DisplayName>
+		<Description>The dragon eggs let you build a Dragonkind Temple.</Description>
+		<AllowedPerGame>1</AllowedPerGame>
+		<SpecialBuildingType>FellDragonRecruiting</SpecialBuildingType>
+		<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+		<RequiresCity>0</RequiresCity>
+		<SupportedResourceType>WildDragons</SupportedResourceType>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_XL_Beer</Attribute>
+			<Value>-50</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Gold</Attribute>
+			<Value>-250</Value>
+		</GameModifier>
+		<LaborToBuild>703</LaborToBuild>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>LimitedUnitCap</Attribute>
+			<StrVal>FellDragon</StrVal>
+			<Value>1</Value>
+			<Provides>Can recruit 1 Fell Dragon</Provides>
+		</GameModifier>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Player_X_Lizardmen</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Dance_with_Dragons</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>944</AIPriority>
+			<AITag>CommandPost</AITag>
+		</AIData>
+		<ArtDef>Camp_FellDragon_ArtDef</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="FireAltar">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithFireShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="FireAltar_LivingStone">
+		<DisplayName>Stone-Fire Altar</DisplayName>
+		<Description>Stone-Fire Altars amplify Fire spells and provide 1 Mana per turn. They also boost Fire attack by 5% faction-wide.</Description>
+		<SpecialBuildingType>Shard</SpecialBuildingType>
+		<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+		<RequiresCity>0</RequiresCity>
+		<RequiresResource>1</RequiresResource>
+		<SupportedResourceType>FireShard</SupportedResourceType>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<PreferredTerrain>Category:Forest</PreferredTerrain>
+		<UpgradesToImprovement>FireShrine_LivingStone</UpgradesToImprovement>
+		<UpgradeTier>1</UpgradeTier>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>LivingStone_Fireworship</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<LaborToBuild>80</LaborToBuild>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Mana</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Mana</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>FireMana</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Fire Power</Provides>
+			<UpgradeComparisonID>2</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_UnitStat_Attack_Fire</StrVal>
+			<Value>5</Value>
+			<UpgradeComparisonID>3</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithFireShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>115</AIPriority>
+			<AITag>Shards</AITag>
+		</AIData>
+		<ArtDef>Art_FireAltar</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="FireAltar_Resoln">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithFireShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="FireShrine">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithFireShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="FireShrine_LivingStone">
+		<DisplayName>Stone-Fire Shrine</DisplayName>
+		<Description>Stone-Fire Shrines amplify Fire spells and provide 2 Mana per turn. They also boost Fire attack by 10% faction-wide.</Description>
+		<SpecialBuildingType>Shard</SpecialBuildingType>
+		<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+		<RequiresCity>0</RequiresCity>
+		<RequiresResource>1</RequiresResource>
+		<SupportedResourceType>FireShard</SupportedResourceType>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<PreferredTerrain>Category:Forest</PreferredTerrain>
+		<UpgradesToImprovement>FireTemple_LivingStone</UpgradesToImprovement>
+		<UpgradeTier>2</UpgradeTier>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>LivingStone_Fireworship</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Shard_Harvesting</Attribute>
+		</Prereq>
+		<LaborToBuild>105</LaborToBuild>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Mana</Attribute>
+			<Value>2</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+2 Mana</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>FireMana</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Fire Power</Provides>
+			<UpgradeComparisonID>2</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_UnitStat_Attack_Fire</StrVal>
+			<Value>10</Value>
+			<UpgradeComparisonID>3</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithFireShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>150</AIPriority>
+			<AITag>Shards</AITag>
+		</AIData>
+		<ArtDef>Art_FireShrine</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="FireShrine_Resoln">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithFireShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="FireTemple">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithFireShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="FireTemple_LivingStone">
+		<DisplayName>Stone-Fire Temple</DisplayName>
+		<Description>Stone-Fire Temples amplify Fire spells and provide 3 Mana per turn. They also boost Fire attack by 15% faction-wide.</Description>
+		<SpecialBuildingType>Shard</SpecialBuildingType>
+		<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+		<RequiresCity>0</RequiresCity>
+		<RequiresResource>1</RequiresResource>
+		<SupportedResourceType>FireShard</SupportedResourceType>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<PreferredTerrain>Category:Forest</PreferredTerrain>
+		<UpgradeTier>3</UpgradeTier>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>LivingStone_Fireworship</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Immortal_Codex</Attribute>
+		</Prereq>
+		<LaborToBuild>232</LaborToBuild>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Mana</Attribute>
+			<Value>3</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+3 Mana</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>FireMana</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Fire Power</Provides>
+			<UpgradeComparisonID>2</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_UnitStat_Attack_Fire</StrVal>
+			<Value>15</Value>
+			<UpgradeComparisonID>3</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithFireShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>280</AIPriority>
+			<AITag>Shards</AITag>
+		</AIData>
+		<ArtDef>Art_FireTemple</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="FireTemple_Resoln">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithFireShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="Fort_Dwarf">
+		<DisplayName>Gnome Fort</DisplayName>
+		<RequiresCity>1</RequiresCity>
+		<BarredTerrain>River</BarredTerrain>
+		<BarredTerrain>SwampTerrain</BarredTerrain>
+		<PreferredTerrain>City</PreferredTerrain>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<PreferredTerrain>Category:Forest</PreferredTerrain>
+		<RequiresCityImprovement>1</RequiresCityImprovement>
+		<RequiredImprovement>Fortress</RequiredImprovement>
+		<UpgradeTier>2</UpgradeTier>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Dwarf_GreatFortresses</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Construction</Attribute>
+		</Prereq>
+		<LaborToBuild>270</LaborToBuild>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_XL_Beer</Attribute>
+			<Value>-10</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>3</Value>
+			<Provides>+3 Initiative for Defending Units</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+			<UpgradeComparisonText>Defending Unit Initiative</UpgradeComparisonText>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>UnitStat_MagicResist</StrVal>
+			<Value>10</Value>
+			<Provides>+10 Magic Resist for Defending Units</Provides>
+			<UpgradeComparisonID>2</UpgradeComparisonID>
+			<UpgradeComparisonText>Defending Unit Magic Resist</UpgradeComparisonText>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>UpgradeCityWalls</Attribute>
+			<StrVal>CityWalls_Advanced</StrVal>
+		</GameModifier>
+		<GameModifier>
+			<ModType>CityDefenseSummon</ModType>
+			<Attribute>SummonUnitByClass</Attribute>
+			<Value>2</Value>
+			<Multiplier>3</Multiplier>
+			<Provides>+2 City Defender Groups</Provides>
+			<UnitClass>CityDefender</UnitClass>
+		</GameModifier>
+		<GameModifier>
+			<ModType>CityDefenseSummon</ModType>
+			<Attribute>SummonUnitByClass</Attribute>
+			<Value>1</Value>
+			<Multiplier>3</Multiplier>
+			<Provides>+1 City Archer Group</Provides>
+			<UnitClass>CityArcher</UnitClass>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>300</AIPriority>
+			<AITag>Defensive</AITag>
+		</AIData>
+		<ArtDef>Art_Castle</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="Fort_Elf">
+		<DisplayName>Elven Fort</DisplayName>
+		<RequiresCity>1</RequiresCity>
+		<BarredTerrain>River</BarredTerrain>
+		<BarredTerrain>SwampTerrain</BarredTerrain>
+		<PreferredTerrain>City</PreferredTerrain>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<PreferredTerrain>Category:Forest</PreferredTerrain>
+		<RequiresCityImprovement>1</RequiresCityImprovement>
+		<RequiredImprovement>Fortress</RequiredImprovement>
+		<UpgradeTier>2</UpgradeTier>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>NoDefensivestructures_Elf</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Construction</Attribute>
+		</Prereq>
+		<LaborToBuild>540</LaborToBuild>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_XL_Beer</Attribute>
+			<Value>-5</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>2</Value>
+			<Provides>+2 Initiative for Defending Units</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+			<UpgradeComparisonText>Defending Unit Initiative</UpgradeComparisonText>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>UpgradeCityWalls</Attribute>
+			<StrVal>CPELF_CityWalls_Advanced</StrVal>
+		</GameModifier>
+		<GameModifier>
+			<ModType>CityDefenseSummon</ModType>
+			<Attribute>SummonUnitByClass</Attribute>
+			<Value>2</Value>
+			<Provides>+2 City Defender Groups</Provides>
+			<UnitClass>CityDefender</UnitClass>
+			<Multiplier>3</Multiplier>
+		</GameModifier>
+		<GameModifier>
+			<ModType>CityDefenseSummon</ModType>
+			<Attribute>SummonUnitByClass</Attribute>
+			<Value>1</Value>
+			<Multiplier>3</Multiplier>
+			<Provides>+1 City Archer Group</Provides>
+			<UnitClass>CityArcher</UnitClass>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>350</AIPriority>
+			<AITag>Defensive</AITag>
+		</AIData>
+		<ArtDef>Art_Castle</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="HedgeWall">
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>NoDefensivestructures_Elf</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Dwarf_GreatFortresses</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+	</ImprovementType>
+	<ImprovementType InternalName="HedgeWall_Dwarf">
+		<DisplayName>Gnome Wall</DisplayName>
+		<RequiresCity>1</RequiresCity>
+		<BarredTerrain>River</BarredTerrain>
+		<BarredTerrain>SwampTerrain</BarredTerrain>
+		<PreferredTerrain>City</PreferredTerrain>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<PreferredTerrain>Category:Forest</PreferredTerrain>
+		<RequiresCityImprovement>1</RequiresCityImprovement>
+		<RequiredImprovement>Fortress</RequiredImprovement>
+		<UpgradesToImprovement>Fort_Dwarf</UpgradesToImprovement>
+		<UpgradeTier>1</UpgradeTier>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Dwarf_GreatFortresses</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<LaborToBuild>104</LaborToBuild>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>2</Value>
+			<Provides>+2 Initiative for Defending Units</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+			<UpgradeComparisonText>Defending Unit Initiative</UpgradeComparisonText>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>UnitStat_MagicResist</StrVal>
+			<Value>5</Value>
+			<Provides>+5 Magic Resistance for Defending Units</Provides>
+			<UpgradeComparisonID>2</UpgradeComparisonID>
+			<UpgradeComparisonText>Defending Unit Magic Resist</UpgradeComparisonText>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>UpgradeCityWalls</Attribute>
+			<StrVal>CityWalls_Advanced</StrVal>
+		</GameModifier>
+		<GameModifier>
+			<ModType>CityDefenseSummon</ModType>
+			<Attribute>SummonUnitByClass</Attribute>
+			<Value>2</Value>
+			<Multiplier>3</Multiplier>
+			<Provides>+2 City Defender Groups</Provides>
+			<UnitClass>CityDefender</UnitClass>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>350</AIPriority>
+			<AITag>Defensive</AITag>
+			<AIAtWarMultiplier>3</AIAtWarMultiplier>
+		</AIData>
+		<ArtDef>HedgeWall_ArtDef</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="HedgeWall_Elf">
+		<DisplayName>Elven Hedge Wall</DisplayName>
+		<RequiresCity>1</RequiresCity>
+		<BarredTerrain>River</BarredTerrain>
+		<BarredTerrain>SwampTerrain</BarredTerrain>
+		<PreferredTerrain>City</PreferredTerrain>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<PreferredTerrain>Category:Forest</PreferredTerrain>
+		<RequiresCityImprovement>1</RequiresCityImprovement>
+		<RequiredImprovement>Fortress</RequiredImprovement>
+		<UpgradesToImprovement>Fort_Elf</UpgradesToImprovement>
+		<UpgradeTier>1</UpgradeTier>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>NoDefensivestructures_Elf</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<LaborToBuild>208</LaborToBuild>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_XL_Beer</Attribute>
+			<Value>-5</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>1</Value>
+			<Provides>+1 Initiative for Defending Units</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+			<UpgradeComparisonText>Defending Unit Initiative</UpgradeComparisonText>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>UpgradeCityWalls</Attribute>
+			<StrVal>CPELF_CityWalls_Hedge</StrVal>
+		</GameModifier>
+		<GameModifier>
+			<ModType>CityDefenseSummon</ModType>
+			<Attribute>SummonUnitByClass</Attribute>
+			<Value>2</Value>
+			<Multiplier>3</Multiplier>
+			<Provides>+2 City Defender Groups</Provides>
+			<UnitClass>CityDefender</UnitClass>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>300</AIPriority>
+			<AITag>Defensive</AITag>
+			<AIAtWarMultiplier>3</AIAtWarMultiplier>
+		</AIData>
+		<ArtDef>HedgeWall_ArtDef</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="HedigahBathhouse">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithWaterShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="LifeAltar">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithLifeShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="LifeShrine">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithLifeShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="LifeTemple">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithLifeShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="LoggingCamp">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingCityWithLumberMill</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>NoDefensivestructures_Elf</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+	</ImprovementType>
+	<ImprovementType InternalName="LumberYard">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingCityWithLumberMill</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>NoDefensivestructures_Elf</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+	</ImprovementType>
+	<ImprovementType InternalName="Monument_FloodedGraveyard">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithDeathShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+ 	<ImprovementType InternalName="Monument_HowlingChasm">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAirShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="Monument_IruTAlavar">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithLifeShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="Monument_PillarOfMascrinthus">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithEarthShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="Monument_PitOfSarpah">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithFireShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="Monument_Puraudrah">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithWaterShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="Outpost_Centaur">
+		<Sight>1</Sight>
+		<DisplayName>Centaur Outpost</DisplayName>
+		<Description>Increases the player's borders and improves their visibility.</Description>
+		<BarredTerrain>River</BarredTerrain>
+		<BarredTerrain>SwampTerrain</BarredTerrain>
+		<PreferredTerrain>City</PreferredTerrain>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<PreferredTerrain>Category:Forest</PreferredTerrain>
+		<ZOCMinRadius>2</ZOCMinRadius>
+		<ZOCMaxRadius>2</ZOCMaxRadius>
+		<ZOCRadiusTurnsBeforeUpdate>1</ZOCRadiusTurnsBeforeUpdate>
+		<HideInBuildList>1</HideInBuildList>
+		<LaborToBuild>-1</LaborToBuild>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>50</AIPriority>
+			<AITag>CommandPost</AITag>
+		</AIData>
+		<ArtDef>Art_Outpost_Base</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="PyreOfAnniellum">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithFireShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="TimberMill">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingCityWithLumberMill</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>NoDefensivestructures_Elf</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+	</ImprovementType>
+	<ImprovementType InternalName="TowerOfMagic1">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithWaterShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAirShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="TowerOfMagic2">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithEarthShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithWaterShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="TowerOfMagic3">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAirShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithFireShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="TowerOfMagic4">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithEarthShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithFireShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="Underforge">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithEarthShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="WaterAltar">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithWaterShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="WaterAltar_Resoln">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithWaterShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="WaterShrine">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithWaterShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="WaterShrine_Resoln">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithWaterShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="WaterTemple">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithWaterShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<ImprovementType InternalName="WaterTemple_Resoln">
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithWaterShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+	</ImprovementType>
+	<!--RIVERMOD REQUIRED-->
+	<!--
+	<ImprovementType InternalName="rivermod_BloodForge">
+		<DisplayName>Blood Forge</DisplayName>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_XL_Beer</Attribute>
+			<Value>-5</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>100</AIPriority>
+			<AITag>CommandPost</AITag>
+		</AIData>
+	</ImprovementType>
+	<ImprovementType InternalName="rivermod_Death">
+		<DisplayName>Death Forge</DisplayName>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_XL_Beer</Attribute>
+			<Value>-5</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>100</AIPriority>
+			<AITag>CommandPost</AITag>
+		</AIData>
+	</ImprovementType>
+	<ImprovementType InternalName="rivermod_magmaforge">
+		<DisplayName>Magma Forge</DisplayName>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_XL_Beer</Attribute>
+			<Value>-5</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>100</AIPriority>
+			<AITag>CommandPost</AITag>
+		</AIData>
+	</ImprovementType>
+	<ImprovementType InternalName="rivermod_WitchMarket">
+		<DisplayName>Witch Market</DisplayName>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_XL_Beer</Attribute>
+			<Value>-5</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>100</AIPriority>
+			<AITag>CommandPost</AITag>
+		</AIData>
+	</ImprovementType>
+	-->
+</ImprovementTypes>

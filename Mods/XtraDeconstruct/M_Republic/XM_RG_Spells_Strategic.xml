@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--Republic Governement: D. Elliot Lamb a.k.a davrovana-->
+<!--XtraDeconstruct 3.0 by Primal-->
+<Spells>
+	<SpellDef InternalName="CallOutcast">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[S] Call Outcast Hero</DisplayName>
+		<SpellResourceCost>
+			<Resource>Fame</Resource>
+			<Amount>25</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>10</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<SpellResourceCost>
+			<Resource>Gold</Resource>
+			<Amount>50</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>+1 Random Henchman.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] CALL OUTCAST HERO
+		::: Seek out a fledgling champion (Henchman) that has been rejected by other channelers. What form will this forsaken yet bright potential take?
+		
+		DOMAIN
+		::: Strategic
+		::: Self
+		
+		EFFECT
+		::: +1 Random Henchman
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: Caster must be Sov
+		
+		SOURCE
+		::: Faction Strength
+		::: ::: Republic</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>Self</SpellTargetType>
+		<CasterMustBeSov>1</CasterMustBeSov>
+		<AppliesRandomModifier>1</AppliesRandomModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnitJoinArmy</Attribute>
+			<StrVal>Unit_Hero_Quendar</StrVal>
+			<UnitClass>Champion</UnitClass>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnitJoinArmy</Attribute>
+			<StrVal>Unit_Hero_Trog</StrVal>
+			<UnitClass>Champion</UnitClass>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnitJoinArmy</Attribute>
+			<StrVal>Unit_Hero_Amarian</StrVal>
+			<UnitClass>Champion</UnitClass>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnitJoinArmy</Attribute>
+			<StrVal>Unit_Hero_Tarth</StrVal>
+			<UnitClass>Champion</UnitClass>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnitJoinArmy</Attribute>
+			<StrVal>Unit_Hero_Wolf</StrVal>
+			<UnitClass>Champion</UnitClass>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnitJoinArmy</Attribute>
+			<StrVal>Unit_Hero_Hergon</StrVal>
+			<UnitClass>Champion</UnitClass>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnitJoinArmy</Attribute>
+			<StrVal>Unit_Hero_Spirit</StrVal>
+			<UnitClass>Champion</UnitClass>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnitJoinArmy</Attribute>
+			<StrVal>Unit_Hero_Mancer</StrVal>
+			<UnitClass>Champion</UnitClass>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnitJoinArmy</Attribute>
+			<StrVal>Unit_Hero_Ironeer</StrVal>
+			<UnitClass>Champion</UnitClass>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnitJoinArmy</Attribute>
+			<StrVal>Unit_Hero_Wraith</StrVal>
+			<UnitClass>Champion</UnitClass>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnitJoinArmy</Attribute>
+			<StrVal>Unit_Hero_Urxen</StrVal>
+			<UnitClass>Champion</UnitClass>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnitJoinArmy</Attribute>
+			<StrVal>Familiar_Henchman</StrVal>
+			<UnitClass>Champion</UnitClass>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnitJoinArmy</Attribute>
+			<StrVal>Unit_Hero_Krax</StrVal>
+			<UnitClass>Champion</UnitClass>
+		</GameModifier>
+		<Cooldown>5</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_SummonSentinel.png</IconFG>
+		<HitSoundFX>Spell_DestinyGift_01</HitSoundFX>
+	</SpellDef>
+	<SpellDef InternalName="CreateExemplar">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Create Exemplar</DisplayName>
+		<SpellResourceCost>
+			<Resource>Fame</Resource>
+			<Amount>25</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Gold</Resource>
+			<Amount>50</Amount>
+			</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>20</Amount>
+		</SpellResourceCost>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_IsInSecretSociety</Attribute>
+			<Value>1</Value>
+		</Prereq>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>+1 Exemplar.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] CREATE EXEMPLAR
+		::: Seek out a bright young talent to undergo a horrible transformation, that they might emerge an incorruptible champion: an Exemplar. Just beware, this spell might fail and create an angry Juggernaut!
+		
+		DOMAIN
+		::: Strategic
+		::: Self
+		
+		EFFECT
+		::: +1 Exemplar OR +1 Wild Juggernaut
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: Caster must be Sov
+		::: Caster must be in Secret Knowledge Society
+		
+		SOURCE
+		::: Improvement
+		::: ::: Secret Knowledge Society</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>Self</SpellTargetType>
+		<CasterMustBeSov>1</CasterMustBeSov>
+		<AppliesRandomModifier>1</AppliesRandomModifier>
+		<CastTime>2</CastTime>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnitJoinArmy</Attribute>
+			<StrVal>Unit_Exemplar_Knight</StrVal>
+			<UnitClass>Champion</UnitClass>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnitJoinArmy</Attribute>
+			<StrVal>Unit_Exemplar_MageWarrior</StrVal>
+			<UnitClass>Champion</UnitClass>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnitJoinArmy</Attribute>
+			<StrVal>Unit_Exemplar_Warrior</StrVal>
+			<UnitClass>Champion</UnitClass>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>SpawnMonster</Attribute>
+			<Value>1</Value>
+			<Unitclass>Juggernaut_Escaped</Unitclass>
+			<Radius>5</Radius>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_SummonAbomination.png</IconFG>
+		<HitSoundFX>Spell_Curse_01</HitSoundFX>
+	</SpellDef>
+</Spells>

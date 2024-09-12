@@ -1,0 +1,85 @@
+<ImprovementTypes>
+	<ImprovementType InternalName="Pitch_Pit">
+		<DisplayName>Pitch Pit</DisplayName>
+		<Description>The pitch pit adds +1 to fire attack for all your units trained in this city.</Description>
+		<RequiresCity>1</RequiresCity>
+		<!-- Stormworld Extra Terrain -->
+		<!--<BarredTerrain>ArcticTerrain_rivermod</BarredTerrain>
+		<BarredTerrain>ArcticTerrain_Forest</BarredTerrain>
+		<BarredTerrain>ArcticTerrain_rivermod_proximity_poisonriver</BarredTerrain>
+		<BarredTerrain>ArcticTerrain_rivermod_proximity_deathriver</BarredTerrain>
+		<BarredTerrain>BurningLands_Rivermod</BarredTerrain>
+		<BarredTerrain>BurningLands_Forest</BarredTerrain>
+		<BarredTerrain>BurningLands_Rivermod_proximity_magmariver</BarredTerrain>
+		<BarredTerrain>BurningLands_Rivermod_proximity_bloodriver</BarredTerrain> -->
+		<!-- End of Stormworld Extra Terrain -->
+		<!--<BarredTerrain>Land</BarredTerrain>
+		<BarredTerrain>Rugged_Land</BarredTerrain>
+		<BarredTerrain>Fertile_Land</BarredTerrain>
+		<BarredTerrain>DesertTerrain</BarredTerrain>
+		<BarredTerrain>HillsTerrain</BarredTerrain>
+		<BarredTerrain>ArcticTerrain</BarredTerrain>
+		<BarredTerrain>River</BarredTerrain>
+		<BarredTerrain>BurningLands</BarredTerrain>
+		<BarredTerrain>Fissure</BarredTerrain>
+		<BarredTerrain>CurgensTomb</BarredTerrain>
+		<BarredTerrain>Imperium</BarredTerrain>
+		<BarredTerrain>Scrapyard</BarredTerrain>
+		<BarredTerrain>Unkown</BarredTerrain>
+		<BarredTerrain>Tomb</BarredTerrain>
+		<PreferredTerrain>Category:Land</PreferredTerrain>-->
+		<PreferredTerrain>SwampTerrain</PreferredTerrain>
+		<EncloseInCityWalls>0</EncloseInCityWalls>
+		<LaborToBuild>128</LaborToBuild>
+		<GameModifier>
+			<ModType>CityTrainingBonus</ModType>
+			<Attribute>TrainingBonus_ApplyUnitModifier_Add</Attribute>
+			<StrVal>UnitStat_Attack_Fire</StrVal>
+			<Value>1</Value>
+			<Provides>+1 Fire Attack to trained troops in city</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+			<UpgradeComparisonText>Trained Unit Fire Attack</UpgradeComparisonText>
+		</GameModifier>
+		<AIData AIPersonlaity="AI_General">
+			<AIPriority>5</AIPriority>
+			<AITag>CommandPost</AITag>
+		</AIData>
+		<ArtDef>Art_Pitch_Pit</ArtDef>
+	</ImprovementType>
+	<ImprovementTypeArtDef InternalName="Art_Pitch_Pit">
+		<ImprovementTypeArtSubPack InternalName="Art_Pitch_Pit_Kingdom">
+			<SupportedBuildingStyle>KingdomStyle</SupportedBuildingStyle>
+			<TileDesign>K_Pitch_Swamp</TileDesign>
+			<ConstructionTileDesign>Pitch_Swamp</ConstructionTileDesign>
+			<DrawnIcon>Improvement_PitchPit.png</DrawnIcon>
+			<DrawnIconConstruction>Improvement_PitchPit_C.png</DrawnIconConstruction>
+			<Thumbnail>K_Pitch_Pit_Thumb_01.png</Thumbnail>
+			<Medallions InternalName="">
+				<All>K_Pitch_Pit_Thumb_01.png</All>
+			</Medallions>
+		</ImprovementTypeArtSubPack>
+		<ImprovementTypeArtSubPack InternalName="Art_Pitch_Pit_Empire">
+			<SupportedBuildingStyle>EmpireStyle</SupportedBuildingStyle>
+			<TileDesign>F_Pitch_Swamp</TileDesign>
+			<ConstructionTileDesign>Pitch_Swamp</ConstructionTileDesign>
+			<DrawnIcon>Improvement_PitchPit.png</DrawnIcon>
+			<DrawnIconConstruction>Improvement_PitchPit_C.png</DrawnIconConstruction>
+			<Thumbnail>F_Pitch_Pit_Thumb_01.png</Thumbnail>
+			<Medallions InternalName="">
+				<All>F_Pitch_Pit_Thumb_01.png</All>
+			</Medallions>
+		</ImprovementTypeArtSubPack>
+		<!-- Not Changed -->
+		<ImprovementTypeArtSubPack InternalName="Art_Pitch_Pit_Tent">
+			<SupportedBuildingStyle>TentStyle</SupportedBuildingStyle>
+			<TileDesign>K_Pitch_Swamp</TileDesign>
+			<ConstructionTileDesign>Pitch_Swamp</ConstructionTileDesign>
+			<DrawnIcon>Improvement_PitchPit.png</DrawnIcon>
+			<DrawnIconConstruction>Improvement_PitchPit_C.png</DrawnIconConstruction>
+			<Thumbnail>K_Pitch_Pit_Thumb_01.png</Thumbnail>
+			<Medallions InternalName="">
+				<All>K_Pitch_Pit_Thumb_01.png</All>
+			</Medallions>
+		</ImprovementTypeArtSubPack>
+	</ImprovementTypeArtDef>
+</ImprovementTypes>

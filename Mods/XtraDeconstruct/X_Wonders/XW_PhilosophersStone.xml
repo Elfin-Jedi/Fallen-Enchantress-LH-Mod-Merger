@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<ImprovementTypes>
+	<ImprovementType InternalName="Wonder_X_PhilosophersStone">
+		<DisplayName>Philosopher's Stone (Failed)</DisplayName>
+		<Description>This wasn't supposed to be a complicated assignment. You gathered the best Alchemists from all over Elemental and told them to make you a Philosopher's Stone, as described on an ancient scroll found in the ruins of Al-Ashteroth. What could go wrong?
+		
+		When one of your messenger - Murphy - collapsed, breathless, in your throne room, you knew something was wrong: a thundering explosion had destroyed the Alchemist Lab, all Alchemists were dead, and the Al-Ashteroth scroll was nowhere to be found.
+		
+		The messenger did have good news, saying that a stone had indeed been created. However, your elation was short-lived once you learned that the stone was anything but rufescent and as big as a small Slag.
+		
+		To top it off, Alchemist notes found in the lab ruins made no mention of creating Gildar. Instead, the notes look as if they were written by mana-intoxicated Channelers.
+		
+		Just as your were about to dismiss the messenger, he added that a large sum of Gildar had gone missing from the City's coffins.
+		
+		Apparently, anything that can go wrong, will go wrong.
+		
+		Following that disastrous enterprise, you decided to divert some alchemist funds toward science scholarships.
+		
+		-1 Fame per Season
+		+12 Research per Season
+		Can cast Philosopher's Stone (Failed)
+		-1% Unrest
+		-2% Unrest in all your cities
+		
+		Requires an Alchemy Lab.
+		
+		World Wonder.</Description>
+		<AllowedPerGame>1</AllowedPerGame>
+		<RequiresCity>1</RequiresCity>
+		<BarredTerrain>River</BarredTerrain>
+		<BarredTerrain>SwampTerrain</BarredTerrain>
+		<PreferredTerrain>City</PreferredTerrain>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<PreferredTerrain>Forest</PreferredTerrain>
+		<RequiresCityImprovement>1</RequiresCityImprovement>
+		<RequiredImprovement>AlchemyLab</RequiredImprovement>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Glyph_Stones</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Lizardmeninferiority</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Weakness_X_Ascetics</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<LaborToBuild>1053</LaborToBuild>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Resource_XL_Beer</Attribute>
+			<Value>-50</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ConstructionResourceCost</ModType>
+			<Attribute>Gold</Attribute>
+			<Value>-50</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Fame</Attribute>
+			<Value>-1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>-1 Fame per Season</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Research</Attribute>
+			<Value>12</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+12 Research per season</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_PhilosophersStone</StrVal>
+			<Icon>Spell_X_PhilosophersStone.png</Icon>
+			<Provides>Strategic Spells ::: Philosopher's Stone (Failed)</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>-1% Unrest</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_Additive_Unrest</StrVal>
+			<Value>-2</Value>
+			<Provides>-2% Unrest in all your cities</Provides>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>633</AIPriority>
+			<AITag>Arcane</AITag>
+		</AIData>
+		<ArtDef>ArtDef_X_PhilosophersStone_Wonder</ArtDef>
+	</ImprovementType>
+</ImprovementTypes>

@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<Container>
+
+	<!-- foodbase -->
+	<ImprovementType InternalName="Stable">
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>DrotaEmpireTactical4</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>CentaurEmpireTactical4</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+	</ImprovementType>
+	<ImprovementType InternalName="WargDen">
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>DrotaEmpireTactical4</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>CentaurEmpireTactical4</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+	</ImprovementType>
+	<ImprovementType InternalName="DrotaKennel">
+		<DisplayName>Drota Kennel</DisplayName>
+		<Description>Drota Kennels can be built on Wild Wargs to provide 25 Food for the connected city.</Description>
+		<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+		<RequiresResource>1</RequiresResource>
+		<SupportedResourceType>Wargs</SupportedResourceType>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Animal_Husbandry</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Drota</Attribute>
+		</Prereq>
+		<LaborToBuild>100</LaborToBuild>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Food</Attribute>
+			<Value>25</Value>
+			<PerTurn>1</PerTurn>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_MOUNT</AIPrefType>
+			<AIPriority>5</AIPriority>
+			<AITag>Farming</AITag>
+		</AIData>
+		<ArtDef>Art_Kennel</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="DrotaStable">
+		<DisplayName>Drota Stable</DisplayName>
+		<Description>Drota Stables can be built on Wild Horses to provide 45 Food for the connected city.</Description>
+		<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+		<RequiresResource>1</RequiresResource>
+		<SupportedResourceType>Horses</SupportedResourceType>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Animal_Husbandry</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Race</Type>
+			<Attribute>Race_Type_Drota</Attribute>
+		</Prereq>
+		<LaborToBuild>100</LaborToBuild>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Food</Attribute>
+			<Value>45</Value>
+			<PerTurn>1</PerTurn>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPrefType>AIPrefType_MOUNT</AIPrefType>
+			<AIPriority>5</AIPriority>
+			<AITag>Farming</AITag>
+		</AIData>
+		<ArtDef>Art_Stable</ArtDef>
+	</ImprovementType>
+</Container>

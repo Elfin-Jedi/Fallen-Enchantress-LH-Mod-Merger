@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--XtraDeconstruct 3.0 by Primal-->
+<Treaties>
+	<!--TREATIES-->
+		<!--PART I-->
+			<!--PLAYER VERSION-->
+	<Treaty InternalName="Treaty_X_NulleTerreSansSeigneur1A" Type="Agreement">
+		<DisplayName>Liege (1/2)</DisplayName>
+		<Description><![CDATA[Oath of fealty
+		::: Intention]]></Description>
+		<TreatyValueDescription><![CDATA[I, [Player_2], the liege subject, promise on my faith that I will in the future be faithful to [Player_1], the liege lord.
+		NOTE: Liege (2/2) UNLOCKED]]></TreatyValueDescription>
+		<Image>Action_Scroll.png</Image>
+		<Duration>0</Duration>
+		<BasePerceivedValue>333</BasePerceivedValue>
+		<MatchingTreatyType>Treaty_X_NulleTerreSansSeigneur1B</MatchingTreatyType>
+		<AllowsAdditionalTrading>0</AllowsAdditionalTrading>
+		<RequiredRelations><![CDATA[[RELATIONS_WAR]]]></RequiredRelations>
+		<SetRelations><![CDATA[[RELATIONS_ALLY]]]></SetRelations>
+		<Calculate InternalName="IncomeBonus" ValueOwner="Player_1">
+			<Expression><![CDATA[0.00001 * [Income]]]></Expression>
+		</Calculate>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Alliances</Attribute>
+			<Value>0</Value>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>War_Colleges</Attribute>
+			<Value>0</Value>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+			<AITradeToGetValue>50</AITradeToGetValue>
+			<AITradeOutValue>50</AITradeOutValue>
+		</AIData>
+	</Treaty>
+			<!--AI VERSION (NO SHOW HACK)-->
+	<Treaty InternalName="Treaty_X_NulleTerreSansSeigneur1B" Type="Agreement">
+		<DisplayName>Liege (1/2)</DisplayName>
+		<Description><![CDATA[Oath of fealty
+		::: Intention]]></Description>
+		<TreatyValueDescription><![CDATA[I, [Player_1], the liege subject, promise on my faith that I will in the future be faithful to [Player_2], the liege lord. 
+		NOTE: Liege (2/2) UNLOCKED]]></TreatyValueDescription>
+		<Image>Action_Scroll.png</Image>
+		<Duration>0</Duration>
+		<BasePerceivedValue>333</BasePerceivedValue>
+		<MatchingTreatyType>Treaty_X_NulleTerreSansSeigneur1A</MatchingTreatyType>
+		<AllowsAdditionalTrading>0</AllowsAdditionalTrading>
+		<RequiredRelations><![CDATA[[RELATIONS_WAR]]]></RequiredRelations>
+		<SetRelations><![CDATA[[RELATIONS_ALLY]]]></SetRelations>
+		<Calculate InternalName="IncomeBonus" ValueOwner="Player_2">
+			<Expression><![CDATA[0.00001 * [Income]]]></Expression>
+		</Calculate>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>DoesNotExist</Attribute>
+			<Value>0</Value>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+			<AITradeToGetValue>50</AITradeToGetValue>
+			<AITradeOutValue>50</AITradeOutValue>
+		</AIData>
+	</Treaty>
+		<!--PART II-->
+			<!--PLAYER VERSION-->
+			<!--Should I disable Liege 2/2?-->
+	<Treaty InternalName="Treaty_X_NulleTerreSansSeigneur2A" Type="Agreement">
+		<DisplayName>Liege (2/2)</DisplayName>
+		<Description><![CDATA[Oath of fealty
+		::: Impost]]></Description>
+		<TreatyValueDescription><![CDATA[I, [Player_2], the liege subject, agrees to pay 50% of my net income to [Player_1], the liege lord, for a period of 99 seasons.]]></TreatyValueDescription>
+		<Image>Action_Scroll.png</Image>
+		<Units>Gildar per Season</Units>
+		<Duration>99</Duration>
+		<BasePerceivedValue>200</BasePerceivedValue>
+		<MatchingTreatyType>Treaty_X_NulleTerreSansSeigneur2B</MatchingTreatyType>
+		<AllowsAdditionalTrading>0</AllowsAdditionalTrading>
+		<RequiredRelations><![CDATA[[RELATIONS_ALLY]]]></RequiredRelations>
+		<Calculate InternalName="TributeFromOthers" ValueOwner="Player_1">
+			<Expression><![CDATA[1.0 * [TributeAmount]]]></Expression>
+		</Calculate>
+		<Calculate InternalName="TributeAmount" ValueOwner="Player_2">
+			<Expression><![CDATA[0.50 * [NonTributeIncome]]]></Expression>
+		</Calculate>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Alliances</Attribute>
+			<Value>0</Value>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>War_Colleges</Attribute>
+			<Value>0</Value>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>1</AIPriority>
+			<AITradeToGetValue>1</AITradeToGetValue>
+			<AITradeOutValue>1</AITradeOutValue>
+		</AIData>
+	</Treaty>
+			<!--AI VERSION (NO SHOW HACK)-->
+	<Treaty InternalName="Treaty_X_NulleTerreSansSeigneur2B" Type="Agreement">
+		<DisplayName>Liege (2/2)</DisplayName>
+		<Description><![CDATA[Oath of fealty
+		::: Impost]]></Description>
+		<TreatyValueDescription><![CDATA[I, [Player_1], the liege subject, agrees to pay 50% of my net income to [Player_2], the liege lord, for a period of 99 seasons.]]></TreatyValueDescription>
+		<Image>Action_Scroll.png</Image>
+		<Units>Gildar per Season</Units>
+		<Duration>99</Duration>
+		<BasePerceivedValue>200</BasePerceivedValue>
+		<MatchingTreatyType>Treaty_X_NulleTerreSansSeigneur2A</MatchingTreatyType>
+		<AllowsAdditionalTrading>0</AllowsAdditionalTrading>
+		<RequiredRelations><![CDATA[[RELATIONS_ALLY]]]></RequiredRelations>
+		<Calculate InternalName="TributeToOthers" ValueOwner="Player_1">
+			<Expression><![CDATA[0.0 - [TributeAmount]]]></Expression>
+		</Calculate>
+		<Calculate InternalName="TributeAmount" ValueOwner="Player_1">
+			<Expression><![CDATA[0.50 * [NonTributeIncome]]]></Expression>
+		</Calculate>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>DoesNotExist</Attribute>
+			<Value>0</Value>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>1</AIPriority>
+			<AITradeToGetValue>1</AITradeToGetValue>
+			<AITradeOutValue>1</AITradeOutValue>
+		</AIData>
+	</Treaty>
+</Treaties>

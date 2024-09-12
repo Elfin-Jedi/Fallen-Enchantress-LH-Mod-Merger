@@ -1,0 +1,6207 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--Path of the Sorcerer by D. Elliot Lamb a.k.a davrovana w/ help (graphics) from fsemprini-->
+<!--XtraDeconstruct 3.0 by Primal-->
+<Spells>
+		<!--STRATEGIC-->
+	<SpellDef InternalName="AirOsmosis">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Osmosis Of Air</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Elemancy</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_ShardEssence</Attribute>
+			<Value>1</Value>
+		</Prereq>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Target gains the Air Apprentice Spell Trait.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] OSMOSIS OF AIR
+		::: Target gains the Air Apprentice Spell Trait.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: Champion or Sov
+		
+		EFFECT
+		::: + Air Apprentice
+		::: - 1 Shard Essence
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Permanent
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Elemancy</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>FriendlyChampionOrSov</SpellTargetType>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockUnitAbility</Attribute>
+			<StrVal>Air1</StrVal>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ShardEssence</StrVal>
+			<ApplyToCaster>1</ApplyToCaster>
+			<Value>-1</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>20</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_ParadigmShift_A.png</IconFG>
+		<HitSoundFX>Spell_GuardianWind_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_MantleofOceans_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="ArcaneRevelations">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Arcane Revelations</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Gnosimancy</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>50</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Additional Research in the Enchanted City.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] ARCANE REVELATIONS
+		::: Additional Research in the Enchanted City.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: City
+		
+		EFFECT
+		::: + 3 Research
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Dispelled (Enchantment)
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Gnosimancy</Description>
+		<SpellBookSortCategory>City</SpellBookSortCategory>
+		<SpellBookSortSubCategory>CityEnchantment</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>ImpResourceBooster</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>FriendlyCity</SpellTargetType>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Research</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>3</Value>
+		</GameModifier>
+		<ValidTerrainCategory>City</ValidTerrainCategory>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>100</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Research.png</IconFG>
+		<HitSoundFX>Spell_Inspiration_01</HitSoundFX>
+		<SpellCastEffectName>Brilliance</SpellCastEffectName>
+		<SpellCastEffectScale>.4</SpellCastEffectScale>
+		<SpellDefEffect>
+			<EffectName>S_Inspiration_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.75</EffectScale>
+			<EffectDelay>0.5</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="BeautifulDistractions">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Beautiful Distractions</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Illusomancy</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>50</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>-10% Unrest and +1 Growth for Target City.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] BEAUTIFUL DISTRACTIONS
+		::: Reduces Unrest in the target city by 10%, and increases growth by 1.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: City
+		
+		EFFECT
+		::: -10% Unrest
+		::: +1 Growth
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Dispelled (Enchantment)
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Illusomancy</Description>
+		<SpellBookSortCategory>City</SpellBookSortCategory>
+		<SpellBookSortSubCategory>CityEnchantment</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>ImpResourceBooster</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>FriendlyCity</SpellTargetType>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>-10</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Prestige</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>1</Value>
+		</GameModifier>
+		<ValidTerrainCategory>City</ValidTerrainCategory>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>30</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_ParadigmShift_L.png</IconFG>
+		<HitSoundFX>Spell_BlessCity_01</HitSoundFX>
+		<SpellCastEffectName>Brilliance</SpellCastEffectName>
+		<SpellCastEffectScale>.4</SpellCastEffectScale>
+		<SpellDefEffect>
+			<EffectName>S_Inspiration_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.75</EffectScale>
+			<EffectDelay>0.5</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="BloodSeason">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Blood Season</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Physimancy</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>200</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Except for Alliances, all-out War.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] BLOOD SEASON
+		::: Except for Alliances, all-out War. This will override Non Aggression Pacts and Tribute Treaties.
+		
+		DOMAIN
+		::: Strategic
+		::: Self
+		
+		EFFECT
+		::: All declare War.
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		::: Alliance Immunity is effective
+		
+		INTERVAL
+		::: Until a Peace Treaty is ratified
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Physimancy</Description>
+		<SpellBookSortCategory>World</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Debuff</SpellSubClass>
+		<SpellTargetType>Self</SpellTargetType>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>AllPlayersDeclareWar</Attribute>
+		</GameModifier>
+		<Cooldown>100</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_BloodCurse.png</IconFG>
+		<HitSoundFX>Spell_Antipathy_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_Blight_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="ChaosInTheRanks">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Chaos in the Ranks</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Illusomancy</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>75</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Units in the targeted army are randomly scattered.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] CHAOS IN THE RANKS
+		::: Units in the targeted army are randomly scattered around the adjacent surrounding tiles.
+		
+		DOMAIN
+		::: Strategic
+		::: Enemy
+		::: Unit (ALL)
+		
+		EFFECT
+		::: Disperse Stack
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Illusomancy</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Debuff</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<UnitAppSpecifier>ApplyToAll</UnitAppSpecifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DisperseStack</Attribute>
+			<Radius>1</Radius>
+		</GameModifier>
+		<Cooldown>3</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>80</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_DirgeCeresa.png</IconFG>
+		<HitSoundFX>Spell_Confusion_01</HitSoundFX>
+	</SpellDef>
+	<SpellDef InternalName="Consume_Sorcerer">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Pulverize Shard</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Elemancy</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>20</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Destroy a Shard to gain 2 Shard essence.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] PULVERIZE SHARD
+		::: Destroy a Shard in your territory to gain 2 Shard essence.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: Shard
+		
+		EFFECT
+		::: - 1 Shard
+		::: + 2 Shard Essence
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Elemancy</Description>
+		<SpellBookSortCategory>World</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Other</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>AnyShard</SpellTargetType>
+		<SpellTargetZOCType>Friendly</SpellTargetZOCType>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>DestroyObjects</Attribute>
+			<BoolVal1>1</BoolVal1>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ShardEssence</StrVal>
+			<ApplyToCaster>1</ApplyToCaster>
+			<Value>2</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_CS_F.png</IconFG>
+		<HitSoundFX>Spell_Consume_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_Corruption_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>2</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="CrystalStorm">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Crystal Storm</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Metamancy</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>RefinedCrystal</Resource>
+			<Amount>100</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Does Damages to all within a 2 tile radius.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] CRYSTAL STORM
+		::: Does Damages to all within a 2 tile radius.
+		
+		DOMAIN
+		::: Strategic
+		::: Enemy
+		::: Units (ALL)
+		
+		EFFECT
+		::: (2 + (Air + Earth) Shards) x5) DMG
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: Air Shards
+		::: Earth Shards
+		::: 5x5 Area
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Metamancy</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<UnitAppSpecifier>ApplyToAll</UnitAppSpecifier>
+		<Radius>2</Radius>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Pierce</AttackStat>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumAirShards] + [UnitOwner_GetNumEarthShards]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] * 5]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2] + 10]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<ValidTerrainCategory>Forest</ValidTerrainCategory>
+		<ValidTerrainCategory>Land</ValidTerrainCategory>
+		<Cooldown>1</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>100</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_CrystalStorm.png</IconFG>
+		<HitSoundFX>Spell_FlameWaveTravel_01</HitSoundFX>
+		<HitSoundFX>Spell_FlameWaveTravel_02</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_Blizzard_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.5</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="CultureOfAir">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Culture Of Air</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Elemancy</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Air1</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>100</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<PreventStackingWith>CultureOfAir_Adept</PreventStackingWith>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Produce additional Air Power in the Enchanted City.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] CULTURE OF AIR
+		::: Produce additional Air Power in the Enchanted City, but reduces Gildar, production, and research by 20%.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: City
+		
+		EFFECT
+		::: + 1 Air Power
+		::: - 20% Gildar
+		::: - 20% Prodution
+		::: - 20% Research
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Dispelled (Enchantment)
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Elemancy</Description>
+		<SpellBookSortCategory>City</SpellBookSortCategory>
+		<SpellBookSortSubCategory>CityEnchantment</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>ImpResourceBooster</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>FriendlyCity</SpellTargetType>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>AirMana</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>0.5</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ResourceMultiplier</ModType>
+			<Attribute>Research</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>0.8</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ResourceMultiplier</ModType>
+			<Attribute>Production</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>0.8</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ResourceMultiplier</ModType>
+			<Attribute>Gold</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>0.8</Value>
+		</GameModifier>
+		<ValidTerrainCategory>City</ValidTerrainCategory>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>100</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Sublimation.png</IconFG>
+		<HitSoundFX>Spell_Inspiration_01</HitSoundFX>
+		<SpellCastEffectName>Brilliance</SpellCastEffectName>
+		<SpellCastEffectScale>.4</SpellCastEffectScale>
+		<SpellDefEffect>
+			<EffectName>S_Inspiration_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.75</EffectScale>
+			<EffectDelay>0.5</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="CultureOfDeath">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Culture Of Death</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Elemancy</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Death1</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Empire</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>100</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<PreventStackingWith>CultureOfDeath_Adept</PreventStackingWith>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Produce additional Death Power in the Enchanted City.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] CULTURE OF DEATH
+		::: Produce additional Death Power in the Enchanted City, but reduces Gildar, production, and research by 20%.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: City
+		
+		EFFECT
+		::: + 1 Death Power
+		::: - 20% Gildar
+		::: - 20% Prodution
+		::: - 20% Research
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Dispelled (Enchantment)
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Elemancy</Description>
+		<SpellBookSortCategory>City</SpellBookSortCategory>
+		<SpellBookSortSubCategory>CityEnchantment</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>ImpResourceBooster</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>FriendlyCity</SpellTargetType>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>DeathMana</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>0.5</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ResourceMultiplier</ModType>
+			<Attribute>Research</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>0.8</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ResourceMultiplier</ModType>
+			<Attribute>Production</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>0.8</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ResourceMultiplier</ModType>
+			<Attribute>Gold</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>0.8</Value>
+		</GameModifier>
+		<ValidTerrainCategory>City</ValidTerrainCategory>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>100</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Disintegration.png</IconFG>
+		<HitSoundFX>Spell_Inspiration_01</HitSoundFX>
+		<SpellCastEffectName>Brilliance</SpellCastEffectName>
+		<SpellCastEffectScale>.4</SpellCastEffectScale>
+		<SpellDefEffect>
+			<EffectName>S_Inspiration_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.75</EffectScale>
+			<EffectDelay>0.5</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="CultureOfEarth">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Culture Of Earth</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Elemancy</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Earth1</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>100</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<PreventStackingWith>CultureOfEarth_Adept</PreventStackingWith>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Produce additional Earth Power in the Enchanted City.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] CULTURE OF EARTH
+		::: Produce additional Earth Power in the Enchanted City, but reduces Gildar, production, and research by 20%.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: City
+		
+		EFFECT
+		::: + 1 Earth Power
+		::: - 20% Gildar
+		::: - 20% Prodution
+		::: - 20% Research
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Dispelled (Enchantment)
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Elemancy</Description>
+		<SpellBookSortCategory>City</SpellBookSortCategory>
+		<SpellBookSortSubCategory>CityEnchantment</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>ImpResourceBooster</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>FriendlyCity</SpellTargetType>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>EarthMana</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>0.5</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ResourceMultiplier</ModType>
+			<Attribute>Research</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>0.8</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ResourceMultiplier</ModType>
+			<Attribute>Production</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>0.8</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ResourceMultiplier</ModType>
+			<Attribute>Gold</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>0.8</Value>
+		</GameModifier>
+		<ValidTerrainCategory>City</ValidTerrainCategory>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>100</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Amalgamation.png</IconFG>
+		<HitSoundFX>Spell_Inspiration_01</HitSoundFX>
+		<SpellCastEffectName>Brilliance</SpellCastEffectName>
+		<SpellCastEffectScale>.4</SpellCastEffectScale>
+		<SpellDefEffect>
+			<EffectName>S_Inspiration_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.75</EffectScale>
+			<EffectDelay>0.5</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="CultureOfFire">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Culture Of Fire</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Elemancy</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Fire1</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>100</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<PreventStackingWith>CultureOfFire_Adept</PreventStackingWith>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Produce additional Fire Power in the Enchanted City.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] CULTURE OF FIRE
+		::: Produce additional Fire Power in the Enchanted City, but reduces Gildar, production, and research by 20%.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: City
+		
+		EFFECT
+		::: + 1 Fire Power
+		::: - 20% Gildar
+		::: - 20% Prodution
+		::: - 20% Research
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Dispelled (Enchantment)
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Elemancy</Description>
+		<SpellBookSortCategory>City</SpellBookSortCategory>
+		<SpellBookSortSubCategory>CityEnchantment</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>ImpResourceBooster</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>FriendlyCity</SpellTargetType>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>FireMana</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>0.5</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ResourceMultiplier</ModType>
+			<Attribute>Research</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>0.8</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ResourceMultiplier</ModType>
+			<Attribute>Production</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>0.8</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ResourceMultiplier</ModType>
+			<Attribute>Gold</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>0.8</Value>
+		</GameModifier>
+		<ValidTerrainCategory>City</ValidTerrainCategory>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>100</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Fusion.png</IconFG>
+		<HitSoundFX>Spell_Inspiration_01</HitSoundFX>
+		<SpellCastEffectName>Brilliance</SpellCastEffectName>
+		<SpellCastEffectScale>.4</SpellCastEffectScale>
+		<SpellDefEffect>
+			<EffectName>S_Inspiration_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.75</EffectScale>
+			<EffectDelay>0.5</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="CultureOfLife">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Culture Of Life</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Elemancy</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Life1</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Kingdom</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>100</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<PreventStackingWith>CultureOfLife_Adept</PreventStackingWith>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Produce additional Life Power in the Enchanted City.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] CULTURE OF LIFE
+		::: Produce additional Life Power in the Enchanted City, but reduces Gildar, production, and research by 20%.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: City
+		
+		EFFECT
+		::: + 1 Life Power
+		::: - 20% Gildar
+		::: - 20% Prodution
+		::: - 20% Research
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Dispelled (Enchantment)
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Elemancy</Description>
+		<SpellBookSortCategory>City</SpellBookSortCategory>
+		<SpellBookSortSubCategory>CityEnchantment</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>ImpResourceBooster</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>FriendlyCity</SpellTargetType>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>LifeMana</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>0.5</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ResourceMultiplier</ModType>
+			<Attribute>Research</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>0.8</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ResourceMultiplier</ModType>
+			<Attribute>Production</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>0.8</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ResourceMultiplier</ModType>
+			<Attribute>Gold</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>0.8</Value>
+		</GameModifier>
+		<ValidTerrainCategory>City</ValidTerrainCategory>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>100</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Consolidation.png</IconFG>
+		<HitSoundFX>Spell_Inspiration_01</HitSoundFX>
+		<SpellCastEffectName>Brilliance</SpellCastEffectName>
+		<SpellCastEffectScale>.4</SpellCastEffectScale>
+		<SpellDefEffect>
+			<EffectName>S_Inspiration_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.75</EffectScale>
+			<EffectDelay>0.5</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="CultureOfWater">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Culture Of Water</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Elemancy</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Water1</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>100</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<PreventStackingWith>CultureOfWater_Adept</PreventStackingWith>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Produce additional Water Power in the Enchanted City.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] CULTURE OF WATER
+		::: Produce additional Water Power in the Enchanted City, but reduces Gildar, production, and research by 20%.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: City
+		
+		EFFECT
+		::: + 1 Water Power
+		::: - 20% Gildar
+		::: - 20% Prodution
+		::: - 20% Research
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Dispelled (Enchantment)
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Elemancy</Description>
+		<SpellBookSortCategory>City</SpellBookSortCategory>
+		<SpellBookSortSubCategory>CityEnchantment</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>ImpResourceBooster</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>FriendlyCity</SpellTargetType>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>WaterMana</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>0.5</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ResourceMultiplier</ModType>
+			<Attribute>Research</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>0.8</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ResourceMultiplier</ModType>
+			<Attribute>Production</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>0.8</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ResourceMultiplier</ModType>
+			<Attribute>Gold</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>0.8</Value>
+		</GameModifier>
+		<ValidTerrainCategory>City</ValidTerrainCategory>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>100</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Absorption.png</IconFG>
+		<HitSoundFX>Spell_Inspiration_01</HitSoundFX>
+		<SpellCastEffectName>Brilliance</SpellCastEffectName>
+		<SpellCastEffectScale>.4</SpellCastEffectScale>
+		<SpellDefEffect>
+			<EffectName>S_Inspiration_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.75</EffectScale>
+			<EffectDelay>0.5</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="DeathOsmosis">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Osmosis Of Death</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Elemancy</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Empire</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_ShardEssence</Attribute>
+			<Value>1</Value>
+		</Prereq>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Target gains the Death Apprentice Spell Trait.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] OSMOSIS OF DEATH
+		::: Target gains the Death Apprentice Spell Trait.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: Champion or Sov
+		
+		EFFECT
+		::: + Death Apprentice
+		::: - 1 Shard Essence
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Permanent
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Elemancy</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>FriendlyChampionOrSov</SpellTargetType>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockUnitAbility</Attribute>
+			<StrVal>Death1</StrVal>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ShardEssence</StrVal>
+			<ApplyToCaster>1</ApplyToCaster>
+			<Value>-1</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>20</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_ParadigmShift_D.png</IconFG>
+		<HitSoundFX>Spell_Antipathy_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_Blight_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="EarthOsmosis">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Osmosis Of Earth</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Elemancy</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_ShardEssence</Attribute>
+			<Value>1</Value>
+		</Prereq>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Target gains the Earth Apprentice Spell Trait.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] OSMOSIS OF EARTH
+		::: Target gains the Earth Apprentice Spell Trait.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: Champion or Sov
+		
+		EFFECT
+		::: + Earth Apprentice
+		::: - 1 Shard Essence
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Permanent
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Elemancy</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>FriendlyChampionOrSov</SpellTargetType>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockUnitAbility</Attribute>
+			<StrVal>Earth1</StrVal>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ShardEssence</StrVal>
+			<ApplyToCaster>1</ApplyToCaster>
+			<Value>-1</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>20</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_ParadigmShift_E.png</IconFG>
+		<HitSoundFX>Spell_EnchantedHammers_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_MantleofOceans_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="EyesOfTheEagle_Sorcerer">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Eyes of the Eagle (Sorcerer)</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Visimancy</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>15</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Reveals a 3 tile radius around the selected area.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] EYES OF THE EAGLE (SORCERER)
+		::: Reveals a 3 tile radius around the selected area.
+		
+		DOMAIN
+		::: Strategic
+		::: Anywhere
+		
+		EFFECT
+		::: Reveals Map
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: 1 Season
+		
+		OTHER
+		::: 7x7 Area
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Visimancy</Description>
+		<SpellBookSortCategory>World</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>Self</SpellTargetType>
+		<Radius>6</Radius>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>Reveal</Attribute>
+			<Duration>1</Duration>
+			<Value>3</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_EyesOfTheEagle.png</IconFG>
+		<HitSoundFX>Spell_EyesOfTheEagle_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_EyesoftheEagle_Particle</EffectName>
+			<LocalPosition>0,50,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="FamiliarChampion_Sorcerer">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Sovereign Binding</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Alteration</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>100</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Allows a Champion to cast Sovereign Spells, at a cost.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] SOVEREIGN BINDING
+		::: The Sovereign Sorcerer can bind essence to a Champion, allowing that Champion to cast all the Spells of the Sovereign. This binding takes a small toll on the Champion's Initative (-2) and Spell Power (-10), however.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: Champion
+		
+		EFFECT
+		::: Can cast Sovereign Spells
+		::: - 2 Initiative
+		::: - 10 Magic Power
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Dispelled (Enchantment)
+		
+		OTHER
+		::: Caster must be Sov
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Alteration</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>FriendlyChampion</SpellTargetType>
+		<CasterMustBeSov>1</CasterMustBeSov>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CanCastSovSpells</Attribute>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>-2</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_MagicPower</StrVal>
+			<Value>-10</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_SummonFamiliar.png</IconFG>
+		<HitSoundFX>Spell_SummonFamiliar_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_SummonEarthElemental_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.5</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="FindBeasts">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Find Beasts</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Faunamancy</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>35</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Draw hidden beasts to the target tile.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] FIND BEASTS
+		::: Draw hidden beasts to the target tile.
+		
+		DOMAIN
+		::: Strategic
+		::: Neutral
+		
+		EFFECT
+		::: + 1 Beast Lair or Wild Resource
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: 11x11 Area
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Faunamancy</Description>
+		<SpellBookSortCategory>World</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>NeutralGround</SpellTargetType>
+		<AppliesRandomModifier>1</AppliesRandomModifier>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>CreateGoodieHut</Attribute>
+			<StrVal>Warg's Ground</StrVal>
+			<Unitclass>Lair_TimberWarg</Unitclass>
+			<Radius>6</Radius>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>CreateGoodieHut</Attribute>
+			<StrVal>Wolf's Ground</StrVal>
+			<Unitclass>Lair_Wolf</Unitclass>
+			<Radius>6</Radius>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>CreateGoodieHut</Attribute>
+			<StrVal>Bear's Ground</StrVal>
+			<Unitclass>Lair_Bear</Unitclass>
+			<Radius>6</Radius>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>CreateGoodieHut</Attribute>
+			<StrVal>Spider's Refuge</StrVal>
+			<Unitclass>Lair_BlackWidow</Unitclass>
+			<Radius>6</Radius>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>CreateResourceHoard</Attribute>
+			<StrVal>Resource_TwlightBees</StrVal>
+			<Value>1</Value>
+			<Radius>6</Radius>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>CreateResourceHoard</Attribute>
+			<StrVal>Resource_WildGame</StrVal>
+			<Value>1</Value>
+			<Radius>6</Radius>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>CreateResourceHoard</Attribute>
+			<StrVal>Resource_Horses</StrVal>
+			<Value>1</Value>
+			<Radius>6</Radius>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>CreateResourceHoard</Attribute>
+			<StrVal>Resource_Wargs</StrVal>
+			<Value>1</Value>
+			<Radius>6</Radius>
+		</GameModifier>
+		<Cooldown>40</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>30</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_SummonersBoon.png</IconFG>
+		<HitSoundFX>Spell_IneluctableVision_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_IneluctableVision_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="InciteCrops">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Incite Crops</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Agrimancy</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>100</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Sense out the nearest agricultural potential.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] INCITE CROPS
+		::: Sense out the nearest agricultural potential to target tile and induce crops to grow - just be aware that depending on where you cast, you risk helping an enemy find a new source of food!
+		
+		DOMAIN
+		::: Strategic
+		::: Neutral
+		
+		EFFECT
+		::: + 1 Wild Grain or + 1 Fruit Grove
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: 11x11 Area
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Agrimancy</Description>
+		<SpellBookSortCategory>World</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>NeutralGround</SpellTargetType>
+		<AppliesRandomModifier>1</AppliesRandomModifier>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>CreateResourceHoard</Attribute>
+			<StrVal>Resource_WildGrain</StrVal>
+			<Value>1</Value>
+			<Radius>6</Radius>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>CreateResourceHoard</Attribute>
+			<StrVal>Resource_FruitGrove</StrVal>
+			<Value>1</Value>
+			<Radius>6</Radius>
+		</GameModifier>
+		<Cooldown>80</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>30</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_BirthOfSummer.png</IconFG>
+		<HitSoundFX>Spell_IneluctableVision_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_IneluctableVision_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="FiresOfRevolution">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Fires Of Revolution</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Illusomancy</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>500</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Fame</Resource>
+			<Amount>200</Amount>
+		</SpellResourceCost>
+		<PreventStackingWith>Spell_X_Fanatics</PreventStackingWith>
+		<Description>Take control of target city.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] FIRES OF REVOLUTION
+		::: Take control of target city.
+		
+		DOMAIN
+		::: Strategic
+		::: Enemy
+		::: City
+		
+		EFFECT
+		::: - 500 Mana
+		::: - 200 Fame
+		::: + 1 City
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		::: ::: Arcane Bulwark Immunity is effective
+		::: ::: Fanatics Immunity is effective
+		::: ::: Sacred City Immunity is effective
+		::: ::: Tower of Dominion Immunity is effective
+		::: ::: Tower of the Magi Immunity is effective
+		
+		INTERVAL
+		::: Until Bribed, Conquered, or Razed
+		
+		OTHER
+		::: Stationed Units ejected
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Physimancy</Description>
+		<SpellBookSortCategory>City</SpellBookSortCategory>
+		<SpellBookSortSubCategory>CCharm</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Debuff</SpellSubClass>
+		<SpellTargetType>EnemyCity</SpellTargetType>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>TransferCityControl</Attribute>
+			<BoolVal1>1</BoolVal1>
+		</GameModifier>
+		<Cooldown>5</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_BrokenLoyalties.png</IconFG>
+		<HitSoundFX>Spell_Antipathy_01</HitSoundFX>
+		<SpellCastEffectName>Brilliance</SpellCastEffectName>
+		<SpellCastEffectScale>0.4</SpellCastEffectScale>
+		<SpellDefEffect>
+			<EffectName>S_Blight_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="FireOsmosis">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Osmosis Of Fire</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Elemancy</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_ShardEssence</Attribute>
+			<Value>1</Value>
+		</Prereq>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Target gains the Fire Apprentice Spell Trait.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] OSMOSIS OF FIRE
+		::: Target gains the Fire Apprentice Spell Trait.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: Champion or Sov
+		
+		EFFECT
+		::: + Fire Apprentice
+		::: - 1 Shard Essence
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Permanent
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Elemancy</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>FriendlyChampionOrSov</SpellTargetType>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockUnitAbility</Attribute>
+			<StrVal>Fire1</StrVal>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ShardEssence</StrVal>
+			<ApplyToCaster>1</ApplyToCaster>
+			<Value>-1</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>20</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_ParadigmShift_F.png</IconFG>
+		<HitSoundFX>Spell_FireBreath</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_MantleofOceans_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="FocusedAdmiration">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Singularity Of Admiration</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Metamancy</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Fame</Resource>
+			<Amount>80</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Fame</Resource>
+			<PerTurn>1</PerTurn>
+			<Amount>2</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Increases Attack and Hit Points.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] SINGULARITY OF ADMIRATION
+		::: Increases Attack and Hit Points.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: Champion or Sov
+		
+		EFFECT
+		::: + 10% ATK
+		::: + 10% HP
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Dispelled (Enchantment)
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Metamancy</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>FriendlyChampionOrSov</SpellTargetType>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Pierce</StrVal>
+			<Duration>-1</Duration>
+			<Multiplier>1.1</Multiplier>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_HitPoints</StrVal>
+			<Duration>-1</Duration>
+			<Multiplier>1.1</Multiplier>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>20</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Illustrious.png</IconFG>
+		<HitSoundFX>Spell_Crusade_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_Crusade_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+			<PlayOnAllTargets>1</PlayOnAllTargets>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="ForgeCrystal">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Forge Crystal</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Metamancy</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>100</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Convert 100 Mana into 25 Crystal.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] FORGE CRYSTAL
+		::: Convert 100 Mana into 25 Crystal.
+		
+		DOMAIN
+		::: Strategic
+		::: Self
+		
+		EFFECT
+		::: - 100 Mana
+		::: + 25 Crystal
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Metamancy</Description>
+		<SpellBookSortCategory>World</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Other</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>Self</SpellTargetType>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>RefinedCrystal</Attribute>
+			<Value>25</Value>
+		</GameModifier>
+		<Cooldown>8</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_T100.png</IconFG>
+		<HitSoundFX>Spell_Alchemy_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_Alchemy_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>.75</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="ForgeGold">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Forge Gildar</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Metamancy</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>100</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Convert 100 Mana into 95 Gildar.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] FORGE GILDAR
+		::: Convert 100 Mana into 95 Gildar.
+		
+		DOMAIN
+		::: Strategic
+		::: Self
+		
+		EFFECT
+		::: - 100 Mana
+		::: + 95 Gildar
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Metamancy</Description>
+		<SpellBookSortCategory>World</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Other</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>Self</SpellTargetType>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Gold</Attribute>
+			<Value>95</Value>
+		</GameModifier>
+		<Cooldown>8</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_T100.png</IconFG>
+		<HitSoundFX>Spell_Alchemy_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_Alchemy_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>.75</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="ForgeIron">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Forge Iron</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Metamancy</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>100</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Convert 100 Mana into 32 Metal.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] FORGE IRON
+		::: Convert 100 Mana into 32 Metal.
+		
+		DOMAIN
+		::: Strategic
+		::: Self
+		
+		EFFECT
+		::: - 100 Mana
+		::: + 32 Metal
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Metamancy</Description>
+		<SpellBookSortCategory>World</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Other</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>Self</SpellTargetType>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Metal</Attribute>
+			<Value>32</Value>
+		</GameModifier>
+		<Cooldown>8</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_T100.png</IconFG>
+		<HitSoundFX>Spell_Alchemy_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_Alchemy_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>.75</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="TowerOfGreed">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Tower Of Greed</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Metamancy</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Gold</Resource>
+			<Amount>300</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Creates an Arcane Monolith on the map.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] TOWER OF GREED
+		::: Creates an Arcane Monolith on the map which extends your Zone of Control.
+		
+		DOMAIN
+		::: Strategic
+		::: Neutral
+		::: Terrain
+		
+		EFFECT
+		::: + 1 Arcane Monolith
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Conquered
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Metamancy</Description>
+		<SpellBookSortCategory>World</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Map</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Terraform</SpellClass>
+		<SpellSubClass>BuildOutpost</SpellSubClass>
+		<SpellTargetType>NeutralGround</SpellTargetType>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>BuildWildImprovement</Attribute>
+			<StrVal>Outpost_ArcaneMonolith</StrVal>
+		</GameModifier>
+		<ValidTerrainCategory>City</ValidTerrainCategory>
+		<ValidTerrainCategory>Forest</ValidTerrainCategory>
+		<ValidTerrainCategory>Land</ValidTerrainCategory>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>100</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_ArcaneMonolith.png</IconFG>
+		<HitSoundFX>Spell_Avarice_01</HitSoundFX>
+		<SpellCastEffectName>Brilliance</SpellCastEffectName>
+		<SpellCastEffectScale>.4</SpellCastEffectScale>
+		<SpellDefEffect>
+			<EffectName>S_Inspiration_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.75</EffectScale>
+			<EffectDelay>0.5</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="GiftOfFlight">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Gift Of Flight</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Alteration</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>100</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Target Champion can levitate.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] GIFT OF FLIGHT
+		::: Target Champion can levitate, and travel as if a bird.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: Champion or Sov
+		
+		EFFECT
+		::: Movement: Air
+		::: +1 Move
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Dispelled (Enchantment)
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Alteration</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>FriendlyChampionOrSov</SpellTargetType>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>ChangeMovementType</Attribute>
+			<StrVal>Air</StrVal>
+			<Value>2</Value>
+			<Provides>Unit can travel on any tile</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>MovementCostOverRide</Attribute>
+			<StrVal>Forest</StrVal>
+			<Value>8</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>No movement penalty in Forests</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>MovementCostOverRide</Attribute>
+			<StrVal>SwampTerrain</StrVal>
+			<Value>8</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>No movement penalty in Swamps</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>MovementCostOverRide</Attribute>
+			<StrVal>HillsTerrain</StrVal>
+			<Value>8</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>No movement penalty on Hills</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>MovementCostOverRide</Attribute>
+			<StrVal>River</StrVal>
+			<Value>8</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>No movement penalty on Rivers</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Moves</StrVal>
+			<Value>1</Value>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockUnitAbility</Attribute>
+			<StrVal>UnitStat_BG_IsFlyingAbility</StrVal>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_CloudWalk.png</IconFG>
+		<HitSoundFX>Spell_Knockback_01</HitSoundFX>
+	</SpellDef>
+	<SpellDef InternalName="LifeOsmosis">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Osmosis Of Life</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Elemancy</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Kingdom</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_ShardEssence</Attribute>
+			<Value>1</Value>
+		</Prereq>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Target gains the Life Apprentice Spell Trait.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] OSMOSIS OF LIFE
+		::: Target gains the Life Apprentice Spell Trait.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: Champion or Sov
+		
+		EFFECT
+		::: + Life Apprentice
+		::: - 1 Shard Essence
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Permanent
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Elemancy</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>FriendlyChampionOrSov</SpellTargetType>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockUnitAbility</Attribute>
+			<StrVal>Life1</StrVal>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ShardEssence</StrVal>
+			<ApplyToCaster>1</ApplyToCaster>
+			<Value>-1</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>20</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_ParadigmShift_L.png</IconFG>
+		<HitSoundFX>Spell_BirthOfSummer_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>Revive_Land</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="MagicalExperiment">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Magical Experiment</DisplayName>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_IsInTower</Attribute>
+			<Value>1</Value>
+		</Prereq>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>PathOfTheSorcerer</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>50</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>RefinedCrystal</Resource>
+			<Amount>10</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>The Sorcerer toils for 10 Seasons to extract new knowledge and more magical mastery.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] MAGICAL EXPERIMENT
+		::: The Sorcerer toils for 10 Seasons to extract new knowledge and more magical mastery. This may bear great fruit of knowledge (Level, XP, Mana, or Research), but beware unintended consequences: these experiments have a tiny chance of bringing about disaster.
+		
+		DOMAIN
+		::: Strategic
+		::: Self
+		
+		EFFECT
+		::: Random bonus
+		::: ::: +XP, +Level, +Mana, +Research, or ...
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		
+		::: Improvement
+		::: ::: Sorcerer's Tower</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>Self</SpellTargetType>
+		<AppliesRandomModifier>1</AppliesRandomModifier>
+		<CastTime>10</CastTime>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>TargetUnitLevelUp</Attribute>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>TargetUnitLevelUp</Attribute>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Mana</Attribute>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Research</Attribute>
+			<Value>300</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Research</Attribute>
+			<Value>400</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Research</Attribute>
+			<Value>1000</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Mana</Attribute>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>GiveExperience</Attribute>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>GiveExperience</Attribute>
+			<Value>300</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>GiveExperience</Attribute>
+			<Value>500</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Mana</Attribute>
+			<Value>200</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>CreateGoodieHut</Attribute>
+			<StrVal>Awoken Sleeper</StrVal>
+			<UnitClass>Lair_ClambercoilDragon</UnitClass>
+			<Radius>4</Radius>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>Mana_Stone</Attribute>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_HealingLight.png</IconFG>
+		<HitSoundFX>Spell_DestinyGift_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_Paragon_Particle</EffectName>
+			<LocalPosition>0,30,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="MineralSight">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Mineral Sight</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Visimancy</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>100</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Find minerals, metals or clay.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] MINERAL SIGHT
+		::: Find minerals, metals or clay hidden just below the surface, within 6 tiles. Take care that you don't discover resources for an enemy!
+		
+		DOMAIN
+		::: Strategic
+		::: Neutral
+		
+		EFFECT
+		::: + 1 Clay Pit, Crystal Crag, Gold Deposition, Iron Ore, or Temple Ruins
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: 11x11 Area
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Visimancy</Description>
+		<SpellBookSortCategory>World</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>NeutralGround</SpellTargetType>
+		<AppliesRandomModifier>1</AppliesRandomModifier>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>CreateResourceHoard</Attribute>
+			<StrVal>Resource_CrystalCrag</StrVal>
+			<Value>1</Value>
+			<Radius>6</Radius>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>CreateResourceHoard</Attribute>
+			<StrVal>Resource_IronOre</StrVal>
+			<Value>1</Value>
+			<Radius>6</Radius>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>CreateResourceHoard</Attribute>
+			<StrVal>Resource_GoldDeposit</StrVal>
+			<Value>1</Value>
+			<Radius>6</Radius>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>CreateResourceHoard</Attribute>
+			<StrVal>Resource_Clay</StrVal>
+			<Value>1</Value>
+			<Radius>6</Radius>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>CreateResourceHoard</Attribute>
+			<StrVal>Resource_CrystalCrag</StrVal>
+			<Value>1</Value>
+			<Radius>6</Radius>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>CreateResourceHoard</Attribute>
+			<StrVal>Resource_IronOre</StrVal>
+			<Value>1</Value>
+			<Radius>6</Radius>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>CreateResourceHoard</Attribute>
+			<StrVal>Resource_GoldDeposit</StrVal>
+			<Value>1</Value>
+			<Radius>6</Radius>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>CreateResourceHoard</Attribute>
+			<StrVal>Resource_Clay</StrVal>
+			<Value>1</Value>
+			<Radius>6</Radius>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>CreateResourceHoard</Attribute>
+			<StrVal>Resource_AncientTemple</StrVal>
+			<Value>1</Value>
+			<Radius>6</Radius>
+		</GameModifier>
+		<Cooldown>80</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>30</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_IneluctableVision.png</IconFG>
+		<HitSoundFX>Spell_IneluctableVision_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_IneluctableVision_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="PrismBlade">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Prism Blade</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Alteration</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>15</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>+2 Random ATK stat.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] PRISM BLADE
+		::: Enchanted champion's weapon does one of the following, at random: +2 fire, cold, lightning, or physical damage.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: Champion or Sov
+		
+		EFFECT
+		::: Random
+		::: ::: +2 ATK
+		::: ::: +2 Air\Lightning ATK
+		::: ::: +2 Fire ATK
+		::: ::: +2 Water\Cold ATK
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Dispelled (Enchantment)
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Alteration</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>FriendlyChampionOrSov</SpellTargetType>
+		<AppliesRandomModifier>1</AppliesRandomModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Fire</StrVal>
+			<Duration>-1</Duration>
+			<Value>2</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Cold</StrVal>
+			<Duration>-1</Duration>
+			<Value>2</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Lightning</StrVal>
+			<Duration>-1</Duration>
+			<Value>2</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Pierce</StrVal>
+			<Duration>-1</Duration>
+			<Value>2</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>50</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_NobleLegacy.png</IconFG>
+		<HitSoundFX>Spell_Courage_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_BurningBlade_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.75</EffectScale>
+			<EffectDelay>0.25</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="PrismShift_Air">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Prism Shift: Air</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Anthuamancy</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Air1</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>100</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Transforms a Shard in your empire into an Air Shard.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] PRISM SHIFT: AIR
+		::: Transforms a Shard in your empire into an Air Shard.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: Shard
+		
+		EFFECT
+		::: + 1 Air Shard
+		::: - 1 Regular Shard
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Transformed
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Prismancy</Description>
+		<SpellBookSortCategory>World</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Other</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>AnyShard</SpellTargetType>
+		<SpellTargetZOCType>Friendly</SpellTargetZOCType>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>ChangeShardType</Attribute>
+			<StrVal>AirShard</StrVal>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_CS_A.png</IconFG>
+		<HitSoundFX>Spell_Consume_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_Corruption_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>2</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="PrismShift_Earth">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Prism Shift: Earth</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Anthuamancy</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Earth1</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>100</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Transforms a Shard in your empire into an Earth Shard.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] PRISM SHIFT: EARTH
+		::: Transforms a Shard in your empire into an Earth Shard.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: Shard
+		
+		EFFECT
+		::: + 1 Earth Shard
+		::: - 1 Regular Shard
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Transformed
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Prismancy</Description>
+		<SpellBookSortCategory>World</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Other</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>AnyShard</SpellTargetType>
+		<SpellTargetZOCType>Friendly</SpellTargetZOCType>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>ChangeShardType</Attribute>
+			<StrVal>EarthShard</StrVal>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_CS_E.png</IconFG>
+		<HitSoundFX>Spell_Consume_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_Corruption_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>2</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="PrismShift_Fire">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Prism Shift: Fire</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Anthuamancy</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Fire1</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>100</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Transforms a Shard in your empire into an Fire Shard.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] PRISM SHIFT: FIRE
+		::: Transforms a Shard in your empire into an Fire Shard.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: Shard
+		
+		EFFECT
+		::: + 1 Fire Shard
+		::: - 1 Regular Shard
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Transformed
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Prismancy</Description>
+		<SpellBookSortCategory>World</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Other</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>AnyShard</SpellTargetType>
+		<SpellTargetZOCType>Friendly</SpellTargetZOCType>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>ChangeShardType</Attribute>
+			<StrVal>FireShard</StrVal>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_CS_F.png</IconFG>
+		<HitSoundFX>Spell_Consume_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_Corruption_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>2</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="PrismShift_Water">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Prism Shift: Water</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Anthuamancy</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Water1</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>100</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Transforms a Shard in your empire into a Water Shard.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] PRISM SHIFT: WATER
+		::: Transforms a Shard in your empire into a Water Shard.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: Shard
+		
+		EFFECT
+		::: + 1 Water Shard
+		::: - 1 Regular Shard
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Transformed
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Prismancy</Description>
+		<SpellBookSortCategory>World</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Other</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>AnyShard</SpellTargetType>
+		<SpellTargetZOCType>Friendly</SpellTargetZOCType>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>ChangeShardType</Attribute>
+			<StrVal>WaterShard</StrVal>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_CS_W.png</IconFG>
+		<HitSoundFX>Spell_Consume_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_Corruption_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>2</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="RaiseLand_Sorcerer">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Smooth Cliffs</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Alteration</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>15</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Turn cliff into beach.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] SMOOTH CLIFFS
+		::: Turn cliff into beach.
+		
+		DOMAIN
+		::: Strategic
+		::: Neutral
+		::: Cliff
+		
+		EFFECT
+		::: + Beach
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Transformed
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Alteration</Description>
+		<SpellBookSortCategory>World</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Map</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Terraform</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>NeutralGround</SpellTargetType>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>RaiseLand</Attribute>
+		</GameModifier>
+		<ValidTerrainType>Cliff</ValidTerrainType>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_RaiseLands.png</IconFG>
+		<HitSoundFX>Spell_RaiseLand_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_RaiseLand_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.3</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="RecruitApprentice">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Recruit Sorcerer's Apprentice</DisplayName>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_IsInTower</Attribute>
+			<Value>1</Value>
+		</Prereq>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>PathOfTheSorcerer</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Fame</Resource>
+			<Amount>25</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Seek out a magical student to become your Apprentice.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] RECRUIT SORCERER'S APPRENTICE
+		::: Seek out a magical student to become your Apprentice - they will join you as a Henchman, a Champion that does not split XP.
+		
+		DOMAIN
+		::: Strategic
+		::: Self
+		
+		EFFECT
+		::: + 1 Apprentice
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Permanent
+		
+		OTHER
+		::: Caster must be Sov
+		
+		SOURCE
+		::: Improvement
+		::: ::: Sorcerer's Tower</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>Self</SpellTargetType>
+		<CasterMustBeSov>1</CasterMustBeSov>
+		<AppliesRandomModifier>1</AppliesRandomModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnitJoinArmy</Attribute>
+			<StrVal>Quendar_Apprentice1</StrVal>
+			<UnitClass>Champion</UnitClass>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnitJoinArmy</Attribute>
+			<StrVal>Quendar_Apprentice2</StrVal>
+			<UnitClass>Champion</UnitClass>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnitJoinArmy</Attribute>
+			<StrVal>Amarian_Apprentice2</StrVal>
+			<UnitClass>Champion</UnitClass>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnitJoinArmy</Attribute>
+			<StrVal>Amarian_Apprentice1</StrVal>
+			<UnitClass>Champion</UnitClass>
+		</GameModifier>
+		<Cooldown>4000</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_RecruitApprentice.png</IconFG>
+		<HitSoundFX>Spell_DestinyGift_01</HitSoundFX>
+	</SpellDef>
+	<SpellDef InternalName="ReWriteChanneling">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Re-Write Channeling</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Physimancy</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>80</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Sovereigns produce 10 Mana per Season.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] RE-WRITE CHANNELING
+		::: Sovereigns produce 10 Mana per Season.
+		
+		DOMAIN
+		::: Strategic
+		::: Self
+		
+		EFFECT
+		::: Sovereign Mana per Season is set at 10 instead of 1.
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Permanent
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Physimancy</Description>
+		<SpellBookSortCategory>World</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>Self</SpellTargetType>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>ChangeWorld</Attribute>
+			<StrVal>Sovereign_GlobalManaPerTurn</StrVal>
+			<StrVal2>10</StrVal2>
+		</GameModifier>
+		<Cooldown>1000</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_ThinkingMachine.png</IconFG>
+		<HitSoundFX>Spell_IneluctableVision_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_IneluctableVision_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="ReWriteCulture">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Re-Write Culture</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Physimancy</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>80</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Eliminates the non-contiguous Unrest penalty.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] RE-WRITE CULTURE
+		::: Cities no longer suffer the non-contiguous Unrest penalty, allowing all cities to freely sprawl.
+		
+		DOMAIN
+		::: Strategic
+		::: Self
+		
+		EFFECT
+		::: NonZOC ContiguousCity Unrest Penalty set at 0 instead of 10
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Permanent
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Physimancy</Description>
+		<SpellBookSortCategory>World</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>Self</SpellTargetType>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>ChangeWorld</Attribute>
+			<StrVal>NonZOCContiguousCityUnrestPenalty</StrVal>
+			<StrVal2>0</StrVal2>
+		</GameModifier>
+		<Cooldown>1000</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_ThinkingMachine.png</IconFG>
+		<HitSoundFX>Spell_IneluctableVision_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_IneluctableVision_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="ReWriteEconomics">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Re-Write Economics</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Physimancy</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>80</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Drastically lowers the cost to Rush production.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] RE-WRITE ECONOMICS
+		::: Drastically lowers the cost to Rush production.
+		
+		DOMAIN
+		::: Strategic
+		::: Self
+		
+		EFFECT
+		::: Cost per Labor to Rush Production set at 0.5 instead of 1.33
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Permanent
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Physimancy</Description>
+		<SpellBookSortCategory>World</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>Self</SpellTargetType>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>ChangeWorld</Attribute>
+			<StrVal>CostPerLaborToRushProduction</StrVal>
+			<StrVal2>0.5</StrVal2>
+		</GameModifier>
+		<Cooldown>1000</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_ThinkingMachine.png</IconFG>
+		<HitSoundFX>Spell_IneluctableVision_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_IneluctableVision_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="ReWritePolitics">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Re-Write Politics</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Physimancy</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>80</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Drastically lowers the Unrest penalty per city.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] RE-WRITE POLITICS
+		::: Drastically lowers the Unrest penalty per city.
+		
+		DOMAIN
+		::: Strategic
+		::: Self
+		
+		EFFECT
+		::: City Count Unrest Penalty set at 1 instead of 3.
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Permanent
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Physimancy</Description>
+		<SpellBookSortCategory>World</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>Self</SpellTargetType>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>ChangeWorld</Attribute>
+			<StrVal>CityCountUnrestPenalty</StrVal>
+			<StrVal2>1</StrVal2>
+		</GameModifier>
+		<Cooldown>1000</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_ThinkingMachine.png</IconFG>
+		<HitSoundFX>Spell_IneluctableVision_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_IneluctableVision_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="SoulOfIron">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Soul Of Iron</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Metamancy</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Metal</Resource>
+			<Amount>120</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Metal</Resource>
+			<PerTurn>1</PerTurn>
+			<Amount>5</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Increases Attack and Defense.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] SOUL OF IRON
+		::: Increases Attack and Defense.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: Champion or Sov
+		
+		EFFECT
+		::: + (3 + Earth Shards) ATK
+		::: + (8 + Earth Shards) DEF
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Dispelled (Enchantment)
+		
+		OTHER
+		::: Earth Shards
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Metamancy</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>FriendlyChampionOrSov</SpellTargetType>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Attack_Boost</StrVal>
+			<Duration>-1</Duration>
+			<Effect>E_NaturesCloak_Particle</Effect>
+			<HasUpgradableValue>1</HasUpgradableValue>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumEarthShards] + 3]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Defense_Pierce</StrVal>
+			<Duration>-1</Duration>
+			<HasUpgradableValue>1</HasUpgradableValue>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumEarthShards] + 8]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>20</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_MountainTopMining.png</IconFG>
+		<HitSoundFX>Spell_GiftOfIron_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_StoneSkin_Particle</EffectName>
+			<LocalPosition>0,25,0</LocalPosition>
+			<EffectScale>.4</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+			<PlayOnAllTargets>1</PlayOnAllTargets>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="SummonShip">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Craft Ship</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Alteration</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>30</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Summons a ship on ocean terrain.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] CRAFT SHIP
+		::: Summons a ship on ocean terrain. Keep in mind you may need to create beach terrain for the ship to transport your units to and from land.
+		
+		DOMAIN
+		::: Strategic
+		::: Ocean
+		
+		EFFECT
+		::: Summon Ship
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Alteration</Description>
+		<SpellBookSortCategory>Summon</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Summon</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Summon</SpellSubClass>
+		<SpellTargetType>AnyKnownTerritory</SpellTargetType>
+		<SpellTargetTileOccupied>FriendlyOrEmpty</SpellTargetTileOccupied>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>SummonUnit</Attribute>
+			<UnitClass>Ship</UnitClass>
+			<Value>1</Value>
+		</GameModifier>
+		<ValidTerrainType>Submerged</ValidTerrainType>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_ForgingGeometry.png</IconFG>
+		<HitSoundFX>Spell_SummonFireElemental_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_SummonFireElemental_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.5</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="WaterOsmosis">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Osmosis Of Water</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Elemancy</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_ShardEssence</Attribute>
+			<Value>1</Value>
+		</Prereq>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Target gains the Water Apprentice Spell Trait.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] OSMOSIS OF WATER
+		::: Target gains the Water Apprentice Spell Trait.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: Champion or Sov
+		
+		EFFECT
+		::: + Water Apprentice
+		::: - 1 Shard Essence
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Permanent
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Elemancy</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>FriendlyChampionOrSov</SpellTargetType>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockUnitAbility</Attribute>
+			<StrVal>Water1</StrVal>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ShardEssence</StrVal>
+			<ApplyToCaster>1</ApplyToCaster>
+			<Value>-1</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>20</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_ParadigmShift_W.png</IconFG>
+		<HitSoundFX>Spell_MantleOfOceans_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_MantleofOceans_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="YearOfMeditation">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Year Of Meditation</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Knowledge_Sorcerer</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>30</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<PreventStackingWith>JourneyOfTheMind</PreventStackingWith>
+		<PreventStackingWith>ExtractKnowledge</PreventStackingWith>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>The Sorcerer gains 25 XP.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] YEAR OF MEDITATION
+		::: The Sorcerer gains 25 XP.
+		
+		DOMAIN
+		::: Strategic
+		::: Self
+		
+		EFFECT
+		::: + 25 XP
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Permanent
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Erudition</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>Self</SpellTargetType>
+		<CastTime>4</CastTime>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>GiveExperience</Attribute>
+			<Value>25</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_BottledTime.png</IconFG>
+		<HitSoundFX>Spell_DestinyGift_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_Paragon_Particle</EffectName>
+			<LocalPosition>0,30,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+		<!--TACTICAL-->
+	<SpellDef InternalName="AntiAcousticWave">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Anti-Acoustic Wave</DisplayName>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Auralmancy</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>30</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Silence enemies and -25% Dodge.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] ANTI-ACOUSTIC WAVE
+		::: All enemy units are silenced and lose 25% dodge unless they resist.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Units (ALL)
+		
+		EFFECT
+		::: - 25% Dodge
+		::: Silenced
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: 5 Actions for Dodge
+		::: Battle for Silenced
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Auralmancy</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Debuff</SpellSubClass>
+		<SpellTargetType>AllEnemyUnits</SpellTargetType>
+		<IsResistable>1</IsResistable>
+		<CastTime>1</CastTime>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>PreventSpellcasting</Attribute>
+			<DisplayName>Silenced</DisplayName>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_Dodge</StrVal>
+			<Duration>5</Duration>
+			<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[UnitStat_Dodge] * -0.25]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>30</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_SwordOfInitiative_MA.png</IconFG>
+		<HitSoundFX>Spell_HorrificWailImpact_01</HitSoundFX>
+		<SpellCastSoundFX>Spell_HorrificWailTravel_01</SpellCastSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_HorrificWail_Impact_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>1</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+			<PlayOnAllTargets>1</PlayOnAllTargets>
+		</SpellDefEffect>
+		<SpellDefEffect>
+			<EffectName>T_HorrificWail_Particle</EffectName>
+			<LocalPosition>0,20,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+			<PlayOnCaster>1</PlayOnCaster>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="ArcaneVacuum">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Arcane Vacuum</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>PathOfTheSorcerer</Attribute>
+		</Prereq>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Protects from Enemy Spells.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] ARCANE VACUUM
+		::: Protects from Enemy Spells.
+		
+		DOMAIN
+		::: Tactical
+		::: Self
+		
+		EFFECT
+		::: Spell Immunity
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: 3 Actions
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>Self</SpellTargetType>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>ProtectFromSpells</Attribute>
+			<Duration>3</Duration>
+			<DisplayName>Spell Immune</DisplayName>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_MagicResist</StrVal>
+			<Value>500</Value>
+			<Duration>3</Duration>
+		</GameModifier>
+		<Cooldown>99</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_EreogsTeachings.png</IconFG>
+		<HitSoundFX>Spell_Counterspell_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_ManaShield_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.6</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="BewitchingWords">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Bewitching Chant</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Auralmancy</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>35</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Dazes enemies for 2 Actions.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] BEWITCHING CHANT
+		::: All enemy units are dazed for 2 Actions unless they resist.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Units (ALL)
+		
+		EFFECT
+		::: Dazed
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: 2 Actions
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Auralmancy</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Debuff</SpellSubClass>
+		<SpellTargetType>AllEnemyUnits</SpellTargetType>
+		<IsResistable>1</IsResistable>
+		<CastTime>1</CastTime>
+		<GameModifier>
+			<ModType>TacticalUnit</ModType>
+			<Attribute>ChanceToLoseNextTurn</Attribute>
+			<DisplayName>Bewitched</DisplayName>
+			<Duration>2</Duration>
+			<Effect>E_Daze_Particle</Effect>
+			<PerTurn>1</PerTurn>
+			<Value>100</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>30</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Moria1.png</IconFG>
+		<HitSoundFX>Spell_Daze_01</HitSoundFX>
+	</SpellDef>
+	<SpellDef InternalName="Destabilize">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Destabilizating Presence</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Destabilize</Attribute>
+		</Prereq>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Reduces elemental Resistances of all Enemies.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] DESTABILIZING PRESENCE
+		::: Reduces elemental Resistances of all Enemies.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Units (ALL)
+		
+		EFFECT
+		::: - 33% Air\Lightning Resistance
+		::: - 33% Earth Resistance
+		::: - 33% Fire Resistance
+		::: - 33% Water\Cold Resistance
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: Battle
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Destabilization</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitCurse</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Debuff</SpellSubClass>
+		<SpellTargetType>AllEnemyUnits</SpellTargetType>
+		<IsResistable>1</IsResistable>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ResistFire</StrVal>
+			<Duration>-1</Duration>
+			<Value>-33</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ResistCold</StrVal>
+			<Duration>-1</Duration>
+			<Value>-33</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ResistEarth</StrVal>
+			<Duration>-1</Duration>
+			<Value>-33</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ResistLightning</StrVal>
+			<Duration>-1</Duration>
+			<Value>-33</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>25</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_MarkOfTheDamned.png</IconFG>
+		<HitSoundFX>Spell_FearWave_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_Fear_Impact_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>1</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+			<PlayOnAllTargets>1</PlayOnAllTargets>
+		</SpellDefEffect>
+		<SpellDefEffect>
+			<EffectName>T_FearWave_Particle</EffectName>
+			<LocalPosition>0,20,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+		<SpellDefEffect>
+			<EffectName>T_FearWave_Particle</EffectName>
+			<LocalPosition>0,20,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="DetonateSpell">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Detonate</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>SpellResistance_Sorcerer</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>20</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Disrupt casting, does damages, and dazes.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] DETONATE
+		::: Disrupt target's casting, does damages, and dazes
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Caster
+		
+		EFFECT
+		::: Disrupt Spellcasting
+		::: 50 Damages
+		::: Dazes for 2 Actions
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Arcane Resistance I</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Debuff</SpellSubClass>
+		<SpellTargetType>EnemyCaster</SpellTargetType>
+		<IsResistable>1</IsResistable>
+		<GameModifier>
+			<ModType>TacticalUnit</ModType>
+			<Attribute>DisruptSpellCharge</Attribute>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<Value>-50</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>TacticalUnit</ModType>
+			<Attribute>ChanceToLoseNextTurn</Attribute>
+			<DisplayName>Dazed</DisplayName>
+			<Duration>2</Duration>
+			<Value>100</Value>
+		</GameModifier>
+		<Cooldown>3</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>633</AIPriority>
+			<ValueCalcWrapper>
+				<ValueType>IsTargetWorthy</ValueType>
+				<Calculate InternalName="Calc" ValueOwner="TargetUnit">
+					<Expression><![CDATA[[UnitStat_BG_IsChampion]]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc] > 0]]></Expression>
+				</Calculate>
+			</ValueCalcWrapper>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Vampire_Curse.png</IconFG>
+		<HitSoundFX>Spell_Feedback_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>E_FlameWave_Impact_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>1</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+			<PlayOnAllTargets>1</PlayOnAllTargets>
+		</SpellDefEffect>
+		<SpellDefEffect>
+			<EffectName>T_FlameWave_Particle</EffectName>
+			<LocalPosition>0,20,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="ExtractEssence">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Extract Essence</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Spell_ConsumeSpirit_Sorcerer</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>0</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Caster's Level Damage. Gain Mana if target is killed.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] EXTRACT ESSENCE
+		::: Target takes the Caster's Level in Damage. If this kills the target the caster gains 20 Mana.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Unit
+		
+		EFFECT
+		::: (Caster's Level) DMG
+		::: +20 Mana if Target is killed
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Extract Essence</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<IsResistable>1</IsResistable>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel] * -1]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Mana</Attribute>
+			<ApplyToCaster>1</ApplyToCaster>
+			<ApplyIfSpellTargetKilled>1</ApplyIfSpellTargetKilled>
+			<Value>20</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<IsForSpellResist>1</IsForSpellResist>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Unit_GetLevel] * -0.5]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<Cooldown>5</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_ConsumeSpirit.png</IconFG>
+		<HitSoundFX>Spell_ManaBlastImpact_01</HitSoundFX>
+		<SpellCastSoundFX>Spell_ManaBlastTravel_01</SpellCastSoundFX>
+		<SpellCastEffectName>T_ManaBlast_Particle</SpellCastEffectName>
+		<SpellCastEffectScale>1</SpellCastEffectScale>
+		<SpellCastProjectile>1</SpellCastProjectile>
+		<SpellCastProjectileSpeed>700</SpellCastProjectileSpeed>
+		<SpellDefEffect>
+			<EffectName>T_ConsumeSpirit_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.5</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+		<SpellDefEffect>
+			<EffectName>T_ConsumeSpiritGain_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.5</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+			<PlayOnCaster>1</PlayOnCaster>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="GraviticHold">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Gravitic Hold</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Gravimancy</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>75</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>-6 Initiative and -1 Movement.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] GRAVITIC HOLD
+		::: All enemy units lose -6 Initiative (-2 if they resist) and have their Movement reduced to 1.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemies
+		::: Units (ALL)
+		
+		EFFECT
+		::: - 6 Initiative (- 2 if Resisted)
+		::: Sets Movement to 1
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: Battle
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Gravimancy</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Debuff</SpellSubClass>
+		<SpellTargetType>AllEnemyUnits</SpellTargetType>
+		<IsResistable>1</IsResistable>
+		<CastTime>1</CastTime>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>-6</Value>
+			<Duration>-1</Duration>
+			<DisplayName>Gravity</DisplayName>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_CombatSpeed</StrVal>
+			<Value>-2</Value>
+			<Duration>-1</Duration>
+			<IsForSpellResist>1</IsForSpellResist>
+			<DisplayName>Gravity</DisplayName>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SetUnitStat</Attribute>
+			<StrVal>UnitStat_Moves</StrVal>
+			<Effect>E_Wither_Particle</Effect>
+			<Duration>-1</Duration>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>SetUnitStat</Attribute>
+			<StrVal>UnitStat_Moves</StrVal>
+			<Effect>E_Wither_Particle</Effect>
+			<Duration>-1</Duration>
+			<IsForSpellResist>1</IsForSpellResist>
+			<Value>1</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>30</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Confusion.png</IconFG>
+		<HitSoundFX>Spell_Wither_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>T_Wither_Particle</EffectName>
+			<LocalPosition>0,30,0</LocalPosition>
+			<EffectScale>.75</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="SearingLight_Sorcerer">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Searing Light</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Lucimancy_Sorcerer</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>40</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>A focused wrath of light strikes the target.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] SEARING LIGHT
+		::: Calls down a focused wrath of light from above, dealing 40 Arcane Light Damage (+4 per Life Shard), half if the unit resists.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Unit
+		
+		EFFECT
+		::: ((10 + Life Shards) x4) Arcane Light DMG
+		
+		FIGHTABLE
+		::: Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Lucimancy</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<IsResistable>1</IsResistable>
+		<CastTime>1</CastTime>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_ArcaneLight</AttackStat>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumLifeShards] * 4]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] + 40]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc2] * [UnitStat_SpellDamage_ArcaneLight]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc3]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc3]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_ArcaneLight</AttackStat>
+			<IsForSpellResist>1</IsForSpellResist>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumLifeShards] * 2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] + 20]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc2] * [UnitStat_SpellDamage_ArcaneLight]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc3]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc3]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>100</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_BlindingLight.png</IconFG>
+		<HitSoundFX>Spell_SummonDeathDemon_01</HitSoundFX>
+		<ModifierDelay>1</ModifierDelay>
+		<SpellDefEffect>
+			<EffectName>S_CalloftheTitans_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>.9</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="Shadowlance_Sorcerer">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Shadow Lance (Sorcerer)</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Umbramancy_Sorcerer</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>40</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>A bolt of night strikes the target.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] SHADOW LANCE (SORCERER)
+		::: A bolt of night strikes the victim doing 40 Arcane Shadow damage (+4 per death shard), half if they resist.
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Unit
+		
+		EFFECT
+		::: ((10 + Death Shards) x4) Arcane Shadow DMG
+		
+		FIGHTABLE
+		::: Defendable
+		::: Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: Death Shards
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Umbramancy</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<IsResistable>1</IsResistable>
+		<CastTime>1</CastTime>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_ArcaneShadow</AttackStat>
+			<IsForFormattedDescription>1</IsForFormattedDescription>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumDeathShards] * 4]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] + 40]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc2] * [UnitStat_SpellDamage_ArcaneShadow]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc3]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc3]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_ArcaneShadow</AttackStat>
+			<IsForSpellResist>1</IsForSpellResist>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumDeathShards] * 2]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] + 20]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc2] * [UnitStat_SpellDamage_ArcaneShadow]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc3]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="ValueForFormattedDescription">
+				<Expression><![CDATA[[Calc3]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>40</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Shadowbolt.png</IconFG>
+		<HitSoundFX>Spell_Wither_01</HitSoundFX>
+		<SpellCastSoundFX>Spell_Shadowbolt_Travel</SpellCastSoundFX>
+		<SpellCastEffectName>T_ShadowBolt_Particle</SpellCastEffectName>
+		<SpellCastEffectScale>0.30</SpellCastEffectScale>
+		<SpellCastProjectile>1</SpellCastProjectile>
+		<SpellCastProjectileSpeed>800</SpellCastProjectileSpeed>
+	</SpellDef>
+	<SpellDef InternalName="SorcererConcentration_Ability">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Sorcerer's Concentration</DisplayName>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Adjusts Spell Damage and Casting Time based on Sorcerer's Abilities.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] SORCERER'S CONCENTRATION
+		::: Adjusts Spell Damage and Casting Time based on Sorcerer's Abilities.
+		
+		DOMAIN
+		::: Tactical
+		::: Self
+		
+		EFFECT
+		::: + 1 Cast Time
+		::: + ?% Spell Damage
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Battle
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>Self</SpellTargetType>
+		<IsCastable>0</IsCastable>
+		<IsSpecialAbility>1</IsSpecialAbility>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_SpellDamage</StrVal>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_SpellDamage_SorcererTactical]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_SpellCastTimeModifier</StrVal>
+			<Duration>-1</Duration>
+			<Value>1</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+		</AIData>
+		<IgnoreCastAnim>1</IgnoreCastAnim>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Enchanting.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="SummonMeteor">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[T] Summon Meteor</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Gravimancy</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>150</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Does a lot of Damage to a lot of units.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] SUMMON METEOR
+		::: Does a lot of Damage to a all units within 3 tiles of the impact point, multiplied by each member of that unit. Beware of hitting your own units!
+		
+		DOMAIN
+		::: Tactical
+		::: Enemy
+		::: Unit
+		
+		EFFECT
+		::: ((4 + Earth Shards) x 5) DMG
+		::: ((6.67 + Air Shards + Fire Shards) x 3) Fire DMG
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: 7x7 Area
+		::: Air Shards (x3)
+		::: Earth Shards (x5)
+		::: Fire Shards (x3)
+		::: Target Troopcount Multiplier
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Gravimancy</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Offensive</SpellClass>
+		<SpellSubClass>Damage</SpellSubClass>
+		<SpellTargetType>EnemyUnit</SpellTargetType>
+		<AllowFriendlyFireInRadius>1</AllowFriendlyFireInRadius>
+		<CastTime>3</CastTime>
+		<Radius>3</Radius>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Pierce</AttackStat>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumEarthShards] * 5]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2">
+				<Expression><![CDATA[[Calc] + 20]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[Unit_GetTroopCount]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc2] * [Calc3]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>DefendableDamage</Attribute>
+			<AttackStat>UnitStat_Attack_Fire</AttackStat>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitOwner_GetNumAirShards] + [UnitOwner_GetNumFireShards]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[Calc] * 3]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc3">
+				<Expression><![CDATA[[Calc2] + 20]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Calc4" ValueOwner="TargetUnit">
+				<Expression><![CDATA[[Unit_GetTroopCount]]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc3] * [Calc4]]]></Expression>
+			</Calculate>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>100</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_CoalStones.png</IconFG>
+		<HitSoundFX>Spell_FallingStar_01</HitSoundFX>
+		<ModifierDelay>1.5</ModifierDelay>
+		<WorldLightOverrideTime>4</WorldLightOverrideTime>
+		<WorldLightOverrideAmbiant>0,0,0</WorldLightOverrideAmbiant>
+		<WorldLightOverrideDiffuse>35,50,48</WorldLightOverrideDiffuse>
+		<WorldLightOverrideRim0>22,116,176</WorldLightOverrideRim0>
+		<WorldLightOverrideRim1>17,212,164</WorldLightOverrideRim1>
+		<SpellDefEffect>
+			<EffectName>S_FallingStar_Particle</EffectName>
+			<LocalPosition>0, 0 ,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+			<PlayOnAllTargets>1</PlayOnAllTargets>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="UnstableMagic">
+		<AutoUnlock>0</AutoUnlock>
+		<DisplayName>[T] Unstable Magic</DisplayName>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<Description>This unit loses 10 health after every spell cast.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[T] UNSTABLE MAGIC
+		::: This unit loses 10 health after every spell cast.
+		
+		DOMAIN
+		::: Tactical
+		::: Self
+		
+		EFFECT
+		::: - 10 HP per Cast
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Volatile Power</Description>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Heal</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Heal</SpellSubClass>
+		<SpellTargetType>Self</SpellTargetType>
+		<IsSpecialAbility>1</IsSpecialAbility>
+		<Radius>2</Radius>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>CurHealth</Attribute>
+			<Value>-10</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>15</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Doomed.png</IconFG>
+	</SpellDef>
+		<!--ADEPTS-->
+	<SpellDef InternalName="CultureOfAir_Adept">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Culture Of Air (Adept)</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Elemancy</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>AirAdept1</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>100</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<PreventStackingWith>CultureOfAir</PreventStackingWith>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Produce additional Air Power in the Enchanted City.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] CULTURE OF AIR (ADEPT)
+		::: Produce additional Air Power in the Enchanted City.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: City
+		
+		EFFECT
+		::: + 1 Air Power
+		::: - 20% Gildar
+		::: - 20% Prodution
+		::: - 20% Research
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Dispelled (Enchantment)
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Elemancy
+		
+		::: Spell Rank
+		::: ::: Air Adept I</Description>
+		<SpellBookSortCategory>City</SpellBookSortCategory>
+		<SpellBookSortSubCategory>CityEnchantment</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>ImpResourceBooster</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>FriendlyCity</SpellTargetType>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>AirMana</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ResourceMultiplier</ModType>
+			<Attribute>Research</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>0.8</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ResourceMultiplier</ModType>
+			<Attribute>Production</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>0.8</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ResourceMultiplier</ModType>
+			<Attribute>Gold</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>0.8</Value>
+		</GameModifier>
+		<ValidTerrainCategory>City</ValidTerrainCategory>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>100</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Sublimation.png</IconFG>
+		<HitSoundFX>Spell_Inspiration_01</HitSoundFX>
+		<SpellCastEffectName>Brilliance</SpellCastEffectName>
+		<SpellCastEffectScale>.4</SpellCastEffectScale>
+		<SpellDefEffect>
+			<EffectName>S_Inspiration_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.75</EffectScale>
+			<EffectDelay>0.5</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="CultureOfDeath_Adept">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Culture Of Death (Adept)</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Elemancy</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Ability_X_DeathAdept1</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>100</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<PreventStackingWith>CultureOfDeath</PreventStackingWith>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Produce additional Death Power in the Enchanted City.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] CULTURE OF DEATH (ADEPT)
+		::: Produce additional Death Power in the Enchanted City.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: City
+		
+		EFFECT
+		::: + 1 Death Power
+		::: - 20% Gildar
+		::: - 20% Prodution
+		::: - 20% Research
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Dispelled (Enchantment)
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Elemancy
+		
+		::: Spell Rank
+		::: ::: Death Adept I</Description>
+		<SpellBookSortCategory>City</SpellBookSortCategory>
+		<SpellBookSortSubCategory>CityEnchantment</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>ImpResourceBooster</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>FriendlyCity</SpellTargetType>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>DeathMana</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ResourceMultiplier</ModType>
+			<Attribute>Research</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>0.8</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ResourceMultiplier</ModType>
+			<Attribute>Production</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>0.8</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ResourceMultiplier</ModType>
+			<Attribute>Gold</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>0.8</Value>
+		</GameModifier>
+		<ValidTerrainCategory>City</ValidTerrainCategory>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>100</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Disintegration.png</IconFG>
+		<HitSoundFX>Spell_Inspiration_01</HitSoundFX>
+		<SpellCastEffectName>Brilliance</SpellCastEffectName>
+		<SpellCastEffectScale>.4</SpellCastEffectScale>
+		<SpellDefEffect>
+			<EffectName>S_Inspiration_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.75</EffectScale>
+			<EffectDelay>0.5</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="CultureOfEarth_Adept">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Culture Of Earth (Adept)</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Elemancy</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>EarthAdept1</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>100</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<PreventStackingWith>CultureOfEarth</PreventStackingWith>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Produce additional Earth Power in the Enchanted City.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] CULTURE OF EARTH (ADEPT)
+		::: Produce additional Earth Power in the Enchanted City.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: City
+		
+		EFFECT
+		::: + 1 Earth Power
+		::: - 20% Gildar
+		::: - 20% Prodution
+		::: - 20% Research
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Dispelled (Enchantment)
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Elemancy
+		
+		::: Spell Rank
+		::: ::: Earth Adept I</Description>
+		<SpellBookSortCategory>City</SpellBookSortCategory>
+		<SpellBookSortSubCategory>CityEnchantment</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>ImpResourceBooster</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>FriendlyCity</SpellTargetType>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>EarthMana</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ResourceMultiplier</ModType>
+			<Attribute>Research</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>0.8</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ResourceMultiplier</ModType>
+			<Attribute>Production</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>0.8</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ResourceMultiplier</ModType>
+			<Attribute>Gold</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>0.8</Value>
+		</GameModifier>
+		<ValidTerrainCategory>City</ValidTerrainCategory>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>100</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Amalgamation.png</IconFG>
+		<HitSoundFX>Spell_Inspiration_01</HitSoundFX>
+		<SpellCastEffectName>Brilliance</SpellCastEffectName>
+		<SpellCastEffectScale>.4</SpellCastEffectScale>
+		<SpellDefEffect>
+			<EffectName>S_Inspiration_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.75</EffectScale>
+			<EffectDelay>0.5</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="CultureOfFire_Adept">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Culture Of Fire (Adept)</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Elemancy</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>FireAdept1</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>100</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<PreventStackingWith>CultureOfFire</PreventStackingWith>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Produce additional Fire Power in the Enchanted City.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] CULTURE OF FIRE (ADEPT)
+		::: Produce additional Fire Power in the Enchanted City.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: City
+		
+		EFFECT
+		::: + 1 Fire Power
+		::: - 20% Gildar
+		::: - 20% Prodution
+		::: - 20% Research
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Dispelled (Enchantment)
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Elemancy
+		
+		::: Spell Rank
+		::: ::: Fire Adept I</Description>
+		<SpellBookSortCategory>City</SpellBookSortCategory>
+		<SpellBookSortSubCategory>CityEnchantment</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>ImpResourceBooster</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>FriendlyCity</SpellTargetType>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>FireMana</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ResourceMultiplier</ModType>
+			<Attribute>Research</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>0.8</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ResourceMultiplier</ModType>
+			<Attribute>Production</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>0.8</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ResourceMultiplier</ModType>
+			<Attribute>Gold</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>0.8</Value>
+		</GameModifier>
+		<ValidTerrainCategory>City</ValidTerrainCategory>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>100</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Fusion.png</IconFG>
+		<HitSoundFX>Spell_Inspiration_01</HitSoundFX>
+		<SpellCastEffectName>Brilliance</SpellCastEffectName>
+		<SpellCastEffectScale>.4</SpellCastEffectScale>
+		<SpellDefEffect>
+			<EffectName>S_Inspiration_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.75</EffectScale>
+			<EffectDelay>0.5</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="CultureOfLife_Adept">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Culture Of Life (Adept)</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Elemancy</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>LifeAdept1</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Kingdom</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>100</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<PreventStackingWith>CultureOfLife</PreventStackingWith>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Produce additional Life Power in the Enchanted City.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] CULTURE OF LIFE (ADEPT)
+		::: Produce additional Life Power in the Enchanted City.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: City
+		
+		EFFECT
+		::: + 1 Life Power
+		::: - 20% Gildar
+		::: - 20% Prodution
+		::: - 20% Research
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Dispelled (Enchantment)
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Elemancy
+		
+		::: Spell Rank
+		::: ::: Life Adept I</Description>
+		<SpellBookSortCategory>City</SpellBookSortCategory>
+		<SpellBookSortSubCategory>CityEnchantment</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>ImpResourceBooster</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>FriendlyCity</SpellTargetType>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>LifeMana</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ResourceMultiplier</ModType>
+			<Attribute>Research</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>0.8</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ResourceMultiplier</ModType>
+			<Attribute>Production</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>0.8</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ResourceMultiplier</ModType>
+			<Attribute>Gold</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>0.8</Value>
+		</GameModifier>
+		<ValidTerrainCategory>City</ValidTerrainCategory>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>100</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Consolidation.png</IconFG>
+		<HitSoundFX>Spell_Inspiration_01</HitSoundFX>
+		<SpellCastEffectName>Brilliance</SpellCastEffectName>
+		<SpellCastEffectScale>.4</SpellCastEffectScale>
+		<SpellDefEffect>
+			<EffectName>S_Inspiration_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.75</EffectScale>
+			<EffectDelay>0.5</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="CultureOfWater_Adept">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Culture Of Water (Adept)</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Elemancy</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>WaterAdept1</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>100</Amount>
+		</SpellResourceCost>
+		<CanStack>0</CanStack>
+		<PreventStackingWith>CultureOfWater</PreventStackingWith>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Produce additional Water Power in the Enchanted City.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] CULTURE OF WATER (ADEPT)
+		::: Produce additional Water Power in the Enchanted City.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: City
+		
+		EFFECT
+		::: + 1 Water Power
+		::: - 20% Gildar
+		::: - 20% Prodution
+		::: - 20% Research
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Dispelled (Enchantment)
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Elemancy
+		
+		::: Spell Rank
+		::: ::: Water Adept I</Description>
+		<SpellBookSortCategory>City</SpellBookSortCategory>
+		<SpellBookSortSubCategory>CityEnchantment</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>ImpResourceBooster</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>FriendlyCity</SpellTargetType>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>WaterMana</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ResourceMultiplier</ModType>
+			<Attribute>Research</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>0.8</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ResourceMultiplier</ModType>
+			<Attribute>Production</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>0.8</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>ResourceMultiplier</ModType>
+			<Attribute>Gold</Attribute>
+			<Duration>-1</Duration>
+			<PerTurn>1</PerTurn>
+			<Value>0.8</Value>
+		</GameModifier>
+		<ValidTerrainCategory>City</ValidTerrainCategory>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>100</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_Absorption.png</IconFG>
+		<HitSoundFX>Spell_Inspiration_01</HitSoundFX>
+		<SpellCastEffectName>Brilliance</SpellCastEffectName>
+		<SpellCastEffectScale>.4</SpellCastEffectScale>
+		<SpellDefEffect>
+			<EffectName>S_Inspiration_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>0.75</EffectScale>
+			<EffectDelay>0.5</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="PrismShift_Air_Adept">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Prism Shift: Air (Adept)</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Anthuamancy</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>AirAdept1</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>100</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Transforms a Shard in your empire into an Air Shard.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] PRISM SHIFT: AIR (ADEPT)
+		::: Transforms a Shard in your empire into an Air Shard.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: Shard
+		
+		EFFECT
+		::: + 1 Air Shard
+		::: - 1 Regular Shard
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Transformed
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Prismancy
+		
+		::: Spell Rank
+		::: ::: Air Adept I</Description>
+		<SpellBookSortCategory>World</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Other</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>AnyShard</SpellTargetType>
+		<SpellTargetZOCType>Friendly</SpellTargetZOCType>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>ChangeShardType</Attribute>
+			<StrVal>AirShard</StrVal>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_CS_A.png</IconFG>
+		<HitSoundFX>Spell_Consume_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_Corruption_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>2</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="PrismShift_Earth_Adept">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Prism Shift: Earth (Adept)</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Anthuamancy</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>EarthAdept1</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>100</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Transforms a Shard in your empire into an Earth Shard.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] PRISM SHIFT: EARTH (ADEPT)
+		::: Transforms a Shard in your empire into an Earth Shard.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: Shard
+		
+		EFFECT
+		::: + 1 Earth Shard
+		::: - 1 Regular Shard
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Transformed
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Prismancy
+		
+		::: Spell Rank
+		::: ::: Earth Adept I</Description>
+		<SpellBookSortCategory>World</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Other</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>AnyShard</SpellTargetType>
+		<SpellTargetZOCType>Friendly</SpellTargetZOCType>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>ChangeShardType</Attribute>
+			<StrVal>EarthShard</StrVal>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_CS_E.png</IconFG>
+		<HitSoundFX>Spell_Consume_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_Corruption_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>2</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="PrismShift_Fire_Adept">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Prism Shift: Fire (Adept)</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Anthuamancy</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>FireAdept1</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>100</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Transforms a Shard in your empire into an Fire Shard.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] PRISM SHIFT: FIRE (ADEPT)
+		::: Transforms a Shard in your empire into an Fire Shard.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: Shard
+		
+		EFFECT
+		::: + 1 Fire Shard
+		::: - 1 Regular Shard
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Transformed
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Prismancy
+		
+		::: Spell Rank
+		::: ::: Fire Adept I</Description>
+		<SpellBookSortCategory>World</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Other</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>AnyShard</SpellTargetType>
+		<SpellTargetZOCType>Friendly</SpellTargetZOCType>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>ChangeShardType</Attribute>
+			<StrVal>FireShard</StrVal>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_CS_F.png</IconFG>
+		<HitSoundFX>Spell_Consume_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_Corruption_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>2</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="PrismShift_Water_Adept">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Prism Shift: Water (Adept)</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Anthuamancy</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>WaterAdept1</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>100</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Transforms a Shard in your empire into a Water Shard.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] PRISM SHIFT: WATER (ADEPT)
+		::: Transforms a Shard in your empire into a Water Shard.
+		
+		DOMAIN
+		::: Strategic
+		::: Friendly
+		::: Shard
+		
+		EFFECT
+		::: + 1 Water Shard
+		::: - 1 Regular Shard
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Transformed
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Prismancy
+		
+		::: Spell Rank
+		::: ::: Water Adept I</Description>
+		<SpellBookSortCategory>World</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Other</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>AnyShard</SpellTargetType>
+		<SpellTargetZOCType>Friendly</SpellTargetZOCType>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>ChangeShardType</Attribute>
+			<StrVal>WaterShard</StrVal>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Spell_X_CS_W.png</IconFG>
+		<HitSoundFX>Spell_Consume_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>S_Corruption_Particle</EffectName>
+			<LocalPosition>0,0,0</LocalPosition>
+			<EffectScale>2</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+	<SpellDef InternalName="WarpSpace">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Warp Space</DisplayName>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Physimancy</Attribute>
+		</Prereq>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>45</Amount>
+		</SpellResourceCost>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Suck a tile into spatial paradox.
+		
+		See Tooltip.
+		
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] WARP SPACE
+		::: Suck a tile into spatial paradox, destroying any resources. A miasma of geometric contradictions prevents any unit from entering the tile, even flying units.
+		
+		DOMAIN
+		::: Strategic
+		::: Neutral+
+		::: Terrain
+		
+		EFFECT
+		::: Destroy Objects
+		::: Place Impassable Terrain
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Until Transformed
+		
+		OTHER
+		::: N/A
+		
+		SOURCE
+		::: Path of the Sorcerer
+		::: ::: Physimancy</Description>
+		<SpellBookSortCategory>World</SpellBookSortCategory>
+		<SpellBookSortSubCategory>Map</SpellBookSortSubCategory>
+		<SpellType>Strategic</SpellType>
+		<SpellClass>Terraform</SpellClass>
+		<SpellSubClass>Other</SpellSubClass>
+		<SpellTargetType>NeutralGround</SpellTargetType>
+		<CastTime>1</CastTime>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>DestroyObjects</Attribute>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Map</ModType>
+			<Attribute>PlaceTerrain</Attribute>
+			<TerrainType>Unknown</TerrainType>
+		</GameModifier>
+		<ValidTerrainCategory>City</ValidTerrainCategory>
+		<ValidTerrainCategory>Forest</ValidTerrainCategory>
+		<ValidTerrainCategory>Land</ValidTerrainCategory>
+		<ValidTerrainCategory>Mountain</ValidTerrainCategory>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Medallion_X_DoesNotExist.png</IconFG>
+		<HitSoundFX>Spell_FearWave_01</HitSoundFX>
+		<SpellDefEffect>
+			<EffectName>Y_SummonDeathDemon_Particle</EffectName>
+			<LocalPosition>0,20,0</LocalPosition>
+			<EffectScale>1</EffectScale>
+			<EffectDelay>0</EffectDelay>
+			<SnapToTerrain>1</SnapToTerrain>
+		</SpellDefEffect>
+	</SpellDef>
+</Spells>

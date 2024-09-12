@@ -1,0 +1,1092 @@
+<AbilityBonuses>
+	<DataChecksum NoParse="1">
+        <Ignore>DispName</Ignore>
+        <Translate>DisplayName,Description</Translate>
+    </DataChecksum>
+
+	<AbilityBonus InternalName="PathOfTheNinjaAbility">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusType>Unit_Level_Path</AbilityBonusType>
+		<AbilityBonusOption InternalName="PathOfTheNinja">
+			<DisplayName>Ninja</DisplayName>
+			<Description>Masters of mobility and critical hits with a dash of magic.</Description>
+			<Icon>Ability_PathOfTheAssassin_Icon.png</Icon>
+			<TraitTreePicture>trait_tree_unit_assassin.png</TraitTreePicture>
+			<BackgroundColor>80,106,47</BackgroundColor>
+			<HighlightColor>166,213,60</HighlightColor>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Provides>Unlocks traits that improve critical hits and accuracy</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ChanceToCrit</StrVal>
+				<Value>10</Value>
+				<Provides>+10 Critical Chance</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_TacticalSpellManaCost_Multiplier</StrVal>
+				<Value>-25</Value>
+				<Provides>-25% mana cost for tactical spells</Provides>
+			</GameModifier>
+			<RequiredLevel>2</RequiredLevel>
+			<Type>Ability</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>	
+	<AbilityBonus InternalName="ArmorProficiency1Ability_Ninja">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="ArmorProficiency1_Ninja">
+            <DisplayName>Chain Mail Proficiency</DisplayName>
+            <Description>Allows the unit to wear Chain Mail armor</Description>
+            <Icon>Ability_ChainMailProficiency_Icon.png</Icon>
+            <PerkTreePosX>0</PerkTreePosX>
+            <PerkTreePosY>0</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_ArmorProficiency</StrVal>
+                <Value>1</Value>
+                <Provides>Allows the unit to wear Chain Mail armor</Provides>
+            </GameModifier>
+            <MinimumLevel>6</MinimumLevel>
+            <Type>Defensive</Type>
+            <UpgradePathID>ArmorProficiency</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>PathOfTheNinja</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="NinjaProdigyAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="NinjaProdigy">
+            <DisplayName>Prodigy</DisplayName>
+            <Description>+10 Spell Mastery</Description>
+            <Icon>Ability_ProdigyI_Icon.png</Icon>
+            <PerkTreePosX>0</PerkTreePosX>
+            <PerkTreePosY>1</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_MagicPower</StrVal>
+                <Value>10</Value>
+                <Provides>+10 Spell Mastery</Provides>
+            </GameModifier>
+            <Type>Spell</Type>
+            <UpgradePathID>NinjaProdigy</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>PathOfTheNinja</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="NinjaPrecisionAbility_Level">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="NinjaPrecision_Level">
+            <DisplayName>Precision I</DisplayName>
+            <Description>+5 Accuracy</Description>
+            <Icon>Ability_PrecisionI_Icon.png</Icon>
+            <PerkTreePosX>0</PerkTreePosX>
+            <PerkTreePosY>3</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Accuracy</StrVal>
+                <Value>5</Value>
+                <Provides>+5 Accuracy</Provides>
+            </GameModifier>
+            <Type>Aggressive</Type>
+            <UpgradePathID>NinjaPrecision</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>PathOfTheNinja</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="NinjaDodge1Ability">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="NinjaDodge1">
+            <DisplayName>Dodge I</DisplayName>
+            <Description>+4 to Dodge</Description>
+            <Icon>Ability_DodgeI_Icon.png</Icon>
+            <PerkTreePosX>0</PerkTreePosX>
+            <PerkTreePosY>4</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Dodge</StrVal>
+                <Value>4</Value>
+                <Provides>+4 to Dodge</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <UpgradePathID>NinjaDodge</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>PathOfTheNinja</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>	
+    <AbilityBonus InternalName="NinjaChannelLightningAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="NinjaChannelLightning">
+            <DisplayName>Channel Lightning</DisplayName>
+            <Description>Allows the unit to cast Channel Lightning</Description>
+            <Icon>Ability_ChannelLightning_Icon.png</Icon>
+            <PerkTreePosX>1</PerkTreePosX>
+            <PerkTreePosY>0</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>UnlockCombatAbility</Attribute>
+                <StrVal>ChannelLightningAbility</StrVal>
+                <Provides>An attack that converts your weapon's attack to Lightning</Provides>
+            </GameModifier>
+            <CombatRating>10</CombatRating>
+            <IsCombatAbility>1</IsCombatAbility>			
+            <UpgradePathID>NinjaLightning</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>NinjaProdigy</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>		
+    <AbilityBonus InternalName="NinjaProdigy2Ability">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="NinjaProdigy2">
+            <DisplayName>Prodigy II</DisplayName>
+            <Description>+10 Spell Mastery</Description>
+            <Icon>Ability_ProdigyII_Icon.png</Icon>
+            <PerkTreePosX>1</PerkTreePosX>
+            <PerkTreePosY>1</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_MagicPower</StrVal>
+                <Value>10</Value>
+                <Provides>+10 Spell Mastery</Provides>
+            </GameModifier>
+            <Type>Spell</Type>
+            <UpgradePathID>NinjaProdigy</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>NinjaProdigy</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>	
+    <AbilityBonus InternalName="NinjaVitalStrike1Ability">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="NinjaVitalStrike1">
+            <DisplayName>Vital Strike I</DisplayName>
+            <Description>+5 to Critical Hit, +10% to Critical Hit Damage</Description>
+            <Icon>Ability_VitalStrikeI_Icon.png</Icon>
+            <PerkTreePosX>1</PerkTreePosX>
+            <PerkTreePosY>2</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_ChanceToCrit</StrVal>
+                <Value>5</Value>
+                <Provides>+5 To Critical Hit chance</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_CritDamageMultiplier</StrVal>
+                <Value>0.1</Value>
+                <Provides>+10% to Critical Hit damage</Provides>
+            </GameModifier>
+            <Type>Aggressive</Type>
+            <UpgradePathID>NinjaVitalStrike</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>NinjaPrecision_Level</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>	
+    <AbilityBonus InternalName="NinjaPrecision2Ability_Level">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="NinjaPrecision2_Level">
+            <DisplayName>Precision II</DisplayName>
+            <Description>+10 Accuracy</Description>
+            <Icon>Ability_PrecisionII_Icon.png</Icon>
+            <PerkTreePosX>1</PerkTreePosX>
+            <PerkTreePosY>3</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Accuracy</StrVal>
+                <Value>10</Value>
+                <Provides>+10 Accuracy</Provides>
+            </GameModifier>
+            <Type>Aggressive</Type>
+            <UpgradePathID>NinjaPrecision</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>NinjaPrecision_Level</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="NinjaDodge2Ability">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="NinjaDodge2">
+            <DisplayName>Dodge II</DisplayName>
+            <Description>+5 to Dodge</Description>
+            <Icon>Ability_DodgeII_Icon.png</Icon>
+            <PerkTreePosX>1</PerkTreePosX>
+            <PerkTreePosY>4</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Dodge</StrVal>
+                <Value>5</Value>
+                <Provides>+5 to Dodge</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <UpgradePathID>NinjaDodge</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>NinjaDodge1</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>	
+    <AbilityBonus InternalName="NinjaLightningPactIAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="NinjaLightningPactI">
+            <DisplayName>Lightning Pact I</DisplayName>
+            <Description>+0.5 Damage with Lightning Abilities per level </Description>
+            <Icon>Ability_EvokerI_Icon.png</Icon>
+            <PerkTreePosX>2</PerkTreePosX>
+            <PerkTreePosY>0</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Lightning</StrVal>
+                <Value>0.5</Value>
+				<PerLevel>1</PerLevel>
+                <Provides>+0.5 Damage with Lightning Abilities per level </Provides>
+            </GameModifier>
+            <Type>Aggressive</Type>
+			<UpgradePathID>NinjaLightning</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>NinjaChannelLightning</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="NinjaProdigy3Ability">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="NinjaProdigy3">
+            <DisplayName>Prodigy III</DisplayName>
+            <Description>+10 Spell Mastery</Description>
+            <Icon>Ability_ProdigyIII_Icon.png</Icon>
+            <PerkTreePosX>2</PerkTreePosX>
+            <PerkTreePosY>1</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_MagicPower</StrVal>
+                <Value>10</Value>
+                <Provides>+10 Spell Mastery</Provides>
+            </GameModifier>
+            <Type>Spell</Type>
+            <UpgradePathID>NinjaProdigy</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>NinjaProdigy2</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>	
+    <AbilityBonus InternalName="NinjaVitalStrike2Ability">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="NinjaVitalStrike2">
+            <DisplayName>Vital Strike II</DisplayName>
+            <Description>+5 to Critical Hit, +20% to Critical Hit Damage</Description>
+            <Icon>Ability_VitalStrikeII_Icon.png</Icon>
+            <PerkTreePosX>2</PerkTreePosX>
+            <PerkTreePosY>2</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_ChanceToCrit</StrVal>
+                <Value>5</Value>
+                <Provides>+5 To Critical Hit chance</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_CritDamageMultiplier</StrVal>
+                <Value>0.2</Value>
+                <Provides>+20% to Critical Hit damage</Provides>
+            </GameModifier>
+            <Type>Aggressive</Type>
+            <UpgradePathID>NinjaVitalStrike</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>NinjaVitalStrike1</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>	
+    <AbilityBonus InternalName="NinjaPrecision3Ability_Level">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="NinjaPrecision3_Level">
+            <DisplayName>Precision III</DisplayName>
+            <Description>+15 Accuracy</Description>
+            <Icon>Ability_PrecisionIII_Icon.png</Icon>
+            <PerkTreePosX>2</PerkTreePosX>
+            <PerkTreePosY>3</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Accuracy</StrVal>
+                <Value>15</Value>
+                <Provides>+15 Accuracy</Provides>
+            </GameModifier>
+            <Type>Aggressive</Type>
+            <UpgradePathID>NinjaPrecision</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>NinjaPrecision2_Level</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>	
+    <AbilityBonus InternalName="NinjaAcrobatAbility_Level">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="NinjaAcrobat_Level">
+            <DisplayName>Acrobat</DisplayName>
+            <Description>+1 Dodge per Level</Description>
+            <Icon>Ability_Acrobat_Icon.png</Icon>
+            <PerkTreePosX>2</PerkTreePosX>
+            <PerkTreePosY>4</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Dodge</StrVal>
+                <Value>1</Value>
+                <PerLevel>1</PerLevel>
+                <Provides>+1 Dodge per Level</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>NinjaDodge2</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>	
+    <AbilityBonus InternalName="NinjaLightningFormAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="NinjaLightningForm">
+            <DisplayName>Lightning Form</DisplayName>
+            <Description>Allows the unit to use the Lightning Form ability</Description>
+            <Icon>Ability_LightningForm_Icon.png</Icon>
+            <PerkTreePosX>3</PerkTreePosX>
+            <PerkTreePosY>0</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>UnlockCombatAbility</Attribute>
+                <StrVal>LightningForm</StrVal>
+                <Provides>Teleport through enemies in a straight line, dealing Lightning damage equal to your attack to any in your way</Provides>
+            </GameModifier>
+            <CombatRating>10</CombatRating>
+            <IsCombatAbility>1</IsCombatAbility>			
+            <UpgradePathID>NinjaLightning</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>NinjaLightningPactI</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>		
+	<AbilityBonus InternalName="NinjaLethal1Ability">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="NinjaLethal1">
+            <DisplayName>Lethal I</DisplayName>
+            <Description>+3 Attack</Description>
+            <Icon>Ability_LethalI_Icon.png</Icon>
+            <PerkTreePosX>3</PerkTreePosX>
+            <PerkTreePosY>1</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Boost</StrVal>
+                <Value>3</Value>
+                <Provides>+3 Attack</Provides>
+            </GameModifier>
+            <Type>Aggressive</Type>
+            <UpgradePathID>NinjaLethal</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>NinjaVitalStrike2</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>	
+    <AbilityBonus InternalName="NinjaVitalStrike3Ability">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="NinjaVitalStrike3">
+            <DisplayName>Vital Strike III</DisplayName>
+            <Description>+5 to Critical Hit, +30% to Critical Hit Damage</Description>
+            <Icon>Ability_VitalStrikeIII_Icon.png</Icon>
+            <PerkTreePosX>3</PerkTreePosX>
+            <PerkTreePosY>2</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_ChanceToCrit</StrVal>
+                <Value>5</Value>
+                <Provides>+5 To Critical Hit chance</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_CritDamageMultiplier</StrVal>
+                <Value>0.3</Value>
+                <Provides>+30% to Critical Hit damage</Provides>
+            </GameModifier>
+            <Type>Aggressive</Type>
+            <UpgradePathID>NinjaVitalStrike</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>NinjaVitalStrike2</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>	
+    <AbilityBonus InternalName="NinjaShadowStrike1Ability">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="NinjaShadowStrike1">
+            <DisplayName>Shadow Strike I</DisplayName>
+            <Description>Ignores 25% of the victim's Defense</Description>
+            <Icon>Ability_ShadowStrikeI_Icon.png</Icon>
+            <PerkTreePosX>3</PerkTreePosX>
+            <PerkTreePosY>3</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_ArmorPierce</StrVal>
+                <Value>0.5</Value>
+                <Provides>Ignores 25% of the victim's Defense</Provides>
+            </GameModifier>
+            <Type>Aggressive</Type>
+            <UpgradePathID>NinjaShadowStrike</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>NinjaPrecision3_Level</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>	
+    <AbilityBonus InternalName="NinjaFastAbility_Level">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="NinjaFast_Level">
+            <DisplayName>Fast I</DisplayName>
+            <Description>+1 Initiative</Description>
+            <Icon>Ability_Fast_Icon.png</Icon>
+            <PerkTreePosX>3</PerkTreePosX>
+            <PerkTreePosY>4</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_CombatSpeed</StrVal>
+                <Value>1</Value>
+            </GameModifier>
+            <Type>Aggressive</Type>
+            <UpgradePathID>NinjaFast</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>NinjaAcrobat_Level</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>	
+    <AbilityBonus InternalName="NinjaLightningPactIIAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="NinjaLightningPactII">
+            <DisplayName>Lightning Pact II</DisplayName>
+            <Description>+0.5 Damage with Lightning Abilities per level </Description>
+            <Icon>Ability_EvokerII_Icon.png</Icon>
+            <PerkTreePosX>4</PerkTreePosX>
+            <PerkTreePosY>0</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Lightning</StrVal>
+                <Value>0.5</Value>
+				<PerLevel>1</PerLevel>
+                <Provides>+0.5 Damage with Lightning Abilities per level </Provides>
+            </GameModifier>
+            <Type>Aggressive</Type>
+			<UpgradePathID>NinjaLightning</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>NinjaLightningForm</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>	
+    <AbilityBonus InternalName="NinjaLethal2Ability">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="NinjaLethal2">
+            <DisplayName>Lethal II</DisplayName>
+            <Description>+4 Attack</Description>
+            <Icon>Ability_LethalII_Icon.png</Icon>
+            <PerkTreePosX>4</PerkTreePosX>
+            <PerkTreePosY>1</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Boost</StrVal>
+                <Value>4</Value>
+                <Provides>+4 Attack</Provides>
+            </GameModifier>
+            <Type>Aggressive</Type>
+            <UpgradePathID>NinjaLethal</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>NinjaLethal1</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>	
+    <AbilityBonus InternalName="NinjaVitalStrike4Ability">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="NinjaVitalStrike4">
+            <DisplayName>Vital Strike IV</DisplayName>
+            <Description>+4 to Critical Hit, +40% to Critical Hit Damage</Description>
+            <Icon>Ability_VitalStrikeIV_Icon.png</Icon>
+            <PerkTreePosX>4</PerkTreePosX>
+            <PerkTreePosY>2</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_ChanceToCrit</StrVal>
+                <Value>4</Value>
+                <Provides>+4 To Critical Hit chance</Provides>
+            </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_CritDamageMultiplier</StrVal>
+                <Value>0.4</Value>
+                <Provides>+40% to Critical Hit damage</Provides>
+            </GameModifier>
+            <Type>Aggressive</Type>
+            <UpgradePathID>NinjaVitalStrike</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>NinjaVitalStrike3</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="NinjaShadowStrike2Ability">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="NinjaShadowStrike2">
+            <DisplayName>Shadow Strike II</DisplayName>
+            <Description>Ignores 25% of the victim's Defense</Description>
+            <Icon>Ability_ShadowStrikeII_Icon.png</Icon>
+            <PerkTreePosX>4</PerkTreePosX>
+            <PerkTreePosY>3</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_ArmorPierce</StrVal>
+                <Value>0.5</Value>
+                <Provides>Ignores 25% of the victim's Defense</Provides>
+            </GameModifier>
+            <Type>Aggressive</Type>
+            <UpgradePathID>NinjaShadowStrike</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>NinjaShadowStrike1</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="NinjaFast2Ability_Level">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="NinjaFast2_Level">
+            <DisplayName>Fast II</DisplayName>
+            <Description>+1 Initiative</Description>
+            <Icon>Ability_FastII_Icon.png</Icon>
+            <PerkTreePosX>4</PerkTreePosX>
+            <PerkTreePosY>4</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_CombatSpeed</StrVal>
+                <Value>1</Value>
+            </GameModifier>
+            <Type>Aggressive</Type>
+            <UpgradePathID>NinjaFast</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>NinjaFast_Level</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="NinjaLightningPactIIIAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="NinjaLightningPactIII">
+            <DisplayName>Lightning Pact III</DisplayName>
+            <Description>+0.5 Damage with Lightning Abilities per level </Description>
+            <Icon>Ability_EvokerIII_Icon.png</Icon>
+            <PerkTreePosX>5</PerkTreePosX>
+            <PerkTreePosY>0</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Lightning</StrVal>
+                <Value>0.5</Value>
+				<PerLevel>1</PerLevel>
+                <Provides>+0.5 Damage with Lightning Abilities per level </Provides>
+            </GameModifier>
+            <Type>Aggressive</Type>
+			<UpgradePathID>NinjaLightning</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>NinjaLightningPactII</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>		
+    <AbilityBonus InternalName="NinjaLethal3Ability">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="NinjaLethal3">
+            <DisplayName>Lethal III</DisplayName>
+            <Description>+5 Attack</Description>
+            <Icon>Ability_LethalIII_Icon.png</Icon>
+            <PerkTreePosX>5</PerkTreePosX>
+            <PerkTreePosY>1</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Boost</StrVal>
+                <Value>5</Value>
+                <Provides>+5 Attack</Provides>
+            </GameModifier>
+            <Type>Aggressive</Type>
+            <UpgradePathID>NinjaLethal</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>NinjaLethal2</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>	
+    <AbilityBonus InternalName="NinjaShadowStrike3Ability">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="NinjaShadowStrike3">
+            <DisplayName>Shadow Strike III</DisplayName>
+            <Description>Ignores 25% of the victim's Defense</Description>
+            <Icon>Ability_ShadowStrikeIII_Icon.png</Icon>
+            <PerkTreePosX>5</PerkTreePosX>
+            <PerkTreePosY>3</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_ArmorPierce</StrVal>
+                <Value>0.5</Value>
+                <Provides>Ignores 25% of the victim's Defense</Provides>
+            </GameModifier>
+            <Type>Aggressive</Type>
+            <UpgradePathID>NinjaShadowStrike</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>NinjaShadowStrike2</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>	
+    <AbilityBonus InternalName="NinjaSwordsmanAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="NinjaSwordsman">
+            <DisplayName>Expert Swordsman</DisplayName>
+            <Description>+25% to Counterattack damage</Description>
+            <Icon>Ability_SwordsmanI_Icon.png</Icon>
+            <PerkTreePosX>5</PerkTreePosX>
+            <PerkTreePosY>4</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_CounterattackMultiplier</StrVal>
+                <Value>0.5</Value>
+                <Provides>+25% to Counterattack damage</Provides>
+            </GameModifier>
+            <Type>Aggressive</Type>
+            <UpgradePathID>NinjaSwordsman</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>NinjaFast2_Level</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>	
+    <AbilityBonus InternalName="NinjaLightningPactIVAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="NinjaLightningPactIV">
+            <DisplayName>Lightning Pact IV</DisplayName>
+            <Description>+0.5 Damage with Lightning Abilities per level </Description>
+            <Icon>Ability_EvokerIV_Icon.png</Icon>
+            <PerkTreePosX>6</PerkTreePosX>
+            <PerkTreePosY>0</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_Attack_Lightning</StrVal>
+                <Value>0.5</Value>
+				<PerLevel>1</PerLevel>
+                <Provides>+0.5 Damage with Lightning Abilities per level </Provides>
+            </GameModifier>
+            <Type>Aggressive</Type>
+			<UpgradePathID>NinjaLightning</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>NinjaLightningPactIII</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>		
+    <AbilityBonus InternalName="NinjaAffinityAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="NinjaAffinity">
+            <DisplayName>Affinity</DisplayName>
+            <Description>-10% the mana cost for tactical spells</Description>
+            <Icon>Ability_Affinity_Icon.png</Icon>
+            <PerkTreePosX>6</PerkTreePosX>
+            <PerkTreePosY>1</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_TacticalSpellManaCost_Multiplier</StrVal>
+                <Value>-0.1</Value>
+                <Provides>-10% mana cost for tactical spells</Provides>
+            </GameModifier>
+            <Type>Defensive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>NinjaLightningPactIII</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>	
+    <AbilityBonus InternalName="NinjaShadowShiftAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="NinjaShadowShift">
+            <DisplayName>Shadow Shift</DisplayName>
+            <Description>Allows the unit to use the Shadow Shift ability</Description>
+            <Icon>Ability_ShadowShift_Icon.png</Icon>
+            <PerkTreePosX>6</PerkTreePosX>
+            <PerkTreePosY>3</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>UnlockCombatAbility</Attribute>
+                <StrVal>ShadowShift</StrVal>
+                <Provides>Trades places with an enemy unit and then take another action, unless the enemy resists.</Provides>
+            </GameModifier>
+            <CombatRating>5</CombatRating>
+            <IsCombatAbility>1</IsCombatAbility>
+            <Type>Ability</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>NinjaShadowStrike3</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>	
+    <AbilityBonus InternalName="NinjaSwordsman2Ability">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="NinjaSwordsman2">
+            <DisplayName>Master Swordsman</DisplayName>
+            <Description>+50% to Counterattack damage</Description>
+            <Icon>Ability_SwordsmanII_Icon.png</Icon>
+            <PerkTreePosX>6</PerkTreePosX>
+            <PerkTreePosY>4</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_CounterattackMultiplier</StrVal>
+                <Value>0.5</Value>
+                <Provides>+50% to Counterattack damage</Provides>
+            </GameModifier>
+            <Type>Aggressive</Type>
+            <UpgradePathID>NinjaSwordsman</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>NinjaSwordsman</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>	
+    <AbilityBonus InternalName="NinjaThunderstrikeAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="NinjaThunderstrike">
+            <DisplayName>Thunderstrike</DisplayName>
+            <Description>Allows the unit to cast Thunderstrike</Description>
+            <Icon>T_Thunderstrike_Icon.png</Icon>
+            <PerkTreePosX>7</PerkTreePosX>
+            <PerkTreePosY>0</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>UnlockCombatAbility</Attribute>
+                <StrVal>NinjaThunderstrike_Ability</StrVal>
+                <Provides>Teleport to a location and do half your weapon damage to all enemies within 1 radius.</Provides>
+            </GameModifier>
+            <CombatRating>25</CombatRating>
+            <IsCombatAbility>1</IsCombatAbility>			
+            <UpgradePathID>NinjaLightning</UpgradePathID>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>NinjaLightningPactIV</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>		
+    <AbilityBonus InternalName="NinjaParryAbility">
+        <AbilityBonusType>Unit_Level</AbilityBonusType>
+        <AbilityBonusOption InternalName="NinjaParry">
+            <DisplayName>Parry</DisplayName>
+            <Description>+1 Counterattack with any melee weapon</Description>
+            <Icon>Ability_Parry_Icon.png</Icon>
+            <PerkTreePosX>7</PerkTreePosX>
+            <PerkTreePosY>4</PerkTreePosY>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_MaxCounterAttack</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Counterattack with any melee weapon</Provides>
+            </GameModifier>
+            <Type>Aggressive</Type>
+            <Prereq>
+                <Type>AbilityBonusOption</Type>
+                <Target>Unit</Target>
+                <Attribute>NinjaSwordsman2</Attribute>
+            </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>	
+</AbilityBonuses>
+
+<Spells>
+	<SpellDef InternalName="ChannelLightningAbility">
+        <DisplayName>ChannelLightning</DisplayName>
+        <Description>An attack that converts your weapon's attack to Lightning.</Description>
+        <FormattedDescription>An attack that does %d lightning damage.</FormattedDescription>
+        <IconFG>Ability_ChannelLightning_Icon.png</IconFG>
+        <Cooldown>5</Cooldown>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Damage</SpellSubClass>
+        <SpellTargetType>EnemyUnit</SpellTargetType>
+        <ApproachTargetTile>1</ApproachTargetTile>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <IsCastable>0</IsCastable>
+        <CanBeDodged>1</CanBeDodged>
+        <IsSpecialAbility>1</IsSpecialAbility>
+        <UseWeaponRange>1</UseWeaponRange>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>DefendableDamage</Attribute>
+            <AttackStat>UnitStat_Attack_Lightning</AttackStat>
+            <IsForFormattedDescription>1</IsForFormattedDescription>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_CombinedAttack]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_Storm_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>Y_StaticBlast_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>2</EffectScale>
+            <EffectDelay>25</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+            <PlayOnAllTargets>1</PlayOnAllTargets>
+        </SpellDefEffect>
+    </SpellDef>
+    <SpellDef InternalName="NinjaThunderstrike_Ability">
+        <DisplayName>Empowered Thunderstrike</DisplayName>
+        <Description>Teleport to a location and do half your weapon damage to all enemies within 1 radius.</Description>
+        <FormattedDescription>Teleport to a location and do %d lightning damage to all enemies within 1 radius.</FormattedDescription>
+        <Image>T_Thunderstrike_Painting.png</Image>
+        <IconFG>T_Thunderstrike_Icon.png</IconFG>
+        <Cooldown>5</Cooldown>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Damage</SpellSubClass>
+        <SpellTargetType>EnemyUnit</SpellTargetType>
+        <SpellTargetTileOccupied>Empty</SpellTargetTileOccupied>
+        <AllowFriendlyFireInRadius>0</AllowFriendlyFireInRadius>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+        <IsCastable>0</IsCastable>
+        <IsSpecialAbility>1</IsSpecialAbility>
+        <Radius>1</Radius>
+        <GameModifier>
+            <ModType>Map</ModType>
+            <Attribute>TransportUnit</Attribute>
+            <ApplyToSpellRadiusCenterOnly>1</ApplyToSpellRadiusCenterOnly>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>DefendableDamage</Attribute>
+            <AttackStat>UnitStat_Attack_Lightning</AttackStat>
+            <IsForFormattedDescription>1</IsForFormattedDescription>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_CombinedAttack] * 0.5]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_Thunderstrike_01</HitSoundFX>
+        <HitSoundFX>Spell_Thunderstrike_02</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>T_Thunderstrike_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>1</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+            <PlayOnAllTargets>1</PlayOnAllTargets>
+        </SpellDefEffect>
+    </SpellDef>
+</Spells>

@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Spells>
+
+    <SpellDef InternalName="DarkRitesImprison">
+        <DisplayName>Imprison</DisplayName>
+        <Description>Target enemy is immobilized for 5 rounds and takes 5 damage per round, unless they resist.</Description>
+        <Image>Ability_TangledWeb_Icon.png</Image>
+        <IconFG>T_Imprison_Icon.png</IconFG>
+        <CanStack>0</CanStack>
+        <Cooldown>5</Cooldown>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitCurse</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Debuff</SpellSubClass>
+        <SpellTargetType>EnemyUnit</SpellTargetType>
+        <IsResistable>1</IsResistable>
+		<Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>DarkRites</Attribute>
+            <Target>Player</Target>
+        </Prereq>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SetUnitStat</Attribute>
+            <StrVal>UnitStat_Moves</StrVal>
+            <DisplayName>Imprisoned</DisplayName>
+            <Duration>5</Duration>
+            <Effect>E_Imprison_Particle</Effect>
+            <PerTurn>1</PerTurn>
+            <Value>0</Value>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SetUnitStat</Attribute>
+            <StrVal>UnitStat_Dodge</StrVal>
+            <Duration>5</Duration>
+            <PerTurn>1</PerTurn>
+            <Value>0</Value>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>CurHealth</Attribute>
+            <Duration>5</Duration>
+            <PerTurn>1</PerTurn>
+            <Value>-5</Value>
+        </GameModifier>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>20</Amount>
+        </SpellResourceCost>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>15</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_Imprison</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>Y_TangledWeb_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>1.5</EffectScale>
+            <EffectDelay>0.25</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+    <SpellDef InternalName="DarkRitesDemonicAlly">
+        <DisplayName>Demonic Ally</DisplayName>
+        <Description>Summons a level 3 (+1 per death shard) Assassin Demon.</Description>
+        <FormattedDescription>Summons a level %d Assassin Demon.</FormattedDescription>
+        <Image>T_DemonicAlly_Painting.png</Image>
+        <IconFG>T_DemonicAlly_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Summon</SpellBookSortCategory>
+        <SpellBookSortSubCategory>Summon</SpellBookSortSubCategory>
+        <SpellType>Strategic</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Summon</SpellSubClass>
+        <SpellTargetType>Self</SpellTargetType>
+        <Range>0</Range>
+		<Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>DarkRites</Attribute>
+            <Target>Player</Target>
+        </Prereq>
+        <Prereq>
+            <Type>Tech</Type>
+            <Attribute>Sorcery</Attribute>
+        </Prereq>
+		<Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Death2</Attribute>
+        </Prereq>
+		<SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>40</Amount>
+        </SpellResourceCost>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <PerTurn>1</PerTurn>
+            <Amount>1</Amount>
+        </SpellResourceCost>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SummonUnit</Attribute>
+            <StrVal>Assassin Demon</StrVal>
+            <UnitClass>AssassinDemon</UnitClass>
+            <Duration>-1</Duration>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitOwner_GetNumDeathShards] +  [UnitStat_BonusSummonLevel]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] + 3]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>70</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_SummonDemonicAlly_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>Y_SummonDeathDemon_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>0.5</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+	<SpellDef InternalName="DarkRitesSummonDeathDemon">
+        <DisplayName>Summon Death Demon</DisplayName>
+        <Description>Summon a level 6 (+1 per death shard) Death Demon.</Description>
+        <FormattedDescription>Summon a level %d Death Demon.</FormattedDescription>
+        <Image>M_SuperDemon_Card.png</Image>
+        <IconFG>Ability_SummonDeathDemon_Icon.png</IconFG>
+              <AutoUnlock>1</AutoUnlock>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Summon</SpellBookSortCategory>
+        <SpellBookSortSubCategory>Summon</SpellBookSortSubCategory>
+        <SpellType>Strategic</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Summon</SpellSubClass>
+        <SpellTargetType>Self</SpellTargetType>
+        <Range>0</Range>
+		<Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>DarkRites</Attribute>
+            <Target>Player</Target>
+        </Prereq>
+        <Prereq>
+            <Type>Tech</Type>
+            <Attribute>Black_Quire</Attribute>
+        </Prereq>
+		<Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Death5</Attribute>
+        </Prereq>
+		<SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>120</Amount>
+        </SpellResourceCost>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <PerTurn>1</PerTurn>
+            <Amount>2</Amount>
+        </SpellResourceCost>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SummonUnit</Attribute>
+            <StrVal>Death Demon</StrVal>
+            <UnitClass>DeathDemon</UnitClass>
+            <Duration>-1</Duration>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitOwner_GetNumDeathShards] +  [UnitStat_BonusSummonLevel]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] + 6]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>85</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_SummonDeathDemon_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>Y_SummonDeathDemon_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>1</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+	<SpellDef InternalName="DarkRitesFoulRitual">
+        <DisplayName>Foul Ritual</DisplayName>
+        <Description>Sacrifices a Champion to attract another one to your cause, at level 1/3/3/5 depending on times cast (Spell only works 4 times, 5th time gives no new Champion).</Description>
+        <Image>S_StealSpirit_Painting.png</Image>
+        <IconFG>S_StealSpirit_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+		<Cooldown>1</Cooldown>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+        <SpellType>Strategic</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Other</SpellSubClass>
+        <SpellTargetType>FriendlyChampion</SpellTargetType>
+        <CasterMustBeSov>1</CasterMustBeSov>
+		<Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>DarkRites</Attribute>
+            <Target>Player</Target>
+        </Prereq>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>10</Amount>
+        </SpellResourceCost>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>PermanentDeath</Attribute>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>CurHealth</Attribute>
+            <Calculate InternalName="Calc" ValueOwner="TargetUnit">
+                <Expression><![CDATA[[Unit_GetHPCurrent] * -1]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>SacrificeCasts</Attribute>
+            <Value>1</Value>
+        </GameModifier>
+		<AIData AIPersonality="AI_General">
+            <AIPriority>0</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_StealSpirit_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>S_StealSpirit_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>1</EffectScale>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+	<SpellDef InternalName="Smite">
+        <DisplayName>Smite</DisplayName>
+        <Description>Does 1 per level fire damage to the victim.  This damage is multipled by the amount of units casting.</Description>
+        <FormattedDescription>Does %d fire damage to the victim.</FormattedDescription>
+        <IconFG>T_Tough_Icon.png</IconFG>
+        <Cooldown>5</Cooldown>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Damage</SpellSubClass>
+        <SpellTargetType>EnemyUnit</SpellTargetType>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <IsCastable>0</IsCastable>
+        <IsResistable>1</IsResistable>
+        <IsSpecialAbility>1</IsSpecialAbility>
+		<Range>3</Range>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>12</Amount>
+        </SpellResourceCost>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>DefendableDamage</Attribute>
+            <AttackStat>UnitStat_Attack_Fire</AttackStat>
+            <IsForFormattedDescription>1</IsForFormattedDescription>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Unit_GetLevel]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Unit_GetTroopCount]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] * [Calc2]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Calc] * [Calc2]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>DefendableDamage</Attribute>
+            <AttackStat>UnitStat_Attack_Fire</AttackStat>
+            <IsForSpellResist>1</IsForSpellResist>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Unit_GetLevel]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Unit_GetTroopCount] / 2]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] * [Calc2]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>10</AIPriority>
+        </AIData>
+        <<HitSoundFX>Spell_FlameDart_01</HitSoundFX>
+        <SpellCastSoundFX>Spell_FlameDartTravel_01</SpellCastSoundFX>
+        <SpellCastEffectName>T_FlameDart_Particle</SpellCastEffectName>
+        <SpellCastEffectScale>0.30</SpellCastEffectScale>
+        <SpellCastProjectile>1</SpellCastProjectile>
+        <SpellCastProjectileSpeed>800</SpellCastProjectileSpeed>
+        <SpellDefEffect>
+            <EffectName>E_FlameDartImpact_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>1</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+	<SpellDef InternalName="VipersBite">
+        <DisplayName>Viper's Bite</DisplayName>
+        <Description>Does 2 poison damage per level to the victim.  This damage is multiplied by the number of casting units. If the target dies, gain 3 mana.</Description>
+        <FormattedDescription>Does %d poison damage to the victim.</FormattedDescription>
+        <IconFG>Ability_Stun_Icon.png</IconFG>
+        <Cooldown>5</Cooldown>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Damage</SpellSubClass>
+        <SpellTargetType>EnemyUnit</SpellTargetType>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <IsResistable>1</IsResistable>
+        <IsSpecialAbility>1</IsSpecialAbility>
+        <Range>1</Range>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>DefendableDamage</Attribute>
+            <AttackStat>UnitStat_Attack_Poison</AttackStat>
+            <IsForFormattedDescription>1</IsForFormattedDescription>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Unit_GetLevel] * 2]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Unit_GetTroopCount]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] * [Calc2]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Calc] * [Calc2]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>DefendableDamage</Attribute>
+            <AttackStat>UnitStat_Attack_Poison</AttackStat>
+            <IsForSpellResist>1</IsForSpellResist>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Unit_GetLevel]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Unit_GetTroopCount]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] * [Calc2]]]></Expression>
+            </Calculate>
+        </GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+            <Attribute>Mana</Attribute>
+            <Value>3</Value>
+            <ApplyIfSpellTargetKilled>1</ApplyIfSpellTargetKilled>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>10</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_SpitAcidHit_01</HitSoundFX>
+        <HitSoundFX>Spell_SpitAcidHit_02</HitSoundFX>
+        <SpellCastSoundFX>Spell_SpitAcidCast_01</SpellCastSoundFX>
+        <SpellCastEffectName>Y_SpitAcid_Particle</SpellCastEffectName>
+        <SpellCastEffectScale>0.50</SpellCastEffectScale>
+        <SpellCastProjectile>1</SpellCastProjectile>
+        <SpellCastProjectileSpeed>400</SpellCastProjectileSpeed>
+    </SpellDef>
+	<SpellDef InternalName="Convert">
+        <DisplayName>Convert</DisplayName>
+        <Description>Convince target man to join your crusade, unless they resist.</Description>
+        <Image>S_Domination_Painting.png</Image>
+        <IconFG>S_Crusade_Icon.png</IconFG>
+        <AutoUnlock>1</AutoUnlock>
+        <CanStack>0</CanStack>
+        <Cooldown>10</Cooldown>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>Charm</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Other</SpellSubClass>
+        <SpellTargetType>EnemyUnit</SpellTargetType>
+        <SpellTargetCreatureType>Men</SpellTargetCreatureType>
+        <IsResistable>1</IsResistable>
+        <Range>1</Range>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>CrusaderHero</Attribute>
+        </Prereq>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>40</Amount>
+        </SpellResourceCost>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>CharmTarget</Attribute>
+            <Value>100</Value>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_SilverTongue_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>T_Tame_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>1</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+
+</Spells>

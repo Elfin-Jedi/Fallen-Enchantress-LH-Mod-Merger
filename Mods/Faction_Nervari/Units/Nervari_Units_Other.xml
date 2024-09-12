@@ -1,0 +1,2914 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<UnitTypes>
+  <DataChecksum NoParse="1">
+    <Ignore>DispName</Ignore>
+    <Translate>DispName,Description</Translate>
+  </DataChecksum>
+  <!-- **************************************************** -->
+  <!-- ****************** Mod Unit Types ****************** -->
+  <!-- **************************************************** -->
+
+  <!-- **************************************************** -->
+  <!-- Nervari Faction Units -->
+  <!--
+  Core:
+  1.  Citizen ("Unit_Quendar_Nervari_Male", "Unit_Quendar_Nervari_Female")
+  2.  Citizen Militia ("Unit_Peasant_Quendar_Nervari", "Unit_Peasant_Quendar_Nervari_AI")
+  3.  Fire Eater ("Unit_Scout_Quendar_Nervari")
+  4.  Archer ("Unit_Archer_Quendar_Nervari", "Unit_Archer_Quendar_Nervari_AI")
+  5.  Crossbowman ("Unit_Crossbowman_Quendar_Nervari", "Unit_Crossbowman_Quendar_Nervari_AI")
+  6.  Forge Guard ("Unit_Defender_Quendar_Nervari", "Unit_Defender_Quendar_Nervari_AI")
+  7.  Sentinel ("Unit_Heavy_Quendar_Nervari", "Unit_Heavy_Quendar_Nervari_AI")
+  8.  Horseman ("Unit_Horseman_Quendar_Nervari", "Unit_Horseman_Quendar_Nervari_AI")
+  9.  Axeman ("Unit_Light_Quendar_Nervari", "Unit_Light_Quendar_Nervari_AI")
+  10. Mage ("Unit_Mage_Fire_Quendar_Nervari", "Unit_Mage_Water_Quendar_Nervari")
+  11. Dragon Knight ("Unit_Magic_Heavy_Quendar_Nervari", "Unit_Magic_Heavy_Quendar_Nervari_AI")
+  12. Dragon Squire ("Unit_Magic_Medium_Quendar_Nervari", "Unit_Magic_Medium_Quendar_Nervari_AI")
+  13. Grimsword ("Unit_Medium_Quendar_Nervari")
+  14. Spearman ("Unit_Spearman_Quendar_Nervari", "Unit_Spearman_Quendar_Nervari_AI")
+  15. Pioneer ("Unit_Pioneer_Quendar_Nervari")
+  16. Sage ("Sage_Quendar_Nervari")
+  17. Shopkeeper ("Shopkeeper_Quendar_Nervari")
+  -->
+  <!-- **************************************************** -->
+  
+  <!-- **************************************************** -->
+  <!-- Citizen (Male) -->
+  <!-- **************************************************** -->
+  <UnitType InternalName="Unit_Quendar_Nervari_Male">
+    <DisplayName>Citizen</DisplayName>
+    <Description>A peasant with a stick.</Description>
+    <RaceType>Race_Type_Quendar_Nervari</RaceType>
+    <CanBeDesigned>0</CanBeDesigned>
+    <Gender>Male</Gender>
+    <AdditionalTrainingTurns>20</AdditionalTrainingTurns>
+    <IsSovereign>0</IsSovereign>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <!-- Fix: This stat is never set in base game  -->
+      <UnitStat_IsMale>1</UnitStat_IsMale>
+      <!-- Background Unitstat Library values (compatibility only) -->
+      <UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+      <UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
+    <!-- replaced animations -->
+    <AnimationPack>MaleChampionAnimationPack</AnimationPack>
+    <!-- ******************* -->
+    <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+    <ClothMapScale>1.6</ClothMapScale>
+    <ClothPoseIndex>1</ClothPoseIndex>
+    <Color_Skin>145,200,165,255</Color_Skin>
+    <Color_Hair>195,195,195,255</Color_Hair>
+    <Color_Clothing1>80,30,100,255</Color_Clothing1>
+    <Color_Clothing2>140,60,15,255</Color_Clothing2>
+    <Color_Metal>255,102,0,255</Color_Metal>
+    <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+    <InfoCardBackground>BG15_Dark</InfoCardBackground>
+    <ModelPath>Gfx\HKB\Units\F_Male_Magnar_Body_Mesh_01.hkb</ModelPath>
+    <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+    <ModelScale>1.0000</ModelScale>
+    <TacticalModelScale>1.5000</TacticalModelScale>
+    <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+    <SoundPack>SoundPack_Generic_Male</SoundPack>
+    <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+    <Texture_Skin>Gfx\HKB\Units\Magnar_Skin_M_01.dds</Texture_Skin>
+    <Texture_Eyes>Gfx\Eyes\Blinks\Eyeblink_M7_Red.dds</Texture_Eyes>
+    <EyeTexture>Gfx\Eyes\Blinks\Eyeblink_M7_Red.dds</EyeTexture>
+    <UnitModelType>QuendarMale</UnitModelType>
+  </UnitType>
+  <!-- **************************************************** -->
+  <!-- Citizen (Female) -->
+  <!-- **************************************************** -->
+  <UnitType InternalName="Unit_Quendar_Nervari_Female">
+    <DisplayName>Citizen</DisplayName>
+    <Description>A peasant with a stick.</Description>
+    <RaceType>Race_Type_Quendar_Nervari</RaceType>
+    <CanBeDesigned>0</CanBeDesigned>
+    <Gender>Female</Gender>
+    <AdditionalTrainingTurns>20</AdditionalTrainingTurns>
+    <IsSovereign>0</IsSovereign>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <!-- Fix: This stat is never set in base game  -->
+      <UnitStat_IsFemale>1</UnitStat_IsFemale>
+      <!-- Background Unitstat Library values (compatibility only) -->
+      <UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+      <UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
+    <Equipment>F_Female_Quendar_Head_01</Equipment>
+    <Equipment>F_Male_Quendar_Horns_04</Equipment>
+    <Equipment>TightBoots_Light</Equipment>
+    <Equipment>Shortsleeve_Empire_Shirt_Female_ID1</Equipment>
+    <Equipment>Wraith_Overskirt_ID2_Flipped</Equipment>
+    <!-- female animations -->
+    <AnimationPack>FemaleSovereignAnimationPack</AnimationPack>
+    <!-- ******************* -->
+    <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+    <ClothMapScale>1.6</ClothMapScale>
+    <ClothPoseIndex>15</ClothPoseIndex>
+    <Color_Skin>145,200,165,255</Color_Skin>
+    <Color_Hair>195,195,195,255</Color_Hair>
+    <Color_Clothing1>80,15,15,255</Color_Clothing1>
+    <Color_Clothing2>140,60,15,255</Color_Clothing2>
+    <Color_Metal>255,102,0,255</Color_Metal>
+    <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+    <InfoCardBackground>BG15_Dark</InfoCardBackground>
+    <ModelPath>Gfx\HKB\Units\F_Female_Magnar_Body_Mesh_01.hkb</ModelPath>
+    <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+    <ModelScale>1.0000</ModelScale>
+    <TacticalModelScale>1.5000</TacticalModelScale>
+    <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+    <SoundPack>SoundPack_Generic_Female</SoundPack>
+    <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+    <Texture_Skin>Gfx\HKB\Units\Magnar_Skin_F_01.dds</Texture_Skin>
+    <Texture_Eyes>Gfx\Eyes\Blinks\Eyeblink_F6_red.dds</Texture_Eyes>
+    <EyeTexture>Gfx\Eyes\Blinks\Eyeblink_F6_red.dds</EyeTexture>
+    <UnitModelType>QuendarFemale</UnitModelType>
+  </UnitType>
+  <!-- **************************************************** -->
+  <!-- Citizen Militia -->
+  <!-- **************************************************** -->
+  <UnitType InternalName="Unit_Peasant_Quendar_Nervari">
+    <DisplayName>Citizen Militia</DisplayName>
+    <Description>A peasant armed with a crude club.</Description>
+    <Class>Peasant</Class>
+    <RaceType>Race_Type_Quendar_Nervari</RaceType>
+    <CanBeDesigned>1</CanBeDesigned>
+    <Gender>Male</Gender>
+    <AdditionalTrainingTurns>20</AdditionalTrainingTurns>
+    <IsSovereign>0</IsSovereign>
+    <IsStartingUnitType>1</IsStartingUnitType>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <!-- Fix: This stat is never set in base game  -->
+      <UnitStat_IsMale>1</UnitStat_IsMale>
+      <!-- Background Unitstat Library values (compatibility only) -->
+      <UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+      <UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
+    <Equipment>F_Male_Quendar_Head_01</Equipment>
+    <Equipment>F_Male_Quendar_Horns_01</Equipment>
+    <Equipment>F_Noble_Surcoat_Solid_ID1</Equipment>
+    <Equipment>Fallen_Leather_Shirt_ID2</Equipment>
+    <Equipment>Sion_Cloak_ID2</Equipment>
+    <Equipment>Fallen_Basic_Pants_ID2</Equipment>
+    <Equipment>Large_Sion_Boots_ID2</Equipment>
+    <Equipment>Club</Equipment>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Weapon</EquipmentSlot>
+      <WeaponUpgradeType>Blunt</WeaponUpgradeType>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Attack_Pierce</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Cold</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Fire</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Lightning</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Poison</ComparisonAttribute>
+      <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Torso</EquipmentSlot>
+      <EquipmentSlot>Surcoat</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+      <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>LowerBody</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+      <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Boots</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+      <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Head</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+      <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Forearms</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+      <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Defense</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+      <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <Prereq>
+      <Type>Race</Type>
+      <Attribute>Race_Type_Quendar_Nervari</Attribute>
+    </Prereq>
+    <Backstory>Discipline is first, second, and third when building an effective fighting force. Little else matters.' These words - spoken by Vergaxa of the Quendar - remain the watchword for the commanders of this army. They will make slaves of any fighter they defeat in battle; they will conscript any banker, baker, or miner whose path they cross. From those slaves they will make soldiers, and from those soldiers, massive armies driven by fear of the lash, and inculcated with the discipline prescribed by Vergaxa centuries earlier.</Backstory>
+    <!-- replaced animations -->
+    <AnimationPack>MaleChampionAnimationPack</AnimationPack>
+    <!-- ******************* -->
+    <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+    <ClothMapScale>1.6</ClothMapScale>
+    <ClothPoseIndex>17</ClothPoseIndex>
+    <Color_Skin>145,200,165,255</Color_Skin>
+    <Color_Hair>195,195,195,255</Color_Hair>
+    <Color_Clothing1>80,30,100,255</Color_Clothing1>
+    <Color_Clothing2>140,60,15,255</Color_Clothing2>
+    <Color_Metal>255,102,0,255</Color_Metal>
+    <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+    <InfoCardBackground>BG15_Dark</InfoCardBackground>
+    <ModelPath>Gfx\HKB\Units\F_Male_Magnar_Body_Mesh_01.hkb</ModelPath>
+    <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+    <ModelScale>1.0000</ModelScale>
+    <TacticalModelScale>1.5000</TacticalModelScale>
+    <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+    <SoundPack>SoundPack_Generic_Male</SoundPack>
+    <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+    <Texture_Skin>Gfx\HKB\Units\Magnar_Skin_M_01.dds</Texture_Skin>
+    <Texture_Eyes>Gfx\Eyes\Blinks\Eyeblink_M7_Red.dds</Texture_Eyes>
+    <EyeTexture>Gfx\Eyes\Blinks\Eyeblink_M7_Red.dds</EyeTexture>
+    <UnitModelType>QuendarMale</UnitModelType>
+  </UnitType>
+  <!-- **************************************************** -->
+  <!-- Citizen Militia (AI) -->
+  <!-- **************************************************** -->
+  <UnitType InternalName="Unit_Peasant_Quendar_Nervari_AI">
+    <DisplayName>Citizen Militia</DisplayName>
+    <RaceType>Race_Type_Quendar_Nervari</RaceType>
+    <CanBeDesigned>1</CanBeDesigned>
+    <Gender>Male</Gender>
+    <AdditionalTrainingTurns>0</AdditionalTrainingTurns>
+    <HideInSetupLists>1</HideInSetupLists>
+    <IsAIOnlyUnit>1</IsAIOnlyUnit>
+    <IsSovereign>0</IsSovereign>
+    <IsStartingUnitType>1</IsStartingUnitType>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <!-- Fix: This stat is never set in base game  -->
+      <UnitStat_IsMale>1</UnitStat_IsMale>
+      <!-- Background Unitstat Library values (compatibility only) -->
+      <UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+      <UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Elite_Fighter</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Ironskin</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Bloodthirsty</SelectedAbilityBonusOption>
+    <Equipment>F_Male_Quendar_Head_01</Equipment>
+    <Equipment>F_Male_Quendar_Horns_01</Equipment>
+    <Equipment>F_Noble_Surcoat_Solid_ID1</Equipment>
+    <Equipment>Fallen_Leather_Shirt_ID2</Equipment>
+    <Equipment>Sion_Cloak_ID2</Equipment>
+    <Equipment>Fallen_Basic_Pants_ID2</Equipment>
+    <Equipment>Large_Sion_Boots_ID2</Equipment>
+    <Equipment>Club</Equipment>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Weapon</EquipmentSlot>
+      <WeaponUpgradeType>Blunt</WeaponUpgradeType>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Attack_Pierce</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Cold</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Fire</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Lightning</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Poison</ComparisonAttribute>
+      <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <Prereq>
+      <Type>Race</Type>
+      <Attribute>Race_Type_Quendar_Nervari</Attribute>
+    </Prereq>
+    <!-- replaced animations -->
+    <AnimationPack>MaleChampionAnimationPack</AnimationPack>
+    <!-- ******************* -->
+    <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+    <ClothMapScale>1.6</ClothMapScale>
+    <ClothPoseIndex>17</ClothPoseIndex>
+    <Color_Skin>145,200,165,255</Color_Skin>
+    <Color_Hair>195,195,195,255</Color_Hair>
+    <Color_Clothing1>80,30,100,255</Color_Clothing1>
+    <Color_Clothing2>140,60,15,255</Color_Clothing2>
+    <Color_Metal>255,102,0,255</Color_Metal>
+    <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+    <InfoCardBackground>BG15_Dark</InfoCardBackground>
+    <ModelPath>Gfx\HKB\Units\F_Male_Magnar_Body_Mesh_01.hkb</ModelPath>
+    <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+    <ModelScale>1.0000</ModelScale>
+    <TacticalModelScale>1.5000</TacticalModelScale>
+    <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+    <SoundPack>SoundPack_Generic_Male</SoundPack>
+    <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+    <Texture_Skin>Gfx\HKB\Units\Magnar_Skin_M_01.dds</Texture_Skin>
+    <Texture_Eyes>Gfx\Eyes\Blinks\Eyeblink_M7_Red.dds</Texture_Eyes>
+    <EyeTexture>Gfx\Eyes\Blinks\Eyeblink_M7_Red.dds</EyeTexture>
+    <UnitModelType>QuendarMale</UnitModelType>
+  </UnitType>
+  <!-- **************************************************** -->
+  <!-- Fire Eater -->
+  <!-- **************************************************** -->
+  <UnitType InternalName="Unit_Scout_Quendar_Nervari">
+    <DisplayName>Fire Eater</DisplayName>
+    <Description>Use scouts to explore the world.</Description>
+    <Class>Scout</Class>
+    <RaceType>Race_Type_Quendar_Nervari</RaceType>
+    <CanBeDesigned>1</CanBeDesigned>
+    <Gender>Female</Gender>
+    <AdditionalTrainingTurns>20</AdditionalTrainingTurns>
+    <IsSovereign>0</IsSovereign>
+    <IsStartingUnitType>1</IsStartingUnitType>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <!-- Fix: This stat is never set in base game  -->
+      <UnitStat_IsFemale>1</UnitStat_IsFemale>
+      <!-- Background Unitstat Library values (compatibility only) -->
+      <UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+      <UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Scout</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>FireEater</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Weak</SelectedAbilityBonusOption>
+    <Equipment>F_Female_Quendar_Head_01</Equipment>
+    <Equipment>F_Female_Quendar_Horns_01</Equipment>
+    <Equipment>Bards_Cloak_ID2</Equipment>
+    <Equipment>Empire_Doublet_ID1</Equipment>
+    <Equipment>Shortsleeve_Empire_Shirt_Female_ID2</Equipment>
+    <Equipment>Female_Noblemans_Pants</Equipment>
+    <Equipment>TightBoots_Light</Equipment>
+    <Equipment>SionVambraces</Equipment>
+    <Equipment>Staff</Equipment>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Weapon</EquipmentSlot>
+      <WeaponUpgradeType>Spear</WeaponUpgradeType>
+      <EquipmentSlot>Defense</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Attack_Pierce</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Cold</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Fire</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Lightning</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Poison</ComparisonAttribute>
+      <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Torso</EquipmentSlot>
+      <EquipmentSlot>Surcoat</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+      <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>LowerBody</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+      <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Boots</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+      <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Head</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+      <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Forearms</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+      <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <Prereq>
+      <Type>Race</Type>
+      <Attribute>Race_Type_Quendar_Nervari</Attribute>
+    </Prereq>
+    <Backstory>Discipline is first, second, and third when building an effective fighting force. Little else matters.' These words - spoken by Vergaxa of the Quendar - remain the watchword for the commanders of this army. They will make slaves of any fighter they defeat in battle; they will conscript any banker, baker, or miner whose path they cross. From those slaves they will make soldiers, and from those soldiers, massive armies driven by fear of the lash, and inculcated with the discipline prescribed by Vergaxa centuries earlier.</Backstory>
+    <!-- female animations -->
+    <AnimationPack>FemaleSovereignAnimationPack</AnimationPack>
+    <!-- ******************* -->
+    <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+    <ClothMapScale>1.6</ClothMapScale>
+    <ClothPoseIndex>9</ClothPoseIndex>
+    <Color_Skin>145,200,165,255</Color_Skin>
+    <Color_Hair>203,203,203,255</Color_Hair>
+    <Color_Clothing1>80,15,15,255</Color_Clothing1>
+    <Color_Clothing2>140,60,15,255</Color_Clothing2>
+    <Color_Metal>255,102,0,255</Color_Metal>
+    <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+    <InfoCardBackground>BG15_Dark</InfoCardBackground>
+    <ModelPath>Gfx\HKB\Units\F_Female_Magnar_Body_Mesh_01.hkb</ModelPath>
+    <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+    <ModelScale>1.0000</ModelScale>
+    <TacticalModelScale>1.5000</TacticalModelScale>
+    <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+    <SoundPack>SoundPack_Generic_Female</SoundPack>
+    <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+    <Texture_Skin>Gfx\HKB\Units\Magnar_Skin_F_01.dds</Texture_Skin>
+    <Texture_Eyes>Gfx\Eyes\Blinks\Eyeblink_F5_Red.dds</Texture_Eyes>
+    <EyeTexture>Gfx\Eyes\Blinks\Eyeblink_F5_Red.dds</EyeTexture>
+    <UnitModelType>QuendarFemale</UnitModelType>
+  </UnitType>
+  <!-- **************************************************** -->
+  <!-- Archer -->
+  <!-- **************************************************** -->
+  <UnitType InternalName="Unit_Archer_Quendar_Nervari">
+    <DisplayName>Archer</DisplayName>
+    <Description>Archers are lightly equipped and skilled at picking off their opponents at a distance.</Description>
+    <Class>Archer</Class>
+    <RaceType>Race_Type_Quendar_Nervari</RaceType>
+    <CanBeDesigned>1</CanBeDesigned>
+    <Gender>Male</Gender>
+    <AdditionalTrainingTurns>20</AdditionalTrainingTurns>
+    <IsSovereign>0</IsSovereign>
+    <IsStartingUnitType>1</IsStartingUnitType>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <!-- Fix: This stat is never set in base game  -->
+      <UnitStat_IsMale>1</UnitStat_IsMale>
+      <!-- Background Unitstat Library values (compatibility only) -->
+      <UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+      <UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
+    <Equipment>F_Male_Quendar_Head_01</Equipment>
+    <Equipment>F_Male_Quendar_Horns_03</Equipment>
+    <Equipment>Fallen_Basic_Pants_ID2</Equipment>
+    <Equipment>Large_Sion_Boots_ID2</Equipment>
+    <Equipment>DarkWizardRobeID2</Equipment>
+    <Equipment>Shortbow</Equipment>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Weapon</EquipmentSlot>
+      <WeaponUpgradeType>Bow</WeaponUpgradeType>
+      <EquipmentSlot>Defense</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Attack_Pierce</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Cold</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Fire</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Lightning</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Poison</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Torso</EquipmentSlot>
+      <EquipmentSlot>Surcoat</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+      <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>LowerBody</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+      <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Boots</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+      <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Head</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+      <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Forearms</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+      <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <Prereq>
+      <Type>Tech</Type>
+      <Attribute>Archery</Attribute>
+    </Prereq>
+    <Prereq>
+      <Type>Race</Type>
+      <Attribute>Race_Type_Quendar_Nervari</Attribute>
+    </Prereq>
+    <AIData AIPersonality="AI_General">
+      <AIPrefType>AIPrefType_BOW</AIPrefType>
+    </AIData>
+    <Backstory>Discipline is first, second, and third when building an effective fighting force. Little else matters.' These words - spoken by Vergaxa of the Quendar - remain the watchword for the commanders of this army. They will make slaves of any fighter they defeat in battle; they will conscript any banker, baker, or miner whose path they cross. From those slaves they will make soldiers, and from those soldiers, massive armies driven by fear of the lash, and inculcated with the discipline prescribed by Vergaxa centuries earlier.</Backstory>
+    <!-- soldier animations -->
+    <AnimationPack>SoldierAnimationPack</AnimationPack>
+    <!-- ******************* -->
+    <BattleAnimationBehavior>Ranged</BattleAnimationBehavior>
+    <ClothMapScale>1.6</ClothMapScale>
+    <ClothPoseIndex>17</ClothPoseIndex>
+    <Color_Skin>145,200,165,255</Color_Skin>
+    <Color_Hair>195,195,195,255</Color_Hair>
+    <Color_Clothing1>80,30,100,255</Color_Clothing1>
+    <Color_Clothing2>140,60,15,255</Color_Clothing2>
+    <Color_Metal>255,102,0,255</Color_Metal>
+    <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+    <InfoCardBackground>BG15_Dark</InfoCardBackground>
+    <ModelPath>Gfx\HKB\Units\F_Male_Magnar_Body_Mesh_01.hkb</ModelPath>
+    <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+    <ModelScale>1.0000</ModelScale>
+    <TacticalModelScale>1.5000</TacticalModelScale>
+    <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+    <SoundPack>SoundPack_Generic_Male</SoundPack>
+    <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+    <Texture_Skin>Gfx\HKB\Units\Magnar_Skin_M_01.dds</Texture_Skin>
+    <Texture_Eyes>Gfx\Eyes\Blinks\Eyeblink_M7_Red.dds</Texture_Eyes>
+    <EyeTexture>Gfx\Eyes\Blinks\Eyeblink_M7_Red.dds</EyeTexture>
+    <UnitModelType>QuendarMale</UnitModelType>
+  </UnitType>
+  <!-- **************************************************** -->
+  <!-- Archer (AI) -->
+  <!-- **************************************************** -->
+  <UnitType InternalName="Unit_Archer_Quendar_Nervari_AI">
+    <DisplayName>Archer</DisplayName>
+    <Description>Archers are lightly equipped and skilled at picking off their opponents at a distance.</Description>
+    <Class>Archer</Class>
+    <RaceType>Race_Type_Quendar_Nervari</RaceType>
+    <CanBeDesigned>1</CanBeDesigned>
+    <Gender>Male</Gender>
+    <AdditionalTrainingTurns>0</AdditionalTrainingTurns>
+    <HideInSetupLists>1</HideInSetupLists>
+    <IsAIOnlyUnit>1</IsAIOnlyUnit>
+    <HasWages>0</HasWages>
+    <IsSovereign>0</IsSovereign>
+    <IsStartingUnitType>1</IsStartingUnitType>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <!-- Fix: This stat is never set in base game  -->
+      <UnitStat_IsMale>1</UnitStat_IsMale>
+      <!-- Background Unitstat Library values (compatibility only) -->
+      <UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+      <UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Elite_Fighter</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Precision</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Constitution</SelectedAbilityBonusOption>
+    <Equipment>F_Male_Quendar_Head_01</Equipment>
+    <Equipment>F_Male_Quendar_Horns_03</Equipment>
+    <Equipment>Fallen_Basic_Pants_ID2</Equipment>
+    <Equipment>Large_Sion_Boots_ID2</Equipment>
+    <Equipment>DarkWizardRobeID2</Equipment>
+    <Equipment>Shortbow</Equipment>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Weapon</EquipmentSlot>
+      <WeaponUpgradeType>Bow</WeaponUpgradeType>
+      <EquipmentSlot>Defense</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Attack_Pierce</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Cold</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Fire</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Lightning</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Poison</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>LowerBody</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+      <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Forearms</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+      <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <Prereq>
+      <Type>Tech</Type>
+      <Attribute>Archery</Attribute>
+    </Prereq>
+    <Prereq>
+      <Type>Race</Type>
+      <Attribute>Race_Type_Quendar_Nervari</Attribute>
+    </Prereq>
+    <AIData AIPersonality="AI_General">
+      <AIPrefType>AIPrefType_BOW</AIPrefType>
+    </AIData>
+    <Backstory>Discipline is first, second, and third when building an effective fighting force. Little else matters.' These words - spoken by Vergaxa of the Quendar - remain the watchword for the commanders of this army. They will make slaves of any fighter they defeat in battle; they will conscript any banker, baker, or miner whose path they cross. From those slaves they will make soldiers, and from those soldiers, massive armies driven by fear of the lash, and inculcated with the discipline prescribed by Vergaxa centuries earlier.</Backstory>
+    <!-- soldier animations -->
+    <AnimationPack>SoldierAnimationPack</AnimationPack>
+    <!-- ******************* -->
+    <BattleAnimationBehavior>Ranged</BattleAnimationBehavior>
+    <ClothMapScale>1.6</ClothMapScale>
+    <ClothPoseIndex>17</ClothPoseIndex>
+    <Color_Skin>145,200,165,255</Color_Skin>
+    <Color_Hair>195,195,195,255</Color_Hair>
+    <Color_Clothing1>80,30,100,255</Color_Clothing1>
+    <Color_Clothing2>140,60,15,255</Color_Clothing2>
+    <Color_Metal>255,102,0,255</Color_Metal>
+    <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+    <InfoCardBackground>BG15_Dark</InfoCardBackground>
+    <ModelPath>Gfx\HKB\Units\F_Male_Magnar_Body_Mesh_01.hkb</ModelPath>
+    <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+    <ModelScale>1.0000</ModelScale>
+    <TacticalModelScale>1.5000</TacticalModelScale>
+    <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+    <SoundPack>SoundPack_Generic_Male</SoundPack>
+    <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+    <Texture_Skin>Gfx\HKB\Units\Magnar_Skin_M_01.dds</Texture_Skin>
+    <Texture_Eyes>Gfx\Eyes\Blinks\Eyeblink_M7_Red.dds</Texture_Eyes>
+    <EyeTexture>Gfx\Eyes\Blinks\Eyeblink_M7_Red.dds</EyeTexture>
+    <UnitModelType>QuendarMale</UnitModelType>
+  </UnitType>
+  <!-- **************************************************** -->
+  <!-- Crossbowman -->
+  <!-- **************************************************** -->
+  <UnitType InternalName="Unit_Crossbowman_Quendar_Nervari">
+    <DisplayName>Crossbowman</DisplayName>
+    <Description>Crossbowmen can fire through units in lines and are a great way to deal with masses of enemy units.</Description>
+    <Class>Crossbowman</Class>
+    <RaceType>Race_Type_Quendar_Nervari</RaceType>
+    <CanBeDesigned>1</CanBeDesigned>
+    <Gender>Male</Gender>
+    <AdditionalTrainingTurns>20</AdditionalTrainingTurns>
+    <IsSovereign>0</IsSovereign>
+    <IsStartingUnitType>1</IsStartingUnitType>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <!-- Fix: This stat is never set in base game  -->
+      <UnitStat_IsMale>1</UnitStat_IsMale>
+      <!-- Background Unitstat Library values (compatibility only) -->
+      <UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+      <UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
+    <Equipment>F_Male_Quendar_Head_01</Equipment>
+    <Equipment>F_Male_Quendar_Horns_03</Equipment>
+    <Equipment>Fallen_Basic_Pants_ID2</Equipment>
+    <Equipment>Large_Sion_Boots_ID2</Equipment>
+    <Equipment>DarkWizardRobeID2</Equipment>
+    <Equipment>Crossbow_Flaming</Equipment>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Weapon</EquipmentSlot>
+      <WeaponUpgradeType>Crossbow</WeaponUpgradeType>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Attack_Pierce</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Cold</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Fire</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Lightning</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Poison</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Torso</EquipmentSlot>
+      <EquipmentSlot>Surcoat</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+      <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>LowerBody</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+      <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Boots</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+      <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Head</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+      <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Forearms</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+      <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Defense</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+      <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <Prereq>
+      <Type>Race</Type>
+      <Attribute>Race_Type_Quendar_Nervari</Attribute>
+    </Prereq>
+    <Prereq>
+      <Type>Tech</Type>
+      <Attribute>Longbows</Attribute>
+    </Prereq>
+    <Backstory>Discipline is first, second, and third when building an effective fighting force. Little else matters.' These words - spoken by Vergaxa of the Quendar - remain the watchword for the commanders of this army. They will make slaves of any fighter they defeat in battle; they will conscript any banker, baker, or miner whose path they cross. From those slaves they will make soldiers, and from those soldiers, massive armies driven by fear of the lash, and inculcated with the discipline prescribed by Vergaxa centuries earlier.</Backstory>
+    <!-- soldier animations -->
+    <AnimationPack>SoldierAnimationPack</AnimationPack>
+    <!-- ******************* -->
+    <BattleAnimationBehavior>Ranged</BattleAnimationBehavior>
+    <ClothMapScale>1.6</ClothMapScale>
+    <ClothPoseIndex>29</ClothPoseIndex>
+    <Color_Skin>145,200,165,255</Color_Skin>
+    <Color_Hair>195,195,195,255</Color_Hair>
+    <Color_Clothing1>80,30,100,255</Color_Clothing1>
+    <Color_Clothing2>140,60,15,255</Color_Clothing2>
+    <Color_Metal>255,102,0,255</Color_Metal>
+    <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+    <InfoCardBackground>BG15_Dark</InfoCardBackground>
+    <ModelPath>Gfx\HKB\Units\F_Male_Magnar_Body_Mesh_01.hkb</ModelPath>
+    <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+    <ModelScale>1.0000</ModelScale>
+    <TacticalModelScale>1.5000</TacticalModelScale>
+    <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+    <SoundPack>SoundPack_Generic_Male</SoundPack>
+    <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+    <Texture_Skin>Gfx\HKB\Units\Magnar_Skin_M_01.dds</Texture_Skin>
+    <Texture_Eyes>Gfx\Eyes\Blinks\Eyeblink_M7_Red.dds</Texture_Eyes>
+    <EyeTexture>Gfx\Eyes\Blinks\Eyeblink_M7_Red.dds</EyeTexture>
+    <UnitModelType>QuendarMale</UnitModelType>
+  </UnitType>
+  <!-- **************************************************** -->
+  <!-- Crossbowman (AI) -->
+  <!-- **************************************************** -->
+  <UnitType InternalName="Unit_Crossbowman_Quendar_Nervari_AI">
+    <DisplayName>Crossbowman</DisplayName>
+    <Description>Crossbowmen can fire through units in lines and are a great way to deal with masses of enemy units.</Description>
+    <Class>Crossbowman</Class>
+    <RaceType>Race_Type_Quendar_Nervari</RaceType>
+    <CanBeDesigned>1</CanBeDesigned>
+    <Gender>Male</Gender>
+    <AdditionalTrainingTurns>0</AdditionalTrainingTurns>
+    <HideInSetupLists>1</HideInSetupLists>
+    <IsAIOnlyUnit>1</IsAIOnlyUnit>
+    <IsSovereign>0</IsSovereign>
+    <IsStartingUnitType>1</IsStartingUnitType>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <!-- Fix: This stat is never set in base game  -->
+      <UnitStat_IsMale>1</UnitStat_IsMale>
+      <!-- Background Unitstat Library values (compatibility only) -->
+      <UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+      <UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Elite_Fighter</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Precision</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Constitution</SelectedAbilityBonusOption>
+    <Equipment>F_Male_Quendar_Head_01</Equipment>
+    <Equipment>F_Male_Quendar_Horns_03</Equipment>
+    <Equipment>Fallen_Basic_Pants_ID2</Equipment>
+    <Equipment>Large_Sion_Boots_ID2</Equipment>
+    <Equipment>DarkWizardRobeID2</Equipment>
+    <Equipment>Crossbow_Flaming</Equipment>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Weapon</EquipmentSlot>
+      <WeaponUpgradeType>Crossbow</WeaponUpgradeType>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Attack_Pierce</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Cold</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Fire</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Lightning</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Poison</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Torso</EquipmentSlot>
+      <EquipmentSlot>Surcoat</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+      <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>LowerBody</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+      <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Boots</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+      <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Head</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+      <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Forearms</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+      <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Defense</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+      <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <Prereq>
+      <Type>Race</Type>
+      <Attribute>Race_Type_Quendar_Nervari</Attribute>
+    </Prereq>
+    <Prereq>
+      <Type>Tech</Type>
+      <Attribute>Longbows</Attribute>
+    </Prereq>
+    <Backstory>Discipline is first, second, and third when building an effective fighting force. Little else matters.' These words - spoken by Vergaxa of the Quendar - remain the watchword for the commanders of this army. They will make slaves of any fighter they defeat in battle; they will conscript any banker, baker, or miner whose path they cross. From those slaves they will make soldiers, and from those soldiers, massive armies driven by fear of the lash, and inculcated with the discipline prescribed by Vergaxa centuries earlier.</Backstory>
+    <!-- soldier animations -->
+    <AnimationPack>SoldierAnimationPack</AnimationPack>
+    <!-- ******************* -->
+    <BattleAnimationBehavior>Ranged</BattleAnimationBehavior>
+    <ClothMapScale>1.6</ClothMapScale>
+    <ClothPoseIndex>29</ClothPoseIndex>
+    <Color_Skin>145,200,165,255</Color_Skin>
+    <Color_Hair>195,195,195,255</Color_Hair>
+    <Color_Clothing1>80,30,100,255</Color_Clothing1>
+    <Color_Clothing2>140,60,15,255</Color_Clothing2>
+    <Color_Metal>255,102,0,255</Color_Metal>
+    <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+    <InfoCardBackground>BG15_Dark</InfoCardBackground>
+    <ModelPath>Gfx\HKB\Units\F_Male_Magnar_Body_Mesh_01.hkb</ModelPath>
+    <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+    <ModelScale>1.0000</ModelScale>
+    <TacticalModelScale>1.5000</TacticalModelScale>
+    <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+    <SoundPack>SoundPack_Generic_Male</SoundPack>
+    <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+    <Texture_Skin>Gfx\HKB\Units\Magnar_Skin_M_01.dds</Texture_Skin>
+    <Texture_Eyes>Gfx\Eyes\Blinks\Eyeblink_M7_Red.dds</Texture_Eyes>
+    <EyeTexture>Gfx\Eyes\Blinks\Eyeblink_M7_Red.dds</EyeTexture>
+    <UnitModelType>QuendarMale</UnitModelType>
+  </UnitType>
+  <!-- **************************************************** -->
+  <!-- Forge Guard -->
+  <!-- **************************************************** -->
+  <UnitType InternalName="Unit_Defender_Quendar_Nervari">
+    <DisplayName>Forge Guard</DisplayName>
+    <Description>Defenders are formidable troops that are able to outlast enemy units and absorb lots of damage.</Description>
+    <Class>Defender</Class>
+    <RaceType>Race_Type_Quendar_Nervari</RaceType>
+    <CanBeDesigned>1</CanBeDesigned>
+    <Gender>Male</Gender>
+    <AdditionalTrainingTurns>20</AdditionalTrainingTurns>
+    <IsSovereign>0</IsSovereign>
+    <IsStartingUnitType>1</IsStartingUnitType>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <!-- Fix: This stat is never set in base game  -->
+      <UnitStat_IsMale>1</UnitStat_IsMale>
+      <!-- Background Unitstat Library values (compatibility only) -->
+      <UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+      <UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>ArmorProficiency2</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Spell_Furnaceborn</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Defender</SelectedAbilityBonusOption>
+    <Equipment>F_Male_Quendar_Head_01</Equipment>
+    <Equipment>LeatherBreastpiece</Equipment>
+    <Equipment>LeatherHelmet</Equipment>
+    <Equipment>LeatherVambraces</Equipment>
+    <Equipment>LeatherGreaves</Equipment>
+    <Equipment>LeatherBoots</Equipment>
+    <Equipment>WoodShield</Equipment>
+    <Equipment>Sion_Cloak_ID1</Equipment>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Weapon</EquipmentSlot>
+      <WeaponUpgradeType>Blunt</WeaponUpgradeType>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Attack_Pierce</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Cold</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Fire</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Lightning</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Poison</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Torso</EquipmentSlot>
+      <EquipmentSlot>Surcoat</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>LowerBody</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Boots</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Head</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Forearms</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Defense</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <Prereq>
+      <Type>Race</Type>
+      <Attribute>Race_Type_Quendar_Nervari</Attribute>
+    </Prereq>
+    <Prereq>
+      <Type>Tech</Type>
+      <Attribute>Leatherworking</Attribute>
+    </Prereq>
+    <Backstory>Discipline is first, second, and third when building an effective fighting force. Little else matters.' These words - spoken by Vergaxa of the Quendar - remain the watchword for the commanders of this army. They will make slaves of any fighter they defeat in battle; they will conscript any banker, baker, or miner whose path they cross. From those slaves they will make soldiers, and from those soldiers, massive armies driven by fear of the lash, and inculcated with the discipline prescribed by Vergaxa centuries earlier.</Backstory>
+    <!-- replaced animations -->
+    <AnimationPack>MaleChampionAnimationPack</AnimationPack>
+    <!-- ******************* -->
+    <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+    <ClothMapScale>1.6</ClothMapScale>
+    <ClothPoseIndex>5</ClothPoseIndex>
+    <Color_Skin>145,200,165,255</Color_Skin>
+    <Color_Hair>195,195,195,255</Color_Hair>
+    <Color_Clothing1>80,30,100,255</Color_Clothing1>
+    <Color_Clothing2>140,60,15,255</Color_Clothing2>
+    <Color_Metal>255,102,0,255</Color_Metal>
+    <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+    <InfoCardBackground>BG15_Dark</InfoCardBackground>
+    <ModelPath>Gfx\HKB\Units\F_Male_Magnar_Body_Mesh_01.hkb</ModelPath>
+    <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+    <ModelScale>1.0000</ModelScale>
+    <TacticalModelScale>1.5000</TacticalModelScale>
+    <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+    <SoundPack>SoundPack_Generic_Male</SoundPack>
+    <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+    <Texture_Skin>Gfx\HKB\Units\Magnar_Skin_M_01.dds</Texture_Skin>
+    <Texture_Eyes>Gfx\Eyes\Blinks\Eyeblink_M6_Red.dds</Texture_Eyes>
+    <EyeTexture>Gfx\Eyes\Blinks\Eyeblink_M6_Red.dds</EyeTexture>
+    <UnitModelType>QuendarMale</UnitModelType>
+  </UnitType>
+  <!-- **************************************************** -->
+  <!-- Forge Guard (AI) -->
+  <!-- **************************************************** -->
+  <UnitType InternalName="Unit_Defender_Quendar_Nervari_AI">
+    <DisplayName>Forge Guard</DisplayName>
+    <Description>Defenders are formidable troops that are able to outlast enemy units and absorb lots of damage.</Description>
+    <Class>Defender</Class>
+    <RaceType>Race_Type_Quendar_Nervari</RaceType>
+    <CanBeDesigned>1</CanBeDesigned>
+    <Gender>Male</Gender>
+    <AdditionalTrainingTurns>0</AdditionalTrainingTurns>
+    <HideInSetupLists>1</HideInSetupLists>
+    <IsAIOnlyUnit>1</IsAIOnlyUnit>
+    <IsSovereign>0</IsSovereign>
+    <IsStartingUnitType>1</IsStartingUnitType>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <!-- Fix: This stat is never set in base game  -->
+      <UnitStat_IsMale>1</UnitStat_IsMale>
+      <!-- Background Unitstat Library values (compatibility only) -->
+      <UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+      <UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Elite_Fighter</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>ArmorProficiency2</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Defender</SelectedAbilityBonusOption>
+    <Equipment>F_Male_Quendar_Head_01</Equipment>
+    <Equipment>LeatherBreastpiece</Equipment>
+    <Equipment>LeatherHelmet</Equipment>
+    <Equipment>LeatherVambraces</Equipment>
+    <Equipment>LeatherGreaves</Equipment>
+    <Equipment>LeatherBoots</Equipment>
+    <Equipment>WoodShield</Equipment>
+    <Equipment>Sion_Cloak_ID1</Equipment>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Weapon</EquipmentSlot>
+      <WeaponUpgradeType>Blunt</WeaponUpgradeType>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Attack_Pierce</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Cold</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Fire</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Lightning</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Poison</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Torso</EquipmentSlot>
+      <EquipmentSlot>Surcoat</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>LowerBody</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Boots</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Head</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Forearms</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Defense</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <Prereq>
+      <Type>Race</Type>
+      <Attribute>Race_Type_Quendar_Nervari</Attribute>
+    </Prereq>
+    <Prereq>
+      <Type>Tech</Type>
+      <Attribute>Leatherworking</Attribute>
+    </Prereq>
+    <Backstory>Discipline is first, second, and third when building an effective fighting force. Little else matters.' These words - spoken by Vergaxa of the Quendar - remain the watchword for the commanders of this army. They will make slaves of any fighter they defeat in battle; they will conscript any banker, baker, or miner whose path they cross. From those slaves they will make soldiers, and from those soldiers, massive armies driven by fear of the lash, and inculcated with the discipline prescribed by Vergaxa centuries earlier.</Backstory>
+    <!-- replaced animations -->
+    <AnimationPack>MaleChampionAnimationPack</AnimationPack>
+    <!-- ******************* -->
+    <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+    <ClothMapScale>1.6</ClothMapScale>
+    <ClothPoseIndex>5</ClothPoseIndex>
+    <Color_Skin>145,200,165,255</Color_Skin>
+    <Color_Hair>195,195,195,255</Color_Hair>
+    <Color_Clothing1>80,30,100,255</Color_Clothing1>
+    <Color_Clothing2>140,60,15,255</Color_Clothing2>
+    <Color_Metal>255,102,0,255</Color_Metal>
+    <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+    <InfoCardBackground>BG15_Dark</InfoCardBackground>
+    <ModelPath>Gfx\HKB\Units\F_Male_Magnar_Body_Mesh_01.hkb</ModelPath>
+    <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+    <ModelScale>1.0000</ModelScale>
+    <TacticalModelScale>1.5000</TacticalModelScale>
+    <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+    <SoundPack>SoundPack_Generic_Male</SoundPack>
+    <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+    <Texture_Skin>Gfx\HKB\Units\Magnar_Skin_M_01.dds</Texture_Skin>
+    <Texture_Eyes>Gfx\Eyes\Blinks\Eyeblink_M6_Red.dds</Texture_Eyes>
+    <EyeTexture>Gfx\Eyes\Blinks\Eyeblink_M6_Red.dds</EyeTexture>
+    <UnitModelType>QuendarMale</UnitModelType>
+  </UnitType>
+  <!-- **************************************************** -->
+  <!-- Sentinel -->
+  <!-- **************************************************** -->
+  <UnitType InternalName="Unit_Heavy_Quendar_Nervari">
+    <DisplayName>Sentinel</DisplayName>
+    <Description>Sentinels are powerful melee units, able to do lots of damage to those that fall within their range.</Description>
+    <Class>Baron</Class>
+    <RaceType>Race_Type_Quendar_Nervari</RaceType>
+    <CanBeDesigned>1</CanBeDesigned>
+    <Gender>Male</Gender>
+    <AdditionalTrainingTurns>20</AdditionalTrainingTurns>
+    <IsSovereign>0</IsSovereign>
+    <IsStartingUnitType>1</IsStartingUnitType>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <!-- Fix: This stat is never set in base game  -->
+      <UnitStat_IsMale>1</UnitStat_IsMale>
+      <!-- Background Unitstat Library values (compatibility only) -->
+      <UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+      <UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Muscle</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>ArmorProficiency2</SelectedAbilityBonusOption>
+    <Equipment>F_Male_Quendar_Head_01</Equipment>
+    <Equipment>F_Male_Quendar_Horns_03</Equipment>
+    <Equipment>Yithril_Cloak</Equipment>
+    <Equipment>Fallen_Sleeveless_Shirt_ID1</Equipment>
+    <Equipment>Empire_Leather_Gloves_Dark</Equipment>
+    <Equipment>Fallen_Leather_Pants_ID2</Equipment>
+    <Equipment>Large_Sion_Boots_ID2</Equipment>
+    <Equipment>FirstAidKit</Equipment>
+    <Equipment>Maul</Equipment>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Forearms</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Torso</EquipmentSlot>
+      <EquipmentSlot>Surcoat</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>LowerBody</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Boots</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Head</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <Prereq>
+      <Type>Race</Type>
+      <Attribute>Race_Type_Quendar_Nervari</Attribute>
+    </Prereq>
+    <Prereq>
+      <Type>Tech</Type>
+      <Attribute>Weapons_Of_War</Attribute>
+    </Prereq>
+    <Backstory>Discipline is first, second, and third when building an effective fighting force. Little else matters.' These words - spoken by Vergaxa of the Quendar - remain the watchword for the commanders of this army. They will make slaves of any fighter they defeat in battle; they will conscript any banker, baker, or miner whose path they cross. From those slaves they will make soldiers, and from those soldiers, massive armies driven by fear of the lash, and inculcated with the discipline prescribed by Vergaxa centuries earlier.</Backstory>
+    <!-- replaced animations -->
+    <AnimationPack>MaleChampionAnimationPack</AnimationPack>
+    <!-- ******************* -->
+    <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+    <ClothMapScale>1.6</ClothMapScale>
+    <ClothPoseIndex>13</ClothPoseIndex>
+    <Color_Skin>145,200,165,255</Color_Skin>
+    <Color_Hair>200,200,200,255</Color_Hair>
+    <Color_Clothing1>85,15,75,255</Color_Clothing1>
+    <Color_Clothing2>40,35,35,255</Color_Clothing2>
+    <Color_Metal>255,102,0,255</Color_Metal>
+    <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+    <InfoCardBackground>BG15_Dark</InfoCardBackground>
+    <ModelPath>Gfx\HKB\Units\F_Male_Magnar_Body_Mesh_01.hkb</ModelPath>
+    <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+    <ModelScale>1.0000</ModelScale>
+    <TacticalModelScale>1.5000</TacticalModelScale>
+    <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+    <SoundPack>SoundPack_Generic_Male</SoundPack>
+    <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+    <Texture_Skin>Gfx\HKB\Units\Magnar_Skin_M_01.dds</Texture_Skin>
+    <Texture_Eyes>Gfx\Eyes\Blinks\Eyeblink_M6_Lime.dds</Texture_Eyes>
+    <EyeTexture>Gfx\Eyes\Blinks\Eyeblink_M6_Lime.dds</EyeTexture>
+    <UnitModelType>QuendarMale</UnitModelType>
+  </UnitType>
+  <!-- **************************************************** -->
+  <!-- Sentinel (AI) -->
+  <!-- **************************************************** -->
+  <UnitType InternalName="Unit_Heavy_Quendar_Nervari_AI">
+    <DisplayName>Sentinel</DisplayName>
+    <Description>Sentinels are powerful melee units, able to do lots of damage to those that fall within their range.</Description>
+    <Class>Baron</Class>
+    <RaceType>Race_Type_Quendar_Nervari</RaceType>
+    <CanBeDesigned>1</CanBeDesigned>
+    <Gender>Male</Gender>
+    <AdditionalTrainingTurns>0</AdditionalTrainingTurns>
+    <HideInSetupLists>1</HideInSetupLists>
+    <IsAIOnlyUnit>1</IsAIOnlyUnit>
+    <IsSovereign>0</IsSovereign>
+    <IsStartingUnitType>1</IsStartingUnitType>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <!-- Fix: This stat is never set in base game  -->
+      <UnitStat_IsMale>1</UnitStat_IsMale>
+      <!-- Background Unitstat Library values (compatibility only) -->
+      <UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+      <UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Elite_Fighter</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Muscle</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>ArmorProficiency2</SelectedAbilityBonusOption>
+    <Equipment>F_Male_Quendar_Head_01</Equipment>
+    <Equipment>F_Male_Quendar_Horns_03</Equipment>
+    <Equipment>Yithril_Cloak</Equipment>
+    <Equipment>Fallen_Sleeveless_Shirt_ID1</Equipment>
+    <Equipment>Empire_Leather_Gloves_Dark</Equipment>
+    <Equipment>Fallen_Leather_Pants_ID2</Equipment>
+    <Equipment>Large_Sion_Boots_ID2</Equipment>
+    <Equipment>FirstAidKit</Equipment>
+    <Equipment>Maul</Equipment>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Forearms</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Torso</EquipmentSlot>
+      <EquipmentSlot>Surcoat</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>LowerBody</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Boots</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Head</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <Prereq>
+      <Type>Race</Type>
+      <Attribute>Race_Type_Quendar_Nervari</Attribute>
+    </Prereq>
+    <Prereq>
+      <Type>Tech</Type>
+      <Attribute>Weapons_Of_War</Attribute>
+    </Prereq>
+    <Backstory>Discipline is first, second, and third when building an effective fighting force. Little else matters.' These words - spoken by Vergaxa of the Quendar - remain the watchword for the commanders of this army. They will make slaves of any fighter they defeat in battle; they will conscript any banker, baker, or miner whose path they cross. From those slaves they will make soldiers, and from those soldiers, massive armies driven by fear of the lash, and inculcated with the discipline prescribed by Vergaxa centuries earlier.</Backstory>
+    <!-- replaced animations -->
+    <AnimationPack>MaleChampionAnimationPack</AnimationPack>
+    <!-- ******************* -->
+    <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+    <ClothMapScale>1.6</ClothMapScale>
+    <ClothPoseIndex>13</ClothPoseIndex>
+    <Color_Skin>145,200,165,255</Color_Skin>
+    <Color_Hair>200,200,200,255</Color_Hair>
+    <Color_Clothing1>85,15,75,255</Color_Clothing1>
+    <Color_Clothing2>40,35,35,255</Color_Clothing2>
+    <Color_Metal>255,102,0,255</Color_Metal>
+    <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+    <InfoCardBackground>BG15_Dark</InfoCardBackground>
+    <ModelPath>Gfx\HKB\Units\F_Male_Magnar_Body_Mesh_01.hkb</ModelPath>
+    <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+    <ModelScale>1.0000</ModelScale>
+    <TacticalModelScale>1.5000</TacticalModelScale>
+    <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+    <SoundPack>SoundPack_Generic_Male</SoundPack>
+    <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+    <Texture_Skin>Gfx\HKB\Units\Magnar_Skin_M_01.dds</Texture_Skin>
+    <Texture_Eyes>Gfx\Eyes\Blinks\Eyeblink_M6_Lime.dds</Texture_Eyes>
+    <EyeTexture>Gfx\Eyes\Blinks\Eyeblink_M6_Lime.dds</EyeTexture>
+    <UnitModelType>QuendarMale</UnitModelType>
+  </UnitType>
+  <!-- **************************************************** -->
+  <!-- Horsemen -->
+  <!-- **************************************************** -->
+  <UnitType InternalName="Unit_Horseman_Quendar_Nervari">
+    <DisplayName>Horsemen</DisplayName>
+    <Description>Horsemen are excellent for scouting out unknown areas, and escaping when they uncover dangers in those areas.</Description>
+    <Class>Horseman</Class>
+    <RaceType>Race_Type_Quendar_Nervari</RaceType>
+    <CanBeDesigned>1</CanBeDesigned>
+    <Gender>Male</Gender>
+    <AdditionalTrainingTurns>20</AdditionalTrainingTurns>
+    <IsSovereign>0</IsSovereign>
+    <IsStartingUnitType>1</IsStartingUnitType>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <!-- Fix: This stat is never set in base game  -->
+      <UnitStat_IsMale>1</UnitStat_IsMale>
+      <!-- Background Unitstat Library values (compatibility only) -->
+      <UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+      <UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
+    <Equipment>F_Male_Quendar_Head_01</Equipment>
+    <Equipment>F_Male_Quendar_Horns_04</Equipment>
+    <Equipment>LeatherBreastpiece</Equipment>
+    <Equipment>LeatherHelmet</Equipment>
+    <Equipment>LeatherVambraces</Equipment>
+    <Equipment>LeatherGreaves</Equipment>
+    <Equipment>LeatherBoots</Equipment>
+    <Equipment>Fallen_Leather_Pants_ID2</Equipment>
+    <Equipment>Sion_Cloak_ID1</Equipment>
+    <Equipment>BasicHorseMount</Equipment>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Weapon</EquipmentSlot>
+      <WeaponUpgradeType>Spear</WeaponUpgradeType>
+      <EquipmentSlot>Defense</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Attack_Pierce</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Cold</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Fire</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Lightning</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Poison</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Torso</EquipmentSlot>
+      <EquipmentSlot>Surcoat</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+      <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>LowerBody</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+      <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Boots</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+      <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Head</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+      <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Forearms</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+      <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <Prereq>
+      <Type>Race</Type>
+      <Attribute>Race_Type_Quendar_Nervari</Attribute>
+    </Prereq>
+    <Prereq>
+      <Type>Tech</Type>
+      <Attribute>Mounted_Warfare</Attribute>
+    </Prereq>
+    <Backstory>Discipline is first, second, and third when building an effective fighting force. Little else matters.' These words - spoken by Vergaxa of the Quendar - remain the watchword for the commanders of this army. They will make slaves of any fighter they defeat in battle; they will conscript any banker, baker, or miner whose path they cross. From those slaves they will make soldiers, and from those soldiers, massive armies driven by fear of the lash, and inculcated with the discipline prescribed by Vergaxa centuries earlier.</Backstory>
+    <!-- replaced animations -->
+    <AnimationPack>MaleChampionAnimationPack</AnimationPack>
+    <!-- ******************* -->
+    <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+    <ClothMapScale>1.6</ClothMapScale>
+    <ClothPoseIndex>1</ClothPoseIndex>
+    <Color_Skin>145,200,165,255</Color_Skin>
+    <Color_Hair>185,185,185,255</Color_Hair>
+    <Color_Clothing1>80,30,100,255</Color_Clothing1>
+    <Color_Clothing2>140,60,15,255</Color_Clothing2>
+    <Color_Metal>255,102,0,255</Color_Metal>
+    <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+    <InfoCardBackground>BG15_Dark</InfoCardBackground>
+    <ModelPath>Gfx\HKB\Units\F_Male_Magnar_Body_Mesh_01.hkb</ModelPath>
+    <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+    <ModelScale>1.0000</ModelScale>
+    <TacticalModelScale>1.5000</TacticalModelScale>
+    <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+    <SoundPack>SoundPack_Generic_Male</SoundPack>
+    <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+    <Texture_Skin>Gfx\HKB\Units\Magnar_Skin_M_01.dds</Texture_Skin>
+    <Texture_Eyes>Gfx\Eyes\Blinks\Eyeblink_M6_Red.dds</Texture_Eyes>
+    <EyeTexture>Gfx\Eyes\Blinks\Eyeblink_M6_Red.dds</EyeTexture>
+    <UnitModelType>QuendarMale</UnitModelType>
+  </UnitType>
+  <!-- **************************************************** -->
+  <!-- Horsemen (AI) -->
+  <!-- **************************************************** -->
+  <UnitType InternalName="Unit_Horseman_Quendar_Nervari_AI">
+    <DisplayName>Horsemen</DisplayName>
+    <Description>Horsemen are excellent for scouting out unknown areas, and escaping when they uncover dangers in those areas.</Description>
+    <Class>Horseman</Class>
+    <RaceType>Race_Type_Quendar_Nervari</RaceType>
+    <CanBeDesigned>1</CanBeDesigned>
+    <Gender>Male</Gender>
+    <AdditionalTrainingTurns>0</AdditionalTrainingTurns>
+    <HideInSetupLists>1</HideInSetupLists>
+    <IsAIOnlyUnit>1</IsAIOnlyUnit>
+    <IsSovereign>0</IsSovereign>
+    <IsStartingUnitType>1</IsStartingUnitType>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <!-- Fix: This stat is never set in base game  -->
+      <UnitStat_IsMale>1</UnitStat_IsMale>
+      <!-- Background Unitstat Library values (compatibility only) -->
+      <UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+      <UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Elite_Fighter</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Fast</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Finesse</SelectedAbilityBonusOption>
+    <Equipment>F_Male_Quendar_Head_01</Equipment>
+    <Equipment>F_Male_Quendar_Horns_04</Equipment>
+    <Equipment>LeatherBreastpiece</Equipment>
+    <Equipment>LeatherHelmet</Equipment>
+    <Equipment>LeatherVambraces</Equipment>
+    <Equipment>LeatherGreaves</Equipment>
+    <Equipment>LeatherBoots</Equipment>
+    <Equipment>Fallen_Leather_Pants_ID2</Equipment>
+    <Equipment>Sion_Cloak_ID1</Equipment>
+    <Equipment>BasicHorseMount</Equipment>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Weapon</EquipmentSlot>
+      <WeaponUpgradeType>Spear</WeaponUpgradeType>
+      <EquipmentSlot>Defense</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Attack_Pierce</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Cold</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Fire</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Lightning</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Poison</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Torso</EquipmentSlot>
+      <EquipmentSlot>Surcoat</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+      <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>LowerBody</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+      <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Boots</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+      <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Head</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+      <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Forearms</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+      <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <Prereq>
+      <Type>Race</Type>
+      <Attribute>Race_Type_Quendar_Nervari</Attribute>
+    </Prereq>
+    <Prereq>
+      <Type>Tech</Type>
+      <Attribute>Mounted_Warfare</Attribute>
+    </Prereq>
+    <Backstory>Discipline is first, second, and third when building an effective fighting force. Little else matters.' These words - spoken by Vergaxa of the Quendar - remain the watchword for the commanders of this army. They will make slaves of any fighter they defeat in battle; they will conscript any banker, baker, or miner whose path they cross. From those slaves they will make soldiers, and from those soldiers, massive armies driven by fear of the lash, and inculcated with the discipline prescribed by Vergaxa centuries earlier.</Backstory>
+    <!-- replaced animations -->
+    <AnimationPack>MaleChampionAnimationPack</AnimationPack>
+    <!-- ******************* -->
+    <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+    <ClothMapScale>1.6</ClothMapScale>
+    <ClothPoseIndex>1</ClothPoseIndex>
+    <Color_Skin>145,200,165,255</Color_Skin>
+    <Color_Hair>185,185,185,255</Color_Hair>
+    <Color_Clothing1>80,30,100,255</Color_Clothing1>
+    <Color_Clothing2>140,60,15,255</Color_Clothing2>
+    <Color_Metal>255,102,0,255</Color_Metal>
+    <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+    <InfoCardBackground>BG15_Dark</InfoCardBackground>
+    <ModelPath>Gfx\HKB\Units\F_Male_Magnar_Body_Mesh_01.hkb</ModelPath>
+    <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+    <ModelScale>1.0000</ModelScale>
+    <TacticalModelScale>1.5000</TacticalModelScale>
+    <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+    <SoundPack>SoundPack_Generic_Male</SoundPack>
+    <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+    <Texture_Skin>Gfx\HKB\Units\Magnar_Skin_M_01.dds</Texture_Skin>
+    <Texture_Eyes>Gfx\Eyes\Blinks\Eyeblink_M6_Red.dds</Texture_Eyes>
+    <EyeTexture>Gfx\Eyes\Blinks\Eyeblink_M6_Red.dds</EyeTexture>
+    <UnitModelType>QuendarMale</UnitModelType>
+  </UnitType>
+  <!-- **************************************************** -->
+  <!-- Axeman -->
+  <!-- **************************************************** -->
+  <UnitType InternalName="Unit_Light_Quendar_Nervari">
+    <DisplayName>Axeman</DisplayName>
+    <Description>Axemen are good early skirmishers, quick to train and good in most battles.</Description>
+    <Class>Light</Class>
+    <RaceType>Race_Type_Quendar_Nervari</RaceType>
+    <CanBeDesigned>1</CanBeDesigned>
+    <Gender>Male</Gender>
+    <AdditionalTrainingTurns>20</AdditionalTrainingTurns>
+    <IsSovereign>0</IsSovereign>
+    <IsStartingUnitType>1</IsStartingUnitType>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <!-- Fix: This stat is never set in base game  -->
+      <UnitStat_IsMale>1</UnitStat_IsMale>
+      <!-- Background Unitstat Library values (compatibility only) -->
+      <UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+      <UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>ArmorProficiency1</SelectedAbilityBonusOption>
+    <Equipment>F_Male_Quendar_Head_01</Equipment>
+    <Equipment>F_Male_Quendar_Horns_02</Equipment>
+    <Equipment>Fallen_Warrior_Vest_ID1</Equipment>
+    <Equipment>Fallen_Leather_Pants_ID2</Equipment>
+    <Equipment>Large_Sion_Boots_ID2</Equipment>
+    <Equipment>Axe</Equipment>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Weapon</EquipmentSlot>
+      <WeaponUpgradeType>Axe</WeaponUpgradeType>
+      <EquipmentSlot>Defense</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Attack_Pierce</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Cold</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Fire</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Lightning</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Poison</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Torso</EquipmentSlot>
+      <EquipmentSlot>Surcoat</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>LowerBody</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Boots</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Forearms</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <Prereq>
+      <Type>Race</Type>
+      <Attribute>Race_Type_Quendar_Nervari</Attribute>
+    </Prereq>
+    <Prereq>
+      <Type>Tech</Type>
+      <Attribute>Weaponry</Attribute>
+    </Prereq>
+    <Backstory>Discipline is first, second, and third when building an effective fighting force. Little else matters.' These words - spoken by Vergaxa of the Quendar - remain the watchword for the commanders of this army. They will make slaves of any fighter they defeat in battle; they will conscript any banker, baker, or miner whose path they cross. From those slaves they will make soldiers, and from those soldiers, massive armies driven by fear of the lash, and inculcated with the discipline prescribed by Vergaxa centuries earlier.</Backstory>
+    <!-- replaced animations -->
+    <AnimationPack>MaleChampionAnimationPack</AnimationPack>
+    <!-- ******************* -->
+    <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+    <ClothMapScale>1.6</ClothMapScale>
+    <ClothPoseIndex>11</ClothPoseIndex>
+    <Color_Skin>145,200,165,255</Color_Skin>
+    <Color_Hair>185,185,185,255</Color_Hair>
+    <Color_Clothing1>80,30,100,255</Color_Clothing1>
+    <Color_Clothing2>140,60,15,255</Color_Clothing2>
+    <Color_Metal>255,102,0,255</Color_Metal>
+    <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+    <InfoCardBackground>BG15_Dark</InfoCardBackground>
+    <ModelPath>Gfx\HKB\Units\F_Male_Magnar_Body_Mesh_01.hkb</ModelPath>
+    <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+    <ModelScale>1.0000</ModelScale>
+    <TacticalModelScale>1.5000</TacticalModelScale>
+    <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+    <SoundPack>SoundPack_Generic_Male</SoundPack>
+    <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+    <Texture_Skin>Gfx\HKB\Units\Magnar_Skin_M_01.dds</Texture_Skin>
+    <Texture_Eyes>Gfx\Eyes\Blinks\Eyeblink_M7_Yellow.dds</Texture_Eyes>
+    <EyeTexture>Gfx\Eyes\Blinks\Eyeblink_m7_Yellow.dds</EyeTexture>
+    <UnitModelType>QuendarMale</UnitModelType>
+  </UnitType>
+  <!-- **************************************************** -->
+  <!-- Axeman (AI) -->
+  <!-- **************************************************** -->
+  <UnitType InternalName="Unit_Light_Quendar_Nervari_AI">
+    <DisplayName>Axeman</DisplayName>
+    <Description>Axemen are good early skirmishers, quick to train and good in most battles.</Description>
+    <Class>Light</Class>
+    <RaceType>Race_Type_Quendar_Nervari</RaceType>
+    <CanBeDesigned>1</CanBeDesigned>
+    <Gender>Male</Gender>
+    <AdditionalTrainingTurns>0</AdditionalTrainingTurns>
+    <HideInSetupLists>1</HideInSetupLists>
+    <IsAIOnlyUnit>1</IsAIOnlyUnit>
+    <IsSovereign>0</IsSovereign>
+    <IsStartingUnitType>1</IsStartingUnitType>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <!-- Fix: This stat is never set in base game  -->
+      <UnitStat_IsMale>1</UnitStat_IsMale>
+      <!-- Background Unitstat Library values (compatibility only) -->
+      <UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+      <UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Elite_Fighter</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Constitution</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>ArmorProficiency1</SelectedAbilityBonusOption>
+    <Equipment>F_Male_Quendar_Head_01</Equipment>
+    <Equipment>F_Male_Quendar_Horns_02</Equipment>
+    <Equipment>Fallen_Warrior_Vest_ID1</Equipment>
+    <Equipment>Fallen_Leather_Pants_ID2</Equipment>
+    <Equipment>Large_Sion_Boots_ID2</Equipment>
+    <Equipment>Axe</Equipment>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Weapon</EquipmentSlot>
+      <WeaponUpgradeType>Axe</WeaponUpgradeType>
+      <EquipmentSlot>Defense</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Attack_Pierce</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Cold</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Fire</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Lightning</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Poison</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Torso</EquipmentSlot>
+      <EquipmentSlot>Surcoat</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>LowerBody</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Boots</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Forearms</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <Prereq>
+      <Type>Race</Type>
+      <Attribute>Race_Type_Quendar_Nervari</Attribute>
+    </Prereq>
+    <Prereq>
+      <Type>Tech</Type>
+      <Attribute>Weaponry</Attribute>
+    </Prereq>
+    <Backstory>Discipline is first, second, and third when building an effective fighting force. Little else matters.' These words - spoken by Vergaxa of the Quendar - remain the watchword for the commanders of this army. They will make slaves of any fighter they defeat in battle; they will conscript any banker, baker, or miner whose path they cross. From those slaves they will make soldiers, and from those soldiers, massive armies driven by fear of the lash, and inculcated with the discipline prescribed by Vergaxa centuries earlier.</Backstory>
+    <!-- replaced animations -->
+    <AnimationPack>MaleChampionAnimationPack</AnimationPack>
+    <!-- ******************* -->
+    <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+    <ClothMapScale>1.6</ClothMapScale>
+    <ClothPoseIndex>11</ClothPoseIndex>
+    <Color_Skin>145,200,165,255</Color_Skin>
+    <Color_Hair>185,185,185,255</Color_Hair>
+    <Color_Clothing1>80,30,100,255</Color_Clothing1>
+    <Color_Clothing2>140,60,15,255</Color_Clothing2>
+    <Color_Metal>255,102,0,255</Color_Metal>
+    <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+    <InfoCardBackground>BG15_Dark</InfoCardBackground>
+    <ModelPath>Gfx\HKB\Units\F_Male_Magnar_Body_Mesh_01.hkb</ModelPath>
+    <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+    <ModelScale>1.0000</ModelScale>
+    <TacticalModelScale>1.5000</TacticalModelScale>
+    <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+    <SoundPack>SoundPack_Generic_Male</SoundPack>
+    <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+    <Texture_Skin>Gfx\HKB\Units\Magnar_Skin_M_01.dds</Texture_Skin>
+    <Texture_Eyes>Gfx\Eyes\Blinks\Eyeblink_M7_Yellow.dds</Texture_Eyes>
+    <EyeTexture>Gfx\Eyes\Blinks\Eyeblink_M7_Yellow.dds</EyeTexture>
+    <UnitModelType>QuendarMale</UnitModelType>
+  </UnitType>
+  <!-- **************************************************** -->
+  <!-- Ash Mage -->
+  <!-- **************************************************** -->
+  <UnitType InternalName="Unit_Mage_Fire_Quendar_Nervari">
+    <DisplayName>Ash Mage</DisplayName>
+    <Description>Ash Mages have passed the Quendar rituals of the scar stone, and have an affinity for fire because of it.</Description>
+    <Class>Mage</Class>
+    <RaceType>Race_Type_Quendar_Nervari</RaceType>
+    <CanBeDesigned>1</CanBeDesigned>
+    <Gender>Female</Gender>
+    <AdditionalTrainingTurns>20</AdditionalTrainingTurns>
+    <IsSovereign>0</IsSovereign>
+    <IsStartingUnitType>1</IsStartingUnitType>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <!-- Fix: This stat is never set in base game  -->
+      <UnitStat_IsFemale>1</UnitStat_IsFemale>
+      <!-- Background Unitstat Library values (compatibility only) -->
+      <UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+      <UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
+    <Equipment>F_Female_Quendar_Head_01</Equipment>
+    <Equipment>F_Female_Quendar_Horns_01</Equipment>
+    <Equipment>DarkWizardFemaleRobeID2</Equipment>
+    <Equipment>RingOfEmbers</Equipment>
+    <Equipment>ScarStone</Equipment>
+    <Equipment>Staff_Incineration</Equipment>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Weapon</EquipmentSlot>
+      <WeaponUpgradeType>FireStaff</WeaponUpgradeType>
+      <EquipmentSlot>Defense</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Attack_Fire</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <Prereq>
+      <Type>Race</Type>
+      <Attribute>Race_Type_Quendar_Nervari</Attribute>
+    </Prereq>
+    <Prereq>
+      <Type>Tech</Type>
+      <Attribute>Enchantment</Attribute>
+    </Prereq>
+    <Backstory>Discipline is first, second, and third when building an effective fighting force. Little else matters.' These words - spoken by Vergaxa of the Quendar - remain the watchword for the commanders of this army. They will make slaves of any fighter they defeat in battle; they will conscript any banker, baker, or miner whose path they cross. From those slaves they will make soldiers, and from those soldiers, massive armies driven by fear of the lash, and inculcated with the discipline prescribed by Vergaxa centuries earlier.</Backstory>
+    <!-- female animations -->
+    <AnimationPack>FemaleSovereignAnimationPack</AnimationPack>
+    <!-- ******************* -->
+    <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+    <ClothMapScale>1.6</ClothMapScale>
+    <ClothPoseIndex>1</ClothPoseIndex>
+    <Color_Skin>210,115,90,255</Color_Skin>
+    <Color_Hair>203,203,203,255</Color_Hair>
+    <Color_Clothing1>80,15,15,255</Color_Clothing1>
+    <Color_Clothing2>140,30,30,255</Color_Clothing2>
+    <Color_Metal>255,102,0,255</Color_Metal>
+    <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+    <InfoCardBackground>BG15_Dark</InfoCardBackground>
+    <ModelPath>Gfx\HKB\Units\F_Female_Magnar_Body_Mesh_01.hkb</ModelPath>
+    <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+    <ModelScale>1.0000</ModelScale>
+    <TacticalModelScale>1.5000</TacticalModelScale>
+    <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+    <SoundPack>SoundPack_Generic_Female</SoundPack>
+    <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+    <Texture_Skin>Gfx\HKB\Units\Magnar_Skin_F_01.dds</Texture_Skin>
+    <Texture_Eyes>Gfx\Eyes\Blinks\Eyeblink_F6_Orange.dds</Texture_Eyes>
+    <EyeTexture>Gfx\Eyes\Blinks\Eyeblink_F6_Orange.dds</EyeTexture>
+    <UnitModelType>QuendarFemale</UnitModelType>
+  </UnitType>
+  <!-- **************************************************** -->
+  <!-- Frost Mage -->
+  <!-- **************************************************** -->
+  <UnitType InternalName="Unit_Mage_Water_Quendar_Nervari">
+    <DisplayName>Frost Mage</DisplayName>
+    <Description>Frost Mages deal magical damage at range, use them to decimate enemies that rely on physical defense.</Description>
+    <Class>Mage</Class>
+    <RaceType>Race_Type_Quendar_Nervari</RaceType>
+    <CanBeDesigned>1</CanBeDesigned>
+    <Gender>Female</Gender>
+    <AdditionalTrainingTurns>20</AdditionalTrainingTurns>
+    <IsSovereign>0</IsSovereign>
+    <IsStartingUnitType>1</IsStartingUnitType>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <!-- Fix: This stat is never set in base game  -->
+      <UnitStat_IsFemale>1</UnitStat_IsFemale>
+      <!-- Background Unitstat Library values (compatibility only) -->
+      <UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+      <UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
+    <Equipment>F_Female_Quendar_Head_01</Equipment>
+    <Equipment>DarkWizardFemaleRobeID2</Equipment>
+    <Equipment>RingOfTheGlacier</Equipment>
+    <Equipment>Staff_Ice</Equipment>
+    <EquipmentUpgradeDef>
+      <SelectionCriterion>MaximizeBest</SelectionCriterion>
+      <ComparisonAttribute>UnitStat_Attack_Cold</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Fire</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Lightning</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Poison</ComparisonAttribute>
+      <WeaponUpgradeType>ColdStaff</WeaponUpgradeType>
+      <EquipmentSlot>Weapon</EquipmentSlot>
+      <EquipmentSlot>Defense</EquipmentSlot>
+      <ForUpgradeActionOnly>0</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <Prereq>
+      <Type>Race</Type>
+      <Attribute>Race_Type_Quendar_Nervari</Attribute>
+    </Prereq>
+    <Prereq>
+      <Type>Tech</Type>
+      <Attribute>Enchantment</Attribute>
+    </Prereq>
+    <Backstory>Discipline is first, second, and third when building an effective fighting force. Little else matters.' These words - spoken by Vergaxa of the Quendar - remain the watchword for the commanders of this army. They will make slaves of any fighter they defeat in battle; they will conscript any banker, baker, or miner whose path they cross. From those slaves they will make soldiers, and from those soldiers, massive armies driven by fear of the lash, and inculcated with the discipline prescribed by Vergaxa centuries earlier.</Backstory>
+    <!-- female animations -->
+    <AnimationPack>FemaleSovereignAnimationPack</AnimationPack>
+    <!-- ******************* -->
+    <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+    <ClothMapScale>1.6</ClothMapScale>
+    <ClothPoseIndex>1</ClothPoseIndex>
+    <Color_Skin>145,200,165,255</Color_Skin>
+    <Color_Hair>203,203,203,255</Color_Hair>
+    <Color_Clothing1>15,15,80,255</Color_Clothing1>
+    <Color_Clothing2>50,160,220,255</Color_Clothing2>
+    <Color_Metal>255,102,0,255</Color_Metal>
+    <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+    <InfoCardBackground>BG15_Dark</InfoCardBackground>
+    <ModelPath>Gfx\HKB\Units\F_Female_Magnar_Body_Mesh_01.hkb</ModelPath>
+    <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+    <ModelScale>1.0000</ModelScale>
+    <TacticalModelScale>1.5000</TacticalModelScale>
+    <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+    <SoundPack>SoundPack_Generic_Female</SoundPack>
+    <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+    <Texture_Skin>Gfx\HKB\Units\Magnar_Skin_F_01.dds</Texture_Skin>
+    <Texture_Eyes>Gfx\Eyes\Blinks\Eyeblink_F5_white.dds</Texture_Eyes>
+    <EyeTexture>Gfx\Eyes\Blinks\Eyeblink_F5_white.dds</EyeTexture>
+    <UnitModelType>QuendarFemale</UnitModelType>
+  </UnitType>
+  <!-- **************************************************** -->
+  <!-- Dragon Knight -->
+  <!-- **************************************************** -->
+  <UnitType InternalName="Unit_Magic_Heavy_Quendar_Nervari">
+    <DisplayName>Dragon Knight</DisplayName>
+    <Description>Dragon Knights are the most expensive and powerful units that can be trained. They combine the best armor, weapons and enchanted items with reliable mounts and advanced training.</Description>
+    <Class>MagicHeavy</Class>
+    <RaceType>Race_Type_Quendar_Nervari</RaceType>
+    <CanBeDesigned>1</CanBeDesigned>
+    <Gender>Male</Gender>
+    <AdditionalTrainingTurns>20</AdditionalTrainingTurns>
+    <IsSovereign>0</IsSovereign>
+    <IsStartingUnitType>1</IsStartingUnitType>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <!-- Fix: This stat is never set in base game  -->
+      <UnitStat_IsMale>1</UnitStat_IsMale>
+      <!-- Background Unitstat Library values (compatibility only) -->
+      <UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+      <UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>ArmorProficiency2</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Enmity</SelectedAbilityBonusOption>
+    <Equipment>F_Male_Quendar_Head_01</Equipment>
+    <Equipment>F_Male_Quendar_Horns_04</Equipment>
+    <Equipment>Sion_Cloak_ID1</Equipment>
+    <Equipment>Fallen_Sleeveless_Shirt_ID1</Equipment>
+    <Equipment>Empire_Leather_Gloves_Dark</Equipment>
+    <Equipment>Fallen_Leather_Pants_ID2</Equipment>
+    <Equipment>Large_Sion_Boots_ID2</Equipment>
+    <Equipment>BasicHorseMount2</Equipment>
+    <Equipment>DragonHideCloak</Equipment>
+    <Equipment>AmuletOfFlames</Equipment>
+    <Equipment>Pit_Rat_Charm</Equipment>
+    <Equipment>Citizen_Shield_Nervari</Equipment>
+    <Equipment>Maul_Doom</Equipment>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Torso</EquipmentSlot>
+      <EquipmentSlot>Surcoat</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>LowerBody</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Boots</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Forearms</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <Prereq>
+      <Type>Race</Type>
+      <Attribute>Race_Type_Quendar_Nervari</Attribute>
+    </Prereq>
+    <Prereq>
+      <Type>Tech</Type>
+      <Attribute>Arcane_Weapons</Attribute>
+    </Prereq>
+    <Backstory>Discipline is first, second, and third when building an effective fighting force. Little else matters.' These words - spoken by Vergaxa of the Quendar - remain the watchword for the commanders of this army. They will make slaves of any fighter they defeat in battle; they will conscript any banker, baker, or miner whose path they cross. From those slaves they will make soldiers, and from those soldiers, massive armies driven by fear of the lash, and inculcated with the discipline prescribed by Vergaxa centuries earlier.</Backstory>
+    <!-- replaced animations -->
+    <AnimationPack>MaleChampionAnimationPack</AnimationPack>
+    <!-- ******************* -->
+    <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+    <ClothMapScale>1.6</ClothMapScale>
+    <ClothPoseIndex>13</ClothPoseIndex>
+    <Color_Skin>145,200,165,255</Color_Skin>
+    <Color_Hair>185,185,185,255</Color_Hair>
+    <Color_Clothing1>80,30,100,255</Color_Clothing1>
+    <Color_Clothing2>140,60,15,255</Color_Clothing2>
+    <Color_Metal>255,102,0,255</Color_Metal>
+    <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+    <InfoCardBackground>BG15_Dark</InfoCardBackground>
+    <ModelPath>Gfx\HKB\Units\F_Male_Magnar_Body_Mesh_01.hkb</ModelPath>
+    <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+    <ModelScale>1.0000</ModelScale>
+    <TacticalModelScale>1.5000</TacticalModelScale>
+    <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+    <SoundPack>SoundPack_Generic_Male</SoundPack>
+    <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+    <Texture_Skin>Gfx\HKB\Units\Magnar_Skin_M_01.dds</Texture_Skin>
+    <Texture_Eyes>Gfx\Eyes\Blinks\Eyeblink_M6_White.dds</Texture_Eyes>
+    <EyeTexture>Gfx\Eyes\Blinks\Eyeblink_M6_White.dds</EyeTexture>
+    <UnitModelType>QuendarMale</UnitModelType>
+  </UnitType>
+  <!-- **************************************************** -->
+  <!-- Dragon Knight (AI) -->
+  <!-- **************************************************** -->
+  <UnitType InternalName="Unit_Magic_Heavy_Quendar_Nervari_AI">
+    <DisplayName>Dragon Knight</DisplayName>
+    <Description>Dragon Knights are the most expensive and powerful units that can be trained. They combine the best armor, weapons and enchanted items with reliable mounts and advanced training.</Description>
+    <Class>MagicHeavy</Class>
+    <RaceType>Race_Type_Quendar_Nervari</RaceType>
+    <CanBeDesigned>1</CanBeDesigned>
+    <Gender>Male</Gender>
+    <AdditionalTrainingTurns>0</AdditionalTrainingTurns>
+    <HideInSetupLists>1</HideInSetupLists>
+    <IsAIOnlyUnit>1</IsAIOnlyUnit>
+    <IsSovereign>0</IsSovereign>
+    <IsStartingUnitType>1</IsStartingUnitType>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <!-- Fix: This stat is never set in base game  -->
+      <UnitStat_IsMale>1</UnitStat_IsMale>
+      <!-- Background Unitstat Library values (compatibility only) -->
+      <UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+      <UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Elite_Fighter</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Ironskin</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>ArmorProficiency2</SelectedAbilityBonusOption>
+    <Equipment>F_Male_Quendar_Head_01</Equipment>
+    <Equipment>F_Male_Quendar_Horns_04</Equipment>
+    <Equipment>Sion_Cloak_ID1</Equipment>
+    <Equipment>Fallen_Sleeveless_Shirt_ID1</Equipment>
+    <Equipment>Empire_Leather_Gloves_Dark</Equipment>
+    <Equipment>Fallen_Leather_Pants_ID2</Equipment>
+    <Equipment>Large_Sion_Boots_ID2</Equipment>
+    <Equipment>BasicHorseMount2</Equipment>
+    <Equipment>DragonHideCloak</Equipment>
+    <Equipment>AmuletOfFlames</Equipment>
+    <Equipment>Pit_Rat_Charm</Equipment>
+    <Equipment>Citizen_Shield_Nervari</Equipment>
+    <Equipment>Maul_Doom</Equipment>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Torso</EquipmentSlot>
+      <EquipmentSlot>Surcoat</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>LowerBody</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Boots</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Forearms</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <Prereq>
+      <Type>Race</Type>
+      <Attribute>Race_Type_Quendar_Nervari</Attribute>
+    </Prereq>
+    <Prereq>
+      <Type>Tech</Type>
+      <Attribute>Arcane_Weapons</Attribute>
+    </Prereq>
+    <Backstory>Discipline is first, second, and third when building an effective fighting force. Little else matters.' These words - spoken by Vergaxa of the Quendar - remain the watchword for the commanders of this army. They will make slaves of any fighter they defeat in battle; they will conscript any banker, baker, or miner whose path they cross. From those slaves they will make soldiers, and from those soldiers, massive armies driven by fear of the lash, and inculcated with the discipline prescribed by Vergaxa centuries earlier.</Backstory>
+    <!-- replaced animations -->
+    <AnimationPack>MaleChampionAnimationPack</AnimationPack>
+    <!-- ******************* -->
+    <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+    <ClothMapScale>1.6</ClothMapScale>
+    <ClothPoseIndex>13</ClothPoseIndex>
+    <Color_Skin>145,200,165,255</Color_Skin>
+    <Color_Hair>185,185,185,255</Color_Hair>
+    <Color_Clothing1>80,30,100,255</Color_Clothing1>
+    <Color_Clothing2>140,60,15,255</Color_Clothing2>
+    <Color_Metal>255,102,0,255</Color_Metal>
+    <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+    <InfoCardBackground>BG15_Dark</InfoCardBackground>
+    <ModelPath>Gfx\HKB\Units\F_Male_Magnar_Body_Mesh_01.hkb</ModelPath>
+    <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+    <ModelScale>1.0000</ModelScale>
+    <TacticalModelScale>1.5000</TacticalModelScale>
+    <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+    <SoundPack>SoundPack_Generic_Male</SoundPack>
+    <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+    <Texture_Skin>Gfx\HKB\Units\Magnar_Skin_M_01.dds</Texture_Skin>
+    <Texture_Eyes>Gfx\Eyes\Blinks\Eyeblink_M6_White.dds</Texture_Eyes>
+    <EyeTexture>Gfx\Eyes\Blinks\Eyeblink_M6_White.dds</EyeTexture>
+    <UnitModelType>QuendarMale</UnitModelType>
+  </UnitType>
+  <!-- **************************************************** -->
+  <!-- Dragon Squire -->
+  <!-- **************************************************** -->
+  <UnitType InternalName="Unit_Magic_Medium_Quendar_Nervari">
+    <DisplayName>Dragon Squire</DisplayName>
+    <Description>The Dragon Squires are outfitted with enchanted weapons and items. They are a powerful tool for any empire, but expensive to train.</Description>
+    <Class>MagicMedium</Class>
+    <RaceType>Race_Type_Quendar_Nervari</RaceType>
+    <CanBeDesigned>1</CanBeDesigned>
+    <Gender>Male</Gender>
+    <AdditionalTrainingTurns>20</AdditionalTrainingTurns>
+    <IsSovereign>0</IsSovereign>
+    <IsStartingUnitType>1</IsStartingUnitType>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <!-- Fix: This stat is never set in base game  -->
+      <UnitStat_IsFemale>1</UnitStat_IsFemale>
+      <!-- Background Unitstat Library values (compatibility only) -->
+      <UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+      <UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>SpellResistance</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>ArmorProficiency2</SelectedAbilityBonusOption>
+    <Equipment>F_Male_Quendar_Head_01</Equipment>
+    <Equipment>F_Male_Quendar_Horns_03</Equipment>
+    <Equipment>Fallen_Shirt_ID2</Equipment>
+    <Equipment>Fallen_Basic_Pants_ID1</Equipment>
+    <Equipment>Large_Sion_Boots_ID2</Equipment>
+    <Equipment>Fallen_Vest_ID1</Equipment>
+    <Equipment>Pit_Rat_Charm</Equipment>
+    <Equipment>AmuletOfFlames</Equipment>
+    <Equipment>Axe_Burning</Equipment>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Weapon</EquipmentSlot>
+      <WeaponUpgradeType>Axe</WeaponUpgradeType>
+      <EquipmentSlot>Defense</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Attack_Pierce</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Cold</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Fire</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Lightning</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Poison</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Torso</EquipmentSlot>
+      <EquipmentSlot>Surcoat</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>LowerBody</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Boots</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Forearms</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <Prereq>
+      <Type>Race</Type>
+      <Attribute>Race_Type_Quendar_Nervari</Attribute>
+    </Prereq>
+    <Prereq>
+      <Type>Tech</Type>
+      <Attribute>Glyph_Stones</Attribute>
+    </Prereq>
+    <Backstory>Discipline is first, second, and third when building an effective fighting force. Little else matters.' These words - spoken by Vergaxa of the Quendar - remain the watchword for the commanders of this army. They will make slaves of any fighter they defeat in battle; they will conscript any banker, baker, or miner whose path they cross. From those slaves they will make soldiers, and from those soldiers, massive armies driven by fear of the lash, and inculcated with the discipline prescribed by Vergaxa centuries earlier.</Backstory>
+    <!-- replaced animations -->
+    <AnimationPack>MaleChampionAnimationPack</AnimationPack>
+    <!-- ******************* -->
+    <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+    <ClothMapScale>1.6</ClothMapScale>
+    <ClothPoseIndex>3</ClothPoseIndex>
+    <Color_Skin>145,200,165,255</Color_Skin>
+    <Color_Hair>185,185,185,255</Color_Hair>
+    <Color_Clothing1>80,30,100,255</Color_Clothing1>
+    <Color_Clothing2>140,60,15,255</Color_Clothing2>
+    <Color_Metal>255,102,0,255</Color_Metal>
+    <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+    <InfoCardBackground>BG15_Dark</InfoCardBackground>
+    <ModelPath>Gfx\HKB\Units\F_Male_Magnar_Body_Mesh_01.hkb</ModelPath>
+    <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+    <ModelScale>1.0000</ModelScale>
+    <TacticalModelScale>1.5000</TacticalModelScale>
+    <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+    <SoundPack>SoundPack_Generic_Male</SoundPack>
+    <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+    <Texture_Skin>Gfx\HKB\Units\Magnar_Skin_M_01.dds</Texture_Skin>
+    <Texture_Eyes>Gfx\Eyes\Blinks\Eyeblink_M6_Red.dds</Texture_Eyes>
+    <EyeTexture>Gfx\Eyes\Blinks\Eyeblink_M6_Red.dds</EyeTexture>
+    <UnitModelType>QuendarMale</UnitModelType>
+  </UnitType>
+  <!-- **************************************************** -->
+  <!-- Dragon Squire (AI) -->
+  <!-- **************************************************** -->
+  <UnitType InternalName="Unit_Magic_Medium_Quendar_Nervari_AI">
+    <DisplayName>Dragon Squire</DisplayName>
+    <Description>The Dragon Squires are outfitted with enchanted weapons and items. They are a powerful tool for any empire, but expensive to train.</Description>
+    <Class>MagicMedium</Class>
+    <RaceType>Race_Type_Quendar_Nervari</RaceType>
+    <CanBeDesigned>1</CanBeDesigned>
+    <Gender>Male</Gender>
+    <AdditionalTrainingTurns>0</AdditionalTrainingTurns>
+    <HideInSetupLists>1</HideInSetupLists>
+    <IsAIOnlyUnit>1</IsAIOnlyUnit>
+    <IsSovereign>0</IsSovereign>
+    <IsStartingUnitType>1</IsStartingUnitType>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <!-- Fix: This stat is never set in base game  -->
+      <UnitStat_IsFemale>1</UnitStat_IsFemale>
+      <!-- Background Unitstat Library values (compatibility only) -->
+      <UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+      <UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Elite_Fighter</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>SpellResistance</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>ArmorProficiency2</SelectedAbilityBonusOption>
+    <Equipment>F_Male_Quendar_Head_01</Equipment>
+    <Equipment>F_Male_Quendar_Horns_03</Equipment>
+    <Equipment>Fallen_Shirt_ID2</Equipment>
+    <Equipment>Fallen_Basic_Pants_ID1</Equipment>
+    <Equipment>Large_Sion_Boots_ID2</Equipment>
+    <Equipment>Fallen_Vest_ID1</Equipment>
+    <Equipment>Pit_Rat_Charm</Equipment>
+    <Equipment>AmuletOfFlames</Equipment>
+    <Equipment>Axe_Burning</Equipment>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Weapon</EquipmentSlot>
+      <WeaponUpgradeType>Axe</WeaponUpgradeType>
+      <EquipmentSlot>Defense</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Attack_Pierce</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Cold</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Fire</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Lightning</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Poison</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Torso</EquipmentSlot>
+      <EquipmentSlot>Surcoat</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>LowerBody</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Boots</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Forearms</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <Prereq>
+      <Type>Race</Type>
+      <Attribute>Race_Type_Quendar_Nervari</Attribute>
+    </Prereq>
+    <Prereq>
+      <Type>Tech</Type>
+      <Attribute>Glyph_Stones</Attribute>
+    </Prereq>
+    <Backstory>Discipline is first, second, and third when building an effective fighting force. Little else matters.' These words - spoken by Vergaxa of the Quendar - remain the watchword for the commanders of this army. They will make slaves of any fighter they defeat in battle; they will conscript any banker, baker, or miner whose path they cross. From those slaves they will make soldiers, and from those soldiers, massive armies driven by fear of the lash, and inculcated with the discipline prescribed by Vergaxa centuries earlier.</Backstory>
+    <!-- replaced animations -->
+    <AnimationPack>MaleChampionAnimationPack</AnimationPack>
+    <!-- ******************* -->
+    <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+    <ClothMapScale>1.6</ClothMapScale>
+    <ClothPoseIndex>3</ClothPoseIndex>
+    <Color_Skin>145,200,165,255</Color_Skin>
+    <Color_Hair>185,185,185,255</Color_Hair>
+    <Color_Clothing1>80,30,100,255</Color_Clothing1>
+    <Color_Clothing2>140,60,15,255</Color_Clothing2>
+    <Color_Metal>255,102,0,255</Color_Metal>
+    <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+    <InfoCardBackground>BG15_Dark</InfoCardBackground>
+    <ModelPath>Gfx\HKB\Units\F_Male_Magnar_Body_Mesh_01.hkb</ModelPath>
+    <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+    <ModelScale>1.0000</ModelScale>
+    <TacticalModelScale>1.5000</TacticalModelScale>
+    <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+    <SoundPack>SoundPack_Generic_Male</SoundPack>
+    <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+    <Texture_Skin>Gfx\HKB\Units\Magnar_Skin_M_01.dds</Texture_Skin>
+    <Texture_Eyes>Gfx\Eyes\Blinks\Eyeblink_M6_Red.dds</Texture_Eyes>
+    <EyeTexture>Gfx\Eyes\Blinks\Eyeblink_M6_Red.dds</EyeTexture>
+    <UnitModelType>QuendarMale</UnitModelType>
+  </UnitType>
+  <!-- **************************************************** -->
+  <!-- Grimsword -->
+  <!-- **************************************************** -->
+  <UnitType InternalName="Unit_Medium_Quendar_Nervari">
+    <DisplayName>Grimsword</DisplayName>
+    <Description>The Grimswords are good midgame units for your armies.</Description>
+    <Class>Medium</Class>
+    <RaceType>Race_Type_Quendar_Nervari</RaceType>
+    <CanBeDesigned>1</CanBeDesigned>
+    <Gender>Male</Gender>
+    <AdditionalTrainingTurns>20</AdditionalTrainingTurns>
+    <IsSovereign>0</IsSovereign>
+    <IsStartingUnitType>1</IsStartingUnitType>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <!-- Fix: This stat is never set in base game  -->
+      <UnitStat_IsMale>1</UnitStat_IsMale>
+      <!-- Background Unitstat Library values (compatibility only) -->
+      <UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+      <UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>ArmorProficiency2</SelectedAbilityBonusOption>
+    <Equipment>F_Male_Quendar_Head_01</Equipment>
+    <Equipment>F_Male_Quendar_Horns_03</Equipment>
+    <Equipment>Fallen_Shirt_ID2</Equipment>
+    <Equipment>Fallen_Basic_Pants_ID1</Equipment>
+    <Equipment>Large_Sion_Boots_ID2</Equipment>
+    <Equipment>Fallen_Vest_ID1</Equipment>
+    <Equipment>Shortsword</Equipment>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Weapon</EquipmentSlot>
+      <WeaponUpgradeType>Blade</WeaponUpgradeType>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Attack_Pierce</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Cold</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Fire</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Lightning</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Poison</ComparisonAttribute>
+      <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Torso</EquipmentSlot>
+      <EquipmentSlot>Surcoat</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>LowerBody</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Boots</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Head</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Forearms</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Defense</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <Prereq>
+      <Type>Race</Type>
+      <Attribute>Race_Type_Quendar_Nervari</Attribute>
+    </Prereq>
+    <Prereq>
+      <Type>Tech</Type>
+      <Attribute>Blacksmithing</Attribute>
+    </Prereq>
+    <Backstory>Discipline is first, second, and third when building an effective fighting force. Little else matters.' These words - spoken by Vergaxa of the Quendar - remain the watchword for the commanders of this army. They will make slaves of any fighter they defeat in battle; they will conscript any banker, baker, or miner whose path they cross. From those slaves they will make soldiers, and from those soldiers, massive armies driven by fear of the lash, and inculcated with the discipline prescribed by Vergaxa centuries earlier.</Backstory>
+    <!-- replaced animations -->
+    <AnimationPack>MaleChampionAnimationPack</AnimationPack>
+    <!-- ******************* -->
+    <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+    <ClothMapScale>1.6</ClothMapScale>
+    <ClothPoseIndex>3</ClothPoseIndex>
+    <Color_Skin>145,200,165,255</Color_Skin>
+    <Color_Hair>185,185,185,255</Color_Hair>
+    <Color_Clothing1>80,30,100,255</Color_Clothing1>
+    <Color_Clothing2>140,60,15,255</Color_Clothing2>
+    <Color_Metal>255,102,0,255</Color_Metal>
+    <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+    <InfoCardBackground>BG15_Dark</InfoCardBackground>
+    <ModelPath>Gfx\HKB\Units\F_Male_Magnar_Body_Mesh_01.hkb</ModelPath>
+    <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+    <ModelScale>1.0000</ModelScale>
+    <TacticalModelScale>1.5000</TacticalModelScale>
+    <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+    <SoundPack>SoundPack_Generic_Male</SoundPack>
+    <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+    <Texture_Skin>Gfx\HKB\Units\Magnar_Skin_M_01.dds</Texture_Skin>
+    <Texture_Eyes>Gfx\Eyes\Blinks\Eyeblink_M6_Red.dds</Texture_Eyes>
+    <EyeTexture>Gfx\Eyes\Blinks\Eyeblink_M6_Red.dds</EyeTexture>
+    <UnitModelType>QuendarMale</UnitModelType>
+  </UnitType>
+  <!-- **************************************************** -->
+  <!-- Grimsword (AI) -->
+  <!-- **************************************************** -->
+  <UnitType InternalName="Unit_Medium_Quendar_Nervari_AI">
+    <DisplayName>Grimsword</DisplayName>
+    <Description>The Grimswords are good midgame units for your armies.</Description>
+    <Class>Medium</Class>
+    <RaceType>Race_Type_Quendar_Nervari</RaceType>
+    <CanBeDesigned>1</CanBeDesigned>
+    <Gender>Male</Gender>
+    <AdditionalTrainingTurns>0</AdditionalTrainingTurns>
+    <HideInSetupLists>1</HideInSetupLists>
+    <IsAIOnlyUnit>1</IsAIOnlyUnit>
+    <IsSovereign>0</IsSovereign>
+    <IsStartingUnitType>1</IsStartingUnitType>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <!-- Fix: This stat is never set in base game  -->
+      <UnitStat_IsMale>1</UnitStat_IsMale>
+      <!-- Background Unitstat Library values (compatibility only) -->
+      <UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+      <UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Elite_Fighter</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Ironskin</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>ArmorProficiency2</SelectedAbilityBonusOption>
+    <Equipment>F_Male_Quendar_Head_01</Equipment>
+    <Equipment>F_Male_Quendar_Horns_03</Equipment>
+    <Equipment>Fallen_Shirt_ID2</Equipment>
+    <Equipment>Fallen_Basic_Pants_ID1</Equipment>
+    <Equipment>Large_Sion_Boots_ID2</Equipment>
+    <Equipment>Fallen_Vest_ID1</Equipment>
+    <Equipment>Shortsword</Equipment>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Weapon</EquipmentSlot>
+      <WeaponUpgradeType>Blade</WeaponUpgradeType>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Attack_Pierce</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Cold</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Fire</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Lightning</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Poison</ComparisonAttribute>
+      <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Torso</EquipmentSlot>
+      <EquipmentSlot>Surcoat</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>LowerBody</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Boots</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Head</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Forearms</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Defense</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <Prereq>
+      <Type>Race</Type>
+      <Attribute>Race_Type_Quendar_Nervari</Attribute>
+    </Prereq>
+    <Prereq>
+      <Type>Tech</Type>
+      <Attribute>Blacksmithing</Attribute>
+    </Prereq>
+    <Backstory>Discipline is first, second, and third when building an effective fighting force. Little else matters.' These words - spoken by Vergaxa of the Quendar - remain the watchword for the commanders of this army. They will make slaves of any fighter they defeat in battle; they will conscript any banker, baker, or miner whose path they cross. From those slaves they will make soldiers, and from those soldiers, massive armies driven by fear of the lash, and inculcated with the discipline prescribed by Vergaxa centuries earlier.</Backstory>
+    <!-- replaced animations -->
+    <AnimationPack>MaleChampionAnimationPack</AnimationPack>
+    <!-- ******************* -->
+    <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+    <ClothMapScale>1.6</ClothMapScale>
+    <ClothPoseIndex>3</ClothPoseIndex>
+    <Color_Skin>145,200,165,255</Color_Skin>
+    <Color_Hair>185,185,185,255</Color_Hair>
+    <Color_Clothing1>80,30,100,255</Color_Clothing1>
+    <Color_Clothing2>140,60,15,255</Color_Clothing2>
+    <Color_Metal>255,102,0,255</Color_Metal>
+    <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+    <InfoCardBackground>BG15_Dark</InfoCardBackground>
+    <ModelPath>Gfx\HKB\Units\F_Male_Magnar_Body_Mesh_01.hkb</ModelPath>
+    <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+    <ModelScale>1.0000</ModelScale>
+    <TacticalModelScale>1.5000</TacticalModelScale>
+    <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+    <SoundPack>SoundPack_Generic_Male</SoundPack>
+    <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+    <Texture_Skin>Gfx\HKB\Units\Magnar_Skin_M_01.dds</Texture_Skin>
+    <Texture_Eyes>Gfx\Eyes\Blinks\Eyeblink_M6_Red.dds</Texture_Eyes>
+    <EyeTexture>Gfx\Eyes\Blinks\Eyeblink_M6_Red.dds</EyeTexture>
+    <UnitModelType>QuendarMale</UnitModelType>
+  </UnitType>
+  <!-- **************************************************** -->
+  <!-- Spearman -->
+  <!-- **************************************************** -->
+  <UnitType InternalName="Unit_Spearman_Quendar_Nervari">
+    <DisplayName>Spearman</DisplayName>
+    <Description>Spearmen are effective against well armored enemies.</Description>
+    <Class>Spearman</Class>
+    <RaceType>Race_Type_Quendar_Nervari</RaceType>
+    <CanBeDesigned>1</CanBeDesigned>
+    <Gender>Male</Gender>
+    <AdditionalTrainingTurns>20</AdditionalTrainingTurns>
+    <IsSovereign>0</IsSovereign>
+    <IsStartingUnitType>1</IsStartingUnitType>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <!-- Fix: This stat is never set in base game  -->
+      <UnitStat_IsMale>1</UnitStat_IsMale>
+      <!-- Background Unitstat Library values (compatibility only) -->
+      <UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+      <UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
+    <Equipment>F_Male_Quendar_Head_01</Equipment>
+    <Equipment>F_Male_Quendar_Horns_02</Equipment>
+    <Equipment>F_Noble_Surcoat_Solid_ID1</Equipment>
+    <Equipment>Fallen_Leather_Shirt_ID2</Equipment>
+    <Equipment>Sion_Cloak_ID2</Equipment>
+    <Equipment>Fallen_Leather_Pants_ID2</Equipment>
+    <Equipment>Large_Sion_Boots_ID2</Equipment>
+    <Equipment>Citizen_Spear_Nervari</Equipment>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Weapon</EquipmentSlot>
+      <WeaponUpgradeType>Spear</WeaponUpgradeType>
+      <EquipmentSlot>Defense</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Attack_Pierce</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Cold</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Fire</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Lightning</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Poison</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Torso</EquipmentSlot>
+      <EquipmentSlot>Surcoat</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>LowerBody</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Boots</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Head</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Forearms</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <Prereq>
+      <Type>Race</Type>
+      <Attribute>Race_Type_Quendar_Nervari</Attribute>
+    </Prereq>
+    <Backstory>Discipline is first, second, and third when building an effective fighting force. Little else matters.' These words - spoken by Vergaxa of the Quendar - remain the watchword for the commanders of this army. They will make slaves of any fighter they defeat in battle; they will conscript any banker, baker, or miner whose path they cross. From those slaves they will make soldiers, and from those soldiers, massive armies driven by fear of the lash, and inculcated with the discipline prescribed by Vergaxa centuries earlier.</Backstory>
+    <!-- replaced animations -->
+    <AnimationPack>MaleChampionAnimationPack</AnimationPack>
+    <!-- ******************* -->
+    <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+    <ClothMapScale>1.6</ClothMapScale>
+    <ClothPoseIndex>29</ClothPoseIndex>
+    <Color_Skin>145,200,165,255</Color_Skin>
+    <Color_Hair>195,195,195,255</Color_Hair>
+    <Color_Clothing1>80,30,100,255</Color_Clothing1>
+    <Color_Clothing2>140,60,15,255</Color_Clothing2>
+    <Color_Metal>255,102,0,255</Color_Metal>
+    <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+    <InfoCardBackground>BG15_Dark</InfoCardBackground>
+    <ModelPath>Gfx\HKB\Units\F_Male_Magnar_Body_Mesh_01.hkb</ModelPath>
+    <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+    <ModelScale>1.0000</ModelScale>
+    <TacticalModelScale>1.5000</TacticalModelScale>
+    <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+    <SoundPack>SoundPack_Generic_Male</SoundPack>
+    <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+    <Texture_Skin>Gfx\HKB\Units\Magnar_Skin_M_01.dds</Texture_Skin>
+    <Texture_Eyes>Gfx\Eyes\Blinks\Eyeblink_M7_Red.dds</Texture_Eyes>
+    <EyeTexture>Gfx\Eyes\Blinks\Eyeblink_M7_Red.dds</EyeTexture>
+    <UnitModelType>QuendarMale</UnitModelType>
+  </UnitType>
+  <!-- **************************************************** -->
+  <!-- Spearman (AI) -->
+  <!-- **************************************************** -->
+  <UnitType InternalName="Unit_Spearman_Quendar_Nervari_AI">
+    <DisplayName>Spearman</DisplayName>
+    <Description>Spearmen are effective against well armored enemies.</Description>
+    <Class>Spearman</Class>
+    <RaceType>Race_Type_Quendar_Nervari</RaceType>
+    <CanBeDesigned>1</CanBeDesigned>
+    <Gender>Male</Gender>
+    <AdditionalTrainingTurns>0</AdditionalTrainingTurns>
+    <HideInSetupLists>1</HideInSetupLists>
+    <IsAIOnlyUnit>1</IsAIOnlyUnit>
+    <IsSovereign>0</IsSovereign>
+    <IsStartingUnitType>1</IsStartingUnitType>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <!-- Fix: This stat is never set in base game  -->
+      <UnitStat_IsMale>1</UnitStat_IsMale>
+      <!-- Background Unitstat Library values (compatibility only) -->
+      <UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+      <UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Elite_Fighter</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Ironskin</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Precision</SelectedAbilityBonusOption>
+    <Equipment>F_Male_Quendar_Head_01</Equipment>
+    <Equipment>F_Male_Quendar_Horns_02</Equipment>
+    <Equipment>F_Noble_Surcoat_Solid_ID1</Equipment>
+    <Equipment>Fallen_Leather_Shirt_ID2</Equipment>
+    <Equipment>Sion_Cloak_ID2</Equipment>
+    <Equipment>Fallen_Leather_Pants_ID2</Equipment>
+    <Equipment>Large_Sion_Boots_ID2</Equipment>
+    <Equipment>Citizen_Spear_Nervari</Equipment>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Weapon</EquipmentSlot>
+      <WeaponUpgradeType>Spear</WeaponUpgradeType>
+      <EquipmentSlot>Defense</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Attack_Pierce</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Cold</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Fire</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Lightning</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Poison</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Torso</EquipmentSlot>
+      <EquipmentSlot>Surcoat</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>LowerBody</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Boots</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Head</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Forearms</EquipmentSlot>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <Prereq>
+      <Type>Race</Type>
+      <Attribute>Race_Type_Quendar_Nervari</Attribute>
+    </Prereq>
+    <Backstory>Discipline is first, second, and third when building an effective fighting force. Little else matters.' These words - spoken by Vergaxa of the Quendar - remain the watchword for the commanders of this army. They will make slaves of any fighter they defeat in battle; they will conscript any banker, baker, or miner whose path they cross. From those slaves they will make soldiers, and from those soldiers, massive armies driven by fear of the lash, and inculcated with the discipline prescribed by Vergaxa centuries earlier.</Backstory>
+    <!-- replaced animations -->
+    <AnimationPack>MaleChampionAnimationPack</AnimationPack>
+    <!-- ******************* -->
+    <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+    <ClothMapScale>1.6</ClothMapScale>
+    <ClothPoseIndex>29</ClothPoseIndex>
+    <Color_Skin>145,200,165,255</Color_Skin>
+    <Color_Hair>195,195,195,255</Color_Hair>
+    <Color_Clothing1>80,30,100,255</Color_Clothing1>
+    <Color_Clothing2>140,60,15,255</Color_Clothing2>
+    <Color_Metal>255,102,0,255</Color_Metal>
+    <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+    <InfoCardBackground>BG15_Dark</InfoCardBackground>
+    <ModelPath>Gfx\HKB\Units\F_Male_Magnar_Body_Mesh_01.hkb</ModelPath>
+    <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+    <ModelScale>1.0000</ModelScale>
+    <TacticalModelScale>1.5000</TacticalModelScale>
+    <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+    <SoundPack>SoundPack_Generic_Male</SoundPack>
+    <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+    <Texture_Skin>Gfx\HKB\Units\Magnar_Skin_M_01.dds</Texture_Skin>
+    <Texture_Eyes>Gfx\Eyes\Blinks\Eyeblink_M7_Red.dds</Texture_Eyes>
+    <EyeTexture>Gfx\Eyes\Blinks\Eyeblink_M7_Red.dds</EyeTexture>
+    <UnitModelType>QuendarMale</UnitModelType>
+  </UnitType>
+  <!-- **************************************************** -->
+  <!-- City Archer -->
+  <!-- **************************************************** -->
+  <UnitType InternalName="Unit_CityArcher_Quendar_Nervari">
+    <DisplayName>City Archer</DisplayName>
+    <Class>CityArcher</Class>
+    <RaceType>Race_Type_Quendar_Nervari</RaceType>
+    <CanBeDesigned>0</CanBeDesigned>
+    <Gender>Male</Gender>
+    <HasWages>0</HasWages>
+    <IsSovereign>0</IsSovereign>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <!-- Fix: This stat is never set in base game  -->
+      <UnitStat_IsMale>1</UnitStat_IsMale>
+      <!-- Background Unitstat Library values (compatibility only) -->
+      <UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+      <UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
+    <Equipment>Shortbow_Crude</Equipment>
+    <Equipment>F_Male_Quendar_Head_01</Equipment>
+    <Equipment>F_Male_Quendar_Horns_03</Equipment>
+    <Equipment>Fallen_Shirt_ID1</Equipment>
+    <Equipment>Fallen_Leather_Pants_ID1</Equipment>
+    <Equipment>F_Warn_Surcoat_Solid_ID2</Equipment>
+    <Equipment>Large_Sion_Boots_ID2</Equipment>
+    <Prereq>
+      <Type>Race</Type>
+      <Attribute>Race_Type_Quendar_Nervari</Attribute>
+    </Prereq>
+    <Backstory>Discipline is first, second, and third when building an effective fighting force. Little else matters.' These words - spoken by Vergaxa of the Quendar - remain the watchword for the commanders of this army. They will make slaves of any fighter they defeat in battle; they will conscript any banker, baker, or miner whose path they cross. From those slaves they will make soldiers, and from those soldiers, massive armies driven by fear of the lash, and inculcated with the discipline prescribed by Vergaxa centuries earlier.</Backstory>
+    <!-- replaced animations -->
+    <AnimationPack>MaleChampionAnimationPack</AnimationPack>
+    <!-- ******************* -->
+    <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+    <ClothMapScale>1.6</ClothMapScale>
+    <ClothPoseIndex>1</ClothPoseIndex>
+    <Color_Skin>145,200,165,255</Color_Skin>
+    <Color_Hair>195,195,195,255</Color_Hair>
+    <Color_Clothing1>80,30,100,255</Color_Clothing1>
+    <Color_Clothing2>140,60,15,255</Color_Clothing2>
+    <Color_Metal>255,102,0,255</Color_Metal>
+    <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+    <InfoCardBackground>BG15_Dark</InfoCardBackground>
+    <ModelPath>Gfx\HKB\Units\F_Male_Magnar_Body_Mesh_01.hkb</ModelPath>
+    <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+    <ModelScale>1.0000</ModelScale>
+    <TacticalModelScale>1.5000</TacticalModelScale>
+    <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+    <SoundPack>SoundPack_Generic_Male</SoundPack>
+    <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+    <Texture_Skin>Gfx\HKB\Units\Magnar_Skin_M_01.dds</Texture_Skin>
+    <Texture_Eyes>Gfx\Eyes\Blinks\Eyeblink_M7_Red.dds</Texture_Eyes>
+    <EyeTexture>Gfx\Eyes\Blinks\Eyeblink_M7_Red.dds</EyeTexture>
+    <UnitModelType>QuendarMale</UnitModelType>
+  </UnitType>
+  <!-- **************************************************** -->
+  <!-- City Militia -->
+  <!-- **************************************************** -->
+  <UnitType InternalName="Unit_CityDefender_Quendar_Nervari">
+    <DisplayName>City Militia</DisplayName>
+    <Class>CityDefender</Class>
+    <RaceType>Race_Type_Quendar_Nervari</RaceType>
+    <CanBeDesigned>0</CanBeDesigned>
+    <Gender>Male</Gender>
+    <HasWages>0</HasWages>
+    <IsSovereign>0</IsSovereign>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <!-- Fix: This stat is never set in base game  -->
+      <UnitStat_IsMale>1</UnitStat_IsMale>
+      <!-- Background Unitstat Library values (compatibility only) -->
+      <UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+      <UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
+    <Equipment>F_Male_Quendar_Head_01</Equipment>
+    <Equipment>F_Male_Quendar_Horns_03</Equipment>
+    <Equipment>Fallen_Basic_Pants_ID2</Equipment>
+    <Equipment>Large_Sion_Boots_ID2</Equipment>
+    <Equipment>DarkWizardRobeID2</Equipment>
+    <Equipment>Citizen_Shield_Nervari</Equipment>
+    <Equipment>Citizen_Spear_Nervari</Equipment>
+    <EquipmentUpgradeDef>
+      <EquipmentSlot>Weapon</EquipmentSlot>
+      <WeaponUpgradeType>Spear</WeaponUpgradeType>
+      <SelectionCriteria>MaximizeSum</SelectionCriteria>
+      <ComparisonAttribute>UnitStat_Attack_Pierce</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Cold</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Fire</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Lightning</ComparisonAttribute>
+      <ComparisonAttribute>UnitStat_Attack_Poison</ComparisonAttribute>
+    </EquipmentUpgradeDef>
+    <Prereq>
+      <Type>Race</Type>
+      <RaceType>Race_Type_Quendar_Nervari</RaceType>
+    </Prereq>
+    <Backstory>Discipline is first, second, and third when building an effective fighting force. Little else matters.' These words - spoken by Vergaxa of the Quendar - remain the watchword for the commanders of this army. They will make slaves of any fighter they defeat in battle; they will conscript any banker, baker, or miner whose path they cross. From those slaves they will make soldiers, and from those soldiers, massive armies driven by fear of the lash, and inculcated with the discipline prescribed by Vergaxa centuries earlier.</Backstory>
+    <!-- replaced animations -->
+    <AnimationPack>MaleChampionAnimationPack</AnimationPack>
+    <!-- ******************* -->
+    <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+    <ClothMapScale>1.6</ClothMapScale>
+    <ClothPoseIndex>17</ClothPoseIndex>
+    <Color_Skin>145,200,165,255</Color_Skin>
+    <Color_Hair>195,195,195,255</Color_Hair>
+    <Color_Clothing1>80,30,100,255</Color_Clothing1>
+    <Color_Clothing2>140,60,15,255</Color_Clothing2>
+    <Color_Metal>255,102,0,255</Color_Metal>
+    <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+    <InfoCardBackground>BG15_Dark</InfoCardBackground>
+    <ModelPath>Gfx\HKB\Units\F_Male_Magnar_Body_Mesh_01.hkb</ModelPath>
+    <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+    <ModelScale>1.0000</ModelScale>
+    <TacticalModelScale>1.5000</TacticalModelScale>
+    <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+    <SoundPack>SoundPack_Generic_Male</SoundPack>
+    <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+    <Texture_Skin>Gfx\HKB\Units\Magnar_Skin_M_01.dds</Texture_Skin>
+    <Texture_Eyes>Gfx\Eyes\Blinks\Eyeblink_M7_Red.dds</Texture_Eyes>
+    <EyeTexture>Gfx\Eyes\Blinks\Eyeblink_M7_Red.dds</EyeTexture>
+    <UnitModelType>QuendarMale</UnitModelType>
+  </UnitType>
+  <!-- **************************************************** -->
+  <!-- Pioneer -->
+  <!-- **************************************************** -->
+  <UnitType InternalName="Unit_Pioneer_Quendar_Nervari">
+    <DisplayName>Pioneer</DisplayName>
+    <Description>Pioneers are equipped with the necessary supplies to start new settlements and create outposts.</Description>
+    <Class>Pioneer</Class>
+    <RaceType>Race_Type_Quendar_Nervari</RaceType>
+    <Gender>Female</Gender>
+    <AdditionalTrainingTurns>48</AdditionalTrainingTurns>
+    <HasWages>0</HasWages>
+    <IsSovereign>0</IsSovereign>
+    <IsStartingUnitType>1</IsStartingUnitType>
+    <IsUniqueButBuildable>1</IsUniqueButBuildable>
+    <GroupingType>UnitGroupingType_Party</GroupingType>
+    <TrainUnitIcon>TrainUnitIcon_Pioneer.png</TrainUnitIcon>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>UnlockAction</Attribute>
+      <StrVal>BuildTown</StrVal>
+    </GameModifier>
+    <GameModifier>
+      <ModType>Unit</ModType>
+      <Attribute>UnlockAction</Attribute>
+      <StrVal>BuildImprovement</StrVal>
+      <StrVal2>Outpost</StrVal2>
+    </GameModifier>
+	<Prereq>
+		<Type>RestrictedAbilityBonusOption</Type>
+		<Attribute>Weakness_X_CityState</Attribute>
+		<Target>Player</Target>
+	</Prereq>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <!-- Fix: This stat is never set in base game  -->
+      <UnitStat_IsFemale>1</UnitStat_IsFemale>
+      <!-- Background Unitstat Library values (compatibility only) -->
+      <UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+      <UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
+    <SelectedAbilityBonusOption>Weak</SelectedAbilityBonusOption>
+    <Equipment>F_Female_Quendar_Head_01</Equipment>
+    <Equipment>F_Female_Quendar_Horns_01</Equipment>
+    <Equipment>Longsleeve_Empire_Shirt_Female_ID1</Equipment>
+    <Equipment>Wraith_Doublet_ID1</Equipment>
+    <Equipment>Empire_Overskirt_ID2</Equipment>
+    <Prereq>
+      <Type>Race</Type>
+      <Attribute>Race_Type_Quendar_Nervari</Attribute>
+    </Prereq>
+    <ProductionRequirement>
+      <Type>Resource</Type>
+      <Attribute>Population</Attribute>
+      <Value>10</Value>
+    </ProductionRequirement>
+	<ProductionRequirement>
+		<Type>Resource</Type>
+		<Attribute>Resource_X_PPE</Attribute>
+		<Value>0.333333</Value>
+	</ProductionRequirement>
+    <Backstory>Discipline is first, second, and third when building an effective fighting force. Little else matters.' These words - spoken by Vergaxa of the Quendar - remain the watchword for the commanders of this army. They will make slaves of any fighter they defeat in battle; they will conscript any banker, baker, or miner whose path they cross. From those slaves they will make soldiers, and from those soldiers, massive armies driven by fear of the lash, and inculcated with the discipline prescribed by Vergaxa centuries earlier.</Backstory>
+    <!-- female animations -->
+    <AnimationPack>FemaleSovereignAnimationPack</AnimationPack>
+    <!-- ******************* -->
+    <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+    <ClothMapScale>1.6</ClothMapScale>
+    <ClothPoseIndex>15</ClothPoseIndex>
+    <Color_Skin>145,200,165,255</Color_Skin>
+    <Color_Hair>195,195,195,255</Color_Hair>
+    <Color_Clothing1>80,15,15,255</Color_Clothing1>
+    <Color_Clothing2>140,60,15,255</Color_Clothing2>
+    <Color_Metal>255,102,0,255</Color_Metal>
+    <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+    <InfoCardBackground>BG15_Dark</InfoCardBackground>
+    <ModelPath>Gfx\HKB\Units\F_Female_Magnar_Body_Mesh_01.hkb</ModelPath>
+    <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+    <ModelScale>1.0000</ModelScale>
+    <TacticalModelScale>1.5000</TacticalModelScale>
+    <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+    <SoundPack>SoundPack_Generic_Female</SoundPack>
+    <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+    <Texture_Skin>Gfx\HKB\Units\Magnar_Skin_F_01.dds</Texture_Skin>
+    <Texture_Eyes>Gfx\Eyes\Blinks\Eyeblink_F6_red.dds</Texture_Eyes>
+    <EyeTexture>Gfx\Eyes\Blinks\Eyeblink_F6_red.dds</EyeTexture>
+    <UnitModelType>QuendarFemale</UnitModelType>
+  </UnitType>
+  <!-- **************************************************** -->
+  <!-- Sage -->
+  <!-- **************************************************** -->
+  <UnitType InternalName="Sage_Quendar_Nervari">
+    <DisplayName>Nervari Sage</DisplayName>
+    <RaceType>Race_Type_Quendar_Nervari</RaceType>
+    <CanBeDesigned>0</CanBeDesigned>
+    <Gender>Male</Gender>
+    <IsSovereign>0</IsSovereign>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <!-- Fix: This stat is never set in base game  -->
+      <UnitStat_IsMale>1</UnitStat_IsMale>
+      <!-- Background Unitstat Library values (compatibility only) -->
+      <UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+      <UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
+    <Equipment>F_Male_Quendar_Head_01</Equipment>
+    <Equipment>F_Male_Quendar_Horns_03</Equipment>
+    <Equipment>Fallen_Basic_Pants_ID2</Equipment>
+    <Equipment>Large_Sion_Boots_ID2</Equipment>
+    <Equipment>DarkWizardRobeID2</Equipment>
+    <!-- replaced animations -->
+    <AnimationPack>MerchantAnimationPack</AnimationPack>
+    <!-- ******************* -->
+    <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+    <ClothMapScale>1.6</ClothMapScale>
+    <ClothPoseIndex>15</ClothPoseIndex>
+    <Color_Skin>145,200,165,255</Color_Skin>
+    <Color_Hair>195,195,195,255</Color_Hair>
+    <Color_Clothing1>80,15,15,255</Color_Clothing1>
+    <Color_Clothing2>140,60,15,255</Color_Clothing2>
+    <Color_Metal>255,102,0,255</Color_Metal>
+    <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+    <InfoCardBackground>BG15_Dark</InfoCardBackground>
+    <ModelPath>Gfx\HKB\Units\F_Male_Magnar_Body_Mesh_01.hkb</ModelPath>
+    <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+    <ModelScale>1.0000</ModelScale>
+    <TacticalModelScale>1.5000</TacticalModelScale>
+    <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+    <SoundPack>SoundPack_Generic_Male</SoundPack>
+    <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+    <Texture_Skin>Gfx\HKB\Units\Magnar_Skin_M_01.dds</Texture_Skin>
+    <Texture_Eyes>Gfx\Eyes\Blinks\Eyeblink_m6_Lime.dds</Texture_Eyes>
+    <EyeTexture>Gfx\Eyes\Blinks\Eyeblink_m6_Lime.dds</EyeTexture>
+    <UnitModelType>QuendarMale</UnitModelType>
+  </UnitType>
+  <!-- **************************************************** -->
+  <!-- Shopkeeper -->
+  <!-- **************************************************** -->
+  <UnitType InternalName="Shopkeeper_Quendar_Nervari">
+    <DisplayName>Nervari Shopkeeper</DisplayName>
+    <RaceType>Race_Type_Quendar_Nervari</RaceType>
+    <CanBeDesigned>0</CanBeDesigned>
+    <Gender>Female</Gender>
+    <IsSovereign>0</IsSovereign>
+    <LevelMilestone InternalName="L1">
+      <Level>1</Level>
+      <!-- Fix: This stat is never set in base game  -->
+      <UnitStat_IsFemale>1</UnitStat_IsFemale>
+      <!-- Background Unitstat Library values (compatibility only) -->
+      <UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
+      <UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
+    </LevelMilestone>
+    <SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
+    <Equipment>F_Female_Quendar_Head_01</Equipment>
+    <Equipment>F_Male_Quendar_Horns_04</Equipment>
+    <Equipment>TightBoots_Light</Equipment>
+    <Equipment>Shortsleeve_Empire_Shirt_Female_ID1</Equipment>
+    <Equipment>Wraith_Overskirt_ID2_Flipped</Equipment>
+    <!-- replaced animations -->
+    <AnimationPack>MerchantAnimationPack</AnimationPack>
+    <!-- ******************* -->
+    <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+    <ClothMapScale>1.6</ClothMapScale>
+    <ClothPoseIndex>15</ClothPoseIndex>
+    <Color_Skin>145,200,165,255</Color_Skin>
+    <Color_Hair>195,195,195,255</Color_Hair>
+    <Color_Clothing1>80,15,15,255</Color_Clothing1>
+    <Color_Clothing2>140,60,15,255</Color_Clothing2>
+    <Color_Metal>255,102,0,255</Color_Metal>
+    <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+    <InfoCardBackground>BG15_Dark</InfoCardBackground>
+    <ModelPath>Gfx\HKB\Units\F_Female_Magnar_Body_Mesh_01.hkb</ModelPath>
+    <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+    <ModelScale>1.0000</ModelScale>
+    <TacticalModelScale>1.5000</TacticalModelScale>
+    <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+    <SoundPack>SoundPack_Generic_Female</SoundPack>
+    <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+    <Texture_Skin>Gfx\HKB\Units\Magnar_Skin_F_01.dds</Texture_Skin>
+    <Texture_Eyes>Gfx\Eyes\Blinks\Eyeblink_F6_red.dds</Texture_Eyes>
+    <EyeTexture>Gfx\Eyes\Blinks\Eyeblink_F6_red.dds</EyeTexture>
+    <UnitModelType>QuendarFemale</UnitModelType>
+  </UnitType>
+</UnitTypes>

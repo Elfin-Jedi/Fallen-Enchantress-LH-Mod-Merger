@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Treaties>
+
+	<Treaty InternalName = "JB_UnderhandDeal" Type = "Trade">
+        <DisplayName>Underhand Deal</DisplayName>
+        <Image>Action_Scroll.png</Image>
+        <Description>Both parties get a 10% bonus to their income per turn.</Description>
+        <TreatyValueDescription><![CDATA[[Player_1] will receive an additional [TreatyValue1WithUnits] and [Player_2] will receive an additional [TreatyValue2WithUnits]]]></TreatyValueDescription>
+        <Units>Gildar per Season</Units>
+        <Duration>-1</Duration>
+        <BasePerceivedValue>5</BasePerceivedValue>
+        <MinimumRelations><![CDATA[[RELATIONS_NEUTRAL]]]></MinimumRelations>
+        <Calculate InternalName = "IncomeBonus" ValueOwner="Player_1">
+            <Expression><![CDATA[0.1*[Income]]]></Expression>
+        </Calculate>
+        <!-- Any one of these prereqs can be fulfilled to unlock this treaty -->
+        <Prereq>
+            <Type>Tech</Type>
+            <Attribute>JB_Manipulation</Attribute>
+            <Value>0</Value>
+        </Prereq>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>50</AIPriority>
+            <AITradeToGetValue>50</AITradeToGetValue>
+            <AITradeOutValue>50</AITradeOutValue>
+        </AIData>
+    </Treaty>
+	
+</Treaties>
