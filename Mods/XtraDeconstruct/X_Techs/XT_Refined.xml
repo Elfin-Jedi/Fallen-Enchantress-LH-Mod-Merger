@@ -343,6 +343,49 @@
 			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
 		</AIData>
 	</TechDef>
+	<TechDef InternalName="Tech_X_Refined_Bootcamp">
+		<DisplayName>Refined Bootcamp</DisplayName>
+		<Description>Study this, and the units you train will gain 1 level.</Description>
+		<AdviceText>With this knowledge we are able to train much more powerful troops.</AdviceText>
+		<Image>Barracks_Medallion.png</Image>
+		<Color>182,7,3</Color>
+		<HotColor>255,48,0</HotColor>
+		<Cost>226</Cost>
+		<Rarity>100</Rarity>
+		<Category>Warfare</Category>
+		<Infinite>1</Infinite>
+		<AppearanceChance>100</AppearanceChance>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AllTrainedUnitsGainLevel</Attribute>
+			<Value>1</Value>
+			<Icon>UnitLevel.png</Icon>
+			<Provides>Recruited - Trained Units ::: +1 Level</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_TrainedUnitBonusLevels</StrVal>
+			<Value>1</Value>
+			<Icon>UnitLevel.png</Icon>
+			<Provides>Recruitment - Trained Units ::: +1 Level</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Icon>Spellbook_Icon.png</Icon>
+			<Provides>Tech ::: Can be researched multiple times</Provides>
+		</GameModifier>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Tech_X_Ingenious</Attribute>
+		</Prereq>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>3</AIPriority>
+			<AITradeToGetValue>75</AITradeToGetValue>
+			<AITradeOutValue>90</AITradeOutValue>
+			<AIAtWarMultiplier>1</AIAtWarMultiplier>
+			<AIEarlyBuildUpMultiplier>1</AIEarlyBuildUpMultiplier>
+		</AIData>
+	</TechDef>
 	<TechDef InternalName="Tech_X_Refined_Wargs">
 		<DisplayName>Refined Warg Riding</DisplayName>
 		<Description>Concentrated study of Warg Riding will reduce warg mortality on the battlefield. Essentially, this translates into less new wargs being needed when training troops.</Description>
