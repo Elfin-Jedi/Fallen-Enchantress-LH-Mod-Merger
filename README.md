@@ -12,7 +12,7 @@ Installation Instructions:
 
 You are done! Launch Game and test.
 
-Note: Custom factions need to use Deorchynesse Secrets faction strength. There are instructions for editing Cult Secret Scrolls (for custom sovereigns) in A_UserGuide in the Xtradeconstruct folder.
+Note: Custom factions need to use Deorcnysse Secrets faction strength. There are instructions for editing Cult Secret Scrolls (for custom sovereigns) in A_UserGuide in the Xtradeconstruct folder.
 
 To-do:
 
