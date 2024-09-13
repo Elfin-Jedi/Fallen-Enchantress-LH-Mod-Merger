@@ -1271,7 +1271,200 @@
 				<EffectDelay>0</EffectDelay>
 				<SnapToTerrain>1</SnapToTerrain>
 			</SpellDefEffect>
-		</SpellDef>	
+		</SpellDef>
+		<SpellDef InternalName="Spell_X_Mass_JB_Embolden_Army">
+			<DisplayName>[S] Embolden #Army</DisplayName>
+			<Description>Target units have a 50% chance to avoid the effects of Fear, Terror and Tame/Charm.
+			
+			See Tooltip. See WARNINGS.
+		
+		
+		
+			---------------------------------------------------
+			!WARNING!
+			Generally, Mass Army Spells do not stack with the Individual or the Mass Faction versions.
+		
+			Mass Army Spells disable the equivalent Mass Faction Spells (Spellbook).
+		
+			IF you want to re-enable a specific Mass Faction Spell, dispel the equivalent Mass Army Spell:
+			CTRL-K (Govern) > Enchantments > Dispel
+			---------------------------------------------------
+			
+			::: Incompatible w/ Embolden
+			::: Incompatible w/ Embolden #Faction
+		
+			::: Caster and Targets must be on the same tile</Description>
+			<Image>S_Courage_Painting.png</Image>
+			<IconFG>JB_Embolden_Icon.png</IconFG>
+			<AutoUnlock>1</AutoUnlock>
+			<CanStack>0</CanStack>
+			<PreventStackingWith>JB_Embolden</PreventStackingWith>
+			<UniqueSpellUnlock>Spell_Mass_JB_Embolden_Army</UniqueSpellUnlock>
+			<SpellBookSortCategory>X10</SpellBookSortCategory>
+			<SpellBookSortSubCategory>X10</SpellBookSortSubCategory>
+			<SpellType>Strategic</SpellType>
+			<SpellClass>Defensive</SpellClass>
+			<SpellSubClass>Buff</SpellSubClass>
+			<SpellTargetType>FriendlyUnit</SpellTargetType>
+			<UnitAppSpecifier>ApplyToAll</UnitAppSpecifier>
+			<IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+			<TargetUnitsCanBeStationed>1</TargetUnitsCanBeStationed>
+			<AlwaysPromptForCaster>1</AlwaysPromptForCaster>
+			<Range>0</Range>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_Prayers2</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionMagic</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+			<SpellResourceCost>
+				<Resource>JB_Faith</Resource>
+				<Amount>70</Amount>
+			</SpellResourceCost>
+			<SpellResourceCost>
+				<Resource>JB_Faith</Resource>
+				<PerTurn>1</PerTurn>
+				<Amount>7</Amount>
+			</SpellResourceCost>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockSpell</Attribute>
+				<StrVal>Spell_Mass_JB_Embolden_Faction</StrVal>
+				<Duration>-1</Duration>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ImmuneToFear</StrVal>
+				<Duration>-1</Duration>
+				<Value>0.5</Value>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_CannotBeCharmed</StrVal>
+				<Duration>-1</Duration>
+				<Value>0.5</Value>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+			<HitSoundFX>Spell_Courage_01</HitSoundFX>
+			<SpellDefEffect>
+				<EffectName>S_Courage_Particle</EffectName>
+				<LocalPosition>0,0,0</LocalPosition>
+				<EffectScale>0.75</EffectScale>
+				<EffectDelay>0</EffectDelay>
+				<SnapToTerrain>1</SnapToTerrain>
+			</SpellDefEffect>
+		</SpellDef>
+		<SpellDef InternalName="Spell_X_Mass_JB_Embolden_Faction">
+			<DisplayName>[S] Embolden #Faction</DisplayName>
+			<Description>Target units have a 50% chance to avoid the effects of Fear, Terror and Tame/Charm.
+			
+			See Tooltip. See WARNINGS.
+		
+		
+		
+			---------------------------------------------------
+			!WARNING!
+		
+			Mass Spells are memory intensive and may provoke a crash.
+		
+			Generally, Mass Faction Spells do not stack with Individual or Mass Army versions.
+		
+			Mass Faction Spells disable equivalent Mass Army Spells (Spellbook).
+			Mass Faction Spells disable equivalent Individual Spells (Spellbook).
+		
+			IF you want to re-enable a specific Individual or Mass Army Spell, dispel the equivalent Mass Faction Spell:
+			CTRL-K (Govern) > Enchantments > Dispel
+			---------------------------------------------------
+			
+			::: Incompatible w/ Embolden
+			::: Incompatible w/ Embolden #Army</Description>
+			<Image>S_Courage_Painting.png</Image>
+			<IconFG>JB_Embolden_Icon.png</IconFG>
+			<AutoUnlock>1</AutoUnlock>
+			<CanStack>0</CanStack>
+			<PreventStackingWith>JB_Embolden</PreventStackingWith>
+			<UniqueSpellUnlock>Spell_Mass_JB_Embolden_Faction</UniqueSpellUnlock>
+			<SpellBookSortCategory>X20</SpellBookSortCategory>
+			<SpellBookSortSubCategory>X20</SpellBookSortSubCategory>
+			<SpellType>Strategic</SpellType>
+			<SpellClass>Defensive</SpellClass>
+			<SpellSubClass>Buff</SpellSubClass>
+			<SpellTargetType>FriendlyUnit</SpellTargetType>
+			<UnitAppSpecifier>ApplyToAll</UnitAppSpecifier>
+			<IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+			<TargetUnitsCanBeStationed>1</TargetUnitsCanBeStationed>
+			<AlwaysPromptForCaster>1</AlwaysPromptForCaster>
+			<Range>0</Range>
+			<Radius>75</Radius>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_Prayers3</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>RestrictedAbilityBonusOption</Type>
+				<Attribute>JB_ReligionMagic</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+			<SpellResourceCost>
+				<Resource>JB_Faith</Resource>
+				<Amount>120</Amount>
+			</SpellResourceCost>
+			<SpellResourceCost>
+				<Resource>JB_Faith</Resource>
+				<PerTurn>1</PerTurn>
+				<Amount>12</Amount>
+			</SpellResourceCost>			
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockSpell</Attribute>
+				<StrVal>JB_Embolden</StrVal>
+				<Duration>-1</Duration>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockSpell</Attribute>
+				<StrVal>Spell_Mass_JB_Embolden_Army</StrVal>
+				<Duration>-1</Duration>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockSpell</Attribute>
+				<StrVal>Spell_Mass_JB_Embolden_Faction</StrVal>
+				<Duration>-1</Duration>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ImmuneToFear</StrVal>
+				<Duration>-1</Duration>
+				<Value>0.5</Value>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_CannotBeCharmed</StrVal>
+				<Duration>-1</Duration>
+				<Value>0.5</Value>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+			<HitSoundFX>Spell_Courage_01</HitSoundFX>
+			<SpellDefEffect>
+				<EffectName>S_Courage_Particle</EffectName>
+				<LocalPosition>0,0,0</LocalPosition>
+				<EffectScale>0.75</EffectScale>
+				<EffectDelay>0</EffectDelay>
+				<SnapToTerrain>1</SnapToTerrain>
+			</SpellDefEffect>
+		</SpellDef>
 		<SpellDef InternalName="JB_Heal_Priest">
 			<DisplayName>Heal</DisplayName>
 			<Description>Heals target unit by 18 (+1 per caster level).</Description>
@@ -5672,7 +5865,200 @@
 				<EffectDelay>0</EffectDelay>
 				<SnapToTerrain>1</SnapToTerrain>
 			</SpellDefEffect>
-		</SpellDef>	
+		</SpellDef>
+		<SpellDef InternalName="Spell_X_Mass_JB_Embolden_ReligionMagic_Army">
+			<DisplayName>[S] Embolden #Army</DisplayName>
+			<Description>Target units have a 50% chance to avoid the effects of Fear, Terror and Tame/Charm.
+			
+			See Tooltip. See WARNINGS.
+		
+		
+		
+			---------------------------------------------------
+			!WARNING!
+			Generally, Mass Army Spells do not stack with the Individual or the Mass Faction versions.
+		
+			Mass Army Spells disable the equivalent Mass Faction Spells (Spellbook).
+		
+			IF you want to re-enable a specific Mass Faction Spell, dispel the equivalent Mass Army Spell:
+			CTRL-K (Govern) > Enchantments > Dispel
+			---------------------------------------------------
+			
+			::: Incompatible w/ Embolden
+			::: Incompatible w/ Embolden #Faction
+		
+			::: Caster and Targets must be on the same tile</Description>
+			<Image>S_Courage_Painting.png</Image>
+			<IconFG>JB_Embolden_Icon.png</IconFG>
+			<AutoUnlock>1</AutoUnlock>
+			<CanStack>0</CanStack>
+			<PreventStackingWith>JB_Embolden_ReligionMagic</PreventStackingWith>
+			<UniqueSpellUnlock>Spell_Mass_JB_Embolden_ReligionMagic_Army</UniqueSpellUnlock>
+			<SpellBookSortCategory>X10</SpellBookSortCategory>
+			<SpellBookSortSubCategory>X10</SpellBookSortSubCategory>
+			<SpellType>Strategic</SpellType>
+			<SpellClass>Defensive</SpellClass>
+			<SpellSubClass>Buff</SpellSubClass>
+			<SpellTargetType>FriendlyUnit</SpellTargetType>
+			<UnitAppSpecifier>ApplyToAll</UnitAppSpecifier>
+			<IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+			<TargetUnitsCanBeStationed>1</TargetUnitsCanBeStationed>
+			<AlwaysPromptForCaster>1</AlwaysPromptForCaster>
+			<Range>0</Range>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_Prayers2</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionMagic</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+			<SpellResourceCost>
+				<Resource>Mana</Resource>
+				<Amount>70</Amount>
+			</SpellResourceCost>
+			<SpellResourceCost>
+				<Resource>Mana</Resource>
+				<PerTurn>1</PerTurn>
+				<Amount>7</Amount>
+			</SpellResourceCost>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockSpell</Attribute>
+				<StrVal>Spell_Mass_JB_Embolden_ReligionMagic_Faction</StrVal>
+				<Duration>-1</Duration>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ImmuneToFear</StrVal>
+				<Duration>-1</Duration>
+				<Value>0.5</Value>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_CannotBeCharmed</StrVal>
+				<Duration>-1</Duration>
+				<Value>0.5</Value>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+			<HitSoundFX>Spell_Courage_01</HitSoundFX>
+			<SpellDefEffect>
+				<EffectName>S_Courage_Particle</EffectName>
+				<LocalPosition>0,0,0</LocalPosition>
+				<EffectScale>0.75</EffectScale>
+				<EffectDelay>0</EffectDelay>
+				<SnapToTerrain>1</SnapToTerrain>
+			</SpellDefEffect>
+		</SpellDef>
+		<SpellDef InternalName="Spell_X_Mass_JB_Embolden_ReligionMagic_Faction">
+			<DisplayName>[S] Embolden #Faction</DisplayName>
+			<Description>Target units have a 50% chance to avoid the effects of Fear, Terror and Tame/Charm.
+			
+			See Tooltip. See WARNINGS.
+		
+		
+		
+			---------------------------------------------------
+			!WARNING!
+		
+			Mass Spells are memory intensive and may provoke a crash.
+		
+			Generally, Mass Faction Spells do not stack with Individual or Mass Army versions.
+		
+			Mass Faction Spells disable equivalent Mass Army Spells (Spellbook).
+			Mass Faction Spells disable equivalent Individual Spells (Spellbook).
+		
+			IF you want to re-enable a specific Individual or Mass Army Spell, dispel the equivalent Mass Faction Spell:
+			CTRL-K (Govern) > Enchantments > Dispel
+			---------------------------------------------------
+			
+			::: Incompatible w/ Embolden
+			::: Incompatible w/ Embolden #Army</Description>
+			<Image>S_Courage_Painting.png</Image>
+			<IconFG>JB_Embolden_Icon.png</IconFG>
+			<AutoUnlock>1</AutoUnlock>
+			<CanStack>0</CanStack>
+			<PreventStackingWith>JB_Embolden_ReligionMagic</PreventStackingWith>
+			<UniqueSpellUnlock>Spell_Mass_JB_Embolden_ReligionMagic_Faction</UniqueSpellUnlock>
+			<SpellBookSortCategory>X20</SpellBookSortCategory>
+			<SpellBookSortSubCategory>X20</SpellBookSortSubCategory>
+			<SpellType>Strategic</SpellType>
+			<SpellClass>Defensive</SpellClass>
+			<SpellSubClass>Buff</SpellSubClass>
+			<SpellTargetType>FriendlyUnit</SpellTargetType>
+			<UnitAppSpecifier>ApplyToAll</UnitAppSpecifier>
+			<IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+			<TargetUnitsCanBeStationed>1</TargetUnitsCanBeStationed>
+			<AlwaysPromptForCaster>1</AlwaysPromptForCaster>
+			<Range>0</Range>
+			<Radius>75</Radius>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_Prayers3</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_ReligionMagic</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+			<SpellResourceCost>
+				<Resource>Mana</Resource>
+				<Amount>120</Amount>
+			</SpellResourceCost>
+			<SpellResourceCost>
+				<Resource>Mana</Resource>
+				<PerTurn>1</PerTurn>
+				<Amount>12</Amount>
+			</SpellResourceCost>			
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockSpell</Attribute>
+				<StrVal>JB_Embolden_ReligionMagic</StrVal>
+				<Duration>-1</Duration>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockSpell</Attribute>
+				<StrVal>Spell_Mass_JB_Embolden_ReligionMagic_Army</StrVal>
+				<Duration>-1</Duration>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockSpell</Attribute>
+				<StrVal>Spell_Mass_JB_Embolden_ReligionMagic_Faction</StrVal>
+				<Duration>-1</Duration>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ImmuneToFear</StrVal>
+				<Duration>-1</Duration>
+				<Value>0.5</Value>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_CannotBeCharmed</StrVal>
+				<Duration>-1</Duration>
+				<Value>0.5</Value>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+			<HitSoundFX>Spell_Courage_01</HitSoundFX>
+			<SpellDefEffect>
+				<EffectName>S_Courage_Particle</EffectName>
+				<LocalPosition>0,0,0</LocalPosition>
+				<EffectScale>0.75</EffectScale>
+				<EffectDelay>0</EffectDelay>
+				<SnapToTerrain>1</SnapToTerrain>
+			</SpellDefEffect>
+		</SpellDef>		
 		<SpellDef InternalName="JB_Heal_Priest_ReligionMagic">
 			<DisplayName>Heal</DisplayName>
 			<Description>Heals target unit by 18 (+1 per caster level).</Description>

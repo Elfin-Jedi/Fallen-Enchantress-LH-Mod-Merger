@@ -2285,6 +2285,209 @@
 				<SnapToTerrain>1</SnapToTerrain>
 			</SpellDefEffect>		
 		</SpellDef>
+		<SpellDef InternalName="Spell_X_Mass_JB_Shroud_Army">
+			<DisplayName>[S] Shroud #Army</DisplayName>
+			<Description>Target champions receive +5 dodge (plus 2 per shadow power) and an additional +10 dodge vs ranged.
+			
+			See Tooltip. See WARNINGS.
+		
+		
+		
+			---------------------------------------------------
+			!WARNING!
+			Generally, Mass Army Spells do not stack with the Individual or the Mass Faction versions.
+		
+			Mass Army Spells disable the equivalent Mass Faction Spells (Spellbook).
+		
+			IF you want to re-enable a specific Mass Faction Spell, dispel the equivalent Mass Army Spell:
+			CTRL-K (Govern) > Enchantments > Dispel
+			---------------------------------------------------
+			
+			::: Incompatible w/ Shroud
+			::: Incompatible w/ Shroud #Faction
+		
+			::: Caster and Targets must be on the same tile</Description>
+			<Image>JB_CloakShadows_Painting.png</Image>
+			<IconFG>JB_CloakShadows_Icon.png</IconFG>
+			<IconBG>T_Stoneskin_Icon_BG.png</IconBG>
+			<IconColor>50,15,183</IconColor>
+			<AutoUnlock>1</AutoUnlock>
+			<CanStack>0</CanStack>
+			<PreventStackingWith>JB_Shroud</PreventStackingWith>
+			<UniqueSpellUnlock>Spell_X_Mass_JB_Shroud_Army</UniqueSpellUnlock>
+			<SpellBookSortCategory>X10</SpellBookSortCategory>
+			<SpellBookSortSubCategory>X10</SpellBookSortSubCategory>
+			<SpellType>Strategic</SpellType>
+			<SpellClass>Defensive</SpellClass>
+			<SpellSubClass>Buff</SpellSubClass>
+			<SpellTargetType>FriendlyChampionOrSov</SpellTargetType>
+			<IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+			<TargetUnitsCanBeStationed>1</TargetUnitsCanBeStationed>
+			<AlwaysPromptForCaster>1</AlwaysPromptForCaster>
+			<Range>0</Range>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_SpellbookShadow4</Attribute>
+			</Prereq>
+			<SpellResourceCost>
+				<Resource>Mana</Resource>
+				<Amount>100</Amount>
+			</SpellResourceCost>
+			<SpellResourceCost>
+				<Resource>Mana</Resource>
+				<PerTurn>1</PerTurn>
+				<Amount>7</Amount>
+			</SpellResourceCost>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockSpell</Attribute>
+				<StrVal>Spell_X_Mass_JB_Shroud_Faction</StrVal>
+				<Duration>-1</Duration>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Dodge</StrVal>
+				<Duration>-1</Duration>
+				<Effect>JB_E_CloakShadows2_Particle</Effect>
+				<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[UnitStat_JB_ShadowPower] - 1]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc2">
+					<Expression><![CDATA[[Calc] * 2]]></Expression>
+				</Calculate>				
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc2] + 5]]></Expression>
+				</Calculate>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_DodgeAgainstRanged</StrVal>
+				<Duration>-1</Duration>
+				<Value>10</Value>
+			</GameModifier>		
+			<AIData AIPersonality="AI_General">
+				<AIPriority>10</AIPriority>
+			</AIData>
+			<HitSoundFX>Spell_DarkEnchan_0t2</HitSoundFX>
+			<SpellDefEffect>
+				<EffectName>JB_CloakShadows_Particle</EffectName>
+				<LocalPosition>0,20,0</LocalPosition>
+				<EffectScale>0.7</EffectScale>
+				<EffectDelay>0</EffectDelay>
+				<SnapToTerrain>1</SnapToTerrain>
+			</SpellDefEffect>
+		</SpellDef>
+		<SpellDef InternalName="Spell_X_Mass_JB_Shroud_Faction">
+			<DisplayName>[S] Shroud #Faction</DisplayName>
+			<Description>Target champions receive +5 dodge (plus 2 per shadow power) and an additional +10 dodge vs ranged.
+			
+			See Tooltip. See WARNINGS.
+		
+		
+		
+			---------------------------------------------------
+			!WARNING!
+		
+			Mass Spells are memory intensive and may provoke a crash.
+		
+			Generally, Mass Faction Spells do not stack with Individual or Mass Army versions.
+		
+			Mass Faction Spells disable equivalent Mass Army Spells (Spellbook).
+			Mass Faction Spells disable equivalent Individual Spells (Spellbook).
+		
+			IF you want to re-enable a specific Individual or Mass Army Spell, dispel the equivalent Mass Faction Spell:
+			CTRL-K (Govern) > Enchantments > Dispel
+			---------------------------------------------------
+			
+			::: Incompatible w/ Shroud
+			::: Incompatible w/ Shroud #Army</Description>
+			<Image>JB_CloakShadows_Painting.png</Image>
+			<IconFG>JB_CloakShadows_Icon.png</IconFG>
+			<IconBG>T_Stoneskin_Icon_BG.png</IconBG>
+			<IconColor>50,15,183</IconColor>
+			<AutoUnlock>1</AutoUnlock>
+			<CanStack>0</CanStack>
+			<PreventStackingWith>JB_Shroud</PreventStackingWith>
+			<UniqueSpellUnlock>Spell_X_Mass_JB_Shroud_Faction</UniqueSpellUnlock>
+			<SpellBookSortCategory>X20</SpellBookSortCategory>
+			<SpellBookSortSubCategory>X20</SpellBookSortSubCategory>
+			<SpellType>Strategic</SpellType>
+			<SpellClass>Defensive</SpellClass>
+			<SpellSubClass>Buff</SpellSubClass>
+			<SpellTargetType>FriendlyChampionOrSov</SpellTargetType>
+			<IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+			<TargetUnitsCanBeStationed>1</TargetUnitsCanBeStationed>
+			<AlwaysPromptForCaster>1</AlwaysPromptForCaster>
+			<Range>0</Range>
+			<Radius>75</Radius>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_SpellbookShadow5</Attribute>
+			</Prereq>
+			<SpellResourceCost>
+				<Resource>Mana</Resource>
+				<Amount>175</Amount>
+			</SpellResourceCost>
+			<SpellResourceCost>
+				<Resource>Mana</Resource>
+				<PerTurn>1</PerTurn>
+				<Amount>12</Amount>
+			</SpellResourceCost>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockSpell</Attribute>
+				<StrVal>JB_Shroud</StrVal>
+				<Duration>-1</Duration>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockSpell</Attribute>
+				<StrVal>Spell_X_Mass_JB_Shroud_Army</StrVal>
+				<Duration>-1</Duration>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>UnlockSpell</Attribute>
+				<StrVal>Spell_X_Mass_JB_Shroud_Faction</StrVal>
+				<Duration>-1</Duration>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Dodge</StrVal>
+				<Duration>-1</Duration>
+				<Effect>JB_E_CloakShadows2_Particle</Effect>
+				<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+					<Expression><![CDATA[[UnitStat_JB_ShadowPower] - 1]]></Expression>
+				</Calculate>
+				<Calculate InternalName="Calc2">
+					<Expression><![CDATA[[Calc] * 2]]></Expression>
+				</Calculate>				
+				<Calculate InternalName="Value">
+					<Expression><![CDATA[[Calc2] + 5]]></Expression>
+				</Calculate>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_DodgeAgainstRanged</StrVal>
+				<Duration>-1</Duration>
+				<Value>10</Value>
+			</GameModifier>		
+			<AIData AIPersonality="AI_General">
+				<AIPriority>10</AIPriority>
+			</AIData>
+			<HitSoundFX>Spell_DarkEnchan_0t2</HitSoundFX>
+			<SpellDefEffect>
+				<EffectName>JB_CloakShadows_Particle</EffectName>
+				<LocalPosition>0,20,0</LocalPosition>
+				<EffectScale>0.7</EffectScale>
+				<EffectDelay>0</EffectDelay>
+				<SnapToTerrain>1</SnapToTerrain>
+			</SpellDefEffect>
+		</SpellDef>
 		<SpellDef InternalName="JB_ObscuringDarkness">
 			<DisplayName>Obscuring Darkness</DisplayName>
 			<Description>Summons a black mist that surrounds enemy units obscurring their vision, causing -30% Accuracy but making them harder to hit (+15% dodge and a further +15% vs. ranged)</Description>
