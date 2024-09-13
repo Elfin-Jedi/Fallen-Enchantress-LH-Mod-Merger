@@ -225,6 +225,33 @@
 			</AIData>
 		</AbilityBonusOption>
 	</AbilityBonus>
+	<AbilityBonus InternalName="MisogynyAbility">
+		<AbilityBonusType>Champion_Talent</AbilityBonusType>
+		<AbilityBonusOption InternalName="Misogyny">
+			<DisplayName>Misogyny</DisplayName>
+			<Description>Stats ::: +20 Critical Chance vs Females</Description>
+			<Icon>DLC05_Ability_Misandry_Icon.png</Icon>
+			<GameModifier>
+				<Provides>STATS</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_ChanceToCrit</StrVal>
+				<StrVal2>UnitStat_IsFemale</StrVal2>
+				<Value>20</Value>
+				<BonusValue>0.99</BonusValue>
+				<vsHigher>1</vsHigher>
+				<Provides>::: +20 Critical Chance vs Females</Provides>
+			</GameModifier>
+			<IsCombatAbility>1</IsCombatAbility>
+			<Cost>1</Cost>
+			<Type>Aggressive</Type>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>5</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
 	<AbilityBonus InternalName="TreasureHunterAbility">
 		<AbilityBonusType>Champion_Talent</AbilityBonusType>
 		<AbilityBonusOption InternalName="TreasureHunter">
