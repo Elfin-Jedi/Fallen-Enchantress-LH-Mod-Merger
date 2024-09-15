@@ -41,6 +41,16 @@
                 <StrVal>CrushingBlow</StrVal>
                 <Provides>Crushing Blow- +100% Attack, but you lose your next action</Provides>
             </GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_X_IsCommanderHammer</StrVal>
+				<Value>5</Value>
+				<Provides>::: Commander Hammer :::
+				::: +5 Initiative
+				::: +1 Counterattack per Action
+				::: Applied in Tactical if Commander</Provides>
+			</GameModifier>
         <Likelihood>400</Likelihood>
         <RarityDisplay>Common</RarityDisplay>
         <HeroOnly>1</HeroOnly>
@@ -116,19 +126,29 @@
             <StrVal>UnitStat_CombatSpeed</StrVal>
             <Value>-2</Value>
         </GameModifier>
-            <GameModifier>
-                <ModType>Unit</ModType>
-                <Attribute>AdjustUnitStat</Attribute>
-                <StrVal>UnitStat_BashChance</StrVal>
-                <Value>125</Value>
-                <Provides>Improved Bash- Has a chance equal to 125% of the damage done to knocking the victim prone</Provides>
-            </GameModifier>
-            <GameModifier>
-                <ModType>Unit</ModType>
-                <Attribute>UnlockCombatAbility</Attribute>
-                <StrVal>CrushingBlow</StrVal>
-                <Provides>Crushing Blow- +100% Attack, but you lose your next action</Provides>
-            </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_BashChance</StrVal>
+            <Value>125</Value>
+            <Provides>Improved Bash- Has a chance equal to 125% of the damage done to knocking the victim prone</Provides>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>UnlockCombatAbility</Attribute>
+            <StrVal>CrushingBlow</StrVal>
+            <Provides>Crushing Blow- +100% Attack, but you lose your next action</Provides>
+        </GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_IsCommanderHammer</StrVal>
+			<Value>5</Value>
+			<Provides>::: Commander Hammer :::
+			::: +5 Initiative
+			::: +1 Counterattack per Action
+			::: Applied in Tactical if Commander</Provides>
+		</GameModifier>
         <Likelihood>400</Likelihood>
         <RarityDisplay>Common</RarityDisplay>
         <HeroOnly>1</HeroOnly>
@@ -391,6 +411,16 @@
             <Type>Tech</Type>
             <Attribute>Blacksmithing</Attribute>
         </Prereq>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_IsNinjaSword</StrVal>
+			<Value>1</Value>
+			<Provides>::: Ninja Sword :::
+			::: +1 Initiative
+			::: +10% ATK
+			::: Applied in Tactical if Ninja</Provides>
+		</GameModifier>
         <AIData AIPersonality="AI_General">
             <AIPrefType>AIPrefType_CUTTING</AIPrefType>
             <AIPriority>240</AIPriority>
@@ -488,6 +518,16 @@
             <Type>Tech</Type>
             <Attribute>Blacksmithing</Attribute>
         </Prereq>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_IsNinjaSword</StrVal>
+			<Value>1</Value>
+			<Provides>::: Ninja Sword :::
+			::: +1 Initiative
+			::: +10% ATK
+			::: Applied in Tactical if Ninja</Provides>
+		</GameModifier>
         <AIData AIPersonality="AI_General">
             <AIPrefType>AIPrefType_CUTTING</AIPrefType>
             <AIPriority>240</AIPriority>
@@ -559,13 +599,23 @@
             <StrVal>UnitStat_CombatSpeed</StrVal>
             <Value>3</Value>
         </GameModifier>
-            <GameModifier>
-                <ModType>Unit</ModType>
-                <Attribute>AdjustUnitStat</Attribute>
-                <StrVal>UnitStat_MaxCounterAttack</StrVal>
-                <Value>1</Value>
-                <Provides>+1 Counterattack per round</Provides>
-            </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_MaxCounterAttack</StrVal>
+            <Value>1</Value>
+            <Provides>+1 Counterattack per round</Provides>
+        </GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_IsNinjaSword</StrVal>
+			<Value>1</Value>
+			<Provides>::: Ninja Sword :::
+			::: +1 Initiative
+			::: +10% ATK
+			::: Applied in Tactical if Ninja</Provides>
+		</GameModifier>
         <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
         <Likelihood>200</Likelihood>
         <RarityDisplay>Uncommon</RarityDisplay>
@@ -668,6 +718,16 @@
             <Type>Tech</Type>
             <Attribute>Blacksmithing</Attribute>
         </Prereq>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_IsNinjaSword</StrVal>
+			<Value>1</Value>
+			<Provides>::: Ninja Sword :::
+			::: +1 Initiative
+			::: +10% ATK
+			::: Applied in Tactical if Ninja</Provides>
+		</GameModifier>
         <AIData AIPersonality="AI_General">
             <AIPrefType>AIPrefType_CUTTING</AIPrefType>
             <AIPriority>240</AIPriority>
