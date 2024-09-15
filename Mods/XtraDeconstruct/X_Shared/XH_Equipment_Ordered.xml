@@ -5735,6 +5735,268 @@
 		</AIData>
 		<ArtDef>ArtDef_X_Idol_WindAir_Accessory</ArtDef>
 	</GameItemType>
+	<GameItemType InternalName="Accessory_X_Idol_Death">
+		<DisplayName>Diabolist Idol</DisplayName>
+		<Description>Diabolist Idol.</Description>
+		<Type>Accessory</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>250</ShopValue>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>Diabolist Idol.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>RESISTANCE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ResistPoison</StrVal>
+			<Value>10</Value>
+			<Provides>::: +10% Death\Poison</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ResistLife</StrVal>
+			<Value>-10</Value>
+			<Provides>::: -10% Life</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>STRATEGIC SPELLS</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_Idol_Death</StrVal>
+			<Provides>::: Diabolist Idol :::
+			::: +1 Death Power
+			::: Must be cast by Sovereign
+			::: Only works once</Provides>
+			<Value>1</Value>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>1</IsAvailableForSovereignCustomization>
+		<CustomizationPointCost>2</CustomizationPointCost>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Nil</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<IsUsable>0</IsUsable>
+		<UsableInBattle>0</UsableInBattle>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>411</AIPriority>
+		</AIData>
+		<ArtDef>ArtDef_X_Idol_Death_Accessory</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Accessory_X_Idol_Life">
+		<DisplayName>Hedonist Idol</DisplayName>
+		<Description>Hedonist Idol.</Description>
+		<Type>Accessory</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>250</ShopValue>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>Hedonist Idol.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>RESISTANCE</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ResistLife</StrVal>
+			<Value>10</Value>
+			<Provides>::: +10% Life</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ResistPoison</StrVal>
+			<Value>-10</Value>
+			<Provides>::: -10% Death\Poison</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>STRATEGIC SPELLS</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_Idol_Life</StrVal>
+			<Provides>::: Hedonist Idol :::
+			::: +1 Life Power
+			::: Must be cast by Sovereign
+			::: Only works once</Provides>
+			<Value>1</Value>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>1</IsAvailableForSovereignCustomization>
+		<CustomizationPointCost>2</CustomizationPointCost>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Nil</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<IsUsable>0</IsUsable>
+		<UsableInBattle>0</UsableInBattle>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>411</AIPriority>
+		</AIData>
+		<ArtDef>ArtDef_X_Idol_Life_Accessory</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Accessory_X_Idol_Battle">
+		<DisplayName>Veteran Idol</DisplayName>
+		<Description>Veteran Idol.</Description>
+		<Type>Accessory</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>250</ShopValue>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>Veteran Idol.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>STRATEGIC SPELLS</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_Idol_Battle</StrVal>
+			<Provides>::: Veteran Idol :::
+			::: +1 Battle Power
+			::: Must be cast by Sovereign
+			::: Only works once</Provides>
+			<Value>1</Value>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>1</IsAvailableForSovereignCustomization>
+		<CustomizationPointCost>2</CustomizationPointCost>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Nil</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<IsUsable>0</IsUsable>
+		<UsableInBattle>0</UsableInBattle>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>411</AIPriority>
+		</AIData>
+		<ArtDef>ArtDef_X_Idol_MagmaFire_Accessory</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Accessory_X_Idol_Beast">
+		<DisplayName>Feral Idol</DisplayName>
+		<Description>Feral Idol.</Description>
+		<Type>Accessory</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>250</ShopValue>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>Feral Idol.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>STRATEGIC SPELLS</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_Idol_Beast</StrVal>
+			<Provides>::: Feral Idol :::
+			::: +1 Beast Power
+			::: Must be cast by Sovereign
+			::: Only works once</Provides>
+			<Value>1</Value>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>1</IsAvailableForSovereignCustomization>
+		<CustomizationPointCost>2</CustomizationPointCost>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Nil</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<IsUsable>0</IsUsable>
+		<UsableInBattle>0</UsableInBattle>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>411</AIPriority>
+		</AIData>
+		<ArtDef>ArtDef_X_Idol_WindAir_Accessory</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Accessory_X_Idol_Nature">
+		<DisplayName>Druid Idol</DisplayName>
+		<Description>Druid Idol.</Description>
+		<Type>Accessory</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>250</ShopValue>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>Druid Idol.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>STRATEGIC SPELLS</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_Idol_Nature</StrVal>
+			<Provides>::: Druid Idol :::
+			::: +1 Nature Power
+			::: Must be cast by Sovereign
+			::: Only works once</Provides>
+			<Value>1</Value>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>1</IsAvailableForSovereignCustomization>
+		<CustomizationPointCost>2</CustomizationPointCost>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Nil</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<IsUsable>0</IsUsable>
+		<UsableInBattle>0</UsableInBattle>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>411</AIPriority>
+		</AIData>
+		<ArtDef>ArtDef_X_Idol_ArgilEarth_Accessory</ArtDef>
+	</GameItemType>
+	<GameItemType InternalName="Accessory_X_Idol_Shadow">
+		<DisplayName>Shadowcaster Idol</DisplayName>
+		<Description>Shadowcaster Idol.</Description>
+		<Type>Accessory</Type>
+		<CanBeEquipped>1</CanBeEquipped>
+		<ShopValue>250</ShopValue>
+		<GameModifier>
+			<Provides>ABSTRACT</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>Shadowcaster Idol.</Provides>
+		</GameModifier>
+		<GameModifier>
+			<Provides>STRATEGIC SPELLS</Provides>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_X_Idol_Shadow</StrVal>
+			<Provides>::: Shadowcaster Idol :::
+			::: +1 Shadow Power
+			::: Must be cast by Sovereign
+			::: Only works once</Provides>
+			<Value>1</Value>
+		</GameModifier>
+		<IsAvailableForSovereignCustomization>1</IsAvailableForSovereignCustomization>
+		<CustomizationPointCost>2</CustomizationPointCost>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Nil</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<IsUsable>0</IsUsable>
+		<UsableInBattle>0</UsableInBattle>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>411</AIPriority>
+		</AIData>
+		<ArtDef>ArtDef_X_Idol_RainWater_Accessory</ArtDef>
+	</GameItemType>
 			<!--MANDIBLES-->
 	<GameItemType InternalName="Accessory_X_AirMandibles">
 		<DisplayName>Air Shrill Mandibles</DisplayName>
