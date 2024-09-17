@@ -7338,6 +7338,747 @@
 		</AIData>
 		<ArtDef>Art_WaterTemple</ArtDef>
 	</ImprovementType>
+	<ImprovementType InternalName="JB_BattleAltar_Resoln">
+		<DisplayName>Battle Altar #W</DisplayName>
+		<Description>A Battle Altar can be built on a Battlefield of Legend to amplify Battle spells and provide Mana every season.</Description>
+		<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+		<RequiresResource>1</RequiresResource>
+		<SupportedResourceType>JB_BattleShard</SupportedResourceType>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<UpgradesToImprovement>JB_BattleShrine_Resoln</UpgradesToImprovement>
+		<UpgradeTier>1</UpgradeTier>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Binding</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Shard_Harvesting</Attribute>
+		</Prereq>
+		<LaborToBuild>80</LaborToBuild>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Mana</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Mana</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>JB_BattleMagic</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Battle Power</Provides>
+			<UpgradeComparisonID>2</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_UnitStat_JB_BattlePower</StrVal>
+				<Value>100</Value>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>LimitedUnitCap</Attribute>
+				<StrVal>JB_StoneWarrior_BG_Summon</StrVal>
+				<Value>1</Value>
+				<Provides>Summons a Stone Guardian</Provides>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>15</AIPriority>
+				<AITag>Shards</AITag>
+			</AIData>
+			<ArtDef>JB_Art_BattleShrine</ArtDef>
+		</ImprovementType>
+		<ImprovementType InternalName="JB_BattleShrine_Adepts">
+			<DisplayName>Battle Shrine #W</DisplayName>
+			<Description>Battle Shrines upgrade from Battle Altars. They amplify Battle spells, provide additional Mana every Season, and provide a bonus to the experience earned by your units.</Description>
+			<SpecialBuildingType>Shard</SpecialBuildingType>
+			<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+			<RequiresCity>0</RequiresCity>
+			<RequiresResource>1</RequiresResource>
+			<SupportedResourceType>JB_BattleShard</SupportedResourceType>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<UpgradesToImprovement>JB_BattleTemple_Resoln</UpgradesToImprovement>
+			<UpgradeTier>2</UpgradeTier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>Binding</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Immortal_Codex</Attribute>
+			</Prereq>
+			<LaborToBuild>179</LaborToBuild>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Mana</Attribute>
+				<Value>2</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+2 Mana</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_BattleMagic</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Battle Power</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_UnitStat_JB_BattlePower</StrVal>
+				<Value>100</Value>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_UnitStat_ExpBonus</StrVal>
+				<Value>5</Value>
+				<Provides>+5% Experience bonus for all your faction's units</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>LimitedUnitCap</Attribute>
+				<StrVal>JB_EtherialChampion_BG_Summon</StrVal>
+				<Value>1</Value>
+				<Provides>Summons an Etherial Champion</Provides>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>25</AIPriority>
+				<AITag>Shards</AITag>
+			</AIData>
+			<ArtDef>JB_Art_BattleShrine</ArtDef>
+		</ImprovementType>
+		<ImprovementType InternalName="JB_BattleTemple_Resoln">
+			<DisplayName>Battle Temple #W</DisplayName>
+			<Description>Battle Temples upgrade from Battle Shrines. They amplify Battle spells, provide additional Mana every Season, and provide a bonus to the experience earned by your units.</Description>
+			<SpecialBuildingType>Shard</SpecialBuildingType>
+			<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+			<RequiresCity>0</RequiresCity>
+			<RequiresResource>1</RequiresResource>
+			<SupportedResourceType>JB_BattleShard</SupportedResourceType>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<UpgradeTier>3</UpgradeTier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>Binding</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Ereogs_Journal</Attribute>
+			</Prereq>
+			<LaborToBuild>376</LaborToBuild>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Mana</Attribute>
+				<Value>3</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+3 Mana</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_BattleMagic</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Battle Power</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_UnitStat_JB_BattlePower</StrVal>
+				<Value>100</Value>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_UnitStat_ExpBonus</StrVal>
+				<Value>5</Value>
+				<Provides>+5% Experience bonus for all your faction's units</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>LimitedUnitCap</Attribute>
+				<StrVal>JB_WarGolem_BG_Summon</StrVal>
+				<Value>1</Value>
+				<Provides>Summons a War Golem</Provides>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>25</AIPriority>
+				<AITag>Shards</AITag>
+			</AIData>
+			<ArtDef>JB_Art_BattleShrine</ArtDef>
+		</ImprovementType>
+		<ImprovementType InternalName="JB_BeastAltar_Resoln">
+			<DisplayName>Beast Altar #W</DisplayName>
+			<Description>A Beast Altar can be built on a Herdstone to amplify Beast power and provide Mana every season.</Description>
+			<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+			<RequiresResource>1</RequiresResource>
+			<SupportedResourceType>JB_BeastShard</SupportedResourceType>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<UpgradesToImprovement>JB_BeastShrine_Resoln</UpgradesToImprovement>
+			<UpgradeTier>1</UpgradeTier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>Binding</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Shard_Harvesting</Attribute>
+			</Prereq>
+			<LaborToBuild>80</LaborToBuild>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Mana</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Mana</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_BeastMagic</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Beast Power</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_UnitStat_JB_BeastPower</StrVal>
+				<Value>100</Value>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>LimitedUnitCap</Attribute>
+				<StrVal>JB_WildBoar_BG_Summon</StrVal>
+				<Value>1</Value>
+				<Provides>Summons a Wild Boar</Provides>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>15</AIPriority>
+				<AITag>Shards</AITag>
+			</AIData>
+			<ArtDef>JB_Art_BeastShrine</ArtDef>
+		</ImprovementType>
+		<ImprovementType InternalName="JB_BeastShrine_Resoln">
+			<DisplayName>Beast Shrine #W</DisplayName>
+			<Description>Beast Shrines upgrade from Beast Altars. They amplify Beast spells, provide additional Mana every Season, and increase the Hit Points of your units.</Description>
+			<SpecialBuildingType>Shard</SpecialBuildingType>
+			<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+			<RequiresCity>0</RequiresCity>
+			<RequiresResource>1</RequiresResource>
+			<SupportedResourceType>JB_BeastShard</SupportedResourceType>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<UpgradesToImprovement>JB_BeastTemple_Resoln</UpgradesToImprovement>
+			<UpgradeTier>2</UpgradeTier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>Binding</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Immortal_Codex</Attribute>
+			</Prereq>
+			<LaborToBuild>179</LaborToBuild>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Mana</Attribute>
+				<Value>2</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+2 Mana</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_BeastMagic</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Beast Power</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_UnitStat_JB_BeastPower</StrVal>
+				<Value>100</Value>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_UnitStat_HitPoints</StrVal>
+				<Value>5</Value>
+				<Provides>+5% Hit Points for your faction</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>LimitedUnitCap</Attribute>
+				<StrVal>CaveBear_BG_Summon</StrVal>
+				<Value>1</Value>
+				<Provides>Summons a Cave Bear</Provides>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>25</AIPriority>
+				<AITag>Shards</AITag>
+			</AIData>
+			<ArtDef>JB_Art_BeastShrine</ArtDef>
+		</ImprovementType>
+		<ImprovementType InternalName="JB_BeastTemple_Resoln">
+			<DisplayName>Beast Temple #W</DisplayName>
+			<Description>Beast Temples upgrade from Beast Shrines. They amplify Beast spells, provide additional Mana every Season, and increase the Hit Points of your units.</Description>
+			<SpecialBuildingType>Shard</SpecialBuildingType>
+			<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+			<RequiresCity>0</RequiresCity>
+			<RequiresResource>1</RequiresResource>
+			<SupportedResourceType>JB_BeastShard</SupportedResourceType>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<UpgradeTier>3</UpgradeTier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>Binding</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Ereogs_Journal</Attribute>
+			</Prereq>
+			<LaborToBuild>376</LaborToBuild>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Mana</Attribute>
+				<Value>2</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+2 Mana</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_BeastMagic</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Beast Power</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_UnitStat_JB_BeastPower</StrVal>
+				<Value>100</Value>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_UnitStat_HitPoints</StrVal>
+				<Value>5</Value>
+				<Provides>+5% Hit Points for your faction</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>LimitedUnitCap</Attribute>
+				<StrVal>JB_RogueHergon_Male_BG_Summon</StrVal>
+				<Value>1</Value>
+				<Provides>Summons a Rogue Hergon</Provides>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>25</AIPriority>
+				<AITag>Shards</AITag>
+			</AIData>
+			<ArtDef>JB_Art_BeastShrine</ArtDef>
+		</ImprovementType>
+		<ImprovementType InternalName="JB_NatureAltar_Resoln">
+			<DisplayName>Nature Altar #W</DisplayName>
+			<Description>A Nature Altar can be built on a Scenic View to amplify Nature spells and provide Mana every season.</Description>
+			<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+			<RequiresResource>1</RequiresResource>
+			<SupportedResourceType>JB_NatureShard</SupportedResourceType>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<UpgradesToImprovement>JB_NatureShrine_Resoln</UpgradesToImprovement>
+			<UpgradeTier>1</UpgradeTier>
+			<Prereq>
+				<Type>Allegiance</Type>
+				<Attribute>Kingdom</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>Binding</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Shard_Harvesting</Attribute>
+			</Prereq>
+			<LaborToBuild>80</LaborToBuild>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Mana</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Mana</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_NatureMagic</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Nature Power</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_UnitStat_JB_NaturePower</StrVal>
+				<Value>100</Value>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>LimitedUnitCap</Attribute>
+				<StrVal>JB_ForestGuardian_Young</StrVal>
+				<Value>1</Value>
+				<Provides>Summons a Young Forest Guardian</Provides>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>15</AIPriority>
+				<AITag>Shards</AITag>
+			</AIData>
+			<ArtDef>JB_Art_ScenicView</ArtDef>
+		</ImprovementType>
+		<ImprovementType InternalName="JB_NatureShrine_Resoln">
+			<DisplayName>Nature Shrine #W</DisplayName>
+			<Description>Nature Shrines upgrade from Nature Altars. They amplify Nature spells, provide additional Mana every season, and also provide Fame every Season.</Description>
+			<SpecialBuildingType>Shard</SpecialBuildingType>
+			<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+			<RequiresCity>0</RequiresCity>
+			<RequiresResource>1</RequiresResource>
+			<SupportedResourceType>JB_NatureShard</SupportedResourceType>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<UpgradesToImprovement>JB_NatureTemple_Resoln</UpgradesToImprovement>
+			<UpgradeTier>2</UpgradeTier>
+			<Prereq>
+				<Type>Allegiance</Type>
+				<Attribute>Kingdom</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_AdeptsNature</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Immortal_Codex</Attribute>
+			</Prereq>
+			<LaborToBuild>179</LaborToBuild>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Mana</Attribute>
+				<Value>2</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+2 Mana</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_NatureMagic</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Nature Power</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_UnitStat_JB_NaturePower</StrVal>
+				<Value>100</Value>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>0.5</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+0.5 Fame per Season</Provides>
+				<UpgradeComparisonID>3</UpgradeComparisonID>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>LimitedUnitCap</Attribute>
+				<StrVal>JB_ForestGuardian_BG_Summon</StrVal>
+				<Value>1</Value>
+				<Provides>Summons a Forest Guardian</Provides>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>25</AIPriority>
+				<AITag>Shards</AITag>
+			</AIData>
+			<ArtDef>JB_Art_ScenicView</ArtDef>
+		</ImprovementType>
+		<ImprovementType InternalName="JB_NatureTemple_Adepts">
+			<DisplayName>Nature Temple #W</DisplayName>
+			<Description>Nature Temples upgrade from Nature Shrines. They amplify Nature spells, provide additional Mana every Season, and also provide Fame every Season.</Description>
+			<SpecialBuildingType>Shard</SpecialBuildingType>
+			<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+			<RequiresCity>0</RequiresCity>
+			<RequiresResource>1</RequiresResource>
+			<SupportedResourceType>JB_NatureShard</SupportedResourceType>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<UpgradeTier>3</UpgradeTier>
+			<Prereq>
+				<Type>Allegiance</Type>
+				<Attribute>Kingdom</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>Binding</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Ereogs_Journal</Attribute>
+			</Prereq>
+			<LaborToBuild>376</LaborToBuild>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Mana</Attribute>
+				<Value>3</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+3 Mana</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_NatureMagic</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Nature Power</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_UnitStat_JB_NaturePower</StrVal>
+				<Value>100</Value>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Fame</Attribute>
+				<Value>0.5</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+0.5 Fame per Season</Provides>
+				<UpgradeComparisonID>3</UpgradeComparisonID>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>LimitedUnitCap</Attribute>
+				<StrVal>JB_ForestGuardian_Ancient</StrVal>
+				<Value>1</Value>
+				<Provides>Summons an Ancient Forest Guardian</Provides>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>25</AIPriority>
+				<AITag>Shards</AITag>
+			</AIData>
+			<ArtDef>JB_Art_ScenicView</ArtDef>
+		</ImprovementType>
+		<ImprovementType InternalName="JB_ShadowAltar_Resoln">
+			<DisplayName>Shadow Altar #W</DisplayName>
+			<Description>A Shadow Altar can be built on a Cavern of Shadows to amplify Shadow spells and provide Mana every season.</Description>
+			<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+			<RequiresResource>1</RequiresResource>
+			<SupportedResourceType>JB_ShadowShard</SupportedResourceType>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<UpgradesToImprovement>JB_ShadowShrine_Resoln</UpgradesToImprovement>
+			<UpgradeTier>1</UpgradeTier>
+			<Prereq>
+				<Type>Allegiance</Type>
+				<Attribute>Empire</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>Binding</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Shard_Harvesting</Attribute>
+			</Prereq>
+			<LaborToBuild>80</LaborToBuild>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Mana</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Mana</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_ShadowMagic</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Shadow Power</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_UnitStat_JB_ShadowPower</StrVal>
+				<Value>100</Value>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>LimitedUnitCap</Attribute>
+				<StrVal>JB_Nightwing_BG_Summon</StrVal>
+				<Value>1</Value>
+				<Provides>Summons a Nightwing</Provides>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>15</AIPriority>
+				<AITag>Shards</AITag>
+			</AIData>
+			<ArtDef>JB_Art_ShadowShrine</ArtDef>
+		</ImprovementType>
+		<ImprovementType InternalName="JB_ShadowShrine_Resoln">
+			<DisplayName>Shadow Shrine #W</DisplayName>
+			<Description>Shadow Shrines upgrade from Shadow Altars. They amplify Shadow spells, provide additional Mana every Season, and provide a dodge bonus to your units.</Description>
+			<SpecialBuildingType>Shard</SpecialBuildingType>
+			<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+			<RequiresCity>0</RequiresCity>
+			<RequiresResource>1</RequiresResource>
+			<SupportedResourceType>JB_ShadowShard</SupportedResourceType>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<UpgradeTier>2</UpgradeTier>
+			<Prereq>
+				<Type>Allegiance</Type>
+				<Attribute>Empire</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>JB_AdeptsShadow</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Immortal_Codex</Attribute>
+			</Prereq>
+			<LaborToBuild>179</LaborToBuild>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Mana</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Mana</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_ShadowMagic</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Shadow Power</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_UnitStat_JB_ShadowPower</StrVal>
+				<Value>100</Value>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_UnitStat_Dodge</StrVal>
+				<Value>5</Value>
+				<Provides>+5% Dodge bonus for all your faction's units</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>LimitedUnitCap</Attribute>
+				<StrVal>JB_ShadowCreep_BG_Summon</StrVal>
+				<Value>1</Value>
+				<Provides>Summons a Shadow Weaver</Provides>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>25</AIPriority>
+				<AITag>Shards</AITag>
+			</AIData>
+			<ArtDef>JB_Art_ShadowShrine</ArtDef>
+		</ImprovementType>
+		<ImprovementType InternalName="JB_ShadowTemple_Adepts">
+			<DisplayName>Shadow Temple #W</DisplayName>
+			<Description>Shadow Temples upgrade from Shadow Shrines. They amplify Shadow spells, provide additional Mana every Season, and provide a dodge bonus to your units.</Description>
+			<SpecialBuildingType>Shard</SpecialBuildingType>
+			<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+			<RequiresCity>0</RequiresCity>
+			<RequiresResource>1</RequiresResource>
+			<SupportedResourceType>JB_ShadowShard</SupportedResourceType>
+			<PreferredTerrain>Category:Land</PreferredTerrain>
+			<UpgradeTier>3</UpgradeTier>
+			<Prereq>
+				<Type>Allegiance</Type>
+				<Attribute>Empire</Attribute>
+			</Prereq>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Attribute>Binding</Attribute>
+				<Target>Player</Target>
+			</Prereq>
+			<Prereq>
+				<Type>Tech</Type>
+				<Attribute>Ereogs_Journal</Attribute>
+			</Prereq>
+			<LaborToBuild>376</LaborToBuild>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Mana</Attribute>
+				<Value>3</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+3 Mana</Provides>
+				<UpgradeComparisonID>1</UpgradeComparisonID>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>JB_ShadowMagic</Attribute>
+				<Value>1</Value>
+				<PerTurn>1</PerTurn>
+				<Provides>+1 Shadow Power</Provides>
+				<UpgradeComparisonID>2</UpgradeComparisonID>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_UnitStat_JB_ShadowPower</StrVal>
+				<Value>100</Value>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>AbilityBonus</Attribute>
+				<StrVal>A_UnitStat_Dodge</StrVal>
+				<Value>5</Value>
+				<Provides>+5% Dodge bonus for all your faction's units</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Player</ModType>
+				<Attribute>LimitedUnitCap</Attribute>
+				<StrVal>JB_ShadowHoarderSpider_BG_Summon</StrVal>
+				<Value>1</Value>
+				<Provides>Summons a Cave Hoarder</Provides>
+			</GameModifier>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>25</AIPriority>
+				<AITag>Shards</AITag>
+			</AIData>
+			<ArtDef>JB_Art_ShadowShrine</ArtDef>
+		</ImprovementType>
 	<ImprovementType InternalName="Imp_XL_BeerInstitute">
 		<DisplayName>Beer Institute</DisplayName>
 		<Description>Keeps everyone happy.</Description>
