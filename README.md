@@ -16,4 +16,4 @@ Note: Custom factions need to use Deorcnysse Secrets faction strength. There are
 
 To-do:
 
-Re-sort Mage trait tree.
+Add new Shard Shrines for Neikvaed/Reanimation Rituals.
