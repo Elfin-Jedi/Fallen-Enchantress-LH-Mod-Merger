@@ -883,6 +883,209 @@
 		</AIData>
 		<ArtDef>Art_FireTemple</ArtDef>
 	</ImprovementType>
+	<ImprovementType InternalName="Imp_XD_Altar_L_Neikvaed">
+		<DisplayName>Life Altar #N</DisplayName>
+		<Description>Life Altars can be built on Life Shards. They amplify Life spells and provide Mana every season. #Neikvaed</Description>
+		<SpecialBuildingType>Shard</SpecialBuildingType>
+		<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+		<RequiresCity>0</RequiresCity>
+		<RequiresResource>1</RequiresResource>
+		<SupportedResourceType>LifeShard</SupportedResourceType>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<UpgradesToImprovement>Imp_XD_Shrine_L_Neikvaed</UpgradesToImprovement>
+		<UpgradeTier>1</UpgradeTier>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Kingdom</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>ReanimationRituals</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Shard_Harvesting</Attribute>
+		</Prereq>
+		<LaborToBuild>80</LaborToBuild>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Mana</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Mana per Season</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>LifeMana</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Life Power</Provides>
+			<UpgradeComparisonID>2</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Resource_X_SpiderBody</Attribute>
+			<Value>0.25</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Giant Spider Soul per 4 Seasons</Provides>
+			<UpgradeComparisonID>3</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithLifeShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>115</AIPriority>
+			<AITag>Shards</AITag>
+		</AIData>
+		<ArtDef>LifeAltar_ArtDef</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="Imp_XD_Shrine_L_Neikvaed">
+		<DisplayName>Life Shrine #N</DisplayName>
+		<Description>Life Shrines upgrade from Life Altars. They amplify Life spells and provide you with additional Mana every Season. #Neikvaed</Description>
+		<SpecialBuildingType>Shard</SpecialBuildingType>
+		<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+		<RequiresCity>0</RequiresCity>
+		<RequiresResource>1</RequiresResource>
+		<SupportedResourceType>LifeShard</SupportedResourceType>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<UpgradesToImprovement>Imp_XD_Temple_L_Neikvaed</UpgradesToImprovement>
+		<UpgradeTier>2</UpgradeTier>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Kingdom</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>ReanimationRituals</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Immortal_Codex</Attribute>
+		</Prereq>
+		<LaborToBuild>179</LaborToBuild>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Mana</Attribute>
+			<Value>2</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+2 Mana per Season</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>LifeMana</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Life Power</Provides>
+			<UpgradeComparisonID>2</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Resource_X_SpiderBody</Attribute>
+			<Value>0.5</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Giant Spider Soul per 2 Seasons</Provides>
+			<UpgradeComparisonID>3</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithLifeShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>150</AIPriority>
+			<AITag>Shards</AITag>
+		</AIData>
+		<ArtDef>LifeShrine_ArtDef</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="Imp_XD_Temple_L_Neikvaed">
+		<DisplayName>Life Temple #N</DisplayName>
+		<Description>Life Temples upgrade from Life Shrines. They amplify Life spells and provide you with additional Mana every Season. #Neikvaed</Description>
+		<SpecialBuildingType>Shard</SpecialBuildingType>
+		<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+		<RequiresCity>0</RequiresCity>
+		<RequiresResource>1</RequiresResource>
+		<SupportedResourceType>LifeShard</SupportedResourceType>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<UpgradeTier>3</UpgradeTier>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Kingdom</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>ReanimationRituals</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Ereogs_Journal</Attribute>
+		</Prereq>
+		<LaborToBuild>376</LaborToBuild>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Mana</Attribute>
+			<Value>3</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+3 Mana per Season</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>LifeMana</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Life Power</Provides>
+			<UpgradeComparisonID>2</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Resource_X_SpiderBody</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Giant Spider Soul per Season</Provides>
+			<UpgradeComparisonID>3</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithLifeShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>City</ModType>
+			<Attribute>AdjustDefendingUnit</Attribute>
+			<StrVal>ExpandedTraits_FLAG_DefendingACityWithAnyShard</StrVal>
+			<Value>1</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>280</AIPriority>
+			<AITag>Shards</AITag>
+		</AIData>
+		<ArtDef>LifeTemple_ArtDef</ArtDef>
+	</ImprovementType>
 	<ImprovementType InternalName="Imp_XD_Altar_W_Neikvaed">
 		<DisplayName>Water Altar #N</DisplayName>
 		<Description>Water Altars can be built on Water Shards. They amplify Water spells and provide Mana every season. #Neikvaed</Description>
@@ -1073,5 +1276,759 @@
 			<AITag>Shards</AITag>
 		</AIData>
 		<ArtDef>Art_WaterTemple</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="JB_BattleAltar_Neikvaed">
+		<DisplayName>Battle Altar #N</DisplayName>
+		<Description>A Battle Altar can be built on a Battlefield of Legend to amplify Battle spells and provide Mana every season. #Neikvaed</Description>
+		<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+		<RequiresResource>1</RequiresResource>
+		<SupportedResourceType>JB_BattleShard</SupportedResourceType>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<UpgradesToImprovement>JB_BattleShrine_Neikvaed</UpgradesToImprovement>
+		<UpgradeTier>1</UpgradeTier>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>ReanimationRituals</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Shard_Harvesting</Attribute>
+		</Prereq>
+		<LaborToBuild>80</LaborToBuild>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Mana</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Mana</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>JB_BattleMagic</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Battle Power</Provides>
+			<UpgradeComparisonID>2</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Resource_X_SpiderBody</Attribute>
+			<Value>0.2</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Giant Spider Soul per 5 Seasons</Provides>
+			<UpgradeComparisonID>3</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_UnitStat_JB_BattlePower</StrVal>
+			<Value>100</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>15</AIPriority>
+			<AITag>Shards</AITag>
+		</AIData>
+		<ArtDef>JB_Art_BattleShrine</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="JB_BattleShrine_Neikvaed">
+		<DisplayName>Battle Shrine #N</DisplayName>
+		<Description>Battle Shrines upgrade from Battle Altars. They amplify Battle spells, provide additional Mana every season, and provide a bonus to the experience earned by your units. #Neikvaed</Description>
+		<SpecialBuildingType>Shard</SpecialBuildingType>
+		<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+		<RequiresCity>0</RequiresCity>
+		<RequiresResource>1</RequiresResource>
+		<SupportedResourceType>JB_BattleShard</SupportedResourceType>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<UpgradesToImprovement>JB_BattleTemple_Neikvaed</UpgradesToImprovement>
+		<UpgradeTier>2</UpgradeTier>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>ReanimationRituals</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Immortal_Codex</Attribute>
+		</Prereq>
+		<LaborToBuild>179</LaborToBuild>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Mana</Attribute>
+			<Value>2</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+2 Mana</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>JB_BattleMagic</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Battle Power</Provides>
+			<UpgradeComparisonID>2</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Resource_X_SpiderBody</Attribute>
+			<Value>0.25</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Giant Spider Soul per 4 Seasons</Provides>
+			<UpgradeComparisonID>3</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_UnitStat_JB_BattlePower</StrVal>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_UnitStat_ExpBonus</StrVal>
+			<Value>5</Value>
+			<Provides>+5% Experience bonus for all your faction's units</Provides>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>25</AIPriority>
+			<AITag>Shards</AITag>
+		</AIData>
+		<ArtDef>JB_Art_BattleShrine</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="JB_BattleTemple_Neikvaed">
+		<DisplayName>Battle Temple #N</DisplayName>
+		<Description>Battle Temples upgrade from Battle Shrines. They amplify Battle spells, provide additional Mana every season, and provide a bonus to the experience earned by your units. #Neikvaed</Description>
+		<SpecialBuildingType>Shard</SpecialBuildingType>
+		<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+		<RequiresCity>0</RequiresCity>
+		<RequiresResource>1</RequiresResource>
+		<SupportedResourceType>JB_BattleShard</SupportedResourceType>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<UpgradeTier>3</UpgradeTier>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>ReanimationRituals</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Ereogs_Journal</Attribute>
+		</Prereq>
+		<LaborToBuild>376</LaborToBuild>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Mana</Attribute>
+			<Value>3</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+3 Mana</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>JB_BattleMagic</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Battle Power</Provides>
+			<UpgradeComparisonID>2</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_UnitStat_JB_BattlePower</StrVal>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Resource_X_SpiderBody</Attribute>
+			<Value>0.5</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Giant Spider Soul per 2 Seasons</Provides>
+			<UpgradeComparisonID>3</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_UnitStat_ExpBonus</StrVal>
+			<Value>5</Value>
+			<Provides>+5% Experience bonus for all your faction's units</Provides>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>25</AIPriority>
+			<AITag>Shards</AITag>
+		</AIData>
+		<ArtDef>JB_Art_BattleShrine</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="JB_BeastAltar_Neikvaed">
+		<DisplayName>Beast Altar #N</DisplayName>
+		<Description>A Beast Altar can be built on a Herdstone to amplify Beast power and provide Mana every season. #Neikvaed</Description>
+		<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+		<RequiresResource>1</RequiresResource>
+		<SupportedResourceType>JB_BeastShard</SupportedResourceType>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<UpgradesToImprovement>JB_BeastShrine_Neikvaed</UpgradesToImprovement>
+		<UpgradeTier>1</UpgradeTier>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>ReanimationRituals</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Shard_Harvesting</Attribute>
+		</Prereq>
+		<LaborToBuild>80</LaborToBuild>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Mana</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Mana</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>JB_BeastMagic</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Beast Power</Provides>
+			<UpgradeComparisonID>2</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Resource_X_SpiderBody</Attribute>
+			<Value>0.2</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Giant Spider Soul per 5 Seasons</Provides>
+			<UpgradeComparisonID>3</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_UnitStat_JB_BeastPower</StrVal>
+			<Value>100</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>15</AIPriority>
+			<AITag>Shards</AITag>
+		</AIData>
+		<ArtDef>JB_Art_BeastShrine</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="JB_BeastShrine_Neikvaed">
+		<DisplayName>Beast Shrine #N</DisplayName>
+		<Description>Beast Shrines upgrade from Beast Altars. They amplify Beast spells, and provide additional Mana every season, and increase the Hit Points of your units. #Neikvaed</Description>
+		<SpecialBuildingType>Shard</SpecialBuildingType>
+		<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+		<RequiresCity>0</RequiresCity>
+		<RequiresResource>1</RequiresResource>
+		<SupportedResourceType>JB_BeastShard</SupportedResourceType>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<UpgradesToImprovement>JB_BeastTemple_Neikvaed</UpgradesToImprovement>
+		<UpgradeTier>2</UpgradeTier>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>ReanimationRituals</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Immortal_Codex</Attribute>
+		</Prereq>
+		<LaborToBuild>179</LaborToBuild>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Mana</Attribute>
+			<Value>2</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+2 Mana</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>JB_BeastMagic</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Beast Power</Provides>
+			<UpgradeComparisonID>2</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Resource_X_SpiderBody</Attribute>
+			<Value>0.25</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Giant Spider Soul per 4 Seasons</Provides>
+			<UpgradeComparisonID>3</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_UnitStat_JB_BeastPower</StrVal>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_UnitStat_HitPoints</StrVal>
+			<Value>5</Value>
+			<Provides>+5% Hit Points for your faction</Provides>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>25</AIPriority>
+			<AITag>Shards</AITag>
+		</AIData>
+		<ArtDef>JB_Art_BeastShrine</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="JB_BeastTemple_Neikvaed">
+		<DisplayName>Beast Temple #N</DisplayName>z
+		<Description>Beast Temples upgrade from Beast Shrines. They amplify Beast spells, provide additional Mana every Season, and increase the Hit Points of your units. #Neikvaed</Description>
+		<SpecialBuildingType>Shard</SpecialBuildingType>
+		<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+		<RequiresCity>0</RequiresCity>
+		<RequiresResource>1</RequiresResource>
+		<SupportedResourceType>JB_BeastShard</SupportedResourceType>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<UpgradeTier>3</UpgradeTier>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>ReanimationRituals</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Ereogs_Journal</Attribute>
+		</Prereq>
+		<LaborToBuild>376</LaborToBuild>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Mana</Attribute>
+			<Value>3</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+3 Mana</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>JB_BeastMagic</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Beast Power</Provides>
+			<UpgradeComparisonID>2</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Resource_X_SpiderBody</Attribute>
+			<Value>0.5</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Giant Spider Soul per 2 Seasons</Provides>
+			<UpgradeComparisonID>3</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_UnitStat_JB_BeastPower</StrVal>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_UnitStat_HitPoints</StrVal>
+			<Value>5</Value>
+			<Provides>+5% Hit Points for your faction</Provides>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>25</AIPriority>
+			<AITag>Shards</AITag>
+		</AIData>
+		<ArtDef>JB_Art_BeastShrine</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="JB_NatureAltar_Neikvaed">
+		<DisplayName>Nature Altar #N</DisplayName>
+		<Description>A Nature Altar can be built on a Scenic View to amplify Nature spells and provide Mana every season. #Neikvaed</Description>
+		<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+		<RequiresResource>1</RequiresResource>
+		<SupportedResourceType>JB_NatureShard</SupportedResourceType>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<UpgradesToImprovement>JB_NatureShrine_Neikvaed</UpgradesToImprovement>
+		<UpgradeTier>1</UpgradeTier>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Kingdom</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>ReanimationRituals</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Shard_Harvesting</Attribute>
+		</Prereq>
+		<LaborToBuild>80</LaborToBuild>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Mana</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Mana</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>JB_NatureMagic</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Nature Power</Provides>
+			<UpgradeComparisonID>2</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Resource_X_SpiderBody</Attribute>
+			<Value>0.2</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Giant Spider Soul per 5 Seasons</Provides>
+			<UpgradeComparisonID>3</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_UnitStat_JB_NaturePower</StrVal>
+			<Value>100</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>15</AIPriority>
+			<AITag>Shards</AITag>
+		</AIData>
+		<ArtDef>JB_Art_ScenicView</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="JB_NatureShrine_Neikvaed">
+		<DisplayName>Nature Shrine #N</DisplayName>
+		<Description>Nature Shrines upgrade from Nature Altars. They amplify Nature spells, provide additional Mana every season, and also provide Fame every Season. #Neikvaed</Description>
+		<SpecialBuildingType>Shard</SpecialBuildingType>
+		<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+		<RequiresCity>0</RequiresCity>
+		<RequiresResource>1</RequiresResource>
+		<SupportedResourceType>JB_NatureShard</SupportedResourceType>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<UpgradesToImprovement>JB_NatureTemple_Neikvaed</UpgradesToImprovement>
+		<UpgradeTier>2</UpgradeTier>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Kingdom</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>ReanimationRituals</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Immortal_Codex</Attribute>
+		</Prereq>
+		<LaborToBuild>179</LaborToBuild>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Mana</Attribute>
+			<Value>2</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+2 Mana</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>JB_NatureMagic</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Nature Power</Provides>
+			<UpgradeComparisonID>2</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Resource_X_SpiderBody</Attribute>
+			<Value>0.25</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Giant Spider Soul per 4 Seasons</Provides>
+			<UpgradeComparisonID>3</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_UnitStat_JB_NaturePower</StrVal>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Fame</Attribute>
+			<Value>0.5</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+0.5 Fame per Season</Provides>
+			<UpgradeComparisonID>4</UpgradeComparisonID>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>25</AIPriority>
+			<AITag>Shards</AITag>
+		</AIData>
+		<ArtDef>JB_Art_ScenicView</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="JB_NatureTemple_Neikvaed">
+		<DisplayName>Nature Temple #N</DisplayName>
+		<Description>Nature Temples upgrade from Nature Shrines. They amplify Nature spells, provide additional Mana every Season, and also provide Fame every Season. #Neikvaed</Description>
+		<SpecialBuildingType>Shard</SpecialBuildingType>
+		<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+		<RequiresCity>0</RequiresCity>
+		<RequiresResource>1</RequiresResource>
+		<SupportedResourceType>JB_NatureShard</SupportedResourceType>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<UpgradeTier>3</UpgradeTier>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Kingdom</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>ReanimationRituals</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Ereogs_Journal</Attribute>
+		</Prereq>
+		<LaborToBuild>376</LaborToBuild>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Mana</Attribute>
+			<Value>3</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+3 Mana</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>JB_NatureMagic</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Nature Power</Provides>
+			<UpgradeComparisonID>2</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Resource_X_SpiderBody</Attribute>
+			<Value>0.5</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Giant Spider Soul per 2 Seasons</Provides>
+			<UpgradeComparisonID>3</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_UnitStat_JB_NaturePower</StrVal>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Fame</Attribute>
+			<Value>0.5</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+0.5 Fame per Season</Provides>
+			<UpgradeComparisonID>4</UpgradeComparisonID>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>25</AIPriority>
+			<AITag>Shards</AITag>
+		</AIData>
+		<ArtDef>JB_Art_ScenicView</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="JB_ShadowAltar_Neikvaed">
+		<DisplayName>Shadow Altar #N</DisplayName>
+		<Description>A Shadow Altar can be built on a Cavern of Shadows to amplify Shadow spells and provide Mana every season. #Neikvaed</Description>
+		<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+		<RequiresResource>1</RequiresResource>
+		<SupportedResourceType>JB_ShadowShard</SupportedResourceType>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<UpgradesToImprovement>JB_ShadowShrine_Neikvaed</UpgradesToImprovement>
+		<UpgradeTier>1</UpgradeTier>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Empire</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>ReanimationRituals</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Shard_Harvesting</Attribute>
+		</Prereq>
+		<LaborToBuild>80</LaborToBuild>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Mana</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Mana</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>JB_ShadowMagic</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Shadow Power</Provides>
+			<UpgradeComparisonID>2</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Resource_X_SpiderBody</Attribute>
+			<Value>0.2</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Giant Spider Soul per 5 Seasons</Provides>
+			<UpgradeComparisonID>3</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_UnitStat_JB_ShadowPower</StrVal>
+			<Value>100</Value>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>15</AIPriority>
+			<AITag>Shards</AITag>
+		</AIData>
+		<ArtDef>JB_Art_ShadowShrine</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="JB_ShadowShrine_Neikvaed">
+		<DisplayName>Shadow Shrine #N</DisplayName>
+		<Description>Shadow Shrines upgrade from Shadow Altars. They amplify Shadow spells, provide additional Mana every Season, and provide a dodge bonus to your units. #Neikvaed</Description>
+		<SpecialBuildingType>Shard</SpecialBuildingType>
+		<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+		<RequiresCity>0</RequiresCity>
+		<RequiresResource>1</RequiresResource>
+		<SupportedResourceType>JB_ShadowShard</SupportedResourceType>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<UpgradesToImprovement>JB_ShadowTemple_Neikvaed</UpgradesToImprovement>
+		<UpgradeTier>2</UpgradeTier>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Empire</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>ReanimationRituals</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Immortal_Codex</Attribute>
+		</Prereq>
+		<LaborToBuild>179</LaborToBuild>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Mana</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Mana</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>JB_ShadowMagic</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Shadow Power</Provides>
+			<UpgradeComparisonID>2</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Resource_X_SpiderBody</Attribute>
+			<Value>0.25</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Giant Spider Soul per 4 Seasons</Provides>
+			<UpgradeComparisonID>3</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_UnitStat_JB_ShadowPower</StrVal>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_UnitStat_Dodge</StrVal>
+			<Value>5</Value>
+			<Provides>+5% Dodge bonus for all your faction's units</Provides>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>25</AIPriority>
+			<AITag>Shards</AITag>
+		</AIData>
+		<ArtDef>JB_Art_ShadowShrine</ArtDef>
+	</ImprovementType>
+	<ImprovementType InternalName="JB_ShadowTemple_Neikvaed">
+		<DisplayName>Shadow Temple #N</DisplayName>
+		<Description>Shadow Temples upgrade from Shadow Shrines. They amplify Shadow spells, provide additional Mana every Season, and provide a dodge bonus to your units. #Neikvaed</Description>
+		<SpecialBuildingType>Shard</SpecialBuildingType>
+		<IgnoreDuplicateImpLimit>1</IgnoreDuplicateImpLimit>
+		<RequiresCity>0</RequiresCity>
+		<RequiresResource>1</RequiresResource>
+		<SupportedResourceType>JB_ShadowShard</SupportedResourceType>
+		<PreferredTerrain>Category:Land</PreferredTerrain>
+		<UpgradeTier>3</UpgradeTier>
+		<Prereq>
+			<Type>Allegiance</Type>
+			<Attribute>Empire</Attribute>
+		</Prereq>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>ReanimationRituals</Attribute>
+			<Target>Player</Target>
+		</Prereq>
+		<Prereq>
+			<Type>Tech</Type>
+			<Attribute>Ereogs_Journal</Attribute>
+		</Prereq>
+		<LaborToBuild>376</LaborToBuild>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Mana</Attribute>
+			<Value>3</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+3 Mana</Provides>
+			<UpgradeComparisonID>1</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>JB_ShadowMagic</Attribute>
+			<Value>1</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Shadow Power</Provides>
+			<UpgradeComparisonID>2</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Resource_X_SpiderBody</Attribute>
+			<Value>0.5</Value>
+			<PerTurn>1</PerTurn>
+			<Provides>+1 Giant Spider Soul per 2 Seasons</Provides>
+			<UpgradeComparisonID>3</UpgradeComparisonID>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_UnitStat_JB_ShadowPower</StrVal>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>AbilityBonus</Attribute>
+			<StrVal>A_UnitStat_Dodge</StrVal>
+			<Value>5</Value>
+			<Provides>+5% Dodge bonus for all your faction's units</Provides>
+		</GameModifier>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>25</AIPriority>
+			<AITag>Shards</AITag>
+		</AIData>
+		<ArtDef>JB_Art_ShadowShrine</ArtDef>
 	</ImprovementType>
 </ImprovementTypes>
