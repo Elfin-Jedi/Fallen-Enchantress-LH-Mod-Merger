@@ -1,6 +1,27 @@
 # Fallen-Enchantress-LH-Mod-Merger
-Merger of 20 mods. Including Xtradeconstruct - Legacy of Magic & Demons and Wizards.
-There are also some additions of my own, I am not creative with writing lore so they have names like Nature Magic Wonder. I also reused graphics. If anyone wants to contribute, let me know. My Discord is tiara6704.
+Merger of 20 mods.
+
+Xtradeconstruct - Legacy of Magic w/ Black Market Bazaar, Champion Bonanza, & Children of Storm
+Demons and Wizards
+Heroic Pursuits
+Add Faction Traits Mod
+More Weaknesses
+Sovereign Differentation Mod
+Professions Plus
+Ninja Path
+Snaking
+River Bridge
+Swamp Tiles
+Ferver
+Quendar Kingdom
+Vaynar
+Unlikely Heroes
+Stromworld Summoner Units
+Ranger Profession
+
+Also contains Mentor Mod though that one doesn't work yet. And I included some of my custom sovereigns as champions in a folder named Optional.
+
+There are also some additions of my own, mostly expansions of Xtradeconstruct's stuff to work with the new shards from Demons and Wizards. These include new shard conversion spells, new shard wonders, new Shard Adepts faction strengths, new shards getting shrines that work with Binders, Mediums, Gravetouched & Reanimation Rituals faction strengths, sovereign talents and idols that indvidually give battle, beast, nature, and shadow power. I am not creative with writing lore so they have names like Nature Magic Wonder. I also reused graphics. If anyone wants to contribute, let me know. My Discord is tiara6704.
 
 Installation Instructions:
 
