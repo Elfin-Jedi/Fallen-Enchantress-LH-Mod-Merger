@@ -1,23 +1,7 @@
 # Fallen-Enchantress-LH-Mod-Merger
 Merger of 20 mods.
 
-Xtradeconstruct - Legacy of Magic w/ Black Market Bazaar, Champion Bonanza, & Children of Storm
-Demons and Wizards
-Heroic Pursuits
-Add Faction Traits Mod
-More Weaknesses
-Sovereign Differentation Mod
-Professions Plus
-Ninja Path
-Snaking
-River Bridge
-Swamp Tiles
-Ferver
-Quendar Kingdom
-Vaynar
-Unlikely Heroes
-Stromworld Summoner Units
-Ranger Profession
+Xtradeconstruct - Legacy of Magic w/ Black Market Bazaar, Champion Bonanza, & Children of Storm, Demons and Wizards, Heroic Pursuits, Add Faction Traits Mod, More Weaknesses, Sovereign Differentation Mod, Professions Plus, Ninja Path, Snaking, River Bridge, Swamp Tiles, Ferver, Quendar Kingdom, Vaynar, Unlikely Heroes, Stromworld Summoner Units, & Ranger Profession.
 
 Also contains Mentor Mod though that one doesn't work yet. And I included some of my custom sovereigns as champions in a folder named Optional.
 
