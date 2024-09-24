@@ -95,8 +95,8 @@
 	
 	<!-- Redefine some of these Champions with abilities from the new paths -->
 	<UnitType InternalName="JB_Champion_Gallowman">
-        <DisplayName>Gallowman</DisplayName>
-        <UnitDisplayName>Gallowman</UnitDisplayName>
+        <DisplayName>Gallowman #U</DisplayName>
+        <UnitDisplayName>Gallowman #U</UnitDisplayName>
         <Class>Adventurer</Class>
         <Allegiance>Empire</Allegiance>
         <CreatureType>Undead</CreatureType>
@@ -121,12 +121,10 @@
             <UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
             <UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
             <UnitStat_HitPoints>20</UnitStat_HitPoints>
-			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
-			<UnitStat_BG_IsUndead>1</UnitStat_BG_IsUndead>
-			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
-			<UnitStat_BG_IsEmpire>1</UnitStat_BG_IsEmpire>
-			<UnitStat_BG_IsMale>1</UnitStat_BG_IsMale>
         </LevelMilestone>
+		<SelectedAbilityBonusOption>EquipmentAbility_X_Gallowman</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Talent_XM_BlackHole</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_EreogsBox</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>JB_PathOfTheSummoner</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>ImmuneToPoison</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>ImmuneToCriticals</SelectedAbilityBonusOption>
@@ -137,6 +135,14 @@
         <SelectedAbilityBonusOption>JB_Summoner_SummonGroup1</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>JB_Summoner_Hordes1</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>Spell_ConsumeSpirit</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsChampion</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsEmpire</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsHumanoid</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsMale</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsUndead</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsImmuneToFear</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>UnitStat_BG_IsNotAliveAbility</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>UnitStat_BG_IsImmortal</SelectedAbilityBonusOption>
         <AutoCreateEquipment>Staff_Furnace</AutoCreateEquipment>
         <AutoCreateEquipment>RingOfCalling</AutoCreateEquipment>
         <Equipment>Ritualist_Robe</Equipment>
@@ -210,25 +216,28 @@ This Gallowman began walking the dark fields of Elemental, and he was drawn to p
             <UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
 			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
 			<UnitStat_HitPoints>20</UnitStat_HitPoints>
-			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
-			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
 			<UnitStat_BG_IsRace_Quendar>1</UnitStat_BG_IsRace_Quendar>
-			<UnitStat_BG_IsEmpire>1</UnitStat_BG_IsEmpire>
-			<UnitStat_BG_IsFemale>1</UnitStat_BG_IsFemale>
         </LevelMilestone>
+		<SelectedAbilityBonusOption>EquipmentAbility_X_Phonis</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Talent_XM_BlackHole</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_EreogsBox</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>PathOfTheMage</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>JB_Evoker</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>Fire1</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>Fire2</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>Water1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsChampion</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsEmpire</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsFemale</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsHumanoid</SelectedAbilityBonusOption>
         <AutoCreateEquipment>Staff_Banishing</AutoCreateEquipment>
         <AutoCreateEquipment>RingOfAsh</AutoCreateEquipment>
         <Equipment>F_Female_Quendar_Head_01</Equipment>
         <Equipment>F_Female_Quendar_Horns_01</Equipment>
         <Equipment>Patchwork_Cloak_ID2</Equipment>
         <Quote>'In my land, we deal harshly with those who would cheat us.'</Quote>
-        <NPCRecruitmentText>I can be of service. If you wish to hire me for %d gildar.</NPCRecruitmentText>
+        <NPCRecruitmentText>My skills have a price - %d gildar. My honor does not.</NPCRecruitmentText>
         <Backstory>My people are Quendar - we were born and bred to serve the greatest of the Titans, Curgen of the Dred'nir, and from him and those who followed him we learned... well. I will tell you a story. There was a merchant once, a Krax named Sarrad, of the clan of the same name, who thought himself clever, who thought to cheat me of money that was rightfully mine, and the reason you have never heard of this Sarrad or his clan is because they do not exist anymore. None of them. Not the merchant, nor his brothers, nor his wives, or daughters, or sons. And that is what I and my people learned from Curgen, whose name is undying. </Backstory>
         <AnimationPack>FemaleSovereignAnimationPack</AnimationPack>
         <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
@@ -281,12 +290,11 @@ This Gallowman began walking the dark fields of Elemental, and he was drawn to p
             <UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
             <UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
             <UnitStat_HitPoints>20</UnitStat_HitPoints>
-			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
-			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
 			<UnitStat_BG_IsRace_Quendar>1</UnitStat_BG_IsRace_Quendar>
-			<UnitStat_BG_IsEmpire>1</UnitStat_BG_IsEmpire>
-			<UnitStat_BG_IsFemale>1</UnitStat_BG_IsFemale>
         </LevelMilestone>
+		<SelectedAbilityBonusOption>EquipmentAbility_X_Bibiyana</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Talent_XM_BlackHole</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_EreogsBox</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>PathOfTheMage</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>Death1</SelectedAbilityBonusOption>
@@ -296,8 +304,12 @@ This Gallowman began walking the dark fields of Elemental, and he was drawn to p
         <SelectedAbilityBonusOption>JB_Mage_Prodigy</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>Spell_DemonicAlly</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>Frail</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsChampion</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsEmpire</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsFemale</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsHumanoid</SelectedAbilityBonusOption>
         <AutoCreateEquipment>Staff_Banishing</AutoCreateEquipment>
-        <AutoCreateEquipment>AmuletofWarding</AutoCreateEquipment>
+        <AutoCreateEquipment>Accessory_X_AmuletofWarding</AutoCreateEquipment>
         <AutoCreateEquipment>DarkCandle</AutoCreateEquipment>
         <AutoCreateEquipment>ScarStone</AutoCreateEquipment>
         <Equipment>F_Female_Quendar_Head_01</Equipment>
@@ -306,7 +318,7 @@ This Gallowman began walking the dark fields of Elemental, and he was drawn to p
         <Equipment>Female_Female_Peasant_Pants_ID2</Equipment>
         <Equipment>SnakeSkinBoots_ID2</Equipment>
         <Quote>'It is a wasting disease, if you are curious. It should have killed me years ago.'</Quote>
-        <NPCRecruitmentText>I can be of service. If you wish to hire me for %d gildar.</NPCRecruitmentText>
+        <NPCRecruitmentText>I will follow you, if you wish. Obey your commands. My price is %d gildar.</NPCRecruitmentText>
         <Backstory>It is a wasting disease, if you are curious. It should have killed me years ago. It has scarred me. Parts of my body... there is little more than bone, and a thin layer of flesh. It is not a pretty sight, I would not inflict it upon others, and so I wear these robes. They help to hide my staff as well. I am not without power; I have mastered death, in a sense, and so I know how to summon it. Not as a channeler, of course - but I have knowledge of the body, a man's weak points, areas where the veins are close to the surface, where a small cut can inflict great damage, where the bones are fragile, where a certain amount of pressure can kill. These are the skills I can offer - if you are interested.</Backstory>
         <AnimationPack>FemaleSovereignAnimationPack</AnimationPack>
         <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
@@ -359,12 +371,11 @@ This Gallowman began walking the dark fields of Elemental, and he was drawn to p
             <UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
             <UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
             <UnitStat_HitPoints>20</UnitStat_HitPoints>
-			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
-			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
 			<UnitStat_BG_IsRace_Amarians>1</UnitStat_BG_IsRace_Amarians>
-			<UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
-			<UnitStat_BG_IsMale>1</UnitStat_BG_IsMale>
         </LevelMilestone>
+		<SelectedAbilityBonusOption>EquipmentAbility_X_Fairgenn</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Talent_XM_BlackHole</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_EreogsBox</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>Blood_Amarian</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>JB_PathOfTheSummoner</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>Air1</SelectedAbilityBonusOption>
@@ -372,18 +383,22 @@ This Gallowman began walking the dark fields of Elemental, and he was drawn to p
         <SelectedAbilityBonusOption>JB_Summoner_Summon1</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>JB_Summoner_Summon2</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>JB_Summoner_Warlords</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsChampion</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsHumanoid</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsKingdom</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsMale</SelectedAbilityBonusOption>
         <AutoCreateEquipment>Shortsword_Guardian</AutoCreateEquipment>
         <AutoCreateEquipment>LeatherBreastpiece</AutoCreateEquipment>
         <AutoCreateEquipment>LeatherBoots</AutoCreateEquipment>
         <AutoCreateEquipment>LeatherVambraces</AutoCreateEquipment>
-        <AutoCreateEquipment>LeatherGreaves</AutoCreateEquipment>
+        <AutoCreateEquipment>LeatherGreaves_FIX</AutoCreateEquipment>
         <AutoCreateEquipment>RingOfCalling</AutoCreateEquipment>
         <Equipment>K_Male_Head_03</Equipment>
         <Equipment>Noble_Cloak_ID1</Equipment>
         <Equipment>Kraxis_Beard</Equipment>
         <Equipment>Sovereign_Short_Hair_04</Equipment>
         <Quote>"Sometimes lost is exactly where you need to be."</Quote>
-        <NPCRecruitmentText>I can be of service. If you wish to hire me for %d gildar.</NPCRecruitmentText>
+        <NPCRecruitmentText>%d gildar, and my sword will sing for you, friend.</NPCRecruitmentText>
         <Backstory>I call her Ithuane, friend - my sword. After the girl in the song? You know it, of course. No? Well you know the story, I am sure. A sad story, a tragedy, the tale of a love that could never be. Ithuane and Pariden. Mortal, and Titan. Is it true? Who knows? But the song... I could sing it for you. I'm a fair singer, not as good as my father was, but then that's all he did. He sang for Procipinee, you know. More than once. Much as she liked his singing, you would think she would have gone after the bastards who killed him with a little more alacrity. I took care of them, though. With my Ithuane, right here. That's what I focus my energies on. The sword. My girl. Something useful. Something practical. In this world now... that's all that matters.</Backstory>
         <AnimationPack>MaleSovereignAnimationPack</AnimationPack>
         <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
@@ -436,12 +451,11 @@ This Gallowman began walking the dark fields of Elemental, and he was drawn to p
             <UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
             <UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
             <UnitStat_HitPoints>20</UnitStat_HitPoints>
-			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
-			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
 			<UnitStat_BG_IsRace_Mancers>1</UnitStat_BG_IsRace_Mancers>
-			<UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
-			<UnitStat_BG_IsFemale>1</UnitStat_BG_IsFemale>
         </LevelMilestone>
+		<SelectedAbilityBonusOption>EquipmentAbility_X_Ritressa</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Talent_XM_BlackHole</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_EreogsBox</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>Blood_Mancer</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>PathOfTheMage</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>Water1</SelectedAbilityBonusOption>
@@ -450,15 +464,20 @@ This Gallowman began walking the dark fields of Elemental, and he was drawn to p
         <SelectedAbilityBonusOption>JB_Mage_Prodigy2</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>JB_Mage_StrategicMancy</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>Frostborn</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsChampion</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsFemale</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsHumanoid</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsKingdom</SelectedAbilityBonusOption>
         <AutoCreateEquipment>Staff_Freezing</AutoCreateEquipment>
         <AutoCreateEquipment>Robe_Mage</AutoCreateEquipment>
         <AutoCreateEquipment>RingOfTheGlacier</AutoCreateEquipment>
+		<AutoCreateEquipment>SoldiersCloak</AutoCreateEquipment>
         <AutoCreateEquipment>Scroll_Blizzard</AutoCreateEquipment>
         <Equipment>K_Female_Head_03</Equipment>
         <Equipment>SoldiersCloak</Equipment>
         <Equipment>Noble_Ladies_Hair_Back</Equipment>
         <Quote>'It was I that killed my love, not fate. The blame is mine alone.'</Quote>
-        <NPCRecruitmentText>I can be of service. If you wish to hire me for %d gildar.</NPCRecruitmentText>
+        <NPCRecruitmentText>For %d gildar, I would be willing to join you.</NPCRecruitmentText>
         <Backstory>Ah yes, the accent... I am from Montenera, you are right, though I left there when I was very young. There was a man who came to our village, his name was Paoluto... he had heard tell of a kouros, a great library, where the wise men of Atalandra had hidden their greatest treasures... well... I was a young girl, Paoluto was a handsome man, and so... I left with him. We traveled east, and then north, into the wastes, and there we found this kouros, and there... Paoluto died. The great treasures of the past... they have great and powerful guardians. Dangerous guardians. You would do well to keep this in mind, friend, and if you see fit to hire me... I shall surely remind you.</Backstory>
         <AnimationPack>FemaleSovereignAnimationPack</AnimationPack>
         <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
@@ -511,12 +530,11 @@ This Gallowman began walking the dark fields of Elemental, and he was drawn to p
             <UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
             <UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
             <UnitStat_HitPoints>20</UnitStat_HitPoints>
-			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
-			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
 			<UnitStat_BG_IsRace_Wraiths>1</UnitStat_BG_IsRace_Wraiths>
-			<UnitStat_BG_IsEmpire>1</UnitStat_BG_IsEmpire>
-			<UnitStat_BG_IsMale>1</UnitStat_BG_IsMale>
         </LevelMilestone>
+		<SelectedAbilityBonusOption>EquipmentAbility_X_Hyru</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Talent_XM_BlackHole</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_EreogsBox</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>Blood_Wraith</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>JB_PathOfTheSummoner</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>Death1</SelectedAbilityBonusOption>
@@ -527,6 +545,10 @@ This Gallowman began walking the dark fields of Elemental, and he was drawn to p
         <SelectedAbilityBonusOption>JB_Summoner_SummonGroup1</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>JB_Summoner_Summon3</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>Spell_DemonicAlly</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsChampion</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsEmpire</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsHumanoid</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsMale</SelectedAbilityBonusOption>
         <AutoCreateEquipment>Staff_Banishing</AutoCreateEquipment>
         <AutoCreateEquipment>BandOfInsight</AutoCreateEquipment>
         <AutoCreateEquipment>Potion_Healing</AutoCreateEquipment>
@@ -538,7 +560,7 @@ This Gallowman began walking the dark fields of Elemental, and he was drawn to p
         <Equipment>Magnar_Hair</Equipment>
         <Equipment>Empire_Leather_Gloves_2_Light</Equipment>
         <Quote>'I am the wise, for I know that I know nothing...'</Quote>
-        <NPCRecruitmentText>I can be of service. If you wish to hire me for %d gildar.</NPCRecruitmentText>
+        <NPCRecruitmentText>Straavni, my friend. Hello. I am Hyru - the Caller. For a modest fee - shall we say %d gildar? - I will share my knowledge with you.</NPCRecruitmentText>
         <Backstory>You have a great destiny before you, friend. I sense it. A word of caution, though...  greatness can be a curse, as well as a blessing. If you will allow me, I will tell you a story. A story of my village in the time before the Oracle came back to us, before the transformation. I was a farmer then, we were all farmers, to coax food from the land required all to work, but when I was not farming, I was a teacher.  My village? No. You would not have heard of it... Sigedd-Belzen, it was called. It no longer exists. Only a few of us remain to remember... Yosku, Czillka... and Meerduul, of course.  It is his story I wish to tell you... Meerduul, he was student, I was teacher... we were so close, I have no children of my own, I never married, he was like a son to me. Such brilliance... I have studied the past, I know the great alchemic magics of the old kingdoms, but Meerduul... he did not need to study. To him, these things were second nature. He had greatness within him, you see. Now, what happened - this was a few seasons before the transformation, just before the adventurer from the West, Relias, they called him, came to our land... it was a time of great famine. Great drought. and the villagers of Sigedd-Belzen came to me, for I was loremaster, and asked if there was not a way to use sorcery to restore life to the fields. And I said no.
 And Meerduul said perhaps.
 In the Book of Ereog it is written how Az-Adoras, the dark prince, brought death to the lands of Hallas. The grain withered in the field, the fruit withered on the vine, the beasts choked on their own bile. Meerduul knew that the death the dark prince had brought was in fact life energy that had been transformed - perverted to a darker use, and he thought... he believed it was his destiny to restore life to the lands of Sigedd-Belzen. We all told him, you see, that he was meant for greatness, and he believed us. And so he went into the fields, and gathered around him the mana - the energy - he needed to perform this spell of life. And he cast that energy into the earth itself, and tried to draw from it life. And he did. We were so happy, the fields bloomed once more, the grasses grew, there were crops... but only for a short time. A single day. Because the next dawn, when we woke... life had fled the land entirely. Meerduul's spell had drawn the last breath from the fields, and now they were naught but sand, and stone. 
@@ -602,6 +624,9 @@ That is the story I wished to tell you, about the dangers of greatness.</Backsto
 			<UnitStat_BG_IsEmpire>1</UnitStat_BG_IsEmpire>
 			<UnitStat_BG_IsMale>1</UnitStat_BG_IsMale>
         </LevelMilestone>
+		<SelectedAbilityBonusOption>EquipmentAbility_X_Magush</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Talent_XM_BlackHole</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_EreogsBox</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>Blood_Wraith</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>PathOfTheMage</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>Fire1</SelectedAbilityBonusOption>
@@ -613,6 +638,10 @@ That is the story I wished to tell you, about the dangers of greatness.</Backsto
         <SelectedAbilityBonusOption>JB_Mage_Prodigy3</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>JB_Mage_Savant</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>Vulnerable</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsChampion</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsEmpire</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsHumanoid</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsMale</SelectedAbilityBonusOption>
         <AutoCreateEquipment>Staff_Spell</AutoCreateEquipment>
         <AutoCreateEquipment>Scroll_Despair</AutoCreateEquipment>
         <AutoCreateEquipment>Scroll_Recall</AutoCreateEquipment>
@@ -622,7 +651,7 @@ That is the story I wished to tell you, about the dangers of greatness.</Backsto
         <Equipment>Basic_Boots_ID1</Equipment>
         <Equipment>F_LongThick_Hair_Mesh_01</Equipment>
         <Quote>'To burn, to blow, to burrow and flow.'</Quote>
-        <NPCRecruitmentText>I can be of service. If you wish to hire me for %d gildar.</NPCRecruitmentText>
+        <NPCRecruitmentText>Fellow traveler, fellow seeker, be still a moment. The spirits of this world, they are calling. You do not hear them? Ah... for a mere %d gildar, I will tell you what they say.</NPCRecruitmentText>
         <Backstory>It is the Anthuanii of which I speak - the ancient ones. They live in the great shards - in the dark of night, in the still of the dreamtime, they whisper their desires.  I heard them only after the Transformation, after the return of the Oracle. I fled from my home to quiet their voices, but they followed me across the wastes. Take me into your service, and I will help you learn their secrets, help you learn to master their magicks. </Backstory>
         <AnimationPack>MaleSovereignAnimationPack</AnimationPack>
         <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
@@ -689,12 +718,11 @@ That is the story I wished to tell you, about the dangers of greatness.</Backsto
             <UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
             <UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
             <UnitStat_HitPoints>20</UnitStat_HitPoints>
-			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
-			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
 			<UnitStat_BG_IsRace_Amarians>1</UnitStat_BG_IsRace_Amarians>
-			<UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
-			<UnitStat_BG_IsFemale>1</UnitStat_BG_IsFemale>
         </LevelMilestone>
+		<SelectedAbilityBonusOption>EquipmentAbility_X_Gwenneth</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Talent_XM_BlackHole</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_EreogsBox</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>Blood_Amarian</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>PathOfTheMage</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>Earth1</SelectedAbilityBonusOption>
@@ -705,6 +733,10 @@ That is the story I wished to tell you, about the dangers of greatness.</Backsto
         <SelectedAbilityBonusOption>JB_Mage_Prodigy2</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>JB_Mage_Abjuration</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>Beastlord</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsChampion</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsFemale</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsHumanoid</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsKingdom</SelectedAbilityBonusOption>
         <AutoCreateEquipment>Staff_Winters</AutoCreateEquipment>
         <AutoCreateEquipment>BandOfInsight</AutoCreateEquipment>
         <AutoCreateEquipment>Potion_Healing</AutoCreateEquipment>
@@ -715,7 +747,7 @@ That is the story I wished to tell you, about the dangers of greatness.</Backsto
         <Equipment>TightBoots_Light</Equipment>
         <Equipment>K_Female_Short_Hair_01</Equipment>
         <Quote>'Magic is a tool favored by the ambitious usurpers and villains of our world.'</Quote>
-        <NPCRecruitmentText>I can be of service. If you wish to hire me for %d gildar.</NPCRecruitmentText>
+        <NPCRecruitmentText>I have learned the lore of this world from Shandar himself. I require a fee of %d gildar - paid entirely in advance - to share my knowledge.</NPCRecruitmentText>
         <Backstory>Magic is a thing to be feared, friend. It is a primal power whose behavior none can truly understand. I can help predict what a certain spell has tended to achieve in the past, but there are always complicating factors.</Backstory>
         <AnimationPack>FemaleSovereignAnimationPack</AnimationPack>
         <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
@@ -768,12 +800,11 @@ That is the story I wished to tell you, about the dangers of greatness.</Backsto
             <UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
             <UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
             <UnitStat_HitPoints>20</UnitStat_HitPoints>
-			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
-			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
 			<UnitStat_BG_IsRace_Altarians>1</UnitStat_BG_IsRace_Altarians>
-			<UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
-			<UnitStat_BG_IsFemale>1</UnitStat_BG_IsFemale>
         </LevelMilestone>
+		<SelectedAbilityBonusOption>EquipmentAbility_X_Mayriam</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Talent_XM_BlackHole</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_EreogsBox</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>Blood_Altarian</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>JB_PathOfTheSummoner</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>Water1</SelectedAbilityBonusOption>
@@ -783,10 +814,14 @@ That is the story I wished to tell you, about the dangers of greatness.</Backsto
         <SelectedAbilityBonusOption>JB_Summoner_Warlords</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>JB_Summoner_Summon3</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>JB_Summoner_Summon4</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsChampion</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsFemale</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsHumanoid</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsKingdom</SelectedAbilityBonusOption>
         <AutoCreateEquipment>Shortsword_Altar</AutoCreateEquipment>
         <AutoCreateEquipment>LeatherBreastpiece_Altar</AutoCreateEquipment>
         <AutoCreateEquipment>Potion_Healing</AutoCreateEquipment>
-        <AutoCreateEquipment>AmuletOfHaste</AutoCreateEquipment>
+        <AutoCreateEquipment>AmuletOfHaste_FIX</AutoCreateEquipment>
         <AutoCreateEquipment>Scroll_Blizzard</AutoCreateEquipment>
         <Equipment>K_Female_Head_01</Equipment>
         <Equipment>Kingdom_Female_Leather_Gloves_Dark</Equipment>
@@ -795,7 +830,7 @@ That is the story I wished to tell you, about the dangers of greatness.</Backsto
         <Equipment>TightBoots_Dark</Equipment>
         <Equipment>K_Female_Slim_Hair</Equipment>
         <Quote>'The magic I seek may prove my undoing.'</Quote>
-        <NPCRecruitmentText>I can be of service. If you wish to hire me for %d gildar.</NPCRecruitmentText>
+        <NPCRecruitmentText>I will join with your company, for a fee of %d gildar.</NPCRecruitmentText>
         <Backstory>We stand on the verge of catastrophe, my friend. The grayskins seek to extend their dominion over the entirety of this world, and we - all the tribes of man, all the countries, all the races, - must band together to stop them. We must pool the knowledge we have in this fight, yes, even that which the scholars of ages past called the black arts. For surely our foes will use those weapons themselves. </Backstory>
         <AnimationPack>FemaleSovereignAnimationPack</AnimationPack>
         <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
@@ -850,11 +885,7 @@ That is the story I wished to tell you, about the dangers of greatness.</Backsto
             <UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
             <UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
             <UnitStat_HitPoints>20</UnitStat_HitPoints>
-			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
-			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
 			<UnitStat_BG_IsRace_Quendar>1</UnitStat_BG_IsRace_Quendar>
-			<UnitStat_BG_IsEmpire>1</UnitStat_BG_IsEmpire>
-			<UnitStat_BG_IsMale>1</UnitStat_BG_IsMale>
         </LevelMilestone>
         <SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>JB_PathOfTheSummoner</SelectedAbilityBonusOption>
@@ -862,6 +893,12 @@ That is the story I wished to tell you, about the dangers of greatness.</Backsto
         <SelectedAbilityBonusOption>JB_Summoner_Summon1</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>Endurance1_Warrior</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>Brute_Level</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Talent_XM_BlackHole</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_EreogsBox</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsChampion</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsMale</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsHumanoid</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsEmpire</SelectedAbilityBonusOption>
         <AutoCreateEquipment>Mace</AutoCreateEquipment>
 		<Equipment>F_Male_Quendar_Head_01</Equipment>
 		<Equipment>LeatherVambraces_Soldiers</Equipment>
@@ -924,11 +961,7 @@ That is the story I wished to tell you, about the dangers of greatness.</Backsto
             <UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
             <UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
             <UnitStat_HitPoints>20</UnitStat_HitPoints>
-			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
-			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
 			<UnitStat_BG_IsRace_Urxen>1</UnitStat_BG_IsRace_Urxen>
-			<UnitStat_BG_IsEmpire>1</UnitStat_BG_IsEmpire>
-			<UnitStat_BG_IsMale>1</UnitStat_BG_IsMale>
         </LevelMilestone>
         <SelectedAbilityBonusOption>Blood_Urxen</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>JB_PathOfTheSummoner</SelectedAbilityBonusOption>
@@ -937,6 +970,12 @@ That is the story I wished to tell you, about the dangers of greatness.</Backsto
         <SelectedAbilityBonusOption>JB_Summoner_SummonManaDiscount1</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>JB_Summoner_OuterPlanes</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>Scout</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Talent_XM_BlackHole</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_EreogsBox</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsChampion</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsMale</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsHumanoid</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsEmpire</SelectedAbilityBonusOption>
         <AutoCreateEquipment>Spear</AutoCreateEquipment>
 		<Equipment>F_Male_Head_03</Equipment>
 		<Equipment>Fallen_Leather_Pants</Equipment>
@@ -998,11 +1037,7 @@ That is the story I wished to tell you, about the dangers of greatness.</Backsto
             <UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
             <UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
             <UnitStat_HitPoints>20</UnitStat_HitPoints>
-			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
-			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
 			<UnitStat_BG_IsRace_Altarians>1</UnitStat_BG_IsRace_Altarians>
-			<UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
-			<UnitStat_BG_IsFemale>1</UnitStat_BG_IsFemale>
         </LevelMilestone>
         <SelectedAbilityBonusOption>Blood_Altarian</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>JB_PathOfTheSummoner</SelectedAbilityBonusOption>
@@ -1010,6 +1045,12 @@ That is the story I wished to tell you, about the dangers of greatness.</Backsto
         <SelectedAbilityBonusOption>Life1</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>Potential1_Level</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>JB_Mage_Prodigy</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Talent_XM_BlackHole</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_EreogsBox</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsChampion</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsFemale</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsHumanoid</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsKingdom</SelectedAbilityBonusOption>
         <AutoCreateEquipment>Shortsword_Altar</AutoCreateEquipment>
         <AutoCreateEquipment>TildaHerbs</AutoCreateEquipment>
         <AutoCreateEquipment>TurtleCharm</AutoCreateEquipment>
@@ -1073,11 +1114,7 @@ That is the story I wished to tell you, about the dangers of greatness.</Backsto
             <UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
             <UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
             <UnitStat_HitPoints>20</UnitStat_HitPoints>
-			<UnitStat_BG_IsChampion>1</UnitStat_BG_IsChampion>
-			<UnitStat_BG_IsHumanoid>1</UnitStat_BG_IsHumanoid>
 			<UnitStat_BG_IsRace_Mancers>1</UnitStat_BG_IsRace_Mancers>
-			<UnitStat_BG_IsKingdom>1</UnitStat_BG_IsKingdom>
-			<UnitStat_BG_IsMale>1</UnitStat_BG_IsMale>
         </LevelMilestone>
         <SelectedAbilityBonusOption>Blood_Mancer</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>JB_PathOfTheSummoner</SelectedAbilityBonusOption>
@@ -1086,6 +1123,12 @@ That is the story I wished to tell you, about the dangers of greatness.</Backsto
         <SelectedAbilityBonusOption>JB_Summoner_Summon1</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>JB_Summoner_SummonRange</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>JB_Summoner_SummonGroup1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Talent_XM_BlackHole</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_EreogsBox</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsChampion</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsMale</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsHumanoid</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsKingdom</SelectedAbilityBonusOption>
         <AutoCreateEquipment>Staff_Ice</AutoCreateEquipment>
         <AutoCreateEquipment>AmuletOfHaste</AutoCreateEquipment>
 		<Equipment>K_Male_Head_05</Equipment>
