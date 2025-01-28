@@ -13,7 +13,7 @@ Installation Instructions:
 
 2. Copy files from 0_NO in the Mods folder to the data\English folder, replacing the original files.
 
-3. Add text files from Additional Files to data\English.
+3. Add text files from Additional Files to data\English. Replace XH_Resources.
 
 4. Replace the screens folder with the one provided in Additional Files.
 
