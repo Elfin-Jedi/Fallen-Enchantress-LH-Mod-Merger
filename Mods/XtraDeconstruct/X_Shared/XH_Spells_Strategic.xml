@@ -32965,7 +32965,7 @@
 		<GameModifier>
 			<ModType>Player</ModType>
 			<Attribute>UnlockSpell</Attribute>
-			<StrVal>Spell_X_PotRa2</StrVal>
+			<StrVal>Spell_X_PotNi</StrVal>
 			<Duration>-1</Duration>
 		</GameModifier>
 		<GameModifier>
@@ -33155,7 +33155,7 @@
 		<GameModifier>
 			<ModType>Player</ModType>
 			<Attribute>UnlockSpell</Attribute>
-			<StrVal>Spell_X_PotRa2</StrVal>
+			<StrVal>Spell_X_PotNi</StrVal>
 			<Duration>-1</Duration>
 		</GameModifier>
 		<GameModifier>
@@ -33345,7 +33345,7 @@
 		<GameModifier>
 			<ModType>Player</ModType>
 			<Attribute>UnlockSpell</Attribute>
-			<StrVal>Spell_X_PotRa2</StrVal>
+			<StrVal>Spell_X_PotNi</StrVal>
 			<Duration>-1</Duration>
 		</GameModifier>
 		<GameModifier>
@@ -33535,7 +33535,7 @@
 		<GameModifier>
 			<ModType>Player</ModType>
 			<Attribute>UnlockSpell</Attribute>
-			<StrVal>Spell_X_PotRa2</StrVal>
+			<StrVal>Spell_X_PotNi</StrVal>
 			<Duration>-1</Duration>
 		</GameModifier>
 		<GameModifier>
@@ -33725,7 +33725,7 @@
 		<GameModifier>
 			<ModType>Player</ModType>
 			<Attribute>UnlockSpell</Attribute>
-			<StrVal>Spell_X_PotRa2</StrVal>
+			<StrVal>Spell_X_PotNi</StrVal>
 			<Duration>-1</Duration>
 		</GameModifier>
 		<GameModifier>
@@ -33903,7 +33903,7 @@
 		<GameModifier>
 			<ModType>Player</ModType>
 			<Attribute>UnlockSpell</Attribute>
-			<StrVal>Spell_X_PotRa2</StrVal>
+			<StrVal>Spell_X_PotNi</StrVal>
 			<Duration>-1</Duration>
 		</GameModifier>
 		<GameModifier>
@@ -34093,7 +34093,7 @@
 		<GameModifier>
 			<ModType>Player</ModType>
 			<Attribute>UnlockSpell</Attribute>
-			<StrVal>Spell_X_PotRa2</StrVal>
+			<StrVal>Spell_X_PotNi</StrVal>
 			<Duration>-1</Duration>
 		</GameModifier>
 		<GameModifier>
@@ -34283,7 +34283,7 @@
 		<GameModifier>
 			<ModType>Player</ModType>
 			<Attribute>UnlockSpell</Attribute>
-			<StrVal>Spell_X_PotRa2</StrVal>
+			<StrVal>Spell_X_PotNi</StrVal>
 			<Duration>-1</Duration>
 		</GameModifier>
 		<GameModifier>
@@ -34298,6 +34298,576 @@
 		</AIData>
 		<Image>Medallion_X_DoesNotExist.png</Image>
 		<IconFG>Ability_PathOfTheWarrior_Icon.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_PotNi">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Path of the Ninja</DisplayName>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>0</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<PerTurn>1</PerTurn>
+			<Amount>0</Amount>
+		</SpellResourceCost>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Talent_X_DualClass</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_X_PathSelected</Attribute>
+			<Value>13</Value>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_BlackHole</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Become a Ninja.
+		
+		See Tooltip. See WARNINGS.
+		
+		
+		
+		---------------------------------------------------
+		!WARNING!
+		Only cast a MOD Class Spell if you have that MOD installed.
+		(Gravelord, Paladin, Sorcerer)
+		
+		Otherwise, stick to the Core Classes or XtraDeconstruct Classes
+		(Assassin, Bard, Commander, Defender, Mage, Ranger, Shaman, Warrior)
+		
+		::: User's Guide :::
+		a. Casting the Path Spell will give you your 1st Path;
+		b. Level some until you want to change Path;
+		c. Dispel the Path Spell Enchantment
+		(CTRL-K (Govern) > Enchantments > Dispel)
+		d. Level again and you will be able to select your 2nd Path.
+		---------------------------------------------------
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] PATH OF THE NINJA
+		::: Become a Ninja.
+		
+		DOMAIN
+		::: Strategic
+		::: Self
+		
+		EFFECT
+		::: + Path of the Ninja
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: Caster must be Sov
+		::: Unique Unlock
+		::: Player Only
+		
+		SOURCE
+		::: Sovereign Talent
+		::: ::: Dual Class</Description>
+		<SpellType>Strategic</SpellType>
+		<SpellTargetType>Self</SpellTargetType>
+		<CasterMustBeSov>1</CasterMustBeSov>
+		<UniqueSpellUnlock>Spell_X_PotNi</UniqueSpellUnlock>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockUnitAbility</Attribute>
+			<StrVal>PathOfTheNinja</StrVal>
+			<Duration>1000</Duration>
+			<ApplyToCaster>1</ApplyToCaster>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockUnitAbility</Attribute>
+			<StrVal>Ability_X_BlackHole</StrVal>
+			<ApplyToCaster>1</ApplyToCaster>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_PotA</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_PotD</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_PotG</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_PotM</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_PotW</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_PotBa</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_PotNe</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_PotPa</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_PotRa</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_PotSh</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_PotSo</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_PotPr</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_PotNi</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_PotSu</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<Cooldown>1000</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>Ability_PathOfTheAssassin_Icon.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_PotPr">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Path of the Priest</DisplayName>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>0</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<PerTurn>1</PerTurn>
+			<Amount>0</Amount>
+		</SpellResourceCost>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Talent_X_DualClass</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_X_PathSelected</Attribute>
+			<Value>13</Value>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_BlackHole</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Become a Priest.
+		
+		See Tooltip. See WARNINGS.
+		
+		
+		
+		---------------------------------------------------
+		!WARNING!
+		Only cast a MOD Class Spell if you have that MOD installed.
+		(Gravelord, Paladin, Sorcerer)
+		
+		Otherwise, stick to the Core Classes or XtraDeconstruct Classes
+		(Assassin, Bard, Commander, Defender, Mage, Ranger, Shaman, Warrior)
+		
+		::: User's Guide :::
+		a. Casting the Path Spell will give you your 1st Path;
+		b. Level some until you want to change Path;
+		c. Dispel the Path Spell Enchantment
+		(CTRL-K (Govern) > Enchantments > Dispel)
+		d. Level again and you will be able to select your 2nd Path.
+		---------------------------------------------------
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] PATH OF THE PRIEST
+		::: Become a Priest.
+		
+		DOMAIN
+		::: Strategic
+		::: Self
+		
+		EFFECT
+		::: + Path of the Priest
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: Caster must be Sov
+		::: Unique Unlock
+		::: Player Only
+		
+		SOURCE
+		::: Sovereign Talent
+		::: ::: Dual Class</Description>
+		<SpellType>Strategic</SpellType>
+		<SpellTargetType>Self</SpellTargetType>
+		<CasterMustBeSov>1</CasterMustBeSov>
+		<UniqueSpellUnlock>Spell_X_PotPt</UniqueSpellUnlock>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockUnitAbility</Attribute>
+			<StrVal>JB_PathOfThePriest</StrVal>
+			<Duration>1000</Duration>
+			<ApplyToCaster>1</ApplyToCaster>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockUnitAbility</Attribute>
+			<StrVal>Ability_X_BlackHole</StrVal>
+			<ApplyToCaster>1</ApplyToCaster>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_PotA</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_PotD</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_PotG</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_PotM</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_PotW</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_PotBa</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_PotNe</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_PotPa</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_PotRa</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_PotSh</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_PotSo</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_PotPr</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_PotNi</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_PotSu</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<Cooldown>1000</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>JB_Ability_PathOfThePriest_Icon.png</IconFG>
+	</SpellDef>
+	<SpellDef InternalName="Spell_X_PotSu">
+		<AutoUnlock>1</AutoUnlock>
+		<DisplayName>[S] Path of the Summoner</DisplayName>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<Amount>0</Amount>
+		</SpellResourceCost>
+		<SpellResourceCost>
+			<Resource>Mana</Resource>
+			<PerTurn>1</PerTurn>
+			<Amount>0</Amount>
+		</SpellResourceCost>
+		<Prereq>
+			<Type>AbilityBonusOption</Type>
+			<Attribute>Talent_X_DualClass</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<Prereq>
+			<Type>UnitStat</Type>
+			<Attribute>UnitStat_X_PathSelected</Attribute>
+			<Value>13</Value>
+		</Prereq>
+		<Prereq>
+			<Type>RestrictedAbilityBonusOption</Type>
+			<Attribute>Ability_X_BlackHole</Attribute>
+			<Target>Unit</Target>
+		</Prereq>
+		<CanStack>0</CanStack>
+		<HideInHiergamenon>0</HideInHiergamenon>
+		<Description>Become a Summoner.
+		
+		See Tooltip. See WARNINGS.
+		
+		
+		
+		---------------------------------------------------
+		!WARNING!
+		Only cast a MOD Class Spell if you have that MOD installed.
+		(Gravelord, Paladin, Sorcerer)
+		
+		Otherwise, stick to the Core Classes or XtraDeconstruct Classes
+		(Assassin, Bard, Commander, Defender, Mage, Ranger, Shaman, Warrior)
+		
+		::: User's Guide :::
+		a. Casting the Path Spell will give you your 1st Path;
+		b. Level some until you want to change Path;
+		c. Dispel the Path Spell Enchantment
+		(CTRL-K (Govern) > Enchantments > Dispel)
+		d. Level again and you will be able to select your 2nd Path.
+		---------------------------------------------------
+		
+		
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		::: HIERGAMENON ENTRY :::
+		::::::::::::::::::::::::::::::::::::::::::::::::::::
+		
+		
+		[S] PATH OF THE SUMMONER
+		::: Become a Summoner.
+		
+		DOMAIN
+		::: Strategic
+		::: Self
+		
+		EFFECT
+		::: + Path of the Summoner
+		
+		FIGHTABLE
+		::: Not Defendable
+		::: Not Resistible
+		
+		INTERVAL
+		::: Instant
+		
+		OTHER
+		::: Caster must be Sov
+		::: Unique Unlock
+		::: Player Only
+		
+		SOURCE
+		::: Sovereign Talent
+		::: ::: Dual Class</Description>
+		<SpellType>Strategic</SpellType>
+		<SpellTargetType>Self</SpellTargetType>
+		<CasterMustBeSov>1</CasterMustBeSov>
+		<UniqueSpellUnlock>Spell_X_PotPt</UniqueSpellUnlock>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockUnitAbility</Attribute>
+			<StrVal>JB_PathOfTheSummoner</StrVal>
+			<Duration>1000</Duration>
+			<ApplyToCaster>1</ApplyToCaster>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>UnlockUnitAbility</Attribute>
+			<StrVal>Ability_X_BlackHole</StrVal>
+			<ApplyToCaster>1</ApplyToCaster>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_PotA</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_PotD</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_PotG</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_PotM</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_PotW</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_PotBa</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_PotNe</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_PotPa</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_PotRa</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_PotSh</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_PotSo</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_PotPr</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_PotNi</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<GameModifier>
+			<ModType>Player</ModType>
+			<Attribute>UnlockSpell</Attribute>
+			<StrVal>Spell_X_PotSu</StrVal>
+			<Duration>-1</Duration>
+		</GameModifier>
+		<Cooldown>1000</Cooldown>
+		<AIData AIPersonality="AI_General">
+			<AIPriority>0</AIPriority>
+		</AIData>
+		<Image>Medallion_X_DoesNotExist.png</Image>
+		<IconFG>JB_Ability_PathSummoner_Icon.png</IconFG>
 	</SpellDef>
 	<SpellDef InternalName="Spell_X_Power_Air">
 		<AutoUnlock>1</AutoUnlock>
