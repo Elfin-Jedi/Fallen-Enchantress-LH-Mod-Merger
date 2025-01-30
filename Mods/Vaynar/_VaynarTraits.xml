@@ -35,7 +35,14 @@
                 <Attribute>UnlockCombatAbility</Attribute>
                 <StrVal>Rush</StrVal>
                 <Provides>Rush- Unit takes an extra action</Provides>
-            </GameModifier>			
+            </GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_CombatSpeed</StrVal>
+				<Value>18</Value>
+				<Provides>::: +18 Initiative</Provides>
+			</GameModifier>
             <HideWhenUpgraded>0</HideWhenUpgraded>
             <AIData AIPersonality="AI_General">
                 <AIPriority>5</AIPriority>

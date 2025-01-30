@@ -17,8 +17,6 @@
             </AIData>
         </AbilityBonusOption>
     </AbilityBonus>
-	
-<AbilityBonuses>
 
     <AbilityBonus InternalName="DogsofWarAbility">
         <AbilityBonusType>Player</AbilityBonusType>
@@ -74,8 +72,7 @@
             </AIData>
         </AbilityBonusOption>
     </AbilityBonus>
-	
-<AbilityBonuses>
+
     <AbilityBonus InternalName="FaithAbility">
         <AbilityBonusType>Player</AbilityBonusType>
         <AbilityBonusOption InternalName="Faith">
@@ -143,8 +140,7 @@
             </AIData>
         </AbilityBonusOption>
     </AbilityBonus>		
-	
-<AbilityBonuses>
+
     <AbilityBonus InternalName="PurificationAbility">
         <AbilityBonusType>Player</AbilityBonusType>
         <AbilityBonusOption InternalName="Purification">
@@ -164,8 +160,7 @@
             </AIData>
         </AbilityBonusOption>
     </AbilityBonus>	
-	
-<AbilityBonuses>
+
     <AbilityBonus InternalName="Horde_Ability">
         <AbilityBonusType>Player</AbilityBonusType>
         <AbilityBonusOption InternalName="Horde">
@@ -293,7 +288,14 @@
                 <Attribute>UnlockCombatAbility</Attribute>
                 <StrVal>Resolve_Ability</StrVal>
                 <Provides>Resolve - +1 Physical Attack and +5 Accuracy.  Resolve is stackable.</Provides>
-            </GameModifier>				
+            </GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_CombatSpeed</StrVal>
+				<Value>18</Value>
+				<Provides>::: +18 Initiative</Provides>
+			</GameModifier>
             <HideWhenUpgraded>0</HideWhenUpgraded>
             <AIData AIPersonality="AI_General">
                 <AIPriority>5</AIPriority>
@@ -318,7 +320,14 @@
                 <StrVal>UnitStat_Moves</StrVal>
                 <Value>-1</Value>
                 <Provides>-1 Moves</Provides>
-            </GameModifier>			
+            </GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_CombatSpeed</StrVal>
+				<Value>18</Value>
+				<Provides>::: +18 Initiative</Provides>
+			</GameModifier>
             <AIData AIPersonality="AI_General">
                 <AIPriority>5</AIPriority>
             </AIData>

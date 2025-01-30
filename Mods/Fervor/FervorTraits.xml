@@ -26,7 +26,14 @@
                 <Attribute>UnlockCombatAbility</Attribute>
                 <StrVal>Smite</StrVal>
                 <Provides>Smite - does +1 per Level fire damage, usable at short range.</Provides>
-            </GameModifier>	
+            </GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_CombatSpeed</StrVal>
+				<Value>18</Value>
+				<Provides>::: +18 Initiative</Provides>
+			</GameModifier>
             <HideWhenUpgraded>0</HideWhenUpgraded>
             <AIData AIPersonality="AI_General">
                 <AIPriority>5</AIPriority>
@@ -58,7 +65,14 @@
                 <Attribute>UnlockCombatAbility</Attribute>
                 <StrVal>VipersBite</StrVal>
                 <Provides>Viper's Bite - Melee poison attack. If the targeted unit dies, gain 3 mana.</Provides>
-            </GameModifier>	
+            </GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_CombatSpeed</StrVal>
+				<Value>18</Value>
+				<Provides>::: +18 Initiative</Provides>
+			</GameModifier>
             <HideWhenUpgraded>0</HideWhenUpgraded>
             <AIData AIPersonality="AI_General">
                 <AIPriority>5</AIPriority>
@@ -201,7 +215,7 @@
                 <ModType>Unit</ModType>
                 <Attribute>AdjustUnitStat</Attribute>
                 <StrVal>UnitStat_SpellDamage</StrVal>
-                <Value>10<Value>
+                <Value>10</Value>
                 <Provides>+10% Spell Damage</Provides>
             </GameModifier>
 			<GameModifier>
