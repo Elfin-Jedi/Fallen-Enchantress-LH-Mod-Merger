@@ -1,0 +1,1029 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<AbilityBonuses>
+	
+	<ContainerPathRangerAbilities>
+		<AbilityBonus InternalName="JB_SpotterAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Spotter">
+				<DisplayName>Spotter</DisplayName>
+				<Description>+1 Sight Range, and +1 to the Army's Initiative on the first turn of combat</Description>
+				<Icon>JB_Ability_Spotter_Icon.png</Icon>
+				<PerkTreePosX>0</PerkTreePosX>
+				<PerkTreePosY>8</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_Sight</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Sight Range</Provides>
+				</GameModifier>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>BattleAutoCastSpell</Attribute>
+					<StrVal>JB_Spotter_Effect</StrVal>
+					<Value>100</Value>
+					<Provides>All friendly units are +1 Initiative for the first turn of combat</Provides>
+				</GameModifier>			
+				<Type>Army</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>Path_X_Ranger</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="JB_Precision_Ranger_Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Precision_Ranger">
+				<DisplayName>Precision I</DisplayName>
+				<Description>+5 Accuracy</Description>
+				<Icon>Ability_PrecisionI_Icon.png</Icon>
+				<PerkTreePosX>0</PerkTreePosX>
+				<PerkTreePosY>10</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_Accuracy</StrVal>
+					<Value>5</Value>
+					<Provides>+5 Accuracy</Provides>
+				</GameModifier>
+				<Type>Aggressive</Type>
+				<UpgradePathID>JB_Precision_Ranger</UpgradePathID>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>Path_X_Ranger</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="JB_Precision2_Ranger_Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Precision2_Ranger">
+				<DisplayName>Precision II</DisplayName>
+				<Description>+10 Accuracy</Description>
+				<Icon>Ability_PrecisionII_Icon.png</Icon>
+				<PerkTreePosX>1</PerkTreePosX>
+				<PerkTreePosY>10</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_Accuracy</StrVal>
+					<Value>10</Value>
+					<Provides>+10 Accuracy</Provides>
+				</GameModifier>
+				<Type>Aggressive</Type>
+				<UpgradePathID>JB_Precision_Ranger</UpgradePathID>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Precision_Ranger</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="JB_Precision3_Ranger_Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Precision3_Ranger">
+				<DisplayName>Precision III</DisplayName>
+				<Description>+15 Accuracy</Description>
+				<Icon>Ability_PrecisionIII_Icon.png</Icon>
+				<PerkTreePosX>2</PerkTreePosX>
+				<PerkTreePosY>10</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_Accuracy</StrVal>
+					<Value>15</Value>
+					<Provides>+15 Accuracy</Provides>
+				</GameModifier>
+				<Type>Aggressive</Type>
+				<UpgradePathID>JB_Precision_Ranger</UpgradePathID>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Precision2_Ranger</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="JB_Dodge1_Ranger_Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Dodge1_Ranger">
+				<DisplayName>Dodge I</DisplayName>
+				<Description>+4 to Dodge</Description>
+				<Icon>Ability_DodgeI_Icon.png</Icon>
+				<PerkTreePosX>0</PerkTreePosX>
+				<PerkTreePosY>11</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_Dodge</StrVal>
+					<Value>4</Value>
+					<Provides>+4 to Dodge</Provides>
+				</GameModifier>
+				<Type>Defensive</Type>
+				<UpgradePathID>JB_Dodge_Ranger</UpgradePathID>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>Path_X_Ranger</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="JB_Dodge2_Ranger_Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Dodge2_Ranger">
+				<DisplayName>Dodge II</DisplayName>
+				<Description>+5 to Dodge</Description>
+				<Icon>Ability_DodgeII_Icon.png</Icon>
+				<PerkTreePosX>1</PerkTreePosX>
+				<PerkTreePosY>11</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_Dodge</StrVal>
+					<Value>5</Value>
+					<Provides>+5 to Dodge</Provides>
+				</GameModifier>
+				<Type>Defensive</Type>
+				<UpgradePathID>JB_Dodge_Ranger</UpgradePathID>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Dodge1_Ranger</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="JB_HeightenedSenses_Ranger_Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_HeightenedSenses_Ranger">
+				<DisplayName>Heightened Senses</DisplayName>
+				<Description>+2 Initiative on the first turn of combat and +10 Dodge vs missile attacks</Description>
+				<Icon>JB_Ability_HeightenedSenses_Icon.png</Icon>
+				<PerkTreePosX>2</PerkTreePosX>
+				<PerkTreePosY>11</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_CombatSpeed</StrVal>
+					<Value>2</Value>
+					<Provides>+2 Initiative for the first turn of combat</Provides>
+					<xActions>1</xActions>
+				</GameModifier>	
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_DodgeAgainstRanged</StrVal>
+					<Value>10</Value>
+				</GameModifier>
+				<Type>Defensive</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Dodge2_Ranger</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="JB_KillerInstinct_Ranger_Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_KillerInstinct_Ranger">
+				<DisplayName>Killer Instinct</DisplayName>
+				<Description>+2 Attack and a further +3 Attack vs damaged enemies</Description>
+				<Icon>JB_Ability_KillerInstinct_Icon.png</Icon>
+				<PerkTreePosX>3</PerkTreePosX>
+				<PerkTreePosY>11</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_Attack_Boost</StrVal>
+					<Value>2</Value>
+					<Provides>+2 Attack</Provides>
+				</GameModifier>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_Attack_Boost</StrVal>
+					<Value>3</Value>
+					<Provides>+3 Attack vs Damaged Opponents</Provides>
+					<vsDamaged>1</vsDamaged>
+				</GameModifier>
+				<CombatRating>10</CombatRating>
+				<IsCombatAbility>1</IsCombatAbility>
+				<Type>Aggressive</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_HeightenedSenses_Ranger</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>		
+		<AbilityBonus InternalName="JB_Endurance1_Ranger_Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Endurance1_Ranger">
+				<DisplayName>Endurance I</DisplayName>
+				<Description>+10 Hit Points</Description>
+				<Icon>Ability_EnduranceI_Icon.png</Icon>
+				<PerkTreePosX>4</PerkTreePosX>
+				<PerkTreePosY>11</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_HitPoints</StrVal>
+					<Value>10</Value>
+					<Provides>+10 Hit Points</Provides>
+				</GameModifier>
+				<Type>Defensive</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_KillerInstinct_Ranger</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="JB_Resilience_Ranger_Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Resilience_Ranger">
+				<DisplayName>Resilience</DisplayName>
+				<Description>+25% Resistance to Cold, Fire, Lightning and Poison</Description>
+				<Icon>JB_Ability_Resilience_Icon.png</Icon>
+				<PerkTreePosX>5</PerkTreePosX>
+				<PerkTreePosY>11</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_ResistCold</StrVal>
+					<Value>25</Value>
+				</GameModifier>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_ResistFire</StrVal>
+					<Value>25</Value>
+				</GameModifier>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_ResistLightning</StrVal>
+					<Value>25</Value>
+				</GameModifier>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_ResistPoison</StrVal>
+					<Value>25</Value>
+				</GameModifier>
+				<Type>Defensive</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Endurance1_Ranger</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="JB_Spell_NetAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Spell_Net">
+				<DisplayName>Net</DisplayName>
+				<Description>Target enemy is immobilized for 3 rounds unless they resist.</Description>
+				<Icon>JB_Ability_Net_Icon.png</Icon>
+				<PerkTreePosX>1</PerkTreePosX>
+				<PerkTreePosY>7</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>UnlockCombatAbility</Attribute>
+					<StrVal>JB_Net_Ability</StrVal>
+					<Provides>Target enemy is immobilized for 3 rounds unless they resist.</Provides>
+				</GameModifier>
+				<Type>Ability</Type>
+				<CombatRating>10</CombatRating>
+				<IsCombatAbility>1</IsCombatAbility>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Spotter</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="JB_QuickDrawAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_QuickDraw">
+				<DisplayName>Quick Draw I</DisplayName>
+				<Description>+2 Initiative when using a Bow</Description>
+				<Icon>JB_Ability_QuickDraw1_Icon.png</Icon>
+				<PerkTreePosX>1</PerkTreePosX>
+				<PerkTreePosY>9</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>BattleAutoCastSpell</Attribute>
+					<StrVal>JB_QuickDraw_Ability</StrVal>
+					<Value>100</Value>
+					<Provides>+2 Initiative when using a Bow</Provides>
+				</GameModifier>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_JB_BonusQuickDraw</StrVal>
+					<Value>2</Value>
+					<Provides>.</Provides>
+				</GameModifier>
+				<Type>Aggressive</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Precision_Ranger</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="JB_QuickDraw2Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_QuickDraw2">
+				<DisplayName>Quick Draw II</DisplayName>
+				<Description>+2 Initiative when using a Bow</Description>
+				<Icon>JB_Ability_QuickDraw2_Icon.png</Icon>
+				<PerkTreePosX>2</PerkTreePosX>
+				<PerkTreePosY>9</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_JB_BonusQuickDraw</StrVal>
+					<Value>2</Value>
+					<Provides>+2 Initiative when using a Bow</Provides>
+				</GameModifier>
+				<Type>Aggressive</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_QuickDraw</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="JB_RainOfArrowsAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_RainOfArrows">
+				<DisplayName>Rain of Arrows</DisplayName>
+				<Description>Archer only.  Fires arrows at all enemies in a 1 tile radius</Description>
+				<Icon>Ability_RainofArrows_Icon.png</Icon>
+				<PerkTreePosX>3</PerkTreePosX>
+				<PerkTreePosY>9</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>UnlockCombatAbility</Attribute>
+					<StrVal>RainOfArrows</StrVal>
+					<Provides>Archer only.  Fires arrows at all enemies in a 1 tile radius</Provides>
+				</GameModifier>
+				<IsCombatAbility>1</IsCombatAbility>
+				<Type>Ability</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_QuickDraw2</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="JB_FasterAloneAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_FasterAlone">
+				<DisplayName>Faster Alone</DisplayName>
+				<Description>+1 Moves when in an army alone</Description>
+				<Icon>JB_Ability_FasterAlone_Icon.png</Icon>
+				<PerkTreePosX>1</PerkTreePosX>
+				<PerkTreePosY>8</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_Moves</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Moves when in an army alone</Provides>
+					<WhenUnderArmySize>1</WhenUnderArmySize>
+				</GameModifier>
+				<Type>Army</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Spotter</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="JB_InfiltrateAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Infiltrate">
+				<DisplayName>Infiltrate</DisplayName>
+				<Description>For the first turn of combat, unit is +3 Moves and Initiative, and +20 Dodge but cannot cast spells</Description>
+				<Icon>JB_Ability_Infiltrate_Icon.png</Icon>
+				<PerkTreePosX>2</PerkTreePosX>
+				<PerkTreePosY>7</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_CombatSpeed</StrVal>
+					<Value>3</Value>
+					<Provides>+3 Initiative on the first round of combat</Provides>
+					<xActions>1</xActions>
+				</GameModifier>	
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_Moves</StrVal>
+					<Value>3</Value>
+					<Provides>+3 Moves for the first turn of combat</Provides>
+					<xActions>1</xActions>
+				</GameModifier>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_Dodge</StrVal>
+					<Value>20</Value>
+					<Provides>+20 Dodge for the first turn of combat</Provides>
+					<xActions>1</xActions>
+				</GameModifier>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>PreventSpellcasting</Attribute>
+					<DisplayName>Infiltrate</DisplayName>
+					<Provides>Prevent spellcasting for the first turn of combat</Provides>
+					<xActions>1</xActions>
+				</GameModifier>
+				<Type>Aggressive</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_FasterAlone</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="JB_Scout_Ranger_Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Scout_Ranger">
+				<DisplayName>Scout</DisplayName>
+				<Description>No Movement penalty in Forests, Swamps or Hills and +1 Sight Range</Description>
+				<Icon>Ability_Scout_Icon.png</Icon>
+				<PerkTreePosX>2</PerkTreePosX>
+				<PerkTreePosY>8</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>MovementCostOverRide</Attribute>
+					<StrVal>Forest</StrVal>
+					<Value>8</Value>
+					<Provides>No Movement penalty in Forests</Provides>
+				</GameModifier>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>MovementCostOverRide</Attribute>
+					<StrVal>SwampTerrain</StrVal>
+					<Value>8</Value>
+					<Provides>No Movement penalty in Swamps</Provides>
+				</GameModifier>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>MovementCostOverRide</Attribute>
+					<StrVal>HillsTerrain</StrVal>
+					<Value>8</Value>
+					<Provides>No Movement penalty on Hills</Provides>
+				</GameModifier>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_Sight</StrVal>
+					<Value>1</Value>
+					<Provides>+1 Sight Range</Provides>
+				</GameModifier>
+				<Type>Army</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_FasterAlone</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="JB_ReconnaissanceAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Reconnaissance">
+				<DisplayName>Reconnaissance</DisplayName>
+				<Description>Allows the unit to use the Reconnaissance strategic ability, which briefly reveals the map in a 7 tile radius from the caster.</Description>
+				<Icon>JB_Ability_Reconnaissance_Icon.png</Icon>
+				<PerkTreePosX>3</PerkTreePosX>
+				<PerkTreePosY>7</PerkTreePosY>
+				<GameModifier>
+					<Provides>Allows the unit to use the Reconnaissance strategic ability, which briefly reveals the map in a 7 tile radius from the caster.</Provides>
+				</GameModifier>
+				<Type>Ability</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Scout_Ranger</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="JB_Loner_Ranger_Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Loner_Ranger">
+				<DisplayName>Loner</DisplayName>
+				<Description>+5 to Attack, Initiative and Dodge when in an army alone</Description>
+				<Icon>Ability_Loner_Icon.png</Icon>
+				<PerkTreePosX>4</PerkTreePosX>
+				<PerkTreePosY>7</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_Attack_Boost</StrVal>
+					<Value>5</Value>
+					<Provides>+5 Attack when in an army alone</Provides>
+					<WhenUnderArmySize>2</WhenUnderArmySize>
+				</GameModifier>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_CombatSpeed</StrVal>
+					<Value>5</Value>
+					<Provides>+5 Initiative when in an army alone</Provides>
+					<WhenUnderArmySize>2</WhenUnderArmySize>
+				</GameModifier>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_Dodge</StrVal>
+					<Value>5</Value>
+					<Provides>+5 Dodge when in an army alone</Provides>
+					<WhenUnderArmySize>2</WhenUnderArmySize>
+				</GameModifier>
+				<Type>Aggressive</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Reconnaissance</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="JB_PathfinderAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Pathfinder">
+				<DisplayName>Pathfinder</DisplayName>
+				<Description>+1 to the Army's Moves</Description>
+				<Icon>JB_Ability_Pathfinder_Icon.png</Icon>
+				<PerkTreePosX>3</PerkTreePosX>
+				<PerkTreePosY>8</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustArmyStat</Attribute>
+					<StrVal>UnitStat_Moves</StrVal>
+					<Value>1</Value>
+					<Provides>+1 to the Army's Moves</Provides>
+				</GameModifier>
+				<Type>Army</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Scout_Ranger</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="JB_Huntsmen1Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Huntsmen1">
+				<DisplayName>Huntsmen I</DisplayName>
+				<Description>+25% Attack vs Beasts unless user is Beasts</Description>
+				<Icon>JB_Ability_Huntsmen1_Icon.png</Icon>
+				<PerkTreePosX>4</PerkTreePosX>
+				<PerkTreePosY>8</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_Attack_Boost</StrVal>
+					<StrVal2>UnitStat_BG_IsBeast</StrVal2>
+					<Multiplier>1.25</Multiplier>
+					<Provides>+25% Attack vs Beasts unless user is Beasts</Provides>
+					<vsHigher>1</vsHigher>
+				</GameModifier>
+				<Type>Aggressive</Type>
+				<UpgradePathID>JB_Huntsmen_Ranger</UpgradePathID>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Pathfinder</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="JB_Huntsmen2Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Huntsmen2">
+				<DisplayName>Master Huntsmen</DisplayName>
+				<Description>+25% Attack vs Beasts unless user is Beasts</Description>
+				<Icon>JB_Ability_Huntsmen2_Icon.png</Icon>
+				<PerkTreePosX>5</PerkTreePosX>
+				<PerkTreePosY>8</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_Attack_Boost</StrVal>
+					<StrVal2>UnitStat_BG_IsBeast</StrVal2>
+					<Multiplier>1.25</Multiplier>
+					<Provides>+25% Attack vs Beasts unless user is Beasts</Provides>
+					<vsHigher>1</vsHigher>
+				</GameModifier>
+				<Type>Aggressive</Type>
+				<UpgradePathID>JB_Huntsmen_Ranger</UpgradePathID>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Huntsmen1</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="JB_Spell_TrapperAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Spell_Trapper">
+				<DisplayName>Trapper</DisplayName>
+				<Description>At the start of combat a random enemy unit suffers damage equal to the caster level and is immobilized for 2 turns</Description>
+				<Icon>JB_Ability_Trapper_Icon.png</Icon>
+				<PerkTreePosX>6</PerkTreePosX>
+				<PerkTreePosY>8</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>BattleAutoCastSpell</Attribute>
+					<StrVal>JB_Trap_Ability</StrVal>
+					<Value>100</Value>
+					<Provides>At the start of combat a random enemy unit suffers damage equal to the caster level and is immobilized for 2 turns</Provides>
+				</GameModifier>
+				<IsCombatAbility>1</IsCombatAbility>
+				<Type>Ability</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Huntsmen2</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="JB_MonsterHunterAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_MonsterHunter">
+				<DisplayName>Monster Hunter</DisplayName>
+				<Description>+25% Attack vs Monster units (non humanoids)</Description>
+				<Icon>JB_Ability_MonsterHunter_Icon.png</Icon>
+				<PerkTreePosX>7</PerkTreePosX>
+				<PerkTreePosY>8</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_Attack_Boost</StrVal>
+					<StrVal2>UnitStat_BG_IsMonster</StrVal2>
+					<Multiplier>1.25</Multiplier>
+					<BonusValue>0.5</BonusValue>
+					<Provides>+25% Attack vs Monster units (non humanoids)</Provides>
+					<vsHigher>1</vsHigher>
+				</GameModifier>
+				<Type>Aggressive</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Huntsmen1</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="JB_Enmity_Ranger_Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Enmity_Ranger">
+				<DisplayName>Enmity</DisplayName>
+				<Description>+25% Attack vs units of the opposite race (fallen vs men)</Description>
+				<Icon>Ability_Enmity_Icon.png</Icon>
+				<PerkTreePosX>4</PerkTreePosX>
+				<PerkTreePosY>9</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_Attack_Pierce</StrVal>
+					<Multiplier>1.25</Multiplier>
+					<Provides>+25% Attack vs opponents of the opposite race (fallen vs men)</Provides>
+					<vsOtherAllegiance>1</vsOtherAllegiance>
+				</GameModifier>
+				<IsCombatAbility>1</IsCombatAbility>
+				<Type>Aggressive</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Pathfinder</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="JB_DauntlessAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_Dauntless">
+				<DisplayName>Dauntless</DisplayName>
+				<Description>Allows the unit to make an attack with the Dauntless ability, which gives an attack bonus equal to 25% of the target unit's Attack.</Description>
+				<Icon>JB_Ability_Dauntless_Icon.png</Icon>
+				<PerkTreePosX>5</PerkTreePosX>
+				<PerkTreePosY>9</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>UnlockCombatAbility</Attribute>
+					<StrVal>JB_Dauntless_Ability</StrVal>
+					<Provides>Allows the unit to make an attack with the Dauntless ability, which gives an attack bonus equal to 25% of the target unit's Attack.</Provides>
+				</GameModifier>
+				<CombatRating>5</CombatRating>				
+				<IsCombatAbility>1</IsCombatAbility>
+				<Type>Ability</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Enmity_Ranger</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="JB_TrollSlayerAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_TrollSlayer">
+				<DisplayName>Troll Slayer</DisplayName>
+				<Description>+25% Attack vs Twisted units</Description>
+				<Icon>JB_Ability_TrollSlayer_Icon.png</Icon>
+				<PerkTreePosX>6</PerkTreePosX>
+				<PerkTreePosY>9</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_Attack_Boost</StrVal>
+					<StrVal2>UnitStat_BG_IsTwisted</StrVal2>
+					<Multiplier>1.25</Multiplier>
+					<BonusValue>0.5</BonusValue>
+					<Provides>+25% Attack vs Twisted units</Provides>
+					<vsHigher>1</vsHigher>
+				</GameModifier>
+				<Type>Aggressive</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Dauntless</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="JB_GiantSlayerAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_GiantSlayer">
+				<DisplayName>Giant Slayer</DisplayName>
+				<Description>+25% Attack vs Large (and Monstrous) units</Description>
+				<Icon>JB_Ability_GiantSlayer_Icon.png</Icon>
+				<PerkTreePosX>7</PerkTreePosX>
+				<PerkTreePosY>9</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>AdjustUnitStat</Attribute>
+					<StrVal>UnitStat_Attack_Boost</StrVal>
+					<StrVal2>UnitStat_BG_IsLarge</StrVal2>
+					<Multiplier>1.25</Multiplier>
+					<BonusValue>0.5</BonusValue>
+					<Provides>+25% Attack vs Large (and Monstrous) units</Provides>
+					<vsHigher>1</vsHigher>
+				</GameModifier>
+				<Type>Aggressive</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_TrollSlayer</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<!--
+		<AbilityBonus InternalName="JB_DeadlyAimAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_DeadlyAim">
+				<DisplayName>Deadly Aim</DisplayName>
+				<Description>Archer only.  Skip turn, but +25% Accuracy, +25% chance to Critical, +25% Critical Hit damage subsequent turn</Description>
+				<Icon>JB_Ability_DeadlyAim_Icon.png</Icon>
+				<PerkTreePosX>3</PerkTreePosX>
+				<PerkTreePosY>3</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>UnlockCombatAbility</Attribute>
+					<StrVal>JB_DeadlyAim_Ability</StrVal>
+					<Provides>Archer only.  Skip turn, but +25% Accuracy, +25% chance to Critical, +25% Critical Hit damage subsequent turn</Provides>
+				</GameModifier>
+				<IsCombatAbility>1</IsCombatAbility>
+				<Type>Ability</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Precision3_Ranger</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		-->
+		<AbilityBonus InternalName="JB_LegShotAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_LegShot">
+				<DisplayName>Leg Shot</DisplayName>
+				<Description>Normal damage and target is -1 Moves for 3 turns.</Description>
+				<Icon>JB_Ability_Legshot_Icon.png</Icon>
+				<PerkTreePosX>3</PerkTreePosX>
+				<PerkTreePosY>10</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>UnlockCombatAbility</Attribute>
+					<StrVal>JB_LegShot_Ability</StrVal>
+					<Duration>3</Duration>
+					<Provides>Normal damage and target is -1 Moves for 3 turns.</Provides>
+				</GameModifier>
+				<IsCombatAbility>1</IsCombatAbility>
+				<Type>Ability</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Precision3_Ranger</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="JB_EyeShotAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_EyeShot">
+				<DisplayName>Eye Shot</DisplayName>
+				<Description>Normal damage and target is -25% Accuracy.</Description>
+				<Icon>JB_Ability_Eyeshot_Icon.png</Icon>
+				<PerkTreePosX>4</PerkTreePosX>
+				<PerkTreePosY>10</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>UnlockCombatAbility</Attribute>
+					<StrVal>JB_EyeShot_Ability</StrVal>
+					<Provides>Normal damage and target is -25% Accuracy.</Provides>
+				</GameModifier>
+				<IsCombatAbility>1</IsCombatAbility>
+				<Type>Ability</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_LegShot</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="JB_CripplingShotAbility">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_CripplingShot">
+				<DisplayName>Crippling Shot</DisplayName>
+				<Description>Normal damage and target is -25% Attack.</Description>
+				<Icon>JB_Ability_Crippleshot_Icon.png</Icon>
+				<PerkTreePosX>5</PerkTreePosX>
+				<PerkTreePosY>10</PerkTreePosY>
+				<GameModifier>
+					<ModType>Unit</ModType>
+					<Attribute>UnlockCombatAbility</Attribute>
+					<StrVal>JB_CripplingShot_Ability</StrVal>
+					<Provides>Normal damage and target is -25% Attack.</Provides>
+				</GameModifier>
+				<IsCombatAbility>1</IsCombatAbility>
+				<Type>Ability</Type>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_EyeShot</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>
+		<AbilityBonus InternalName="JB_SummonAllyKingdom_Ranger_Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_SummonAllyKingdom_Ranger">
+				<DisplayName>Call Bear</DisplayName>
+				<Description>Allows the Ranger to call a Bear (level equal to caster) into tactical battle</Description>
+				<Icon>JB_SummonAllyKingdom.png</Icon>
+				<PerkTreePosX>5</PerkTreePosX>
+				<PerkTreePosY>7</PerkTreePosY>
+				<GameModifier>
+					<Provides>Allows the Ranger to call a Bear (level equal to caster) into tactical battle</Provides>
+				</GameModifier>	  
+				<Type>Spell</Type>
+				<Prereq>
+					<Type>Allegiance</Type>
+					<Attribute>Kingdom</Attribute>
+				</Prereq>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Huntsmen1</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>	
+		<AbilityBonus InternalName="JB_SummonAllyEmpire_Ranger_Ability">
+			<AbilityBonusType>Unit_Level</AbilityBonusType>
+			<AbilityBonusOption InternalName="JB_SummonAllyEmpire_Ranger">
+				<DisplayName>Call Dire Boar</DisplayName>
+				<Description>Allows the Ranger to call a Dire Boar (level equal to caster) into tactical battle</Description>
+				<Icon>JB_SummonAllyEmpire.png</Icon>
+				<PerkTreePosX>5</PerkTreePosX>
+				<PerkTreePosY>7</PerkTreePosY>
+				<GameModifier>
+					<Provides>Allows the Ranger to call a Dire Boar (level equal to caster) into tactical battle</Provides>
+				</GameModifier>	  
+				<Type>Spell</Type>
+				<Prereq>
+					<Type>Allegiance</Type>
+					<Attribute>Empire</Attribute>
+				</Prereq>
+				<Prereq>
+					<Type>AbilityBonusOption</Type>
+					<Target>Unit</Target>
+					<Attribute>JB_Huntsmen1</Attribute>
+				</Prereq>
+				<AIData AIPersonality="AI_General">
+					<AIPriority>5</AIPriority>
+				</AIData>
+			</AbilityBonusOption>
+		</AbilityBonus>			
+		
+	</ContainerPathRangerAbilities>
+
+	
+</AbilityBonuses>
+		
