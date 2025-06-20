@@ -49,6 +49,73 @@
             </AIData>
         </AbilityBonusOption>
     </AbilityBonus>
+	<AbilityBonus InternalName="Blood_Vaynar_extramove">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_Vaynar_extramove">
+			<DisplayName>Legionary</DisplayName>
+			<MinimumLevel>7</MinimumLevel>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<MinimumLevel>7</MinimumLevel>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_Vaynar</Attribute>
+			</Prereq>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_Vaynar</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_Vaynar_extramove2">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_Vaynar_extramove2">
+			<DisplayName>Quick March</DisplayName>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_Vaynar_extramove</Attribute>
+			</Prereq>
+			<MinimumLevel>10</MinimumLevel>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_Vaynar</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
 	
 	
     <AbilityBonus InternalName="KnightlyOrderAbility">

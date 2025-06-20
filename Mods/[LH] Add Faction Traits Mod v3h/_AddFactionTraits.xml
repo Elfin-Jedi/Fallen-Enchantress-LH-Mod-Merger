@@ -212,37 +212,14 @@
             </AIData>
         </AbilityBonusOption>
     </AbilityBonus>	-->
-	
-    <AbilityBonus InternalName="Blood_Dar_UrxenAbility">
-        <AbilityBonusOption InternalName="Blood_Dar_Urxen">
-            <DisplayName>Urxen Blood</DisplayName>
-            <Description>Recieves double the normal Swarm bonus, and unlocks WildStrike ability.</Description>
-            <Icon>RoundCrest_Umber.png</Icon>
-            <GameModifier>
-                <ModType>Unit</ModType>
-                <Attribute>AdjustUnitStat</Attribute>
-                <StrVal>UnitStat_SwarmBonusCounter</StrVal>
-                <Value>1</Value>
-                <Provides>This unit recieves double the normal Swarm bonus</Provides>
-            </GameModifier>
-            <GameModifier>
-                <ModType>Unit</ModType>
-                <Attribute>UnlockCombatAbility</Attribute>
-                <StrVal>WildStrike_Ability</StrVal>
-                <Provides>Wild Strike - +50% Attack, but you take 2 damage per troop.</Provides>
-            </GameModifier>	
-            <HideWhenUpgraded>0</HideWhenUpgraded>
-            <AIData AIPersonality="AI_General">
-                <AIPriority>5</AIPriority>
-            </AIData>
-        </AbilityBonusOption>
-    </AbilityBonus>
 
     <AbilityBonus InternalName="Blood_HashainiAbility">
         <AbilityBonusOption InternalName="Blood_Hashaini">
             <DisplayName>Hashaini Blood</DisplayName>
             <Description>+7 Critical Chance, Unlocks Dirty Blow ability.</Description>
-            <Icon>RoundCrest_Hash.png</Icon>		
+            <Icon>RoundCrest_Hash.png</Icon>
+			<PerkTreePosX>0</PerkTreePosX>
+			<PerkTreePosY>7</PerkTreePosY>			
             <GameModifier>
                 <ModType>Unit</ModType>
                 <Attribute>AdjustUnitStat</Attribute>
@@ -268,14 +245,83 @@
                 <AIPriority>5</AIPriority>
             </AIData>
         </AbilityBonusOption>
-    </AbilityBonus>	
+    </AbilityBonus>
+	<AbilityBonus InternalName="Blood_Hashaini_extramove">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_Hashaini_extramove">
+			<DisplayName>Legionary</DisplayName>
+			<MinimumLevel>7</MinimumLevel>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<MinimumLevel>7</MinimumLevel>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_Hashaini</Attribute>
+			</Prereq>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_Hashaini</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_Hashaini_extramove2">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_Hashaini_extramove2">
+			<DisplayName>Quick March</DisplayName>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_Hashaini_extramove</Attribute>
+			</Prereq>
+			<MinimumLevel>10</MinimumLevel>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_Hashaini</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
 	
     <AbilityBonus InternalName="Blood_MunduraAbility">
         <AbilityBonusOption InternalName="Blood_Mundura">
             <DisplayName>Hunduran Blood</DisplayName>
             <Description>+1 Initiative, +1 Dodge per Level, and unlocks Resolve Ability. </Description>
             <Icon>RoundCrest_Hun.png</Icon>
-            <GameModifier>
+            <PerkTreePosX>0</PerkTreePosX>
+			<PerkTreePosY>7</PerkTreePosY>	
+			<GameModifier>
                 <ModType>Unit</ModType>
                 <Attribute>AdjustUnitStat</Attribute>
                 <StrVal>UnitStat_CombatSpeed</StrVal>
@@ -309,46 +355,82 @@
             </AIData>
         </AbilityBonusOption>
     </AbilityBonus>
-
-    <AbilityBonus InternalName="Blood_Mancer2Ability">
-        <AbilityBonusOption InternalName="Blood_Mancer2">
-            <DisplayName>Mancer Blood</DisplayName>
-            <Description>+1 Accuracy per Level and unlocks Bonus ability.</Description>
-            <Icon>RoundCrest_Capitar.png</Icon>
-            <GameModifier>
-                <ModType>Unit</ModType>
-                <Attribute>UnlockCombatAbility</Attribute>
-                <StrVal>Bonus_Ability</StrVal>
-                <Provides>Bonus - Costs 20 Gold. Gain an extra turn, +3 Defense and +8 Health.</Provides>
-            </GameModifier>	
-            <GameModifier>
-                <ModType>Unit</ModType>
-                <Attribute>AdjustUnitStat</Attribute>
-                <StrVal>UnitStat_Moves</StrVal>
-                <Value>-1</Value>
-                <Provides>-1 Moves</Provides>
-            </GameModifier>
+	<AbilityBonus InternalName="Blood_Mundura_extramove">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_Mundura_extramove">
+			<DisplayName>Legionary</DisplayName>
+			<MinimumLevel>7</MinimumLevel>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<MinimumLevel>7</MinimumLevel>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
 			<GameModifier>
 				<ModType>Unit</ModType>
 				<Attribute>AdjustUnitStat</Attribute>
-				<StrVal>UnitStat_CombatSpeed</StrVal>
-				<Value>18</Value>
-				<Provides>::: +18 Initiative</Provides>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
 			</GameModifier>
-            <AIData AIPersonality="AI_General">
-                <AIPriority>5</AIPriority>
-            </AIData>
-        </AbilityBonusOption>
-    </AbilityBonus>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_Mundura</Attribute>
+			</Prereq>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_Mundura</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_Mundura_extramove2">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_Mundura_extramove2">
+			<DisplayName>Quick March</DisplayName>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_Mundura_extramove</Attribute>
+			</Prereq>
+			<MinimumLevel>10</MinimumLevel>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_Mundura</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
 	
     <AbilityBonus InternalName="KnivesAbility">
         <AbilityBonusType>Player</AbilityBonusType>
         <AbilityBonusOption InternalName="Knives">
             <DisplayName>Knife Fighters</DisplayName>
-            <Description>Replaces Sheilds with off-hand Daggers and Swords, that grant Attack instead of Defense.</Description>
+            <Description>Replaces Shields with off-hand Daggers and Swords, that grant Attack instead of Defense.</Description>
             <Icon>Ability_Knives_Icon.png</Icon>
             <GameModifier>
-                <Provides>Replaces Sheilds with off-hand Daggers and Swords, that grant Attack instead of Defense.</Provides>
+                <Provides>Replaces Shields with off-hand Daggers and Swords, that grant Attack instead of Defense.</Provides>
             </GameModifier>
             <Cost>1</Cost>
             <Type>Army</Type>
