@@ -119,6 +119,8 @@
             <DisplayName>Aygethos Blood</DisplayName>
             <Description>+1 Accuracy per Level, -2% Unrest in the city this unit is in and the Countermove ability</Description>
             <Icon>JB_RoundCrest_Ayegethos.png</Icon>
+			<PerkTreePosX>0</PerkTreePosX>
+			<PerkTreePosY>7</PerkTreePosY>
             <GameModifier>
                 <ModType>Unit</ModType>
                 <Attribute>AdjustUnitStat</Attribute>
@@ -158,11 +160,80 @@
             </AIData>
         </AbilityBonusOption>
     </AbilityBonus>
+	<AbilityBonus InternalName="Blood_Aygethos_extramove">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_Aygethos_extramove">
+			<DisplayName>Legionary</DisplayName>
+			<MinimumLevel>7</MinimumLevel>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<MinimumLevel>7</MinimumLevel>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>JB_Blood_Aygethos</Attribute>
+			</Prereq>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_JB_Aygethos</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_Aygethos_extramove2">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_Aygethos_extramove2">
+			<DisplayName>Quick March</DisplayName>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_Aygethos_extramove</Attribute>
+			</Prereq>
+			<MinimumLevel>10</MinimumLevel>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_JB_Aygethos</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
     <AbilityBonus InternalName="JB_Blood_SiirdiAbility">
         <AbilityBonusOption InternalName="JB_Blood_Siirdi">
             <DisplayName>Siirdi Blood</DisplayName>
             <Description>+2 Attack vs opponents of the opposite race (fallen vs men) and the Battle Prayer ability</Description>
             <Icon>JB_RoundCrest_Serionne.png</Icon>
+			<PerkTreePosX>0</PerkTreePosX>
+			<PerkTreePosY>7</PerkTreePosY>
             <GameModifier>
                 <ModType>Unit</ModType>
                 <Attribute>AdjustUnitStat</Attribute>
@@ -196,11 +267,80 @@
             </AIData>
         </AbilityBonusOption>
     </AbilityBonus>
+	<AbilityBonus InternalName="Blood_Siirdi_extramove">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_Siirdi_extramove">
+			<DisplayName>Legionary</DisplayName>
+			<MinimumLevel>7</MinimumLevel>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<MinimumLevel>7</MinimumLevel>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>JB_Blood_Siirdi</Attribute>
+			</Prereq>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_JB_Siirdi</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_Siirdi_extramove2">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_Siirdi_extramove2">
+			<DisplayName>Quick March</DisplayName>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_Siirdi_extramove</Attribute>
+			</Prereq>
+			<MinimumLevel>10</MinimumLevel>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_JB_Siirdi</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
     <AbilityBonus InternalName="JB_Blood_IceElfAbility">
         <AbilityBonusOption InternalName="JB_Blood_IceElf">
             <DisplayName>Nothari Blood</DisplayName>
             <Description>+50% Cold Resistance, +5 Dodge, +1 Initiative, -1 Hit Point per Level, and the ability to use Arcfrost</Description>
             <Icon>JB_RoundCrest_Nothari.png</Icon>
+			<PerkTreePosX>0</PerkTreePosX>
+			<PerkTreePosY>7</PerkTreePosY>
             <GameModifier>
                 <ModType>Unit</ModType>
                 <Attribute>AdjustUnitStat</Attribute>
@@ -255,11 +395,80 @@
             </AIData>
         </AbilityBonusOption>
     </AbilityBonus>
-    <AbilityBonus InternalName="JB_Blood_RakturAbility">
+    <AbilityBonus InternalName="Blood_IceElf_extramove">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_IceElf_extramove">
+			<DisplayName>Legionary</DisplayName>
+			<MinimumLevel>7</MinimumLevel>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<MinimumLevel>7</MinimumLevel>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>JB_Blood_IceElf</Attribute>
+			</Prereq>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_JB_IceElf</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_IceElf_extramove2">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_IceElf_extramove2">
+			<DisplayName>Quick March</DisplayName>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_IceElf_extramove</Attribute>
+			</Prereq>
+			<MinimumLevel>10</MinimumLevel>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_JB_IceElf</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_Blood_RakturAbility">
         <AbilityBonusOption InternalName="JB_Blood_Raktur">
             <DisplayName>Raktur Blood</DisplayName>
             <Description>+2 Attack vs Elementals, can equip an additional accessory and the Candescent Fate ability</Description>
             <Icon>JB_RoundCrest_Raktur2.png</Icon>
+			<PerkTreePosX>0</PerkTreePosX>
+			<PerkTreePosY>7</PerkTreePosY>
 			<GameModifier>
 				<ModType>Unit</ModType>
 				<Attribute>AdjustUnitStat</Attribute>
@@ -308,11 +517,80 @@
             </AIData>
         </AbilityBonusOption>
     </AbilityBonus>
+	<AbilityBonus InternalName="Blood_Raktur_extramove">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_Raktur_extramove">
+			<DisplayName>Legionary</DisplayName>
+			<MinimumLevel>7</MinimumLevel>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<MinimumLevel>7</MinimumLevel>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>JB_Blood_Raktur</Attribute>
+			</Prereq>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_JB_Raktur</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_Raktur_extramove2">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_Raktur_extramove2">
+			<DisplayName>Quick March</DisplayName>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_Raktur_extramove</Attribute>
+			</Prereq>
+			<MinimumLevel>10</MinimumLevel>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_JB_Raktur</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
     <AbilityBonus InternalName="JB_Blood_QunariAbility">
         <AbilityBonusOption InternalName="JB_Blood_Qunari">
             <DisplayName>Dremorian Blood</DisplayName>
             <Description>+2 Attack vs Twisted, 10% chance to Maul when attacking, +1 Hit Point per Level, -1 Initiative, cannot wear helms and has the Mighty Blow ability</Description>
             <Icon>JB_RoundCrest_Dremorian.png</Icon>
+			<PerkTreePosX>0</PerkTreePosX>
+			<PerkTreePosY>7</PerkTreePosY>
 			<GameModifier>
 				<ModType>Unit</ModType>
 				<Attribute>AdjustUnitStat</Attribute>
@@ -373,11 +651,80 @@
             </AIData>
         </AbilityBonusOption>
     </AbilityBonus>
-    <AbilityBonus InternalName="JB_Blood_UrnsAbility">
+    <AbilityBonus InternalName="Blood_Qunari_extramove">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_Qunari_extramove">
+			<DisplayName>Legionary</DisplayName>
+			<MinimumLevel>7</MinimumLevel>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<MinimumLevel>7</MinimumLevel>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>JB_Blood_Qunari</Attribute>
+			</Prereq>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_JB_Qunari</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_Qunari_extramove2">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_Qunari_extramove2">
+			<DisplayName>Quick March</DisplayName>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_Qunari_extramove</Attribute>
+			</Prereq>
+			<MinimumLevel>10</MinimumLevel>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_JB_Qunari</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_Blood_UrnsAbility">
         <AbilityBonusOption InternalName="JB_Blood_Urns">
             <DisplayName>Urns Blood</DisplayName>
             <Description>+2 Attack vs Beasts, +5 Dodge, +50% Poison Resistance and the Invigorate ability</Description>
             <Icon>JB_RoundCrest_Urns.png</Icon>
+			<PerkTreePosX>0</PerkTreePosX>
+			<PerkTreePosY>7</PerkTreePosY>
 			<GameModifier>
 				<ModType>Unit</ModType>
 				<Attribute>AdjustUnitStat</Attribute>
@@ -427,11 +774,80 @@
             </AIData>
         </AbilityBonusOption>
     </AbilityBonus>
+	<AbilityBonus InternalName="Blood_Urns_extramove">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_Urns_extramove">
+			<DisplayName>Legionary</DisplayName>
+			<MinimumLevel>7</MinimumLevel>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<MinimumLevel>7</MinimumLevel>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>JB_Blood_Urns</Attribute>
+			</Prereq>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_JB_Urns</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_Urns_extramove2">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_Urns_extramove2">
+			<DisplayName>Quick March</DisplayName>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_Urns_extramove</Attribute>
+			</Prereq>
+			<MinimumLevel>10</MinimumLevel>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_JB_Urns</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
     <AbilityBonus InternalName="JB_Blood_OtaranAbility">
         <AbilityBonusOption InternalName="JB_Blood_Otaran">
             <DisplayName>Otaran Blood</DisplayName>
             <Description>+10% Accuracy and the ability to Brace in combat</Description>
-            <Icon>JB_RoundCrest_Oteran.png</Icon>	
+            <Icon>JB_RoundCrest_Otaran.png</Icon>
+			<PerkTreePosX>0</PerkTreePosX>
+			<PerkTreePosY>7</PerkTreePosY>
             <GameModifier>
                 <ModType>Unit</ModType>
                 <Attribute>AdjustUnitStat</Attribute>
@@ -464,11 +880,80 @@
             </AIData>
         </AbilityBonusOption>
     </AbilityBonus>
+	<AbilityBonus InternalName="Blood_Otaran_extramove">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_Otaran_extramove">
+			<DisplayName>Legionary</DisplayName>
+			<MinimumLevel>7</MinimumLevel>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<MinimumLevel>7</MinimumLevel>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>JB_Blood_Otaran</Attribute>
+			</Prereq>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_JB_Otaran</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_Otaran_extramove2">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_Otaran_extramove2">
+			<DisplayName>Quick March</DisplayName>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_Otaran_extramove</Attribute>
+			</Prereq>
+			<MinimumLevel>10</MinimumLevel>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_JB_Otaran</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
 	<AbilityBonus InternalName="JB_Blood_CormenlonAbility">
         <AbilityBonusOption InternalName="JB_Blood_Cormenlon">
             <DisplayName>Cormenlon Blood</DisplayName>
             <Description>+1 Initiative and Moves in combat when stationed in a city, +5% Experience and the ability to Entrench in combat</Description>
             <Icon>JB_RoundCrest_Cormenlon.png</Icon>
+			<PerkTreePosX>0</PerkTreePosX>
+			<PerkTreePosY>7</PerkTreePosY>
             <GameModifier>
                 <ModType>Unit</ModType>
                 <Attribute>BattleAutoCastSpell</Attribute>
@@ -508,12 +993,81 @@
             </AIData>
         </AbilityBonusOption>
     </AbilityBonus>
-    <AbilityBonus InternalName="JB_Blood_GithAbility">
+    <AbilityBonus InternalName="Blood_Cormenlon_extramove">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_Cormenlon_extramove">
+			<DisplayName>Legionary</DisplayName>
+			<MinimumLevel>7</MinimumLevel>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<MinimumLevel>7</MinimumLevel>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>JB_Blood_Cormenlon</Attribute>
+			</Prereq>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_JB_Cormenlon</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_Cormenlon_extramove2">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_Cormenlon_extramove2">
+			<DisplayName>Quick March</DisplayName>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_Cormenlon_extramove</Attribute>
+			</Prereq>
+			<MinimumLevel>10</MinimumLevel>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_JB_Cormenlon</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_Blood_GithAbility">
         <AbilityBonusOption InternalName="JB_Blood_Gith">
             <DisplayName>Xaroch Blood</DisplayName>
             <Description>+5 to the Army's Spell Resistance, Tactical spells cost 10% less, +1 Dodge per Level, -1 Hit Point per Level and the Mental Blast ability</Description>
             <Icon>JB_RoundCrest_Xaroch.png</Icon>
-            <GameModifier>
+            <PerkTreePosX>0</PerkTreePosX>
+			<PerkTreePosY>7</PerkTreePosY>
+			<GameModifier>
                 <ModType>Unit</ModType>
                 <Attribute>AdjustArmyStat</Attribute>
                 <StrVal>UnitStat_MagicResist</StrVal>
@@ -568,6 +1122,73 @@
             </AIData>
         </AbilityBonusOption>
     </AbilityBonus>
+	<AbilityBonus InternalName="Blood_Gith_extramove">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_Gith_extramove">
+			<DisplayName>Legionary</DisplayName>
+			<MinimumLevel>7</MinimumLevel>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<MinimumLevel>7</MinimumLevel>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>JB_Blood_Gith</Attribute>
+			</Prereq>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_JB_Gith</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_Gith_extramove2">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_Gith_extramove2">
+			<DisplayName>Quick March</DisplayName>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_Gith_extramove</Attribute>
+			</Prereq>
+			<MinimumLevel>10</MinimumLevel>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_JB_Gith</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
 	<AbilityBonus InternalName="JB_Blood_BeastmanAbility">
         <AbilityBonusOption InternalName="JB_Blood_Beastman">
             <DisplayName>Thuhl Blood</DisplayName>
@@ -577,6 +1198,8 @@
 			
 			Male Thuhl are +2 Defense. Female Thuhl are +5 Dodge, but cannot wear armor heavier than leather (female champions are still able to use armor they find).</Description>
             <Icon>JB_RoundCrest_Beastman.png</Icon>
+			<PerkTreePosX>0</PerkTreePosX>
+			<PerkTreePosY>7</PerkTreePosY>
             <GameModifier>
                 <ModType>Unit</ModType>
                 <Attribute>AdjustUnitStat</Attribute>
@@ -643,6 +1266,8 @@
 			
 			Male Thuhl are +2 Defense. Female Thuhl are +5 Dodge, but cannot wear armor heavier than leather. (Female champions are still able to use armor they find).</Description>
             <Icon>JB_RoundCrest_Beastman.png</Icon>
+			<PerkTreePosX>0</PerkTreePosX>
+			<PerkTreePosY>7</PerkTreePosY>
             <GameModifier>
                 <ModType>Unit</ModType>
                 <Attribute>AdjustUnitStat</Attribute>
@@ -702,11 +1327,147 @@
             </AIData>
         </AbilityBonusOption>
     </AbilityBonus>
+	<AbilityBonus InternalName="Blood_Beastman_extramove">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_Beastman_extramove">
+			<DisplayName>Legionary</DisplayName>
+			<MinimumLevel>7</MinimumLevel>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<MinimumLevel>7</MinimumLevel>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>JB_Blood_Beastman</Attribute>
+			</Prereq>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_JB_Beastman</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_Beastman_extramove2">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_Beastman_extramove2">
+			<DisplayName>Quick March</DisplayName>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_Beastman_extramove</Attribute>
+			</Prereq>
+			<MinimumLevel>10</MinimumLevel>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_JB_Beastman</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_Beastman_Female_extramove">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_Beastman_Female_extramove">
+			<DisplayName>Legionary</DisplayName>
+			<MinimumLevel>7</MinimumLevel>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<MinimumLevel>7</MinimumLevel>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>JB_Blood_Beastman_Female</Attribute>
+			</Prereq>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_JB_Beastman_Female</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_Beastman_Female_extramove2">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_Beastman_Female_extramove2">
+			<DisplayName>Quick March</DisplayName>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_Beastman_Female_extramove</Attribute>
+			</Prereq>
+			<MinimumLevel>10</MinimumLevel>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_JB_Beastman_Female</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
     <AbilityBonus InternalName="JB_Blood_DarkElfAbility">
         <AbilityBonusOption InternalName="JB_Blood_DarkElf">
             <DisplayName>Sholdari Blood</DisplayName>
             <Description>+10 Dodge, +1 Initiative, -1 Hit Point per Level and the Coruscation ability</Description>
             <Icon>JB_RoundCrest_Sorthes.png</Icon>
+			<PerkTreePosX>0</PerkTreePosX>
+			<PerkTreePosY>7</PerkTreePosY>
             <GameModifier>
                 <ModType>Unit</ModType>
                 <Attribute>AdjustUnitStat</Attribute>
@@ -754,11 +1515,80 @@
             </AIData>
         </AbilityBonusOption>
     </AbilityBonus>
+	<AbilityBonus InternalName="Blood_DarkElf_extramove">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_DarkElf_extramove">
+			<DisplayName>Legionary</DisplayName>
+			<MinimumLevel>7</MinimumLevel>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<MinimumLevel>7</MinimumLevel>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>JB_Blood_DarkElf</Attribute>
+			</Prereq>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_JB_DarkElf</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_DarkElf_extramove2">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_DarkElf_extramove2">
+			<DisplayName>Quick March</DisplayName>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_DarkElf_extramove</Attribute>
+			</Prereq>
+			<MinimumLevel>10</MinimumLevel>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_JB_DarkElf</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
     <AbilityBonus InternalName="JB_Blood_AsrillorgueAbility">
         <AbilityBonusOption InternalName="JB_Blood_Asrillorgue">
             <DisplayName>Asrillorgue Blood</DisplayName>
             <Description>+25% Divine and Infernal Resistance, +10% Experience and the Unholy Vow ability</Description>
             <Icon>JB_RoundCrest_Asrillorgue.png</Icon>
+			<PerkTreePosX>0</PerkTreePosX>
+			<PerkTreePosY>7</PerkTreePosY>
             <GameModifier>
                 <ModType>Unit</ModType>
                 <Attribute>AdjustUnitStat</Attribute>
@@ -805,11 +1635,80 @@
             </AIData>
         </AbilityBonusOption>
     </AbilityBonus>
-    <AbilityBonus InternalName="JB_Blood_GorgalAbility">
+    <AbilityBonus InternalName="Blood_Asrillorgue_extramove">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_Asrillorgue_extramove">
+			<DisplayName>Legionary</DisplayName>
+			<MinimumLevel>7</MinimumLevel>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<MinimumLevel>7</MinimumLevel>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>JB_Blood_Asrillorgue</Attribute>
+			</Prereq>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_JB_Asrillorgue</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_Asrillorgue_extramove2">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_Asrillorgue_extramove2">
+			<DisplayName>Quick March</DisplayName>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_Asrillorgue_extramove</Attribute>
+			</Prereq>
+			<MinimumLevel>10</MinimumLevel>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_JB_Asrillorgue</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_Blood_GorgalAbility">
         <AbilityBonusOption InternalName="JB_Blood_Gorgal">
             <DisplayName>Gorgal Blood</DisplayName>
             <Description>+1 Attack, +3 Hit Points and the War Cry ability</Description>
             <Icon>JB_RoundCrest_Gorgal.png</Icon>
+			<PerkTreePosX>0</PerkTreePosX>
+			<PerkTreePosY>7</PerkTreePosY>
             <GameModifier>
                 <ModType>Unit</ModType>
                 <Attribute>AdjustUnitStat</Attribute>
@@ -849,12 +1748,81 @@
             </AIData>
         </AbilityBonusOption>
     </AbilityBonus>
+	<AbilityBonus InternalName="Blood_Gorgal_extramove">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_Gorgal_extramove">
+			<DisplayName>Legionary</DisplayName>
+			<MinimumLevel>7</MinimumLevel>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<MinimumLevel>7</MinimumLevel>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>JB_Blood_Gorgal</Attribute>
+			</Prereq>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_JB_Gorgal</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_Gorgal_extramove2">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_Gorgal_extramove2">
+			<DisplayName>Quick March</DisplayName>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_Gorgal_extramove</Attribute>
+			</Prereq>
+			<MinimumLevel>10</MinimumLevel>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_JB_Gorgal</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
     <AbilityBonus InternalName="JB_Blood_MorquaiAbility">
         <AbilityBonusOption InternalName="JB_Blood_Morquai">
             <DisplayName>Morquai Blood</DisplayName>
             <Description>+1 Counterattack, +10 Dodge when Defending and the Quick Strike ability</Description>
             <Icon>JB_RoundCrest_Morquai.png</Icon>
-            <GameModifier>
+            <PerkTreePosX>0</PerkTreePosX>
+			<PerkTreePosY>7</PerkTreePosY>
+			<GameModifier>
                 <ModType>Unit</ModType>
                 <Attribute>AdjustUnitStat</Attribute>
                 <StrVal>UnitStat_MaxCounterAttack</StrVal>
@@ -893,12 +1861,81 @@
             </AIData>
         </AbilityBonusOption>
     </AbilityBonus>
-    <AbilityBonus InternalName="JB_Blood_GaushAbility">
+    <AbilityBonus InternalName="Blood_Morquai_extramove">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_Morquai_extramove">
+			<DisplayName>Legionary</DisplayName>
+			<MinimumLevel>7</MinimumLevel>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<MinimumLevel>7</MinimumLevel>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>JB_Blood_Morquai</Attribute>
+			</Prereq>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_JB_Morquai</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_Morquai_extramove2">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_Morquai_extramove2">
+			<DisplayName>Quick March</DisplayName>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_Morquai_extramove</Attribute>
+			</Prereq>
+			<MinimumLevel>10</MinimumLevel>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_JB_Morquai</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="JB_Blood_GaushAbility">
         <AbilityBonusOption InternalName="JB_Blood_Gaush">
             <DisplayName>Gaush Blood</DisplayName>
             <Description>+1 Accuracy and Dodge per Level</Description>
             <Icon>JB_RoundCrest_Gaushon.png</Icon>
-            <GameModifier>
+            <PerkTreePosX>0</PerkTreePosX>
+			<PerkTreePosY>7</PerkTreePosY>
+			<GameModifier>
                 <ModType>Unit</ModType>
                 <Attribute>AdjustUnitStat</Attribute>
                 <StrVal>UnitStat_Accuracy</StrVal>
@@ -939,6 +1976,73 @@
             </AIData>
         </AbilityBonusOption>
     </AbilityBonus>
+	<AbilityBonus InternalName="Blood_Gaush_extramove">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_Gaush_extramove">
+			<DisplayName>Legionary</DisplayName>
+			<MinimumLevel>7</MinimumLevel>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<MinimumLevel>7</MinimumLevel>
+			<PerkTreePosX>1</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>JB_Blood_Gaush</Attribute>
+			</Prereq>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_JB_Gaush</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
+	<AbilityBonus InternalName="Blood_Gaush_extramove2">
+		<AbilityBonusType>Unit_Level</AbilityBonusType>
+		<AbilityBonusOption InternalName="Blood_Gaush_extramove2">
+			<DisplayName>Quick March</DisplayName>
+			<Description>MOVEMENT
+			::: +1</Description>
+			<Icon>Ability_Wanderlust_Icon.png</Icon>
+			<PerkTreePosX>2</PerkTreePosX>
+			<PerkTreePosY>6</PerkTreePosY>
+			<GameModifier>
+				<Provides>MOVEMENT</Provides>
+			</GameModifier>
+			<GameModifier>
+				<ModType>Unit</ModType>
+				<Attribute>AdjustUnitStat</Attribute>
+				<StrVal>UnitStat_Moves</StrVal>
+				<Value>1</Value>
+				<Provides>::: +1</Provides>
+			</GameModifier>
+			<Prereq>
+				<Type>AbilityBonusOption</Type>
+				<Target>Unit</Target>
+				<Attribute>Blood_Gaush_extramove</Attribute>
+			</Prereq>
+			<MinimumLevel>10</MinimumLevel>
+			<Type>X_Blood</Type>
+			<HideWhenUpgraded>0</HideWhenUpgraded>
+			<UpgradePathID>Blood_Move_JB_Gaush</UpgradePathID>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>99</AIPriority>
+			</AIData>
+		</AbilityBonusOption>
+	</AbilityBonus>
     <AbilityBonus InternalName="JB_Blood_BlackTrogAbility">
         <AbilityBonusOption InternalName="JB_Blood_BlackTrog">
             <DisplayName>BlackTrog Blood</DisplayName>
