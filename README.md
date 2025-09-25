@@ -9,13 +9,17 @@ There are also some additions of my own, mostly expansions of Xtradeconstruct's 
 
 Installation Instructions:
 
-1. Backup "C:\Program Files (x86)\Steam\steamapps\common\FE Legendary Heroes\data\English" or whatever your main game directory path is.
+1. Download and extract contents of zip file.
 
-2. Copy files from 0_NO in the Mods folder to the data\English folder, replacing the original files.
+2. Place contents of Mods folder in Documents/My Games/Legendary Heroes/Mods.
 
-3. Add text files from Additional Files to data\English. Replace XH_Resources.
+3. Backup "C:\Program Files (x86)\Steam\steamapps\common\FE Legendary Heroes\data\English" or whatever your main game directory path is.
 
-4. Replace the screens folder with the one provided in Additional Files.
+4. Copy files from 0_NO in the Mods folder to the data\English folder, replacing the original files.
+
+5. Add text files from Additional Files to data\English. Replace XH_Resources.
+
+6. Replace the screens folder with the one provided in Additional Files.
 
 You are done! Launch Game and test.
 
