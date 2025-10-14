@@ -1,3 +1,8 @@
+# Fork disclaimer
+*I've forked it only to try messing with files, including making LLMs do the legwork for finding and fixing problems I encountered in the game. None fixed yet.*
+
+Original description:
+
 # Fallen-Enchantress-LH-Mod-Merger
 Merger of 21 mods.
 
