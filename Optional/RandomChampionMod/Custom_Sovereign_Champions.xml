@@ -2821,7 +2821,7 @@
 		<SelectedAbilityBonusOption>EquipmentAbility_X_Hare</SelectedAbilityBonusOption>
 		<SelectedAbilityBonusOption>Blood_Hashaini</SelectedAbilityBonusOption>
 		<SelectedAbilityBonusOption>JB_SpellbookBeast1</SelectedAbilityBonusOption>
-		<SelectedAbilityBonusOption>Talent_Feral</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Talent_Shadowcaster</SelectedAbilityBonusOption>
 		<SelectedAbilityBonusOption>Talent_XM_BlackHole</SelectedAbilityBonusOption>
 		<SelectedAbilityBonusOption>Ability_X_EreogsBox</SelectedAbilityBonusOption>
 		<SelectedAbilityBonusOption>Ability_X_IsChampion</SelectedAbilityBonusOption>
@@ -5057,18 +5057,18 @@
 		<IsChampion>1</IsChampion>
 		<AlwaysInTileCenter>1</AlwaysInTileCenter>
 	</UnitType>
-	<!--<UnitType InternalName="Champion_Androval">
+	<UnitType InternalName="Champion_Vunoruega">
 		<IsWandering>0</IsWandering>
 		<Equipment>Dagger_Crude</Equipment>
-		<DisplayName>Androval</DisplayName>
-		<UnitDisplayName>Androval</UnitDisplayName>
+		<DisplayName>Vunoruega</DisplayName>
+		<UnitDisplayName>Vunoruega</UnitDisplayName>
 		<Class>Adventurer</Class>
 		<Allegiance>Empire</Allegiance>
 		<CreatureType>Champion</CreatureType>
-		<RaceType>Race_Type_Wraiths</RaceType>
+		<RaceType>JB_Race_Type_Cormenlon</RaceType>
 		<Unique>1</Unique>
 		<CanBeDesigned>0</CanBeDesigned>
-		<Gender>Male</Gender>
+		<Gender>Female</Gender>
 		<HasWages>1</HasWages>
 		<WageOverride>1</WageOverride>
 		<IsNPC>1</IsNPC>
@@ -5087,189 +5087,53 @@
 			<UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
 			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
 			<UnitStat_HitPoints>20</UnitStat_HitPoints>
-			<UnitStat_BG_IsRace_Wraiths>1</UnitStat_BG_IsRace_Wraiths>
+			<UnitStat_BG_IsRace_Cormenlon>1</UnitStat_BG_IsRace_Cormenlon>
 		</LevelMilestone>
-		<SelectedAbilityBonusOption>EquipmentAbility_X_Androval</SelectedAbilityBonusOption>
-		<SelectedAbilityBonusOption>Blood_Wraith</SelectedAbilityBonusOption>
-		<SelectedAbilityBonusOption>Death1</SelectedAbilityBonusOption>
-		<SelectedAbilityBonusOption>Precision_Level</SelectedAbilityBonusOption>
-		<SelectedAbilityBonusOption>VitalStrike1</SelectedAbilityBonusOption>
-		<SelectedAbilityBonusOption>Talent_XM_BlackHole</SelectedAbilityBonusOption>
-		<SelectedAbilityBonusOption>Ability_X_EreogsBox</SelectedAbilityBonusOption>
-		<SelectedAbilityBonusOption>Ability_X_IsChampion</SelectedAbilityBonusOption>
-		<SelectedAbilityBonusOption>Ability_X_IsEmpire</SelectedAbilityBonusOption>
-		<SelectedAbilityBonusOption>Ability_X_IsHumanoid</SelectedAbilityBonusOption>
-		<SelectedAbilityBonusOption>Ability_X_IsMale</SelectedAbilityBonusOption>
-		<Quote>'The best assassin mage in the realm who excels at carving red smiles.'</Quote>
-		<NPCRecruitmentText>I thirst for a life of plunging knives and carving red smiles. For my services, I demand %d gildar. Unless you'd rather turn your back?</NPCRecruitmentText>
-		<Backstory>A double fascination animates Androval: magical arts and assassins tools. To those that call him a backstabbing squid, he will only disagree with the squid part.</Backstory>
-		<AnimationPack>NoblemanAnimationPack</AnimationPack>
-		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
-		<ClothMapScale>1.6</ClothMapScale>
-		<ClothPoseIndex>13</ClothPoseIndex>
-		<Color_Skin>87,130,171,255</Color_Skin>
-		<Color_Hair>47,47,62,255</Color_Hair>
-		<Color_Clothing1>90,130,170,255</Color_Clothing1>
-		<Color_Clothing2>50,50,60,255</Color_Clothing2>
-		<Color_Metal>19,69,130,255</Color_Metal>
-		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
-		<EyeTexture>eyeblink_m5_gold.png</EyeTexture>
-		<InfoCardBackground>BG21_Plains</InfoCardBackground>
-		<ModelPath>K_Male_Mesh_01.hkb</ModelPath>
-		<ModelScale>1</ModelScale>
-		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
-		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
-		<SkeletonPath>K_Male_Skeleton_01.hkb</SkeletonPath>
-		<SoundPack>SoundPack_Generic_Male</SoundPack>
-		<TacticalModelScale>1.5</TacticalModelScale>
-		<Texture_Eyes>eyeblink_m5_gold.png</Texture_Eyes>
-		<Texture_Skin>K_Male_Handsome_Texture_01.png</Texture_Skin>
-		<UnitModelType>WraithMale</UnitModelType>
-		<AutoCreateEquipment>Dagger_Assassins</AutoCreateEquipment>
-		<Equipment>F_Head_Wraith_Mesh_06</Equipment>
-		<Equipment>Basic_Pants_ID1</Equipment>
-		<Equipment>Empire_Leather_Gloves_2_Dark</Equipment>
-		<Equipment>F_Mohawk_Hair_Mesh_01</Equipment>
-		<Treasure>
-			<Liklihood>100</Liklihood>
-			<GameModifier>
-				<ModType>GiveItem</ModType>
-				<StrVal>Common</StrVal>
-				<Value>100</Value>
-			</GameModifier>
-		</Treasure>
-		<Treasure>
-			<Liklihood>100</Liklihood>
-			<GameModifier>
-				<ModType>GiveItem</ModType>
-				<StrVal>Common1</StrVal>
-				<Value>100</Value>
-			</GameModifier>
-		</Treasure>
-		<Treasure>
-			<Liklihood>100</Liklihood>
-			<GameModifier>
-				<ModType>GiveItem</ModType>
-				<StrVal>Common2</StrVal>
-				<Value>100</Value>
-			</GameModifier>
-		</Treasure>
-		<Treasure>
-			<Liklihood>100</Liklihood>
-			<GameModifier>
-				<ModType>GiveItem</ModType>
-				<StrVal>Common3</StrVal>
-				<Value>100</Value>
-			</GameModifier>
-		</Treasure>
-		<Treasure>
-			<Liklihood>100</Liklihood>
-			<GameModifier>
-				<ModType>GiveItem</ModType>
-				<StrVal>Common4</StrVal>
-				<Value>100</Value>
-			</GameModifier>
-		</Treasure>
-		<Treasure>
-			<Liklihood>100</Liklihood>
-			<GameModifier>
-				<ModType>GiveItem</ModType>
-				<Attribute>Item_XL_Tome_D</Attribute>
-				<Value>100</Value>
-			</GameModifier>
-		</Treasure>
-		<Treasure>
-			<Liklihood>100</Liklihood>
-			<GameModifier>
-				<ModType>GiveItem</ModType>
-				<Attribute>Dagger_Assassins</Attribute>
-				<Value>100</Value>
-			</GameModifier>
-		</Treasure>
-		<Treasure>
-			<Liklihood>100</Liklihood>
-			<GameModifier>
-				<ModType>Resource</ModType>
-				<Attribute>Gold</Attribute>
-				<Value>20</Value>
-			</GameModifier>
-		</Treasure>
-		<IsChampion>1</IsChampion>
-		<AlwaysInTileCenter>1</AlwaysInTileCenter>
-	</UnitType>
-	<UnitType InternalName="Champion_Bhak'Tem">
-		<IsWandering>0</IsWandering>
-		<Equipment>Dagger_Crude</Equipment>
-		<DisplayName>Bhak'Tem Ignysborn</DisplayName>
-		<UnitDisplayName>Bhak'Tem Ignysborn</UnitDisplayName>
-		<Class>Adventurer</Class>
-		<Allegiance>Empire</Allegiance>
-		<CreatureType>Champion</CreatureType>
-		<RaceType>Race_Type_Quendar</RaceType>
-		<Unique>1</Unique>
-		<CanBeDesigned>0</CanBeDesigned>
-		<Gender>Male</Gender>
-		<HasWages>1</HasWages>
-		<WageOverride>1</WageOverride>
-		<IsNPC>1</IsNPC>
-		<IsSovereign>0</IsSovereign>
-		<SpawnRating>1</SpawnRating>
-		<NPCSpawnLikelihood>1</NPCSpawnLikelihood>
-		<GameModifier>
-			<ModType>Resource</ModType>
-			<Attribute>Unrest</Attribute>
-			<Value>-5</Value>
-			<Provides>-5% Unrest in the city this unit is in</Provides>
-		</GameModifier>
-		<LevelMilestone InternalName="L1">
-			<Level>1</Level>
-			<UnitStat_Accuracy>80</UnitStat_Accuracy>
-			<UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
-			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
-			<UnitStat_HitPoints>20</UnitStat_HitPoints>
-			<UnitStat_BG_IsRace_Quendar>1</UnitStat_BG_IsRace_Quendar>
-		</LevelMilestone>
-		<SelectedAbilityBonusOption>EquipmentAbility_X_Bhak</SelectedAbilityBonusOption>
-		<SelectedAbilityBonusOption>Blood_Quendar</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>EquipmentAbility_X_Vunoruega</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>JB_Blood_Cormenlon</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_NinjaSword</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Clumsy</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Talent_X_Recruiter</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Talent_X_ParoxysmOfMagic</SelectedAbilityBonusOption>
 		<SelectedAbilityBonusOption>Fire1</SelectedAbilityBonusOption>
-		<SelectedAbilityBonusOption>ResistFire</SelectedAbilityBonusOption>
 		<SelectedAbilityBonusOption>Talent_XM_BlackHole</SelectedAbilityBonusOption>
 		<SelectedAbilityBonusOption>Ability_X_EreogsBox</SelectedAbilityBonusOption>
 		<SelectedAbilityBonusOption>Ability_X_IsChampion</SelectedAbilityBonusOption>
 		<SelectedAbilityBonusOption>Ability_X_IsEmpire</SelectedAbilityBonusOption>
 		<SelectedAbilityBonusOption>Ability_X_IsHumanoid</SelectedAbilityBonusOption>
-		<SelectedAbilityBonusOption>Ability_X_IsMale</SelectedAbilityBonusOption>
-		<Quote>'The hissing flames have so much to teach you and I can serve as their interpreter.'</Quote>
-		<NPCRecruitmentText>I thirst for a life of going back to the simple existence I had among my Ignys pack. Well sometimes. I've been bitten by the civilization bug and I can't go back anymore. But I will never forget where I come from. I could join your nest for %d gildar and whisper to you the secret lore of the Fire Snakes.</NPCRecruitmentText>
-		<Backstory>Fourteen years ago, the venerable scholar Ghar'Daar was doing fieldwork, writing down the final observations for his treatise "The Ignys, their habitat and ecology". Sneaking upon a promising pack of Fire Snakes, he was amazed to find a Quendar child among them, slithering and hissing with the larger reptiles. Raised by the Ignys? Impossible and yet. Ghar'Daar organized a tumultuous rescue operation and brought the child kicking and screaming back to civilization. The scholar named him Bhak'Tem and raised him as his own son, not completely out of disinterest as his treatise more than doubled in volume. The child had great difficulties conceptualizing that these bipeds where his kin and learning to walk in lieu of slithering was a challenge not yet fully mastered on the eve of adulthood. Tired of all the finger pointing and being treated as a curiosity, Bhak'Tem left his ailing foster father for a life of adventuring, preferably one writhed in flames.</Backstory>
-		<AnimationPack>CragspawnAnimationPack</AnimationPack>
+		<SelectedAbilityBonusOption>Ability_X_IsFemale</SelectedAbilityBonusOption>
+		<Quote>'Ex-Sovereign of the Empire of Ladiki'</Quote>
+		<NPCRecruitmentText>Old Sovereign.</NPCRecruitmentText>
+		<Backstory>Ex-Sovereign of the Empire of Ladiki. Ladiki had the faction strengths: Light Plate, Builders, Horse Lords, and Standing Army. And the faction weakness: Paranoid Isolationists.</Backstory>
+		<AnimationPack>FemaleSovereignAnimationPack</AnimationPack>
 		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
 		<ClothMapScale>1.6</ClothMapScale>
-		<ClothPoseIndex>17</ClothPoseIndex>
-		<Color_Skin>223,131,103,255</Color_Skin>
-		<Color_Hair>182,182,182,255</Color_Hair>
-		<Color_Clothing1>255,102,0,255</Color_Clothing1>
-		<Color_Clothing2>255,102,0,255</Color_Clothing2>
-		<Color_Metal>255,102,0,255</Color_Metal>
-		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
-		<EyeTexture>eyeblink_m6_Orange.png</EyeTexture>
-		<InfoCardBackground>BG_Lava</InfoCardBackground>
-		<ModelPath>F_Male_Magnar_Body_Mesh_01.hkb</ModelPath>
+		<ClothPoseIndex>0</ClothPoseIndex>
+		<Color_Skin>233,168,118,255</Color_Skin>
+		<Color_Hair>147,102,67,255</Color_Hair>
+		<Color_Clothing1>109,191,141,255</Color_Clothing1>
+		<Color_Clothing2>147,147,147,255</Color_Clothing2>
+		<Color_Metal>128,128,128,255</Color_Metal>
+		<CutSceneDataPack>JB_CarzemirCutscenePack</CutSceneDataPack>
+		<EyeTexture>eyeblink_f1_grn.png</EyeTexture>
+		<InfoCardBackground>BG24_Volcano</InfoCardBackground>
+		<ModelPath>K_Female_Mesh_01.hkb</ModelPath>
 		<ModelScale>1</ModelScale>
 		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
 		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
 		<SkeletonPath>K_Male_Skeleton_01.hkb</SkeletonPath>
-		<SoundPack>SoundPack_Generic_Male</SoundPack>
+		<SoundPack>SoundPack_Generic_Female</SoundPack>
 		<TacticalModelScale>1.5</TacticalModelScale>
-		<Texture_Eyes>eyeblink_m6_Orange.png</Texture_Eyes>
-		<Texture_Skin>Magnar_Skin_M_01.dds</Texture_Skin>
-		<UnitModelType>QuendarMale</UnitModelType>
-		<AutoCreateEquipment>Dagger_Burning</AutoCreateEquipment>
-		<AutoCreateEquipment>ScarStone</AutoCreateEquipment>
-		<Equipment>F_Male_Quendar_Head_01</Equipment>
-		<Equipment>Fallen_Sleeveless_Shirt_ID1</Equipment>
-		<Equipment>Fallen_Leather_Pants_ID1</Equipment>
-		<Equipment>F_Male_Quendar_Horns_02</Equipment>
+		<Texture_Eyes>eyeblink_f1_grn.png</Texture_Eyes>
+		<Texture_Skin>K_Female_Thinbrows_Texture_01.png</Texture_Skin>
+		<UnitModelType>JB_CormenlonFemale</UnitModelType>
+		<AutoCreateEquipment>RingOfStorms</AutoCreateEquipment>
+		<AutoCreateEquipment>BasicSlagMount2</AutoCreateEquipment>
+		<AutoCreateEquipment>LeatherBoots</AutoCreateEquipment>
+		<AutoCreateEquipment>ArtinusClub</AutoCreateEquipment>
+		<Equipment>K_Female_Head_05</Equipment>
+		<Equipment>Sovereign_Ponytail_Hair</Equipment>
+		<Equipment>Sovereign_Female_Warrior_Shirt_ID2</Equipment>
 		<Treasure>
 			<Liklihood>100</Liklihood>
 			<GameModifier>
@@ -5322,7 +5186,7 @@
 			<Liklihood>100</Liklihood>
 			<GameModifier>
 				<ModType>GiveItem</ModType>
-				<Attribute>ScarStone</Attribute>
+				<Attribute>RingOfStorms</Attribute>
 				<Value>100</Value>
 			</GameModifier>
 		</Treasure>
@@ -5330,7 +5194,23 @@
 			<Liklihood>100</Liklihood>
 			<GameModifier>
 				<ModType>GiveItem</ModType>
-				<Attribute>Dagger_Burning</Attribute>
+				<Attribute>BasicSlagMount2</Attribute>
+				<Value>100</Value>
+			</GameModifier>
+		</Treasure>
+		<Treasure>
+			<Liklihood>100</Liklihood>
+			<GameModifier>
+				<ModType>GiveItem</ModType>
+				<Attribute>LeatherBoots</Attribute>
+				<Value>100</Value>
+			</GameModifier>
+		</Treasure>
+		<Treasure>
+			<Liklihood>100</Liklihood>
+			<GameModifier>
+				<ModType>GiveItem</ModType>
+				<Attribute>ArtinusClub</Attribute>
 				<Value>100</Value>
 			</GameModifier>
 		</Treasure>
@@ -5345,15 +5225,15 @@
 		<IsChampion>1</IsChampion>
 		<AlwaysInTileCenter>1</AlwaysInTileCenter>
 	</UnitType>
-	<UnitType InternalName="Champion_Brazda">
+	<UnitType InternalName="Champion_Eloy">
 		<IsWandering>0</IsWandering>
 		<Equipment>Dagger_Crude</Equipment>
-		<DisplayName>Brazen Brazda</DisplayName>
-		<UnitDisplayName>Brazen Brazda</UnitDisplayName>
+		<DisplayName>Eloy</DisplayName>
+		<UnitDisplayName>Eloy</UnitDisplayName>
 		<Class>Adventurer</Class>
-		<Allegiance>Empire</Allegiance>
+		<Allegiance>Kingdom</Allegiance>
 		<CreatureType>Champion</CreatureType>
-		<RaceType>Race_Type_Urxen</RaceType>
+		<RaceType>Race_Type_XL_FF</RaceType>
 		<Unique>1</Unique>
 		<CanBeDesigned>0</CanBeDesigned>
 		<Gender>Female</Gender>
@@ -5375,51 +5255,47 @@
 			<UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
 			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
 			<UnitStat_HitPoints>20</UnitStat_HitPoints>
-			<UnitStat_BG_IsRace_Urxen>1</UnitStat_BG_IsRace_Urxen>
+			<UnitStat_BG_IsRace_XL_FF>1</UnitStat_BG_IsRace_XL_FF>
 		</LevelMilestone>
-		<SelectedAbilityBonusOption>EquipmentAbility_X_Brazda</SelectedAbilityBonusOption>
-		<SelectedAbilityBonusOption>Blood_Urxen</SelectedAbilityBonusOption>
-		<SelectedAbilityBonusOption>Merchant1</SelectedAbilityBonusOption>
-		<SelectedAbilityBonusOption>Merchant2</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>EquipmentAbility_X_Eloy</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Blood_XL_FF</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Earth1</SelectedAbilityBonusOption>
 		<SelectedAbilityBonusOption>Talent_XM_BlackHole</SelectedAbilityBonusOption>
 		<SelectedAbilityBonusOption>Ability_X_EreogsBox</SelectedAbilityBonusOption>
 		<SelectedAbilityBonusOption>Ability_X_IsChampion</SelectedAbilityBonusOption>
-		<SelectedAbilityBonusOption>Ability_X_IsEmpire</SelectedAbilityBonusOption>
-		<SelectedAbilityBonusOption>Ability_X_IsFemale</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsKingdom</SelectedAbilityBonusOption>
 		<SelectedAbilityBonusOption>Ability_X_IsHumanoid</SelectedAbilityBonusOption>
-		<Quote>'The commercial expansion will consolidate the territorial one.'</Quote>
-		<NPCRecruitmentText>I thirst for a life of opening shops all over Elemental that would rival the commercial power of Capitar. Yes my ambitions are way up there and I know you could be the means to my mercantile expansion. If we partner up, I would give you a share of the profit. You'll have to advance %d gildar though.</NPCRecruitmentText>
-		<Backstory>A merchant to the very core, Brazda has traded goods with no discrimination to kingdoms and empires alike. Brazen and cocky, she's an aggressive seller and will arrange to sink down the competition if necessary. She's been known to sell portraits to the blind and swords to the armless with that silver tongue of hers.</Backstory>
-		<AnimationPack>FemaleSovereignAnimationPack</AnimationPack>
+		<SelectedAbilityBonusOption>Ability_X_IsFemale</SelectedAbilityBonusOption>
+		<Quote>'Ex-Sovereign of the Kingdom of Asared'</Quote>
+		<NPCRecruitmentText>Old Sovereign.</NPCRecruitmentText>
+		<Backstory>Ex-Sovereign of the Kingdom of Asared. Asared had the faction strengths: Knightly Order, Raiders, Soldiers, and Standing Army. And the faction weakness: Oppressive.</Backstory>
+		<AnimationPack>AniPack_XL_FemaleSov</AnimationPack>
 		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
-		<ClothMapScale>1.6</ClothMapScale>
-		<ClothPoseIndex>15</ClothPoseIndex>
-		<Color_Skin>155,155,160,255</Color_Skin>
-		<Color_Hair>16,25,28,255</Color_Hair>
-		<Color_Clothing1>79,48,20,255</Color_Clothing1>
-		<Color_Clothing2>255,255,255,255</Color_Clothing2>
-		<Color_Metal>50,35,31,255</Color_Metal>
-		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
-		<EyeTexture>Eyeblink_F4_Amber.png</EyeTexture>
-		<InfoCardBackground>BG26_Throne</InfoCardBackground>
-		<ModelPath>K_Female_Mesh_01.hkb</ModelPath>
+		<ClothMapScale>2.7</ClothMapScale>
+		<ClothPoseIndex>0</ClothPoseIndex>
+		<Color_Skin>61,11,20,255</Color_Skin>
+		<Color_Hair>231,93,39,255</Color_Hair>
+		<Color_Clothing1>203,206,26,255</Color_Clothing1>
+		<Color_Clothing2>145,145,145,255</Color_Clothing2>
+		<Color_Metal>128,128,128,255</Color_Metal>
+		<CutSceneDataPack>CutSceneDataPack_X_FaithFire</CutSceneDataPack>
+		<EyeTexture>Eyeblink_F4_Red.png</EyeTexture>
+		<InfoCardBackground>BG18_Dark</InfoCardBackground>
+		<ModelPath>M_Demon_Elemental_Mesh_01.hkb</ModelPath>
 		<ModelScale>1</ModelScale>
 		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
 		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
 		<SkeletonPath>K_Male_Skeleton_01.hkb</SkeletonPath>
 		<SoundPack>SoundPack_Generic_Female</SoundPack>
-		<TacticalModelScale>1.5</TacticalModelScale>
-		<Texture_Eyes>Eyeblink_F4_Amber.png</Texture_Eyes>
-		<Texture_Skin>K_Female_Fallen_Texture_01.png</Texture_Skin>
-		<UnitModelType>UrxenFemale</UnitModelType>
-		<AutoCreateEquipment>Staff_War</AutoCreateEquipment>
-		<AutoCreateEquipment>Consumable_X_Scroll_Escape</AutoCreateEquipment>
-		<Equipment>F_Female_Head_Mesh_05</Equipment>
-		<Equipment>Empire_Female_Leather_Gloves_Dark</Equipment>
-		<Equipment>HighTopBoots</Equipment>
-		<Equipment>Urxen_Dress</Equipment>
-		<Equipment>Patchwork_Cloak_ID1</Equipment>
-		<Equipment>Magnar_Hair</Equipment>
+		<TacticalModelScale>2.2</TacticalModelScale>
+		<Texture_Eyes>Eyeblink_F4_Red.png</Texture_Eyes>
+		<Texture_Skin>M_Fire_Elemental_Texture_01.dds</Texture_Skin>
+		<UnitModelType>FaithFireFemale</UnitModelType>
+		<AutoCreateEquipment>Shortbow_Crude</AutoCreateEquipment>
+		<AutoCreateEquipment>Armor_X_Soldiers_Cap</AutoCreateEquipment>
+		<AutoCreateEquipment>Mount_X_Hatchling</AutoCreateEquipment>
+		<Equipment>Short_Sleave_Noble_Shirt_ID1</Equipment>
+		<Equipment>Patchwork_Skirt</Equipment>
 		<Treasure>
 			<Liklihood>100</Liklihood>
 			<GameModifier>
@@ -5464,7 +5340,7 @@
 			<Liklihood>100</Liklihood>
 			<GameModifier>
 				<ModType>GiveItem</ModType>
-				<Attribute>Staff_War</Attribute>
+				<Attribute>TomeoftheMountain</Attribute>
 				<Value>100</Value>
 			</GameModifier>
 		</Treasure>
@@ -5472,7 +5348,23 @@
 			<Liklihood>100</Liklihood>
 			<GameModifier>
 				<ModType>GiveItem</ModType>
-				<Attribute>Consumable_X_Scroll_Escape</Attribute>
+				<Attribute>Shortbow_Crude</Attribute>
+				<Value>100</Value>
+			</GameModifier>
+		</Treasure>
+		<Treasure>
+			<Liklihood>100</Liklihood>
+			<GameModifier>
+				<ModType>GiveItem</ModType>
+				<Attribute>Armor_X_Soldiers_Cap</Attribute>
+				<Value>100</Value>
+			</GameModifier>
+		</Treasure>
+		<Treasure>
+			<Liklihood>100</Liklihood>
+			<GameModifier>
+				<ModType>GiveItem</ModType>
+				<Attribute>Mount_X_Hatchling</Attribute>
 				<Value>100</Value>
 			</GameModifier>
 		</Treasure>
@@ -5487,15 +5379,15 @@
 		<IsChampion>1</IsChampion>
 		<AlwaysInTileCenter>1</AlwaysInTileCenter>
 	</UnitType>
-	<UnitType InternalName="Champion_Drakt">
+	<UnitType InternalName="Champion_Etielaeyi">
 		<IsWandering>0</IsWandering>
 		<Equipment>Dagger_Crude</Equipment>
-		<DisplayName>Drakt Plainsrider</DisplayName>
-		<UnitDisplayName>Drakt Plainsrider</UnitDisplayName>
+		<DisplayName>Etielaeyi</DisplayName>
+		<UnitDisplayName>Etielaeyi</UnitDisplayName>
 		<Class>Adventurer</Class>
-		<Allegiance>Empire</Allegiance>
+		<Allegiance>Kingdom</Allegiance>
 		<CreatureType>Champion</CreatureType>
-		<RaceType>Race_Type_Urxen</RaceType>
+		<RaceType>Race_Type_XL_FE</RaceType>
 		<Unique>1</Unique>
 		<CanBeDesigned>0</CanBeDesigned>
 		<Gender>Male</Gender>
@@ -5517,48 +5409,52 @@
 			<UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
 			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
 			<UnitStat_HitPoints>20</UnitStat_HitPoints>
-			<UnitStat_BG_IsRace_Urxen>1</UnitStat_BG_IsRace_Urxen>
+			<UnitStat_BG_IsRace_XL_FE>1</UnitStat_BG_IsRace_XL_FE>
 		</LevelMilestone>
-		<SelectedAbilityBonusOption>EquipmentAbility_X_Drakt</SelectedAbilityBonusOption>
-		<SelectedAbilityBonusOption>Blood_Urxen</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>EquipmentAbility_X_Etielaeyi</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Blood_XL_FE</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Brilliant</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Talent_X_DualClass</SelectedAbilityBonusOption>
 		<SelectedAbilityBonusOption>Earth1</SelectedAbilityBonusOption>
-		<SelectedAbilityBonusOption>Might</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Talent_X_Banker</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Fire1</SelectedAbilityBonusOption>
 		<SelectedAbilityBonusOption>Talent_XM_BlackHole</SelectedAbilityBonusOption>
 		<SelectedAbilityBonusOption>Ability_X_EreogsBox</SelectedAbilityBonusOption>
 		<SelectedAbilityBonusOption>Ability_X_IsChampion</SelectedAbilityBonusOption>
-		<SelectedAbilityBonusOption>Ability_X_IsEmpire</SelectedAbilityBonusOption>
-		<SelectedAbilityBonusOption>Ability_X_IsHumanoid</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsKingdom</SelectedAbilityBonusOption>
 		<SelectedAbilityBonusOption>Ability_X_IsMale</SelectedAbilityBonusOption>
-		<Quote>'To ride the wind in the fields of red.'</Quote>
-		<NPCRecruitmentText>I thirst for a life of riding in battle with the metallic taste of blood in my throat as I purge the land of the Kingdom infestations. If you'd pay me %d gildar, we could ride together.</NPCRecruitmentText>
-		<Backstory>Drakt is not just another Urxen bloodmonger, he also tends the land with great care, fertilizing it with the bodies of his enemies.</Backstory>
-		<AnimationPack>HeroBruteAnimationPack</AnimationPack>
+		<SelectedAbilityBonusOption>Ability_X_IsHumanoid</SelectedAbilityBonusOption>
+		<Quote>'Ex-Sovereign of the Kingdom of Arartel'</Quote>
+		<NPCRecruitmentText>Old Sovereign.</NPCRecruitmentText>
+		<Backstory>Ex-Sovereign of the Kingdom of Arartel. Arartel had the faction strengths: Earth Adepts, Air Resistance, Legacy of Serrane, and Earth Resistance. And the faction weakness: Gourmets.</Backstory>
+		<AnimationPack>AniPack_XL_MaleSov</AnimationPack>
 		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
-		<ClothMapScale>1.6</ClothMapScale>
-		<ClothPoseIndex>13</ClothPoseIndex>
-		<Color_Skin>255,255,255,255</Color_Skin>
-		<Color_Hair>40,40,60,255</Color_Hair>
-		<Color_Clothing1>99,63,30,255</Color_Clothing1>
-		<Color_Clothing2>51,0,0,255</Color_Clothing2>
-		<Color_Metal>50,35,31,255</Color_Metal>
-		<CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
-		<EyeTexture>eyeblink_m5_Black.png</EyeTexture>
-		<InfoCardBackground>BG_Desert</InfoCardBackground>
-		<ModelPath>F_Male_Mesh_01.hkb</ModelPath>
+		<ClothMapScale>2.7</ClothMapScale>
+		<ClothPoseIndex>15</ClothPoseIndex>
+		<Color_Skin>163,109,61,255</Color_Skin>
+		<Color_Hair>81,52,23,255</Color_Hair>
+		<Color_Clothing1>132,138,190,255</Color_Clothing1>
+		<Color_Clothing2>153,153,153,255</Color_Clothing2>
+		<Color_Metal>128,128,128,255</Color_Metal>
+		<CutSceneDataPack>CutSceneDataPack_X_FaithEarth</CutSceneDataPack>
+		<EyeTexture>eyeblink_m4_gold.png</EyeTexture>
+		<InfoCardBackground>BG_KingdomBarren</InfoCardBackground>
+		<ModelPath>K_Male_Mesh_01.hkb</ModelPath>
 		<ModelScale>1</ModelScale>
 		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
 		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
 		<SkeletonPath>K_Male_Skeleton_01.hkb</SkeletonPath>
 		<SoundPack>SoundPack_Generic_Male</SoundPack>
-		<TacticalModelScale>1.6</TacticalModelScale>
-		<Texture_Eyes>eyeblink_m5_Black.png</Texture_Eyes>
-		<Texture_Skin>Urxen_Skin_M_01.png</Texture_Skin>
-		<UnitModelType>UrxenMale</UnitModelType>
-		<AutoCreateEquipment>Warhammer</AutoCreateEquipment>
-		<Equipment>F_Male_Head_01</Equipment>
-		<Equipment>Large_Sion_Boots_ID2</Equipment>
-		<Equipment>Fallen_Sleeveless_Shirt_ID2</Equipment>
-		<Equipment>Empire_Leather_Gloves_Dark</Equipment>
+		<TacticalModelScale>1.2</TacticalModelScale>
+		<Texture_Eyes>eyeblink_m4_gold.png</Texture_Eyes>
+		<Texture_Skin>K_Male_Aged_Texture_01.png</Texture_Skin>
+		<UnitModelType>FaithEarthMale</UnitModelType>
+		<AutoCreateEquipment>Club</AutoCreateEquipment>
+		<Equipment>K_Male_Head_02</Equipment>
+		<Equipment>F_CornRows_Hair_Mesh_01</Equipment>
+		<Equipment>Fallen_Sleeveless_Shirt</Equipment>
+		<Equipment>CapitarGreatcoat_ID2</Equipment>
+		<Equipment>Peasant_Pants_ID1</Equipment>
 		<Treasure>
 			<Liklihood>100</Liklihood>
 			<GameModifier>
@@ -5603,7 +5499,7 @@
 			<Liklihood>100</Liklihood>
 			<GameModifier>
 				<ModType>GiveItem</ModType>
-				<Attribute>Warhammer</Attribute>
+				<Attribute>TomeoftheMountain</Attribute>
 				<Value>100</Value>
 			</GameModifier>
 		</Treasure>
@@ -5611,7 +5507,15 @@
 			<Liklihood>100</Liklihood>
 			<GameModifier>
 				<ModType>GiveItem</ModType>
-				<Attribute>TomeoftheMountain</Attribute>
+				<Attribute>TomeoftheInferno</Attribute>
+				<Value>100</Value>
+			</GameModifier>
+		</Treasure>
+		<Treasure>
+			<Liklihood>100</Liklihood>
+			<GameModifier>
+				<ModType>GiveItem</ModType>
+				<Attribute>Club</Attribute>
 				<Value>100</Value>
 			</GameModifier>
 		</Treasure>
@@ -5626,7 +5530,175 @@
 		<IsChampion>1</IsChampion>
 		<AlwaysInTileCenter>1</AlwaysInTileCenter>
 	</UnitType>
-	<UnitType InternalName="Champion_Dresco">
+	<UnitType InternalName="Champion_Ikarvial">
+		<IsWandering>0</IsWandering>
+		<Equipment>Dagger_Crude</Equipment>
+		<DisplayName>Ikarvial</DisplayName>
+		<UnitDisplayName>Ikarvial</UnitDisplayName>
+		<Class>Adventurer</Class>
+		<Allegiance>Empire</Allegiance>
+		<CreatureType>Champion</CreatureType>
+		<RaceType>Race_Type_Krax</RaceType>
+		<Unique>1</Unique>
+		<CanBeDesigned>0</CanBeDesigned>
+		<Gender>Male</Gender>
+		<HasWages>1</HasWages>
+		<WageOverride>1</WageOverride>
+		<IsNPC>1</IsNPC>
+		<IsSovereign>0</IsSovereign>
+		<SpawnRating>1</SpawnRating>
+		<NPCSpawnLikelihood>1</NPCSpawnLikelihood>
+		<GameModifier>
+			<ModType>Resource</ModType>
+			<Attribute>Unrest</Attribute>
+			<Value>-5</Value>
+			<Provides>-5% Unrest in the city this unit is in</Provides>
+		</GameModifier>
+		<LevelMilestone InternalName="L1">
+			<Level>1</Level>
+			<UnitStat_Accuracy>80</UnitStat_Accuracy>
+			<UnitStat_CombatSpeed>22</UnitStat_CombatSpeed>
+			<UnitStat_ChanceToCrit>1</UnitStat_ChanceToCrit>
+			<UnitStat_HitPoints>20</UnitStat_HitPoints>
+			<UnitStat_BG_IsRace_Krax>1</UnitStat_BG_IsRace_Krax>
+		</LevelMilestone>
+		<SelectedAbilityBonusOption>EquipmentAbility_X_Ikarvial</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Blood_Krax</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Talent_Shadowcaster</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Talent_X_BattleBrain</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Weakness_X_VulnerableAir</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Talent_XM_BlackHole</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_EreogsBox</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsChampion</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsEmpire</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsHumanoid</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Ability_X_IsMale</SelectedAbilityBonusOption>
+		<Quote>'Ex-Sovereign of the Kingdom of Uriraege'</Quote>
+		<NPCRecruitmentText>Old Sovereign.</NPCRecruitmentText>
+		<Backstory>Ex-Sovereign of the Kingdom of Uriraege. Uriraege had the faction strengths: Raiders, Death Worshippers, Troll Alliance, The Weaving, Enchanters, and Great Hammers. And the faction weakness: Hexed.</Backstory>
+		<AnimationPack>MaleSovereignAnimationPack</AnimationPack>
+		<BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+		<ClothMapScale>2.7</ClothMapScale>
+		<ClothPoseIndex>22</ClothPoseIndex>
+		<Color_Skin>175,130,95,255</Color_Skin>
+		<Color_Hair>78,68,83,255</Color_Hair>
+		<Color_Clothing1>217,157,223,255</Color_Clothing1>
+		<Color_Clothing2>199,199,199,255</Color_Clothing2>
+		<Color_Metal>128,128,128,255</Color_Metal>
+		<CutSceneDataPack>Karavox_CutscenePack</CutSceneDataPack>
+		<EyeTexture>eyeblink_m4_blk.png</EyeTexture>
+		<InfoCardBackground>BG44_CityField</InfoCardBackground>
+		<ModelPath>K_Male_Mesh_01.hkb</ModelPath>
+		<ModelScale>1</ModelScale>
+		<MovingSFX>TEMP_KnightMarching1</MovingSFX>
+		<OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+		<SkeletonPath>K_Male_Skeleton_01.hkb</SkeletonPath>
+		<SoundPack>SoundPack_Generic_Male</SoundPack>
+		<TacticalModelScale>1.5</TacticalModelScale>
+		<Texture_Eyes>eyeblink_m4_blk.png</Texture_Eyes>
+		<Texture_Skin>K_Male_Default_Texture_01.png</Texture_Skin>
+		<UnitModelType>EmpireMale</UnitModelType>
+		<AutoCreateEquipment>Axe</AutoCreateEquipment>
+		<AutoCreateEquipment>Accessory_X_Stone_Water</AutoCreateEquipment>
+		<AutoCreateEquipment>Accessory_X_Idol_Battle</AutoCreateEquipment>
+		<AutoCreateEquipment>Armor_X_Soldiers_Shirt</AutoCreateEquipment>
+		<AutoCreateEquipment>Accessory_X_Idol_Shadow</AutoCreateEquipment>
+		<Equipment>F_Head_Wraith_Mesh_03</Equipment>
+		<Equipment>Sovereign_Bandit_Hair_ID1</Equipment>
+		<Equipment>Patchwork_Cloak_ID1</Equipment>
+		<Equipment>Basic_Pants_ID2</Equipment>
+		<Treasure>
+			<Liklihood>100</Liklihood>
+			<GameModifier>
+				<ModType>GiveItem</ModType>
+				<StrVal>Common</StrVal>
+				<Value>100</Value>
+			</GameModifier>
+		</Treasure>
+		<Treasure>
+			<Liklihood>100</Liklihood>
+			<GameModifier>
+				<ModType>GiveItem</ModType>
+				<StrVal>Common1</StrVal>
+				<Value>100</Value>
+			</GameModifier>
+		</Treasure>
+		<Treasure>
+			<Liklihood>100</Liklihood>
+			<GameModifier>
+				<ModType>GiveItem</ModType>
+				<StrVal>Common2</StrVal>
+				<Value>100</Value>
+			</GameModifier>
+		</Treasure>
+		<Treasure>
+			<Liklihood>100</Liklihood>
+			<GameModifier>
+				<ModType>GiveItem</ModType>
+				<StrVal>Common3</StrVal>
+				<Value>100</Value>
+			</GameModifier>
+		</Treasure>
+		<Treasure>
+			<Liklihood>100</Liklihood>
+			<GameModifier>
+				<ModType>GiveItem</ModType>
+				<StrVal>Common4</StrVal>
+				<Value>100</Value>
+			</GameModifier>
+		</Treasure>
+		<Treasure>
+			<Liklihood>100</Liklihood>
+			<GameModifier>
+				<ModType>GiveItem</ModType>
+				<Attribute>Axe</Attribute>
+				<Value>100</Value>
+			</GameModifier>
+		</Treasure>
+		<Treasure>
+			<Liklihood>100</Liklihood>
+			<GameModifier>
+				<ModType>GiveItem</ModType>
+				<Attribute>Accessory_X_Stone_Water</Attribute>
+				<Value>100</Value>
+			</GameModifier>
+		</Treasure>
+		<Treasure>
+			<Liklihood>100</Liklihood>
+			<GameModifier>
+				<ModType>GiveItem</ModType>
+				<Attribute>Accessory_X_Idol_Battle</Attribute>
+				<Value>100</Value>
+			</GameModifier>
+		</Treasure>
+		<Treasure>
+			<Liklihood>100</Liklihood>
+			<GameModifier>
+				<ModType>GiveItem</ModType>
+				<Attribute>Armor_X_Soldiers_Shirt</Attribute>
+				<Value>100</Value>
+			</GameModifier>
+		</Treasure>
+		<Treasure>
+			<Liklihood>100</Liklihood>
+			<GameModifier>
+				<ModType>GiveItem</ModType>
+				<Attribute>Accessory_X_Idol_Shadow</Attribute>
+				<Value>100</Value>
+			</GameModifier>
+		</Treasure>
+		<Treasure>
+			<Liklihood>100</Liklihood>
+			<GameModifier>
+				<ModType>Resource</ModType>
+				<Attribute>Gold</Attribute>
+				<Value>20</Value>
+			</GameModifier>
+		</Treasure>
+		<IsChampion>1</IsChampion>
+		<AlwaysInTileCenter>1</AlwaysInTileCenter>
+	</UnitType>
+	<!--<UnitType InternalName="Champion_Dresco">
 		<IsWandering>0</IsWandering>
 		<Equipment>Dagger_Crude</Equipment>
 		<DisplayName>Dresco The Bandit</DisplayName>
